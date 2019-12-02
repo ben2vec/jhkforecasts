@@ -48,3 +48,14 @@ let counterTwo = 1;
     counterTwo++;
   }
 // A while loop that prints 1, 2, and 3
+
+const myArray = [6, 19, 20, 81,81];
+const yourArray = [19, 81, 2];
+for (let i = 0; i < myArray.length; i++) {
+  for (let j = 0; j < yourArray.length; j++) {
+    if (myArray[i] === yourArray[j]) {
+      console.log(myArray[i])
+    }
+  }
+};
+// prints duplicate vaules
