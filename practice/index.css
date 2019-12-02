@@ -1,0 +1,19 @@
+h1{ font-family: brandon-grotesque, sans-serif;
+    font-weight: 450;
+    font-style: normal;}  
+h5{ font-family: brandon-grotesque, sans-serif;
+  font-weight: 450;
+  font-style: normal;}
+h3{ font-family: brandon-grotesque, sans-serif;
+    font-weight: 300;
+    font-style: normal;}
+p{ font-family: brandon-grotesque, sans-serif;
+  font-weight: 300;
+   font-style: normal;}
+a{text-decoration:inherit;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
