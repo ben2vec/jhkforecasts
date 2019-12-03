@@ -59,3 +59,13 @@ for (let i = 0; i < myArray.length; i++) {
   }
 };
 // prints duplicate vaules
+
+const animal = 'cat';
+
+for (let i = 0; i < animal.length; i++) {
+  console.log(animal[i]);
+  for (let j = 1; j < 4; j++) {
+    console.log(j);
+  }
+}
+//every time the outer loop runs, the inner loop completes all iterations
