@@ -68,4 +68,4 @@ for (let i = 0; i < animal.length; i++) {
     console.log(j);
   }
 }
-//every time the outer loop runs, the inner loop completes all iterations
+//every time the outer loop runs, the inner loop completes all iterations.
