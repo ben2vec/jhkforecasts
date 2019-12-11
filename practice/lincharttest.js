@@ -2,7 +2,7 @@ var margin = {top: 20, right: 80, bottom: 30, left: 50},
             width = innerWidth - margin.left - margin.right,
             height = 400 - margin.top - margin.bottom;
         
-        var parseDate = d3.time.format("%Y%m%d").parse;
+        var parseDate = d3.time.format("%Y-%m-%d").parse;
         
         var parseWinChance = d3.format("%")
 
@@ -34,7 +34,7 @@ var margin = {top: 20, right: 80, bottom: 30, left: 50},
           .append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
         
-        d3.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vSm4KTVKOSGgVi3pwbGvtxOGotQZdP6C1loCXQlwOOBtVNa-0_mi0nD7JJ1eKvgQYYt8TtgVxAAWTmf/pub?output=csv", function(error, data) {
+        d3.csv("test/US.csv", function(error, data) {
           color.domain(d3.keys(data[0]).filter(function(key) { return key !== "date"; }));
         
           data.forEach(function(d) {
