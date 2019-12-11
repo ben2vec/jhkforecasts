@@ -6,20 +6,24 @@
 .line {
   fill: none;
   stroke: blue;
-  stroke-width: 2px;
+  stroke-width: 5px;
+  
 }
 
 </style>
 <body>
-
+        <link rel="stylesheet" href="https://use.typekit.net/htk2wjy.css">
+<link rel="stylesheet" href="index.css">
 <!-- load the d3.js library -->    	
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
 
 // set the dimensions and margins of the graph
+var deviceWidth = screen.width
+
 var margin = {top: 20, right: 20, bottom: 30, left: 50},
-    width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+    width = deviceWidth - margin.left - margin.right,
+    height = deviceWidth/3 - margin.top - margin.bottom;
 
 // parse the date / time
 var parseTime = d3.timeParse("%d-%b-%y");
@@ -31,12 +35,12 @@ var y = d3.scaleLinear().range([height, 0]);
 // define the 1st line
 var valueline = d3.line()
     .x(function(d) { return x(d.date); })
-    .y(function(d) { return y(d.close); });
+    .y(function(d) { return y(d.dem); });
 
 // define the 2nd line
 var valueline2 = d3.line()
     .x(function(d) { return x(d.date); })
-    .y(function(d) { return y(d.open); });
+    .y(function(d) { return y(d.gop); });
 
 // append the svg obgect to the body of the page
 // appends a 'group' element to 'svg'
@@ -49,20 +53,19 @@ var svg = d3.select("body").append("svg")
           "translate(" + margin.left + "," + margin.top + ")");
 
 // Get the data
-d3.csv("data2.csv", function(error, data) {
+d3.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vQRcSSj-ErgIJn5mJKpx3Sc4WEaWkV7pjnQGDsU47mV2j-vHb4XTmTUrF9Wn3sVzyVs-sc0lRFJEsg8/pub?output=csv", function(error, data) {
   if (error) throw error;
 
   // format the data
   data.forEach(function(d) {
       d.date = parseTime(d.date);
-      d.close = +d.close;
-      d.open = +d.open;
+      d.dem = +d.dem;
+      d.gop = +d.gop;
   });
 
   // Scale the range of the data
   x.domain(d3.extent(data, function(d) { return d.date; }));
-  y.domain([0, d3.max(data, function(d) {
-	  return Math.max(d.close, d.open); })]);
+  y.domain([0, 1]);
 
   // Add the valueline path.
   svg.append("path")
@@ -74,7 +77,7 @@ d3.csv("data2.csv", function(error, data) {
   svg.append("path")
       .data([data])
       .attr("class", "line")
-      .style("stroke", "yellow")
+      .style("stroke", "FF8888")
       .attr("d", valueline2);
 
   // Add the X Axis
