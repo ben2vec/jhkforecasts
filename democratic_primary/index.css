@@ -1,0 +1,58 @@
+
+
+h1{ font-family: brandon-grotesque, sans-serif;
+  font-weight: inherit;
+  font-style: inherit;}  
+ h2{ font-family: brandon-grotesque, sans-serif;
+   font-weight: inherit;
+   font-style: inherit;}
+ h3{ font-family: brandon-grotesque, sans-serif;
+   font-weight: inherit;
+   font-style: inherit;}  
+ h4{ font-family: brandon-grotesque, sans-serif;
+   font-weight: inherit;
+   font-style: inherit;}
+ h5{ font-family: brandon-grotesque, sans-serif;
+   font-weight: in;
+   font-style: inherit;}
+ p{ font-family: brandon-grotesque, sans-serif;
+   font-weight: inherit;
+   font-style: inherit;}
+ a{text-decoration:inherit;
+ }
+ .center {
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+   }
+
+text {
+    font-family: brandon-grotesque, sans-serif;
+   font-weight: inherit;
+   }
+   body {
+    font: 10px sans-serif;
+  }
+  
+  .axis path,
+  .axis line {
+    fill: none;
+    stroke: #000;
+
+  }
+  
+  .x.axis path {
+    display: none;
+  }
+  
+  
+  .line {
+    fill: none;
+    stroke: #00FF80;
+    stroke-width: 3px;
+    stroke-linecap: round;
+  }
+  
+  .legend rect {
+    fill:white;
+    stroke:black;}

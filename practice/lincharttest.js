@@ -2,9 +2,8 @@ var margin = {top: 20, right: 80, bottom: 30, left: 50},
             width = innerWidth - margin.left - margin.right,
             height = 400 - margin.top - margin.bottom;
         
-        var parseDate = d3.time.format("%Y-%m-%d").parse;
+        var parseDate = d3.time.format("%Y-%d-%m").parse;
         
-        var parseWinChance = d3.format("%")
 
         var x = d3.time.scale()
             .range([0, width]);
@@ -89,6 +88,7 @@ var margin = {top: 20, right: 80, bottom: 30, left: 50},
               .attr("transform", function(d) { return "translate(" + x(d.value.date) + "," + y(d.value.winChance) + ")"; })
               .attr("x", 3)
               .attr("dy", ".35em")
+              
               .text(function(d) { return d.name; });
         
         
