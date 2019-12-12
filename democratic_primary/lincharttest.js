@@ -45,7 +45,7 @@
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
       d3.csv("us_win.csv", function(error, data) {
-          color.domain(d3.keys(data[0]).filter(function(key) { return key !== "date" , "end" }));
+          color.domain(d3.keys(data[0]).filter(function(key) { return key !== "date" }));
 
     data.forEach(function(d) {
       d.date = parseDate(d.date);
