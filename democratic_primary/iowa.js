@@ -1,40 +1,10 @@
-<!DOCTYPE html>
-<html>
 
-<head>
-  <script data-require="d3@3.5.3" data-semver="3.5.3" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.js"></script>
-  <style>
-    body {
-      font: 10px sans-serif;
-    }
-    
-    .axis path,
-    .axis line {
-      fill: none;
-      stroke: #000;
-      shape-rendering: crispEdges;
-    }
-    
-    .x.axis path {
-      display: none;
-    }
-    
-    .line {
-      fill: none;
-      stroke: steelblue;
-      stroke-width: 2.5px;
-      stroke-linecap: round;
-    }
-  </style>
-</head>
 
-<body>
-  <script>
     var myData = d3.csv("US.csv");
 
     var margin = {top: 20, right: 80, bottom: 30, left: 50},
             width = innerWidth - margin.left - margin.right,
-            height = 600 - margin.top - margin.bottom;
+            height = 400 - margin.top - margin.bottom;
 
     var parseDate = d3.time.format("%Y-%m-%d").parse;
     
@@ -51,7 +21,7 @@
             .scale(x)
             .orient("bottom")
             .ticks(12)
-            .tickFormat(d3.timeFormat("%m"))
+            .ticks(d3.timeFormat("%m-%d"))
             ;
             
         
@@ -75,8 +45,8 @@
       .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-      d3.csv("US.csv", function(error, data) {
-          color.domain(d3.keys(data[0]).filter(function(key) { return key !== "date"; }));
+      d3.csv("iowa_win.csv", function(error, data) {
+          color.domain(d3.keys(data[0]).filter(function(key) { return key !== "date" }));
 
     data.forEach(function(d) {
       d.date = parseDate(d.date);
@@ -125,7 +95,7 @@
               .attr("y", 6)
               .attr("dy", ".71em")
               .style("text-anchor", "start")
-              .text("Win Democratic Primary")
+              .text("Win Iowa")
               .style("font-size","20px")
               .style("font-weight","700");
 
@@ -146,7 +116,7 @@
       candidate.append("text")
               .datum(function(d) { return {name: d.name, value: d.values[d.values.length - 1]}; })
               .attr("transform", function(d) { return "translate(" + x(d.value.date) + "," + y(d.value.winChance) + ")"; })
-              .attr("x", 10)
+              .attr("x",10)
               .attr("dy", ".35em")
               .text(function(d) { return d.name; })
               .style("fill",function(d) { return color(d.name); })
@@ -241,7 +211,5 @@
           });
       })});
       
-  </script>
-</body>
 
-</html>
+
