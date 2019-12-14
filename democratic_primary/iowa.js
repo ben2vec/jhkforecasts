@@ -1,4 +1,4 @@
-    var glines
+      var glines
       var mouseG
       var tooltip
       var parseDate = d3.timeParse("%Y-%m-%d")
