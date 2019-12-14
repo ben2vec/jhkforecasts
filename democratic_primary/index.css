@@ -87,22 +87,22 @@
     
     .radio-toolbar label {
         display: inline-block;
-        background-color: #ddd;
+        background-color:;
         padding: 10px 20px;
         font-family: brandon-grotesque,sans-serif;
         font-size: 16px;
-        border: 2px solid #444;
+        border: none;
         border-radius: 4px;
     }
     
     .radio-toolbar label:hover {
-      background-color: #dfd;
+      background-color: rgb(198, 201, 243);
     }
     
     
     
     .radio-toolbar input[type="radio"]:checked + label {
-        background-color: #bfb;
-        border-color: #4c4;
+        background-color: rgb(122, 176, 238);
+        border-color: rgb(29, 89, 179);
     }
     
