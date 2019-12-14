@@ -20,14 +20,14 @@
         .domain(category)
         .range(["#00FF90", "#00B050", "#006541", "#36AEFF","#0077FF","002E66","E7B5FF","B722FF","purple"])
 
-      d3.csv("Iowa.csv", data => {
+      d3.csv("states.csv", data => {
 
         var res = data.map((d,i) => {
           return {
             date : parseDate(d.date),
             dataPoint : +d.dataPoint,
             candidate : d.candidate,
-            percantage : +d.percantage
+            percentage : +d.percentage
           }
         })
 
@@ -136,9 +136,9 @@
         var line = d3.line()
         .curve(d3.curveCatmullRom)
           .x(d => xScale(d.date))
-          .y(d => yScale(d.percantage))
+          .y(d => yScale(d.percentage))
 
-        renderChart(3) // inital chart render (set default to Bidding Exercise 1 data)
+        renderChart(1) // inital chart render (set default to Bidding Exercise 1 data)
 
         // Update chart when radio button is selected
         d3.selectAll(("input[name='dataPoint']")).on('change', function(){
@@ -208,7 +208,7 @@
             //.attr("class", "circle")  
             //.append("circle")
             //.attr("cx", d => xScale(d.date))
-            //.attr("cy", d => yScale(d.percantage))
+            //.attr("cy", d => yScale(d.percentage))
             //.attr("r", 2)
 
           // CREATE HOVER TOOLTIP WITH VERTICAL LINE //
@@ -238,11 +238,11 @@
 
           mousePerLine.append("circle")
             .attr("r", 4)
-            .style("stroke", function (d) {
-              return color(d.key)
-            })
-            .style("fill", "none")
-            .style("stroke-width", lineStroke)
+            .style("stroke", "white"
+            )
+            .style("fill", function (d) {
+                return color(d.key)})
+            .style("stroke-width", 3)
             .style("opacity", "0");
 
           mouseG.append('svg:rect') // append a rect to catch mouse movements on canvas
@@ -284,7 +284,7 @@
                       data += " " + xScale(d.values[idx].date) + "," + 0;
                       return data;
                     });
-                  return "translate(" + xScale(d.values[idx].date) + "," + yScale(d.values[idx].percantage) + ")";
+                  return "translate(" + xScale(d.values[idx].date) + "," + yScale(d.values[idx].percentage) + ")";
 
                 });
 
@@ -301,20 +301,20 @@
           var xDate = xScale.invert(mouse[0])
           var bisect = d3.bisector(function (d) { return d.date; }).left
           var idx = bisect(d.values, xDate)
-          sortingObj.push({key: d.values[idx].candidate, percantage: d.values[idx].percantage, dataPoint: d.values[idx].dataPoint, year: d.values[idx].date.getFullYear(), month: monthNames[d.values[idx].date.getMonth()]})
+          sortingObj.push({key: d.values[idx].candidate, percentage: d.values[idx].percentage, dataPoint: d.values[idx].dataPoint, year: d.values[idx].date.getFullYear(), month: monthNames[d.values[idx].date.getMonth()]})
         })
 
         sortingObj.sort(function(x, y){
-           return d3.descending(x.percantage, y.percantage);
+           return d3.descending(x.percentage, y.percentage);
         })
 
         var sortingArr = sortingObj.map(d=> d.key)
 
         var res_nested1 = res_nested.slice().sort(function(a, b){
-          return sortingArr.indexOf(a.key) - sortingArr.indexOf(b.key) // rank vehicle category based on price of percantage
+          return sortingArr.indexOf(a.key) - sortingArr.indexOf(b.key) // rank vehicle category based on price of percentage
         })
 
-        tooltip.html( "Iowa")
+        tooltip.html( "")
           .style('display', 'block')
           .style('left', d3.event.pageX + 20)
           .style('top', d3.event.pageY - 20)
@@ -322,17 +322,17 @@
           .style('font-family', 'brandon-grotesque')
           .style('font-weight', 500)
           .selectAll()
-          .data(res_nested1).enter() // for each vehicle category, list out name and price of percantage
+          .data(res_nested1).enter() // for each vehicle category, list out name and price of percentage
           .append('div')
           .style('color', d => {
             return color(d.key)
           })
-          .style('font-size', 10)
+          .style('font-size', 12)
           .html(d => {
             var xDate = xScale.invert(mouse[0])
             var bisect = d3.bisector(function (d) { return d.date; }).left
             var idx = bisect(d.values, xDate)
-            return d.key +  " - " + d.values[idx].percantage.toString()  + "%" 
+            return d.key +  " - " + d.values[idx].percentage.toString()  + "%" 
           })
       }
 

@@ -17,6 +17,8 @@
    font-weight: inherit;
    font-style: inherit;}
  a{text-decoration:inherit;
+  color: black;
+
  }
  .center {
      display: center;
@@ -55,7 +57,7 @@
 
     .header {
       margin-top: 60px;
-      text-align: center;
+      text-align: inherit;
       font-family: brandon-grotesque, sans-serif;
       font-weight: inherit;
  }
@@ -87,7 +89,7 @@
     
     .radio-toolbar label {
         display: inline-block;
-        background-color:;
+        background-color:none;
         padding: 10px 20px;
         font-family: brandon-grotesque,sans-serif;
         font-size: 16px;

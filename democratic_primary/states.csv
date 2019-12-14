@@ -1,4 +1,4 @@
-﻿date,dataPoint,candidate,percantage
+﻿date,dataPoint,candidate,percentage
 6/1/19,2,Biden,40.9
 6/4/19,2,Biden,39.5
 6/7/19,2,Biden,34.4
@@ -89,7 +89,7 @@
 6/7/19,1,Yang,3.1
 6/10/19,1,Yang,3.3
 6/13/19,1,Yang,3.1
-date,dataPoint,candidate,percantage
+date,dataPoint,candidate,percentage
 6/1/19,4,Biden,20
 6/4/19,4,Biden,20
 6/7/19,4,Biden,20
