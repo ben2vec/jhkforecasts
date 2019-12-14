@@ -1,6 +1,4 @@
-
-
-h1{ font-family: brandon-grotesque, sans-serif;
+ h1{ font-family: brandon-grotesque, sans-serif;
   font-weight: inherit;
   font-style: inherit;}  
  h2{ font-family: brandon-grotesque, sans-serif;
@@ -21,12 +19,59 @@ h1{ font-family: brandon-grotesque, sans-serif;
  a{text-decoration:inherit;
  }
  .center {
-     display: block;
+     display: center;
      margin-left: auto;
-     margin-right: auto;
+     margin-right: center;
+     box-align: center ;
    }
 
-text {
+      text {
     font-family: brandon-grotesque, sans-serif;
    font-weight: inherit;
-   font-style: inherit;}
+   }
+  body {
+    font: 15px sans-serif;
+    font-weight:500;
+  }
+  
+  .axis path,
+  .axis line {
+    fill: none;
+    stroke: none;
+
+  }
+  
+  .x.axis path {
+    display: none;
+  }
+  
+  
+  .line {
+    fill: none;
+    stroke: #00FF80;
+    stroke-width: 3px;
+    stroke-linecap: round;
+  }
+  
+  .legend rect {
+    fill:white;
+    stroke:black;}
+
+    .header {
+      margin-top: 60px;
+      text-align: center;
+      font-family: brandon-grotesque, sans-serif;
+      font-weight: inherit;
+ }
+
+    
+    input {
+      margin-right: 10px;
+      font-family: brandon-grotesque, sans-serif;
+      font-weight: 500;
+      font-size: 12px;
+      }
+      .form-check-label {
+      font-size: 0.8em;
+      margin-right: 20px;
+    }

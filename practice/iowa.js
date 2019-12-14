@@ -1,21 +1,59 @@
 
 
-    var myData = d3.csv("US.csv");
 
+var filters = {
+  'field': 'Proj_Vote_Share',
+  'state': 'Iowa'
+};
+d3.csv("Book1.csv", function(csv) {
+  csv = csv.filter(function(row) {
+      // run through all the filters, returning a boolean
+      return ['field','state'].reduce(function(pass, column) {
+          return pass && (
+              // pass if no filter is set
+              !filters[column] ||
+                  // pass if the row's value is equal to the filter
+                  // (i.e. the filter is set to a string)
+                  row[column] === filters[column] ||
+                  // pass if the row's value is in an array of filter values
+                  filters[column].indexOf(row[column]) >= 0
+              );
+      }, true);
+  });
+ 
+  
+  let newcsv = csv.map(function(obj) {
+return {
+  date: obj.date,
+  Biden: obj.Biden,
+  Bloomberg: obj.Bloomberg,
+  Booker: obj.Booker,
+  Buttigieg: obj.Buttigieg,
+  Klobuchar: obj.Klobuchar,
+  Sanders: obj.Sanders,
+  Steyer: obj.Steyer,
+  Warren: obj.Warren,
+  Yang: obj.Yang,
+}
+});
+console.log(csv);
+console.log(newcsv);
+})
     var margin = {top: 20, right: 80, bottom: 30, left: 50},
             width = innerWidth*.9 - margin.left - margin.right,
             height = 400 - margin.top - margin.bottom;
 
     var parseDate = d3.time.format("%Y-%m-%d").parse;
     
-    
+    var formatPercentage = d3.format(".2%");
+
     var x = d3.time.scale()
       .range([0, width]);
 
     var y = d3.scale.linear()
       .range([height, 0]);
 
-      var color = d3.scale.ordinal().range(["#00FF90", "#00B050", "#006541", "#36AEFF","#0077FF","002E66","E7B5FF","B722FF","purple"]);
+      var color = d3.scale.ordinal().range(["#00FF90", "#00B050", "#006541", "#36AEFF","#0077FF","002E66","E7B5FF","B722FF","0070B0"]);
 
       var xAxis = d3.svg.axis()
             .scale(x)
@@ -27,7 +65,8 @@
         var yAxis = d3.svg.axis()
             .scale(y)
             .orient("left")
-            .ticks(10);
+            .ticks(10)
+            ;
 
     var line = d3.svg.line()
       .interpolate("monotone")
@@ -42,12 +81,13 @@
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom)
       .append("g")
-      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+      ;
 
       d3.select("body")
         .attr("align","center");
 
-      d3.csv("us_win.csv", function(error, data) {
+      d3.csv("Iowa_win.csv", function(error, data) {
           color.domain(d3.keys(data[0]).filter(function(key) { return key !== "date" }));
 
     data.forEach(function(d) {
@@ -67,7 +107,7 @@
     });
 
     var mindate = new Date(2019,5,1),
-          maxdate = new Date(2020,6,1);
+          maxdate = new Date(2020,1,1);
           
           x.domain([mindate,maxdate]);
         
@@ -85,7 +125,7 @@
               .attr("class", "x axis")
               .attr("transform", "translate(0," + height + ")")
               .call(xAxis)
-              .style("font-size","12pt")
+              .style("font-size","10pt")
               ;
 
               svg.append("g")
@@ -97,7 +137,7 @@
               .attr("y", 6)
               .attr("dy", ".71em")
               .style("text-anchor", "start")
-              .text("Win Democratic Primary")
+              .text("Win Iowa")
               .style("font-size","20px")
               .style("font-weight","700");
 

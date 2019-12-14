@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <style>
+      html {
+        font-family: 'Arial', sans-serif;
+      }
+      .header {
+        margin-top: 60px;
+        margin-left: 60px;
+        text-align: left;
+      }
+      input {
+        margin-right: 10px;
+      }
+      .form-check-label {
+        font-size: 0.8em;
+        margin-right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+   
+    <script>
+var filters = {
+    'field': 'Proj_Vote_Share',
+    'state': 'Iowa'
+};
+d3.csv("Book1.csv", function(csv) {
+    csv = csv.filter(function(row) {
+        // run through all the filters, returning a boolean
+        return ['field','state'].reduce(function(pass, column) {
+            return pass && (
+                // pass if no filter is set
+                !filters[column] ||
+                    // pass if the row's value is equal to the filter
+                    // (i.e. the filter is set to a string)
+                    row[column] === filters[column] ||
+                    // pass if the row's value is in an array of filter values
+                    filters[column].indexOf(row[column]) >= 0
+                );
+        }, true);
+    })
+   
+    
+    let newcsv = csv.map(function(obj) {
+  return {
+    date: obj.date,
+    Biden: obj.Biden,
+    Bloomberg: obj.Bloomberg,
+    Booker: obj.Booker,
+    Buttigieg: obj.Buttigieg,
+    Klobuchar: obj.Klobuchar,
+    Sanders: obj.Sanders,
+    Steyer: obj.Steyer,
+    Warren: obj.Warren,
+    Yang: obj.Yang,
+  }
+  let data = color.domain(d3.keys(newoutput[0]).filter(function(key) { return key !== "date" }));
+});
+console.log(csv);
+console.log(newcsv);
+})
+
+    </script>
+  </body>
+</html>
