@@ -32,8 +32,9 @@ d3.csv("states.csv", data => {
   })
 
 
+  
   var mindate = new Date(2019,5,1),
-    maxdate = new Date(2020,1,5);
+    maxdate = new Date(2020,6,1);
 
   var xScale = d3.scaleTime()
     .domain([mindate,maxdate])
@@ -97,11 +98,11 @@ d3.csv("states.csv", data => {
 
      })
     .append('text')
-      .attr('x',15)
+      .attr('x',100)
       .attr("y", 6)
       .attr('fill', 'black')
       .attr('font-size', '15px')
-      .text("%")
+      .text("Win Nomination")
 
 
   // CREATE LEGEND // 

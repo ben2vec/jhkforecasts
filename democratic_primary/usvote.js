@@ -33,7 +33,7 @@ d3.csv("states.csv", data => {
 
 
   var mindate = new Date(2019,5,1),
-    maxdate = new Date(2020,1,5);
+    maxdate = new Date(2020,6,1);
 
   var xScale = d3.scaleTime()
     .domain([mindate,maxdate])
