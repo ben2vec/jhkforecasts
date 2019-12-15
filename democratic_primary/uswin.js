@@ -6,7 +6,7 @@ var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept"
 
 var margin = {top: 20, right: 100, bottom: 40, left: 40}
 var width = innerWidth - margin.left - margin.right
-var height = (innerHeight/2) - margin.top - margin.bottom
+var height = 400 - margin.top - margin.bottom
 
 var lineOpacity = .8
 var lineStroke = "3px"

@@ -6,7 +6,7 @@ var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept"
 
 var margin = {top: 20, right: 100, bottom: 40, left: 40}
 var width = innerWidth - margin.left - margin.right
-var height = innerHeight/2 - margin.top - margin.bottom
+var height = 400 - margin.top - margin.bottom
 
 var lineOpacity = .8
 var lineStroke = "3px"
@@ -42,7 +42,7 @@ d3.csv("states.csv", data => {
   
 
   var yScale = d3.scaleLinear()
-    .domain([0, 100])
+    .domain([0, 50])
     .range([height, 0]);
 
   var svg = d3.select("#chart").append("svg")
