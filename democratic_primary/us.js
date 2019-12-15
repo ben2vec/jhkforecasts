@@ -1,45 +1,10 @@
-<html>
-  <head>
-    <link rel="stylesheet" href="https://use.typekit.net/htk2wjy.css">
-    <link rel="stylesheet" href="index.css">
-    
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-    <script src="https://d3js.org/d3.v4.min.js"></script>
-    <style>
-      
-      
-    </style>
-  </head>
-  <body>
-      <div class ='container-fluid'>
-          <div class='row'>
-            <div id="chart">
-              <div class='header'></div>
-              <h1 style="text-align: center;">New Hampshire</h1>
-                <div class="radio-toolbar" style="text-align:center ;">
-                    <input type="radio" id="projvote" name="dataPoint" value="3" checked>
-                    <label for="projvote">Projected Vote Share</label>
-                
-                    <input type="radio" id="win%" name="dataPoint" value="4">
-                    <label for="win%">Win New Hampshire</label> 
-                    </div>
-                   <h4> <a href="/democratic_primary"><span style="text-decoration: underline; "><<<< Back to national Overview<<<<</span></a></h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      
-    <script> var glines
+var glines
     var mouseG
     var tooltip
     var parseDate = d3.timeParse("%Y-%m-%d")
     var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"]
 
-    var margin = {top: 80, right: 100, bottom: 40, left: 40}
+    var margin = {top: 40, right: 100, bottom: 40, left: 40}
     var width = innerWidth - margin.left - margin.right
     var height = 500 - margin.top - margin.bottom
 
@@ -55,7 +20,7 @@
       .domain(category)
       .range(["#00FF90", "#00B050", "#006541", "#36AEFF","#0077FF","002E66","E7B5FF","B722FF","purple"])
 
-    d3.csv("states.csv", data => {
+    d3.csv("states.csv", data => {  
 
       var res = data.map((d,i) => {
         return {
@@ -68,7 +33,7 @@
 
 
       var mindate = new Date(2019,5,1),
-        maxdate = new Date(2020,1,11);
+        maxdate = new Date(2020,6,1);
 
       var xScale = d3.scaleTime()
         .domain([mindate,maxdate])
@@ -95,7 +60,7 @@
         .attr("class", "x axis")
         .attr("transform", `translate(0, ${height})`)
         .call(xAxis
-          .tickFormat(d3.timeFormat("%m|%y")))
+          .tickFormat(d3.timeFormat("%m/%y")))
         .call(g => {
           var years = xScale.ticks(d3.timeYear.every(1))
           var xshift = 0 
@@ -173,7 +138,7 @@
         .x(d => xScale(d.date))
         .y(d => yScale(d.percentage))
 
-      renderChart(3) // inital chart render (set default to Bidding Exercise 1 data)
+      renderChart(-1) // inital chart render (set default to Bidding Exercise 1 data)
 
       // Update chart when radio button is selected
       d3.selectAll(("input[name='dataPoint']")).on('change', function(){
@@ -349,13 +314,13 @@
         return sortingArr.indexOf(a.key) - sortingArr.indexOf(b.key) // rank vehicle category based on price of percentage
       })
 
-      tooltip.html( "")
+      tooltip.html("")
         .style('display', 'block')
         .style('left', d3.event.pageX + 20)
         .style('top', d3.event.pageY - 160)
-        .style('font-size', 11.5)
+        .style('font-size', 12)
         .style('font-family', 'brandon-grotesque')
-        .style('font-weight', 500)
+        .style('font-weight', 700)
         .selectAll()
         .data(res_nested1).enter() // for each vehicle category, list out name and price of percentage
         .append('div')
@@ -371,6 +336,5 @@
         })
     }
 
-  })</script>
-  </body>
-</html>
+  })
+  
