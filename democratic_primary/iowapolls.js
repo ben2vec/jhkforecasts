@@ -1,35 +1,6 @@
-<!DOCTYPE html>
-<meta charset="utf-8">
-<head>
-
-    <link rel="stylesheet" href="https://use.typekit.net/htk2wjy.css">
-    <link rel="stylesheet" href="index.css">
-    
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-<style>
-
-
-#table-location {
-	text-align: center;
-   font-family:  brandon-grotesque, sans-serif;
-    width: 100%;
-    padding: 0;
-    font-size: 10;
-}
-</style>
-</head>
-<body>
-<div id="table-location"></div>
-<script src="https://d3js.org/d3.v4.min.js"></script>
-<script>
-
-var margin = {top: 80, right: 100, bottom: 40, left: 40}
-    var width = innerWidth - margin.left - margin.right
-    var height = 1
-
 var svg = d3.select("body").append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", )
+    .attr("width", 1)
+    .attr("height", 1)
 
 var table = d3.select("#table-location")
 	.append("table")
@@ -99,6 +70,3 @@ d3.csv("polls.csv", function(error, data){
 
 
 });
-
-</script>
-</body>
