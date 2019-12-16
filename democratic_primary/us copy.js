@@ -42,7 +42,7 @@ var glines
       
 
       var yScale = d3.scaleLinear()
-        .domain([0, d3.max(res, d => d.percentage)])
+        .domain([0, 100])
         .range([height, 0]);
 
       var svg = d3.select("#chart").append("svg")
@@ -101,7 +101,7 @@ var glines
           .attr("y", 6)
           .attr('fill', 'black')
           .attr('font-size', '15px')
-          .text("")
+          .text("%")
 
 
       // CREATE LEGEND // 
