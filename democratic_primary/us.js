@@ -36,7 +36,7 @@ var glines
         maxdate = new Date(2020,6,1);
 
       var xScale = d3.scaleTime()
-        .domain([mindate,maxdate])
+        .domain(d3.extent(res, d=>d.date))
         .range([0, width])
 
       
@@ -60,7 +60,7 @@ var glines
         .attr("class", "x axis")
         .attr("transform", `translate(0, ${height})`)
         .call(xAxis
-          .tickFormat(d3.timeFormat("%m/%y")))
+          .tickFormat(d3.timeFormat("%m/%d")))
         .call(g => {
           var years = xScale.ticks(d3.timeYear.every(1))
           var xshift = 0 
