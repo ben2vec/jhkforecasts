@@ -36,7 +36,7 @@ var glines
         maxdate = new Date(2020,6,1);
 
       var xScale = d3.scaleTime()
-        .domain(d3.extent(res, d=>d.date))
+        .domain([mindate,maxdate])
         .range([0, width])
 
       

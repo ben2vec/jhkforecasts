@@ -30,14 +30,14 @@
           <div class='row'>
             <div id="chart">
               <div class='header'></div>
-              <h1 style="text-align: center;">Nevada</h1>
-              <h5 style="text-align: center;">36 Delegates</h5>
+              <h1 style="text-align: center;">California</h1>
+              <h5 style="text-align: center;">416 Delegates</h5>
                 <div class="radio-toolbar" style="text-align:center ;">
-                    <input type="radio" id="projvote" name="dataPoint" value="5" checked>
+                    <input type="radio" id="projvote" name="dataPoint" value="15" checked>
                     <label for="projvote">Projected Vote Share</label>
                 
-                    <input type="radio" id="win%" name="dataPoint" value="6">
-                    <label for="win%">Win Nevada</label>
+                    <input type="radio" id="win%" name="dataPoint" value="16">
+                    <label for="win%">Win California</label>
                     </div>
                    <p> <a href="/democratic_primary"><span style="text-decoration: underline; "><<<< Back to national Overview<<<<</span></a></p>
                 </div>
@@ -49,6 +49,7 @@
       
     <script> var glines
     var mouseG
+    var startRender = 15 //enter starting here!!!
     var tooltip
     var parseDate = d3.timeParse("%Y-%m-%d")
     var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"]
@@ -187,7 +188,7 @@
         .x(d => xScale(d.date))
         .y(d => yScale(d.percentage))
 
-      renderChart(5) // inital chart render (set default to Bidding Exercise 1 data)
+      renderChart(startRender) // inital chart render (set default to Bidding Exercise 1 data)
 
       // Update chart when radio button is selected
       d3.selectAll(("input[name='dataPoint']")).on('change', function(){
@@ -403,7 +404,7 @@ var table = d3.select("#table-location")
 d3.csv("polls.csv", function(error, data){
 
 	// filter year
-	var data = data.filter(function(d){return d.State == 'Nevada';});
+	var data = data.filter(function(d){return d.State == 'California';});
 	// Get every column value
 	var columns = Object.keys(data[0])
 		.filter(function(d){

@@ -30,14 +30,14 @@
           <div class='row'>
             <div id="chart">
               <div class='header'></div>
-              <h1 style="text-align: center;">Nevada</h1>
-              <h5 style="text-align: center;">36 Delegates</h5>
+              <h1 style="text-align: center;">Alabama</h1>
+              <h5 style="text-align: center;">52 Delegates</h5>
                 <div class="radio-toolbar" style="text-align:center ;">
-                    <input type="radio" id="projvote" name="dataPoint" value="5" checked>
+                    <input type="radio" id="projvote" name="dataPoint" value="9" checked>
                     <label for="projvote">Projected Vote Share</label>
                 
-                    <input type="radio" id="win%" name="dataPoint" value="6">
-                    <label for="win%">Win Nevada</label>
+                    <input type="radio" id="win%" name="dataPoint" value="10">
+                    <label for="win%">Win Alabama</label>
                     </div>
                    <p> <a href="/democratic_primary"><span style="text-decoration: underline; "><<<< Back to national Overview<<<<</span></a></p>
                 </div>
@@ -187,7 +187,7 @@
         .x(d => xScale(d.date))
         .y(d => yScale(d.percentage))
 
-      renderChart(5) // inital chart render (set default to Bidding Exercise 1 data)
+      renderChart(9) // inital chart render (set default to Bidding Exercise 1 data)
 
       // Update chart when radio button is selected
       d3.selectAll(("input[name='dataPoint']")).on('change', function(){
@@ -403,7 +403,7 @@ var table = d3.select("#table-location")
 d3.csv("polls.csv", function(error, data){
 
 	// filter year
-	var data = data.filter(function(d){return d.State == 'Nevada';});
+	var data = data.filter(function(d){return d.State == 'Alabama';});
 	// Get every column value
 	var columns = Object.keys(data[0])
 		.filter(function(d){

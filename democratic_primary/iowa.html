@@ -9,6 +9,13 @@
     
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <style>
+
+  #table-one {
+	text-align: center;
+   font-family:  brandon-grotesque, sans-serif;
+    width: 100%;
+    padding: 0;
+    } 
      #table-location {
 	text-align: center;
    font-family:  brandon-grotesque, sans-serif;
@@ -24,6 +31,7 @@
             <div id="chart">
               <div class='header'></div>
               <h1 style="text-align: center;">Iowa</h1>
+              <h5 style="text-align: center;">41 Delegates</h5>
                 <div class="radio-toolbar" style="text-align:center ;">
                     <input type="radio" id="projvote" name="dataPoint" value="1" checked>
                     <label for="projvote">Projected Vote Share</label>
@@ -31,12 +39,13 @@
                     <input type="radio" id="win%" name="dataPoint" value="2">
                     <label for="win%">Win Iowa</label>
                     </div>
-                   <h4> <a href="/democratic_primary"><span style="text-decoration: underline; "><<<< Back to national Overview<<<<</span></a></h4>
+                   <p> <a href="/democratic_primary"><span style="text-decoration: underline; "><<<< Back to national Overview<<<<</span></a></p>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        
       
     <script> var glines
     var mouseG
@@ -73,10 +82,10 @@
 
 
       var mindate = new Date(2019,5,1),
-        maxdate = new Date(2020,1,5);
+      maxdate = new Date(2020,6,1);
 
       var xScale = d3.scaleTime()
-        .domain(d3.extent(res, d=>d.date))
+        .domain([mindate,maxdate])
         .range([0, width])
 
       
