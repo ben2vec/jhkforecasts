@@ -1,0 +1,523 @@
+state,candidate,winPercentage,color,cx,cy
+Iowa,Biden,18%,#00FF90,210,100
+New Hampshire,Biden,18.8%,#00FF90,210,100
+Nevada,Biden,25.4%,#00FF90,100,100
+South Carolina,Biden,38.9%,#00FF90,100,100
+Alabama,Biden,36.8%,#00FF90,100,100
+American Samoa,Biden,29.5%,#00FF90,100,100
+Arkansas,Biden,36.1%,#00FF90,100,100
+California,Biden,23.7%,#00FF90,100,100
+Colorado,Biden,23.1%,#00FF90,210,100
+Democrats Abroad,Biden,29.5%,#00FF90,100,100
+Maine,Biden,21%,#00FF90,100,100
+Massachusetts,Biden,21.5%,#00FF90,210,100
+Minnesota,Biden,22.4%,#00FF90,100,100
+North Carolina,Biden,34.6%,#00FF90,100,100
+Oklahoma,Biden,35.9%,#00FF90,100,100
+Tennessee,Biden,35.8%,#00FF90,100,100
+Texas,Biden,32%,#00FF90,100,100
+Utah,Biden,28.3%,#00FF90,100,100
+Vermont,Biden,17.7%,#00FF90,320,100
+Virginia,Biden,33.8%,#00FF90,100,100
+Idaho,Biden,28.9%,#00FF90,100,100
+Michigan,Biden,30.9%,#00FF90,100,100
+Mississippi,Biden,37.6%,#00FF90,100,100
+Missouri,Biden,34.9%,#00FF90,100,100
+North Dakota,Biden,28.3%,#00FF90,100,100
+Washington,Biden,24.9%,#00FF90,100,100
+Northern Marianas,Biden,29.5%,#00FF90,100,100
+Ohio,Biden,30.1%,#00FF90,100,100
+Arizona,Biden,25.9%,#00FF90,100,100
+Florida,Biden,35.5%,#00FF90,100,100
+Illinois,Biden,26.5%,#00FF90,100,100
+Georgia,Biden,36.1%,#00FF90,100,100
+Puerto Rico,Biden,29.5%,#00FF90,100,100
+Alaska,Biden,28.8%,#00FF90,100,100
+Hawaii,Biden,25.1%,#00FF90,100,100
+Louisiana,Biden,36.6%,#00FF90,100,100
+Wyoming,Biden,24%,#00FF90,210,100
+Wisconsin,Biden,24.4%,#00FF90,100,100
+Connecticut,Biden,22.7%,#00FF90,100,100
+Delaware,Biden,34.7%,#00FF90,100,100
+Maryland,Biden,25.7%,#00FF90,100,100
+New York,Biden,24.2%,#00FF90,100,100
+Pennsylvania,Biden,33.4%,#00FF90,100,100
+Rhode Island,Biden,24.1%,#00FF90,100,100
+Guam,Biden,29.5%,#00FF90,100,100
+Kansas,Biden,30.4%,#00FF90,100,100
+Indiana,Biden,26.2%,#00FF90,100,100
+Nebraska,Biden,29.6%,#00FF90,100,100
+West Virginia,Biden,36.4%,#00FF90,100,100
+Kentucky,Biden,35.7%,#00FF90,100,100
+Oregon,Biden,24.9%,#00FF90,100,100
+DC,Biden,26.9%,#00FF90,100,100
+Montana,Biden,25.6%,#00FF90,100,100
+New Jersey,Biden,22.2%,#00FF90,100,100
+New Mexico,Biden,25.3%,#00FF90,100,100
+South Dakota,Biden,27.2%,#00FF90,100,100
+Virgin Islands,Biden,29.5%,#00FF90,100,100
+US,Biden,28.7%,#00FF90,100,100
+Iowa,Bloomberg,3.1%,#00B050,760,100
+New Hampshire,Bloomberg,3.2%,#00B050,650,100
+Nevada,Bloomberg,8.3%,#00B050,540,100
+South Carolina,Bloomberg,4.1%,#00B050,650,100
+Alabama,Bloomberg,6%,#00B050,540,100
+American Samoa,Bloomberg,4.8%,#00B050,540,100
+Arkansas,Bloomberg,6.2%,#00B050,540,100
+California,Bloomberg,5.4%,#00B050,650,100
+Colorado,Bloomberg,5.2%,#00B050,650,100
+Democrats Abroad,Bloomberg,4.8%,#00B050,540,100
+Maine,Bloomberg,7.1%,#00B050,540,100
+Massachusetts,Bloomberg,5.3%,#00B050,540,100
+Minnesota,Bloomberg,3%,#00B050,650,100
+North Carolina,Bloomberg,10%,#00B050,430,100
+Oklahoma,Bloomberg,8.3%,#00B050,430,100
+Tennessee,Bloomberg,6.1%,#00B050,540,100
+Texas,Bloomberg,6.2%,#00B050,540,100
+Utah,Bloomberg,7.1%,#00B050,540,100
+Vermont,Bloomberg,2.2%,#00B050,650,100
+Virginia,Bloomberg,5.4%,#00B050,540,100
+Idaho,Bloomberg,6.6%,#00B050,540,100
+Michigan,Bloomberg,1.9%,#00B050,650,100
+Mississippi,Bloomberg,5.8%,#00B050,430,100
+Missouri,Bloomberg,6.2%,#00B050,540,100
+North Dakota,Bloomberg,6.6%,#00B050,540,100
+Washington,Bloomberg,4.1%,#00B050,650,100
+Northern Marianas,Bloomberg,4.8%,#00B050,540,100
+Ohio,Bloomberg,3.6%,#00B050,540,100
+Arizona,Bloomberg,9.8%,#00B050,540,100
+Florida,Bloomberg,3.6%,#00B050,540,100
+Illinois,Bloomberg,3.5%,#00B050,650,100
+Georgia,Bloomberg,7.7%,#00B050,430,100
+Puerto Rico,Bloomberg,4.8%,#00B050,540,100
+Alaska,Bloomberg,8.9%,#00B050,540,100
+Hawaii,Bloomberg,3.1%,#00B050,650,100
+Louisiana,Bloomberg,6.3%,#00B050,540,100
+Wyoming,Bloomberg,7.5%,#00B050,540,100
+Wisconsin,Bloomberg,4%,#00B050,540,100
+Connecticut,Bloomberg,3.6%,#00B050,650,100
+Delaware,Bloomberg,3.9%,#00B050,540,100
+Maryland,Bloomberg,2.7%,#00B050,760,100
+New York,Bloomberg,18.1%,#00B050,210,100
+Pennsylvania,Bloomberg,3.1%,#00B050,650,100
+Rhode Island,Bloomberg,3.9%,#00B050,760,100
+Guam,Bloomberg,4.8%,#00B050,540,100
+Kansas,Bloomberg,7%,#00B050,540,100
+Indiana,Bloomberg,3.6%,#00B050,650,100
+Nebraska,Bloomberg,6.4%,#00B050,540,100
+West Virginia,Bloomberg,6.1%,#00B050,540,100
+Kentucky,Bloomberg,6.1%,#00B050,540,100
+Oregon,Bloomberg,3.1%,#00B050,650,100
+DC,Bloomberg,2.8%,#00B050,760,100
+Montana,Bloomberg,7.9%,#00B050,540,100
+New Jersey,Bloomberg,5.1%,#00B050,650,100
+New Mexico,Bloomberg,4.1%,#00B050,650,100
+South Dakota,Bloomberg,7.4%,#00B050,540,100
+Virgin Islands,Bloomberg,4.8%,#00B050,540,100
+US,Bloomberg,5.5%,#00B050,540,100
+Iowa,Booker,2.1%,#006541,980,100
+New Hampshire,Booker,2.3%,#006541,980,100
+Nevada,Booker,1.2%,#006541,980,100
+South Carolina,Booker,3.1%,#006541,870,100
+Alabama,Booker,3.9%,#006541,760,100
+American Samoa,Booker,2.4%,#006541,760,100
+Arkansas,Booker,3.8%,#006541,760,100
+California,Booker,2.2%,#006541,980,100
+Colorado,Booker,0.9%,#006541,870,100
+Democrats Abroad,Booker,2.4%,#006541,870,100
+Maine,Booker,2.4%,#006541,870,100
+Massachusetts,Booker,2.3%,#006541,650,100
+Minnesota,Booker,0.5%,#006541,870,100
+North Carolina,Booker,1.7%,#006541,870,100
+Oklahoma,Booker,3.2%,#006541,870,100
+Tennessee,Booker,3.1%,#006541,870,100
+Texas,Booker,2.4%,#006541,760,100
+Utah,Booker,0.3%,#006541,980,100
+Vermont,Booker,1.4%,#006541,760,100
+Virginia,Booker,3.2%,#006541,760,100
+Idaho,Booker,0.4%,#006541,980,100
+Michigan,Booker,1.1%,#006541,870,100
+Mississippi,Booker,4.9%,#006541,650,100
+Missouri,Booker,2.9%,#006541,760,100
+North Dakota,Booker,0.5%,#006541,870,100
+Washington,Booker,1.4%,#006541,870,100
+Northern Marianas,Booker,2.4%,#006541,870,100
+Ohio,Booker,0.9%,#006541,980,100
+Arizona,Booker,0.4%,#006541,980,100
+Florida,Booker,1.6%,#006541,870,100
+Illinois,Booker,1.6%,#006541,870,100
+Georgia,Booker,2.4%,#006541,650,100
+Puerto Rico,Booker,2.4%,#006541,870,100
+Alaska,Booker,0.5%,#006541,980,100
+Hawaii,Booker,0.5%,#006541,760,100
+Louisiana,Booker,4.2%,#006541,760,100
+Wyoming,Booker,0.3%,#006541,870,100
+Wisconsin,Booker,2.2%,#006541,870,100
+Connecticut,Booker,4.2%,#006541,540,100
+Delaware,Booker,4%,#006541,650,100
+Maryland,Booker,6.1%,#006541,540,100
+New York,Booker,2.3%,#006541,760,100
+Pennsylvania,Booker,0.8%,#006541,980,100
+Rhode Island,Booker,8%,#006541,540,100
+Guam,Booker,2.4%,#006541,870,100
+Kansas,Booker,0.5%,#006541,870,100
+Indiana,Booker,0.2%,#006541,870,100
+Nebraska,Booker,0.6%,#006541,870,100
+West Virginia,Booker,2.2%,#006541,870,100
+Kentucky,Booker,3.5%,#006541,760,100
+Oregon,Booker,0.6%,#006541,980,100
+DC,Booker,9.9%,#006541,540,100
+Montana,Booker,0.3%,#006541,980,100
+New Jersey,Booker,11.1%,#006541,430,100
+New Mexico,Booker,1.5%,#006541,760,100
+South Dakota,Booker,0.4%,#006541,870,100
+Virgin Islands,Booker,2.4%,#006541,870,100
+US,Booker,2.4%,#006541,870,100
+Iowa,Buttigieg,21.9%,#36AEFF,100,100
+New Hampshire,Buttigieg,18.3%,#36AEFF,320,100
+Nevada,Buttigieg,9%,#36AEFF,430,100
+South Carolina,Buttigieg,8.6%,#36AEFF,430,100
+Alabama,Buttigieg,8.2%,#36AEFF,430,100
+American Samoa,Buttigieg,8.9%,#36AEFF,430,100
+Arkansas,Buttigieg,8.5%,#36AEFF,430,100
+California,Buttigieg,10.4%,#36AEFF,430,100
+Colorado,Buttigieg,8.7%,#36AEFF,430,100
+Democrats Abroad,Buttigieg,8.9%,#36AEFF,430,100
+Maine,Buttigieg,12.9%,#36AEFF,430,100
+Massachusetts,Buttigieg,12.5%,#36AEFF,430,100
+Minnesota,Buttigieg,12.4%,#36AEFF,540,100
+North Carolina,Buttigieg,8%,#36AEFF,540,100
+Oklahoma,Buttigieg,7.4%,#36AEFF,540,100
+Tennessee,Buttigieg,9%,#36AEFF,430,100
+Texas,Buttigieg,9.7%,#36AEFF,430,100
+Utah,Buttigieg,10.4%,#36AEFF,430,100
+Vermont,Buttigieg,10.5%,#36AEFF,430,100
+Virginia,Buttigieg,10.2%,#36AEFF,430,100
+Idaho,Buttigieg,9.9%,#36AEFF,430,100
+Michigan,Buttigieg,10.6%,#36AEFF,430,100
+Mississippi,Buttigieg,6.6%,#36AEFF,540,100
+Missouri,Buttigieg,8.5%,#36AEFF,430,100
+North Dakota,Buttigieg,11.7%,#36AEFF,430,100
+Washington,Buttigieg,8.6%,#36AEFF,430,100
+Northern Marianas,Buttigieg,8.9%,#36AEFF,430,100
+Ohio,Buttigieg,11.1%,#36AEFF,430,100
+Arizona,Buttigieg,11%,#36AEFF,430,100
+Florida,Buttigieg,10.1%,#36AEFF,430,100
+Illinois,Buttigieg,15.1%,#36AEFF,430,100
+Georgia,Buttigieg,8.5%,#36AEFF,540,100
+Puerto Rico,Buttigieg,8.9%,#36AEFF,430,100
+Alaska,Buttigieg,11%,#36AEFF,430,100
+Hawaii,Buttigieg,9%,#36AEFF,430,100
+Louisiana,Buttigieg,7.2%,#36AEFF,430,100
+Wyoming,Buttigieg,11.1%,#36AEFF,430,100
+Wisconsin,Buttigieg,12.6%,#36AEFF,430,100
+Connecticut,Buttigieg,13.4%,#36AEFF,430,100
+Delaware,Buttigieg,11.8%,#36AEFF,430,100
+Maryland,Buttigieg,11.6%,#36AEFF,430,100
+New York,Buttigieg,9.3%,#36AEFF,540,100
+Pennsylvania,Buttigieg,12.5%,#36AEFF,430,100
+Rhode Island,Buttigieg,9.4%,#36AEFF,430,100
+Guam,Buttigieg,8.9%,#36AEFF,430,100
+Kansas,Buttigieg,10.5%,#36AEFF,430,100
+Indiana,Buttigieg,22%,#36AEFF,210,100
+Nebraska,Buttigieg,10.1%,#36AEFF,430,100
+West Virginia,Buttigieg,8.5%,#36AEFF,430,100
+Kentucky,Buttigieg,9%,#36AEFF,430,100
+Oregon,Buttigieg,9.5%,#36AEFF,540,100
+DC,Buttigieg,10.7%,#36AEFF,430,100
+Montana,Buttigieg,11.5%,#36AEFF,430,100
+New Jersey,Buttigieg,10.4%,#36AEFF,540,100
+New Mexico,Buttigieg,8.2%,#36AEFF,540,100
+South Dakota,Buttigieg,10.7%,#36AEFF,430,100
+Virgin Islands,Buttigieg,8.9%,#36AEFF,430,100
+US,Buttigieg,10.6%,#36AEFF,430,100
+Iowa,Klobuchar,6.1%,#0077FF,540,100
+New Hampshire,Klobuchar,3.3%,#0077FF,760,100
+Nevada,Klobuchar,1.9%,#0077FF,870,100
+South Carolina,Klobuchar,2.5%,#0077FF,760,100
+Alabama,Klobuchar,4.7%,#0077FF,650,100
+American Samoa,Klobuchar,3%,#0077FF,870,100
+Arkansas,Klobuchar,4.9%,#0077FF,650,100
+California,Klobuchar,1.9%,#0077FF,760,100
+Colorado,Klobuchar,1.1%,#0077FF,760,100
+Democrats Abroad,Klobuchar,3%,#0077FF,760,100
+Maine,Klobuchar,1.1%,#0077FF,980,100
+Massachusetts,Klobuchar,1.7%,#0077FF,760,100
+Minnesota,Klobuchar,16.7%,#0077FF,320,100
+North Carolina,Klobuchar,2.1%,#0077FF,650,100
+Oklahoma,Klobuchar,4%,#0077FF,650,100
+Tennessee,Klobuchar,5.1%,#0077FF,650,100
+Texas,Klobuchar,2.3%,#0077FF,760,100
+Utah,Klobuchar,3.9%,#0077FF,650,100
+Vermont,Klobuchar,1%,#0077FF,870,100
+Virginia,Klobuchar,4.6%,#0077FF,650,100
+Idaho,Klobuchar,5.2%,#0077FF,650,100
+Michigan,Klobuchar,2.8%,#0077FF,540,100
+Mississippi,Klobuchar,3.6%,#0077FF,760,100
+Missouri,Klobuchar,4.4%,#0077FF,650,100
+North Dakota,Klobuchar,5.4%,#0077FF,650,100
+Washington,Klobuchar,0.7%,#0077FF,760,100
+Northern Marianas,Klobuchar,3%,#0077FF,760,100
+Ohio,Klobuchar,3.8%,#0077FF,650,100
+Arizona,Klobuchar,1.8%,#0077FF,760,100
+Florida,Klobuchar,3%,#0077FF,650,100
+Illinois,Klobuchar,4.5%,#0077FF,540,100
+Georgia,Klobuchar,2.6%,#0077FF,870,100
+Puerto Rico,Klobuchar,3%,#0077FF,650,100
+Alaska,Klobuchar,2.4%,#0077FF,760,100
+Hawaii,Klobuchar,0.5%,#0077FF,870,100
+Louisiana,Klobuchar,4.5%,#0077FF,650,100
+Wyoming,Klobuchar,3.9%,#0077FF,760,100
+Wisconsin,Klobuchar,3.1%,#0077FF,650,100
+Connecticut,Klobuchar,0.9%,#0077FF,870,100
+Delaware,Klobuchar,1.4%,#0077FF,870,100
+Maryland,Klobuchar,0.7%,#0077FF,980,100
+New York,Klobuchar,1.1%,#0077FF,870,100
+Pennsylvania,Klobuchar,3.4%,#0077FF,540,100
+Rhode Island,Klobuchar,0.5%,#0077FF,870,100
+Guam,Klobuchar,3%,#0077FF,760,100
+Kansas,Klobuchar,4.1%,#0077FF,650,100
+Indiana,Klobuchar,6.8%,#0077FF,540,100
+Nebraska,Klobuchar,1.5%,#0077FF,760,100
+West Virginia,Klobuchar,5.7%,#0077FF,650,100
+Kentucky,Klobuchar,5.3%,#0077FF,650,100
+Oregon,Klobuchar,0.5%,#0077FF,760,100
+DC,Klobuchar,1.3%,#0077FF,870,100
+Montana,Klobuchar,3.6%,#0077FF,760,100
+New Jersey,Klobuchar,1.2%,#0077FF,870,100
+New Mexico,Klobuchar,0.5%,#0077FF,870,100
+South Dakota,Klobuchar,4.1%,#0077FF,650,100
+Virgin Islands,Klobuchar,3%,#0077FF,760,100
+US,Klobuchar,3.2%,#0077FF,760,100
+Iowa,Sanders,17.6%,#002E66,320,100
+New Hampshire,Sanders,19.9%,#002E66,100,100
+Nevada,Sanders,19.4%,#002E66,210,100
+South Carolina,Sanders,13.3%,#002E66,210,100
+Alabama,Sanders,12.9%,#002E66,320,100
+American Samoa,Sanders,19.8%,#002E66,210,100
+Arkansas,Sanders,14.3%,#002E66,210,100
+California,Sanders,21.6%,#002E66,210,100
+Colorado,Sanders,24.3%,#002E66,100,100
+Democrats Abroad,Sanders,19.8%,#002E66,210,100
+Maine,Sanders,17.9%,#002E66,320,100
+Massachusetts,Sanders,15%,#002E66,320,100
+Minnesota,Sanders,17%,#002E66,210,100
+North Carolina,Sanders,16.5%,#002E66,210,100
+Oklahoma,Sanders,14.8%,#002E66,210,100
+Tennessee,Sanders,13.7%,#002E66,210,100
+Texas,Sanders,17%,#002E66,210,100
+Utah,Sanders,15.6%,#002E66,320,100
+Vermont,Sanders,34.8%,#002E66,100,100
+Virginia,Sanders,14.8%,#002E66,210,100
+Idaho,Sanders,10.7%,#002E66,320,100
+Michigan,Sanders,23.2%,#002E66,210,100
+Mississippi,Sanders,14.1%,#002E66,210,100
+Missouri,Sanders,14.4%,#002E66,320,100
+North Dakota,Sanders,13.3%,#002E66,320,100
+Washington,Sanders,24.4%,#002E66,210,100
+Northern Marianas,Sanders,19.8%,#002E66,210,100
+Ohio,Sanders,21%,#002E66,210,100
+Arizona,Sanders,19.7%,#002E66,210,100
+Florida,Sanders,16.3%,#002E66,320,100
+Illinois,Sanders,19.4%,#002E66,210,100
+Georgia,Sanders,16.3%,#002E66,210,100
+Puerto Rico,Sanders,19.8%,#002E66,210,100
+Alaska,Sanders,13.4%,#002E66,320,100
+Hawaii,Sanders,23.9%,#002E66,210,100
+Louisiana,Sanders,14.5%,#002E66,210,100
+Wyoming,Sanders,13.2%,#002E66,320,100
+Wisconsin,Sanders,21.6%,#002E66,210,100
+Connecticut,Sanders,21%,#002E66,210,100
+Delaware,Sanders,16.8%,#002E66,210,100
+Maryland,Sanders,19.1%,#002E66,210,100
+New York,Sanders,17%,#002E66,320,100
+Pennsylvania,Sanders,18.5%,#002E66,210,100
+Rhode Island,Sanders,21.9%,#002E66,210,100
+Guam,Sanders,19.8%,#002E66,210,100
+Kansas,Sanders,13.2%,#002E66,320,100
+Indiana,Sanders,15.1%,#002E66,320,100
+Nebraska,Sanders,13.9%,#002E66,320,100
+West Virginia,Sanders,13.6%,#002E66,210,100
+Kentucky,Sanders,13.8%,#002E66,210,100
+Oregon,Sanders,24.3%,#002E66,210,100
+DC,Sanders,17.2%,#002E66,210,100
+Montana,Sanders,14.1%,#002E66,320,100
+New Jersey,Sanders,19%,#002E66,210,100
+New Mexico,Sanders,24.1%,#002E66,210,100
+South Dakota,Sanders,13.1%,#002E66,320,100
+Virgin Islands,Sanders,19.8%,#002E66,210,100
+US,Sanders,17.8%,#002E66,210,100
+Iowa,Steyer,3.2%,#E7B5FF,870,100
+New Hampshire,Steyer,2.9%,#E7B5FF,870,100
+Nevada,Steyer,3.8%,#E7B5FF,760,100
+South Carolina,Steyer,5.6%,#E7B5FF,540,100
+Alabama,Steyer,3.3%,#E7B5FF,870,100
+American Samoa,Steyer,1.2%,#E7B5FF,980,100
+Arkansas,Steyer,3.2%,#E7B5FF,870,100
+California,Steyer,1.7%,#E7B5FF,760,100
+Colorado,Steyer,0.9%,#E7B5FF,980,100
+Democrats Abroad,Steyer,1.2%,#E7B5FF,980,100
+Maine,Steyer,4.6%,#E7B5FF,650,100
+Massachusetts,Steyer,1.1%,#E7B5FF,870,100
+Minnesota,Steyer,0.3%,#E7B5FF,980,100
+North Carolina,Steyer,1.8%,#E7B5FF,980,100
+Oklahoma,Steyer,3.4%,#E7B5FF,760,100
+Tennessee,Steyer,3.6%,#E7B5FF,760,100
+Texas,Steyer,1.7%,#E7B5FF,980,100
+Utah,Steyer,3.9%,#E7B5FF,760,100
+Vermont,Steyer,0.6%,#E7B5FF,980,100
+Virginia,Steyer,2.2%,#E7B5FF,870,100
+Idaho,Steyer,3.5%,#E7B5FF,760,100
+Michigan,Steyer,0.5%,#E7B5FF,980,100
+Mississippi,Steyer,2.6%,#E7B5FF,870,100
+Missouri,Steyer,3.1%,#E7B5FF,870,100
+North Dakota,Steyer,3.9%,#E7B5FF,760,100
+Washington,Steyer,0.2%,#E7B5FF,980,100
+Northern Marianas,Steyer,1.2%,#E7B5FF,980,100
+Ohio,Steyer,0.9%,#E7B5FF,870,100
+Arizona,Steyer,0.9%,#E7B5FF,870,100
+Florida,Steyer,0.9%,#E7B5FF,980,100
+Illinois,Steyer,1.1%,#E7B5FF,980,100
+Georgia,Steyer,1.2%,#E7B5FF,980,100
+Puerto Rico,Steyer,1.2%,#E7B5FF,980,100
+Alaska,Steyer,4.6%,#E7B5FF,650,100
+Hawaii,Steyer,0.2%,#E7B5FF,980,100
+Louisiana,Steyer,3.8%,#E7B5FF,870,100
+Wyoming,Steyer,3.5%,#E7B5FF,650,100
+Wisconsin,Steyer,0.3%,#E7B5FF,980,100
+Connecticut,Steyer,1.2%,#E7B5FF,980,100
+Delaware,Steyer,1.3%,#E7B5FF,980,100
+Maryland,Steyer,0.5%,#E7B5FF,870,100
+New York,Steyer,0.3%,#E7B5FF,980,100
+Pennsylvania,Steyer,0.7%,#E7B5FF,870,100
+Rhode Island,Steyer,0.2%,#E7B5FF,980,100
+Guam,Steyer,1.2%,#E7B5FF,980,100
+Kansas,Steyer,3.7%,#E7B5FF,760,100
+Indiana,Steyer,1.2%,#E7B5FF,760,100
+Nebraska,Steyer,2.6%,#E7B5FF,650,100
+West Virginia,Steyer,3%,#E7B5FF,760,100
+Kentucky,Steyer,3.1%,#E7B5FF,870,100
+Oregon,Steyer,0.3%,#E7B5FF,870,100
+DC,Steyer,0.8%,#E7B5FF,980,100
+Montana,Steyer,3.5%,#E7B5FF,650,100
+New Jersey,Steyer,0.6%,#E7B5FF,980,100
+New Mexico,Steyer,0.3%,#E7B5FF,980,100
+South Dakota,Steyer,3.7%,#E7B5FF,760,100
+Virgin Islands,Steyer,1.2%,#E7B5FF,980,100
+US,Steyer,2%,#E7B5FF,980,100
+Iowa,Warren,14.5%,#B722FF,430,100
+New Hampshire,Warren,16.1%,#B722FF,430,100
+Nevada,Warren,16.1%,#B722FF,320,100
+South Carolina,Warren,10.6%,#B722FF,320,100
+Alabama,Warren,12.9%,#B722FF,210,100
+American Samoa,Warren,16.4%,#B722FF,320,100
+Arkansas,Warren,12.1%,#B722FF,320,100
+California,Warren,16.9%,#B722FF,320,100
+Colorado,Warren,17.9%,#B722FF,320,100
+Democrats Abroad,Warren,16.4%,#B722FF,320,100
+Maine,Warren,18.5%,#B722FF,210,100
+Massachusetts,Warren,27.9%,#B722FF,100,100
+Minnesota,Warren,15.7%,#B722FF,430,100
+North Carolina,Warren,12.3%,#B722FF,320,100
+Oklahoma,Warren,11.9%,#B722FF,320,100
+Tennessee,Warren,12.6%,#B722FF,320,100
+Texas,Warren,14.4%,#B722FF,320,100
+Utah,Warren,19%,#B722FF,210,100
+Vermont,Warren,17.1%,#B722FF,210,100
+Virginia,Warren,13.5%,#B722FF,320,100
+Idaho,Warren,23.9%,#B722FF,210,100
+Michigan,Warren,16.1%,#B722FF,320,100
+Mississippi,Warren,12.7%,#B722FF,320,100
+Missouri,Warren,14.4%,#B722FF,210,100
+North Dakota,Warren,19.1%,#B722FF,210,100
+Washington,Warren,17.1%,#B722FF,320,100
+Northern Marianas,Warren,16.4%,#B722FF,320,100
+Ohio,Warren,15.4%,#B722FF,320,100
+Arizona,Warren,14.7%,#B722FF,320,100
+Florida,Warren,16.1%,#B722FF,210,100
+Illinois,Warren,15.6%,#B722FF,320,100
+Georgia,Warren,12.1%,#B722FF,320,100
+Puerto Rico,Warren,16.4%,#B722FF,320,100
+Alaska,Warren,19.3%,#B722FF,210,100
+Hawaii,Warren,18.8%,#B722FF,320,100
+Louisiana,Warren,11.8%,#B722FF,320,100
+Wyoming,Warren,25.1%,#B722FF,100,100
+Wisconsin,Warren,18.2%,#B722FF,320,100
+Connecticut,Warren,20%,#B722FF,320,100
+Delaware,Warren,13.5%,#B722FF,320,100
+Maryland,Warren,18.8%,#B722FF,320,100
+New York,Warren,14%,#B722FF,430,100
+Pennsylvania,Warren,14.4%,#B722FF,320,100
+Rhode Island,Warren,16.3%,#B722FF,320,100
+Guam,Warren,16.4%,#B722FF,320,100
+Kansas,Warren,19.6%,#B722FF,210,100
+Indiana,Warren,13.9%,#B722FF,430,100
+Nebraska,Warren,24.3%,#B722FF,210,100
+West Virginia,Warren,13.4%,#B722FF,320,100
+Kentucky,Warren,12.5%,#B722FF,320,100
+Oregon,Warren,17.7%,#B722FF,320,100
+DC,Warren,14.9%,#B722FF,320,100
+Montana,Warren,22.2%,#B722FF,210,100
+New Jersey,Warren,16.2%,#B722FF,320,100
+New Mexico,Warren,16.1%,#B722FF,320,100
+South Dakota,Warren,22.4%,#B722FF,210,100
+Virgin Islands,Warren,16.4%,#B722FF,320,100
+US,Warren,16.5%,#B722FF,320,100
+Iowa,Yang,3.2%,purple,650,100
+New Hampshire,Yang,4.8%,purple,540,100
+Nevada,Yang,4.5%,purple,650,100
+South Carolina,Yang,2.8%,purple,980,100
+Alabama,Yang,0.9%,purple,980,100
+American Samoa,Yang,3.5%,purple,650,100
+Arkansas,Yang,0.5%,purple,980,100
+California,Yang,5.8%,purple,540,100
+Colorado,Yang,7.3%,purple,540,100
+Democrats Abroad,Yang,3.5%,purple,650,100
+Maine,Yang,4.1%,purple,760,100
+Massachusetts,Yang,2.2%,purple,980,100
+Minnesota,Yang,1.6%,purple,760,100
+North Carolina,Yang,2.4%,purple,760,100
+Oklahoma,Yang,0.8%,purple,980,100
+Tennessee,Yang,0.6%,purple,980,100
+Texas,Yang,3.9%,purple,650,100
+Utah,Yang,1%,purple,870,100
+Vermont,Yang,4.2%,purple,540,100
+Virginia,Yang,1.9%,purple,980,100
+Idaho,Yang,0.5%,purple,870,100
+Michigan,Yang,2.5%,purple,760,100
+Mississippi,Yang,1.8%,purple,870,100
+Missouri,Yang,0.7%,purple,980,100
+North Dakota,Yang,0.7%,purple,980,100
+Washington,Yang,8.2%,purple,540,100
+Northern Marianas,Yang,3.5%,purple,650,100
+Ohio,Yang,2.6%,purple,760,100
+Arizona,Yang,5.3%,purple,650,100
+Florida,Yang,2.5%,purple,760,100
+Illinois,Yang,2.3%,purple,760,100
+Georgia,Yang,2.6%,purple,760,100
+Puerto Rico,Yang,3.5%,purple,760,100
+Alaska,Yang,0.7%,purple,870,100
+Hawaii,Yang,8.5%,purple,540,100
+Louisiana,Yang,0.6%,purple,980,100
+Wyoming,Yang,0.9%,purple,980,100
+Wisconsin,Yang,3.2%,purple,760,100
+Connecticut,Yang,2.4%,purple,760,100
+Delaware,Yang,2.1%,purple,760,100
+Maryland,Yang,4.4%,purple,650,100
+New York,Yang,3.3%,purple,650,100
+Pennsylvania,Yang,2.8%,purple,760,100
+Rhode Island,Yang,5.4%,purple,650,100
+Guam,Yang,3.5%,purple,650,100
+Kansas,Yang,0.5%,purple,980,100
+Indiana,Yang,0.5%,purple,980,100
+Nebraska,Yang,0.5%,purple,980,100
+West Virginia,Yang,0.6%,purple,980,100
+Kentucky,Yang,0.5%,purple,980,100
+Oregon,Yang,8.6%,purple,430,100
+DC,Yang,5%,purple,650,100
+Montana,Yang,0.8%,purple,870,100
+New Jersey,Yang,3.8%,purple,760,100
+New Mexico,Yang,9.4%,purple,430,100
+South Dakota,Yang,0.6%,purple,980,100
+Virgin Islands,Yang,3.5%,purple,650,100
+US,Yang,2.9%,purple,650,100

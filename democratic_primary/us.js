@@ -4,12 +4,12 @@ var glines
     var parseDate = d3.timeParse("%Y-%m-%d")
     var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"]
 
-    var margin = {top: 40, right: 100, bottom: 40, left: 40}
+    var margin = {top: 80, right: 100, bottom: 40, left: 40}
     var width = innerWidth - margin.left - margin.right
     var height = 500 - margin.top - margin.bottom
 
     var lineOpacity = .8
-    var lineStroke = "3px"
+    var lineStroke = "4px"
 
     var axisPad = 12 // axis formatting
     var R = 7 //legend marker
@@ -20,7 +20,9 @@ var glines
       .domain(category)
       .range(["#00FF90", "#00B050", "#006541", "#36AEFF","#0077FF","002E66","E7B5FF","B722FF","purple"])
 
-    d3.csv("states.csv", data => {  
+      d3.csv("states.csv", function(error, data){
+      
+        var data = data.filter(function(d){return d.state == 'US';})
 
       var res = data.map((d,i) => {
         return {
@@ -30,10 +32,11 @@ var glines
           percentage : +d.percentage
         }
       })
+        console.log(data)
 
 
       var mindate = new Date(2019,5,1),
-        maxdate = new Date(2020,6,1);
+      maxdate = new Date(2020,6,1);
 
       var xScale = d3.scaleTime()
         .domain([mindate,maxdate])
@@ -42,7 +45,7 @@ var glines
       
 
       var yScale = d3.scaleLinear()
-        .domain([0, d3.max(res, d => d.percentage)])
+        .domain(d3.extent(res, d=>d.percentage))
         .range([height, 0]);
 
       var svg = d3.select("#chart").append("svg")
@@ -68,8 +71,8 @@ var glines
             .style("text-anchor", "right")
             .attr("y", axisPad)
             .attr('fill', 'black')
-              .attr('font-size','12')
-              .attr('font-weight',500)
+            .attr('font-size','15')
+            .attr('font-weight',500)
           g.selectAll("line")
             .attr('stroke', '#A9A9A9')
 
@@ -96,12 +99,7 @@ var glines
           g.select(".domain").remove()
 
          })
-        .append('text')
-          .attr('x',15)
-          .attr("y", 6)
-          .attr('fill', 'black')
-          .attr('font-size', '15px')
-          .text("")
+        
 
 
       // CREATE LEGEND // 
@@ -138,7 +136,7 @@ var glines
         .x(d => xScale(d.date))
         .y(d => yScale(d.percentage))
 
-      renderChart(-1) // inital chart render (set default to Bidding Exercise 1 data)
+      renderChart(1) // inital chart render (set default to Bidding Exercise 1 data)
 
       // Update chart when radio button is selected
       d3.selectAll(("input[name='dataPoint']")).on('change', function(){
@@ -215,7 +213,7 @@ var glines
         tooltip = d3.select("#chart").append("div")
           .attr('id', 'tooltip')
           .style('position', 'absolute')
-          .style("fill", "none")
+          .style('fill', 'white')
           .style('padding', 6)
           .style('display', 'none')
 
@@ -314,7 +312,8 @@ var glines
         return sortingArr.indexOf(a.key) - sortingArr.indexOf(b.key) // rank vehicle category based on price of percentage
       })
 
-      tooltip.html(sortingObj[0].month + "-" + sortingObj[0].day )
+      
+    tooltip.html(sortingObj[0].month + "-" + sortingObj[0].day )
         .style('display', 'block')
         .style('left', d3.event.pageX + 20)
         .style('top', d3.event.pageY - 160)
@@ -334,7 +333,4 @@ var glines
           var idx = bisect(d.values, xDate)
           return d.key +  " - " + d.values[idx].percentage.toString()  + "%" 
         })
-    }
-
-  })
-  
+    }})
