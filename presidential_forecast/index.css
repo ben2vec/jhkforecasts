@@ -13,9 +13,9 @@
  h5{ font-family: brandon-grotesque, sans-serif;
    font-weight: in;
    font-style: inherit;}
- p{ font-family: brandon-grotesque, sans-serif;
-   font-weight: inherit;
-   font-style: inherit;}
+   p{ font-family: brandon-grotesque, sans-serif;
+    font-weight: inherit;
+     font-style: inherit;}
  a{text-decoration:inherit;
   color: black;
 
@@ -27,7 +27,7 @@
      box-align: center ;
    }
 
-  text {
+  .text {
     font-family: brandon-grotesque, sans-serif;
    }
   body {
@@ -113,13 +113,15 @@
     div.tooltip {	
       position: absolute;			
       text-align: center;			
-      width: 60px;					
-      height: 50px;					
+      width: 100px;					
+      height: 100px;					
       padding: 2px;				
       font-family: brandon-grotesque,sans-serif;
-      font-size: 16px;		
+      font-size: 15px;	
+      font-weight: 700 ;	
       background:white;	
-      border: 0px;		
+      stroke-width: 1;		
+      stroke: black;
       border-radius: 8px;			
       pointer-events: none;			
   }

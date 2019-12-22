@@ -9,7 +9,7 @@ var div = d3.select("body").append("div")
     .attr("class", "tooltip")				
     .style("opacity", 0);
 
-d3.csv("test.csv", function(error, data){
+d3.csv("evrace.csv", function(error, data){
         
         
     
@@ -24,6 +24,7 @@ d3.csv("test.csv", function(error, data){
           evWidth : +d.evWidth,
           evX : +d.evX,
           textX : +d.textX,
+          pageLink : +d.pageLink,
         }
       })
 
@@ -57,7 +58,7 @@ d3.csv("test.csv", function(error, data){
                             .data(data)
                             .enter()
                             .append("a")
-                            .attr("xlink:href", function(d) {return "projects.jhkforecasts.com/presidential_forecast" + d.state})
+                            .attr("xlink:href", function(d) {return  d.pageLink})
                             .append("rect")
                             .attr("rx", 2)
                             .attr("ry", 1)
@@ -72,7 +73,7 @@ d3.csv("test.csv", function(error, data){
                               div.transition()		
                                   .duration(50)		
                                   .style("opacity", .9);		
-                              div	.html(d.state + "<br/>"  + (Math.abs(d.gopWin-50)+50)+"%")	
+                              div	.html(d.state + "<br/>"  + "Win %"  +"<br/>"+ "Gop:"+ d.gopWin +"%"+ "<br/>"  + "Dem:"+ d.demWin +"%")	
                                   .style("left", (d3.event.pageX) + "px")		
                                   .style("top", (d3.event.pageY - 28) + "px");	
                               })					
@@ -97,6 +98,7 @@ d3.csv("test.csv", function(error, data){
                 .attr("x", xScale(270))
                 .attr("y", 265)
                 .attr("text-anchor","middle")
-                .style("font-weight","600");
+                .style("font-weight","600")
+                .style("font-family","brandon-grotesque");
 
     })
