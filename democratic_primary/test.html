@@ -42,14 +42,14 @@
           <div class='row'>
             <div id="chart">
               <div class='header'></div>
-              <h1 style="text-align: center;">South Carolina</h1>
+              <h1 style="text-align: center;">Hawaii</h1>
               
                 <div class="radio-toolbar" style="text-align:center ;">
                     <input type="radio" id="projvote" name="dataPoint" value="1" checked>
                     <label for="projvote">Projected Vote Share</label>
                 
                     <input type="radio" id="win%" name="dataPoint" value="2">
-                    <label for="win%">Win South Carolina</label>
+                    <label for="win%">Win Hawaii</label>
                     </div>
                    <p> <a href="/democratic_primary"><span style="text-decoration: underline; "><<<< Back to national Overview<<<<</span></a></p>
                 </div>
@@ -82,7 +82,7 @@
   
         d3.csv("states.csv", function(error, data){
         
-          var data = data.filter(function(d){return d.state == 'South Carolina';})
+          var data = data.filter(function(d){return d.state == 'Hawaii';})
   
         var res = data.map((d,i) => {
           return {
@@ -206,13 +206,7 @@
         function updateChart(dataPoint) {
   
           var resNew = res.filter(d=>d.dataPoint == parseInt(dataPoint))
-          
-           yScale = d3.scaleLinear()
-          .domain(d3.extent(resNew, d=>d.percentage))
-          .range([height, 0]);
-
-
-          
+  
           var res_nested = d3.nest()
             .key(d=>d.candidate)
             .entries(resNew)
@@ -244,10 +238,7 @@
           // APPEND MULTIPLE LINES //
           var lines = svg.append('g')
             .attr('class', 'lines')
-          
-
-
-
+  
           glines = lines.selectAll('.line-group')
             .data(res_nested).enter()
             .append('g')
@@ -411,211 +402,6 @@
 
    <div></div> 
 
-<script>
-
-  
-  d3.csv("bubbles.csv", function(error, data){
-        
-      var data = data.filter(function(d){return d.state == 'South Carolina';})
-  
-    var res = data.map((d,i) => {
-      return {
-        candidate : +d.candidate,
-        win : +d.win,
-        vote :+d.vote,
-        delegates:+d.delegates,
-        color : +d.color,
-        cx : +d.cx,
-        cy : +d.cy,
-
-      }
-    })
-  
-  //Create the SVG Viewport
-  var svgContainer = d3.select("body").append("svg")
-  .attr("viewBox", "0 0 1100 1000");
-     
-  //Add circles to the svgContainer
-
-
-  
-
-     
-
-
-  var circles = svgContainer.selectAll("circle")
-                                .data(data)
-                                .enter()
-                                .append("circle");
-  
-  var text = svgContainer.selectAll("text")
-                         .data(data)
-                         .enter()
-                          .append("text")
-                          .attr("text-anchor","middle");
-   var textZero = svgContainer.selectAll("textZero")
-                         .data(data)
-                         .enter()
-                          .append("text")
-                          .attr("text-anchor","middle");
-  
-  var textTwo = svgContainer.selectAll("textTwo")
-                         .data(data)
-                         .enter()
-                          .append("text")
-                          .attr("text-anchor","middle");
-  
-     //Add the circle attributes
-    var circleAttributes = circles
-                            .attr("cx", function (d) { return d.cx; })
-                            .attr("cy", 125)
-                           .attr("r", 50)
-                         .style("fill", function (d) { return d.color; })
-                         .style('opacity', .7);
-      
-      var textLabels = text
-                   .attr("x", function(d) { return d.cx; })
-                  .attr("y", 150)
-                  .text( function (d) { return d.win; })
-                   .attr("font-family", "sans-serif")
-                  .attr("font-size", "20px")
-                   .attr("fill", "black");
-  
-  var textLabelsTwo = textTwo
-                   .attr("x", function(d) { return d.cx; })
-                  .attr("y", 125)
-                  .text( function (d) { return d.candidate; })
-                   .attr("font-family", "sans-serif")
-                  .attr("font-size", "20px")
-                   .attr("fill", "black")
-                   ;
-  var textLabelsZero = textZero
-                   .attr("x", 550)
-                  .attr("y", 50)
-                  .text("Win South Carolina")
-                   .attr("font-family", "sans-serif")
-                  .attr("font-size", "45px")
-                   .attr("fill", "black");
-  
-
-
-
-  //Add circles to the svgContainer
-  var circlesTwo = svgContainer.selectAll("circlesTwo")
-                                .data(data)
-                                .enter()
-                                .append("circle");
-  
-  var textThree = svgContainer.selectAll("textThree")
-                         .data(data)
-                         .enter()
-                          .append("text")
-                          .attr("text-anchor","middle");
-  
-  var textFour = svgContainer.selectAll("textFour")
-                         .data(data)
-                         .enter()
-                          .append("text")
-                          .attr("text-anchor","middle");
-  var textFive = svgContainer.selectAll("textFive")
-                         .data(data)
-                         .enter()
-                          .append("text")
-                          .attr("text-anchor","middle");
-  
-  
-     //Add the circle attributes
-    var circleAttributesTwo = circlesTwo
-                            .attr("cx", function (d) { return d.cx; })
-                            .attr("cy", 300)
-                           .attr("r", 50)
-                         .style("fill", function (d) { return d.color; })
-                         .style('opacity', .7);
-      
-      var textLabelsThree = textThree
-                   .attr("x", function(d) { return d.cx; })
-                  .attr("y", 325)
-                  .text( function (d) { return d.vote; })
-                   .attr("font-family", "sans-serif")
-                  .attr("font-size", "20px")
-                   .attr("fill", "black");
-  
-  var textLabelsFour = textFour
-                   .attr("x", function(d) { return d.cx; })
-                  .attr("y", 300)
-                  .text( function (d) { return d.candidate; })
-                   .attr("font-family", "sans-serif")
-                  .attr("font-size", "20px")
-                   .attr("fill", "black")
-                   ;
-
-  var textLabelsFive = textFive
-                   .attr("x", 550)
-                  .attr("y", 225)
-                  .text("Vote Share")
-                   .attr("font-family", "sans-serif")
-                  .attr("font-size", "45px")
-                   .attr("fill", "black");
-  
-            //Add circles to the svgContainer
-  var circlesThree = svgContainer.selectAll("circlesThree")
-                                .data(data)
-                                .enter()
-                                .append("circle");
-  
-  var textSix = svgContainer.selectAll("textSix")
-                         .data(data)
-                         .enter()
-                          .append("text")
-                          .attr("text-anchor","middle");
-  
-  var textSeven = svgContainer.selectAll("textSeven")
-                         .data(data)
-                         .enter()
-                          .append("text")
-                          .attr("text-anchor","middle");
-  var textEight = svgContainer.selectAll("textEight")
-                         .data(data)
-                         .enter()
-                          .append("text")
-                          .attr("text-anchor","middle");
-  
-  
-     //Add the circle attributes
-    var circleAttributesThree = circlesThree
-                            .attr("cx", function (d) { return d.cx; })
-                            .attr("cy", 475)
-                           .attr("r", 50)
-                         .style("fill", function (d) { return d.color; })
-                         .style('opacity', .7);
-      
-      var textLabelsSix = textSix
-                   .attr("x", function(d) { return d.cx; })
-                  .attr("y", 500)
-                  .text( function (d) { return d.delegates; })
-                   .attr("font-family", "sans-serif")
-                  .attr("font-size", "20px")
-                   .attr("fill", "black");
-  
-  var textLabelsSeven = textSeven
-                   .attr("x", function(d) { return d.cx; })
-                  .attr("y", 475)
-                  .text( function (d) { return d.candidate; })
-                   .attr("font-family", "sans-serif")
-                  .attr("font-size", "20px")
-                   .attr("fill", "black")
-                   ;
-
-  var textLabelsEight = textEight
-                   .attr("x", 550)
-                  .attr("y", 400)
-                  .text("Projected Delegates")
-                   .attr("font-family", "sans-serif")
-                  .attr("font-size", "45px")
-                   .attr("fill", "black");
-  
-  })
-    </script> 
    
         
       

@@ -6,17 +6,63 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-<link rel="stylesheet" href="https://use.typekit.net/htk2wjy.css">
-<link rel="stylesheet" href="index.css">
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-<script src="https://d3js.org/d3.v3.min.js"></script>
-
+<script src="https://d3js.org/d3.v4.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
 <body>
-    <script src="test.js"></script>  
+<p>Hover over the circles:</p>
+
+<script>var svg = d3.select("body")
+    .append("svg")
+    .attr("width", 300)
+    .attr("height", 300);
+  
+  var tool_tip = d3.tip()
+    .attr("class", "d3-tip")
+    .offset([20, 120])
+    .html("<p>This is a SVG inside a tooltip:</p><div id='tipDiv'></div>");
+  
+  svg.call(tool_tip);
+  
+  var data = [14, 27, 19, 6, 17];
+  
+  var circles = svg.selectAll("foo")
+    .data(data)
+    .enter()
+    .append("circle");
+  
+  circles.attr("cx", 50)
+    .attr("cy", function(d, i) {
+      return 20 + 50 * i
+    })
+    .attr("r", function(d) {
+      return d
+    })
+    .attr("fill", "teal")
+    .on('mouseover', function(d) {
+      tool_tip.show();
+      var tipSVG = d3.select("#tipDiv")
+        .append("svg")
+        .attr("width", 200)
+        .attr("height", 50);
+  
+      tipSVG.append("rect")
+        .attr("fill", "steelblue")
+        .attr("y", 10)
+        .attr("width", 0)
+        .attr("height", 30)
+        .transition()
+        .duration(1000)
+        .attr("width", d * 6);
+  
+      tipSVG.append("text")
+        .text(d)
+        .attr("x", 10)
+        .attr("y", 30)
+        .transition()
+        .duration(1000)
+        .attr("x", 6 + d * 6)
+    })
+    .on('mouseout', tool_tip.hide);</script>
     
 </body>
 </html>
