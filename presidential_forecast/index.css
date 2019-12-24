@@ -38,7 +38,7 @@
   .axis path,
   .axis line {
     fill: none;
-    stroke: black;
+    stroke: none;
 
   }
   
@@ -124,6 +124,7 @@ div.tooltip {
       border-radius: 8px;			
       pointer-events: none;			
   }
+
 
   .d3-tip {
     line-height: 1;

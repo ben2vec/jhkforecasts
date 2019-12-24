@@ -41,7 +41,7 @@
   
   var tool_tip = d3.tip()
       .attr("class", "d3-tip")
-      .offset([20,60])
+      .offset([60,20])
       .html("<div id='tipDiv'></div>");
     
     svg.call(tool_tip);       
@@ -113,12 +113,14 @@
         var tipSVG = d3.select("#tipDiv")
           .append("svg")
           .attr("width", 250)
-      .attr("height", 120);
+      .attr("height", 120)
+      ;
       
     
         tipSVG.append("rect")
           .attr("fill", "#FF6060")
           .attr("y", 50)
+          .attr("x",5)
           .attr("width", 0)
           .attr("height", 20)
           .transition()
@@ -127,7 +129,8 @@
       
     tipSVG.append("text")
           .text("Gop Win" +"%")
-      .attr("y", 45);
+      .attr("y", 45)
+      .attr("x",5),
     
     tipSVG.append("text")
       .text(d.properties.name)
@@ -140,11 +143,13 @@
       tipSVG.append("text")
           .text("Dem Win" +"%")
           .attr("y", 105)
+          .attr("x",5);
           
     
         tipSVG.append("text")
           .text(d.properties.gopWin +"%")
           .attr("y", 65)
+          .attr("x",5)
           .transition()
           .duration(300)
       .attr("x", d.properties.gopWin*2 + 10)
@@ -155,6 +160,7 @@
     tipSVG.append("rect")
           .attr("fill", "#0091FF")
           .attr("y", 70)
+          .attr("x",5)
           .attr("width", 0)
           .attr("height", 20)
           .transition()
@@ -164,6 +170,7 @@
         tipSVG.append("text")
           .text(d.properties.demWin +"%")
           .attr("y", 85)
+          .attr("x",5)
           .transition()
           .duration(300)
       .attr("x", d.properties.demWin * 2 + 10)
