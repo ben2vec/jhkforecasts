@@ -1,4 +1,11 @@
 State,Pollster,Grade,Sample,Date,Biden,Bloomberg,Booker,Buttigieg,Klobuchar,Sanders,Steyer,Warren,Yang
+US,Morning Consult,B/C,7178  lv,12/22,31%,6%,3%,9%,3%,21%,3%,15%,5%
+US,Ipsos,B-,709  a,12/19,18%,5%,1%,4%,1%,15%,2%,10%,2%
+US,McLaughlin & Associates,C/D,480  lv,12/18,23%,5%,4%,5%,2%,17%,3%,15%,4%
+US,McLaughlin & Associates,C/D,480  lv,12/18,27%,5%,3%,5%,2%,17%,4%,15%,5%
+California,Capitol Weekly,-,581  lv,12/7,19%,5%,2%,13%,4%,19%,1%,21%,5%
+US,Zogby Interactive/JZ Analytics,C,443  lv,12/8,28%,9%,0%,8%,2%,20%,3%,12%,3%
+US,Zogby Interactive/JZ Analytics,C,443  lv,12/8,30%,8%,0%,7%,2%,20%,3%,16%,4%
 US,NBC News/Wall Street Journal,A/B,410  lv,12/17,28%,4%,2%,9%,5%,21%,1%,18%,3%
 US,SSRS,A/B,408  rv,12/15,26%,5%,3%,8%,3%,20%,1%,16%,3%
 Iowa,Civiqs,-,632  lv,12/16,15%,0%,3%,24%,4%,21%,2%,18%,3%
@@ -16,7 +23,7 @@ California,Change Research,C,862  lv,12/10,19%,3%,3%,12%,1%,26%,2%,23%,4%
 US,IBD/TIPP,A/B,312  rv,12/14,26%,5%,3%,9%,2%,18%,2%,14%,2%
 US,Marist College,A+,704  rv,12/11,24%,4%,4%,13%,4%,22%,0%,17%,5%
 US,Fox News/Beacon Research/Shaw & Co. Research,A-,453  lv,12/11,30%,5%,2%,7%,5%,20%,1%,13%,3%
-California,Capitol Weekly,-,599  lv,12/7,19%,5%,2%,14%,4%,19%,1%,23%,5%
+California,Capitol Weekly,-,581  lv,12/7,19%,5%,2%,14%,4%,19%,1%,23%,5%
 South Carolina,Change Research,C,392  lv,12/11,27%,3%,5%,9%,2%,20%,5%,19%,2%
 Wisconsin,Marquette University Law School,A/B,358  lv,12/8,23%,3%,4%,15%,3%,19%,0%,16%,3%
 Texas,SSRS,A/B,327  lv,12/9,35%,5%,2%,9%,1%,15%,2%,13%,3%
@@ -816,13 +823,6 @@ US,Harris Insights & Analytics,C+,459  rv,11/28,25%,2%,3%,0%,0%,15%,0%,4%,0%
 Massachusetts,YouGov,B-,655  rv,11/14,19%,0%,3%,0%,3%,14%,0%,11%,0%
 US,Morning Consult,B/C,733  rv,11/9,26%,2%,3%,0%,1%,19%,0%,5%,0%
 US,Harris Insights & Analytics,C+,370  rv,11/6,30%,5%,5%,0%,0%,20%,0%,5%,0%
-,,,  ,,,,,,,,,,
-,,,  ,,,,,,,,,,
-,,,  ,,,,,,,,,,
-,,,  ,,,,,,,,,,
-,,,  ,,,,,,,,,,
-,,,  ,,,,,,,,,,
-,,,  ,,,,,,,,,,
 ,,,  ,,,,,,,,,,
 ,,,  ,,,,,,,,,,
 ,,,  ,,,,,,,,,,
