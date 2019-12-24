@@ -22,9 +22,9 @@ var glines
   
         d3.csv("timechange.csv", function(error, data){
         
-          var data = data.filter(function(d){return d.state == 'Wisconsin';})
+          var data = data.filter(function(d){return d.state == 'US';})
   
-          var data = data.filter(function(d){return d.index == 'vote';})
+          var data = data.filter(function(d){return d.index == 'win';})
 
           var dataArray = [data.percentage]
         var res = data.map((d,i) => {
@@ -59,7 +59,7 @@ var glines
         
   
           var yScale = d3.scaleLinear()
-          .domain([0,maxYValue])
+          .domain([0,100])
           .range([height4, 0]);
   
         var svg = d3.select("#chart2").append("svg")

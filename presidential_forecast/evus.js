@@ -22,9 +22,9 @@ var glines
   
         d3.csv("timechange.csv", function(error, data){
         
-          var data = data.filter(function(d){return d.state == 'Wisconsin';})
+          var data = data.filter(function(d){return d.state == 'US';})
   
-          var data = data.filter(function(d){return d.index == 'vote';})
+          var data = data.filter(function(d){return d.index == 'ev';})
 
           var dataArray = [data.percentage]
         var res = data.map((d,i) => {
@@ -46,10 +46,10 @@ var glines
         var test = 100
           console.log(maxYVal);
         
-        var maxYValu = Math.round(maxYVal/10)*10 + 10
+        var maxYValu = Math.round(maxYVal/10)*10 + 30
 
         
-         var maxYValue =  maxYValu >100 ? 100 : maxYValu; 
+         var maxYValue =  maxYValu  
 
         console.log(maxYValue);
         var xScale = d3.scaleTime()
@@ -99,7 +99,7 @@ var glines
           .call(yAxis)
           .call(g => {
             g.selectAll("text")
-            .style("text-anchor", "middle")
+            .style("text-anchor", "left")
             .attr('fill', 'black')
             .attr('font-size', '12px')
             
@@ -325,7 +325,7 @@ var glines
             var xDate = xScale.invert(mouse[0])
             var bisect = d3.bisector(function (d) { return d.date; }).left
             var idx = bisect(d.values, xDate)
-            return d.key +  " - " + d.values[idx].percentage.toString()  + "%" 
+            return d.key +  " - " + d.values[idx].percentage.toString()  + "  EVs"
           })
         
       

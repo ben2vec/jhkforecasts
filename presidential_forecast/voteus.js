@@ -22,7 +22,7 @@ var glines
   
         d3.csv("timechange.csv", function(error, data){
         
-          var data = data.filter(function(d){return d.state == 'Wisconsin';})
+          var data = data.filter(function(d){return d.state == 'US';})
   
           var data = data.filter(function(d){return d.index == 'vote';})
 
