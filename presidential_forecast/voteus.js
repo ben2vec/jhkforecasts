@@ -273,7 +273,7 @@ var glines
   
                   d3.select(".mouse-line")
                     .attr("d", function () {
-                      var data = "M" + xScale(d.values[idx].date) + "," + (height);
+                      var data = "M" + xScale(d.values[idx].date) + "," + (height4);
                       data += " " + xScale(d.values[idx].date) + "," + 0;
                       return data;
                     });
