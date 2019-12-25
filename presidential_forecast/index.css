@@ -38,12 +38,16 @@
   .axis path,
   .axis line {
     fill: none;
-    stroke: none;
+    stroke: black;
 
   }
   
   .x.axis path {
     display: ruby-base-container;
+  }
+
+  .y.axis path {
+    stroke:black;
   }
   
   
