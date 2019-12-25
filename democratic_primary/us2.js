@@ -16,14 +16,22 @@ d3.csv("bubbles.csv", function(error, data){
   })
 
 //Create the SVG Viewport
-var svgContainer = d3.select("body").append("svg")
-.attr("viewBox", "0 0 1100 1000");
+var svgContainer = d3.select("#bubbles").append("svg")
+.attr("viewBox", "0 0 1100 600");
    
 //Add circles to the svgContainer
 
+var colorScale = d3.scaleLinear()
+        .domain([0,10,100])
+          .range(["white" ,"#0091FF","#002E66"])
 
+var colorScale2 = d3.scaleLinear()
+          .domain([0,10,40])
+            .range(["white" ,"#0091FF","#002E66"])
 
-
+            var colorScale3 = d3.scaleLinear()
+            .domain([0,100,1889])
+              .range(["white" ,"#0091FF","#002E66"])
    
 
 
@@ -54,13 +62,13 @@ var textTwo = svgContainer.selectAll("textTwo")
                           .attr("cx", function (d) { return d.cx; })
                           .attr("cy", 125)
                          .attr("r", 50)
-                       .style("fill", function (d) { return d.color; })
+                       .style("fill", d => colorScale(d.win))
                        .style('opacity', .7);
     
     var textLabels = text
                  .attr("x", function(d) { return d.cx; })
                 .attr("y", 150)
-                .text( function (d) { return d.win; })
+                .text( d=> d.win +"%")
                  .attr("font-family", "sans-serif")
                 .attr("font-size", "20px")
                  .attr("fill", "black");
@@ -113,13 +121,13 @@ var textFive = svgContainer.selectAll("textFive")
                           .attr("cx", function (d) { return d.cx; })
                           .attr("cy", 300)
                          .attr("r", 50)
-                       .style("fill", function (d) { return d.color; })
+                       .style("fill", d => colorScale2(d.vote))
                        .style('opacity', .7);
     
     var textLabelsThree = textThree
                  .attr("x", function(d) { return d.cx; })
                 .attr("y", 325)
-                .text( function (d) { return d.vote; })
+                .text( d => d.vote+"%")
                  .attr("font-family", "sans-serif")
                 .attr("font-size", "20px")
                  .attr("fill", "black");
@@ -170,7 +178,7 @@ var textEight = svgContainer.selectAll("textEight")
                           .attr("cx", function (d) { return d.cx; })
                           .attr("cy", 475)
                          .attr("r", 50)
-                       .style("fill", function (d) { return d.color; })
+                       .style("fill", d=> colorScale3(d.delegates))
                        .style('opacity', .7);
     
     var textLabelsSix = textSix

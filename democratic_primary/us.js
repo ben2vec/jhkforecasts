@@ -5,7 +5,7 @@ var glines
     var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"]
 
     var margin = {top: 80, right: 100, bottom: 40, left: 40}
-    var width = innerWidth - margin.left - margin.right
+    var width = 1200 - margin.left - margin.right
     var height = 500 - margin.top - margin.bottom
 
     var lineOpacity = .8
@@ -49,8 +49,7 @@ var glines
         .range([height, 0]);
 
       var svg = d3.select("#chart").append("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
+        .attr("viewBox",'0 0 1200 500')
         .append('g')
           .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
