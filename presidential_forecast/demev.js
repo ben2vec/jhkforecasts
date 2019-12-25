@@ -1,22 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <script src="https://d3js.org/d3.v4.min.js"></script>
-
-</head>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
-<link rel="stylesheet" href="https://use.typekit.net/htk2wjy.css">
-
-    <link rel="stylesheet" href="index.css">
-
-<body>
-    <div id="votechart"></div>
-  <script>
-     var category = ["Trump", "Democrats", "3rd Party"]
+var category = ["Trump", "Democrats", "3rd Party"]
       // since Category B and E are really close to each other, assign them diverging colors
       var colorScale = d3.scaleOrdinal()
         .domain(category)
@@ -28,12 +10,12 @@
         
       console.log(data)  
       
-      var max = d3.max(data,d=> d.gopPerc)
+      var max = d3.max(data,d=> d.demPerc)
 
       console.log(max)
         
-      var svg = d3.select("#trumpev").append("svg")
-            .attr("viewBox", '0 0 538 175')
+      var svg = d3.select("#demev").append("svg")
+            .attr("viewBox", '-100 0 738 175')
 
 
 
@@ -44,10 +26,10 @@
             .enter()
             .append("rect")
             .attr("x",d => d.ev)
-            .attr("y",d => d.gopY )
+            .attr("y",d => d.demY )
             .attr("width",1.1)
-            .attr("height",d => d.gop)
-            .attr("fill", "#FF6060");
+            .attr("height",d => d.dem)
+            .attr("fill", "#0091FF");
             
             svg.append("text")
             .text("270")
@@ -108,8 +90,8 @@
         .attr("opacity",.3)
 
         svg.append("text")
-            .text("Trump")
-            .attr("x",450)
+            .text("Democrats")
+            .attr("x",538)
             .attr("y", 70)
             .attr("fill","black")
             .attr("font-size",20)
@@ -133,10 +115,3 @@
         .attr("opacity",.4)
 
     })
-
-
-
-
-    </script>  
-</body>
-</html>

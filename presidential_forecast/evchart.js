@@ -11,7 +11,7 @@ var category = ["Trump", "Democrats", "3rd Party"]
       console.log(data)  
         
       var svg = d3.select("#evchart").append("svg")
-            .attr("viewBox", '0 0 1000 300')
+            .attr("viewBox", '-100 0 1000 300')
 
 
             

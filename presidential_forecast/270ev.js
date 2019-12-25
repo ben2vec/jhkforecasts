@@ -9,6 +9,13 @@
         .attr("class", "tooltip")				
         .style("opacity", 0);
 
+        var tool_tip1 = d3.tip()
+        .attr("class", "d3-tip")
+        .offset([-30,0])
+        .html("<div id='tipDiv'></div>");
+      
+      svg.call(tool_tip1)
+
     d3.csv("evrace.csv", function(error, data){
             
             
@@ -70,7 +77,7 @@
                                 .attr("stroke","white")
                                 .attr("stroke-width","0.5")
                                 .on('mouseover', function(d) {
-                                    tool_tip.show();
+                                    tool_tip1.show();
                                     var tipSVG = d3.select("#tipDiv")
                                       .append("svg")
                                       .attr("width", 150)
@@ -100,7 +107,7 @@
                                 
                                     
                                   })
-                                  .on('mouseout', tool_tip.hide);
+                                  .on('mouseout', tool_tip1.hide);
                                 
                         
             

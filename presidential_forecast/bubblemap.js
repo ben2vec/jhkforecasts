@@ -51,13 +51,13 @@
                                 .attr("cy",d => y(d.yValue))
                                 .attr("r", d => d.radius)
                                 .style("fill",d => color(d.gopWin) )
-                                .attr("stroke",d =>  d.tippingPoint >= 2 ? "black" : "none")
+                                .attr("stroke",d =>  d.tippingPoint >= 3 ? "black" : "none")
                                 .attr("stroke-width","1.5")
                                 .on('mouseover', function(d) {
                                     tool_tip.show();
                                     var tipSVG = d3.select("#tipDiv")
                                       .append("svg")
-                                      .attr("width", 250)
+                                      .attr("width", 150)
                                   .attr("height", 120);
                                   
                                 
@@ -68,7 +68,7 @@
                                       .attr("height", 20)
                                       .transition()
                                       .duration(300)
-                                      .attr("width", d.gopWin*2);
+                                      .attr("width", d.gopWin);
                                   
                                 tipSVG.append("text")
                                       .text("Gop Win" +"%")
@@ -90,9 +90,8 @@
                                     tipSVG.append("text")
                                       .text(d.gopWin +"%")
                                       .attr("y", 65)
-                                      .transition()
-                                      .duration(300)
-                                  .attr("x", d.gopWin*2 + 10)
+                                      .attr("x",110)
+                                  
                                   .attr("fill","#FF6060")
                                   .style("font-weight","600")
                                   .style("font-size","15");
@@ -104,14 +103,13 @@
                                       .attr("height", 20)
                                       .transition()
                                       .duration(300)
-                                      .attr("width", d.demWin*2);
+                                      .attr("width", d.demWin);
                                 
                                     tipSVG.append("text")
                                       .text(d.demWin +"%")
                                       .attr("y", 85)
-                                      .transition()
-                                      .duration(300)
-                                  .attr("x", d.demWin * 2 + 10)
+                                      .attr("x",110)
+                                  
                                   .attr("fill","#0091FF")
                                   .style("font-weight","600")
                                   .style("font-size","15");
@@ -130,69 +128,67 @@
                         .attr("font-weight","500")
                         .attr("font-size","8")
                         .on('mouseover', function(d) {
-                            tool_tip.show();
-                            var tipSVG = d3.select("#tipDiv")
-                              .append("svg")
-                              .attr("width", 250)
-                          .attr("height", 120);
-                          
+                          tool_tip.show();
+                          var tipSVG = d3.select("#tipDiv")
+                            .append("svg")
+                            .attr("width", 150)
+                        .attr("height", 120);
                         
-                            tipSVG.append("rect")
-                              .attr("fill", "#FF6060")
-                              .attr("y", 50)
-                              .attr("width", 0)
-                              .attr("height", 20)
-                              .transition()
-                              .duration(300)
-                              .attr("width", d.gopWin*2);
-                          
+                      
+                          tipSVG.append("rect")
+                            .attr("fill", "#FF6060")
+                            .attr("y", 50)
+                            .attr("width", 0)
+                            .attr("height", 20)
+                            .transition()
+                            .duration(300)
+                            .attr("width", d.gopWin);
+                        
+                      tipSVG.append("text")
+                            .text("Gop Win" +"%")
+                        .attr("y", 45);
+                      
+                      tipSVG.append("text")
+                        .text(d.state)
+                        .attr("y", 20)
+                        .attr("x",10)
+                        .attr("fill","#black")
+                        .style("font-weight","600")
+                        .style("font-size","20");
+                      
                         tipSVG.append("text")
-                              .text("Gop Win" +"%")
-                          .attr("y", 45);
-                        
-                        tipSVG.append("text")
-                          .text(d.state)
-                          .attr("y", 20)
-                          .attr("x",10)
-                          .attr("fill","#black")
-                          .style("font-weight","600")
-                          .style("font-size","20");
-                        
+                            .text("Dem Win" +"%")
+                            .attr("y", 105)
+                            
+                      
                           tipSVG.append("text")
-                              .text("Dem Win" +"%")
-                              .attr("y", 105)
-                              
+                            .text(d.gopWin +"%")
+                            .attr("y", 65)
+                            .attr("x",110)
                         
-                            tipSVG.append("text")
-                              .text(d.gopWin +"%")
-                              .attr("y", 65)
-                              .transition()
-                              .duration(300)
-                          .attr("x", d.gopWin*2 + 10)
-                          .attr("fill","#FF6060")
-                          .style("font-weight","600")
-                          .style("font-size","15");
+                        .attr("fill","#FF6060")
+                        .style("font-weight","600")
+                        .style("font-size","15");
+                      
+                      tipSVG.append("rect")
+                            .attr("fill", "#0091FF")
+                            .attr("y", 70)
+                            .attr("width", 0)
+                            .attr("height", 20)
+                            .transition()
+                            .duration(300)
+                            .attr("width", d.demWin);
+                      
+                          tipSVG.append("text")
+                            .text(d.demWin +"%")
+                            .attr("y", 85)
+                            .attr("x",110)
                         
-                        tipSVG.append("rect")
-                              .attr("fill", "#0091FF")
-                              .attr("y", 70)
-                              .attr("width", 0)
-                              .attr("height", 20)
-                              .transition()
-                              .duration(300)
-                              .attr("width", d.demWin*2);
-                        
-                            tipSVG.append("text")
-                              .text(d.demWin +"%")
-                              .attr("y", 85)
-                              .transition()
-                              .duration(300)
-                          .attr("x", d.demWin * 2 + 10)
-                          .attr("fill","#0091FF")
-                          .style("font-weight","600")
-                          .style("font-size","15");
-                          })
-                          .on('mouseout', tool_tip.hide);
+                        .attr("fill","#0091FF")
+                        .style("font-weight","600")
+                        .style("font-size","15");
+                        })
+                        .on('mouseout', tool_tip.hide);
                         svg.append("circle")
                         .attr("cx",620)
                         .attr("cy",425)

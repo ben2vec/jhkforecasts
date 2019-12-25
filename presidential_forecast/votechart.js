@@ -11,8 +11,10 @@ var category = ["Trump", "Democrats", "3rd Party"]
       console.log(data)  
         
       var svg = d3.select("#votechart").append("svg")
-            .attr("viewBox", '0 0 1000 300')
+            .attr("viewBox", '-100 0 1000 300')
 
+
+        
 
             svg.append("line")
         .attr("x1",200)
@@ -292,6 +294,8 @@ var category = ["Trump", "Democrats", "3rd Party"]
             .style("text-anchor","middle")
             .attr("font-size",12)
                 .attr("font-weight",500)
+
+                
     })
 
 

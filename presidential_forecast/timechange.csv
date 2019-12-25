@@ -2414,3 +2414,3798 @@ date,state,index,dataPoint,candidate,percentage
 2019-11-07,US,ev,1,Trump,237.8
 2019-11-07,US,ev,1,Democrats,300.2
 2019-11-07,US,ev,1,3rd Party,0.0
+2019-11-08,Alabama,win,1,Trump,99.3
+2019-11-08,Alaska,win,1,Trump,85.1
+2019-11-08,Arizona,win,1,Trump,54.1
+2019-11-08,Arkansas,win,1,Trump,99.4
+2019-11-08,California,win,1,Trump,0.0
+2019-11-08,Colorado,win,1,Trump,24.1
+2019-11-08,Connecticut,win,1,Trump,8.5
+2019-11-08,Delaware,win,1,Trump,7.7
+2019-11-08,Florida,win,1,Trump,48.4
+2019-11-08,Georgia,win,1,Trump,65.0
+2019-11-08,Hawaii,win,1,Trump,0.0
+2019-11-08,Idaho,win,1,Trump,99.8
+2019-11-08,Illinois,win,1,Trump,6.2
+2019-11-08,Indiana,win,1,Trump,89.5
+2019-11-08,Iowa,win,1,Trump,58.7
+2019-11-08,Kansas,win,1,Trump,92.1
+2019-11-08,Kentucky,win,1,Trump,99.3
+2019-11-08,Louisiana,win,1,Trump,95.4
+2019-11-08,Maine,win,1,Trump,26.9
+2019-11-08,Maryland,win,1,Trump,0.4
+2019-11-08,Massachusetts,win,1,Trump,0.2
+2019-11-08,Michigan,win,1,Trump,32.6
+2019-11-08,Minnesota,win,1,Trump,29.1
+2019-11-08,Mississippi,win,1,Trump,89.8
+2019-11-08,Missouri,win,1,Trump,89.1
+2019-11-08,Montana,win,1,Trump,88.0
+2019-11-08,Nebraska,win,1,Trump,98.1
+2019-11-08,Nevada,win,1,Trump,36.0
+2019-11-08,New Hampshire,win,1,Trump,32.1
+2019-11-08,New Jersey,win,1,Trump,9.0
+2019-11-08,New Mexico,win,1,Trump,15.6
+2019-11-08,New York,win,1,Trump,1.2
+2019-11-08,North Carolina,win,1,Trump,52.2
+2019-11-08,North Dakota,win,1,Trump,99.9
+2019-11-08,Ohio,win,1,Trump,67.4
+2019-11-08,Oklahoma,win,1,Trump,99.9
+2019-11-08,Oregon,win,1,Trump,12.0
+2019-11-08,Pennsylvania,win,1,Trump,39.4
+2019-11-08,Rhode island,win,1,Trump,4.0
+2019-11-08,South Carolina,win,1,Trump,85.4
+2019-11-08,South Dakota,win,1,Trump,99.5
+2019-11-08,Tennessee,win,1,Trump,98.1
+2019-11-08,Texas,win,1,Trump,75.7
+2019-11-08,Utah,win,1,Trump,99.6
+2019-11-08,Vermont,win,1,Trump,0.1
+2019-11-08,Virginia,win,1,Trump,24.5
+2019-11-08,Washington,win,1,Trump,7.5
+2019-11-08,West Virginia,win,1,Trump,99.9
+2019-11-08,Wisconsin,win,1,Trump,40.9
+2019-11-08,Wyoming,win,1,Trump,100.0
+2019-11-08,District of Columbia,win,1,Trump,0.0
+2019-11-08,Maine-1,win,1,Trump,7.7
+2019-11-08,Maine-2,win,1,Trump,58.9
+2019-11-08,Nebraska-1,win,1,Trump,95.0
+2019-11-08,Nebraska-2,win,1,Trump,57.4
+2019-11-08,Nebraska-3,win,1,Trump,100.0
+2019-11-08,US,win,1,Trump,43.2
+2019-11-08,Alabama,win,1,Democrats,0.7
+2019-11-08,Alaska,win,1,Democrats,14.9
+2019-11-08,Arizona,win,1,Democrats,45.9
+2019-11-08,Arkansas,win,1,Democrats,0.6
+2019-11-08,California,win,1,Democrats,100.0
+2019-11-08,Colorado,win,1,Democrats,75.9
+2019-11-08,Connecticut,win,1,Democrats,91.5
+2019-11-08,Delaware,win,1,Democrats,92.3
+2019-11-08,Florida,win,1,Democrats,51.6
+2019-11-08,Georgia,win,1,Democrats,35.0
+2019-11-08,Hawaii,win,1,Democrats,100.0
+2019-11-08,Idaho,win,1,Democrats,0.2
+2019-11-08,Illinois,win,1,Democrats,93.8
+2019-11-08,Indiana,win,1,Democrats,10.5
+2019-11-08,Iowa,win,1,Democrats,41.3
+2019-11-08,Kansas,win,1,Democrats,7.9
+2019-11-08,Kentucky,win,1,Democrats,0.7
+2019-11-08,Louisiana,win,1,Democrats,4.6
+2019-11-08,Maine,win,1,Democrats,73.1
+2019-11-08,Maryland,win,1,Democrats,99.6
+2019-11-08,Massachusetts,win,1,Democrats,99.8
+2019-11-08,Michigan,win,1,Democrats,67.4
+2019-11-08,Minnesota,win,1,Democrats,70.9
+2019-11-08,Mississippi,win,1,Democrats,10.2
+2019-11-08,Missouri,win,1,Democrats,10.9
+2019-11-08,Montana,win,1,Democrats,12.0
+2019-11-08,Nebraska,win,1,Democrats,1.9
+2019-11-08,Nevada,win,1,Democrats,64.0
+2019-11-08,New Hampshire,win,1,Democrats,67.9
+2019-11-08,New Jersey,win,1,Democrats,91.0
+2019-11-08,New Mexico,win,1,Democrats,84.4
+2019-11-08,New York,win,1,Democrats,98.8
+2019-11-08,North Carolina,win,1,Democrats,47.8
+2019-11-08,North Dakota,win,1,Democrats,0.1
+2019-11-08,Ohio,win,1,Democrats,32.6
+2019-11-08,Oklahoma,win,1,Democrats,0.1
+2019-11-08,Oregon,win,1,Democrats,88.0
+2019-11-08,Pennsylvania,win,1,Democrats,60.6
+2019-11-08,Rhode island,win,1,Democrats,96.0
+2019-11-08,South Carolina,win,1,Democrats,14.6
+2019-11-08,South Dakota,win,1,Democrats,0.5
+2019-11-08,Tennessee,win,1,Democrats,1.9
+2019-11-08,Texas,win,1,Democrats,24.3
+2019-11-08,Utah,win,1,Democrats,0.4
+2019-11-08,Vermont,win,1,Democrats,99.9
+2019-11-08,Virginia,win,1,Democrats,75.5
+2019-11-08,Washington,win,1,Democrats,92.5
+2019-11-08,West Virginia,win,1,Democrats,0.1
+2019-11-08,Wisconsin,win,1,Democrats,59.1
+2019-11-08,Wyoming,win,1,Democrats,0.0
+2019-11-08,District of Columbia,win,1,Democrats,100.0
+2019-11-08,Maine-1,win,1,Democrats,92.3
+2019-11-08,Maine-2,win,1,Democrats,41.1
+2019-11-08,Nebraska-1,win,1,Democrats,5.0
+2019-11-08,Nebraska-2,win,1,Democrats,42.6
+2019-11-08,Nebraska-3,win,1,Democrats,0.0
+2019-11-08,US,win,1,Democrats,56.8
+2019-11-08,Alabama,win,1,3rd Party,0.0
+2019-11-08,Alaska,win,1,3rd Party,0.0
+2019-11-08,Arizona,win,1,3rd Party,0.0
+2019-11-08,Arkansas,win,1,3rd Party,0.0
+2019-11-08,California,win,1,3rd Party,0.0
+2019-11-08,Colorado,win,1,3rd Party,0.0
+2019-11-08,Connecticut,win,1,3rd Party,0.0
+2019-11-08,Delaware,win,1,3rd Party,0.0
+2019-11-08,Florida,win,1,3rd Party,0.0
+2019-11-08,Georgia,win,1,3rd Party,0.0
+2019-11-08,Hawaii,win,1,3rd Party,0.0
+2019-11-08,Idaho,win,1,3rd Party,0.0
+2019-11-08,Illinois,win,1,3rd Party,0.0
+2019-11-08,Indiana,win,1,3rd Party,0.0
+2019-11-08,Iowa,win,1,3rd Party,0.0
+2019-11-08,Kansas,win,1,3rd Party,0.0
+2019-11-08,Kentucky,win,1,3rd Party,0.0
+2019-11-08,Louisiana,win,1,3rd Party,0.0
+2019-11-08,Maine,win,1,3rd Party,0.0
+2019-11-08,Maryland,win,1,3rd Party,0.0
+2019-11-08,Massachusetts,win,1,3rd Party,0.0
+2019-11-08,Michigan,win,1,3rd Party,0.0
+2019-11-08,Minnesota,win,1,3rd Party,0.0
+2019-11-08,Mississippi,win,1,3rd Party,0.0
+2019-11-08,Missouri,win,1,3rd Party,0.0
+2019-11-08,Montana,win,1,3rd Party,0.0
+2019-11-08,Nebraska,win,1,3rd Party,0.0
+2019-11-08,Nevada,win,1,3rd Party,0.0
+2019-11-08,New Hampshire,win,1,3rd Party,0.0
+2019-11-08,New Jersey,win,1,3rd Party,0.0
+2019-11-08,New Mexico,win,1,3rd Party,0.0
+2019-11-08,New York,win,1,3rd Party,0.0
+2019-11-08,North Carolina,win,1,3rd Party,0.0
+2019-11-08,North Dakota,win,1,3rd Party,0.0
+2019-11-08,Ohio,win,1,3rd Party,0.0
+2019-11-08,Oklahoma,win,1,3rd Party,0.0
+2019-11-08,Oregon,win,1,3rd Party,0.0
+2019-11-08,Pennsylvania,win,1,3rd Party,0.0
+2019-11-08,Rhode island,win,1,3rd Party,0.0
+2019-11-08,South Carolina,win,1,3rd Party,0.0
+2019-11-08,South Dakota,win,1,3rd Party,0.0
+2019-11-08,Tennessee,win,1,3rd Party,0.0
+2019-11-08,Texas,win,1,3rd Party,0.0
+2019-11-08,Utah,win,1,3rd Party,0.0
+2019-11-08,Vermont,win,1,3rd Party,0.0
+2019-11-08,Virginia,win,1,3rd Party,0.0
+2019-11-08,Washington,win,1,3rd Party,0.0
+2019-11-08,West Virginia,win,1,3rd Party,0.0
+2019-11-08,Wisconsin,win,1,3rd Party,0.0
+2019-11-08,Wyoming,win,1,3rd Party,0.0
+2019-11-08,District of Columbia,win,1,3rd Party,0.0
+2019-11-08,Maine-1,win,1,3rd Party,0.0
+2019-11-08,Maine-2,win,1,3rd Party,0.0
+2019-11-08,Nebraska-1,win,1,3rd Party,0.0
+2019-11-08,Nebraska-2,win,1,3rd Party,0.0
+2019-11-08,Nebraska-3,win,1,3rd Party,0.0
+2019-11-08,US,win,1,3rd Party,0.0
+2019-11-08,Alabama,vote,1,Trump,62.1
+2019-11-08,Alaska,vote,1,Trump,51.3
+2019-11-08,Arizona,vote,1,Trump,48.3
+2019-11-08,Arkansas,vote,1,Trump,62.2
+2019-11-08,California,vote,1,Trump,32.7
+2019-11-08,Colorado,vote,1,Trump,42.2
+2019-11-08,Connecticut,vote,1,Trump,38.4
+2019-11-08,Delaware,vote,1,Trump,38.9
+2019-11-08,Florida,vote,1,Trump,48.5
+2019-11-08,Georgia,vote,1,Trump,51.6
+2019-11-08,Hawaii,vote,1,Trump,27.1
+2019-11-08,Idaho,vote,1,Trump,63.3
+2019-11-08,Illinois,vote,1,Trump,38.5
+2019-11-08,Indiana,vote,1,Trump,56.7
+2019-11-08,Iowa,vote,1,Trump,49.0
+2019-11-08,Kansas,vote,1,Trump,56.7
+2019-11-08,Kentucky,vote,1,Trump,62.4
+2019-11-08,Louisiana,vote,1,Trump,59.1
+2019-11-08,Maine,vote,1,Trump,42.6
+2019-11-08,Maryland,vote,1,Trump,34.3
+2019-11-08,Massachusetts,vote,1,Trump,31.9
+2019-11-08,Michigan,vote,1,Trump,45.8
+2019-11-08,Minnesota,vote,1,Trump,43.5
+2019-11-08,Mississippi,vote,1,Trump,57.6
+2019-11-08,Missouri,vote,1,Trump,56.8
+2019-11-08,Montana,vote,1,Trump,54.6
+2019-11-08,Nebraska,vote,1,Trump,60.4
+2019-11-08,Nevada,vote,1,Trump,45.0
+2019-11-08,New Hampshire,vote,1,Trump,44.8
+2019-11-08,New Jersey,vote,1,Trump,39.0
+2019-11-08,New Mexico,vote,1,Trump,40.4
+2019-11-08,New York,vote,1,Trump,34.7
+2019-11-08,North Carolina,vote,1,Trump,49.2
+2019-11-08,North Dakota,vote,1,Trump,62.9
+2019-11-08,Ohio,vote,1,Trump,50.8
+2019-11-08,Oklahoma,vote,1,Trump,66.2
+2019-11-08,Oregon,vote,1,Trump,38.5
+2019-11-08,Pennsylvania,vote,1,Trump,46.7
+2019-11-08,Rhode island,vote,1,Trump,36.3
+2019-11-08,South Carolina,vote,1,Trump,55.4
+2019-11-08,South Dakota,vote,1,Trump,61.8
+2019-11-08,Tennessee,vote,1,Trump,61.2
+2019-11-08,Texas,vote,1,Trump,52.7
+2019-11-08,Utah,vote,1,Trump,60.3
+2019-11-08,Vermont,vote,1,Trump,29.2
+2019-11-08,Virginia,vote,1,Trump,43.6
+2019-11-08,Washington,vote,1,Trump,37.4
+2019-11-08,West Virginia,vote,1,Trump,65.5
+2019-11-08,Wisconsin,vote,1,Trump,46.6
+2019-11-08,Wyoming,vote,1,Trump,69.0
+2019-11-08,District of Columbia,vote,1,Trump,10.5
+2019-11-08,Maine-1,vote,1,Trump,37.2
+2019-11-08,Maine-2,vote,1,Trump,49.0
+2019-11-08,Nebraska-1,vote,1,Trump,59.0
+2019-11-08,Nebraska-2,vote,1,Trump,49.3
+2019-11-08,Nebraska-3,vote,1,Trump,75.2
+2019-11-08,US,vote,1,Trump,45.8
+2019-11-08,Alabama,vote,1,Democrats,34.9
+2019-11-08,Alaska,vote,1,Democrats,37.4
+2019-11-08,Arizona,vote,1,Democrats,47.1
+2019-11-08,Arkansas,vote,1,Democrats,33.3
+2019-11-08,California,vote,1,Democrats,62.0
+2019-11-08,Colorado,vote,1,Democrats,52.0
+2019-11-08,Connecticut,vote,1,Democrats,57.2
+2019-11-08,Delaware,vote,1,Democrats,57.7
+2019-11-08,Florida,vote,1,Democrats,48.9
+2019-11-08,Georgia,vote,1,Democrats,46.2
+2019-11-08,Hawaii,vote,1,Democrats,67.8
+2019-11-08,Idaho,vote,1,Democrats,30.3
+2019-11-08,Illinois,vote,1,Democrats,58.1
+2019-11-08,Indiana,vote,1,Democrats,39.9
+2019-11-08,Iowa,vote,1,Democrats,46.5
+2019-11-08,Kansas,vote,1,Democrats,38.0
+2019-11-08,Kentucky,vote,1,Democrats,34.4
+2019-11-08,Louisiana,vote,1,Democrats,37.1
+2019-11-08,Maine,vote,1,Democrats,51.1
+2019-11-08,Maryland,vote,1,Democrats,62.1
+2019-11-08,Massachusetts,vote,1,Democrats,61.9
+2019-11-08,Michigan,vote,1,Democrats,50.7
+2019-11-08,Minnesota,vote,1,Democrats,50.9
+2019-11-08,Mississippi,vote,1,Democrats,39.8
+2019-11-08,Missouri,vote,1,Democrats,40.2
+2019-11-08,Montana,vote,1,Democrats,38.5
+2019-11-08,Nebraska,vote,1,Democrats,34.9
+2019-11-08,Nevada,vote,1,Democrats,49.6
+2019-11-08,New Hampshire,vote,1,Democrats,50.8
+2019-11-08,New Jersey,vote,1,Democrats,57.5
+2019-11-08,New Mexico,vote,1,Democrats,54.4
+2019-11-08,New York,vote,1,Democrats,60.2
+2019-11-08,North Carolina,vote,1,Democrats,48.7
+2019-11-08,North Dakota,vote,1,Democrats,31.1
+2019-11-08,Ohio,vote,1,Democrats,45.1
+2019-11-08,Oklahoma,vote,1,Democrats,31.5
+2019-11-08,Oregon,vote,1,Democrats,54.8
+2019-11-08,Pennsylvania,vote,1,Democrats,49.9
+2019-11-08,Rhode island,vote,1,Democrats,58.7
+2019-11-08,South Carolina,vote,1,Democrats,41.5
+2019-11-08,South Dakota,vote,1,Democrats,34.0
+2019-11-08,Tennessee,vote,1,Democrats,36.1
+2019-11-08,Texas,vote,1,Democrats,44.4
+2019-11-08,Utah,vote,1,Democrats,31.6
+2019-11-08,Vermont,vote,1,Democrats,63.6
+2019-11-08,Virginia,vote,1,Democrats,52.9
+2019-11-08,Washington,vote,1,Democrats,56.5
+2019-11-08,West Virginia,vote,1,Democrats,31.4
+2019-11-08,Wisconsin,vote,1,Democrats,49.1
+2019-11-08,Wyoming,vote,1,Democrats,24.6
+2019-11-08,District of Columbia,vote,1,Democrats,84.7
+2019-11-08,Maine-1,vote,1,Democrats,57.8
+2019-11-08,Maine-2,vote,1,Democrats,45.3
+2019-11-08,Nebraska-1,vote,1,Democrats,36.1
+2019-11-08,Nebraska-2,vote,1,Democrats,46.3
+2019-11-08,Nebraska-3,vote,1,Democrats,20.4
+2019-11-08,US,vote,1,Democrats,50.1
+2019-11-08,Alabama,vote,1,3rd Party,2.9
+2019-11-08,Alaska,vote,1,3rd Party,11.2
+2019-11-08,Arizona,vote,1,3rd Party,4.5
+2019-11-08,Arkansas,vote,1,3rd Party,4.3
+2019-11-08,California,vote,1,3rd Party,5.2
+2019-11-08,Colorado,vote,1,3rd Party,5.8
+2019-11-08,Connecticut,vote,1,3rd Party,4.3
+2019-11-08,Delaware,vote,1,3rd Party,3.2
+2019-11-08,Florida,vote,1,3rd Party,2.5
+2019-11-08,Georgia,vote,1,3rd Party,2.1
+2019-11-08,Hawaii,vote,1,3rd Party,5.0
+2019-11-08,Idaho,vote,1,3rd Party,6.4
+2019-11-08,Illinois,vote,1,3rd Party,3.3
+2019-11-08,Indiana,vote,1,3rd Party,3.3
+2019-11-08,Iowa,vote,1,3rd Party,4.4
+2019-11-08,Kansas,vote,1,3rd Party,5.2
+2019-11-08,Kentucky,vote,1,3rd Party,3.1
+2019-11-08,Louisiana,vote,1,3rd Party,3.7
+2019-11-08,Maine,vote,1,3rd Party,6.2
+2019-11-08,Maryland,vote,1,3rd Party,3.5
+2019-11-08,Massachusetts,vote,1,3rd Party,6.1
+2019-11-08,Michigan,vote,1,3rd Party,3.4
+2019-11-08,Minnesota,vote,1,3rd Party,5.5
+2019-11-08,Mississippi,vote,1,3rd Party,2.6
+2019-11-08,Missouri,vote,1,3rd Party,2.9
+2019-11-08,Montana,vote,1,3rd Party,6.9
+2019-11-08,Nebraska,vote,1,3rd Party,4.6
+2019-11-08,Nevada,vote,1,3rd Party,5.3
+2019-11-08,New Hampshire,vote,1,3rd Party,4.2
+2019-11-08,New Jersey,vote,1,3rd Party,3.4
+2019-11-08,New Mexico,vote,1,3rd Party,5.1
+2019-11-08,New York,vote,1,3rd Party,5.0
+2019-11-08,North Carolina,vote,1,3rd Party,2.0
+2019-11-08,North Dakota,vote,1,3rd Party,5.9
+2019-11-08,Ohio,vote,1,3rd Party,4.0
+2019-11-08,Oklahoma,vote,1,3rd Party,2.2
+2019-11-08,Oregon,vote,1,3rd Party,6.6
+2019-11-08,Pennsylvania,vote,1,3rd Party,3.3
+2019-11-08,Rhode island,vote,1,3rd Party,4.9
+2019-11-08,South Carolina,vote,1,3rd Party,3.0
+2019-11-08,South Dakota,vote,1,3rd Party,4.1
+2019-11-08,Tennessee,vote,1,3rd Party,2.6
+2019-11-08,Texas,vote,1,3rd Party,2.7
+2019-11-08,Utah,vote,1,3rd Party,8.0
+2019-11-08,Vermont,vote,1,3rd Party,7.1
+2019-11-08,Virginia,vote,1,3rd Party,3.4
+2019-11-08,Washington,vote,1,3rd Party,6.0
+2019-11-08,West Virginia,vote,1,3rd Party,3.1
+2019-11-08,Wisconsin,vote,1,3rd Party,4.1
+2019-11-08,Wyoming,vote,1,3rd Party,6.3
+2019-11-08,District of Columbia,vote,1,3rd Party,4.7
+2019-11-08,Maine-1,vote,1,3rd Party,4.9
+2019-11-08,Maine-2,vote,1,3rd Party,5.7
+2019-11-08,Nebraska-1,vote,1,3rd Party,4.8
+2019-11-08,Nebraska-2,vote,1,3rd Party,4.3
+2019-11-08,Nebraska-3,vote,1,3rd Party,4.4
+2019-11-08,US,vote,1,3rd Party,4.0
+2019-11-08,US,ev,1,Trump,238.4
+2019-11-08,US,ev,1,Democrats,299.6
+2019-11-08,US,ev,1,3rd Party,0.0
+2019-11-09,Alabama,win,1,Trump,99.3
+2019-11-09,Alaska,win,1,Trump,85.1
+2019-11-09,Arizona,win,1,Trump,54.1
+2019-11-09,Arkansas,win,1,Trump,99.4
+2019-11-09,California,win,1,Trump,0.0
+2019-11-09,Colorado,win,1,Trump,24.1
+2019-11-09,Connecticut,win,1,Trump,8.5
+2019-11-09,Delaware,win,1,Trump,7.7
+2019-11-09,Florida,win,1,Trump,48.4
+2019-11-09,Georgia,win,1,Trump,65.0
+2019-11-09,Hawaii,win,1,Trump,0.0
+2019-11-09,Idaho,win,1,Trump,99.8
+2019-11-09,Illinois,win,1,Trump,6.2
+2019-11-09,Indiana,win,1,Trump,89.5
+2019-11-09,Iowa,win,1,Trump,58.7
+2019-11-09,Kansas,win,1,Trump,92.1
+2019-11-09,Kentucky,win,1,Trump,99.3
+2019-11-09,Louisiana,win,1,Trump,95.4
+2019-11-09,Maine,win,1,Trump,26.9
+2019-11-09,Maryland,win,1,Trump,0.4
+2019-11-09,Massachusetts,win,1,Trump,0.2
+2019-11-09,Michigan,win,1,Trump,32.6
+2019-11-09,Minnesota,win,1,Trump,29.1
+2019-11-09,Mississippi,win,1,Trump,89.8
+2019-11-09,Missouri,win,1,Trump,89.1
+2019-11-09,Montana,win,1,Trump,88.0
+2019-11-09,Nebraska,win,1,Trump,98.1
+2019-11-09,Nevada,win,1,Trump,36.0
+2019-11-09,New Hampshire,win,1,Trump,32.1
+2019-11-09,New Jersey,win,1,Trump,9.0
+2019-11-09,New Mexico,win,1,Trump,15.6
+2019-11-09,New York,win,1,Trump,1.2
+2019-11-09,North Carolina,win,1,Trump,52.2
+2019-11-09,North Dakota,win,1,Trump,99.9
+2019-11-09,Ohio,win,1,Trump,67.4
+2019-11-09,Oklahoma,win,1,Trump,99.9
+2019-11-09,Oregon,win,1,Trump,12.0
+2019-11-09,Pennsylvania,win,1,Trump,39.4
+2019-11-09,Rhode island,win,1,Trump,4.0
+2019-11-09,South Carolina,win,1,Trump,85.4
+2019-11-09,South Dakota,win,1,Trump,99.5
+2019-11-09,Tennessee,win,1,Trump,98.1
+2019-11-09,Texas,win,1,Trump,75.7
+2019-11-09,Utah,win,1,Trump,99.6
+2019-11-09,Vermont,win,1,Trump,0.1
+2019-11-09,Virginia,win,1,Trump,24.5
+2019-11-09,Washington,win,1,Trump,7.5
+2019-11-09,West Virginia,win,1,Trump,99.9
+2019-11-09,Wisconsin,win,1,Trump,40.9
+2019-11-09,Wyoming,win,1,Trump,100.0
+2019-11-09,District of Columbia,win,1,Trump,0.0
+2019-11-09,Maine-1,win,1,Trump,7.7
+2019-11-09,Maine-2,win,1,Trump,58.9
+2019-11-09,Nebraska-1,win,1,Trump,95.0
+2019-11-09,Nebraska-2,win,1,Trump,57.4
+2019-11-09,Nebraska-3,win,1,Trump,100.0
+2019-11-09,US,win,1,Trump,43.4
+2019-11-09,Alabama,win,1,Democrats,0.7
+2019-11-09,Alaska,win,1,Democrats,14.9
+2019-11-09,Arizona,win,1,Democrats,45.9
+2019-11-09,Arkansas,win,1,Democrats,0.6
+2019-11-09,California,win,1,Democrats,100.0
+2019-11-09,Colorado,win,1,Democrats,75.9
+2019-11-09,Connecticut,win,1,Democrats,91.5
+2019-11-09,Delaware,win,1,Democrats,92.3
+2019-11-09,Florida,win,1,Democrats,51.6
+2019-11-09,Georgia,win,1,Democrats,35.0
+2019-11-09,Hawaii,win,1,Democrats,100.0
+2019-11-09,Idaho,win,1,Democrats,0.2
+2019-11-09,Illinois,win,1,Democrats,93.8
+2019-11-09,Indiana,win,1,Democrats,10.5
+2019-11-09,Iowa,win,1,Democrats,41.3
+2019-11-09,Kansas,win,1,Democrats,7.9
+2019-11-09,Kentucky,win,1,Democrats,0.7
+2019-11-09,Louisiana,win,1,Democrats,4.6
+2019-11-09,Maine,win,1,Democrats,73.1
+2019-11-09,Maryland,win,1,Democrats,99.6
+2019-11-09,Massachusetts,win,1,Democrats,99.8
+2019-11-09,Michigan,win,1,Democrats,67.4
+2019-11-09,Minnesota,win,1,Democrats,70.9
+2019-11-09,Mississippi,win,1,Democrats,10.2
+2019-11-09,Missouri,win,1,Democrats,10.9
+2019-11-09,Montana,win,1,Democrats,12.0
+2019-11-09,Nebraska,win,1,Democrats,1.9
+2019-11-09,Nevada,win,1,Democrats,64.0
+2019-11-09,New Hampshire,win,1,Democrats,67.9
+2019-11-09,New Jersey,win,1,Democrats,91.0
+2019-11-09,New Mexico,win,1,Democrats,84.4
+2019-11-09,New York,win,1,Democrats,98.8
+2019-11-09,North Carolina,win,1,Democrats,47.8
+2019-11-09,North Dakota,win,1,Democrats,0.1
+2019-11-09,Ohio,win,1,Democrats,32.6
+2019-11-09,Oklahoma,win,1,Democrats,0.1
+2019-11-09,Oregon,win,1,Democrats,88.0
+2019-11-09,Pennsylvania,win,1,Democrats,60.6
+2019-11-09,Rhode island,win,1,Democrats,96.0
+2019-11-09,South Carolina,win,1,Democrats,14.6
+2019-11-09,South Dakota,win,1,Democrats,0.5
+2019-11-09,Tennessee,win,1,Democrats,1.9
+2019-11-09,Texas,win,1,Democrats,24.3
+2019-11-09,Utah,win,1,Democrats,0.4
+2019-11-09,Vermont,win,1,Democrats,99.9
+2019-11-09,Virginia,win,1,Democrats,75.5
+2019-11-09,Washington,win,1,Democrats,92.5
+2019-11-09,West Virginia,win,1,Democrats,0.1
+2019-11-09,Wisconsin,win,1,Democrats,59.1
+2019-11-09,Wyoming,win,1,Democrats,0.0
+2019-11-09,District of Columbia,win,1,Democrats,100.0
+2019-11-09,Maine-1,win,1,Democrats,92.3
+2019-11-09,Maine-2,win,1,Democrats,41.1
+2019-11-09,Nebraska-1,win,1,Democrats,5.0
+2019-11-09,Nebraska-2,win,1,Democrats,42.6
+2019-11-09,Nebraska-3,win,1,Democrats,0.0
+2019-11-09,US,win,1,Democrats,56.6
+2019-11-09,Alabama,win,1,3rd Party,0.0
+2019-11-09,Alaska,win,1,3rd Party,0.0
+2019-11-09,Arizona,win,1,3rd Party,0.0
+2019-11-09,Arkansas,win,1,3rd Party,0.0
+2019-11-09,California,win,1,3rd Party,0.0
+2019-11-09,Colorado,win,1,3rd Party,0.0
+2019-11-09,Connecticut,win,1,3rd Party,0.0
+2019-11-09,Delaware,win,1,3rd Party,0.0
+2019-11-09,Florida,win,1,3rd Party,0.0
+2019-11-09,Georgia,win,1,3rd Party,0.0
+2019-11-09,Hawaii,win,1,3rd Party,0.0
+2019-11-09,Idaho,win,1,3rd Party,0.0
+2019-11-09,Illinois,win,1,3rd Party,0.0
+2019-11-09,Indiana,win,1,3rd Party,0.0
+2019-11-09,Iowa,win,1,3rd Party,0.0
+2019-11-09,Kansas,win,1,3rd Party,0.0
+2019-11-09,Kentucky,win,1,3rd Party,0.0
+2019-11-09,Louisiana,win,1,3rd Party,0.0
+2019-11-09,Maine,win,1,3rd Party,0.0
+2019-11-09,Maryland,win,1,3rd Party,0.0
+2019-11-09,Massachusetts,win,1,3rd Party,0.0
+2019-11-09,Michigan,win,1,3rd Party,0.0
+2019-11-09,Minnesota,win,1,3rd Party,0.0
+2019-11-09,Mississippi,win,1,3rd Party,0.0
+2019-11-09,Missouri,win,1,3rd Party,0.0
+2019-11-09,Montana,win,1,3rd Party,0.0
+2019-11-09,Nebraska,win,1,3rd Party,0.0
+2019-11-09,Nevada,win,1,3rd Party,0.0
+2019-11-09,New Hampshire,win,1,3rd Party,0.0
+2019-11-09,New Jersey,win,1,3rd Party,0.0
+2019-11-09,New Mexico,win,1,3rd Party,0.0
+2019-11-09,New York,win,1,3rd Party,0.0
+2019-11-09,North Carolina,win,1,3rd Party,0.0
+2019-11-09,North Dakota,win,1,3rd Party,0.0
+2019-11-09,Ohio,win,1,3rd Party,0.0
+2019-11-09,Oklahoma,win,1,3rd Party,0.0
+2019-11-09,Oregon,win,1,3rd Party,0.0
+2019-11-09,Pennsylvania,win,1,3rd Party,0.0
+2019-11-09,Rhode island,win,1,3rd Party,0.0
+2019-11-09,South Carolina,win,1,3rd Party,0.0
+2019-11-09,South Dakota,win,1,3rd Party,0.0
+2019-11-09,Tennessee,win,1,3rd Party,0.0
+2019-11-09,Texas,win,1,3rd Party,0.0
+2019-11-09,Utah,win,1,3rd Party,0.0
+2019-11-09,Vermont,win,1,3rd Party,0.0
+2019-11-09,Virginia,win,1,3rd Party,0.0
+2019-11-09,Washington,win,1,3rd Party,0.0
+2019-11-09,West Virginia,win,1,3rd Party,0.0
+2019-11-09,Wisconsin,win,1,3rd Party,0.0
+2019-11-09,Wyoming,win,1,3rd Party,0.0
+2019-11-09,District of Columbia,win,1,3rd Party,0.0
+2019-11-09,Maine-1,win,1,3rd Party,0.0
+2019-11-09,Maine-2,win,1,3rd Party,0.0
+2019-11-09,Nebraska-1,win,1,3rd Party,0.0
+2019-11-09,Nebraska-2,win,1,3rd Party,0.0
+2019-11-09,Nebraska-3,win,1,3rd Party,0.0
+2019-11-09,US,win,1,3rd Party,0.0
+2019-11-09,Alabama,vote,1,Trump,62.1
+2019-11-09,Alaska,vote,1,Trump,51.3
+2019-11-09,Arizona,vote,1,Trump,48.3
+2019-11-09,Arkansas,vote,1,Trump,62.2
+2019-11-09,California,vote,1,Trump,32.7
+2019-11-09,Colorado,vote,1,Trump,42.2
+2019-11-09,Connecticut,vote,1,Trump,38.4
+2019-11-09,Delaware,vote,1,Trump,38.9
+2019-11-09,Florida,vote,1,Trump,48.5
+2019-11-09,Georgia,vote,1,Trump,51.6
+2019-11-09,Hawaii,vote,1,Trump,27.1
+2019-11-09,Idaho,vote,1,Trump,63.3
+2019-11-09,Illinois,vote,1,Trump,38.5
+2019-11-09,Indiana,vote,1,Trump,56.7
+2019-11-09,Iowa,vote,1,Trump,49.0
+2019-11-09,Kansas,vote,1,Trump,56.7
+2019-11-09,Kentucky,vote,1,Trump,62.4
+2019-11-09,Louisiana,vote,1,Trump,59.1
+2019-11-09,Maine,vote,1,Trump,42.6
+2019-11-09,Maryland,vote,1,Trump,34.3
+2019-11-09,Massachusetts,vote,1,Trump,31.9
+2019-11-09,Michigan,vote,1,Trump,45.8
+2019-11-09,Minnesota,vote,1,Trump,43.5
+2019-11-09,Mississippi,vote,1,Trump,57.6
+2019-11-09,Missouri,vote,1,Trump,56.8
+2019-11-09,Montana,vote,1,Trump,54.6
+2019-11-09,Nebraska,vote,1,Trump,60.4
+2019-11-09,Nevada,vote,1,Trump,45.0
+2019-11-09,New Hampshire,vote,1,Trump,44.8
+2019-11-09,New Jersey,vote,1,Trump,39.0
+2019-11-09,New Mexico,vote,1,Trump,40.4
+2019-11-09,New York,vote,1,Trump,34.7
+2019-11-09,North Carolina,vote,1,Trump,49.2
+2019-11-09,North Dakota,vote,1,Trump,62.9
+2019-11-09,Ohio,vote,1,Trump,50.8
+2019-11-09,Oklahoma,vote,1,Trump,66.2
+2019-11-09,Oregon,vote,1,Trump,38.5
+2019-11-09,Pennsylvania,vote,1,Trump,46.7
+2019-11-09,Rhode island,vote,1,Trump,36.3
+2019-11-09,South Carolina,vote,1,Trump,55.4
+2019-11-09,South Dakota,vote,1,Trump,61.8
+2019-11-09,Tennessee,vote,1,Trump,61.2
+2019-11-09,Texas,vote,1,Trump,52.7
+2019-11-09,Utah,vote,1,Trump,60.3
+2019-11-09,Vermont,vote,1,Trump,29.2
+2019-11-09,Virginia,vote,1,Trump,43.6
+2019-11-09,Washington,vote,1,Trump,37.4
+2019-11-09,West Virginia,vote,1,Trump,65.5
+2019-11-09,Wisconsin,vote,1,Trump,46.6
+2019-11-09,Wyoming,vote,1,Trump,69.0
+2019-11-09,District of Columbia,vote,1,Trump,10.5
+2019-11-09,Maine-1,vote,1,Trump,37.2
+2019-11-09,Maine-2,vote,1,Trump,49.0
+2019-11-09,Nebraska-1,vote,1,Trump,59.0
+2019-11-09,Nebraska-2,vote,1,Trump,49.3
+2019-11-09,Nebraska-3,vote,1,Trump,75.2
+2019-11-09,US,vote,1,Trump,45.8
+2019-11-09,Alabama,vote,1,Democrats,34.9
+2019-11-09,Alaska,vote,1,Democrats,37.4
+2019-11-09,Arizona,vote,1,Democrats,47.1
+2019-11-09,Arkansas,vote,1,Democrats,33.3
+2019-11-09,California,vote,1,Democrats,62.0
+2019-11-09,Colorado,vote,1,Democrats,52.0
+2019-11-09,Connecticut,vote,1,Democrats,57.2
+2019-11-09,Delaware,vote,1,Democrats,57.7
+2019-11-09,Florida,vote,1,Democrats,48.9
+2019-11-09,Georgia,vote,1,Democrats,46.2
+2019-11-09,Hawaii,vote,1,Democrats,67.8
+2019-11-09,Idaho,vote,1,Democrats,30.3
+2019-11-09,Illinois,vote,1,Democrats,58.1
+2019-11-09,Indiana,vote,1,Democrats,39.9
+2019-11-09,Iowa,vote,1,Democrats,46.5
+2019-11-09,Kansas,vote,1,Democrats,38.0
+2019-11-09,Kentucky,vote,1,Democrats,34.4
+2019-11-09,Louisiana,vote,1,Democrats,37.1
+2019-11-09,Maine,vote,1,Democrats,51.1
+2019-11-09,Maryland,vote,1,Democrats,62.1
+2019-11-09,Massachusetts,vote,1,Democrats,61.9
+2019-11-09,Michigan,vote,1,Democrats,50.7
+2019-11-09,Minnesota,vote,1,Democrats,50.9
+2019-11-09,Mississippi,vote,1,Democrats,39.8
+2019-11-09,Missouri,vote,1,Democrats,40.2
+2019-11-09,Montana,vote,1,Democrats,38.5
+2019-11-09,Nebraska,vote,1,Democrats,34.9
+2019-11-09,Nevada,vote,1,Democrats,49.6
+2019-11-09,New Hampshire,vote,1,Democrats,50.8
+2019-11-09,New Jersey,vote,1,Democrats,57.5
+2019-11-09,New Mexico,vote,1,Democrats,54.4
+2019-11-09,New York,vote,1,Democrats,60.2
+2019-11-09,North Carolina,vote,1,Democrats,48.7
+2019-11-09,North Dakota,vote,1,Democrats,31.1
+2019-11-09,Ohio,vote,1,Democrats,45.1
+2019-11-09,Oklahoma,vote,1,Democrats,31.5
+2019-11-09,Oregon,vote,1,Democrats,54.8
+2019-11-09,Pennsylvania,vote,1,Democrats,49.9
+2019-11-09,Rhode island,vote,1,Democrats,58.7
+2019-11-09,South Carolina,vote,1,Democrats,41.5
+2019-11-09,South Dakota,vote,1,Democrats,34.0
+2019-11-09,Tennessee,vote,1,Democrats,36.1
+2019-11-09,Texas,vote,1,Democrats,44.4
+2019-11-09,Utah,vote,1,Democrats,31.6
+2019-11-09,Vermont,vote,1,Democrats,63.6
+2019-11-09,Virginia,vote,1,Democrats,52.9
+2019-11-09,Washington,vote,1,Democrats,56.5
+2019-11-09,West Virginia,vote,1,Democrats,31.4
+2019-11-09,Wisconsin,vote,1,Democrats,49.1
+2019-11-09,Wyoming,vote,1,Democrats,24.6
+2019-11-09,District of Columbia,vote,1,Democrats,84.7
+2019-11-09,Maine-1,vote,1,Democrats,57.8
+2019-11-09,Maine-2,vote,1,Democrats,45.3
+2019-11-09,Nebraska-1,vote,1,Democrats,36.1
+2019-11-09,Nebraska-2,vote,1,Democrats,46.3
+2019-11-09,Nebraska-3,vote,1,Democrats,20.4
+2019-11-09,US,vote,1,Democrats,50.1
+2019-11-09,Alabama,vote,1,3rd Party,2.9
+2019-11-09,Alaska,vote,1,3rd Party,11.2
+2019-11-09,Arizona,vote,1,3rd Party,4.5
+2019-11-09,Arkansas,vote,1,3rd Party,4.3
+2019-11-09,California,vote,1,3rd Party,5.2
+2019-11-09,Colorado,vote,1,3rd Party,5.8
+2019-11-09,Connecticut,vote,1,3rd Party,4.3
+2019-11-09,Delaware,vote,1,3rd Party,3.2
+2019-11-09,Florida,vote,1,3rd Party,2.5
+2019-11-09,Georgia,vote,1,3rd Party,2.1
+2019-11-09,Hawaii,vote,1,3rd Party,5.0
+2019-11-09,Idaho,vote,1,3rd Party,6.4
+2019-11-09,Illinois,vote,1,3rd Party,3.3
+2019-11-09,Indiana,vote,1,3rd Party,3.3
+2019-11-09,Iowa,vote,1,3rd Party,4.4
+2019-11-09,Kansas,vote,1,3rd Party,5.2
+2019-11-09,Kentucky,vote,1,3rd Party,3.1
+2019-11-09,Louisiana,vote,1,3rd Party,3.7
+2019-11-09,Maine,vote,1,3rd Party,6.2
+2019-11-09,Maryland,vote,1,3rd Party,3.5
+2019-11-09,Massachusetts,vote,1,3rd Party,6.1
+2019-11-09,Michigan,vote,1,3rd Party,3.4
+2019-11-09,Minnesota,vote,1,3rd Party,5.5
+2019-11-09,Mississippi,vote,1,3rd Party,2.6
+2019-11-09,Missouri,vote,1,3rd Party,2.9
+2019-11-09,Montana,vote,1,3rd Party,6.9
+2019-11-09,Nebraska,vote,1,3rd Party,4.6
+2019-11-09,Nevada,vote,1,3rd Party,5.3
+2019-11-09,New Hampshire,vote,1,3rd Party,4.2
+2019-11-09,New Jersey,vote,1,3rd Party,3.4
+2019-11-09,New Mexico,vote,1,3rd Party,5.1
+2019-11-09,New York,vote,1,3rd Party,5.0
+2019-11-09,North Carolina,vote,1,3rd Party,2.0
+2019-11-09,North Dakota,vote,1,3rd Party,5.9
+2019-11-09,Ohio,vote,1,3rd Party,4.0
+2019-11-09,Oklahoma,vote,1,3rd Party,2.2
+2019-11-09,Oregon,vote,1,3rd Party,6.6
+2019-11-09,Pennsylvania,vote,1,3rd Party,3.3
+2019-11-09,Rhode island,vote,1,3rd Party,4.9
+2019-11-09,South Carolina,vote,1,3rd Party,3.0
+2019-11-09,South Dakota,vote,1,3rd Party,4.1
+2019-11-09,Tennessee,vote,1,3rd Party,2.6
+2019-11-09,Texas,vote,1,3rd Party,2.7
+2019-11-09,Utah,vote,1,3rd Party,8.0
+2019-11-09,Vermont,vote,1,3rd Party,7.1
+2019-11-09,Virginia,vote,1,3rd Party,3.4
+2019-11-09,Washington,vote,1,3rd Party,6.0
+2019-11-09,West Virginia,vote,1,3rd Party,3.1
+2019-11-09,Wisconsin,vote,1,3rd Party,4.1
+2019-11-09,Wyoming,vote,1,3rd Party,6.3
+2019-11-09,District of Columbia,vote,1,3rd Party,4.7
+2019-11-09,Maine-1,vote,1,3rd Party,4.9
+2019-11-09,Maine-2,vote,1,3rd Party,5.7
+2019-11-09,Nebraska-1,vote,1,3rd Party,4.8
+2019-11-09,Nebraska-2,vote,1,3rd Party,4.3
+2019-11-09,Nebraska-3,vote,1,3rd Party,4.4
+2019-11-09,US,vote,1,3rd Party,4.0
+2019-11-09,US,ev,1,Trump,238.4
+2019-11-09,US,ev,1,Democrats,299.6
+2019-11-09,US,ev,1,3rd Party,0.0
+2019-11-10,Alabama,win,1,Trump,99.3
+2019-11-10,Alaska,win,1,Trump,85.1
+2019-11-10,Arizona,win,1,Trump,54.1
+2019-11-10,Arkansas,win,1,Trump,99.4
+2019-11-10,California,win,1,Trump,0.0
+2019-11-10,Colorado,win,1,Trump,24.1
+2019-11-10,Connecticut,win,1,Trump,8.5
+2019-11-10,Delaware,win,1,Trump,7.7
+2019-11-10,Florida,win,1,Trump,48.4
+2019-11-10,Georgia,win,1,Trump,65.0
+2019-11-10,Hawaii,win,1,Trump,0.0
+2019-11-10,Idaho,win,1,Trump,99.8
+2019-11-10,Illinois,win,1,Trump,6.2
+2019-11-10,Indiana,win,1,Trump,89.5
+2019-11-10,Iowa,win,1,Trump,58.7
+2019-11-10,Kansas,win,1,Trump,92.1
+2019-11-10,Kentucky,win,1,Trump,99.3
+2019-11-10,Louisiana,win,1,Trump,95.4
+2019-11-10,Maine,win,1,Trump,26.9
+2019-11-10,Maryland,win,1,Trump,0.4
+2019-11-10,Massachusetts,win,1,Trump,0.2
+2019-11-10,Michigan,win,1,Trump,32.6
+2019-11-10,Minnesota,win,1,Trump,29.1
+2019-11-10,Mississippi,win,1,Trump,89.8
+2019-11-10,Missouri,win,1,Trump,89.1
+2019-11-10,Montana,win,1,Trump,88.0
+2019-11-10,Nebraska,win,1,Trump,98.1
+2019-11-10,Nevada,win,1,Trump,36.0
+2019-11-10,New Hampshire,win,1,Trump,32.1
+2019-11-10,New Jersey,win,1,Trump,9.0
+2019-11-10,New Mexico,win,1,Trump,15.6
+2019-11-10,New York,win,1,Trump,1.2
+2019-11-10,North Carolina,win,1,Trump,52.2
+2019-11-10,North Dakota,win,1,Trump,99.9
+2019-11-10,Ohio,win,1,Trump,67.4
+2019-11-10,Oklahoma,win,1,Trump,99.9
+2019-11-10,Oregon,win,1,Trump,12.0
+2019-11-10,Pennsylvania,win,1,Trump,39.4
+2019-11-10,Rhode island,win,1,Trump,4.0
+2019-11-10,South Carolina,win,1,Trump,85.4
+2019-11-10,South Dakota,win,1,Trump,99.5
+2019-11-10,Tennessee,win,1,Trump,98.1
+2019-11-10,Texas,win,1,Trump,75.7
+2019-11-10,Utah,win,1,Trump,99.6
+2019-11-10,Vermont,win,1,Trump,0.1
+2019-11-10,Virginia,win,1,Trump,24.5
+2019-11-10,Washington,win,1,Trump,7.5
+2019-11-10,West Virginia,win,1,Trump,99.9
+2019-11-10,Wisconsin,win,1,Trump,40.9
+2019-11-10,Wyoming,win,1,Trump,100.0
+2019-11-10,District of Columbia,win,1,Trump,0.0
+2019-11-10,Maine-1,win,1,Trump,7.7
+2019-11-10,Maine-2,win,1,Trump,58.9
+2019-11-10,Nebraska-1,win,1,Trump,95.0
+2019-11-10,Nebraska-2,win,1,Trump,57.4
+2019-11-10,Nebraska-3,win,1,Trump,100.0
+2019-11-10,US,win,1,Trump,43.3
+2019-11-10,Alabama,win,1,Democrats,0.7
+2019-11-10,Alaska,win,1,Democrats,14.9
+2019-11-10,Arizona,win,1,Democrats,45.9
+2019-11-10,Arkansas,win,1,Democrats,0.6
+2019-11-10,California,win,1,Democrats,100.0
+2019-11-10,Colorado,win,1,Democrats,75.9
+2019-11-10,Connecticut,win,1,Democrats,91.5
+2019-11-10,Delaware,win,1,Democrats,92.3
+2019-11-10,Florida,win,1,Democrats,51.6
+2019-11-10,Georgia,win,1,Democrats,35.0
+2019-11-10,Hawaii,win,1,Democrats,100.0
+2019-11-10,Idaho,win,1,Democrats,0.2
+2019-11-10,Illinois,win,1,Democrats,93.8
+2019-11-10,Indiana,win,1,Democrats,10.5
+2019-11-10,Iowa,win,1,Democrats,41.3
+2019-11-10,Kansas,win,1,Democrats,7.9
+2019-11-10,Kentucky,win,1,Democrats,0.7
+2019-11-10,Louisiana,win,1,Democrats,4.6
+2019-11-10,Maine,win,1,Democrats,73.1
+2019-11-10,Maryland,win,1,Democrats,99.6
+2019-11-10,Massachusetts,win,1,Democrats,99.8
+2019-11-10,Michigan,win,1,Democrats,67.4
+2019-11-10,Minnesota,win,1,Democrats,70.9
+2019-11-10,Mississippi,win,1,Democrats,10.2
+2019-11-10,Missouri,win,1,Democrats,10.9
+2019-11-10,Montana,win,1,Democrats,12.0
+2019-11-10,Nebraska,win,1,Democrats,1.9
+2019-11-10,Nevada,win,1,Democrats,64.0
+2019-11-10,New Hampshire,win,1,Democrats,67.9
+2019-11-10,New Jersey,win,1,Democrats,91.0
+2019-11-10,New Mexico,win,1,Democrats,84.4
+2019-11-10,New York,win,1,Democrats,98.8
+2019-11-10,North Carolina,win,1,Democrats,47.8
+2019-11-10,North Dakota,win,1,Democrats,0.1
+2019-11-10,Ohio,win,1,Democrats,32.6
+2019-11-10,Oklahoma,win,1,Democrats,0.1
+2019-11-10,Oregon,win,1,Democrats,88.0
+2019-11-10,Pennsylvania,win,1,Democrats,60.6
+2019-11-10,Rhode island,win,1,Democrats,96.0
+2019-11-10,South Carolina,win,1,Democrats,14.6
+2019-11-10,South Dakota,win,1,Democrats,0.5
+2019-11-10,Tennessee,win,1,Democrats,1.9
+2019-11-10,Texas,win,1,Democrats,24.3
+2019-11-10,Utah,win,1,Democrats,0.4
+2019-11-10,Vermont,win,1,Democrats,99.9
+2019-11-10,Virginia,win,1,Democrats,75.5
+2019-11-10,Washington,win,1,Democrats,92.5
+2019-11-10,West Virginia,win,1,Democrats,0.1
+2019-11-10,Wisconsin,win,1,Democrats,59.1
+2019-11-10,Wyoming,win,1,Democrats,0.0
+2019-11-10,District of Columbia,win,1,Democrats,100.0
+2019-11-10,Maine-1,win,1,Democrats,92.3
+2019-11-10,Maine-2,win,1,Democrats,41.1
+2019-11-10,Nebraska-1,win,1,Democrats,5.0
+2019-11-10,Nebraska-2,win,1,Democrats,42.6
+2019-11-10,Nebraska-3,win,1,Democrats,0.0
+2019-11-10,US,win,1,Democrats,56.7
+2019-11-10,Alabama,win,1,3rd Party,0.0
+2019-11-10,Alaska,win,1,3rd Party,0.0
+2019-11-10,Arizona,win,1,3rd Party,0.0
+2019-11-10,Arkansas,win,1,3rd Party,0.0
+2019-11-10,California,win,1,3rd Party,0.0
+2019-11-10,Colorado,win,1,3rd Party,0.0
+2019-11-10,Connecticut,win,1,3rd Party,0.0
+2019-11-10,Delaware,win,1,3rd Party,0.0
+2019-11-10,Florida,win,1,3rd Party,0.0
+2019-11-10,Georgia,win,1,3rd Party,0.0
+2019-11-10,Hawaii,win,1,3rd Party,0.0
+2019-11-10,Idaho,win,1,3rd Party,0.0
+2019-11-10,Illinois,win,1,3rd Party,0.0
+2019-11-10,Indiana,win,1,3rd Party,0.0
+2019-11-10,Iowa,win,1,3rd Party,0.0
+2019-11-10,Kansas,win,1,3rd Party,0.0
+2019-11-10,Kentucky,win,1,3rd Party,0.0
+2019-11-10,Louisiana,win,1,3rd Party,0.0
+2019-11-10,Maine,win,1,3rd Party,0.0
+2019-11-10,Maryland,win,1,3rd Party,0.0
+2019-11-10,Massachusetts,win,1,3rd Party,0.0
+2019-11-10,Michigan,win,1,3rd Party,0.0
+2019-11-10,Minnesota,win,1,3rd Party,0.0
+2019-11-10,Mississippi,win,1,3rd Party,0.0
+2019-11-10,Missouri,win,1,3rd Party,0.0
+2019-11-10,Montana,win,1,3rd Party,0.0
+2019-11-10,Nebraska,win,1,3rd Party,0.0
+2019-11-10,Nevada,win,1,3rd Party,0.0
+2019-11-10,New Hampshire,win,1,3rd Party,0.0
+2019-11-10,New Jersey,win,1,3rd Party,0.0
+2019-11-10,New Mexico,win,1,3rd Party,0.0
+2019-11-10,New York,win,1,3rd Party,0.0
+2019-11-10,North Carolina,win,1,3rd Party,0.0
+2019-11-10,North Dakota,win,1,3rd Party,0.0
+2019-11-10,Ohio,win,1,3rd Party,0.0
+2019-11-10,Oklahoma,win,1,3rd Party,0.0
+2019-11-10,Oregon,win,1,3rd Party,0.0
+2019-11-10,Pennsylvania,win,1,3rd Party,0.0
+2019-11-10,Rhode island,win,1,3rd Party,0.0
+2019-11-10,South Carolina,win,1,3rd Party,0.0
+2019-11-10,South Dakota,win,1,3rd Party,0.0
+2019-11-10,Tennessee,win,1,3rd Party,0.0
+2019-11-10,Texas,win,1,3rd Party,0.0
+2019-11-10,Utah,win,1,3rd Party,0.0
+2019-11-10,Vermont,win,1,3rd Party,0.0
+2019-11-10,Virginia,win,1,3rd Party,0.0
+2019-11-10,Washington,win,1,3rd Party,0.0
+2019-11-10,West Virginia,win,1,3rd Party,0.0
+2019-11-10,Wisconsin,win,1,3rd Party,0.0
+2019-11-10,Wyoming,win,1,3rd Party,0.0
+2019-11-10,District of Columbia,win,1,3rd Party,0.0
+2019-11-10,Maine-1,win,1,3rd Party,0.0
+2019-11-10,Maine-2,win,1,3rd Party,0.0
+2019-11-10,Nebraska-1,win,1,3rd Party,0.0
+2019-11-10,Nebraska-2,win,1,3rd Party,0.0
+2019-11-10,Nebraska-3,win,1,3rd Party,0.0
+2019-11-10,US,win,1,3rd Party,0.0
+2019-11-10,Alabama,vote,1,Trump,62.1
+2019-11-10,Alaska,vote,1,Trump,51.3
+2019-11-10,Arizona,vote,1,Trump,48.3
+2019-11-10,Arkansas,vote,1,Trump,62.2
+2019-11-10,California,vote,1,Trump,32.7
+2019-11-10,Colorado,vote,1,Trump,42.2
+2019-11-10,Connecticut,vote,1,Trump,38.4
+2019-11-10,Delaware,vote,1,Trump,38.9
+2019-11-10,Florida,vote,1,Trump,48.5
+2019-11-10,Georgia,vote,1,Trump,51.6
+2019-11-10,Hawaii,vote,1,Trump,27.1
+2019-11-10,Idaho,vote,1,Trump,63.3
+2019-11-10,Illinois,vote,1,Trump,38.5
+2019-11-10,Indiana,vote,1,Trump,56.7
+2019-11-10,Iowa,vote,1,Trump,49.0
+2019-11-10,Kansas,vote,1,Trump,56.7
+2019-11-10,Kentucky,vote,1,Trump,62.4
+2019-11-10,Louisiana,vote,1,Trump,59.1
+2019-11-10,Maine,vote,1,Trump,42.6
+2019-11-10,Maryland,vote,1,Trump,34.3
+2019-11-10,Massachusetts,vote,1,Trump,31.9
+2019-11-10,Michigan,vote,1,Trump,45.8
+2019-11-10,Minnesota,vote,1,Trump,43.5
+2019-11-10,Mississippi,vote,1,Trump,57.6
+2019-11-10,Missouri,vote,1,Trump,56.8
+2019-11-10,Montana,vote,1,Trump,54.6
+2019-11-10,Nebraska,vote,1,Trump,60.4
+2019-11-10,Nevada,vote,1,Trump,45.0
+2019-11-10,New Hampshire,vote,1,Trump,44.8
+2019-11-10,New Jersey,vote,1,Trump,39.0
+2019-11-10,New Mexico,vote,1,Trump,40.4
+2019-11-10,New York,vote,1,Trump,34.7
+2019-11-10,North Carolina,vote,1,Trump,49.2
+2019-11-10,North Dakota,vote,1,Trump,62.9
+2019-11-10,Ohio,vote,1,Trump,50.8
+2019-11-10,Oklahoma,vote,1,Trump,66.2
+2019-11-10,Oregon,vote,1,Trump,38.5
+2019-11-10,Pennsylvania,vote,1,Trump,46.7
+2019-11-10,Rhode island,vote,1,Trump,36.3
+2019-11-10,South Carolina,vote,1,Trump,55.4
+2019-11-10,South Dakota,vote,1,Trump,61.8
+2019-11-10,Tennessee,vote,1,Trump,61.2
+2019-11-10,Texas,vote,1,Trump,52.7
+2019-11-10,Utah,vote,1,Trump,60.3
+2019-11-10,Vermont,vote,1,Trump,29.2
+2019-11-10,Virginia,vote,1,Trump,43.6
+2019-11-10,Washington,vote,1,Trump,37.4
+2019-11-10,West Virginia,vote,1,Trump,65.5
+2019-11-10,Wisconsin,vote,1,Trump,46.6
+2019-11-10,Wyoming,vote,1,Trump,69.0
+2019-11-10,District of Columbia,vote,1,Trump,10.5
+2019-11-10,Maine-1,vote,1,Trump,37.2
+2019-11-10,Maine-2,vote,1,Trump,49.0
+2019-11-10,Nebraska-1,vote,1,Trump,59.0
+2019-11-10,Nebraska-2,vote,1,Trump,49.3
+2019-11-10,Nebraska-3,vote,1,Trump,75.2
+2019-11-10,US,vote,1,Trump,45.8
+2019-11-10,Alabama,vote,1,Democrats,34.9
+2019-11-10,Alaska,vote,1,Democrats,37.4
+2019-11-10,Arizona,vote,1,Democrats,47.1
+2019-11-10,Arkansas,vote,1,Democrats,33.3
+2019-11-10,California,vote,1,Democrats,62.0
+2019-11-10,Colorado,vote,1,Democrats,52.0
+2019-11-10,Connecticut,vote,1,Democrats,57.2
+2019-11-10,Delaware,vote,1,Democrats,57.7
+2019-11-10,Florida,vote,1,Democrats,48.9
+2019-11-10,Georgia,vote,1,Democrats,46.2
+2019-11-10,Hawaii,vote,1,Democrats,67.8
+2019-11-10,Idaho,vote,1,Democrats,30.3
+2019-11-10,Illinois,vote,1,Democrats,58.1
+2019-11-10,Indiana,vote,1,Democrats,39.9
+2019-11-10,Iowa,vote,1,Democrats,46.5
+2019-11-10,Kansas,vote,1,Democrats,38.0
+2019-11-10,Kentucky,vote,1,Democrats,34.4
+2019-11-10,Louisiana,vote,1,Democrats,37.1
+2019-11-10,Maine,vote,1,Democrats,51.1
+2019-11-10,Maryland,vote,1,Democrats,62.1
+2019-11-10,Massachusetts,vote,1,Democrats,61.9
+2019-11-10,Michigan,vote,1,Democrats,50.7
+2019-11-10,Minnesota,vote,1,Democrats,50.9
+2019-11-10,Mississippi,vote,1,Democrats,39.8
+2019-11-10,Missouri,vote,1,Democrats,40.2
+2019-11-10,Montana,vote,1,Democrats,38.5
+2019-11-10,Nebraska,vote,1,Democrats,34.9
+2019-11-10,Nevada,vote,1,Democrats,49.6
+2019-11-10,New Hampshire,vote,1,Democrats,50.8
+2019-11-10,New Jersey,vote,1,Democrats,57.5
+2019-11-10,New Mexico,vote,1,Democrats,54.4
+2019-11-10,New York,vote,1,Democrats,60.2
+2019-11-10,North Carolina,vote,1,Democrats,48.7
+2019-11-10,North Dakota,vote,1,Democrats,31.1
+2019-11-10,Ohio,vote,1,Democrats,45.1
+2019-11-10,Oklahoma,vote,1,Democrats,31.5
+2019-11-10,Oregon,vote,1,Democrats,54.8
+2019-11-10,Pennsylvania,vote,1,Democrats,49.9
+2019-11-10,Rhode island,vote,1,Democrats,58.7
+2019-11-10,South Carolina,vote,1,Democrats,41.5
+2019-11-10,South Dakota,vote,1,Democrats,34.0
+2019-11-10,Tennessee,vote,1,Democrats,36.1
+2019-11-10,Texas,vote,1,Democrats,44.4
+2019-11-10,Utah,vote,1,Democrats,31.6
+2019-11-10,Vermont,vote,1,Democrats,63.6
+2019-11-10,Virginia,vote,1,Democrats,52.9
+2019-11-10,Washington,vote,1,Democrats,56.5
+2019-11-10,West Virginia,vote,1,Democrats,31.4
+2019-11-10,Wisconsin,vote,1,Democrats,49.1
+2019-11-10,Wyoming,vote,1,Democrats,24.6
+2019-11-10,District of Columbia,vote,1,Democrats,84.7
+2019-11-10,Maine-1,vote,1,Democrats,57.8
+2019-11-10,Maine-2,vote,1,Democrats,45.3
+2019-11-10,Nebraska-1,vote,1,Democrats,36.1
+2019-11-10,Nebraska-2,vote,1,Democrats,46.3
+2019-11-10,Nebraska-3,vote,1,Democrats,20.4
+2019-11-10,US,vote,1,Democrats,50.1
+2019-11-10,Alabama,vote,1,3rd Party,2.9
+2019-11-10,Alaska,vote,1,3rd Party,11.2
+2019-11-10,Arizona,vote,1,3rd Party,4.5
+2019-11-10,Arkansas,vote,1,3rd Party,4.3
+2019-11-10,California,vote,1,3rd Party,5.2
+2019-11-10,Colorado,vote,1,3rd Party,5.8
+2019-11-10,Connecticut,vote,1,3rd Party,4.3
+2019-11-10,Delaware,vote,1,3rd Party,3.2
+2019-11-10,Florida,vote,1,3rd Party,2.5
+2019-11-10,Georgia,vote,1,3rd Party,2.1
+2019-11-10,Hawaii,vote,1,3rd Party,5.0
+2019-11-10,Idaho,vote,1,3rd Party,6.4
+2019-11-10,Illinois,vote,1,3rd Party,3.3
+2019-11-10,Indiana,vote,1,3rd Party,3.3
+2019-11-10,Iowa,vote,1,3rd Party,4.4
+2019-11-10,Kansas,vote,1,3rd Party,5.2
+2019-11-10,Kentucky,vote,1,3rd Party,3.1
+2019-11-10,Louisiana,vote,1,3rd Party,3.7
+2019-11-10,Maine,vote,1,3rd Party,6.2
+2019-11-10,Maryland,vote,1,3rd Party,3.5
+2019-11-10,Massachusetts,vote,1,3rd Party,6.1
+2019-11-10,Michigan,vote,1,3rd Party,3.4
+2019-11-10,Minnesota,vote,1,3rd Party,5.5
+2019-11-10,Mississippi,vote,1,3rd Party,2.6
+2019-11-10,Missouri,vote,1,3rd Party,2.9
+2019-11-10,Montana,vote,1,3rd Party,6.9
+2019-11-10,Nebraska,vote,1,3rd Party,4.6
+2019-11-10,Nevada,vote,1,3rd Party,5.3
+2019-11-10,New Hampshire,vote,1,3rd Party,4.2
+2019-11-10,New Jersey,vote,1,3rd Party,3.4
+2019-11-10,New Mexico,vote,1,3rd Party,5.1
+2019-11-10,New York,vote,1,3rd Party,5.0
+2019-11-10,North Carolina,vote,1,3rd Party,2.0
+2019-11-10,North Dakota,vote,1,3rd Party,5.9
+2019-11-10,Ohio,vote,1,3rd Party,4.0
+2019-11-10,Oklahoma,vote,1,3rd Party,2.2
+2019-11-10,Oregon,vote,1,3rd Party,6.6
+2019-11-10,Pennsylvania,vote,1,3rd Party,3.3
+2019-11-10,Rhode island,vote,1,3rd Party,4.9
+2019-11-10,South Carolina,vote,1,3rd Party,3.0
+2019-11-10,South Dakota,vote,1,3rd Party,4.1
+2019-11-10,Tennessee,vote,1,3rd Party,2.6
+2019-11-10,Texas,vote,1,3rd Party,2.7
+2019-11-10,Utah,vote,1,3rd Party,8.0
+2019-11-10,Vermont,vote,1,3rd Party,7.1
+2019-11-10,Virginia,vote,1,3rd Party,3.4
+2019-11-10,Washington,vote,1,3rd Party,6.0
+2019-11-10,West Virginia,vote,1,3rd Party,3.1
+2019-11-10,Wisconsin,vote,1,3rd Party,4.1
+2019-11-10,Wyoming,vote,1,3rd Party,6.3
+2019-11-10,District of Columbia,vote,1,3rd Party,4.7
+2019-11-10,Maine-1,vote,1,3rd Party,4.9
+2019-11-10,Maine-2,vote,1,3rd Party,5.7
+2019-11-10,Nebraska-1,vote,1,3rd Party,4.8
+2019-11-10,Nebraska-2,vote,1,3rd Party,4.3
+2019-11-10,Nebraska-3,vote,1,3rd Party,4.4
+2019-11-10,US,vote,1,3rd Party,4.0
+2019-11-10,US,ev,1,Trump,238.4
+2019-11-10,US,ev,1,Democrats,299.6
+2019-11-10,US,ev,1,3rd Party,0.0
+2019-11-11,Alabama,win,1,Trump,99.2
+2019-11-11,Alaska,win,1,Trump,85.0
+2019-11-11,Arizona,win,1,Trump,54.0
+2019-11-11,Arkansas,win,1,Trump,99.4
+2019-11-11,California,win,1,Trump,0.0
+2019-11-11,Colorado,win,1,Trump,24.0
+2019-11-11,Connecticut,win,1,Trump,8.5
+2019-11-11,Delaware,win,1,Trump,7.7
+2019-11-11,Florida,win,1,Trump,48.3
+2019-11-11,Georgia,win,1,Trump,64.9
+2019-11-11,Hawaii,win,1,Trump,0.0
+2019-11-11,Idaho,win,1,Trump,99.8
+2019-11-11,Illinois,win,1,Trump,6.2
+2019-11-11,Indiana,win,1,Trump,89.4
+2019-11-11,Iowa,win,1,Trump,58.5
+2019-11-11,Kansas,win,1,Trump,92.0
+2019-11-11,Kentucky,win,1,Trump,99.3
+2019-11-11,Louisiana,win,1,Trump,95.4
+2019-11-11,Maine,win,1,Trump,26.8
+2019-11-11,Maryland,win,1,Trump,0.4
+2019-11-11,Massachusetts,win,1,Trump,0.2
+2019-11-11,Michigan,win,1,Trump,32.5
+2019-11-11,Minnesota,win,1,Trump,29.0
+2019-11-11,Mississippi,win,1,Trump,89.8
+2019-11-11,Missouri,win,1,Trump,89.0
+2019-11-11,Montana,win,1,Trump,88.0
+2019-11-11,Nebraska,win,1,Trump,98.1
+2019-11-11,Nevada,win,1,Trump,35.9
+2019-11-11,New Hampshire,win,1,Trump,32.0
+2019-11-11,New Jersey,win,1,Trump,9.0
+2019-11-11,New Mexico,win,1,Trump,15.6
+2019-11-11,New York,win,1,Trump,1.2
+2019-11-11,North Carolina,win,1,Trump,52.1
+2019-11-11,North Dakota,win,1,Trump,99.9
+2019-11-11,Ohio,win,1,Trump,67.3
+2019-11-11,Oklahoma,win,1,Trump,99.9
+2019-11-11,Oregon,win,1,Trump,12.0
+2019-11-11,Pennsylvania,win,1,Trump,39.3
+2019-11-11,Rhode island,win,1,Trump,4.0
+2019-11-11,South Carolina,win,1,Trump,85.4
+2019-11-11,South Dakota,win,1,Trump,99.5
+2019-11-11,Tennessee,win,1,Trump,98.1
+2019-11-11,Texas,win,1,Trump,75.7
+2019-11-11,Utah,win,1,Trump,99.6
+2019-11-11,Vermont,win,1,Trump,0.1
+2019-11-11,Virginia,win,1,Trump,24.4
+2019-11-11,Washington,win,1,Trump,7.5
+2019-11-11,West Virginia,win,1,Trump,99.9
+2019-11-11,Wisconsin,win,1,Trump,40.8
+2019-11-11,Wyoming,win,1,Trump,100.0
+2019-11-11,District of Columbia,win,1,Trump,0.0
+2019-11-11,Maine-1,win,1,Trump,7.7
+2019-11-11,Maine-2,win,1,Trump,58.9
+2019-11-11,Nebraska-1,win,1,Trump,94.9
+2019-11-11,Nebraska-2,win,1,Trump,57.3
+2019-11-11,Nebraska-3,win,1,Trump,100.0
+2019-11-11,US,win,1,Trump,43.0
+2019-11-11,Alabama,win,1,Democrats,0.8
+2019-11-11,Alaska,win,1,Democrats,15.0
+2019-11-11,Arizona,win,1,Democrats,46.0
+2019-11-11,Arkansas,win,1,Democrats,0.6
+2019-11-11,California,win,1,Democrats,100.0
+2019-11-11,Colorado,win,1,Democrats,76.0
+2019-11-11,Connecticut,win,1,Democrats,91.5
+2019-11-11,Delaware,win,1,Democrats,92.3
+2019-11-11,Florida,win,1,Democrats,51.7
+2019-11-11,Georgia,win,1,Democrats,35.1
+2019-11-11,Hawaii,win,1,Democrats,100.0
+2019-11-11,Idaho,win,1,Democrats,0.2
+2019-11-11,Illinois,win,1,Democrats,93.8
+2019-11-11,Indiana,win,1,Democrats,10.6
+2019-11-11,Iowa,win,1,Democrats,41.5
+2019-11-11,Kansas,win,1,Democrats,8.0
+2019-11-11,Kentucky,win,1,Democrats,0.7
+2019-11-11,Louisiana,win,1,Democrats,4.6
+2019-11-11,Maine,win,1,Democrats,73.2
+2019-11-11,Maryland,win,1,Democrats,99.6
+2019-11-11,Massachusetts,win,1,Democrats,99.8
+2019-11-11,Michigan,win,1,Democrats,67.5
+2019-11-11,Minnesota,win,1,Democrats,71.0
+2019-11-11,Mississippi,win,1,Democrats,10.2
+2019-11-11,Missouri,win,1,Democrats,11.0
+2019-11-11,Montana,win,1,Democrats,12.0
+2019-11-11,Nebraska,win,1,Democrats,1.9
+2019-11-11,Nevada,win,1,Democrats,64.1
+2019-11-11,New Hampshire,win,1,Democrats,68.0
+2019-11-11,New Jersey,win,1,Democrats,91.0
+2019-11-11,New Mexico,win,1,Democrats,84.4
+2019-11-11,New York,win,1,Democrats,98.8
+2019-11-11,North Carolina,win,1,Democrats,47.9
+2019-11-11,North Dakota,win,1,Democrats,0.1
+2019-11-11,Ohio,win,1,Democrats,32.7
+2019-11-11,Oklahoma,win,1,Democrats,0.1
+2019-11-11,Oregon,win,1,Democrats,88.0
+2019-11-11,Pennsylvania,win,1,Democrats,60.7
+2019-11-11,Rhode island,win,1,Democrats,96.0
+2019-11-11,South Carolina,win,1,Democrats,14.6
+2019-11-11,South Dakota,win,1,Democrats,0.5
+2019-11-11,Tennessee,win,1,Democrats,1.9
+2019-11-11,Texas,win,1,Democrats,24.3
+2019-11-11,Utah,win,1,Democrats,0.4
+2019-11-11,Vermont,win,1,Democrats,99.9
+2019-11-11,Virginia,win,1,Democrats,75.6
+2019-11-11,Washington,win,1,Democrats,92.5
+2019-11-11,West Virginia,win,1,Democrats,0.1
+2019-11-11,Wisconsin,win,1,Democrats,59.2
+2019-11-11,Wyoming,win,1,Democrats,0.0
+2019-11-11,District of Columbia,win,1,Democrats,100.0
+2019-11-11,Maine-1,win,1,Democrats,92.3
+2019-11-11,Maine-2,win,1,Democrats,41.1
+2019-11-11,Nebraska-1,win,1,Democrats,5.1
+2019-11-11,Nebraska-2,win,1,Democrats,42.7
+2019-11-11,Nebraska-3,win,1,Democrats,0.0
+2019-11-11,US,win,1,Democrats,57.0
+2019-11-11,Alabama,win,1,3rd Party,0.0
+2019-11-11,Alaska,win,1,3rd Party,0.0
+2019-11-11,Arizona,win,1,3rd Party,0.0
+2019-11-11,Arkansas,win,1,3rd Party,0.0
+2019-11-11,California,win,1,3rd Party,0.0
+2019-11-11,Colorado,win,1,3rd Party,0.0
+2019-11-11,Connecticut,win,1,3rd Party,0.0
+2019-11-11,Delaware,win,1,3rd Party,0.0
+2019-11-11,Florida,win,1,3rd Party,0.0
+2019-11-11,Georgia,win,1,3rd Party,0.0
+2019-11-11,Hawaii,win,1,3rd Party,0.0
+2019-11-11,Idaho,win,1,3rd Party,0.0
+2019-11-11,Illinois,win,1,3rd Party,0.0
+2019-11-11,Indiana,win,1,3rd Party,0.0
+2019-11-11,Iowa,win,1,3rd Party,0.0
+2019-11-11,Kansas,win,1,3rd Party,0.0
+2019-11-11,Kentucky,win,1,3rd Party,0.0
+2019-11-11,Louisiana,win,1,3rd Party,0.0
+2019-11-11,Maine,win,1,3rd Party,0.0
+2019-11-11,Maryland,win,1,3rd Party,0.0
+2019-11-11,Massachusetts,win,1,3rd Party,0.0
+2019-11-11,Michigan,win,1,3rd Party,0.0
+2019-11-11,Minnesota,win,1,3rd Party,0.0
+2019-11-11,Mississippi,win,1,3rd Party,0.0
+2019-11-11,Missouri,win,1,3rd Party,0.0
+2019-11-11,Montana,win,1,3rd Party,0.0
+2019-11-11,Nebraska,win,1,3rd Party,0.0
+2019-11-11,Nevada,win,1,3rd Party,0.0
+2019-11-11,New Hampshire,win,1,3rd Party,0.0
+2019-11-11,New Jersey,win,1,3rd Party,0.0
+2019-11-11,New Mexico,win,1,3rd Party,0.0
+2019-11-11,New York,win,1,3rd Party,0.0
+2019-11-11,North Carolina,win,1,3rd Party,0.0
+2019-11-11,North Dakota,win,1,3rd Party,0.0
+2019-11-11,Ohio,win,1,3rd Party,0.0
+2019-11-11,Oklahoma,win,1,3rd Party,0.0
+2019-11-11,Oregon,win,1,3rd Party,0.0
+2019-11-11,Pennsylvania,win,1,3rd Party,0.0
+2019-11-11,Rhode island,win,1,3rd Party,0.0
+2019-11-11,South Carolina,win,1,3rd Party,0.0
+2019-11-11,South Dakota,win,1,3rd Party,0.0
+2019-11-11,Tennessee,win,1,3rd Party,0.0
+2019-11-11,Texas,win,1,3rd Party,0.0
+2019-11-11,Utah,win,1,3rd Party,0.0
+2019-11-11,Vermont,win,1,3rd Party,0.0
+2019-11-11,Virginia,win,1,3rd Party,0.0
+2019-11-11,Washington,win,1,3rd Party,0.0
+2019-11-11,West Virginia,win,1,3rd Party,0.0
+2019-11-11,Wisconsin,win,1,3rd Party,0.0
+2019-11-11,Wyoming,win,1,3rd Party,0.0
+2019-11-11,District of Columbia,win,1,3rd Party,0.0
+2019-11-11,Maine-1,win,1,3rd Party,0.0
+2019-11-11,Maine-2,win,1,3rd Party,0.0
+2019-11-11,Nebraska-1,win,1,3rd Party,0.0
+2019-11-11,Nebraska-2,win,1,3rd Party,0.0
+2019-11-11,Nebraska-3,win,1,3rd Party,0.0
+2019-11-11,US,win,1,3rd Party,0.0
+2019-11-11,Alabama,vote,1,Trump,62.1
+2019-11-11,Alaska,vote,1,Trump,51.3
+2019-11-11,Arizona,vote,1,Trump,48.3
+2019-11-11,Arkansas,vote,1,Trump,62.2
+2019-11-11,California,vote,1,Trump,32.7
+2019-11-11,Colorado,vote,1,Trump,42.2
+2019-11-11,Connecticut,vote,1,Trump,38.4
+2019-11-11,Delaware,vote,1,Trump,38.9
+2019-11-11,Florida,vote,1,Trump,48.5
+2019-11-11,Georgia,vote,1,Trump,51.5
+2019-11-11,Hawaii,vote,1,Trump,27.1
+2019-11-11,Idaho,vote,1,Trump,63.3
+2019-11-11,Illinois,vote,1,Trump,38.5
+2019-11-11,Indiana,vote,1,Trump,56.7
+2019-11-11,Iowa,vote,1,Trump,49.0
+2019-11-11,Kansas,vote,1,Trump,56.7
+2019-11-11,Kentucky,vote,1,Trump,62.4
+2019-11-11,Louisiana,vote,1,Trump,59.1
+2019-11-11,Maine,vote,1,Trump,42.6
+2019-11-11,Maryland,vote,1,Trump,34.3
+2019-11-11,Massachusetts,vote,1,Trump,31.9
+2019-11-11,Michigan,vote,1,Trump,45.8
+2019-11-11,Minnesota,vote,1,Trump,43.5
+2019-11-11,Mississippi,vote,1,Trump,57.5
+2019-11-11,Missouri,vote,1,Trump,56.7
+2019-11-11,Montana,vote,1,Trump,54.6
+2019-11-11,Nebraska,vote,1,Trump,60.4
+2019-11-11,Nevada,vote,1,Trump,45.0
+2019-11-11,New Hampshire,vote,1,Trump,44.8
+2019-11-11,New Jersey,vote,1,Trump,38.9
+2019-11-11,New Mexico,vote,1,Trump,40.3
+2019-11-11,New York,vote,1,Trump,34.7
+2019-11-11,North Carolina,vote,1,Trump,49.2
+2019-11-11,North Dakota,vote,1,Trump,62.9
+2019-11-11,Ohio,vote,1,Trump,50.8
+2019-11-11,Oklahoma,vote,1,Trump,66.2
+2019-11-11,Oregon,vote,1,Trump,38.5
+2019-11-11,Pennsylvania,vote,1,Trump,46.7
+2019-11-11,Rhode island,vote,1,Trump,36.3
+2019-11-11,South Carolina,vote,1,Trump,55.4
+2019-11-11,South Dakota,vote,1,Trump,61.8
+2019-11-11,Tennessee,vote,1,Trump,61.2
+2019-11-11,Texas,vote,1,Trump,52.7
+2019-11-11,Utah,vote,1,Trump,60.3
+2019-11-11,Vermont,vote,1,Trump,29.2
+2019-11-11,Virginia,vote,1,Trump,43.6
+2019-11-11,Washington,vote,1,Trump,37.4
+2019-11-11,West Virginia,vote,1,Trump,65.5
+2019-11-11,Wisconsin,vote,1,Trump,46.6
+2019-11-11,Wyoming,vote,1,Trump,69.0
+2019-11-11,District of Columbia,vote,1,Trump,10.5
+2019-11-11,Maine-1,vote,1,Trump,37.2
+2019-11-11,Maine-2,vote,1,Trump,48.9
+2019-11-11,Nebraska-1,vote,1,Trump,58.9
+2019-11-11,Nebraska-2,vote,1,Trump,49.3
+2019-11-11,Nebraska-3,vote,1,Trump,75.2
+2019-11-11,US,vote,1,Trump,45.8
+2019-11-11,Alabama,vote,1,Democrats,34.9
+2019-11-11,Alaska,vote,1,Democrats,37.4
+2019-11-11,Arizona,vote,1,Democrats,47.1
+2019-11-11,Arkansas,vote,1,Democrats,33.3
+2019-11-11,California,vote,1,Democrats,62.0
+2019-11-11,Colorado,vote,1,Democrats,52.0
+2019-11-11,Connecticut,vote,1,Democrats,57.2
+2019-11-11,Delaware,vote,1,Democrats,57.7
+2019-11-11,Florida,vote,1,Democrats,49.0
+2019-11-11,Georgia,vote,1,Democrats,46.2
+2019-11-11,Hawaii,vote,1,Democrats,67.8
+2019-11-11,Idaho,vote,1,Democrats,30.3
+2019-11-11,Illinois,vote,1,Democrats,58.1
+2019-11-11,Indiana,vote,1,Democrats,39.9
+2019-11-11,Iowa,vote,1,Democrats,46.5
+2019-11-11,Kansas,vote,1,Democrats,38.1
+2019-11-11,Kentucky,vote,1,Democrats,34.4
+2019-11-11,Louisiana,vote,1,Democrats,37.1
+2019-11-11,Maine,vote,1,Democrats,51.1
+2019-11-11,Maryland,vote,1,Democrats,62.2
+2019-11-11,Massachusetts,vote,1,Democrats,61.9
+2019-11-11,Michigan,vote,1,Democrats,50.7
+2019-11-11,Minnesota,vote,1,Democrats,51.0
+2019-11-11,Mississippi,vote,1,Democrats,39.8
+2019-11-11,Missouri,vote,1,Democrats,40.2
+2019-11-11,Montana,vote,1,Democrats,38.5
+2019-11-11,Nebraska,vote,1,Democrats,34.9
+2019-11-11,Nevada,vote,1,Democrats,49.6
+2019-11-11,New Hampshire,vote,1,Democrats,50.8
+2019-11-11,New Jersey,vote,1,Democrats,57.6
+2019-11-11,New Mexico,vote,1,Democrats,54.4
+2019-11-11,New York,vote,1,Democrats,60.2
+2019-11-11,North Carolina,vote,1,Democrats,48.7
+2019-11-11,North Dakota,vote,1,Democrats,31.1
+2019-11-11,Ohio,vote,1,Democrats,45.1
+2019-11-11,Oklahoma,vote,1,Democrats,31.6
+2019-11-11,Oregon,vote,1,Democrats,54.9
+2019-11-11,Pennsylvania,vote,1,Democrats,49.9
+2019-11-11,Rhode island,vote,1,Democrats,58.7
+2019-11-11,South Carolina,vote,1,Democrats,41.5
+2019-11-11,South Dakota,vote,1,Democrats,34.0
+2019-11-11,Tennessee,vote,1,Democrats,36.1
+2019-11-11,Texas,vote,1,Democrats,44.4
+2019-11-11,Utah,vote,1,Democrats,31.6
+2019-11-11,Vermont,vote,1,Democrats,63.7
+2019-11-11,Virginia,vote,1,Democrats,52.9
+2019-11-11,Washington,vote,1,Democrats,56.5
+2019-11-11,West Virginia,vote,1,Democrats,31.4
+2019-11-11,Wisconsin,vote,1,Democrats,49.1
+2019-11-11,Wyoming,vote,1,Democrats,24.6
+2019-11-11,District of Columbia,vote,1,Democrats,84.7
+2019-11-11,Maine-1,vote,1,Democrats,57.9
+2019-11-11,Maine-2,vote,1,Democrats,45.3
+2019-11-11,Nebraska-1,vote,1,Democrats,36.1
+2019-11-11,Nebraska-2,vote,1,Democrats,46.3
+2019-11-11,Nebraska-3,vote,1,Democrats,20.4
+2019-11-11,US,vote,1,Democrats,50.1
+2019-11-11,Alabama,vote,1,3rd Party,2.9
+2019-11-11,Alaska,vote,1,3rd Party,11.2
+2019-11-11,Arizona,vote,1,3rd Party,4.5
+2019-11-11,Arkansas,vote,1,3rd Party,4.3
+2019-11-11,California,vote,1,3rd Party,5.2
+2019-11-11,Colorado,vote,1,3rd Party,5.8
+2019-11-11,Connecticut,vote,1,3rd Party,4.3
+2019-11-11,Delaware,vote,1,3rd Party,3.2
+2019-11-11,Florida,vote,1,3rd Party,2.5
+2019-11-11,Georgia,vote,1,3rd Party,2.1
+2019-11-11,Hawaii,vote,1,3rd Party,5.0
+2019-11-11,Idaho,vote,1,3rd Party,6.4
+2019-11-11,Illinois,vote,1,3rd Party,3.3
+2019-11-11,Indiana,vote,1,3rd Party,3.3
+2019-11-11,Iowa,vote,1,3rd Party,4.4
+2019-11-11,Kansas,vote,1,3rd Party,5.2
+2019-11-11,Kentucky,vote,1,3rd Party,3.1
+2019-11-11,Louisiana,vote,1,3rd Party,3.7
+2019-11-11,Maine,vote,1,3rd Party,6.2
+2019-11-11,Maryland,vote,1,3rd Party,3.5
+2019-11-11,Massachusetts,vote,1,3rd Party,6.1
+2019-11-11,Michigan,vote,1,3rd Party,3.4
+2019-11-11,Minnesota,vote,1,3rd Party,5.5
+2019-11-11,Mississippi,vote,1,3rd Party,2.6
+2019-11-11,Missouri,vote,1,3rd Party,2.9
+2019-11-11,Montana,vote,1,3rd Party,6.9
+2019-11-11,Nebraska,vote,1,3rd Party,4.6
+2019-11-11,Nevada,vote,1,3rd Party,5.3
+2019-11-11,New Hampshire,vote,1,3rd Party,4.2
+2019-11-11,New Jersey,vote,1,3rd Party,3.4
+2019-11-11,New Mexico,vote,1,3rd Party,5.1
+2019-11-11,New York,vote,1,3rd Party,5.0
+2019-11-11,North Carolina,vote,1,3rd Party,2.0
+2019-11-11,North Dakota,vote,1,3rd Party,5.9
+2019-11-11,Ohio,vote,1,3rd Party,4.0
+2019-11-11,Oklahoma,vote,1,3rd Party,2.2
+2019-11-11,Oregon,vote,1,3rd Party,6.6
+2019-11-11,Pennsylvania,vote,1,3rd Party,3.3
+2019-11-11,Rhode island,vote,1,3rd Party,4.9
+2019-11-11,South Carolina,vote,1,3rd Party,3.0
+2019-11-11,South Dakota,vote,1,3rd Party,4.1
+2019-11-11,Tennessee,vote,1,3rd Party,2.6
+2019-11-11,Texas,vote,1,3rd Party,2.7
+2019-11-11,Utah,vote,1,3rd Party,8.0
+2019-11-11,Vermont,vote,1,3rd Party,7.1
+2019-11-11,Virginia,vote,1,3rd Party,3.4
+2019-11-11,Washington,vote,1,3rd Party,6.0
+2019-11-11,West Virginia,vote,1,3rd Party,3.1
+2019-11-11,Wisconsin,vote,1,3rd Party,4.1
+2019-11-11,Wyoming,vote,1,3rd Party,6.3
+2019-11-11,District of Columbia,vote,1,3rd Party,4.7
+2019-11-11,Maine-1,vote,1,3rd Party,4.9
+2019-11-11,Maine-2,vote,1,3rd Party,5.7
+2019-11-11,Nebraska-1,vote,1,3rd Party,4.8
+2019-11-11,Nebraska-2,vote,1,3rd Party,4.3
+2019-11-11,Nebraska-3,vote,1,3rd Party,4.4
+2019-11-11,US,vote,1,3rd Party,4.0
+2019-11-11,US,ev,1,Trump,238.2
+2019-11-11,US,ev,1,Democrats,299.8
+2019-11-11,US,ev,1,3rd Party,0.0
+2019-11-12,Alabama,win,1,Trump,99.2
+2019-11-12,Alaska,win,1,Trump,85.0
+2019-11-12,Arizona,win,1,Trump,54.0
+2019-11-12,Arkansas,win,1,Trump,99.4
+2019-11-12,California,win,1,Trump,0.0
+2019-11-12,Colorado,win,1,Trump,24.0
+2019-11-12,Connecticut,win,1,Trump,8.5
+2019-11-12,Delaware,win,1,Trump,7.7
+2019-11-12,Florida,win,1,Trump,48.3
+2019-11-12,Georgia,win,1,Trump,64.9
+2019-11-12,Hawaii,win,1,Trump,0.0
+2019-11-12,Idaho,win,1,Trump,99.8
+2019-11-12,Illinois,win,1,Trump,6.2
+2019-11-12,Indiana,win,1,Trump,89.4
+2019-11-12,Iowa,win,1,Trump,58.5
+2019-11-12,Kansas,win,1,Trump,92.0
+2019-11-12,Kentucky,win,1,Trump,99.3
+2019-11-12,Louisiana,win,1,Trump,95.4
+2019-11-12,Maine,win,1,Trump,26.8
+2019-11-12,Maryland,win,1,Trump,0.4
+2019-11-12,Massachusetts,win,1,Trump,0.2
+2019-11-12,Michigan,win,1,Trump,32.5
+2019-11-12,Minnesota,win,1,Trump,29.0
+2019-11-12,Mississippi,win,1,Trump,89.8
+2019-11-12,Missouri,win,1,Trump,89.0
+2019-11-12,Montana,win,1,Trump,88.0
+2019-11-12,Nebraska,win,1,Trump,98.1
+2019-11-12,Nevada,win,1,Trump,35.9
+2019-11-12,New Hampshire,win,1,Trump,32.0
+2019-11-12,New Jersey,win,1,Trump,9.0
+2019-11-12,New Mexico,win,1,Trump,15.6
+2019-11-12,New York,win,1,Trump,1.2
+2019-11-12,North Carolina,win,1,Trump,52.1
+2019-11-12,North Dakota,win,1,Trump,99.9
+2019-11-12,Ohio,win,1,Trump,67.3
+2019-11-12,Oklahoma,win,1,Trump,99.9
+2019-11-12,Oregon,win,1,Trump,12.0
+2019-11-12,Pennsylvania,win,1,Trump,39.3
+2019-11-12,Rhode island,win,1,Trump,4.0
+2019-11-12,South Carolina,win,1,Trump,85.4
+2019-11-12,South Dakota,win,1,Trump,99.5
+2019-11-12,Tennessee,win,1,Trump,98.1
+2019-11-12,Texas,win,1,Trump,75.7
+2019-11-12,Utah,win,1,Trump,99.6
+2019-11-12,Vermont,win,1,Trump,0.1
+2019-11-12,Virginia,win,1,Trump,24.4
+2019-11-12,Washington,win,1,Trump,7.5
+2019-11-12,West Virginia,win,1,Trump,99.9
+2019-11-12,Wisconsin,win,1,Trump,40.8
+2019-11-12,Wyoming,win,1,Trump,100.0
+2019-11-12,District of Columbia,win,1,Trump,0.0
+2019-11-12,Maine-1,win,1,Trump,7.7
+2019-11-12,Maine-2,win,1,Trump,58.9
+2019-11-12,Nebraska-1,win,1,Trump,94.9
+2019-11-12,Nebraska-2,win,1,Trump,57.3
+2019-11-12,Nebraska-3,win,1,Trump,100.0
+2019-11-12,US,win,1,Trump,43.0
+2019-11-12,Alabama,win,1,Democrats,0.8
+2019-11-12,Alaska,win,1,Democrats,15.0
+2019-11-12,Arizona,win,1,Democrats,46.0
+2019-11-12,Arkansas,win,1,Democrats,0.6
+2019-11-12,California,win,1,Democrats,100.0
+2019-11-12,Colorado,win,1,Democrats,76.0
+2019-11-12,Connecticut,win,1,Democrats,91.5
+2019-11-12,Delaware,win,1,Democrats,92.3
+2019-11-12,Florida,win,1,Democrats,51.7
+2019-11-12,Georgia,win,1,Democrats,35.1
+2019-11-12,Hawaii,win,1,Democrats,100.0
+2019-11-12,Idaho,win,1,Democrats,0.2
+2019-11-12,Illinois,win,1,Democrats,93.8
+2019-11-12,Indiana,win,1,Democrats,10.6
+2019-11-12,Iowa,win,1,Democrats,41.5
+2019-11-12,Kansas,win,1,Democrats,8.0
+2019-11-12,Kentucky,win,1,Democrats,0.7
+2019-11-12,Louisiana,win,1,Democrats,4.6
+2019-11-12,Maine,win,1,Democrats,73.2
+2019-11-12,Maryland,win,1,Democrats,99.6
+2019-11-12,Massachusetts,win,1,Democrats,99.8
+2019-11-12,Michigan,win,1,Democrats,67.5
+2019-11-12,Minnesota,win,1,Democrats,71.0
+2019-11-12,Mississippi,win,1,Democrats,10.2
+2019-11-12,Missouri,win,1,Democrats,11.0
+2019-11-12,Montana,win,1,Democrats,12.0
+2019-11-12,Nebraska,win,1,Democrats,1.9
+2019-11-12,Nevada,win,1,Democrats,64.1
+2019-11-12,New Hampshire,win,1,Democrats,68.0
+2019-11-12,New Jersey,win,1,Democrats,91.0
+2019-11-12,New Mexico,win,1,Democrats,84.4
+2019-11-12,New York,win,1,Democrats,98.8
+2019-11-12,North Carolina,win,1,Democrats,47.9
+2019-11-12,North Dakota,win,1,Democrats,0.1
+2019-11-12,Ohio,win,1,Democrats,32.7
+2019-11-12,Oklahoma,win,1,Democrats,0.1
+2019-11-12,Oregon,win,1,Democrats,88.0
+2019-11-12,Pennsylvania,win,1,Democrats,60.7
+2019-11-12,Rhode island,win,1,Democrats,96.0
+2019-11-12,South Carolina,win,1,Democrats,14.6
+2019-11-12,South Dakota,win,1,Democrats,0.5
+2019-11-12,Tennessee,win,1,Democrats,1.9
+2019-11-12,Texas,win,1,Democrats,24.3
+2019-11-12,Utah,win,1,Democrats,0.4
+2019-11-12,Vermont,win,1,Democrats,99.9
+2019-11-12,Virginia,win,1,Democrats,75.6
+2019-11-12,Washington,win,1,Democrats,92.5
+2019-11-12,West Virginia,win,1,Democrats,0.1
+2019-11-12,Wisconsin,win,1,Democrats,59.2
+2019-11-12,Wyoming,win,1,Democrats,0.0
+2019-11-12,District of Columbia,win,1,Democrats,100.0
+2019-11-12,Maine-1,win,1,Democrats,92.3
+2019-11-12,Maine-2,win,1,Democrats,41.1
+2019-11-12,Nebraska-1,win,1,Democrats,5.1
+2019-11-12,Nebraska-2,win,1,Democrats,42.7
+2019-11-12,Nebraska-3,win,1,Democrats,0.0
+2019-11-12,US,win,1,Democrats,57.0
+2019-11-12,Alabama,win,1,3rd Party,0.0
+2019-11-12,Alaska,win,1,3rd Party,0.0
+2019-11-12,Arizona,win,1,3rd Party,0.0
+2019-11-12,Arkansas,win,1,3rd Party,0.0
+2019-11-12,California,win,1,3rd Party,0.0
+2019-11-12,Colorado,win,1,3rd Party,0.0
+2019-11-12,Connecticut,win,1,3rd Party,0.0
+2019-11-12,Delaware,win,1,3rd Party,0.0
+2019-11-12,Florida,win,1,3rd Party,0.0
+2019-11-12,Georgia,win,1,3rd Party,0.0
+2019-11-12,Hawaii,win,1,3rd Party,0.0
+2019-11-12,Idaho,win,1,3rd Party,0.0
+2019-11-12,Illinois,win,1,3rd Party,0.0
+2019-11-12,Indiana,win,1,3rd Party,0.0
+2019-11-12,Iowa,win,1,3rd Party,0.0
+2019-11-12,Kansas,win,1,3rd Party,0.0
+2019-11-12,Kentucky,win,1,3rd Party,0.0
+2019-11-12,Louisiana,win,1,3rd Party,0.0
+2019-11-12,Maine,win,1,3rd Party,0.0
+2019-11-12,Maryland,win,1,3rd Party,0.0
+2019-11-12,Massachusetts,win,1,3rd Party,0.0
+2019-11-12,Michigan,win,1,3rd Party,0.0
+2019-11-12,Minnesota,win,1,3rd Party,0.0
+2019-11-12,Mississippi,win,1,3rd Party,0.0
+2019-11-12,Missouri,win,1,3rd Party,0.0
+2019-11-12,Montana,win,1,3rd Party,0.0
+2019-11-12,Nebraska,win,1,3rd Party,0.0
+2019-11-12,Nevada,win,1,3rd Party,0.0
+2019-11-12,New Hampshire,win,1,3rd Party,0.0
+2019-11-12,New Jersey,win,1,3rd Party,0.0
+2019-11-12,New Mexico,win,1,3rd Party,0.0
+2019-11-12,New York,win,1,3rd Party,0.0
+2019-11-12,North Carolina,win,1,3rd Party,0.0
+2019-11-12,North Dakota,win,1,3rd Party,0.0
+2019-11-12,Ohio,win,1,3rd Party,0.0
+2019-11-12,Oklahoma,win,1,3rd Party,0.0
+2019-11-12,Oregon,win,1,3rd Party,0.0
+2019-11-12,Pennsylvania,win,1,3rd Party,0.0
+2019-11-12,Rhode island,win,1,3rd Party,0.0
+2019-11-12,South Carolina,win,1,3rd Party,0.0
+2019-11-12,South Dakota,win,1,3rd Party,0.0
+2019-11-12,Tennessee,win,1,3rd Party,0.0
+2019-11-12,Texas,win,1,3rd Party,0.0
+2019-11-12,Utah,win,1,3rd Party,0.0
+2019-11-12,Vermont,win,1,3rd Party,0.0
+2019-11-12,Virginia,win,1,3rd Party,0.0
+2019-11-12,Washington,win,1,3rd Party,0.0
+2019-11-12,West Virginia,win,1,3rd Party,0.0
+2019-11-12,Wisconsin,win,1,3rd Party,0.0
+2019-11-12,Wyoming,win,1,3rd Party,0.0
+2019-11-12,District of Columbia,win,1,3rd Party,0.0
+2019-11-12,Maine-1,win,1,3rd Party,0.0
+2019-11-12,Maine-2,win,1,3rd Party,0.0
+2019-11-12,Nebraska-1,win,1,3rd Party,0.0
+2019-11-12,Nebraska-2,win,1,3rd Party,0.0
+2019-11-12,Nebraska-3,win,1,3rd Party,0.0
+2019-11-12,US,win,1,3rd Party,0.0
+2019-11-12,Alabama,vote,1,Trump,62.1
+2019-11-12,Alaska,vote,1,Trump,51.3
+2019-11-12,Arizona,vote,1,Trump,48.3
+2019-11-12,Arkansas,vote,1,Trump,62.2
+2019-11-12,California,vote,1,Trump,32.7
+2019-11-12,Colorado,vote,1,Trump,42.2
+2019-11-12,Connecticut,vote,1,Trump,38.4
+2019-11-12,Delaware,vote,1,Trump,38.9
+2019-11-12,Florida,vote,1,Trump,48.5
+2019-11-12,Georgia,vote,1,Trump,51.5
+2019-11-12,Hawaii,vote,1,Trump,27.1
+2019-11-12,Idaho,vote,1,Trump,63.3
+2019-11-12,Illinois,vote,1,Trump,38.5
+2019-11-12,Indiana,vote,1,Trump,56.7
+2019-11-12,Iowa,vote,1,Trump,49.0
+2019-11-12,Kansas,vote,1,Trump,56.7
+2019-11-12,Kentucky,vote,1,Trump,62.4
+2019-11-12,Louisiana,vote,1,Trump,59.1
+2019-11-12,Maine,vote,1,Trump,42.6
+2019-11-12,Maryland,vote,1,Trump,34.3
+2019-11-12,Massachusetts,vote,1,Trump,31.9
+2019-11-12,Michigan,vote,1,Trump,45.8
+2019-11-12,Minnesota,vote,1,Trump,43.5
+2019-11-12,Mississippi,vote,1,Trump,57.5
+2019-11-12,Missouri,vote,1,Trump,56.7
+2019-11-12,Montana,vote,1,Trump,54.6
+2019-11-12,Nebraska,vote,1,Trump,60.4
+2019-11-12,Nevada,vote,1,Trump,45.0
+2019-11-12,New Hampshire,vote,1,Trump,44.8
+2019-11-12,New Jersey,vote,1,Trump,38.9
+2019-11-12,New Mexico,vote,1,Trump,40.3
+2019-11-12,New York,vote,1,Trump,34.7
+2019-11-12,North Carolina,vote,1,Trump,49.2
+2019-11-12,North Dakota,vote,1,Trump,62.9
+2019-11-12,Ohio,vote,1,Trump,50.8
+2019-11-12,Oklahoma,vote,1,Trump,66.2
+2019-11-12,Oregon,vote,1,Trump,38.5
+2019-11-12,Pennsylvania,vote,1,Trump,46.7
+2019-11-12,Rhode island,vote,1,Trump,36.3
+2019-11-12,South Carolina,vote,1,Trump,55.4
+2019-11-12,South Dakota,vote,1,Trump,61.8
+2019-11-12,Tennessee,vote,1,Trump,61.2
+2019-11-12,Texas,vote,1,Trump,52.7
+2019-11-12,Utah,vote,1,Trump,60.3
+2019-11-12,Vermont,vote,1,Trump,29.2
+2019-11-12,Virginia,vote,1,Trump,43.6
+2019-11-12,Washington,vote,1,Trump,37.4
+2019-11-12,West Virginia,vote,1,Trump,65.5
+2019-11-12,Wisconsin,vote,1,Trump,46.6
+2019-11-12,Wyoming,vote,1,Trump,69.0
+2019-11-12,District of Columbia,vote,1,Trump,10.5
+2019-11-12,Maine-1,vote,1,Trump,37.2
+2019-11-12,Maine-2,vote,1,Trump,48.9
+2019-11-12,Nebraska-1,vote,1,Trump,58.9
+2019-11-12,Nebraska-2,vote,1,Trump,49.3
+2019-11-12,Nebraska-3,vote,1,Trump,75.2
+2019-11-12,US,vote,1,Trump,45.8
+2019-11-12,Alabama,vote,1,Democrats,34.9
+2019-11-12,Alaska,vote,1,Democrats,37.4
+2019-11-12,Arizona,vote,1,Democrats,47.1
+2019-11-12,Arkansas,vote,1,Democrats,33.3
+2019-11-12,California,vote,1,Democrats,62.0
+2019-11-12,Colorado,vote,1,Democrats,52.0
+2019-11-12,Connecticut,vote,1,Democrats,57.2
+2019-11-12,Delaware,vote,1,Democrats,57.7
+2019-11-12,Florida,vote,1,Democrats,49.0
+2019-11-12,Georgia,vote,1,Democrats,46.2
+2019-11-12,Hawaii,vote,1,Democrats,67.8
+2019-11-12,Idaho,vote,1,Democrats,30.3
+2019-11-12,Illinois,vote,1,Democrats,58.1
+2019-11-12,Indiana,vote,1,Democrats,39.9
+2019-11-12,Iowa,vote,1,Democrats,46.5
+2019-11-12,Kansas,vote,1,Democrats,38.1
+2019-11-12,Kentucky,vote,1,Democrats,34.4
+2019-11-12,Louisiana,vote,1,Democrats,37.1
+2019-11-12,Maine,vote,1,Democrats,51.1
+2019-11-12,Maryland,vote,1,Democrats,62.2
+2019-11-12,Massachusetts,vote,1,Democrats,61.9
+2019-11-12,Michigan,vote,1,Democrats,50.7
+2019-11-12,Minnesota,vote,1,Democrats,51.0
+2019-11-12,Mississippi,vote,1,Democrats,39.8
+2019-11-12,Missouri,vote,1,Democrats,40.2
+2019-11-12,Montana,vote,1,Democrats,38.5
+2019-11-12,Nebraska,vote,1,Democrats,34.9
+2019-11-12,Nevada,vote,1,Democrats,49.6
+2019-11-12,New Hampshire,vote,1,Democrats,50.8
+2019-11-12,New Jersey,vote,1,Democrats,57.6
+2019-11-12,New Mexico,vote,1,Democrats,54.4
+2019-11-12,New York,vote,1,Democrats,60.2
+2019-11-12,North Carolina,vote,1,Democrats,48.7
+2019-11-12,North Dakota,vote,1,Democrats,31.1
+2019-11-12,Ohio,vote,1,Democrats,45.1
+2019-11-12,Oklahoma,vote,1,Democrats,31.6
+2019-11-12,Oregon,vote,1,Democrats,54.9
+2019-11-12,Pennsylvania,vote,1,Democrats,49.9
+2019-11-12,Rhode island,vote,1,Democrats,58.7
+2019-11-12,South Carolina,vote,1,Democrats,41.5
+2019-11-12,South Dakota,vote,1,Democrats,34.0
+2019-11-12,Tennessee,vote,1,Democrats,36.1
+2019-11-12,Texas,vote,1,Democrats,44.4
+2019-11-12,Utah,vote,1,Democrats,31.6
+2019-11-12,Vermont,vote,1,Democrats,63.7
+2019-11-12,Virginia,vote,1,Democrats,52.9
+2019-11-12,Washington,vote,1,Democrats,56.5
+2019-11-12,West Virginia,vote,1,Democrats,31.4
+2019-11-12,Wisconsin,vote,1,Democrats,49.1
+2019-11-12,Wyoming,vote,1,Democrats,24.6
+2019-11-12,District of Columbia,vote,1,Democrats,84.7
+2019-11-12,Maine-1,vote,1,Democrats,57.9
+2019-11-12,Maine-2,vote,1,Democrats,45.3
+2019-11-12,Nebraska-1,vote,1,Democrats,36.1
+2019-11-12,Nebraska-2,vote,1,Democrats,46.3
+2019-11-12,Nebraska-3,vote,1,Democrats,20.4
+2019-11-12,US,vote,1,Democrats,50.1
+2019-11-12,Alabama,vote,1,3rd Party,2.9
+2019-11-12,Alaska,vote,1,3rd Party,11.2
+2019-11-12,Arizona,vote,1,3rd Party,4.5
+2019-11-12,Arkansas,vote,1,3rd Party,4.3
+2019-11-12,California,vote,1,3rd Party,5.2
+2019-11-12,Colorado,vote,1,3rd Party,5.8
+2019-11-12,Connecticut,vote,1,3rd Party,4.3
+2019-11-12,Delaware,vote,1,3rd Party,3.2
+2019-11-12,Florida,vote,1,3rd Party,2.5
+2019-11-12,Georgia,vote,1,3rd Party,2.1
+2019-11-12,Hawaii,vote,1,3rd Party,5.0
+2019-11-12,Idaho,vote,1,3rd Party,6.4
+2019-11-12,Illinois,vote,1,3rd Party,3.3
+2019-11-12,Indiana,vote,1,3rd Party,3.3
+2019-11-12,Iowa,vote,1,3rd Party,4.4
+2019-11-12,Kansas,vote,1,3rd Party,5.2
+2019-11-12,Kentucky,vote,1,3rd Party,3.1
+2019-11-12,Louisiana,vote,1,3rd Party,3.7
+2019-11-12,Maine,vote,1,3rd Party,6.2
+2019-11-12,Maryland,vote,1,3rd Party,3.5
+2019-11-12,Massachusetts,vote,1,3rd Party,6.1
+2019-11-12,Michigan,vote,1,3rd Party,3.4
+2019-11-12,Minnesota,vote,1,3rd Party,5.5
+2019-11-12,Mississippi,vote,1,3rd Party,2.6
+2019-11-12,Missouri,vote,1,3rd Party,2.9
+2019-11-12,Montana,vote,1,3rd Party,6.9
+2019-11-12,Nebraska,vote,1,3rd Party,4.6
+2019-11-12,Nevada,vote,1,3rd Party,5.3
+2019-11-12,New Hampshire,vote,1,3rd Party,4.2
+2019-11-12,New Jersey,vote,1,3rd Party,3.4
+2019-11-12,New Mexico,vote,1,3rd Party,5.1
+2019-11-12,New York,vote,1,3rd Party,5.0
+2019-11-12,North Carolina,vote,1,3rd Party,2.0
+2019-11-12,North Dakota,vote,1,3rd Party,5.9
+2019-11-12,Ohio,vote,1,3rd Party,4.0
+2019-11-12,Oklahoma,vote,1,3rd Party,2.2
+2019-11-12,Oregon,vote,1,3rd Party,6.6
+2019-11-12,Pennsylvania,vote,1,3rd Party,3.3
+2019-11-12,Rhode island,vote,1,3rd Party,4.9
+2019-11-12,South Carolina,vote,1,3rd Party,3.0
+2019-11-12,South Dakota,vote,1,3rd Party,4.1
+2019-11-12,Tennessee,vote,1,3rd Party,2.6
+2019-11-12,Texas,vote,1,3rd Party,2.7
+2019-11-12,Utah,vote,1,3rd Party,8.0
+2019-11-12,Vermont,vote,1,3rd Party,7.1
+2019-11-12,Virginia,vote,1,3rd Party,3.4
+2019-11-12,Washington,vote,1,3rd Party,6.0
+2019-11-12,West Virginia,vote,1,3rd Party,3.1
+2019-11-12,Wisconsin,vote,1,3rd Party,4.1
+2019-11-12,Wyoming,vote,1,3rd Party,6.3
+2019-11-12,District of Columbia,vote,1,3rd Party,4.7
+2019-11-12,Maine-1,vote,1,3rd Party,4.9
+2019-11-12,Maine-2,vote,1,3rd Party,5.7
+2019-11-12,Nebraska-1,vote,1,3rd Party,4.8
+2019-11-12,Nebraska-2,vote,1,3rd Party,4.3
+2019-11-12,Nebraska-3,vote,1,3rd Party,4.4
+2019-11-12,US,vote,1,3rd Party,4.0
+2019-11-12,US,ev,1,Trump,238.2
+2019-11-12,US,ev,1,Democrats,299.8
+2019-11-12,US,ev,1,3rd Party,0.0
+2019-11-13,Alabama,win,1,Trump,99.2
+2019-11-13,Alaska,win,1,Trump,85.0
+2019-11-13,Arizona,win,1,Trump,54.0
+2019-11-13,Arkansas,win,1,Trump,99.4
+2019-11-13,California,win,1,Trump,0.0
+2019-11-13,Colorado,win,1,Trump,24.0
+2019-11-13,Connecticut,win,1,Trump,8.5
+2019-11-13,Delaware,win,1,Trump,7.7
+2019-11-13,Florida,win,1,Trump,48.3
+2019-11-13,Georgia,win,1,Trump,64.9
+2019-11-13,Hawaii,win,1,Trump,0.0
+2019-11-13,Idaho,win,1,Trump,99.8
+2019-11-13,Illinois,win,1,Trump,6.2
+2019-11-13,Indiana,win,1,Trump,89.4
+2019-11-13,Iowa,win,1,Trump,58.5
+2019-11-13,Kansas,win,1,Trump,92.0
+2019-11-13,Kentucky,win,1,Trump,99.3
+2019-11-13,Louisiana,win,1,Trump,95.4
+2019-11-13,Maine,win,1,Trump,26.8
+2019-11-13,Maryland,win,1,Trump,0.4
+2019-11-13,Massachusetts,win,1,Trump,0.2
+2019-11-13,Michigan,win,1,Trump,32.5
+2019-11-13,Minnesota,win,1,Trump,29.0
+2019-11-13,Mississippi,win,1,Trump,89.8
+2019-11-13,Missouri,win,1,Trump,89.0
+2019-11-13,Montana,win,1,Trump,88.0
+2019-11-13,Nebraska,win,1,Trump,98.1
+2019-11-13,Nevada,win,1,Trump,35.9
+2019-11-13,New Hampshire,win,1,Trump,32.0
+2019-11-13,New Jersey,win,1,Trump,9.0
+2019-11-13,New Mexico,win,1,Trump,15.6
+2019-11-13,New York,win,1,Trump,1.2
+2019-11-13,North Carolina,win,1,Trump,52.1
+2019-11-13,North Dakota,win,1,Trump,99.9
+2019-11-13,Ohio,win,1,Trump,67.3
+2019-11-13,Oklahoma,win,1,Trump,99.9
+2019-11-13,Oregon,win,1,Trump,12.0
+2019-11-13,Pennsylvania,win,1,Trump,39.3
+2019-11-13,Rhode island,win,1,Trump,4.0
+2019-11-13,South Carolina,win,1,Trump,85.4
+2019-11-13,South Dakota,win,1,Trump,99.5
+2019-11-13,Tennessee,win,1,Trump,98.1
+2019-11-13,Texas,win,1,Trump,75.7
+2019-11-13,Utah,win,1,Trump,99.6
+2019-11-13,Vermont,win,1,Trump,0.1
+2019-11-13,Virginia,win,1,Trump,24.4
+2019-11-13,Washington,win,1,Trump,7.5
+2019-11-13,West Virginia,win,1,Trump,99.9
+2019-11-13,Wisconsin,win,1,Trump,40.8
+2019-11-13,Wyoming,win,1,Trump,100.0
+2019-11-13,District of Columbia,win,1,Trump,0.0
+2019-11-13,Maine-1,win,1,Trump,7.7
+2019-11-13,Maine-2,win,1,Trump,58.9
+2019-11-13,Nebraska-1,win,1,Trump,94.9
+2019-11-13,Nebraska-2,win,1,Trump,57.3
+2019-11-13,Nebraska-3,win,1,Trump,100.0
+2019-11-13,US,win,1,Trump,43.0
+2019-11-13,Alabama,win,1,Democrats,0.8
+2019-11-13,Alaska,win,1,Democrats,15.0
+2019-11-13,Arizona,win,1,Democrats,46.0
+2019-11-13,Arkansas,win,1,Democrats,0.6
+2019-11-13,California,win,1,Democrats,100.0
+2019-11-13,Colorado,win,1,Democrats,76.0
+2019-11-13,Connecticut,win,1,Democrats,91.5
+2019-11-13,Delaware,win,1,Democrats,92.3
+2019-11-13,Florida,win,1,Democrats,51.7
+2019-11-13,Georgia,win,1,Democrats,35.1
+2019-11-13,Hawaii,win,1,Democrats,100.0
+2019-11-13,Idaho,win,1,Democrats,0.2
+2019-11-13,Illinois,win,1,Democrats,93.8
+2019-11-13,Indiana,win,1,Democrats,10.6
+2019-11-13,Iowa,win,1,Democrats,41.5
+2019-11-13,Kansas,win,1,Democrats,8.0
+2019-11-13,Kentucky,win,1,Democrats,0.7
+2019-11-13,Louisiana,win,1,Democrats,4.6
+2019-11-13,Maine,win,1,Democrats,73.2
+2019-11-13,Maryland,win,1,Democrats,99.6
+2019-11-13,Massachusetts,win,1,Democrats,99.8
+2019-11-13,Michigan,win,1,Democrats,67.5
+2019-11-13,Minnesota,win,1,Democrats,71.0
+2019-11-13,Mississippi,win,1,Democrats,10.2
+2019-11-13,Missouri,win,1,Democrats,11.0
+2019-11-13,Montana,win,1,Democrats,12.0
+2019-11-13,Nebraska,win,1,Democrats,1.9
+2019-11-13,Nevada,win,1,Democrats,64.1
+2019-11-13,New Hampshire,win,1,Democrats,68.0
+2019-11-13,New Jersey,win,1,Democrats,91.0
+2019-11-13,New Mexico,win,1,Democrats,84.4
+2019-11-13,New York,win,1,Democrats,98.8
+2019-11-13,North Carolina,win,1,Democrats,47.9
+2019-11-13,North Dakota,win,1,Democrats,0.1
+2019-11-13,Ohio,win,1,Democrats,32.7
+2019-11-13,Oklahoma,win,1,Democrats,0.1
+2019-11-13,Oregon,win,1,Democrats,88.0
+2019-11-13,Pennsylvania,win,1,Democrats,60.7
+2019-11-13,Rhode island,win,1,Democrats,96.0
+2019-11-13,South Carolina,win,1,Democrats,14.6
+2019-11-13,South Dakota,win,1,Democrats,0.5
+2019-11-13,Tennessee,win,1,Democrats,1.9
+2019-11-13,Texas,win,1,Democrats,24.3
+2019-11-13,Utah,win,1,Democrats,0.4
+2019-11-13,Vermont,win,1,Democrats,99.9
+2019-11-13,Virginia,win,1,Democrats,75.6
+2019-11-13,Washington,win,1,Democrats,92.5
+2019-11-13,West Virginia,win,1,Democrats,0.1
+2019-11-13,Wisconsin,win,1,Democrats,59.2
+2019-11-13,Wyoming,win,1,Democrats,0.0
+2019-11-13,District of Columbia,win,1,Democrats,100.0
+2019-11-13,Maine-1,win,1,Democrats,92.3
+2019-11-13,Maine-2,win,1,Democrats,41.1
+2019-11-13,Nebraska-1,win,1,Democrats,5.1
+2019-11-13,Nebraska-2,win,1,Democrats,42.7
+2019-11-13,Nebraska-3,win,1,Democrats,0.0
+2019-11-13,US,win,1,Democrats,57.0
+2019-11-13,Alabama,win,1,3rd Party,0.0
+2019-11-13,Alaska,win,1,3rd Party,0.0
+2019-11-13,Arizona,win,1,3rd Party,0.0
+2019-11-13,Arkansas,win,1,3rd Party,0.0
+2019-11-13,California,win,1,3rd Party,0.0
+2019-11-13,Colorado,win,1,3rd Party,0.0
+2019-11-13,Connecticut,win,1,3rd Party,0.0
+2019-11-13,Delaware,win,1,3rd Party,0.0
+2019-11-13,Florida,win,1,3rd Party,0.0
+2019-11-13,Georgia,win,1,3rd Party,0.0
+2019-11-13,Hawaii,win,1,3rd Party,0.0
+2019-11-13,Idaho,win,1,3rd Party,0.0
+2019-11-13,Illinois,win,1,3rd Party,0.0
+2019-11-13,Indiana,win,1,3rd Party,0.0
+2019-11-13,Iowa,win,1,3rd Party,0.0
+2019-11-13,Kansas,win,1,3rd Party,0.0
+2019-11-13,Kentucky,win,1,3rd Party,0.0
+2019-11-13,Louisiana,win,1,3rd Party,0.0
+2019-11-13,Maine,win,1,3rd Party,0.0
+2019-11-13,Maryland,win,1,3rd Party,0.0
+2019-11-13,Massachusetts,win,1,3rd Party,0.0
+2019-11-13,Michigan,win,1,3rd Party,0.0
+2019-11-13,Minnesota,win,1,3rd Party,0.0
+2019-11-13,Mississippi,win,1,3rd Party,0.0
+2019-11-13,Missouri,win,1,3rd Party,0.0
+2019-11-13,Montana,win,1,3rd Party,0.0
+2019-11-13,Nebraska,win,1,3rd Party,0.0
+2019-11-13,Nevada,win,1,3rd Party,0.0
+2019-11-13,New Hampshire,win,1,3rd Party,0.0
+2019-11-13,New Jersey,win,1,3rd Party,0.0
+2019-11-13,New Mexico,win,1,3rd Party,0.0
+2019-11-13,New York,win,1,3rd Party,0.0
+2019-11-13,North Carolina,win,1,3rd Party,0.0
+2019-11-13,North Dakota,win,1,3rd Party,0.0
+2019-11-13,Ohio,win,1,3rd Party,0.0
+2019-11-13,Oklahoma,win,1,3rd Party,0.0
+2019-11-13,Oregon,win,1,3rd Party,0.0
+2019-11-13,Pennsylvania,win,1,3rd Party,0.0
+2019-11-13,Rhode island,win,1,3rd Party,0.0
+2019-11-13,South Carolina,win,1,3rd Party,0.0
+2019-11-13,South Dakota,win,1,3rd Party,0.0
+2019-11-13,Tennessee,win,1,3rd Party,0.0
+2019-11-13,Texas,win,1,3rd Party,0.0
+2019-11-13,Utah,win,1,3rd Party,0.0
+2019-11-13,Vermont,win,1,3rd Party,0.0
+2019-11-13,Virginia,win,1,3rd Party,0.0
+2019-11-13,Washington,win,1,3rd Party,0.0
+2019-11-13,West Virginia,win,1,3rd Party,0.0
+2019-11-13,Wisconsin,win,1,3rd Party,0.0
+2019-11-13,Wyoming,win,1,3rd Party,0.0
+2019-11-13,District of Columbia,win,1,3rd Party,0.0
+2019-11-13,Maine-1,win,1,3rd Party,0.0
+2019-11-13,Maine-2,win,1,3rd Party,0.0
+2019-11-13,Nebraska-1,win,1,3rd Party,0.0
+2019-11-13,Nebraska-2,win,1,3rd Party,0.0
+2019-11-13,Nebraska-3,win,1,3rd Party,0.0
+2019-11-13,US,win,1,3rd Party,0.0
+2019-11-13,Alabama,vote,1,Trump,62.1
+2019-11-13,Alaska,vote,1,Trump,51.3
+2019-11-13,Arizona,vote,1,Trump,48.3
+2019-11-13,Arkansas,vote,1,Trump,62.2
+2019-11-13,California,vote,1,Trump,32.7
+2019-11-13,Colorado,vote,1,Trump,42.2
+2019-11-13,Connecticut,vote,1,Trump,38.4
+2019-11-13,Delaware,vote,1,Trump,38.9
+2019-11-13,Florida,vote,1,Trump,48.5
+2019-11-13,Georgia,vote,1,Trump,51.5
+2019-11-13,Hawaii,vote,1,Trump,27.1
+2019-11-13,Idaho,vote,1,Trump,63.3
+2019-11-13,Illinois,vote,1,Trump,38.5
+2019-11-13,Indiana,vote,1,Trump,56.7
+2019-11-13,Iowa,vote,1,Trump,49.0
+2019-11-13,Kansas,vote,1,Trump,56.7
+2019-11-13,Kentucky,vote,1,Trump,62.4
+2019-11-13,Louisiana,vote,1,Trump,59.1
+2019-11-13,Maine,vote,1,Trump,42.6
+2019-11-13,Maryland,vote,1,Trump,34.3
+2019-11-13,Massachusetts,vote,1,Trump,31.9
+2019-11-13,Michigan,vote,1,Trump,45.8
+2019-11-13,Minnesota,vote,1,Trump,43.5
+2019-11-13,Mississippi,vote,1,Trump,57.5
+2019-11-13,Missouri,vote,1,Trump,56.7
+2019-11-13,Montana,vote,1,Trump,54.6
+2019-11-13,Nebraska,vote,1,Trump,60.4
+2019-11-13,Nevada,vote,1,Trump,45.0
+2019-11-13,New Hampshire,vote,1,Trump,44.8
+2019-11-13,New Jersey,vote,1,Trump,38.9
+2019-11-13,New Mexico,vote,1,Trump,40.3
+2019-11-13,New York,vote,1,Trump,34.7
+2019-11-13,North Carolina,vote,1,Trump,49.2
+2019-11-13,North Dakota,vote,1,Trump,62.9
+2019-11-13,Ohio,vote,1,Trump,50.8
+2019-11-13,Oklahoma,vote,1,Trump,66.2
+2019-11-13,Oregon,vote,1,Trump,38.5
+2019-11-13,Pennsylvania,vote,1,Trump,46.7
+2019-11-13,Rhode island,vote,1,Trump,36.3
+2019-11-13,South Carolina,vote,1,Trump,55.4
+2019-11-13,South Dakota,vote,1,Trump,61.8
+2019-11-13,Tennessee,vote,1,Trump,61.2
+2019-11-13,Texas,vote,1,Trump,52.7
+2019-11-13,Utah,vote,1,Trump,60.3
+2019-11-13,Vermont,vote,1,Trump,29.2
+2019-11-13,Virginia,vote,1,Trump,43.6
+2019-11-13,Washington,vote,1,Trump,37.4
+2019-11-13,West Virginia,vote,1,Trump,65.5
+2019-11-13,Wisconsin,vote,1,Trump,46.6
+2019-11-13,Wyoming,vote,1,Trump,69.0
+2019-11-13,District of Columbia,vote,1,Trump,10.5
+2019-11-13,Maine-1,vote,1,Trump,37.2
+2019-11-13,Maine-2,vote,1,Trump,48.9
+2019-11-13,Nebraska-1,vote,1,Trump,58.9
+2019-11-13,Nebraska-2,vote,1,Trump,49.3
+2019-11-13,Nebraska-3,vote,1,Trump,75.2
+2019-11-13,US,vote,1,Trump,45.8
+2019-11-13,Alabama,vote,1,Democrats,34.9
+2019-11-13,Alaska,vote,1,Democrats,37.4
+2019-11-13,Arizona,vote,1,Democrats,47.1
+2019-11-13,Arkansas,vote,1,Democrats,33.3
+2019-11-13,California,vote,1,Democrats,62.0
+2019-11-13,Colorado,vote,1,Democrats,52.0
+2019-11-13,Connecticut,vote,1,Democrats,57.2
+2019-11-13,Delaware,vote,1,Democrats,57.7
+2019-11-13,Florida,vote,1,Democrats,49.0
+2019-11-13,Georgia,vote,1,Democrats,46.2
+2019-11-13,Hawaii,vote,1,Democrats,67.8
+2019-11-13,Idaho,vote,1,Democrats,30.3
+2019-11-13,Illinois,vote,1,Democrats,58.1
+2019-11-13,Indiana,vote,1,Democrats,39.9
+2019-11-13,Iowa,vote,1,Democrats,46.5
+2019-11-13,Kansas,vote,1,Democrats,38.1
+2019-11-13,Kentucky,vote,1,Democrats,34.4
+2019-11-13,Louisiana,vote,1,Democrats,37.1
+2019-11-13,Maine,vote,1,Democrats,51.1
+2019-11-13,Maryland,vote,1,Democrats,62.2
+2019-11-13,Massachusetts,vote,1,Democrats,61.9
+2019-11-13,Michigan,vote,1,Democrats,50.7
+2019-11-13,Minnesota,vote,1,Democrats,51.0
+2019-11-13,Mississippi,vote,1,Democrats,39.8
+2019-11-13,Missouri,vote,1,Democrats,40.2
+2019-11-13,Montana,vote,1,Democrats,38.5
+2019-11-13,Nebraska,vote,1,Democrats,34.9
+2019-11-13,Nevada,vote,1,Democrats,49.6
+2019-11-13,New Hampshire,vote,1,Democrats,50.8
+2019-11-13,New Jersey,vote,1,Democrats,57.6
+2019-11-13,New Mexico,vote,1,Democrats,54.4
+2019-11-13,New York,vote,1,Democrats,60.2
+2019-11-13,North Carolina,vote,1,Democrats,48.7
+2019-11-13,North Dakota,vote,1,Democrats,31.1
+2019-11-13,Ohio,vote,1,Democrats,45.1
+2019-11-13,Oklahoma,vote,1,Democrats,31.6
+2019-11-13,Oregon,vote,1,Democrats,54.9
+2019-11-13,Pennsylvania,vote,1,Democrats,49.9
+2019-11-13,Rhode island,vote,1,Democrats,58.7
+2019-11-13,South Carolina,vote,1,Democrats,41.5
+2019-11-13,South Dakota,vote,1,Democrats,34.0
+2019-11-13,Tennessee,vote,1,Democrats,36.1
+2019-11-13,Texas,vote,1,Democrats,44.4
+2019-11-13,Utah,vote,1,Democrats,31.6
+2019-11-13,Vermont,vote,1,Democrats,63.7
+2019-11-13,Virginia,vote,1,Democrats,52.9
+2019-11-13,Washington,vote,1,Democrats,56.5
+2019-11-13,West Virginia,vote,1,Democrats,31.4
+2019-11-13,Wisconsin,vote,1,Democrats,49.1
+2019-11-13,Wyoming,vote,1,Democrats,24.6
+2019-11-13,District of Columbia,vote,1,Democrats,84.7
+2019-11-13,Maine-1,vote,1,Democrats,57.9
+2019-11-13,Maine-2,vote,1,Democrats,45.3
+2019-11-13,Nebraska-1,vote,1,Democrats,36.1
+2019-11-13,Nebraska-2,vote,1,Democrats,46.3
+2019-11-13,Nebraska-3,vote,1,Democrats,20.4
+2019-11-13,US,vote,1,Democrats,50.1
+2019-11-13,Alabama,vote,1,3rd Party,2.9
+2019-11-13,Alaska,vote,1,3rd Party,11.2
+2019-11-13,Arizona,vote,1,3rd Party,4.5
+2019-11-13,Arkansas,vote,1,3rd Party,4.3
+2019-11-13,California,vote,1,3rd Party,5.2
+2019-11-13,Colorado,vote,1,3rd Party,5.8
+2019-11-13,Connecticut,vote,1,3rd Party,4.3
+2019-11-13,Delaware,vote,1,3rd Party,3.2
+2019-11-13,Florida,vote,1,3rd Party,2.5
+2019-11-13,Georgia,vote,1,3rd Party,2.1
+2019-11-13,Hawaii,vote,1,3rd Party,5.0
+2019-11-13,Idaho,vote,1,3rd Party,6.4
+2019-11-13,Illinois,vote,1,3rd Party,3.3
+2019-11-13,Indiana,vote,1,3rd Party,3.3
+2019-11-13,Iowa,vote,1,3rd Party,4.4
+2019-11-13,Kansas,vote,1,3rd Party,5.2
+2019-11-13,Kentucky,vote,1,3rd Party,3.1
+2019-11-13,Louisiana,vote,1,3rd Party,3.7
+2019-11-13,Maine,vote,1,3rd Party,6.2
+2019-11-13,Maryland,vote,1,3rd Party,3.5
+2019-11-13,Massachusetts,vote,1,3rd Party,6.1
+2019-11-13,Michigan,vote,1,3rd Party,3.4
+2019-11-13,Minnesota,vote,1,3rd Party,5.5
+2019-11-13,Mississippi,vote,1,3rd Party,2.6
+2019-11-13,Missouri,vote,1,3rd Party,2.9
+2019-11-13,Montana,vote,1,3rd Party,6.9
+2019-11-13,Nebraska,vote,1,3rd Party,4.6
+2019-11-13,Nevada,vote,1,3rd Party,5.3
+2019-11-13,New Hampshire,vote,1,3rd Party,4.2
+2019-11-13,New Jersey,vote,1,3rd Party,3.4
+2019-11-13,New Mexico,vote,1,3rd Party,5.1
+2019-11-13,New York,vote,1,3rd Party,5.0
+2019-11-13,North Carolina,vote,1,3rd Party,2.0
+2019-11-13,North Dakota,vote,1,3rd Party,5.9
+2019-11-13,Ohio,vote,1,3rd Party,4.0
+2019-11-13,Oklahoma,vote,1,3rd Party,2.2
+2019-11-13,Oregon,vote,1,3rd Party,6.6
+2019-11-13,Pennsylvania,vote,1,3rd Party,3.3
+2019-11-13,Rhode island,vote,1,3rd Party,4.9
+2019-11-13,South Carolina,vote,1,3rd Party,3.0
+2019-11-13,South Dakota,vote,1,3rd Party,4.1
+2019-11-13,Tennessee,vote,1,3rd Party,2.6
+2019-11-13,Texas,vote,1,3rd Party,2.7
+2019-11-13,Utah,vote,1,3rd Party,8.0
+2019-11-13,Vermont,vote,1,3rd Party,7.1
+2019-11-13,Virginia,vote,1,3rd Party,3.4
+2019-11-13,Washington,vote,1,3rd Party,6.0
+2019-11-13,West Virginia,vote,1,3rd Party,3.1
+2019-11-13,Wisconsin,vote,1,3rd Party,4.1
+2019-11-13,Wyoming,vote,1,3rd Party,6.3
+2019-11-13,District of Columbia,vote,1,3rd Party,4.7
+2019-11-13,Maine-1,vote,1,3rd Party,4.9
+2019-11-13,Maine-2,vote,1,3rd Party,5.7
+2019-11-13,Nebraska-1,vote,1,3rd Party,4.8
+2019-11-13,Nebraska-2,vote,1,3rd Party,4.3
+2019-11-13,Nebraska-3,vote,1,3rd Party,4.4
+2019-11-13,US,vote,1,3rd Party,4.0
+2019-11-13,US,ev,1,Trump,238.2
+2019-11-13,US,ev,1,Democrats,299.8
+2019-11-13,US,ev,1,3rd Party,0.0
+2019-11-14,Alabama,win,1,Trump,99.2
+2019-11-14,Alaska,win,1,Trump,85.0
+2019-11-14,Arizona,win,1,Trump,54.0
+2019-11-14,Arkansas,win,1,Trump,99.4
+2019-11-14,California,win,1,Trump,0.0
+2019-11-14,Colorado,win,1,Trump,24.0
+2019-11-14,Connecticut,win,1,Trump,8.5
+2019-11-14,Delaware,win,1,Trump,7.7
+2019-11-14,Florida,win,1,Trump,48.3
+2019-11-14,Georgia,win,1,Trump,64.8
+2019-11-14,Hawaii,win,1,Trump,0.0
+2019-11-14,Idaho,win,1,Trump,99.8
+2019-11-14,Illinois,win,1,Trump,6.2
+2019-11-14,Indiana,win,1,Trump,89.4
+2019-11-14,Iowa,win,1,Trump,58.5
+2019-11-14,Kansas,win,1,Trump,92.0
+2019-11-14,Kentucky,win,1,Trump,99.3
+2019-11-14,Louisiana,win,1,Trump,95.4
+2019-11-14,Maine,win,1,Trump,26.8
+2019-11-14,Maryland,win,1,Trump,0.4
+2019-11-14,Massachusetts,win,1,Trump,0.2
+2019-11-14,Michigan,win,1,Trump,32.5
+2019-11-14,Minnesota,win,1,Trump,29.0
+2019-11-14,Mississippi,win,1,Trump,89.8
+2019-11-14,Missouri,win,1,Trump,89.0
+2019-11-14,Montana,win,1,Trump,88.0
+2019-11-14,Nebraska,win,1,Trump,98.1
+2019-11-14,Nevada,win,1,Trump,35.9
+2019-11-14,New Hampshire,win,1,Trump,32.0
+2019-11-14,New Jersey,win,1,Trump,9.0
+2019-11-14,New Mexico,win,1,Trump,15.6
+2019-11-14,New York,win,1,Trump,1.2
+2019-11-14,North Carolina,win,1,Trump,52.0
+2019-11-14,North Dakota,win,1,Trump,99.9
+2019-11-14,Ohio,win,1,Trump,67.3
+2019-11-14,Oklahoma,win,1,Trump,99.9
+2019-11-14,Oregon,win,1,Trump,12.0
+2019-11-14,Pennsylvania,win,1,Trump,39.3
+2019-11-14,Rhode island,win,1,Trump,4.0
+2019-11-14,South Carolina,win,1,Trump,85.4
+2019-11-14,South Dakota,win,1,Trump,99.5
+2019-11-14,Tennessee,win,1,Trump,98.1
+2019-11-14,Texas,win,1,Trump,75.6
+2019-11-14,Utah,win,1,Trump,99.6
+2019-11-14,Vermont,win,1,Trump,0.1
+2019-11-14,Virginia,win,1,Trump,24.4
+2019-11-14,Washington,win,1,Trump,7.5
+2019-11-14,West Virginia,win,1,Trump,99.9
+2019-11-14,Wisconsin,win,1,Trump,40.8
+2019-11-14,Wyoming,win,1,Trump,100.0
+2019-11-14,District of Columbia,win,1,Trump,0.0
+2019-11-14,Maine-1,win,1,Trump,7.7
+2019-11-14,Maine-2,win,1,Trump,58.9
+2019-11-14,Nebraska-1,win,1,Trump,94.9
+2019-11-14,Nebraska-2,win,1,Trump,57.3
+2019-11-14,Nebraska-3,win,1,Trump,100.0
+2019-11-14,US,win,1,Trump,43.3
+2019-11-14,Alabama,win,1,Democrats,0.8
+2019-11-14,Alaska,win,1,Democrats,15.0
+2019-11-14,Arizona,win,1,Democrats,46.0
+2019-11-14,Arkansas,win,1,Democrats,0.6
+2019-11-14,California,win,1,Democrats,100.0
+2019-11-14,Colorado,win,1,Democrats,76.0
+2019-11-14,Connecticut,win,1,Democrats,91.5
+2019-11-14,Delaware,win,1,Democrats,92.3
+2019-11-14,Florida,win,1,Democrats,51.7
+2019-11-14,Georgia,win,1,Democrats,35.2
+2019-11-14,Hawaii,win,1,Democrats,100.0
+2019-11-14,Idaho,win,1,Democrats,0.2
+2019-11-14,Illinois,win,1,Democrats,93.8
+2019-11-14,Indiana,win,1,Democrats,10.6
+2019-11-14,Iowa,win,1,Democrats,41.5
+2019-11-14,Kansas,win,1,Democrats,8.0
+2019-11-14,Kentucky,win,1,Democrats,0.7
+2019-11-14,Louisiana,win,1,Democrats,4.6
+2019-11-14,Maine,win,1,Democrats,73.2
+2019-11-14,Maryland,win,1,Democrats,99.6
+2019-11-14,Massachusetts,win,1,Democrats,99.8
+2019-11-14,Michigan,win,1,Democrats,67.5
+2019-11-14,Minnesota,win,1,Democrats,71.0
+2019-11-14,Mississippi,win,1,Democrats,10.2
+2019-11-14,Missouri,win,1,Democrats,11.0
+2019-11-14,Montana,win,1,Democrats,12.0
+2019-11-14,Nebraska,win,1,Democrats,1.9
+2019-11-14,Nevada,win,1,Democrats,64.1
+2019-11-14,New Hampshire,win,1,Democrats,68.0
+2019-11-14,New Jersey,win,1,Democrats,91.0
+2019-11-14,New Mexico,win,1,Democrats,84.4
+2019-11-14,New York,win,1,Democrats,98.8
+2019-11-14,North Carolina,win,1,Democrats,48.0
+2019-11-14,North Dakota,win,1,Democrats,0.1
+2019-11-14,Ohio,win,1,Democrats,32.7
+2019-11-14,Oklahoma,win,1,Democrats,0.1
+2019-11-14,Oregon,win,1,Democrats,88.0
+2019-11-14,Pennsylvania,win,1,Democrats,60.7
+2019-11-14,Rhode island,win,1,Democrats,96.0
+2019-11-14,South Carolina,win,1,Democrats,14.6
+2019-11-14,South Dakota,win,1,Democrats,0.5
+2019-11-14,Tennessee,win,1,Democrats,1.9
+2019-11-14,Texas,win,1,Democrats,24.4
+2019-11-14,Utah,win,1,Democrats,0.4
+2019-11-14,Vermont,win,1,Democrats,99.9
+2019-11-14,Virginia,win,1,Democrats,75.6
+2019-11-14,Washington,win,1,Democrats,92.5
+2019-11-14,West Virginia,win,1,Democrats,0.1
+2019-11-14,Wisconsin,win,1,Democrats,59.2
+2019-11-14,Wyoming,win,1,Democrats,0.0
+2019-11-14,District of Columbia,win,1,Democrats,100.0
+2019-11-14,Maine-1,win,1,Democrats,92.3
+2019-11-14,Maine-2,win,1,Democrats,41.1
+2019-11-14,Nebraska-1,win,1,Democrats,5.1
+2019-11-14,Nebraska-2,win,1,Democrats,42.7
+2019-11-14,Nebraska-3,win,1,Democrats,0.0
+2019-11-14,US,win,1,Democrats,56.7
+2019-11-14,Alabama,win,1,3rd Party,0.0
+2019-11-14,Alaska,win,1,3rd Party,0.0
+2019-11-14,Arizona,win,1,3rd Party,0.0
+2019-11-14,Arkansas,win,1,3rd Party,0.0
+2019-11-14,California,win,1,3rd Party,0.0
+2019-11-14,Colorado,win,1,3rd Party,0.0
+2019-11-14,Connecticut,win,1,3rd Party,0.0
+2019-11-14,Delaware,win,1,3rd Party,0.0
+2019-11-14,Florida,win,1,3rd Party,0.0
+2019-11-14,Georgia,win,1,3rd Party,0.0
+2019-11-14,Hawaii,win,1,3rd Party,0.0
+2019-11-14,Idaho,win,1,3rd Party,0.0
+2019-11-14,Illinois,win,1,3rd Party,0.0
+2019-11-14,Indiana,win,1,3rd Party,0.0
+2019-11-14,Iowa,win,1,3rd Party,0.0
+2019-11-14,Kansas,win,1,3rd Party,0.0
+2019-11-14,Kentucky,win,1,3rd Party,0.0
+2019-11-14,Louisiana,win,1,3rd Party,0.0
+2019-11-14,Maine,win,1,3rd Party,0.0
+2019-11-14,Maryland,win,1,3rd Party,0.0
+2019-11-14,Massachusetts,win,1,3rd Party,0.0
+2019-11-14,Michigan,win,1,3rd Party,0.0
+2019-11-14,Minnesota,win,1,3rd Party,0.0
+2019-11-14,Mississippi,win,1,3rd Party,0.0
+2019-11-14,Missouri,win,1,3rd Party,0.0
+2019-11-14,Montana,win,1,3rd Party,0.0
+2019-11-14,Nebraska,win,1,3rd Party,0.0
+2019-11-14,Nevada,win,1,3rd Party,0.0
+2019-11-14,New Hampshire,win,1,3rd Party,0.0
+2019-11-14,New Jersey,win,1,3rd Party,0.0
+2019-11-14,New Mexico,win,1,3rd Party,0.0
+2019-11-14,New York,win,1,3rd Party,0.0
+2019-11-14,North Carolina,win,1,3rd Party,0.0
+2019-11-14,North Dakota,win,1,3rd Party,0.0
+2019-11-14,Ohio,win,1,3rd Party,0.0
+2019-11-14,Oklahoma,win,1,3rd Party,0.0
+2019-11-14,Oregon,win,1,3rd Party,0.0
+2019-11-14,Pennsylvania,win,1,3rd Party,0.0
+2019-11-14,Rhode island,win,1,3rd Party,0.0
+2019-11-14,South Carolina,win,1,3rd Party,0.0
+2019-11-14,South Dakota,win,1,3rd Party,0.0
+2019-11-14,Tennessee,win,1,3rd Party,0.0
+2019-11-14,Texas,win,1,3rd Party,0.0
+2019-11-14,Utah,win,1,3rd Party,0.0
+2019-11-14,Vermont,win,1,3rd Party,0.0
+2019-11-14,Virginia,win,1,3rd Party,0.0
+2019-11-14,Washington,win,1,3rd Party,0.0
+2019-11-14,West Virginia,win,1,3rd Party,0.0
+2019-11-14,Wisconsin,win,1,3rd Party,0.0
+2019-11-14,Wyoming,win,1,3rd Party,0.0
+2019-11-14,District of Columbia,win,1,3rd Party,0.0
+2019-11-14,Maine-1,win,1,3rd Party,0.0
+2019-11-14,Maine-2,win,1,3rd Party,0.0
+2019-11-14,Nebraska-1,win,1,3rd Party,0.0
+2019-11-14,Nebraska-2,win,1,3rd Party,0.0
+2019-11-14,Nebraska-3,win,1,3rd Party,0.0
+2019-11-14,US,win,1,3rd Party,0.0
+2019-11-14,Alabama,vote,1,Trump,62.1
+2019-11-14,Alaska,vote,1,Trump,51.3
+2019-11-14,Arizona,vote,1,Trump,48.3
+2019-11-14,Arkansas,vote,1,Trump,62.2
+2019-11-14,California,vote,1,Trump,32.7
+2019-11-14,Colorado,vote,1,Trump,42.2
+2019-11-14,Connecticut,vote,1,Trump,38.4
+2019-11-14,Delaware,vote,1,Trump,38.9
+2019-11-14,Florida,vote,1,Trump,48.5
+2019-11-14,Georgia,vote,1,Trump,51.5
+2019-11-14,Hawaii,vote,1,Trump,27.1
+2019-11-14,Idaho,vote,1,Trump,63.3
+2019-11-14,Illinois,vote,1,Trump,38.5
+2019-11-14,Indiana,vote,1,Trump,56.7
+2019-11-14,Iowa,vote,1,Trump,49.0
+2019-11-14,Kansas,vote,1,Trump,56.7
+2019-11-14,Kentucky,vote,1,Trump,62.4
+2019-11-14,Louisiana,vote,1,Trump,59.1
+2019-11-14,Maine,vote,1,Trump,42.6
+2019-11-14,Maryland,vote,1,Trump,34.2
+2019-11-14,Massachusetts,vote,1,Trump,31.9
+2019-11-14,Michigan,vote,1,Trump,45.8
+2019-11-14,Minnesota,vote,1,Trump,43.5
+2019-11-14,Mississippi,vote,1,Trump,57.5
+2019-11-14,Missouri,vote,1,Trump,56.7
+2019-11-14,Montana,vote,1,Trump,54.6
+2019-11-14,Nebraska,vote,1,Trump,60.4
+2019-11-14,Nevada,vote,1,Trump,45.0
+2019-11-14,New Hampshire,vote,1,Trump,44.8
+2019-11-14,New Jersey,vote,1,Trump,38.9
+2019-11-14,New Mexico,vote,1,Trump,40.3
+2019-11-14,New York,vote,1,Trump,34.7
+2019-11-14,North Carolina,vote,1,Trump,49.2
+2019-11-14,North Dakota,vote,1,Trump,62.9
+2019-11-14,Ohio,vote,1,Trump,50.8
+2019-11-14,Oklahoma,vote,1,Trump,66.2
+2019-11-14,Oregon,vote,1,Trump,38.5
+2019-11-14,Pennsylvania,vote,1,Trump,46.7
+2019-11-14,Rhode island,vote,1,Trump,36.3
+2019-11-14,South Carolina,vote,1,Trump,55.4
+2019-11-14,South Dakota,vote,1,Trump,61.8
+2019-11-14,Tennessee,vote,1,Trump,61.2
+2019-11-14,Texas,vote,1,Trump,52.7
+2019-11-14,Utah,vote,1,Trump,60.3
+2019-11-14,Vermont,vote,1,Trump,29.2
+2019-11-14,Virginia,vote,1,Trump,43.6
+2019-11-14,Washington,vote,1,Trump,37.4
+2019-11-14,West Virginia,vote,1,Trump,65.5
+2019-11-14,Wisconsin,vote,1,Trump,46.6
+2019-11-14,Wyoming,vote,1,Trump,69.0
+2019-11-14,District of Columbia,vote,1,Trump,10.5
+2019-11-14,Maine-1,vote,1,Trump,37.2
+2019-11-14,Maine-2,vote,1,Trump,48.9
+2019-11-14,Nebraska-1,vote,1,Trump,58.9
+2019-11-14,Nebraska-2,vote,1,Trump,49.3
+2019-11-14,Nebraska-3,vote,1,Trump,75.2
+2019-11-14,US,vote,1,Trump,45.8
+2019-11-14,Alabama,vote,1,Democrats,34.9
+2019-11-14,Alaska,vote,1,Democrats,37.4
+2019-11-14,Arizona,vote,1,Democrats,47.1
+2019-11-14,Arkansas,vote,1,Democrats,33.3
+2019-11-14,California,vote,1,Democrats,62.0
+2019-11-14,Colorado,vote,1,Democrats,52.0
+2019-11-14,Connecticut,vote,1,Democrats,57.2
+2019-11-14,Delaware,vote,1,Democrats,57.7
+2019-11-14,Florida,vote,1,Democrats,49.0
+2019-11-14,Georgia,vote,1,Democrats,46.3
+2019-11-14,Hawaii,vote,1,Democrats,67.8
+2019-11-14,Idaho,vote,1,Democrats,30.3
+2019-11-14,Illinois,vote,1,Democrats,58.1
+2019-11-14,Indiana,vote,1,Democrats,39.9
+2019-11-14,Iowa,vote,1,Democrats,46.5
+2019-11-14,Kansas,vote,1,Democrats,38.1
+2019-11-14,Kentucky,vote,1,Democrats,34.4
+2019-11-14,Louisiana,vote,1,Democrats,37.1
+2019-11-14,Maine,vote,1,Democrats,51.1
+2019-11-14,Maryland,vote,1,Democrats,62.2
+2019-11-14,Massachusetts,vote,1,Democrats,61.9
+2019-11-14,Michigan,vote,1,Democrats,50.7
+2019-11-14,Minnesota,vote,1,Democrats,51.0
+2019-11-14,Mississippi,vote,1,Democrats,39.8
+2019-11-14,Missouri,vote,1,Democrats,40.2
+2019-11-14,Montana,vote,1,Democrats,38.5
+2019-11-14,Nebraska,vote,1,Democrats,34.9
+2019-11-14,Nevada,vote,1,Democrats,49.6
+2019-11-14,New Hampshire,vote,1,Democrats,50.8
+2019-11-14,New Jersey,vote,1,Democrats,57.6
+2019-11-14,New Mexico,vote,1,Democrats,54.4
+2019-11-14,New York,vote,1,Democrats,60.2
+2019-11-14,North Carolina,vote,1,Democrats,48.7
+2019-11-14,North Dakota,vote,1,Democrats,31.1
+2019-11-14,Ohio,vote,1,Democrats,45.1
+2019-11-14,Oklahoma,vote,1,Democrats,31.6
+2019-11-14,Oregon,vote,1,Democrats,54.9
+2019-11-14,Pennsylvania,vote,1,Democrats,49.9
+2019-11-14,Rhode island,vote,1,Democrats,58.7
+2019-11-14,South Carolina,vote,1,Democrats,41.5
+2019-11-14,South Dakota,vote,1,Democrats,34.0
+2019-11-14,Tennessee,vote,1,Democrats,36.1
+2019-11-14,Texas,vote,1,Democrats,44.4
+2019-11-14,Utah,vote,1,Democrats,31.6
+2019-11-14,Vermont,vote,1,Democrats,63.7
+2019-11-14,Virginia,vote,1,Democrats,52.9
+2019-11-14,Washington,vote,1,Democrats,56.5
+2019-11-14,West Virginia,vote,1,Democrats,31.4
+2019-11-14,Wisconsin,vote,1,Democrats,49.1
+2019-11-14,Wyoming,vote,1,Democrats,24.6
+2019-11-14,District of Columbia,vote,1,Democrats,84.7
+2019-11-14,Maine-1,vote,1,Democrats,57.9
+2019-11-14,Maine-2,vote,1,Democrats,45.3
+2019-11-14,Nebraska-1,vote,1,Democrats,36.1
+2019-11-14,Nebraska-2,vote,1,Democrats,46.3
+2019-11-14,Nebraska-3,vote,1,Democrats,20.4
+2019-11-14,US,vote,1,Democrats,50.1
+2019-11-14,Alabama,vote,1,3rd Party,2.9
+2019-11-14,Alaska,vote,1,3rd Party,11.2
+2019-11-14,Arizona,vote,1,3rd Party,4.5
+2019-11-14,Arkansas,vote,1,3rd Party,4.3
+2019-11-14,California,vote,1,3rd Party,5.2
+2019-11-14,Colorado,vote,1,3rd Party,5.8
+2019-11-14,Connecticut,vote,1,3rd Party,4.3
+2019-11-14,Delaware,vote,1,3rd Party,3.2
+2019-11-14,Florida,vote,1,3rd Party,2.5
+2019-11-14,Georgia,vote,1,3rd Party,2.1
+2019-11-14,Hawaii,vote,1,3rd Party,5.0
+2019-11-14,Idaho,vote,1,3rd Party,6.4
+2019-11-14,Illinois,vote,1,3rd Party,3.3
+2019-11-14,Indiana,vote,1,3rd Party,3.3
+2019-11-14,Iowa,vote,1,3rd Party,4.4
+2019-11-14,Kansas,vote,1,3rd Party,5.2
+2019-11-14,Kentucky,vote,1,3rd Party,3.1
+2019-11-14,Louisiana,vote,1,3rd Party,3.7
+2019-11-14,Maine,vote,1,3rd Party,6.2
+2019-11-14,Maryland,vote,1,3rd Party,3.5
+2019-11-14,Massachusetts,vote,1,3rd Party,6.1
+2019-11-14,Michigan,vote,1,3rd Party,3.4
+2019-11-14,Minnesota,vote,1,3rd Party,5.5
+2019-11-14,Mississippi,vote,1,3rd Party,2.6
+2019-11-14,Missouri,vote,1,3rd Party,2.9
+2019-11-14,Montana,vote,1,3rd Party,6.9
+2019-11-14,Nebraska,vote,1,3rd Party,4.6
+2019-11-14,Nevada,vote,1,3rd Party,5.3
+2019-11-14,New Hampshire,vote,1,3rd Party,4.2
+2019-11-14,New Jersey,vote,1,3rd Party,3.4
+2019-11-14,New Mexico,vote,1,3rd Party,5.1
+2019-11-14,New York,vote,1,3rd Party,5.0
+2019-11-14,North Carolina,vote,1,3rd Party,2.0
+2019-11-14,North Dakota,vote,1,3rd Party,5.9
+2019-11-14,Ohio,vote,1,3rd Party,4.0
+2019-11-14,Oklahoma,vote,1,3rd Party,2.2
+2019-11-14,Oregon,vote,1,3rd Party,6.6
+2019-11-14,Pennsylvania,vote,1,3rd Party,3.3
+2019-11-14,Rhode island,vote,1,3rd Party,4.9
+2019-11-14,South Carolina,vote,1,3rd Party,3.0
+2019-11-14,South Dakota,vote,1,3rd Party,4.1
+2019-11-14,Tennessee,vote,1,3rd Party,2.6
+2019-11-14,Texas,vote,1,3rd Party,2.7
+2019-11-14,Utah,vote,1,3rd Party,8.0
+2019-11-14,Vermont,vote,1,3rd Party,7.1
+2019-11-14,Virginia,vote,1,3rd Party,3.4
+2019-11-14,Washington,vote,1,3rd Party,6.0
+2019-11-14,West Virginia,vote,1,3rd Party,3.1
+2019-11-14,Wisconsin,vote,1,3rd Party,4.1
+2019-11-14,Wyoming,vote,1,3rd Party,6.3
+2019-11-14,District of Columbia,vote,1,3rd Party,4.7
+2019-11-14,Maine-1,vote,1,3rd Party,4.9
+2019-11-14,Maine-2,vote,1,3rd Party,5.7
+2019-11-14,Nebraska-1,vote,1,3rd Party,4.8
+2019-11-14,Nebraska-2,vote,1,3rd Party,4.3
+2019-11-14,Nebraska-3,vote,1,3rd Party,4.4
+2019-11-14,US,vote,1,3rd Party,4.0
+2019-11-14,US,ev,1,Trump,238.1
+2019-11-14,US,ev,1,Democrats,299.9
+2019-11-14,US,ev,1,3rd Party,0.0
+2019-11-15,Alabama,win,1,Trump,99.3
+2019-11-15,Alaska,win,1,Trump,85.2
+2019-11-15,Arizona,win,1,Trump,54.2
+2019-11-15,Arkansas,win,1,Trump,99.4
+2019-11-15,California,win,1,Trump,0.0
+2019-11-15,Colorado,win,1,Trump,24.2
+2019-11-15,Connecticut,win,1,Trump,8.6
+2019-11-15,Delaware,win,1,Trump,7.7
+2019-11-15,Florida,win,1,Trump,48.6
+2019-11-15,Georgia,win,1,Trump,65.1
+2019-11-15,Hawaii,win,1,Trump,0.0
+2019-11-15,Idaho,win,1,Trump,99.8
+2019-11-15,Illinois,win,1,Trump,6.3
+2019-11-15,Indiana,win,1,Trump,89.6
+2019-11-15,Iowa,win,1,Trump,58.8
+2019-11-15,Kansas,win,1,Trump,92.1
+2019-11-15,Kentucky,win,1,Trump,99.3
+2019-11-15,Louisiana,win,1,Trump,95.4
+2019-11-15,Maine,win,1,Trump,27.0
+2019-11-15,Maryland,win,1,Trump,0.4
+2019-11-15,Massachusetts,win,1,Trump,0.2
+2019-11-15,Michigan,win,1,Trump,32.6
+2019-11-15,Minnesota,win,1,Trump,29.1
+2019-11-15,Mississippi,win,1,Trump,89.8
+2019-11-15,Missouri,win,1,Trump,89.1
+2019-11-15,Montana,win,1,Trump,88.1
+2019-11-15,Nebraska,win,1,Trump,98.1
+2019-11-15,Nevada,win,1,Trump,35.9
+2019-11-15,New Hampshire,win,1,Trump,32.1
+2019-11-15,New Jersey,win,1,Trump,9.1
+2019-11-15,New Mexico,win,1,Trump,15.6
+2019-11-15,New York,win,1,Trump,1.2
+2019-11-15,North Carolina,win,1,Trump,52.6
+2019-11-15,North Dakota,win,1,Trump,99.9
+2019-11-15,Ohio,win,1,Trump,67.5
+2019-11-15,Oklahoma,win,1,Trump,99.9
+2019-11-15,Oregon,win,1,Trump,12.1
+2019-11-15,Pennsylvania,win,1,Trump,38.8
+2019-11-15,Rhode island,win,1,Trump,4.0
+2019-11-15,South Carolina,win,1,Trump,85.6
+2019-11-15,South Dakota,win,1,Trump,99.5
+2019-11-15,Tennessee,win,1,Trump,98.2
+2019-11-15,Texas,win,1,Trump,75.9
+2019-11-15,Utah,win,1,Trump,99.6
+2019-11-15,Vermont,win,1,Trump,0.1
+2019-11-15,Virginia,win,1,Trump,24.5
+2019-11-15,Washington,win,1,Trump,7.6
+2019-11-15,West Virginia,win,1,Trump,99.9
+2019-11-15,Wisconsin,win,1,Trump,41.0
+2019-11-15,Wyoming,win,1,Trump,100.0
+2019-11-15,District of Columbia,win,1,Trump,0.0
+2019-11-15,Maine-1,win,1,Trump,7.8
+2019-11-15,Maine-2,win,1,Trump,59.0
+2019-11-15,Nebraska-1,win,1,Trump,95.0
+2019-11-15,Nebraska-2,win,1,Trump,57.4
+2019-11-15,Nebraska-3,win,1,Trump,100.0
+2019-11-15,US,win,1,Trump,43.5
+2019-11-15,Alabama,win,1,Democrats,0.7
+2019-11-15,Alaska,win,1,Democrats,14.8
+2019-11-15,Arizona,win,1,Democrats,45.8
+2019-11-15,Arkansas,win,1,Democrats,0.6
+2019-11-15,California,win,1,Democrats,100.0
+2019-11-15,Colorado,win,1,Democrats,75.8
+2019-11-15,Connecticut,win,1,Democrats,91.4
+2019-11-15,Delaware,win,1,Democrats,92.3
+2019-11-15,Florida,win,1,Democrats,51.4
+2019-11-15,Georgia,win,1,Democrats,34.9
+2019-11-15,Hawaii,win,1,Democrats,100.0
+2019-11-15,Idaho,win,1,Democrats,0.2
+2019-11-15,Illinois,win,1,Democrats,93.7
+2019-11-15,Indiana,win,1,Democrats,10.4
+2019-11-15,Iowa,win,1,Democrats,41.2
+2019-11-15,Kansas,win,1,Democrats,7.9
+2019-11-15,Kentucky,win,1,Democrats,0.7
+2019-11-15,Louisiana,win,1,Democrats,4.6
+2019-11-15,Maine,win,1,Democrats,73.0
+2019-11-15,Maryland,win,1,Democrats,99.6
+2019-11-15,Massachusetts,win,1,Democrats,99.8
+2019-11-15,Michigan,win,1,Democrats,67.4
+2019-11-15,Minnesota,win,1,Democrats,70.9
+2019-11-15,Mississippi,win,1,Democrats,10.2
+2019-11-15,Missouri,win,1,Democrats,10.9
+2019-11-15,Montana,win,1,Democrats,11.9
+2019-11-15,Nebraska,win,1,Democrats,1.9
+2019-11-15,Nevada,win,1,Democrats,64.1
+2019-11-15,New Hampshire,win,1,Democrats,67.9
+2019-11-15,New Jersey,win,1,Democrats,90.9
+2019-11-15,New Mexico,win,1,Democrats,84.4
+2019-11-15,New York,win,1,Democrats,98.8
+2019-11-15,North Carolina,win,1,Democrats,47.4
+2019-11-15,North Dakota,win,1,Democrats,0.1
+2019-11-15,Ohio,win,1,Democrats,32.5
+2019-11-15,Oklahoma,win,1,Democrats,0.1
+2019-11-15,Oregon,win,1,Democrats,87.9
+2019-11-15,Pennsylvania,win,1,Democrats,61.2
+2019-11-15,Rhode island,win,1,Democrats,96.0
+2019-11-15,South Carolina,win,1,Democrats,14.4
+2019-11-15,South Dakota,win,1,Democrats,0.5
+2019-11-15,Tennessee,win,1,Democrats,1.8
+2019-11-15,Texas,win,1,Democrats,24.1
+2019-11-15,Utah,win,1,Democrats,0.4
+2019-11-15,Vermont,win,1,Democrats,99.9
+2019-11-15,Virginia,win,1,Democrats,75.5
+2019-11-15,Washington,win,1,Democrats,92.4
+2019-11-15,West Virginia,win,1,Democrats,0.1
+2019-11-15,Wisconsin,win,1,Democrats,59.0
+2019-11-15,Wyoming,win,1,Democrats,0.0
+2019-11-15,District of Columbia,win,1,Democrats,100.0
+2019-11-15,Maine-1,win,1,Democrats,92.2
+2019-11-15,Maine-2,win,1,Democrats,41.0
+2019-11-15,Nebraska-1,win,1,Democrats,5.0
+2019-11-15,Nebraska-2,win,1,Democrats,42.6
+2019-11-15,Nebraska-3,win,1,Democrats,0.0
+2019-11-15,US,win,1,Democrats,56.5
+2019-11-15,Alabama,win,1,3rd Party,0.0
+2019-11-15,Alaska,win,1,3rd Party,0.0
+2019-11-15,Arizona,win,1,3rd Party,0.0
+2019-11-15,Arkansas,win,1,3rd Party,0.0
+2019-11-15,California,win,1,3rd Party,0.0
+2019-11-15,Colorado,win,1,3rd Party,0.0
+2019-11-15,Connecticut,win,1,3rd Party,0.0
+2019-11-15,Delaware,win,1,3rd Party,0.0
+2019-11-15,Florida,win,1,3rd Party,0.0
+2019-11-15,Georgia,win,1,3rd Party,0.0
+2019-11-15,Hawaii,win,1,3rd Party,0.0
+2019-11-15,Idaho,win,1,3rd Party,0.0
+2019-11-15,Illinois,win,1,3rd Party,0.0
+2019-11-15,Indiana,win,1,3rd Party,0.0
+2019-11-15,Iowa,win,1,3rd Party,0.0
+2019-11-15,Kansas,win,1,3rd Party,0.0
+2019-11-15,Kentucky,win,1,3rd Party,0.0
+2019-11-15,Louisiana,win,1,3rd Party,0.0
+2019-11-15,Maine,win,1,3rd Party,0.0
+2019-11-15,Maryland,win,1,3rd Party,0.0
+2019-11-15,Massachusetts,win,1,3rd Party,0.0
+2019-11-15,Michigan,win,1,3rd Party,0.0
+2019-11-15,Minnesota,win,1,3rd Party,0.0
+2019-11-15,Mississippi,win,1,3rd Party,0.0
+2019-11-15,Missouri,win,1,3rd Party,0.0
+2019-11-15,Montana,win,1,3rd Party,0.0
+2019-11-15,Nebraska,win,1,3rd Party,0.0
+2019-11-15,Nevada,win,1,3rd Party,0.0
+2019-11-15,New Hampshire,win,1,3rd Party,0.0
+2019-11-15,New Jersey,win,1,3rd Party,0.0
+2019-11-15,New Mexico,win,1,3rd Party,0.0
+2019-11-15,New York,win,1,3rd Party,0.0
+2019-11-15,North Carolina,win,1,3rd Party,0.0
+2019-11-15,North Dakota,win,1,3rd Party,0.0
+2019-11-15,Ohio,win,1,3rd Party,0.0
+2019-11-15,Oklahoma,win,1,3rd Party,0.0
+2019-11-15,Oregon,win,1,3rd Party,0.0
+2019-11-15,Pennsylvania,win,1,3rd Party,0.0
+2019-11-15,Rhode island,win,1,3rd Party,0.0
+2019-11-15,South Carolina,win,1,3rd Party,0.0
+2019-11-15,South Dakota,win,1,3rd Party,0.0
+2019-11-15,Tennessee,win,1,3rd Party,0.0
+2019-11-15,Texas,win,1,3rd Party,0.0
+2019-11-15,Utah,win,1,3rd Party,0.0
+2019-11-15,Vermont,win,1,3rd Party,0.0
+2019-11-15,Virginia,win,1,3rd Party,0.0
+2019-11-15,Washington,win,1,3rd Party,0.0
+2019-11-15,West Virginia,win,1,3rd Party,0.0
+2019-11-15,Wisconsin,win,1,3rd Party,0.0
+2019-11-15,Wyoming,win,1,3rd Party,0.0
+2019-11-15,District of Columbia,win,1,3rd Party,0.0
+2019-11-15,Maine-1,win,1,3rd Party,0.0
+2019-11-15,Maine-2,win,1,3rd Party,0.0
+2019-11-15,Nebraska-1,win,1,3rd Party,0.0
+2019-11-15,Nebraska-2,win,1,3rd Party,0.0
+2019-11-15,Nebraska-3,win,1,3rd Party,0.0
+2019-11-15,US,win,1,3rd Party,0.0
+2019-11-15,Alabama,vote,1,Trump,62.1
+2019-11-15,Alaska,vote,1,Trump,51.3
+2019-11-15,Arizona,vote,1,Trump,48.3
+2019-11-15,Arkansas,vote,1,Trump,62.3
+2019-11-15,California,vote,1,Trump,32.7
+2019-11-15,Colorado,vote,1,Trump,42.2
+2019-11-15,Connecticut,vote,1,Trump,38.4
+2019-11-15,Delaware,vote,1,Trump,39.0
+2019-11-15,Florida,vote,1,Trump,48.5
+2019-11-15,Georgia,vote,1,Trump,51.5
+2019-11-15,Hawaii,vote,1,Trump,27.1
+2019-11-15,Idaho,vote,1,Trump,63.3
+2019-11-15,Illinois,vote,1,Trump,38.5
+2019-11-15,Indiana,vote,1,Trump,56.7
+2019-11-15,Iowa,vote,1,Trump,49.0
+2019-11-15,Kansas,vote,1,Trump,56.7
+2019-11-15,Kentucky,vote,1,Trump,62.4
+2019-11-15,Louisiana,vote,1,Trump,59.1
+2019-11-15,Maine,vote,1,Trump,42.6
+2019-11-15,Maryland,vote,1,Trump,34.3
+2019-11-15,Massachusetts,vote,1,Trump,31.9
+2019-11-15,Michigan,vote,1,Trump,45.8
+2019-11-15,Minnesota,vote,1,Trump,43.5
+2019-11-15,Mississippi,vote,1,Trump,57.6
+2019-11-15,Missouri,vote,1,Trump,56.8
+2019-11-15,Montana,vote,1,Trump,54.6
+2019-11-15,Nebraska,vote,1,Trump,60.4
+2019-11-15,Nevada,vote,1,Trump,45.1
+2019-11-15,New Hampshire,vote,1,Trump,44.8
+2019-11-15,New Jersey,vote,1,Trump,39.0
+2019-11-15,New Mexico,vote,1,Trump,40.4
+2019-11-15,New York,vote,1,Trump,34.7
+2019-11-15,North Carolina,vote,1,Trump,49.3
+2019-11-15,North Dakota,vote,1,Trump,62.9
+2019-11-15,Ohio,vote,1,Trump,50.9
+2019-11-15,Oklahoma,vote,1,Trump,66.2
+2019-11-15,Oregon,vote,1,Trump,38.5
+2019-11-15,Pennsylvania,vote,1,Trump,46.7
+2019-11-15,Rhode island,vote,1,Trump,36.3
+2019-11-15,South Carolina,vote,1,Trump,55.4
+2019-11-15,South Dakota,vote,1,Trump,61.8
+2019-11-15,Tennessee,vote,1,Trump,61.2
+2019-11-15,Texas,vote,1,Trump,52.8
+2019-11-15,Utah,vote,1,Trump,60.3
+2019-11-15,Vermont,vote,1,Trump,29.2
+2019-11-15,Virginia,vote,1,Trump,43.6
+2019-11-15,Washington,vote,1,Trump,37.4
+2019-11-15,West Virginia,vote,1,Trump,65.5
+2019-11-15,Wisconsin,vote,1,Trump,46.6
+2019-11-15,Wyoming,vote,1,Trump,69.0
+2019-11-15,District of Columbia,vote,1,Trump,10.5
+2019-11-15,Maine-1,vote,1,Trump,37.2
+2019-11-15,Maine-2,vote,1,Trump,49.0
+2019-11-15,Nebraska-1,vote,1,Trump,59.0
+2019-11-15,Nebraska-2,vote,1,Trump,49.3
+2019-11-15,Nebraska-3,vote,1,Trump,75.2
+2019-11-15,US,vote,1,Trump,45.8
+2019-11-15,Alabama,vote,1,Democrats,34.9
+2019-11-15,Alaska,vote,1,Democrats,37.4
+2019-11-15,Arizona,vote,1,Democrats,47.1
+2019-11-15,Arkansas,vote,1,Democrats,33.3
+2019-11-15,California,vote,1,Democrats,62.0
+2019-11-15,Colorado,vote,1,Democrats,51.9
+2019-11-15,Connecticut,vote,1,Democrats,57.2
+2019-11-15,Delaware,vote,1,Democrats,57.7
+2019-11-15,Florida,vote,1,Democrats,48.9
+2019-11-15,Georgia,vote,1,Democrats,46.3
+2019-11-15,Hawaii,vote,1,Democrats,67.8
+2019-11-15,Idaho,vote,1,Democrats,30.3
+2019-11-15,Illinois,vote,1,Democrats,58.1
+2019-11-15,Indiana,vote,1,Democrats,39.9
+2019-11-15,Iowa,vote,1,Democrats,46.5
+2019-11-15,Kansas,vote,1,Democrats,38.0
+2019-11-15,Kentucky,vote,1,Democrats,34.4
+2019-11-15,Louisiana,vote,1,Democrats,37.1
+2019-11-15,Maine,vote,1,Democrats,51.1
+2019-11-15,Maryland,vote,1,Democrats,62.2
+2019-11-15,Massachusetts,vote,1,Democrats,61.9
+2019-11-15,Michigan,vote,1,Democrats,50.7
+2019-11-15,Minnesota,vote,1,Democrats,50.9
+2019-11-15,Mississippi,vote,1,Democrats,39.8
+2019-11-15,Missouri,vote,1,Democrats,40.2
+2019-11-15,Montana,vote,1,Democrats,38.4
+2019-11-15,Nebraska,vote,1,Democrats,34.9
+2019-11-15,Nevada,vote,1,Democrats,49.6
+2019-11-15,New Hampshire,vote,1,Democrats,50.8
+2019-11-15,New Jersey,vote,1,Democrats,57.5
+2019-11-15,New Mexico,vote,1,Democrats,54.4
+2019-11-15,New York,vote,1,Democrats,60.2
+2019-11-15,North Carolina,vote,1,Democrats,48.6
+2019-11-15,North Dakota,vote,1,Democrats,31.1
+2019-11-15,Ohio,vote,1,Democrats,45.1
+2019-11-15,Oklahoma,vote,1,Democrats,31.5
+2019-11-15,Oregon,vote,1,Democrats,54.8
+2019-11-15,Pennsylvania,vote,1,Democrats,49.9
+2019-11-15,Rhode island,vote,1,Democrats,58.7
+2019-11-15,South Carolina,vote,1,Democrats,41.4
+2019-11-15,South Dakota,vote,1,Democrats,34.0
+2019-11-15,Tennessee,vote,1,Democrats,36.1
+2019-11-15,Texas,vote,1,Democrats,44.4
+2019-11-15,Utah,vote,1,Democrats,31.6
+2019-11-15,Vermont,vote,1,Democrats,63.6
+2019-11-15,Virginia,vote,1,Democrats,52.8
+2019-11-15,Washington,vote,1,Democrats,56.5
+2019-11-15,West Virginia,vote,1,Democrats,31.3
+2019-11-15,Wisconsin,vote,1,Democrats,49.1
+2019-11-15,Wyoming,vote,1,Democrats,24.6
+2019-11-15,District of Columbia,vote,1,Democrats,84.7
+2019-11-15,Maine-1,vote,1,Democrats,57.8
+2019-11-15,Maine-2,vote,1,Democrats,45.3
+2019-11-15,Nebraska-1,vote,1,Democrats,36.1
+2019-11-15,Nebraska-2,vote,1,Democrats,46.2
+2019-11-15,Nebraska-3,vote,1,Democrats,20.4
+2019-11-15,US,vote,1,Democrats,50.1
+2019-11-15,Alabama,vote,1,3rd Party,2.9
+2019-11-15,Alaska,vote,1,3rd Party,11.2
+2019-11-15,Arizona,vote,1,3rd Party,4.5
+2019-11-15,Arkansas,vote,1,3rd Party,4.3
+2019-11-15,California,vote,1,3rd Party,5.2
+2019-11-15,Colorado,vote,1,3rd Party,5.8
+2019-11-15,Connecticut,vote,1,3rd Party,4.3
+2019-11-15,Delaware,vote,1,3rd Party,3.2
+2019-11-15,Florida,vote,1,3rd Party,2.5
+2019-11-15,Georgia,vote,1,3rd Party,2.1
+2019-11-15,Hawaii,vote,1,3rd Party,5.0
+2019-11-15,Idaho,vote,1,3rd Party,6.4
+2019-11-15,Illinois,vote,1,3rd Party,3.3
+2019-11-15,Indiana,vote,1,3rd Party,3.3
+2019-11-15,Iowa,vote,1,3rd Party,4.4
+2019-11-15,Kansas,vote,1,3rd Party,5.2
+2019-11-15,Kentucky,vote,1,3rd Party,3.1
+2019-11-15,Louisiana,vote,1,3rd Party,3.7
+2019-11-15,Maine,vote,1,3rd Party,6.2
+2019-11-15,Maryland,vote,1,3rd Party,3.5
+2019-11-15,Massachusetts,vote,1,3rd Party,6.1
+2019-11-15,Michigan,vote,1,3rd Party,3.4
+2019-11-15,Minnesota,vote,1,3rd Party,5.5
+2019-11-15,Mississippi,vote,1,3rd Party,2.6
+2019-11-15,Missouri,vote,1,3rd Party,2.9
+2019-11-15,Montana,vote,1,3rd Party,6.9
+2019-11-15,Nebraska,vote,1,3rd Party,4.6
+2019-11-15,Nevada,vote,1,3rd Party,5.3
+2019-11-15,New Hampshire,vote,1,3rd Party,4.2
+2019-11-15,New Jersey,vote,1,3rd Party,3.4
+2019-11-15,New Mexico,vote,1,3rd Party,5.1
+2019-11-15,New York,vote,1,3rd Party,5.0
+2019-11-15,North Carolina,vote,1,3rd Party,2.0
+2019-11-15,North Dakota,vote,1,3rd Party,5.9
+2019-11-15,Ohio,vote,1,3rd Party,4.0
+2019-11-15,Oklahoma,vote,1,3rd Party,2.2
+2019-11-15,Oregon,vote,1,3rd Party,6.6
+2019-11-15,Pennsylvania,vote,1,3rd Party,3.3
+2019-11-15,Rhode island,vote,1,3rd Party,4.9
+2019-11-15,South Carolina,vote,1,3rd Party,3.0
+2019-11-15,South Dakota,vote,1,3rd Party,4.1
+2019-11-15,Tennessee,vote,1,3rd Party,2.6
+2019-11-15,Texas,vote,1,3rd Party,2.7
+2019-11-15,Utah,vote,1,3rd Party,8.0
+2019-11-15,Vermont,vote,1,3rd Party,7.1
+2019-11-15,Virginia,vote,1,3rd Party,3.4
+2019-11-15,Washington,vote,1,3rd Party,6.0
+2019-11-15,West Virginia,vote,1,3rd Party,3.1
+2019-11-15,Wisconsin,vote,1,3rd Party,4.1
+2019-11-15,Wyoming,vote,1,3rd Party,6.3
+2019-11-15,District of Columbia,vote,1,3rd Party,4.7
+2019-11-15,Maine-1,vote,1,3rd Party,4.9
+2019-11-15,Maine-2,vote,1,3rd Party,5.7
+2019-11-15,Nebraska-1,vote,1,3rd Party,4.8
+2019-11-15,Nebraska-2,vote,1,3rd Party,4.3
+2019-11-15,Nebraska-3,vote,1,3rd Party,4.4
+2019-11-15,US,vote,1,3rd Party,4.0
+2019-11-15,US,ev,1,Trump,238.6
+2019-11-15,US,ev,1,Democrats,299.4
+2019-11-15,US,ev,1,3rd Party,0.0
+2019-11-16,Alabama,win,1,Trump,99.3
+2019-11-16,Alaska,win,1,Trump,85.2
+2019-11-16,Arizona,win,1,Trump,54.2
+2019-11-16,Arkansas,win,1,Trump,99.4
+2019-11-16,California,win,1,Trump,0.0
+2019-11-16,Colorado,win,1,Trump,24.2
+2019-11-16,Connecticut,win,1,Trump,8.6
+2019-11-16,Delaware,win,1,Trump,7.7
+2019-11-16,Florida,win,1,Trump,48.6
+2019-11-16,Georgia,win,1,Trump,65.1
+2019-11-16,Hawaii,win,1,Trump,0.0
+2019-11-16,Idaho,win,1,Trump,99.8
+2019-11-16,Illinois,win,1,Trump,6.3
+2019-11-16,Indiana,win,1,Trump,89.6
+2019-11-16,Iowa,win,1,Trump,58.8
+2019-11-16,Kansas,win,1,Trump,92.1
+2019-11-16,Kentucky,win,1,Trump,99.3
+2019-11-16,Louisiana,win,1,Trump,95.4
+2019-11-16,Maine,win,1,Trump,27.0
+2019-11-16,Maryland,win,1,Trump,0.4
+2019-11-16,Massachusetts,win,1,Trump,0.2
+2019-11-16,Michigan,win,1,Trump,32.6
+2019-11-16,Minnesota,win,1,Trump,29.1
+2019-11-16,Mississippi,win,1,Trump,89.8
+2019-11-16,Missouri,win,1,Trump,89.1
+2019-11-16,Montana,win,1,Trump,88.1
+2019-11-16,Nebraska,win,1,Trump,98.1
+2019-11-16,Nevada,win,1,Trump,35.9
+2019-11-16,New Hampshire,win,1,Trump,32.1
+2019-11-16,New Jersey,win,1,Trump,9.1
+2019-11-16,New Mexico,win,1,Trump,15.6
+2019-11-16,New York,win,1,Trump,1.2
+2019-11-16,North Carolina,win,1,Trump,52.6
+2019-11-16,North Dakota,win,1,Trump,99.9
+2019-11-16,Ohio,win,1,Trump,67.5
+2019-11-16,Oklahoma,win,1,Trump,99.9
+2019-11-16,Oregon,win,1,Trump,12.1
+2019-11-16,Pennsylvania,win,1,Trump,38.8
+2019-11-16,Rhode island,win,1,Trump,4.0
+2019-11-16,South Carolina,win,1,Trump,85.6
+2019-11-16,South Dakota,win,1,Trump,99.5
+2019-11-16,Tennessee,win,1,Trump,98.2
+2019-11-16,Texas,win,1,Trump,75.9
+2019-11-16,Utah,win,1,Trump,99.6
+2019-11-16,Vermont,win,1,Trump,0.1
+2019-11-16,Virginia,win,1,Trump,24.5
+2019-11-16,Washington,win,1,Trump,7.6
+2019-11-16,West Virginia,win,1,Trump,99.9
+2019-11-16,Wisconsin,win,1,Trump,41.0
+2019-11-16,Wyoming,win,1,Trump,100.0
+2019-11-16,District of Columbia,win,1,Trump,0.0
+2019-11-16,Maine-1,win,1,Trump,7.8
+2019-11-16,Maine-2,win,1,Trump,59.0
+2019-11-16,Nebraska-1,win,1,Trump,95.0
+2019-11-16,Nebraska-2,win,1,Trump,57.4
+2019-11-16,Nebraska-3,win,1,Trump,100.0
+2019-11-16,US,win,1,Trump,42.9
+2019-11-16,Alabama,win,1,Democrats,0.7
+2019-11-16,Alaska,win,1,Democrats,14.8
+2019-11-16,Arizona,win,1,Democrats,45.8
+2019-11-16,Arkansas,win,1,Democrats,0.6
+2019-11-16,California,win,1,Democrats,100.0
+2019-11-16,Colorado,win,1,Democrats,75.8
+2019-11-16,Connecticut,win,1,Democrats,91.4
+2019-11-16,Delaware,win,1,Democrats,92.3
+2019-11-16,Florida,win,1,Democrats,51.4
+2019-11-16,Georgia,win,1,Democrats,34.9
+2019-11-16,Hawaii,win,1,Democrats,100.0
+2019-11-16,Idaho,win,1,Democrats,0.2
+2019-11-16,Illinois,win,1,Democrats,93.7
+2019-11-16,Indiana,win,1,Democrats,10.4
+2019-11-16,Iowa,win,1,Democrats,41.2
+2019-11-16,Kansas,win,1,Democrats,7.9
+2019-11-16,Kentucky,win,1,Democrats,0.7
+2019-11-16,Louisiana,win,1,Democrats,4.6
+2019-11-16,Maine,win,1,Democrats,73.0
+2019-11-16,Maryland,win,1,Democrats,99.6
+2019-11-16,Massachusetts,win,1,Democrats,99.8
+2019-11-16,Michigan,win,1,Democrats,67.4
+2019-11-16,Minnesota,win,1,Democrats,70.9
+2019-11-16,Mississippi,win,1,Democrats,10.2
+2019-11-16,Missouri,win,1,Democrats,10.9
+2019-11-16,Montana,win,1,Democrats,11.9
+2019-11-16,Nebraska,win,1,Democrats,1.9
+2019-11-16,Nevada,win,1,Democrats,64.1
+2019-11-16,New Hampshire,win,1,Democrats,67.9
+2019-11-16,New Jersey,win,1,Democrats,90.9
+2019-11-16,New Mexico,win,1,Democrats,84.4
+2019-11-16,New York,win,1,Democrats,98.8
+2019-11-16,North Carolina,win,1,Democrats,47.4
+2019-11-16,North Dakota,win,1,Democrats,0.1
+2019-11-16,Ohio,win,1,Democrats,32.5
+2019-11-16,Oklahoma,win,1,Democrats,0.1
+2019-11-16,Oregon,win,1,Democrats,87.9
+2019-11-16,Pennsylvania,win,1,Democrats,61.2
+2019-11-16,Rhode island,win,1,Democrats,96.0
+2019-11-16,South Carolina,win,1,Democrats,14.4
+2019-11-16,South Dakota,win,1,Democrats,0.5
+2019-11-16,Tennessee,win,1,Democrats,1.8
+2019-11-16,Texas,win,1,Democrats,24.1
+2019-11-16,Utah,win,1,Democrats,0.4
+2019-11-16,Vermont,win,1,Democrats,99.9
+2019-11-16,Virginia,win,1,Democrats,75.5
+2019-11-16,Washington,win,1,Democrats,92.4
+2019-11-16,West Virginia,win,1,Democrats,0.1
+2019-11-16,Wisconsin,win,1,Democrats,59.0
+2019-11-16,Wyoming,win,1,Democrats,0.0
+2019-11-16,District of Columbia,win,1,Democrats,100.0
+2019-11-16,Maine-1,win,1,Democrats,92.2
+2019-11-16,Maine-2,win,1,Democrats,41.0
+2019-11-16,Nebraska-1,win,1,Democrats,5.0
+2019-11-16,Nebraska-2,win,1,Democrats,42.6
+2019-11-16,Nebraska-3,win,1,Democrats,0.0
+2019-11-16,US,win,1,Democrats,57.1
+2019-11-16,Alabama,win,1,3rd Party,0.0
+2019-11-16,Alaska,win,1,3rd Party,0.0
+2019-11-16,Arizona,win,1,3rd Party,0.0
+2019-11-16,Arkansas,win,1,3rd Party,0.0
+2019-11-16,California,win,1,3rd Party,0.0
+2019-11-16,Colorado,win,1,3rd Party,0.0
+2019-11-16,Connecticut,win,1,3rd Party,0.0
+2019-11-16,Delaware,win,1,3rd Party,0.0
+2019-11-16,Florida,win,1,3rd Party,0.0
+2019-11-16,Georgia,win,1,3rd Party,0.0
+2019-11-16,Hawaii,win,1,3rd Party,0.0
+2019-11-16,Idaho,win,1,3rd Party,0.0
+2019-11-16,Illinois,win,1,3rd Party,0.0
+2019-11-16,Indiana,win,1,3rd Party,0.0
+2019-11-16,Iowa,win,1,3rd Party,0.0
+2019-11-16,Kansas,win,1,3rd Party,0.0
+2019-11-16,Kentucky,win,1,3rd Party,0.0
+2019-11-16,Louisiana,win,1,3rd Party,0.0
+2019-11-16,Maine,win,1,3rd Party,0.0
+2019-11-16,Maryland,win,1,3rd Party,0.0
+2019-11-16,Massachusetts,win,1,3rd Party,0.0
+2019-11-16,Michigan,win,1,3rd Party,0.0
+2019-11-16,Minnesota,win,1,3rd Party,0.0
+2019-11-16,Mississippi,win,1,3rd Party,0.0
+2019-11-16,Missouri,win,1,3rd Party,0.0
+2019-11-16,Montana,win,1,3rd Party,0.0
+2019-11-16,Nebraska,win,1,3rd Party,0.0
+2019-11-16,Nevada,win,1,3rd Party,0.0
+2019-11-16,New Hampshire,win,1,3rd Party,0.0
+2019-11-16,New Jersey,win,1,3rd Party,0.0
+2019-11-16,New Mexico,win,1,3rd Party,0.0
+2019-11-16,New York,win,1,3rd Party,0.0
+2019-11-16,North Carolina,win,1,3rd Party,0.0
+2019-11-16,North Dakota,win,1,3rd Party,0.0
+2019-11-16,Ohio,win,1,3rd Party,0.0
+2019-11-16,Oklahoma,win,1,3rd Party,0.0
+2019-11-16,Oregon,win,1,3rd Party,0.0
+2019-11-16,Pennsylvania,win,1,3rd Party,0.0
+2019-11-16,Rhode island,win,1,3rd Party,0.0
+2019-11-16,South Carolina,win,1,3rd Party,0.0
+2019-11-16,South Dakota,win,1,3rd Party,0.0
+2019-11-16,Tennessee,win,1,3rd Party,0.0
+2019-11-16,Texas,win,1,3rd Party,0.0
+2019-11-16,Utah,win,1,3rd Party,0.0
+2019-11-16,Vermont,win,1,3rd Party,0.0
+2019-11-16,Virginia,win,1,3rd Party,0.0
+2019-11-16,Washington,win,1,3rd Party,0.0
+2019-11-16,West Virginia,win,1,3rd Party,0.0
+2019-11-16,Wisconsin,win,1,3rd Party,0.0
+2019-11-16,Wyoming,win,1,3rd Party,0.0
+2019-11-16,District of Columbia,win,1,3rd Party,0.0
+2019-11-16,Maine-1,win,1,3rd Party,0.0
+2019-11-16,Maine-2,win,1,3rd Party,0.0
+2019-11-16,Nebraska-1,win,1,3rd Party,0.0
+2019-11-16,Nebraska-2,win,1,3rd Party,0.0
+2019-11-16,Nebraska-3,win,1,3rd Party,0.0
+2019-11-16,US,win,1,3rd Party,0.0
+2019-11-16,Alabama,vote,1,Trump,62.1
+2019-11-16,Alaska,vote,1,Trump,51.3
+2019-11-16,Arizona,vote,1,Trump,48.3
+2019-11-16,Arkansas,vote,1,Trump,62.3
+2019-11-16,California,vote,1,Trump,32.7
+2019-11-16,Colorado,vote,1,Trump,42.2
+2019-11-16,Connecticut,vote,1,Trump,38.4
+2019-11-16,Delaware,vote,1,Trump,39.0
+2019-11-16,Florida,vote,1,Trump,48.5
+2019-11-16,Georgia,vote,1,Trump,51.5
+2019-11-16,Hawaii,vote,1,Trump,27.1
+2019-11-16,Idaho,vote,1,Trump,63.3
+2019-11-16,Illinois,vote,1,Trump,38.5
+2019-11-16,Indiana,vote,1,Trump,56.7
+2019-11-16,Iowa,vote,1,Trump,49.0
+2019-11-16,Kansas,vote,1,Trump,56.7
+2019-11-16,Kentucky,vote,1,Trump,62.4
+2019-11-16,Louisiana,vote,1,Trump,59.1
+2019-11-16,Maine,vote,1,Trump,42.6
+2019-11-16,Maryland,vote,1,Trump,34.3
+2019-11-16,Massachusetts,vote,1,Trump,31.9
+2019-11-16,Michigan,vote,1,Trump,45.8
+2019-11-16,Minnesota,vote,1,Trump,43.5
+2019-11-16,Mississippi,vote,1,Trump,57.6
+2019-11-16,Missouri,vote,1,Trump,56.8
+2019-11-16,Montana,vote,1,Trump,54.6
+2019-11-16,Nebraska,vote,1,Trump,60.4
+2019-11-16,Nevada,vote,1,Trump,45.1
+2019-11-16,New Hampshire,vote,1,Trump,44.8
+2019-11-16,New Jersey,vote,1,Trump,39.0
+2019-11-16,New Mexico,vote,1,Trump,40.4
+2019-11-16,New York,vote,1,Trump,34.7
+2019-11-16,North Carolina,vote,1,Trump,49.3
+2019-11-16,North Dakota,vote,1,Trump,62.9
+2019-11-16,Ohio,vote,1,Trump,50.9
+2019-11-16,Oklahoma,vote,1,Trump,66.2
+2019-11-16,Oregon,vote,1,Trump,38.5
+2019-11-16,Pennsylvania,vote,1,Trump,46.7
+2019-11-16,Rhode island,vote,1,Trump,36.3
+2019-11-16,South Carolina,vote,1,Trump,55.4
+2019-11-16,South Dakota,vote,1,Trump,61.8
+2019-11-16,Tennessee,vote,1,Trump,61.2
+2019-11-16,Texas,vote,1,Trump,52.8
+2019-11-16,Utah,vote,1,Trump,60.3
+2019-11-16,Vermont,vote,1,Trump,29.2
+2019-11-16,Virginia,vote,1,Trump,43.6
+2019-11-16,Washington,vote,1,Trump,37.4
+2019-11-16,West Virginia,vote,1,Trump,65.5
+2019-11-16,Wisconsin,vote,1,Trump,46.6
+2019-11-16,Wyoming,vote,1,Trump,69.0
+2019-11-16,District of Columbia,vote,1,Trump,10.5
+2019-11-16,Maine-1,vote,1,Trump,37.2
+2019-11-16,Maine-2,vote,1,Trump,49.0
+2019-11-16,Nebraska-1,vote,1,Trump,59.0
+2019-11-16,Nebraska-2,vote,1,Trump,49.3
+2019-11-16,Nebraska-3,vote,1,Trump,75.2
+2019-11-16,US,vote,1,Trump,45.8
+2019-11-16,Alabama,vote,1,Democrats,34.9
+2019-11-16,Alaska,vote,1,Democrats,37.4
+2019-11-16,Arizona,vote,1,Democrats,47.1
+2019-11-16,Arkansas,vote,1,Democrats,33.3
+2019-11-16,California,vote,1,Democrats,62.0
+2019-11-16,Colorado,vote,1,Democrats,51.9
+2019-11-16,Connecticut,vote,1,Democrats,57.2
+2019-11-16,Delaware,vote,1,Democrats,57.7
+2019-11-16,Florida,vote,1,Democrats,48.9
+2019-11-16,Georgia,vote,1,Democrats,46.3
+2019-11-16,Hawaii,vote,1,Democrats,67.8
+2019-11-16,Idaho,vote,1,Democrats,30.3
+2019-11-16,Illinois,vote,1,Democrats,58.1
+2019-11-16,Indiana,vote,1,Democrats,39.9
+2019-11-16,Iowa,vote,1,Democrats,46.5
+2019-11-16,Kansas,vote,1,Democrats,38.0
+2019-11-16,Kentucky,vote,1,Democrats,34.4
+2019-11-16,Louisiana,vote,1,Democrats,37.1
+2019-11-16,Maine,vote,1,Democrats,51.1
+2019-11-16,Maryland,vote,1,Democrats,62.2
+2019-11-16,Massachusetts,vote,1,Democrats,61.9
+2019-11-16,Michigan,vote,1,Democrats,50.7
+2019-11-16,Minnesota,vote,1,Democrats,50.9
+2019-11-16,Mississippi,vote,1,Democrats,39.8
+2019-11-16,Missouri,vote,1,Democrats,40.2
+2019-11-16,Montana,vote,1,Democrats,38.4
+2019-11-16,Nebraska,vote,1,Democrats,34.9
+2019-11-16,Nevada,vote,1,Democrats,49.6
+2019-11-16,New Hampshire,vote,1,Democrats,50.8
+2019-11-16,New Jersey,vote,1,Democrats,57.5
+2019-11-16,New Mexico,vote,1,Democrats,54.4
+2019-11-16,New York,vote,1,Democrats,60.2
+2019-11-16,North Carolina,vote,1,Democrats,48.6
+2019-11-16,North Dakota,vote,1,Democrats,31.1
+2019-11-16,Ohio,vote,1,Democrats,45.1
+2019-11-16,Oklahoma,vote,1,Democrats,31.5
+2019-11-16,Oregon,vote,1,Democrats,54.8
+2019-11-16,Pennsylvania,vote,1,Democrats,49.9
+2019-11-16,Rhode island,vote,1,Democrats,58.7
+2019-11-16,South Carolina,vote,1,Democrats,41.4
+2019-11-16,South Dakota,vote,1,Democrats,34.0
+2019-11-16,Tennessee,vote,1,Democrats,36.1
+2019-11-16,Texas,vote,1,Democrats,44.4
+2019-11-16,Utah,vote,1,Democrats,31.6
+2019-11-16,Vermont,vote,1,Democrats,63.6
+2019-11-16,Virginia,vote,1,Democrats,52.8
+2019-11-16,Washington,vote,1,Democrats,56.5
+2019-11-16,West Virginia,vote,1,Democrats,31.3
+2019-11-16,Wisconsin,vote,1,Democrats,49.1
+2019-11-16,Wyoming,vote,1,Democrats,24.6
+2019-11-16,District of Columbia,vote,1,Democrats,84.7
+2019-11-16,Maine-1,vote,1,Democrats,57.8
+2019-11-16,Maine-2,vote,1,Democrats,45.3
+2019-11-16,Nebraska-1,vote,1,Democrats,36.1
+2019-11-16,Nebraska-2,vote,1,Democrats,46.2
+2019-11-16,Nebraska-3,vote,1,Democrats,20.4
+2019-11-16,US,vote,1,Democrats,50.1
+2019-11-16,Alabama,vote,1,3rd Party,2.9
+2019-11-16,Alaska,vote,1,3rd Party,11.2
+2019-11-16,Arizona,vote,1,3rd Party,4.5
+2019-11-16,Arkansas,vote,1,3rd Party,4.3
+2019-11-16,California,vote,1,3rd Party,5.2
+2019-11-16,Colorado,vote,1,3rd Party,5.8
+2019-11-16,Connecticut,vote,1,3rd Party,4.3
+2019-11-16,Delaware,vote,1,3rd Party,3.2
+2019-11-16,Florida,vote,1,3rd Party,2.5
+2019-11-16,Georgia,vote,1,3rd Party,2.1
+2019-11-16,Hawaii,vote,1,3rd Party,5.0
+2019-11-16,Idaho,vote,1,3rd Party,6.4
+2019-11-16,Illinois,vote,1,3rd Party,3.3
+2019-11-16,Indiana,vote,1,3rd Party,3.3
+2019-11-16,Iowa,vote,1,3rd Party,4.4
+2019-11-16,Kansas,vote,1,3rd Party,5.2
+2019-11-16,Kentucky,vote,1,3rd Party,3.1
+2019-11-16,Louisiana,vote,1,3rd Party,3.7
+2019-11-16,Maine,vote,1,3rd Party,6.2
+2019-11-16,Maryland,vote,1,3rd Party,3.5
+2019-11-16,Massachusetts,vote,1,3rd Party,6.1
+2019-11-16,Michigan,vote,1,3rd Party,3.4
+2019-11-16,Minnesota,vote,1,3rd Party,5.5
+2019-11-16,Mississippi,vote,1,3rd Party,2.6
+2019-11-16,Missouri,vote,1,3rd Party,2.9
+2019-11-16,Montana,vote,1,3rd Party,6.9
+2019-11-16,Nebraska,vote,1,3rd Party,4.6
+2019-11-16,Nevada,vote,1,3rd Party,5.3
+2019-11-16,New Hampshire,vote,1,3rd Party,4.2
+2019-11-16,New Jersey,vote,1,3rd Party,3.4
+2019-11-16,New Mexico,vote,1,3rd Party,5.1
+2019-11-16,New York,vote,1,3rd Party,5.0
+2019-11-16,North Carolina,vote,1,3rd Party,2.0
+2019-11-16,North Dakota,vote,1,3rd Party,5.9
+2019-11-16,Ohio,vote,1,3rd Party,4.0
+2019-11-16,Oklahoma,vote,1,3rd Party,2.2
+2019-11-16,Oregon,vote,1,3rd Party,6.6
+2019-11-16,Pennsylvania,vote,1,3rd Party,3.3
+2019-11-16,Rhode island,vote,1,3rd Party,4.9
+2019-11-16,South Carolina,vote,1,3rd Party,3.0
+2019-11-16,South Dakota,vote,1,3rd Party,4.1
+2019-11-16,Tennessee,vote,1,3rd Party,2.6
+2019-11-16,Texas,vote,1,3rd Party,2.7
+2019-11-16,Utah,vote,1,3rd Party,8.0
+2019-11-16,Vermont,vote,1,3rd Party,7.1
+2019-11-16,Virginia,vote,1,3rd Party,3.4
+2019-11-16,Washington,vote,1,3rd Party,6.0
+2019-11-16,West Virginia,vote,1,3rd Party,3.1
+2019-11-16,Wisconsin,vote,1,3rd Party,4.1
+2019-11-16,Wyoming,vote,1,3rd Party,6.3
+2019-11-16,District of Columbia,vote,1,3rd Party,4.7
+2019-11-16,Maine-1,vote,1,3rd Party,4.9
+2019-11-16,Maine-2,vote,1,3rd Party,5.7
+2019-11-16,Nebraska-1,vote,1,3rd Party,4.8
+2019-11-16,Nebraska-2,vote,1,3rd Party,4.3
+2019-11-16,Nebraska-3,vote,1,3rd Party,4.4
+2019-11-16,US,vote,1,3rd Party,4.0
+2019-11-16,US,ev,1,Trump,238.6
+2019-11-16,US,ev,1,Democrats,299.4
+2019-11-16,US,ev,1,3rd Party,0.0
+2019-11-17,Alabama,win,1,Trump,99.3
+2019-11-17,Alaska,win,1,Trump,85.2
+2019-11-17,Arizona,win,1,Trump,54.2
+2019-11-17,Arkansas,win,1,Trump,99.4
+2019-11-17,California,win,1,Trump,0.0
+2019-11-17,Colorado,win,1,Trump,24.2
+2019-11-17,Connecticut,win,1,Trump,8.6
+2019-11-17,Delaware,win,1,Trump,7.7
+2019-11-17,Florida,win,1,Trump,48.6
+2019-11-17,Georgia,win,1,Trump,65.1
+2019-11-17,Hawaii,win,1,Trump,0.0
+2019-11-17,Idaho,win,1,Trump,99.8
+2019-11-17,Illinois,win,1,Trump,6.3
+2019-11-17,Indiana,win,1,Trump,89.6
+2019-11-17,Iowa,win,1,Trump,58.8
+2019-11-17,Kansas,win,1,Trump,92.1
+2019-11-17,Kentucky,win,1,Trump,99.3
+2019-11-17,Louisiana,win,1,Trump,95.4
+2019-11-17,Maine,win,1,Trump,27.0
+2019-11-17,Maryland,win,1,Trump,0.4
+2019-11-17,Massachusetts,win,1,Trump,0.2
+2019-11-17,Michigan,win,1,Trump,32.6
+2019-11-17,Minnesota,win,1,Trump,29.1
+2019-11-17,Mississippi,win,1,Trump,89.8
+2019-11-17,Missouri,win,1,Trump,89.1
+2019-11-17,Montana,win,1,Trump,88.1
+2019-11-17,Nebraska,win,1,Trump,98.1
+2019-11-17,Nevada,win,1,Trump,35.9
+2019-11-17,New Hampshire,win,1,Trump,32.1
+2019-11-17,New Jersey,win,1,Trump,9.1
+2019-11-17,New Mexico,win,1,Trump,15.6
+2019-11-17,New York,win,1,Trump,1.2
+2019-11-17,North Carolina,win,1,Trump,52.6
+2019-11-17,North Dakota,win,1,Trump,99.9
+2019-11-17,Ohio,win,1,Trump,67.5
+2019-11-17,Oklahoma,win,1,Trump,99.9
+2019-11-17,Oregon,win,1,Trump,12.1
+2019-11-17,Pennsylvania,win,1,Trump,38.8
+2019-11-17,Rhode island,win,1,Trump,4.0
+2019-11-17,South Carolina,win,1,Trump,85.6
+2019-11-17,South Dakota,win,1,Trump,99.5
+2019-11-17,Tennessee,win,1,Trump,98.2
+2019-11-17,Texas,win,1,Trump,75.9
+2019-11-17,Utah,win,1,Trump,99.6
+2019-11-17,Vermont,win,1,Trump,0.1
+2019-11-17,Virginia,win,1,Trump,24.5
+2019-11-17,Washington,win,1,Trump,7.6
+2019-11-17,West Virginia,win,1,Trump,99.9
+2019-11-17,Wisconsin,win,1,Trump,41.0
+2019-11-17,Wyoming,win,1,Trump,100.0
+2019-11-17,District of Columbia,win,1,Trump,0.0
+2019-11-17,Maine-1,win,1,Trump,7.8
+2019-11-17,Maine-2,win,1,Trump,59.0
+2019-11-17,Nebraska-1,win,1,Trump,95.0
+2019-11-17,Nebraska-2,win,1,Trump,57.4
+2019-11-17,Nebraska-3,win,1,Trump,100.0
+2019-11-17,US,win,1,Trump,43.2
+2019-11-17,Alabama,win,1,Democrats,0.7
+2019-11-17,Alaska,win,1,Democrats,14.8
+2019-11-17,Arizona,win,1,Democrats,45.8
+2019-11-17,Arkansas,win,1,Democrats,0.6
+2019-11-17,California,win,1,Democrats,100.0
+2019-11-17,Colorado,win,1,Democrats,75.8
+2019-11-17,Connecticut,win,1,Democrats,91.4
+2019-11-17,Delaware,win,1,Democrats,92.3
+2019-11-17,Florida,win,1,Democrats,51.4
+2019-11-17,Georgia,win,1,Democrats,34.9
+2019-11-17,Hawaii,win,1,Democrats,100.0
+2019-11-17,Idaho,win,1,Democrats,0.2
+2019-11-17,Illinois,win,1,Democrats,93.7
+2019-11-17,Indiana,win,1,Democrats,10.4
+2019-11-17,Iowa,win,1,Democrats,41.2
+2019-11-17,Kansas,win,1,Democrats,7.9
+2019-11-17,Kentucky,win,1,Democrats,0.7
+2019-11-17,Louisiana,win,1,Democrats,4.6
+2019-11-17,Maine,win,1,Democrats,73.0
+2019-11-17,Maryland,win,1,Democrats,99.6
+2019-11-17,Massachusetts,win,1,Democrats,99.8
+2019-11-17,Michigan,win,1,Democrats,67.4
+2019-11-17,Minnesota,win,1,Democrats,70.9
+2019-11-17,Mississippi,win,1,Democrats,10.2
+2019-11-17,Missouri,win,1,Democrats,10.9
+2019-11-17,Montana,win,1,Democrats,11.9
+2019-11-17,Nebraska,win,1,Democrats,1.9
+2019-11-17,Nevada,win,1,Democrats,64.1
+2019-11-17,New Hampshire,win,1,Democrats,67.9
+2019-11-17,New Jersey,win,1,Democrats,90.9
+2019-11-17,New Mexico,win,1,Democrats,84.4
+2019-11-17,New York,win,1,Democrats,98.8
+2019-11-17,North Carolina,win,1,Democrats,47.4
+2019-11-17,North Dakota,win,1,Democrats,0.1
+2019-11-17,Ohio,win,1,Democrats,32.5
+2019-11-17,Oklahoma,win,1,Democrats,0.1
+2019-11-17,Oregon,win,1,Democrats,87.9
+2019-11-17,Pennsylvania,win,1,Democrats,61.2
+2019-11-17,Rhode island,win,1,Democrats,96.0
+2019-11-17,South Carolina,win,1,Democrats,14.4
+2019-11-17,South Dakota,win,1,Democrats,0.5
+2019-11-17,Tennessee,win,1,Democrats,1.8
+2019-11-17,Texas,win,1,Democrats,24.1
+2019-11-17,Utah,win,1,Democrats,0.4
+2019-11-17,Vermont,win,1,Democrats,99.9
+2019-11-17,Virginia,win,1,Democrats,75.5
+2019-11-17,Washington,win,1,Democrats,92.4
+2019-11-17,West Virginia,win,1,Democrats,0.1
+2019-11-17,Wisconsin,win,1,Democrats,59.0
+2019-11-17,Wyoming,win,1,Democrats,0.0
+2019-11-17,District of Columbia,win,1,Democrats,100.0
+2019-11-17,Maine-1,win,1,Democrats,92.2
+2019-11-17,Maine-2,win,1,Democrats,41.0
+2019-11-17,Nebraska-1,win,1,Democrats,5.0
+2019-11-17,Nebraska-2,win,1,Democrats,42.6
+2019-11-17,Nebraska-3,win,1,Democrats,0.0
+2019-11-17,US,win,1,Democrats,56.8
+2019-11-17,Alabama,win,1,3rd Party,0.0
+2019-11-17,Alaska,win,1,3rd Party,0.0
+2019-11-17,Arizona,win,1,3rd Party,0.0
+2019-11-17,Arkansas,win,1,3rd Party,0.0
+2019-11-17,California,win,1,3rd Party,0.0
+2019-11-17,Colorado,win,1,3rd Party,0.0
+2019-11-17,Connecticut,win,1,3rd Party,0.0
+2019-11-17,Delaware,win,1,3rd Party,0.0
+2019-11-17,Florida,win,1,3rd Party,0.0
+2019-11-17,Georgia,win,1,3rd Party,0.0
+2019-11-17,Hawaii,win,1,3rd Party,0.0
+2019-11-17,Idaho,win,1,3rd Party,0.0
+2019-11-17,Illinois,win,1,3rd Party,0.0
+2019-11-17,Indiana,win,1,3rd Party,0.0
+2019-11-17,Iowa,win,1,3rd Party,0.0
+2019-11-17,Kansas,win,1,3rd Party,0.0
+2019-11-17,Kentucky,win,1,3rd Party,0.0
+2019-11-17,Louisiana,win,1,3rd Party,0.0
+2019-11-17,Maine,win,1,3rd Party,0.0
+2019-11-17,Maryland,win,1,3rd Party,0.0
+2019-11-17,Massachusetts,win,1,3rd Party,0.0
+2019-11-17,Michigan,win,1,3rd Party,0.0
+2019-11-17,Minnesota,win,1,3rd Party,0.0
+2019-11-17,Mississippi,win,1,3rd Party,0.0
+2019-11-17,Missouri,win,1,3rd Party,0.0
+2019-11-17,Montana,win,1,3rd Party,0.0
+2019-11-17,Nebraska,win,1,3rd Party,0.0
+2019-11-17,Nevada,win,1,3rd Party,0.0
+2019-11-17,New Hampshire,win,1,3rd Party,0.0
+2019-11-17,New Jersey,win,1,3rd Party,0.0
+2019-11-17,New Mexico,win,1,3rd Party,0.0
+2019-11-17,New York,win,1,3rd Party,0.0
+2019-11-17,North Carolina,win,1,3rd Party,0.0
+2019-11-17,North Dakota,win,1,3rd Party,0.0
+2019-11-17,Ohio,win,1,3rd Party,0.0
+2019-11-17,Oklahoma,win,1,3rd Party,0.0
+2019-11-17,Oregon,win,1,3rd Party,0.0
+2019-11-17,Pennsylvania,win,1,3rd Party,0.0
+2019-11-17,Rhode island,win,1,3rd Party,0.0
+2019-11-17,South Carolina,win,1,3rd Party,0.0
+2019-11-17,South Dakota,win,1,3rd Party,0.0
+2019-11-17,Tennessee,win,1,3rd Party,0.0
+2019-11-17,Texas,win,1,3rd Party,0.0
+2019-11-17,Utah,win,1,3rd Party,0.0
+2019-11-17,Vermont,win,1,3rd Party,0.0
+2019-11-17,Virginia,win,1,3rd Party,0.0
+2019-11-17,Washington,win,1,3rd Party,0.0
+2019-11-17,West Virginia,win,1,3rd Party,0.0
+2019-11-17,Wisconsin,win,1,3rd Party,0.0
+2019-11-17,Wyoming,win,1,3rd Party,0.0
+2019-11-17,District of Columbia,win,1,3rd Party,0.0
+2019-11-17,Maine-1,win,1,3rd Party,0.0
+2019-11-17,Maine-2,win,1,3rd Party,0.0
+2019-11-17,Nebraska-1,win,1,3rd Party,0.0
+2019-11-17,Nebraska-2,win,1,3rd Party,0.0
+2019-11-17,Nebraska-3,win,1,3rd Party,0.0
+2019-11-17,US,win,1,3rd Party,0.0
+2019-11-17,Alabama,vote,1,Trump,62.1
+2019-11-17,Alaska,vote,1,Trump,51.3
+2019-11-17,Arizona,vote,1,Trump,48.3
+2019-11-17,Arkansas,vote,1,Trump,62.3
+2019-11-17,California,vote,1,Trump,32.7
+2019-11-17,Colorado,vote,1,Trump,42.2
+2019-11-17,Connecticut,vote,1,Trump,38.4
+2019-11-17,Delaware,vote,1,Trump,39.0
+2019-11-17,Florida,vote,1,Trump,48.5
+2019-11-17,Georgia,vote,1,Trump,51.5
+2019-11-17,Hawaii,vote,1,Trump,27.1
+2019-11-17,Idaho,vote,1,Trump,63.3
+2019-11-17,Illinois,vote,1,Trump,38.5
+2019-11-17,Indiana,vote,1,Trump,56.7
+2019-11-17,Iowa,vote,1,Trump,49.0
+2019-11-17,Kansas,vote,1,Trump,56.7
+2019-11-17,Kentucky,vote,1,Trump,62.4
+2019-11-17,Louisiana,vote,1,Trump,59.1
+2019-11-17,Maine,vote,1,Trump,42.6
+2019-11-17,Maryland,vote,1,Trump,34.3
+2019-11-17,Massachusetts,vote,1,Trump,31.9
+2019-11-17,Michigan,vote,1,Trump,45.8
+2019-11-17,Minnesota,vote,1,Trump,43.5
+2019-11-17,Mississippi,vote,1,Trump,57.6
+2019-11-17,Missouri,vote,1,Trump,56.8
+2019-11-17,Montana,vote,1,Trump,54.6
+2019-11-17,Nebraska,vote,1,Trump,60.4
+2019-11-17,Nevada,vote,1,Trump,45.1
+2019-11-17,New Hampshire,vote,1,Trump,44.8
+2019-11-17,New Jersey,vote,1,Trump,39.0
+2019-11-17,New Mexico,vote,1,Trump,40.4
+2019-11-17,New York,vote,1,Trump,34.7
+2019-11-17,North Carolina,vote,1,Trump,49.3
+2019-11-17,North Dakota,vote,1,Trump,62.9
+2019-11-17,Ohio,vote,1,Trump,50.9
+2019-11-17,Oklahoma,vote,1,Trump,66.2
+2019-11-17,Oregon,vote,1,Trump,38.5
+2019-11-17,Pennsylvania,vote,1,Trump,46.7
+2019-11-17,Rhode island,vote,1,Trump,36.3
+2019-11-17,South Carolina,vote,1,Trump,55.4
+2019-11-17,South Dakota,vote,1,Trump,61.8
+2019-11-17,Tennessee,vote,1,Trump,61.2
+2019-11-17,Texas,vote,1,Trump,52.8
+2019-11-17,Utah,vote,1,Trump,60.3
+2019-11-17,Vermont,vote,1,Trump,29.2
+2019-11-17,Virginia,vote,1,Trump,43.6
+2019-11-17,Washington,vote,1,Trump,37.4
+2019-11-17,West Virginia,vote,1,Trump,65.5
+2019-11-17,Wisconsin,vote,1,Trump,46.6
+2019-11-17,Wyoming,vote,1,Trump,69.0
+2019-11-17,District of Columbia,vote,1,Trump,10.5
+2019-11-17,Maine-1,vote,1,Trump,37.2
+2019-11-17,Maine-2,vote,1,Trump,49.0
+2019-11-17,Nebraska-1,vote,1,Trump,59.0
+2019-11-17,Nebraska-2,vote,1,Trump,49.3
+2019-11-17,Nebraska-3,vote,1,Trump,75.2
+2019-11-17,US,vote,1,Trump,45.8
+2019-11-17,Alabama,vote,1,Democrats,34.9
+2019-11-17,Alaska,vote,1,Democrats,37.4
+2019-11-17,Arizona,vote,1,Democrats,47.1
+2019-11-17,Arkansas,vote,1,Democrats,33.3
+2019-11-17,California,vote,1,Democrats,62.0
+2019-11-17,Colorado,vote,1,Democrats,51.9
+2019-11-17,Connecticut,vote,1,Democrats,57.2
+2019-11-17,Delaware,vote,1,Democrats,57.7
+2019-11-17,Florida,vote,1,Democrats,48.9
+2019-11-17,Georgia,vote,1,Democrats,46.3
+2019-11-17,Hawaii,vote,1,Democrats,67.8
+2019-11-17,Idaho,vote,1,Democrats,30.3
+2019-11-17,Illinois,vote,1,Democrats,58.1
+2019-11-17,Indiana,vote,1,Democrats,39.9
+2019-11-17,Iowa,vote,1,Democrats,46.5
+2019-11-17,Kansas,vote,1,Democrats,38.0
+2019-11-17,Kentucky,vote,1,Democrats,34.4
+2019-11-17,Louisiana,vote,1,Democrats,37.1
+2019-11-17,Maine,vote,1,Democrats,51.1
+2019-11-17,Maryland,vote,1,Democrats,62.2
+2019-11-17,Massachusetts,vote,1,Democrats,61.9
+2019-11-17,Michigan,vote,1,Democrats,50.7
+2019-11-17,Minnesota,vote,1,Democrats,50.9
+2019-11-17,Mississippi,vote,1,Democrats,39.8
+2019-11-17,Missouri,vote,1,Democrats,40.2
+2019-11-17,Montana,vote,1,Democrats,38.4
+2019-11-17,Nebraska,vote,1,Democrats,34.9
+2019-11-17,Nevada,vote,1,Democrats,49.6
+2019-11-17,New Hampshire,vote,1,Democrats,50.8
+2019-11-17,New Jersey,vote,1,Democrats,57.5
+2019-11-17,New Mexico,vote,1,Democrats,54.4
+2019-11-17,New York,vote,1,Democrats,60.2
+2019-11-17,North Carolina,vote,1,Democrats,48.6
+2019-11-17,North Dakota,vote,1,Democrats,31.1
+2019-11-17,Ohio,vote,1,Democrats,45.1
+2019-11-17,Oklahoma,vote,1,Democrats,31.5
+2019-11-17,Oregon,vote,1,Democrats,54.8
+2019-11-17,Pennsylvania,vote,1,Democrats,49.9
+2019-11-17,Rhode island,vote,1,Democrats,58.7
+2019-11-17,South Carolina,vote,1,Democrats,41.4
+2019-11-17,South Dakota,vote,1,Democrats,34.0
+2019-11-17,Tennessee,vote,1,Democrats,36.1
+2019-11-17,Texas,vote,1,Democrats,44.4
+2019-11-17,Utah,vote,1,Democrats,31.6
+2019-11-17,Vermont,vote,1,Democrats,63.6
+2019-11-17,Virginia,vote,1,Democrats,52.8
+2019-11-17,Washington,vote,1,Democrats,56.5
+2019-11-17,West Virginia,vote,1,Democrats,31.3
+2019-11-17,Wisconsin,vote,1,Democrats,49.1
+2019-11-17,Wyoming,vote,1,Democrats,24.6
+2019-11-17,District of Columbia,vote,1,Democrats,84.7
+2019-11-17,Maine-1,vote,1,Democrats,57.8
+2019-11-17,Maine-2,vote,1,Democrats,45.3
+2019-11-17,Nebraska-1,vote,1,Democrats,36.1
+2019-11-17,Nebraska-2,vote,1,Democrats,46.2
+2019-11-17,Nebraska-3,vote,1,Democrats,20.4
+2019-11-17,US,vote,1,Democrats,50.1
+2019-11-17,Alabama,vote,1,3rd Party,2.9
+2019-11-17,Alaska,vote,1,3rd Party,11.2
+2019-11-17,Arizona,vote,1,3rd Party,4.5
+2019-11-17,Arkansas,vote,1,3rd Party,4.3
+2019-11-17,California,vote,1,3rd Party,5.2
+2019-11-17,Colorado,vote,1,3rd Party,5.8
+2019-11-17,Connecticut,vote,1,3rd Party,4.3
+2019-11-17,Delaware,vote,1,3rd Party,3.2
+2019-11-17,Florida,vote,1,3rd Party,2.5
+2019-11-17,Georgia,vote,1,3rd Party,2.1
+2019-11-17,Hawaii,vote,1,3rd Party,5.0
+2019-11-17,Idaho,vote,1,3rd Party,6.4
+2019-11-17,Illinois,vote,1,3rd Party,3.3
+2019-11-17,Indiana,vote,1,3rd Party,3.3
+2019-11-17,Iowa,vote,1,3rd Party,4.4
+2019-11-17,Kansas,vote,1,3rd Party,5.2
+2019-11-17,Kentucky,vote,1,3rd Party,3.1
+2019-11-17,Louisiana,vote,1,3rd Party,3.7
+2019-11-17,Maine,vote,1,3rd Party,6.2
+2019-11-17,Maryland,vote,1,3rd Party,3.5
+2019-11-17,Massachusetts,vote,1,3rd Party,6.1
+2019-11-17,Michigan,vote,1,3rd Party,3.4
+2019-11-17,Minnesota,vote,1,3rd Party,5.5
+2019-11-17,Mississippi,vote,1,3rd Party,2.6
+2019-11-17,Missouri,vote,1,3rd Party,2.9
+2019-11-17,Montana,vote,1,3rd Party,6.9
+2019-11-17,Nebraska,vote,1,3rd Party,4.6
+2019-11-17,Nevada,vote,1,3rd Party,5.3
+2019-11-17,New Hampshire,vote,1,3rd Party,4.2
+2019-11-17,New Jersey,vote,1,3rd Party,3.4
+2019-11-17,New Mexico,vote,1,3rd Party,5.1
+2019-11-17,New York,vote,1,3rd Party,5.0
+2019-11-17,North Carolina,vote,1,3rd Party,2.0
+2019-11-17,North Dakota,vote,1,3rd Party,5.9
+2019-11-17,Ohio,vote,1,3rd Party,4.0
+2019-11-17,Oklahoma,vote,1,3rd Party,2.2
+2019-11-17,Oregon,vote,1,3rd Party,6.6
+2019-11-17,Pennsylvania,vote,1,3rd Party,3.3
+2019-11-17,Rhode island,vote,1,3rd Party,4.9
+2019-11-17,South Carolina,vote,1,3rd Party,3.0
+2019-11-17,South Dakota,vote,1,3rd Party,4.1
+2019-11-17,Tennessee,vote,1,3rd Party,2.6
+2019-11-17,Texas,vote,1,3rd Party,2.7
+2019-11-17,Utah,vote,1,3rd Party,8.0
+2019-11-17,Vermont,vote,1,3rd Party,7.1
+2019-11-17,Virginia,vote,1,3rd Party,3.4
+2019-11-17,Washington,vote,1,3rd Party,6.0
+2019-11-17,West Virginia,vote,1,3rd Party,3.1
+2019-11-17,Wisconsin,vote,1,3rd Party,4.1
+2019-11-17,Wyoming,vote,1,3rd Party,6.3
+2019-11-17,District of Columbia,vote,1,3rd Party,4.7
+2019-11-17,Maine-1,vote,1,3rd Party,4.9
+2019-11-17,Maine-2,vote,1,3rd Party,5.7
+2019-11-17,Nebraska-1,vote,1,3rd Party,4.8
+2019-11-17,Nebraska-2,vote,1,3rd Party,4.3
+2019-11-17,Nebraska-3,vote,1,3rd Party,4.4
+2019-11-17,US,vote,1,3rd Party,4.0
+2019-11-17,US,ev,1,Trump,238.6
+2019-11-17,US,ev,1,Democrats,299.4
+2019-11-17,US,ev,1,3rd Party,0.0
+2019-11-18,Alabama,win,1,Trump,99.3
+2019-11-18,Alaska,win,1,Trump,85.2
+2019-11-18,Arizona,win,1,Trump,54.2
+2019-11-18,Arkansas,win,1,Trump,99.4
+2019-11-18,California,win,1,Trump,0.0
+2019-11-18,Colorado,win,1,Trump,24.2
+2019-11-18,Connecticut,win,1,Trump,8.6
+2019-11-18,Delaware,win,1,Trump,7.7
+2019-11-18,Florida,win,1,Trump,48.6
+2019-11-18,Georgia,win,1,Trump,65.1
+2019-11-18,Hawaii,win,1,Trump,0.0
+2019-11-18,Idaho,win,1,Trump,99.8
+2019-11-18,Illinois,win,1,Trump,6.3
+2019-11-18,Indiana,win,1,Trump,89.6
+2019-11-18,Iowa,win,1,Trump,58.8
+2019-11-18,Kansas,win,1,Trump,92.1
+2019-11-18,Kentucky,win,1,Trump,99.3
+2019-11-18,Louisiana,win,1,Trump,95.4
+2019-11-18,Maine,win,1,Trump,27.0
+2019-11-18,Maryland,win,1,Trump,0.4
+2019-11-18,Massachusetts,win,1,Trump,0.2
+2019-11-18,Michigan,win,1,Trump,32.6
+2019-11-18,Minnesota,win,1,Trump,29.1
+2019-11-18,Mississippi,win,1,Trump,89.8
+2019-11-18,Missouri,win,1,Trump,89.1
+2019-11-18,Montana,win,1,Trump,88.1
+2019-11-18,Nebraska,win,1,Trump,98.1
+2019-11-18,Nevada,win,1,Trump,35.9
+2019-11-18,New Hampshire,win,1,Trump,32.1
+2019-11-18,New Jersey,win,1,Trump,9.1
+2019-11-18,New Mexico,win,1,Trump,15.6
+2019-11-18,New York,win,1,Trump,1.2
+2019-11-18,North Carolina,win,1,Trump,52.6
+2019-11-18,North Dakota,win,1,Trump,99.9
+2019-11-18,Ohio,win,1,Trump,67.5
+2019-11-18,Oklahoma,win,1,Trump,99.9
+2019-11-18,Oregon,win,1,Trump,12.1
+2019-11-18,Pennsylvania,win,1,Trump,38.8
+2019-11-18,Rhode island,win,1,Trump,4.0
+2019-11-18,South Carolina,win,1,Trump,85.6
+2019-11-18,South Dakota,win,1,Trump,99.5
+2019-11-18,Tennessee,win,1,Trump,98.2
+2019-11-18,Texas,win,1,Trump,75.9
+2019-11-18,Utah,win,1,Trump,99.6
+2019-11-18,Vermont,win,1,Trump,0.1
+2019-11-18,Virginia,win,1,Trump,24.5
+2019-11-18,Washington,win,1,Trump,7.6
+2019-11-18,West Virginia,win,1,Trump,99.9
+2019-11-18,Wisconsin,win,1,Trump,41.0
+2019-11-18,Wyoming,win,1,Trump,100.0
+2019-11-18,District of Columbia,win,1,Trump,0.0
+2019-11-18,Maine-1,win,1,Trump,7.8
+2019-11-18,Maine-2,win,1,Trump,59.0
+2019-11-18,Nebraska-1,win,1,Trump,95.0
+2019-11-18,Nebraska-2,win,1,Trump,57.4
+2019-11-18,Nebraska-3,win,1,Trump,100.0
+2019-11-18,US,win,1,Trump,43.1
+2019-11-18,Alabama,win,1,Democrats,0.7
+2019-11-18,Alaska,win,1,Democrats,14.8
+2019-11-18,Arizona,win,1,Democrats,45.8
+2019-11-18,Arkansas,win,1,Democrats,0.6
+2019-11-18,California,win,1,Democrats,100.0
+2019-11-18,Colorado,win,1,Democrats,75.8
+2019-11-18,Connecticut,win,1,Democrats,91.4
+2019-11-18,Delaware,win,1,Democrats,92.3
+2019-11-18,Florida,win,1,Democrats,51.4
+2019-11-18,Georgia,win,1,Democrats,34.9
+2019-11-18,Hawaii,win,1,Democrats,100.0
+2019-11-18,Idaho,win,1,Democrats,0.2
+2019-11-18,Illinois,win,1,Democrats,93.7
+2019-11-18,Indiana,win,1,Democrats,10.4
+2019-11-18,Iowa,win,1,Democrats,41.2
+2019-11-18,Kansas,win,1,Democrats,7.9
+2019-11-18,Kentucky,win,1,Democrats,0.7
+2019-11-18,Louisiana,win,1,Democrats,4.6
+2019-11-18,Maine,win,1,Democrats,73.0
+2019-11-18,Maryland,win,1,Democrats,99.6
+2019-11-18,Massachusetts,win,1,Democrats,99.8
+2019-11-18,Michigan,win,1,Democrats,67.4
+2019-11-18,Minnesota,win,1,Democrats,70.9
+2019-11-18,Mississippi,win,1,Democrats,10.2
+2019-11-18,Missouri,win,1,Democrats,10.9
+2019-11-18,Montana,win,1,Democrats,11.9
+2019-11-18,Nebraska,win,1,Democrats,1.9
+2019-11-18,Nevada,win,1,Democrats,64.1
+2019-11-18,New Hampshire,win,1,Democrats,67.9
+2019-11-18,New Jersey,win,1,Democrats,90.9
+2019-11-18,New Mexico,win,1,Democrats,84.4
+2019-11-18,New York,win,1,Democrats,98.8
+2019-11-18,North Carolina,win,1,Democrats,47.4
+2019-11-18,North Dakota,win,1,Democrats,0.1
+2019-11-18,Ohio,win,1,Democrats,32.5
+2019-11-18,Oklahoma,win,1,Democrats,0.1
+2019-11-18,Oregon,win,1,Democrats,87.9
+2019-11-18,Pennsylvania,win,1,Democrats,61.2
+2019-11-18,Rhode island,win,1,Democrats,96.0
+2019-11-18,South Carolina,win,1,Democrats,14.4
+2019-11-18,South Dakota,win,1,Democrats,0.5
+2019-11-18,Tennessee,win,1,Democrats,1.8
+2019-11-18,Texas,win,1,Democrats,24.1
+2019-11-18,Utah,win,1,Democrats,0.4
+2019-11-18,Vermont,win,1,Democrats,99.9
+2019-11-18,Virginia,win,1,Democrats,75.5
+2019-11-18,Washington,win,1,Democrats,92.4
+2019-11-18,West Virginia,win,1,Democrats,0.1
+2019-11-18,Wisconsin,win,1,Democrats,59.0
+2019-11-18,Wyoming,win,1,Democrats,0.0
+2019-11-18,District of Columbia,win,1,Democrats,100.0
+2019-11-18,Maine-1,win,1,Democrats,92.2
+2019-11-18,Maine-2,win,1,Democrats,41.0
+2019-11-18,Nebraska-1,win,1,Democrats,5.0
+2019-11-18,Nebraska-2,win,1,Democrats,42.6
+2019-11-18,Nebraska-3,win,1,Democrats,0.0
+2019-11-18,US,win,1,Democrats,56.9
+2019-11-18,Alabama,win,1,3rd Party,0.0
+2019-11-18,Alaska,win,1,3rd Party,0.0
+2019-11-18,Arizona,win,1,3rd Party,0.0
+2019-11-18,Arkansas,win,1,3rd Party,0.0
+2019-11-18,California,win,1,3rd Party,0.0
+2019-11-18,Colorado,win,1,3rd Party,0.0
+2019-11-18,Connecticut,win,1,3rd Party,0.0
+2019-11-18,Delaware,win,1,3rd Party,0.0
+2019-11-18,Florida,win,1,3rd Party,0.0
+2019-11-18,Georgia,win,1,3rd Party,0.0
+2019-11-18,Hawaii,win,1,3rd Party,0.0
+2019-11-18,Idaho,win,1,3rd Party,0.0
+2019-11-18,Illinois,win,1,3rd Party,0.0
+2019-11-18,Indiana,win,1,3rd Party,0.0
+2019-11-18,Iowa,win,1,3rd Party,0.0
+2019-11-18,Kansas,win,1,3rd Party,0.0
+2019-11-18,Kentucky,win,1,3rd Party,0.0
+2019-11-18,Louisiana,win,1,3rd Party,0.0
+2019-11-18,Maine,win,1,3rd Party,0.0
+2019-11-18,Maryland,win,1,3rd Party,0.0
+2019-11-18,Massachusetts,win,1,3rd Party,0.0
+2019-11-18,Michigan,win,1,3rd Party,0.0
+2019-11-18,Minnesota,win,1,3rd Party,0.0
+2019-11-18,Mississippi,win,1,3rd Party,0.0
+2019-11-18,Missouri,win,1,3rd Party,0.0
+2019-11-18,Montana,win,1,3rd Party,0.0
+2019-11-18,Nebraska,win,1,3rd Party,0.0
+2019-11-18,Nevada,win,1,3rd Party,0.0
+2019-11-18,New Hampshire,win,1,3rd Party,0.0
+2019-11-18,New Jersey,win,1,3rd Party,0.0
+2019-11-18,New Mexico,win,1,3rd Party,0.0
+2019-11-18,New York,win,1,3rd Party,0.0
+2019-11-18,North Carolina,win,1,3rd Party,0.0
+2019-11-18,North Dakota,win,1,3rd Party,0.0
+2019-11-18,Ohio,win,1,3rd Party,0.0
+2019-11-18,Oklahoma,win,1,3rd Party,0.0
+2019-11-18,Oregon,win,1,3rd Party,0.0
+2019-11-18,Pennsylvania,win,1,3rd Party,0.0
+2019-11-18,Rhode island,win,1,3rd Party,0.0
+2019-11-18,South Carolina,win,1,3rd Party,0.0
+2019-11-18,South Dakota,win,1,3rd Party,0.0
+2019-11-18,Tennessee,win,1,3rd Party,0.0
+2019-11-18,Texas,win,1,3rd Party,0.0
+2019-11-18,Utah,win,1,3rd Party,0.0
+2019-11-18,Vermont,win,1,3rd Party,0.0
+2019-11-18,Virginia,win,1,3rd Party,0.0
+2019-11-18,Washington,win,1,3rd Party,0.0
+2019-11-18,West Virginia,win,1,3rd Party,0.0
+2019-11-18,Wisconsin,win,1,3rd Party,0.0
+2019-11-18,Wyoming,win,1,3rd Party,0.0
+2019-11-18,District of Columbia,win,1,3rd Party,0.0
+2019-11-18,Maine-1,win,1,3rd Party,0.0
+2019-11-18,Maine-2,win,1,3rd Party,0.0
+2019-11-18,Nebraska-1,win,1,3rd Party,0.0
+2019-11-18,Nebraska-2,win,1,3rd Party,0.0
+2019-11-18,Nebraska-3,win,1,3rd Party,0.0
+2019-11-18,US,win,1,3rd Party,0.0
+2019-11-18,Alabama,vote,1,Trump,62.1
+2019-11-18,Alaska,vote,1,Trump,51.3
+2019-11-18,Arizona,vote,1,Trump,48.3
+2019-11-18,Arkansas,vote,1,Trump,62.3
+2019-11-18,California,vote,1,Trump,32.7
+2019-11-18,Colorado,vote,1,Trump,42.2
+2019-11-18,Connecticut,vote,1,Trump,38.4
+2019-11-18,Delaware,vote,1,Trump,39.0
+2019-11-18,Florida,vote,1,Trump,48.5
+2019-11-18,Georgia,vote,1,Trump,51.5
+2019-11-18,Hawaii,vote,1,Trump,27.1
+2019-11-18,Idaho,vote,1,Trump,63.3
+2019-11-18,Illinois,vote,1,Trump,38.5
+2019-11-18,Indiana,vote,1,Trump,56.7
+2019-11-18,Iowa,vote,1,Trump,49.0
+2019-11-18,Kansas,vote,1,Trump,56.7
+2019-11-18,Kentucky,vote,1,Trump,62.4
+2019-11-18,Louisiana,vote,1,Trump,59.1
+2019-11-18,Maine,vote,1,Trump,42.6
+2019-11-18,Maryland,vote,1,Trump,34.3
+2019-11-18,Massachusetts,vote,1,Trump,31.9
+2019-11-18,Michigan,vote,1,Trump,45.8
+2019-11-18,Minnesota,vote,1,Trump,43.5
+2019-11-18,Mississippi,vote,1,Trump,57.6
+2019-11-18,Missouri,vote,1,Trump,56.8
+2019-11-18,Montana,vote,1,Trump,54.6
+2019-11-18,Nebraska,vote,1,Trump,60.4
+2019-11-18,Nevada,vote,1,Trump,45.1
+2019-11-18,New Hampshire,vote,1,Trump,44.8
+2019-11-18,New Jersey,vote,1,Trump,39.0
+2019-11-18,New Mexico,vote,1,Trump,40.4
+2019-11-18,New York,vote,1,Trump,34.7
+2019-11-18,North Carolina,vote,1,Trump,49.3
+2019-11-18,North Dakota,vote,1,Trump,62.9
+2019-11-18,Ohio,vote,1,Trump,50.9
+2019-11-18,Oklahoma,vote,1,Trump,66.2
+2019-11-18,Oregon,vote,1,Trump,38.5
+2019-11-18,Pennsylvania,vote,1,Trump,46.7
+2019-11-18,Rhode island,vote,1,Trump,36.3
+2019-11-18,South Carolina,vote,1,Trump,55.4
+2019-11-18,South Dakota,vote,1,Trump,61.8
+2019-11-18,Tennessee,vote,1,Trump,61.2
+2019-11-18,Texas,vote,1,Trump,52.8
+2019-11-18,Utah,vote,1,Trump,60.3
+2019-11-18,Vermont,vote,1,Trump,29.2
+2019-11-18,Virginia,vote,1,Trump,43.6
+2019-11-18,Washington,vote,1,Trump,37.4
+2019-11-18,West Virginia,vote,1,Trump,65.5
+2019-11-18,Wisconsin,vote,1,Trump,46.6
+2019-11-18,Wyoming,vote,1,Trump,69.0
+2019-11-18,District of Columbia,vote,1,Trump,10.5
+2019-11-18,Maine-1,vote,1,Trump,37.2
+2019-11-18,Maine-2,vote,1,Trump,49.0
+2019-11-18,Nebraska-1,vote,1,Trump,59.0
+2019-11-18,Nebraska-2,vote,1,Trump,49.3
+2019-11-18,Nebraska-3,vote,1,Trump,75.2
+2019-11-18,US,vote,1,Trump,45.8
+2019-11-18,Alabama,vote,1,Democrats,34.9
+2019-11-18,Alaska,vote,1,Democrats,37.4
+2019-11-18,Arizona,vote,1,Democrats,47.1
+2019-11-18,Arkansas,vote,1,Democrats,33.3
+2019-11-18,California,vote,1,Democrats,62.0
+2019-11-18,Colorado,vote,1,Democrats,51.9
+2019-11-18,Connecticut,vote,1,Democrats,57.2
+2019-11-18,Delaware,vote,1,Democrats,57.7
+2019-11-18,Florida,vote,1,Democrats,48.9
+2019-11-18,Georgia,vote,1,Democrats,46.3
+2019-11-18,Hawaii,vote,1,Democrats,67.8
+2019-11-18,Idaho,vote,1,Democrats,30.3
+2019-11-18,Illinois,vote,1,Democrats,58.1
+2019-11-18,Indiana,vote,1,Democrats,39.9
+2019-11-18,Iowa,vote,1,Democrats,46.5
+2019-11-18,Kansas,vote,1,Democrats,38.0
+2019-11-18,Kentucky,vote,1,Democrats,34.4
+2019-11-18,Louisiana,vote,1,Democrats,37.1
+2019-11-18,Maine,vote,1,Democrats,51.1
+2019-11-18,Maryland,vote,1,Democrats,62.2
+2019-11-18,Massachusetts,vote,1,Democrats,61.9
+2019-11-18,Michigan,vote,1,Democrats,50.7
+2019-11-18,Minnesota,vote,1,Democrats,50.9
+2019-11-18,Mississippi,vote,1,Democrats,39.8
+2019-11-18,Missouri,vote,1,Democrats,40.2
+2019-11-18,Montana,vote,1,Democrats,38.4
+2019-11-18,Nebraska,vote,1,Democrats,34.9
+2019-11-18,Nevada,vote,1,Democrats,49.6
+2019-11-18,New Hampshire,vote,1,Democrats,50.8
+2019-11-18,New Jersey,vote,1,Democrats,57.5
+2019-11-18,New Mexico,vote,1,Democrats,54.4
+2019-11-18,New York,vote,1,Democrats,60.2
+2019-11-18,North Carolina,vote,1,Democrats,48.6
+2019-11-18,North Dakota,vote,1,Democrats,31.1
+2019-11-18,Ohio,vote,1,Democrats,45.1
+2019-11-18,Oklahoma,vote,1,Democrats,31.5
+2019-11-18,Oregon,vote,1,Democrats,54.8
+2019-11-18,Pennsylvania,vote,1,Democrats,49.9
+2019-11-18,Rhode island,vote,1,Democrats,58.7
+2019-11-18,South Carolina,vote,1,Democrats,41.4
+2019-11-18,South Dakota,vote,1,Democrats,34.0
+2019-11-18,Tennessee,vote,1,Democrats,36.1
+2019-11-18,Texas,vote,1,Democrats,44.4
+2019-11-18,Utah,vote,1,Democrats,31.6
+2019-11-18,Vermont,vote,1,Democrats,63.6
+2019-11-18,Virginia,vote,1,Democrats,52.8
+2019-11-18,Washington,vote,1,Democrats,56.5
+2019-11-18,West Virginia,vote,1,Democrats,31.3
+2019-11-18,Wisconsin,vote,1,Democrats,49.1
+2019-11-18,Wyoming,vote,1,Democrats,24.6
+2019-11-18,District of Columbia,vote,1,Democrats,84.7
+2019-11-18,Maine-1,vote,1,Democrats,57.8
+2019-11-18,Maine-2,vote,1,Democrats,45.3
+2019-11-18,Nebraska-1,vote,1,Democrats,36.1
+2019-11-18,Nebraska-2,vote,1,Democrats,46.2
+2019-11-18,Nebraska-3,vote,1,Democrats,20.4
+2019-11-18,US,vote,1,Democrats,50.1
+2019-11-18,Alabama,vote,1,3rd Party,2.9
+2019-11-18,Alaska,vote,1,3rd Party,11.2
+2019-11-18,Arizona,vote,1,3rd Party,4.5
+2019-11-18,Arkansas,vote,1,3rd Party,4.3
+2019-11-18,California,vote,1,3rd Party,5.2
+2019-11-18,Colorado,vote,1,3rd Party,5.8
+2019-11-18,Connecticut,vote,1,3rd Party,4.3
+2019-11-18,Delaware,vote,1,3rd Party,3.2
+2019-11-18,Florida,vote,1,3rd Party,2.5
+2019-11-18,Georgia,vote,1,3rd Party,2.1
+2019-11-18,Hawaii,vote,1,3rd Party,5.0
+2019-11-18,Idaho,vote,1,3rd Party,6.4
+2019-11-18,Illinois,vote,1,3rd Party,3.3
+2019-11-18,Indiana,vote,1,3rd Party,3.3
+2019-11-18,Iowa,vote,1,3rd Party,4.4
+2019-11-18,Kansas,vote,1,3rd Party,5.2
+2019-11-18,Kentucky,vote,1,3rd Party,3.1
+2019-11-18,Louisiana,vote,1,3rd Party,3.7
+2019-11-18,Maine,vote,1,3rd Party,6.2
+2019-11-18,Maryland,vote,1,3rd Party,3.5
+2019-11-18,Massachusetts,vote,1,3rd Party,6.1
+2019-11-18,Michigan,vote,1,3rd Party,3.4
+2019-11-18,Minnesota,vote,1,3rd Party,5.5
+2019-11-18,Mississippi,vote,1,3rd Party,2.6
+2019-11-18,Missouri,vote,1,3rd Party,2.9
+2019-11-18,Montana,vote,1,3rd Party,6.9
+2019-11-18,Nebraska,vote,1,3rd Party,4.6
+2019-11-18,Nevada,vote,1,3rd Party,5.3
+2019-11-18,New Hampshire,vote,1,3rd Party,4.2
+2019-11-18,New Jersey,vote,1,3rd Party,3.4
+2019-11-18,New Mexico,vote,1,3rd Party,5.1
+2019-11-18,New York,vote,1,3rd Party,5.0
+2019-11-18,North Carolina,vote,1,3rd Party,2.0
+2019-11-18,North Dakota,vote,1,3rd Party,5.9
+2019-11-18,Ohio,vote,1,3rd Party,4.0
+2019-11-18,Oklahoma,vote,1,3rd Party,2.2
+2019-11-18,Oregon,vote,1,3rd Party,6.6
+2019-11-18,Pennsylvania,vote,1,3rd Party,3.3
+2019-11-18,Rhode island,vote,1,3rd Party,4.9
+2019-11-18,South Carolina,vote,1,3rd Party,3.0
+2019-11-18,South Dakota,vote,1,3rd Party,4.1
+2019-11-18,Tennessee,vote,1,3rd Party,2.6
+2019-11-18,Texas,vote,1,3rd Party,2.7
+2019-11-18,Utah,vote,1,3rd Party,8.0
+2019-11-18,Vermont,vote,1,3rd Party,7.1
+2019-11-18,Virginia,vote,1,3rd Party,3.4
+2019-11-18,Washington,vote,1,3rd Party,6.0
+2019-11-18,West Virginia,vote,1,3rd Party,3.1
+2019-11-18,Wisconsin,vote,1,3rd Party,4.1
+2019-11-18,Wyoming,vote,1,3rd Party,6.3
+2019-11-18,District of Columbia,vote,1,3rd Party,4.7
+2019-11-18,Maine-1,vote,1,3rd Party,4.9
+2019-11-18,Maine-2,vote,1,3rd Party,5.7
+2019-11-18,Nebraska-1,vote,1,3rd Party,4.8
+2019-11-18,Nebraska-2,vote,1,3rd Party,4.3
+2019-11-18,Nebraska-3,vote,1,3rd Party,4.4
+2019-11-18,US,vote,1,3rd Party,4.0
+2019-11-18,US,ev,1,Trump,238.6
+2019-11-18,US,ev,1,Democrats,299.4
+2019-11-18,US,ev,1,3rd Party,0.0

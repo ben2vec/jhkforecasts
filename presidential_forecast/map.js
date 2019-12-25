@@ -35,13 +35,13 @@
   //Create SVG element and append map to the SVG
   var svg = d3.select("#usmap")
         .append("svg")
-        .attr("viewBox",'0 0 960 500');
+        .attr("viewBox",'0 0 1020 500');
   
   
   
   var tool_tip = d3.tip()
       .attr("class", "d3-tip")
-      .offset([60,20])
+      .offset([20,70])
       .html("<div id='tipDiv'></div>");
     
     svg.call(tool_tip);       
@@ -112,7 +112,7 @@
         tool_tip.show();
         var tipSVG = d3.select("#tipDiv")
           .append("svg")
-          .attr("width", 250)
+          .attr("width", 150)
       .attr("height", 120)
       ;
       
@@ -125,7 +125,7 @@
           .attr("height", 20)
           .transition()
           .duration(300)
-          .attr("width", d.properties.gopWin*2);
+          .attr("width", d.properties.gopWin);
       
     tipSVG.append("text")
           .text("Gop Win" +"%")
@@ -150,9 +150,8 @@
           .text(d.properties.gopWin +"%")
           .attr("y", 65)
           .attr("x",5)
-          .transition()
-          .duration(300)
-      .attr("x", d.properties.gopWin*2 + 10)
+          
+      .attr("x", 110)
       .attr("fill","#FF6060")
       .style("font-weight","600")
       .style("font-size","15");
@@ -165,15 +164,13 @@
           .attr("height", 20)
           .transition()
           .duration(300)
-          .attr("width", d.properties.demWin*2);
+          .attr("width", d.properties.demWin);
     
         tipSVG.append("text")
           .text(d.properties.demWin +"%")
           .attr("y", 85)
           .attr("x",5)
-          .transition()
-          .duration(300)
-      .attr("x", d.properties.demWin * 2 + 10)
+      .attr("x", 110)
       .attr("fill","#0091FF")
       .style("font-weight","600")
       .style("font-size","15");
@@ -186,67 +183,10 @@
       .enter()
       .append("path")
     .attr("d", path)
-    .style("stroke", d => d.properties.tippingPoint >= 2.5 ? "black": "none")
+    .style("stroke", d => d.properties.tippingPoint >= 3 ? "black": "none")
     .style("stroke-width", "1.5")
     .style("fill", "none")
-    .on('mouseover', function(d) {
-        tool_tip.show();
-        var tipSVG = d3.select("#tipDiv")
-          .append("svg")
-          .attr("width", 250)
-      .attr("height", 120);
-      
     
-        tipSVG.append("rect")
-          .attr("fill", "#FF6060")
-          .attr("y", 50)
-          .attr("width", 0)
-          .attr("height", 20)
-          .transition()
-          .duration(300)
-          .attr("width", d.properties.gopWin*2);
-      
-    tipSVG.append("text")
-          .text("Gop Win" +"%")
-      .attr("y", 45);
-    
-    tipSVG.append("text")
-      .text(d.properties.name)
-      .attr("y", 20)
-      .attr("x",10)
-      .attr("fill","#black")
-      .style("font-weight","600")
-      .style("font-size","20");
-    
-      tipSVG.append("text")
-          .text("Dem Win" +"%")
-          .attr("y", 105)
-          
-    
-        tipSVG.append("text")
-          .text(d.properties.gopWin +"%")
-          .attr("y", 65)
-          .transition()
-          .duration(300)
-      .attr("x", d.properties.gopWin*2 + 10)
-      .attr("fill","#FF6060")
-      .style("font-weight","600")
-      .style("font-size","15");
-    
-    tipSVG.append("rect")
-          .attr("fill", "#0091FF")
-          .attr("y", 70)
-          .attr("width", 0)
-          .attr("height", 20)
-          .transition()
-          .duration(300)
-          .attr("width", d.properties.demWin*2);
-    
-        
-  
-    
-    
-  
     svg.append("rect")
               .attr("x", 850)
               .attr("y", 350)
@@ -264,7 +204,7 @@
       .attr("fill","black")
       .style("font-weight","500")
       .style("font-size","12");
-    });
+  ;
   d3.csv("topline.csv", function(error, data){
               
               
@@ -304,14 +244,14 @@
       .attr("x",10)
       .attr("y",140)
       .attr("height",20)
-      .attr("width",data[0].win*2)
+      .attr("width",data[0].win)
       .attr("fill", "#FF6060")
       ;
     svg.append("rect")
       .attr("x",10)
       .attr("y",160)
       .attr("height",20)
-      .attr("width",data[1].win*2)
+      .attr("width",data[1].win)
       .attr("fill", "#0091FF")
       ;
     svg.append("text")
@@ -346,18 +286,19 @@
 tool_tip.show();
 var tipSVG = d3.select("#tipDiv")
 .append("svg")
-.attr("width", 250)
+.attr("width", 150)
 .attr("height", 120);
 
 
 tipSVG.append("rect")
 .attr("fill", "#FF6060")
 .attr("y", 50)
+.attr("x",5)
 .attr("width", 0)
 .attr("height", 20)
 .transition()
 .duration(300)
-.attr("width", d.gopWin*2);
+.attr("width", d.gopWin);
 
 tipSVG.append("text")
 .text("Gop Win" +"%")
@@ -379,9 +320,7 @@ tipSVG.append("text")
 tipSVG.append("text")
 .text(d.gopWin +"%")
 .attr("y", 65)
-.transition()
-.duration(300)
-.attr("x", d.gopWin*2 + 10)
+.attr("x", 110)
 .attr("fill","#FF6060")
 .style("font-weight","600")
 .style("font-size","15");
@@ -389,24 +328,26 @@ tipSVG.append("text")
 tipSVG.append("rect")
 .attr("fill", "#0091FF")
 .attr("y", 70)
+.attr("x",5)
 .attr("width", 0)
 .attr("height", 20)
 .transition()
 .duration(300)
-.attr("width", d.demWin*2);
+.attr("width", d.demWin);
 
 tipSVG.append("text")
 .text(d.demWin +"%")
 .attr("y", 85)
-.transition()
-.duration(300)
-.attr("x", d.demWin * 2 + 10)
+.attr("x", 110)
 .attr("fill","#0091FF")
 .style("font-weight","600")
-.style("font-size","15");
+.style("font-size","15")
+;
 })
     })
 .on('mouseout', tool_tip.hide);	
 
+
   });
+  
 });
