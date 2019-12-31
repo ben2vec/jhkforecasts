@@ -35,13 +35,13 @@
   //Create SVG element and append map to the SVG
   var svg = d3.select("#usmap")
         .append("svg")
-        .attr("viewBox",'0 0 1020 500');
+        .attr("viewBox",'100 0 820 500');
   
   
   
   var tool_tip = d3.tip()
       .attr("class", "d3-tip")
-      .offset([20,70])
+      .offset([-120,-30])
       .html("<div id='tipDiv'></div>");
     
     svg.call(tool_tip);       
@@ -199,73 +199,12 @@
   
     svg.append("text")
           .text("Tipping Points")
-          .attr("x", 880)
+          .attr("x", 760)
       .attr("y", 365)
       .attr("fill","black")
       .style("font-weight","500")
-      .style("font-size","12");
+      .style("font-size","15");
   ;
-  d3.csv("topline.csv", function(error, data){
-              
-              
-          
-    
-  console.log(data[0].win);
-  svg.append("text")
-          .text("Win The Presidency")
-          .attr("x", 10)
-      .attr("y", 30)
-      .attr("fill","black")
-      .style("font-weight","800")
-      .style("font-size","35");
-  svg.append("text")
-          .text(data[0].cand)
-          .attr("x", 10)
-      .attr("y", 100)
-      .attr("fill","black")
-      .style("font-weight","800")
-      .style("font-size","30");
-  
-      svg.append("text")
-          .text(data[0].win+"%")
-          .attr("x", 10)
-      .attr("y", 130)
-      .attr("fill","black")
-      .style("font-weight","500")
-      .style("font-size","20");
-      svg.append("text")
-          .text(data[1].win+"%")
-          .attr("x", 10)
-      .attr("y", 200)
-      .attr("fill","black")
-      .style("font-weight","500")
-      .style("font-size","20");
-    svg.append("rect")
-      .attr("x",10)
-      .attr("y",140)
-      .attr("height",20)
-      .attr("width",data[0].win)
-      .attr("fill", "#FF6060")
-      ;
-    svg.append("rect")
-      .attr("x",10)
-      .attr("y",160)
-      .attr("height",20)
-      .attr("width",data[1].win)
-      .attr("fill", "#0091FF")
-      ;
-    svg.append("text")
-          .text(data[1].cand)
-          .attr("x", 10)
-      .attr("y", 230)
-      .attr("fill","black")
-      .style("font-weight","800")
-      .style("font-size","30");
-            
-    
-  
-  
-    });	
     d3.csv("US Map.csv", function(error, data){
 
 
@@ -279,75 +218,10 @@
 .attr("x",d=> d.xValue)
 .attr("y",d=> d.yValue)
 .attr("font-family","brandon-grotesque")
-.attr("font-weight","500")
+.attr("font-weight","700")
 .attr("font-size","10")
 .attr("fill","black")
-.attr("text-anchor","middle").on('mouseover', function(d) {
-tool_tip.show();
-var tipSVG = d3.select("#tipDiv")
-.append("svg")
-.attr("width", 150)
-.attr("height", 120);
-
-
-tipSVG.append("rect")
-.attr("fill", "#FF6060")
-.attr("y", 50)
-.attr("x",5)
-.attr("width", 0)
-.attr("height", 20)
-.transition()
-.duration(300)
-.attr("width", d.gopWin);
-
-tipSVG.append("text")
-.text("Gop Win" +"%")
-.attr("y", 45);
-
-tipSVG.append("text")
-.text(d.state)
-.attr("y", 20)
-.attr("x",10)
-.attr("fill","#black")
-.style("font-weight","600")
-.style("font-size","20");
-
-tipSVG.append("text")
-.text("Dem Win" +"%")
-.attr("y", 105)
-
-
-tipSVG.append("text")
-.text(d.gopWin +"%")
-.attr("y", 65)
-.attr("x", 110)
-.attr("fill","#FF6060")
-.style("font-weight","600")
-.style("font-size","15");
-
-tipSVG.append("rect")
-.attr("fill", "#0091FF")
-.attr("y", 70)
-.attr("x",5)
-.attr("width", 0)
-.attr("height", 20)
-.transition()
-.duration(300)
-.attr("width", d.demWin);
-
-tipSVG.append("text")
-.text(d.demWin +"%")
-.attr("y", 85)
-.attr("x", 110)
-.attr("fill","#0091FF")
-.style("font-weight","600")
-.style("font-size","15")
-;
-})
-    })
-.on('mouseout', tool_tip.hide);	
-
-
+.attr("text-anchor","middle")
+    });	
   });
-  
 });

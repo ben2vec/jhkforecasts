@@ -19,13 +19,16 @@
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
 <link rel="stylesheet" href="https://use.typekit.net/htk2wjy.css">
+<link rel="stylesheet" href="index.css">
 
-    <link rel="stylesheet" href="index.css">
-   
+
+
+
 <body>
 
-
+  
   <h1 style=" text-align: center; font-weight: 300;  "> <a href="https://jhkforecasts.com"><span >JHK Forecasts</span></a></h1>
+
   <table  style="border-collapse: collapse; border: none;"  cellspacing="0" cellpadding="0" width="100%">
     <tbody>
     <tr>
@@ -41,14 +44,13 @@
     </tr>
     </tbody>
     </table>
-  
+<div id="topline"></div>
 <div id="usmap"></div>
 <div id="votechart"></div>
 <div id="evchart"></div>
-  <h1 style="margin-left: 2%;font-size: 20;font-weight: 800;">The Race to 270 Electoral Votes</h1>
-  <p style="margin-left: 4%;font-size: 15;">The race for the White House is won by the candidate who gets 270 electoral votes. Below shows how close each party is to getting the 270 electoral votes.  </p>
-  
-  <div id="raceto270"></div> 
+<h1 style="margin-left: 2%;font-size: 20;font-weight: 800;">The Race to 270 Electoral Votes</h1>
+<p style="margin-left: 4%;font-size: 15;">The race for the White House is won by the candidate who gets 270 electoral votes. Below shows how close each party is to getting the 270 electoral votes.  </p>
+<div id="raceto270"></div> 
 <h1 style="margin-left: 2%;font-size: 20;font-weight: 800;">Time Will Only Tell</h1>
 <p style="margin-left: 4%;font-size: 15;">The graphs below show the ever-changing race for the White House.</p>
 <p style="text-align: center;">Projected Vote Share</p>
@@ -67,8 +69,11 @@
 <div id="demev"></div>
 
 
-<script src="winus.js"></script>
+
+
+<script src="topline.js"></script>
 <script src="map.js"></script>
+<script src="winus.js"></script>
 <script src="270ev.js"></script>
 <script src="bubblemap.js"></script>
 <script src="voteus.js"></script>
@@ -77,7 +82,11 @@
 <script src="evchart.js"></script>
 <script src="trumpev.js"></script>
 <script src="demev.js"></script>
-</div>
+ 
+
+
+
+
 
 </body>
 </html>

@@ -143,3 +143,18 @@ div.tooltip {
     stroke-width: 2px;
   }
   
+@media only screen and (max-width:850px){
+  #tipDiv{
+    display: none;
+  }
+
+  
+}
+@media only screen and (min-width:851px){
+
+  #tipDiv{
+    display: inline;
+  }
+
+  
+} 
