@@ -6,10 +6,10 @@ var glines
   
       var margin = {top: 20, right: 20, bottom: 0, left: 40}
       var width4 = 1200 - margin.left - margin.right
-      var height4 = 300 - margin.top - margin.bottom
+      var height4 = 450 - margin.top - margin.bottom
   
       var lineOpacity = .8
-      var lineStroke = "3px"
+      var lineStroke = "4px"
   
       var axisPad = 12 // axis formatting
       var R = 7 //legend marker
@@ -24,7 +24,7 @@ var glines
         
           var data = data.filter(function(d){return d.state == 'US';})
   
-          var data = data.filter(function(d){return d.index == 'vote';})
+          var data = data.filter(function(d){return d.index == 'win';})
 
           var dataArray = [data.percentage]
         var res = data.map((d,i) => {
@@ -58,12 +58,11 @@ var glines
   
         
   
-          var yScale = d3.scaleLinear()
-          .domain([0,maxYValue])
+        var yScale = d3.scaleLinear()  
           .range([height4, 0]);
   
         var svg = d3.select("#chart1").append("svg")
-          .attr("viewBox",'0 0 1200 400')
+          .attr("viewBox",'0 0 1200 550')
           .append('g')
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
   
@@ -71,7 +70,8 @@ var glines
         // CREATE AXES // 
         // render axis first before lines so that lines will overlay the horizontal ticks
         var xAxis = d3.axisBottom(xScale)
-        var yAxis = d3.axisLeft(yScale)
+        var yAxis = svg.append("g")
+        .attr("class", "myYaxis")
         svg.append("g")
           .attr("class", "x axis")
           .attr("transform", `translate(0, ${height4})`)
@@ -84,35 +84,17 @@ var glines
               .style("text-anchor", "right")
               .attr("y", axisPad)
               .attr('fill', 'black')
-                .attr('font-size','11')
-                .attr('font-weight',500)
-            g.selectAll("line")
-              .attr('stroke', '#A9A9A9')
+                .attr('font-size','18')
+                .attr('font-weight',700)
+            g.selectAll("line").remove()
+              
   
             g.select(".domain")
-              .attr('stroke', '#A9A9A9')
+            .remove()
   
           })
   
-        svg.append("g")
-          .attr("class", "y axis")
-          .call(yAxis)
-          .call(g => {
-            g.selectAll("text")
-            .style("text-anchor", "middle")
-            .attr('fill', 'black')
-            .attr('font-size', '12px')
-            
-  
-            g.selectAll("line")
-              .attr('stroke', '#A9A9A9')
-              .attr('stroke-width', 0.7) // make horizontal tick thinner and lighter so that line paths can stand out
-              .attr('opacity', 0.3)
-  
-            g.select(".domain").remove()
-  
-           })
-         
+        
   
   
         // CREATE LEGEND // 
@@ -133,6 +115,33 @@ var glines
         })
   
         function updateChart(dataPoint) {
+          var resNew = res.filter(d=>d.dataPoint == parseInt(dataPoint))
+
+          var maxYVal = Math.round(d3.max(resNew, d => d.percentage));
+
+        var test = 100
+          console.log(maxYVal);
+        
+        var maxYValu = dataPoint == 1 ? 100 : Math.round(maxYVal/10)*10 + 10
+
+          yScale.domain([0, maxYValu])
+          yAxis.transition().duration(1000).call(d3.axisLeft(yScale).ticks(5)).call(g => {
+            g.selectAll("text")
+            .style("text-anchor", "end")
+            .attr('fill', 'black')
+            .attr('font-size', '18')
+            .attr('font-weight',700)
+    
+            g.selectAll("line")
+              .attr('stroke', '#A9A9A9')
+              .attr('stroke-width', 0.7) // make horizontal tick thinner and lighter so that line paths can stand out
+              .attr('opacity', 0)
+    
+            g.select(".domain")
+            .attr('stroke', '#A9A9A9')
+              .attr('stroke-width', 0.7) // make horizontal tick thinner and lighter so that line paths can stand out
+              .attr('opacity', 0)
+          })
   
           var resNew = res.filter(d=>d.dataPoint == parseInt(dataPoint))
   
@@ -159,7 +168,33 @@ var glines
         function renderChart(dataPoint) {
   
           var resNew = res.filter(d=>d.dataPoint == parseInt(dataPoint))
-  
+
+          var maxYVal = Math.round(d3.max(resNew, d => d.percentage));
+
+        var test = 100
+          console.log(maxYVal);
+        
+        var maxYValu = dataPoint == 1 ? 100 : Math.round(maxYVal/10)*10 + 10
+
+          yScale.domain([0, maxYValu])
+          yAxis.transition().duration(1000).call(d3.axisLeft(yScale).ticks(5)).call(g => {
+            g.selectAll("text")
+            .style("text-anchor", "end")
+            .attr('fill', 'black')
+            .attr('font-size', '18')
+            .attr('font-weight',700)
+    
+            g.selectAll("line")
+              .attr('stroke', '#A9A9A9')
+              .attr('stroke-width', 0.7) // make horizontal tick thinner and lighter so that line paths can stand out
+              .attr('opacity', 0)
+    
+            g.select(".domain")
+            .attr('stroke', '#A9A9A9')
+              .attr('stroke-width', 0.7) // make horizontal tick thinner and lighter so that line paths can stand out
+              .attr('opacity', 0)
+    
+           });
           var res_nested = d3.nest() // necessary to nest data so that keys represent each vehicle category
             .key(d=>d.candidate)
             .entries(resNew)
@@ -306,7 +341,7 @@ var glines
         var res_nested1 = res_nested.slice().sort(function(a, b){
           return sortingArr.indexOf(a.key) - sortingArr.indexOf(b.key) // rank vehicle category based on price of percentage
         })
-        tooltip.html(sortingObj[0].month + "-" + sortingObj[0].day )
+        tooltip.html(sortingObj[0].month + "  " + sortingObj[0].day )
           .style('display', 'block')
           .style('left', (d3.event.pageX +20) + "px")
           .style('top', (d3.event.pageY +20) + "px")
@@ -325,7 +360,7 @@ var glines
             var xDate = xScale.invert(mouse[0])
             var bisect = d3.bisector(function (d) { return d.date; }).left
             var idx = bisect(d.values, xDate)
-            return d.key +  " - " + d.values[idx].percentage.toString()  + "%" 
+            return d.key +  " - " + d.values[idx].percentage.toString() 
           })
         
       

@@ -35,7 +35,7 @@
   //Create SVG element and append map to the SVG
   var svg = d3.select("#usmap")
         .append("svg")
-        .attr("viewBox",'100 0 820 500');
+        .attr("viewBox",'50 0 920 500');
   
   
   

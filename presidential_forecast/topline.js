@@ -11,7 +11,7 @@ var category = ["Trump", "Democrats", "3rd Party"]
               console.log(data)  
                 
               var svg = d3.select("#topline").append("svg")
-                    .attr("viewBox", '0 0 1000 100')
+                    .attr("viewBox", '0 -50 1000 200')
         
         
                 svg.append("text")
@@ -56,4 +56,24 @@ var category = ["Trump", "Democrats", "3rd Party"]
                     .attr("fill",d=> colorScale(d.cand))
                     .attr("text-anchor","middle")
                     .attr("font-weight",900)
+
+
+                    d3.csv("update.csv", function(error, data){
+
+                        svg.selectAll("updated")
+                        .data(data)
+                        .enter()
+                        .append("text")
+                        .text(d=> d.updated)
+                        .attr("x",500)
+                        .attr("y",20)
+                        .attr("fill", "black")
+                        .attr("font-size",15)
+                        .attr("fill","grey")
+                        .attr("text-anchor","middle")
+                        .attr("font-weight",900)
+
+
+
+                    });
             });

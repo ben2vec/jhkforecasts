@@ -11,7 +11,7 @@ var category = ["Trump", "Democrats", "3rd Party"]
       console.log(data)  
         
       var svg = d3.select("#evchart").append("svg")
-            .attr("viewBox", '-100 0 1000 300')
+            .attr("viewBox", '00 0 820 300')
 
 
             
@@ -41,7 +41,7 @@ var category = ["Trump", "Democrats", "3rd Party"]
             .attr("width",d => d.width)
             .attr("height",75)
             .attr("fill", d=> colorScale(d.cand))
-            .style("opacity",.7)
+            .style("opacity",.5)
         
 
         svg.selectAll("candidates")
@@ -64,8 +64,22 @@ var category = ["Trump", "Democrats", "3rd Party"]
             .attr("x",d => d.voteLable)
             .attr("y",d => d.yText)
             .attr("fill","black")
-            .attr("font-size",12)
+            .attr("font-size",15)
             .style("text-anchor","middle")
+            .attr("font-weight",700)
+
+            svg.selectAll("bars")
+            .data(data)
+            .enter()
+            .append("rect")
+            .attr("x",d => d.voteLable)
+            .attr("y",d => d.yValue)
+            .attr("rx",5)
+            .attr("ry",5)
+            .attr("width",2)
+            .attr("height",25)
+            .attr("fill", d=> colorScale(d.cand))
+            .style("opacity",1)
 
            
         svg.append("line")
@@ -101,12 +115,12 @@ var category = ["Trump", "Democrats", "3rd Party"]
         .attr("stroke","black")
 
         svg.append("text")
-        .text("Electoral Votes")
-        .attr("x",500)
+        .text("Projected Electoral Votes")
+        .attr("x",30)
         .attr("y",35)
         .attr("fill","black")
-        .style("text-anchor","middle")
-        .attr("font-size",20)
+        .style("text-anchor","start")
+        .attr("font-size",40)
             .attr("font-weight",700)
         
             svg.append("text")
