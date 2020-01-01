@@ -614,6 +614,7 @@
 <div id="raceto270"></div> 
 <h1 style="margin-left: 2%;font-size: 20;font-weight: 800;">Time Will Only Tell</h1>
 <p style="margin-left: 4%;font-size: 15;">The graph below show the ever-changing race for the White House.</p>
+<div id ="phonetime">
 <div id="bubbles"></div>
 			  
 				
@@ -626,22 +627,60 @@
 					  <label for="win%">Vote Share</label>
 					  <input type="radio" id="ev" name="dataPoint" value="3">
 					  <label for="ev">Electoral Votes</label>
-					  </div>
-				  </div>
-				</div>
-			  </div>
-			</div>
-		  </div>
-<div id="chart1"></div>
+					  
+				  
 <div id="chart2"></div>
+</div>
+</div>
+
+<div id ="comptime">
+<div id="bubbles2"></div>
+			  
+				
+				  <div class="radio-toolbar" style="text-align:center ;">
+					
+					  <input type="radio" id="projvote1" name="dataPoint1" value="1" checked>
+					  <label for="projvote1">Win Presidency</label>
+				  
+					  <input type="radio" id="win%1" name="dataPoint1" value="2">
+					  <label for="win%1">Vote Share</label>
+					  <input type="radio" id="ev1" name="dataPoint1" value="3">
+					  <label for="ev1">Electoral Votes</label>
+					  
+				  
+<div id="chart1"></div>
+</div>
+</div>
+
 <h1 style="margin-left: 2%;font-size: 20;font-weight: 800;">A Better Way to look at things.</h1>
 <p style="margin-left: 4%;font-size: 15;">Normal maps can be confusing when it comes to the electoral college. The map below shows each state, sized based on the electoral votes it get, and colored by each candidates chance of winning.</p>
 <div id="bubblemap"></div>
+<div id="bubblemap2"></div>
 <h1 style="margin-left: 2%;font-size: 20;font-weight: 800;">This or That</h1>
 <p style="margin-left: 4%;font-size: 15;">There are many possble outcomes in the electoral college. The histograms below show the spread of electoral votes of 20,000 simulations of the election.</p>
 
 <div id="trumpev"></div>
 <div id="demev"></div>
+<h1 style="margin-left: 2%;font-size: 20;font-weight: 800;">The Battlegrounds</h1>
+<p style="margin-left: 4%;font-size: 15;">The states below are ranked by the most detrimental to outcome of the election. Tipping point measures which state will give the candidate the 270th electoral vote. </p>
+
+
+<body>
+    <table  style="border-collapse: collapse; border: none;"  cellspacing="0" cellpadding="0" width="100%">
+        <tbody>
+        <tr>
+        </td>
+        <td style="width: 50%; " valign="top" width="50%">
+        <div id="tippingpoint"></div>
+        </td>
+        <td style="width: 50%; " valign="top" width="50%">
+        <div id="margin"></div>
+        </td>
+        </tr>
+        </tbody>
+        </table>
+<script src="test.js"></script> 
+<script src="test2.js"></script> 
 
 
 
@@ -655,7 +694,8 @@
 <script src="evchart.js"></script>
 <script src="trumpev.js"></script>
 <script src="demev.js"></script>
- 
+<script src="timechangephone.js"></script>
+<script src="bubblemapphone.js"></script>
 <script>
   var category = ["Trump", "Democrats", "3rd Party"]
     // since Category B and E are really close to each other, assign them diverging colors
@@ -668,7 +708,7 @@
 
 
         var svg = d3.select("#tablevote").append("svg")
-        .attr("viewBox",'0 0 600 300')
+        .attr("viewBox",'0 0 600 400')
         .append('g')
 
         svg.append("text")
@@ -689,7 +729,7 @@
 
         var svgLegend = svg.append('g')
           .attr('class', 'gLegend')
-          .attr("transform", "translate(" + 20 + "," + 100 + ")")
+          .attr("transform", "translate(" + 20 + "," + 120 + ")")
 
       
 
@@ -697,12 +737,12 @@
         .data(data)
         .enter().append('g')
           .attr("class", "legend")
-          .attr("transform", function (d, i) {return "translate(0," + i * 60 + ")"})
+          .attr("transform", function (d, i) {return "translate(0," + i * 90 + ")"})
 
       legend.append("circle")
           .attr("cx", 500)
           .attr("cy", -5)
-          .attr("r", 25 )
+          .attr("r", 42 )
           .style("fill", d=>colorScale(d.cand))
           .style("opacity", d=>d.voteShare / 100)
 
@@ -711,16 +751,16 @@
           .attr("x", 7/2)
           .attr("y", 7/2)
           .style("fill", "Black")
-          .style("font-size", 20)
+          .style("font-size", 30)
           .attr("font-weight",700)
           .text(d=>d.cand)
 
         legend.append("text")
           .attr("class", "legend-text")
           .attr("x", 500)
-          .attr("y", 0)
+          .attr("y", 5)
           .style("fill", "Black")
-          .style("font-size", 15)
+          .style("font-size", 30)
           .attr("font-weight",700)
           .text(d=>d.voteShare+"%")
           .attr("text-anchor","middle")
@@ -740,7 +780,7 @@ var category = ["Trump", "Democrats", "3rd Party"]
 
 
       var svg = d3.select("#tableev").append("svg")
-      .attr("viewBox",'0 0 600 300')
+      .attr("viewBox",'0 0 600 400')
       .append('g')
 
       svg.append("text")
@@ -761,7 +801,7 @@ var category = ["Trump", "Democrats", "3rd Party"]
 
       var svgLegend = svg.append('g')
         .attr('class', 'gLegend')
-        .attr("transform", "translate(" + 20 + "," + 100 + ")")
+        .attr("transform", "translate(" + 20 + "," + 120 + ")")
 
     
 
@@ -769,12 +809,12 @@ var category = ["Trump", "Democrats", "3rd Party"]
       .data(data)
       .enter().append('g')
         .attr("class", "legend")
-        .attr("transform", function (d, i) {return "translate(0," + i * 60 + ")"})
+        .attr("transform", function (d, i) {return "translate(0," + i * 90 + ")"})
 
     legend.append("circle")
         .attr("cx", 500)
         .attr("cy", -5)
-        .attr("r", 25 )
+        .attr("r", 42 )
         .style("fill", d=>colorScale(d.cand))
         .style("opacity", d=>d.ev / 538)
 
@@ -783,16 +823,16 @@ var category = ["Trump", "Democrats", "3rd Party"]
         .attr("x", 7/2)
         .attr("y", 7/2)
         .style("fill", "Black")
-        .style("font-size", 20)
+        .style("font-size", 30)
         .attr("font-weight",700)
         .text(d=>d.cand)
 
       legend.append("text")
         .attr("class", "legend-text")
         .attr("x", 500)
-        .attr("y", 0)
+        .attr("y", 5)
         .style("fill", "Black")
-        .style("font-size", 15)
+        .style("font-size", 30)
         .attr("font-weight",700)
         .text(d=>d.ev)
         .attr("text-anchor","middle")

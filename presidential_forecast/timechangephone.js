@@ -1,12 +1,12 @@
-var glines2
+var glines
       var mouseG
       var tooltip
       var parseDate = d3.timeParse("%Y-%m-%d")
       var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"]
   
       var margin = {top: 20, right: 20, bottom: 0, left: 40}
-      var width4 = 1200 - margin.left - margin.right
-      var height4 = 450 - margin.top - margin.bottom
+      var width6 = 1200 - margin.left - margin.right
+      var heigh6 = 700 - margin.top - margin.bottom
   
       var lineOpacity = .8
       var lineStroke = "4px"
@@ -54,15 +54,15 @@ var glines2
         console.log(maxYValue);
         var xScale = d3.scaleTime()
           .domain([mindate,maxdate])
-          .range([0, width4])
+          .range([0, width6])
   
         
   
         var yScale = d3.scaleLinear()  
-          .range([height4, 0]);
+          .range([heigh6, 0]);
   
-        var svg = d3.select("#chart1").append("svg")
-          .attr("viewBox",'0 0 1200 550')
+        var svg = d3.select("#chart2").append("svg")
+          .attr("viewBox",'-40 0 1280 750')
           .append('g')
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
   
@@ -74,8 +74,8 @@ var glines2
         .attr("class", "myYaxis")
         svg.append("g")
           .attr("class", "x axis")
-          .attr("transform", `translate(0, ${height4})`)
-          .call(xAxis
+          .attr("transform", `translate(0, ${heigh6})`)
+          .call(xAxis.ticks(4)
             .tickFormat(d3.timeFormat("%b")))
           .call(g => {
             var years = xScale.ticks(d3.timeYear.every(1))
@@ -84,7 +84,7 @@ var glines2
               .style("text-anchor", "right")
               .attr("y", axisPad)
               .attr('fill', 'black')
-                .attr('font-size','18')
+                .attr('font-size','25')
                 .attr('font-weight',700)
             g.selectAll("line").remove()
               
@@ -110,7 +110,7 @@ var glines2
         renderChart(1) // inital chart render (set default to Bidding Exercise 1 data)
   
         // Update chart when radio button is selected
-        d3.selectAll(("input[name='dataPoint1']")).on('change', function(){
+        d3.selectAll(("input[name='dataPoint']")).on('change', function(){
           updateChart(this.value)
         })
   
@@ -129,7 +129,7 @@ var glines2
             g.selectAll("text")
             .style("text-anchor", "end")
             .attr('fill', 'black')
-            .attr('font-size', '18')
+            .attr('font-size', '25')
             .attr('font-weight',700)
     
             g.selectAll("line")
@@ -149,7 +149,7 @@ var glines2
             .key(d=>d.candidate)
             .entries(resNew)
   
-          glines2.select('.line') //select line path within line-group (which represents a vehicle category), then bind new data 
+          glines.select('.line') //select line path within line-group (which represents a vehicle category), then bind new data 
             .data(res_nested)
             .transition().duration(1000)
             .attr('d', function(d) {
@@ -181,7 +181,7 @@ var glines2
             g.selectAll("text")
             .style("text-anchor", "end")
             .attr('fill', 'black')
-            .attr('font-size', '18')
+            .attr('font-size', '25')
             .attr('font-weight',700)
     
             g.selectAll("line")
@@ -203,12 +203,12 @@ var glines2
           var lines = svg.append('g')
             .attr('class', 'lines')
   
-          glines2 = lines.selectAll('.line-group')
+          glines = lines.selectAll('.line-group')
             .data(res_nested).enter()
             .append('g')
             .attr('class', 'line-group')
   
-          glines2  
+          glines  
             .append('path')
               .attr('class', 'line')  
               .attr('d', d => line(d.values))
@@ -234,7 +234,7 @@ var glines2
             //.attr("r", 2)
   
           // CREATE HOVER TOOLTIP WITH VERTICAL LINE //
-          tooltip = d3.select("#chart1").append("div")
+          tooltip = d3.select("#chart2").append("div")
             .attr('id', 'tooltip')
             .style('position', 'absolute')
             .style("background-color","white")
@@ -272,8 +272,8 @@ var glines2
             .style("opacity", "0");
   
           mouseG.append('svg:rect') // append a rect to catch mouse movements on canvas
-            .attr('width', width4) 
-            .attr('height', height4)
+            .attr('width', width6) 
+            .attr('height', heigh6)
             .attr('fill', 'none')
             .attr('pointer-events', 'all')
             .on('mouseout', function () { // on mouse out hide line, circles and text
@@ -308,7 +308,7 @@ var glines2
   
                   d3.select(".mouse-line")
                     .attr("d", function () {
-                      var data = "M" + xScale(d.values[idx].date) + "," + (height4);
+                      var data = "M" + xScale(d.values[idx].date) + "," + (heigh6);
                       data += " " + xScale(d.values[idx].date) + "," + 0;
                       return data;
                     });

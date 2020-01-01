@@ -159,7 +159,18 @@ div.tooltip {
   #smallprojected{
     display: inline;
   }
-  
+  #comptime{
+    display:none;
+  }
+  #phonetime{
+    display:inline;
+  }
+#bubblemap{
+    display:none;
+  }
+  #bubblemap2{
+    display:inline;
+  }
 }
 @media only screen and (min-width:851px){
 
@@ -178,5 +189,16 @@ div.tooltip {
   #smallprojected{
     display: none;
   }
-  
+  #phonetime{
+    display:none;
+  }
+  #comptime{
+    display:inline;
+  }
+  #bubblemap{
+    display:inline;
+  }
+  #bubblemap2{
+    display:none;
+  }
 } 
