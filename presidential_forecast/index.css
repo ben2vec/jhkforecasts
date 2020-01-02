@@ -159,16 +159,17 @@ div.tooltip {
   #smallprojected{
     display: inline;
   }
-  #comptime{
-    display:none;
-  }
-  #phonetime{
-    display:inline;
-  }
+ 
 #bubblemap{
     display:none;
   }
   #bubblemap2{
+    display:inline;
+  }
+  .computer{
+    display:none;
+  }
+  .phone{
     display:inline;
   }
 }
@@ -189,16 +190,17 @@ div.tooltip {
   #smallprojected{
     display: none;
   }
-  #phonetime{
-    display:none;
-  }
-  #comptime{
-    display:inline;
-  }
+  
   #bubblemap{
     display:inline;
   }
   #bubblemap2{
+    display:none;
+  }
+  .computer{
+    display:inline;
+  }
+  .phone{
     display:none;
   }
 } 

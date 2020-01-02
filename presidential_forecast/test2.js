@@ -9,7 +9,7 @@ var category = ["Trump", "Democrats", "3rd Party"]
         var data = data.filter(function(d){return d.measure == 'margin';})
 
         var svg = d3.select("#margin").append("svg")
-        .attr("viewBox",'0 0 550 600')
+        .attr("viewBox",'0 0 620 600')
         .append('g')
 
         svg.append("text")
@@ -22,7 +22,7 @@ var category = ["Trump", "Democrats", "3rd Party"]
 
         svg.append("line")
         .attr("x1",0)
-        .attr("x2",500)
+        .attr("x2",600)
         .attr("y1",60)
         .attr("y2",60)
         .attr("stroke-width",1)
@@ -63,11 +63,21 @@ var category = ["Trump", "Democrats", "3rd Party"]
 
         legend.append("text")
         .attr("class", "legend-text")
-        .attr("x", 110)
+        .attr("x", 520)
         .attr("y", 0)
-        .style("fill","black")
+        .style("fill",d=>d.percentage > 0?"#FF6060":"#0091FF")
         .style("font-size", 15)
         .attr("font-weight",700)
-        .text(d=>Math.abs(d.percentage)+"%")
+        .text(d=>d.percentage > 0 ? "R+ " +Math.abs(d.percentage)+"%":"D+ "+Math.abs(d.percentage)+"%")
         .attr("text-anchor","start")
+
+        legend.append("line")
+        .attr("x1",0)
+        .attr("x2",600)
+        .attr("y1",20)
+        .attr("y2",20)
+        .attr("stroke-width",1)
+        .attr("stroke","#E2E2E2")
+
+
       });

@@ -1,14 +1,14 @@
 var glines
       var mouseG
       var tooltip
-      var parseDate = d3.timeParse("%Y-%m-%d")
+      var parseDate = d3.timeParse("%Y-%m-%d %H:%M:%S")
       var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"]
   
       var margin = {top: 20, right: 20, bottom: 0, left: 40}
       var width6 = 1200 - margin.left - margin.right
-      var heigh6 = 700 - margin.top - margin.bottom
+      var height6 = 600 - margin.top - margin.bottom
   
-      var lineOpacity = .8
+      var lineOpacity = 1
       var lineStroke = "4px"
   
       var axisPad = 12 // axis formatting
@@ -59,10 +59,10 @@ var glines
         
   
         var yScale = d3.scaleLinear()  
-          .range([heigh6, 0]);
+          .range([height6, 0]);
   
         var svg = d3.select("#chart2").append("svg")
-          .attr("viewBox",'-40 0 1280 750')
+          .attr("viewBox",'-40 0 1280 650')
           .append('g')
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
   
@@ -74,7 +74,7 @@ var glines
         .attr("class", "myYaxis")
         svg.append("g")
           .attr("class", "x axis")
-          .attr("transform", `translate(0, ${heigh6})`)
+          .attr("transform", `translate(0, ${height6})`)
           .call(xAxis.ticks(4)
             .tickFormat(d3.timeFormat("%b")))
           .call(g => {
@@ -273,7 +273,7 @@ var glines
   
           mouseG.append('svg:rect') // append a rect to catch mouse movements on canvas
             .attr('width', width6) 
-            .attr('height', heigh6)
+            .attr('height', height6)
             .attr('fill', 'none')
             .attr('pointer-events', 'all')
             .on('mouseout', function () { // on mouse out hide line, circles and text
@@ -308,7 +308,7 @@ var glines
   
                   d3.select(".mouse-line")
                     .attr("d", function () {
-                      var data = "M" + xScale(d.values[idx].date) + "," + (heigh6);
+                      var data = "M" + xScale(d.values[idx].date) + "," + (height6);
                       data += " " + xScale(d.values[idx].date) + "," + 0;
                       return data;
                     });

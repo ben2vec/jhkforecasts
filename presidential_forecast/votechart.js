@@ -13,7 +13,7 @@ var category = ["Trump", "Democrats", "3rd Party"]
       var svg = d3.select("#votechart").append("svg")
             .attr("viewBox", '0 0 820 300')
 
-
+    
         
 
             svg.append("line")
@@ -161,7 +161,7 @@ var category = ["Trump", "Democrats", "3rd Party"]
                     .style("opacity",1)
         
         svg.append("line")
-        .attr("x1",0)
+        .attr("x1",200)
         .attr("y1",275)
         .attr("x2",800)
         .attr("y2",275)
@@ -185,7 +185,7 @@ var category = ["Trump", "Democrats", "3rd Party"]
         .attr("stroke","black")
 
         svg.append("line")
-        .attr("x1",0)
+        .attr("x1",200)
         .attr("y1",50)
         .attr("x2",800)
         .attr("y2",50)

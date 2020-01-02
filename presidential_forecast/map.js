@@ -112,7 +112,7 @@
         tool_tip.show();
         var tipSVG = d3.select("#tipDiv")
           .append("svg")
-          .attr("width", 150)
+          .attr("width", 175)
       .attr("height", 120)
       ;
       
