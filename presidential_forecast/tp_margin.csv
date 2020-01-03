@@ -1,14 +1,14 @@
 state,measure,percentage,width,abs,x
-Wisconsin,tippingpoint,5.7,350.0,5.7,0.0
-Florida,tippingpoint,5.5,337.719298245614,5.5,0.0
-Michigan,tippingpoint,5.2,319.29824561403507,5.2,0.0
-North Carolina,tippingpoint,5.2,319.29824561403507,5.2,0.0
-Pennsylvania,tippingpoint,5.2,319.29824561403507,5.2,0.0
-Arizona,tippingpoint,4.7,288.5964912280702,4.7,0.0
-Nevada,tippingpoint,4.6,282.45614035087715,4.6,0.0
-Iowa,tippingpoint,4.6,282.45614035087715,4.6,0.0
-New Hampshire,tippingpoint,4.6,282.45614035087715,4.6,0.0
-Minnesota,tippingpoint,4.5,276.3157894736842,4.5,0.0
+Pennsylvania,tippingpoint,5.4,350.0,5.4,0.0
+Wisconsin,tippingpoint,5.3,343.5185185185185,5.3,0.0
+North Carolina,tippingpoint,5.1,330.5555555555555,5.1,0.0
+Florida,tippingpoint,5.1,330.5555555555555,5.1,0.0
+New Hampshire,tippingpoint,5.1,330.5555555555555,5.1,0.0
+Nevada,tippingpoint,4.9,317.5925925925926,4.9,0.0
+Michigan,tippingpoint,4.9,317.5925925925926,4.9,0.0
+Arizona,tippingpoint,4.8,311.1111111111111,4.8,0.0
+Iowa,tippingpoint,4.7,304.6296296296296,4.7,0.0
+Maine,tippingpoint,4.2,272.22222222222223,4.2,0.0
 Wisconsin,margin,-0.5,22.435897435897438,0.5,302.56410256410254
 Florida,margin,0.6,26.923076923076923,0.6,325.0
 Pennsylvania,margin,-2.0,89.74358974358975,2.0,235.25641025641025

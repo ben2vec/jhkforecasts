@@ -1,17 +1,15 @@
-
-    // since Category B and E are really close to each other, assign them diverging colors
 var gopScale = d3.scaleLinear()
       .domain([20,80])
       .range(["white", "#FF6060"]);
-
+var height10= 560;
 var demScale = d3.scaleLinear()
       .domain([20,80])
       .range(["white", "#0091FF"]);
 
       d3.csv("polls.csv", function(error, data){
 
-        var data = data.filter(function(d){return d.state == 'Wisconsin';})
-
+        var data = data.filter(function(d){return d.state == keyState;})
+       
 
       var data = data.map((d,i) => {
           return {
@@ -26,8 +24,8 @@ var demScale = d3.scaleLinear()
           }
         })
         
-        var svg = d3.select("#polls").append("svg")
-        .attr("viewBox",'-100 0 1150 560')
+        var svg = d3.select("#more").append("svg")
+        .attr("viewBox","-100 0 1150 900" )
         .append('g')
 
 
