@@ -60,7 +60,7 @@ d3.csv("votecalcs.csv", function (error, data) {
 
   d3.csv("Sheet2.csv", function (error, data) {
 
-    var data = data.filter(function (d) { return d.state == 'Wisconsin'; })
+    var data = data.filter(function (d) { return d.state == keyState; })
 
     svg.selectAll("margin")
       .data(data)
