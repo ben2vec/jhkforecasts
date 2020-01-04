@@ -48,7 +48,7 @@ d3.csv("bubblemap.csv", function (error, data) {
 
   var tool_tip = d3.tip()
     .attr("class", "d3-tip")
-    .offset([-120, -30])
+    .offset([-150, -30])
     .html("<div id='tipDiv'></div>");
 
   svg.call(tool_tip);
@@ -85,7 +85,7 @@ d3.csv("bubblemap.csv", function (error, data) {
     .data(data)
     .enter()
     .append("a")
-    .attr("xlink:href", function (d) { return d.state })
+    .attr("xlink:href", d=> d.state+".html")
     .append("circle")
     .attr("cx", d => x(d.xValue))
     .attr("cy", d => y(d.yValue))
