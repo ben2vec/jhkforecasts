@@ -1,4 +1,4 @@
- h1{ font-family: brandon-grotesque, sans-serif;
+h1{ font-family: brandon-grotesque, sans-serif;
   font-weight: inherit;
   font-style: inherit;}  
  h2{ font-family: brandon-grotesque, sans-serif;
@@ -13,9 +13,9 @@
  h5{ font-family: brandon-grotesque, sans-serif;
    font-weight: in;
    font-style: inherit;}
- p{ font-family: brandon-grotesque, sans-serif;
-   font-weight: inherit;
-   font-style: inherit;}
+   p{ font-family: brandon-grotesque, sans-serif;
+    font-weight: inherit;
+     font-style: inherit;}
  a{text-decoration:inherit;
   color: black;
 
@@ -38,12 +38,16 @@
   .axis path,
   .axis line {
     fill: none;
-    stroke: none;
+    stroke: black;
 
   }
   
   .x.axis path {
-    display: none;
+    display: ruby-base-container;
+  }
+
+  .y.axis path {
+    stroke:black;
   }
   
   
@@ -52,7 +56,10 @@
     stroke-width: 3px;
     stroke-linecap: round;
   }
-  
+  .rect {
+    fill: inherit;
+    stroke-width: 1;
+  }
   
 
     .header {
@@ -71,7 +78,7 @@
       margin-right: 10px;
       font-family: brandon-grotesque, sans-serif;
       font-weight: 500;
-      font-size: 12px;
+      font-size: 10;
       }
       .form-check-label {
       font-size: 0.8em;
@@ -90,21 +97,110 @@
     .radio-toolbar label {
         display: inline-block;
         background-color:none;
-        padding: 10px 20px;
+        padding:5px 5px;
         font-family: brandon-grotesque,sans-serif;
         font-size: 16px;
-        border: none;
-        border-radius: 4px;
+        border: black;
     }
     
     .radio-toolbar label:hover {
-      background-color: rgb(198, 201, 243);
+      background-color: rgb(184, 184, 184);
     }
     
     
     
     .radio-toolbar input[type="radio"]:checked + label {
-        background-color: rgb(122, 176, 238);
-        border-color: rgb(29, 89, 179);
+        background-color: rgb(204, 204, 204);
+        stroke: rgb(0, 0, 0);
+        stroke-width: 1px;
     }
-   
+div.tooltip {	
+      position: absolute;			
+      text-align: center;			
+      width: 100px;					
+      height: 100px;					
+      padding: 2px;				
+      font-family: brandon-grotesque,sans-serif;	
+      font-weight: 700 ;	
+      background:white;	
+      stroke-width: 1;		
+      stroke: black;
+      border-radius: 8px;			
+      pointer-events: none;			
+  }
+
+
+  .d3-tip {
+    line-height: 1;
+    font-family: brandon-grotesque,sans-serif;	
+    padding: 0px;
+    background:white;
+    border-radius: 8px;
+    border-color: black;
+    border-width: 1px;
+    border: black;
+    font-size: 12px;
+    stroke-width: 2px;
+  }
+  
+@media only screen and (max-width:850px){
+  #tipDiv{
+    display: none;
+  }
+  #bigmenu{
+    display: none;
+  }
+  #smallmenu{
+    display: inline;
+  }
+  #bigprojected{
+    display: none;
+  }
+  #smallprojected{
+    display: inline;
+  }
+ 
+#bubblemap{
+    display:none;
+  }
+  #bubblemap2{
+    display:inline;
+  }
+  .computer{
+    display:none;
+  }
+  .phone{
+    display:inline;
+  }
+}
+@media only screen and (min-width:851px){
+
+  #tipDiv{
+    display: inline;
+  }
+  #bigmenu{
+    display: inline;
+  }
+  #smallmenu{
+    display: none;
+  }
+  #bigprojected{
+    display: inline;
+  }
+  #smallprojected{
+    display: none;
+  }
+  
+  #bubblemap{
+    display:inline;
+  }
+  #bubblemap2{
+    display:none;
+  }
+  .computer{
+    display:inline;
+  }
+  .phone{
+    display:none;
+  }
+} 

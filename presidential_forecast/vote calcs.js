@@ -44,10 +44,10 @@ d3.csv("votecalcs.csv", function (error, data) {
     .attr("text-anchor", "middle")
 
   legend.append("text")
-    .text(d => d.margin > 0 ? "R+" + d.margin + "%" : "D+" + Math.abs(d.margin) + "%")
+    .text(d => d.margin == 0 ? "-": d.margin >0 ? "R+" + d.margin + "%" : "D+" + Math.abs(d.margin) + "%")
     .attr("x", 400)
     .attr("y", 50)
-    .style("fill", d => d.margin > 0 ? "#FF6060" : "#0091FF")
+    .style("fill", d => d.margin == 0 ? "black": d.margin >0 ? "#FF6060" : "#0091FF")
     .style("font-size", 20)
     .attr("font-weight", 700)
     .attr("text-anchor", "middle")

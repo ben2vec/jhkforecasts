@@ -67,7 +67,7 @@ d3.csv("timechange.csv", function (error, data) {
         .append('g')
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
     svg.append("text")
-        .text("Win Alabama")
+        .text("Win")
         .attr("x", 600)
         .attr("y", -20)
         .attr("fill", "black")
