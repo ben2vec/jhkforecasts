@@ -61,7 +61,12 @@ d3.csv("polls.csv", function (error, data) {
     .text(d => d.Pollster)
     .attr("text-anchor", "start")
 
-
+  legend.append("rect")
+    .attr("x", 275)
+    .attr("y", -30)
+    .attr("width", 1000)
+    .attr("height", 50)
+    .style("fill", "white")
 
 
   legend.append("text")
