@@ -6,24 +6,18 @@ var demScale = d3.scaleLinear()
   .domain([0, 50])
   .range(["white", "#0091FF"]);
 
-var demScale = d3.scaleLinear()
-  .domain([0, 50])
-  .range(["white", "#0091FF"]);
 
-d3.csv("polls.csv", function (error, data) {
 
-  
+d3.csv("Sheet1.csv", function (error, data) {
 
-  var data = data.filter(function (d) { return d.State == keyState; })
+
+
+  var data = data.filter(function (d) { return d.state == keyState; })
 
 
   var data = data.map((d, i) => {
     return {
-      Pollster: d.Pollster,
-      Grade: d.Grade,
-      Sample: d.Sample,
-      Date: d.Date,
-      weight: d.weight,
+      category: d.category,
       Biden: +d.Biden,
       Bloomberg: +d.Bloomberg,
       Booker: +d.Booker,
@@ -33,22 +27,38 @@ d3.csv("polls.csv", function (error, data) {
       Steyer: +d.Steyer,
       Warren: +d.Warren,
       Yang: +d.Yang,
-
+      weight: +d.weight,
+      Bidendel: +d.Bidendel,
+      Bloombergdel: +d.Bloombergdel,
+      Bookerdel: +d.Bookerdel,
+      Buttigiegdel: +d.Buttigiegdel,
+      Klobuchardel: +d.Klobuchardel,
+      Sandersdel: +d.Sandersdel,
+      Steyerdel: +d.Steyerdel,
+      Warrendel: +d.Warrendel,
+      Yangdel: +d.Yangdel,
+      transition: d.transition,
+      delegatecount: d.delegatecount,
     }
   })
 
-  var svg = d3.select("#polls").append("svg")
-    .attr("viewBox", "-50 0 1050 560")
+  var svg = d3.select("#votecalcs").append("svg")
+    .attr("viewBox", "-25 0 1000 560")
     .append('g')
 
   var maxweight = d3.max(data, d => d.weight)
 
   console.log(maxweight);
 
-  var weightScale = d3.scaleLinear()
-    .domain([0, 50 ])
+  
+
+  var weightscale = d3.scaleLinear()
+    .domain([0, 100])
     .range(["white", "#00C181"]);
 
+  var delScale = d3.scaleLinear()
+    .domain([0, d3.max(data,d=> d.delegatecount) ])
+    .range(["white", "#002E66"]);
 
   var svgLegend = svg.append('g')
     .attr('class', 'gLegend')
@@ -66,57 +76,21 @@ d3.csv("polls.csv", function (error, data) {
 
   legend.append("text")
     .attr("class", "legend-text")
-    .attr("x", 20)
+    .attr("x", 200)
     .attr("y", 0)
     .style("fill", "Black")
     .style("font-size", 15)
     .attr("font-weight", 500)
-    .text(d => d.Pollster)
-    .attr("text-anchor", "start")
-
-  legend.append("rect")
-    .attr("x", 275)
-    .attr("y", -30)
-    .attr("width", 1000)
-    .attr("height", 50)
-    .style("fill", "white")
-
-
-  legend.append("text")
-    .attr("class", "legend-text")
-    .attr("x", 300)
-    .attr("y", 0)
-    .style("fill", "Black")
-    .style("font-size", 15)
-    .attr("font-weight", 700)
-    .text(d => d.Grade)
+    .text(d => d.category)
     .attr("text-anchor", "middle")
 
-  legend.append("text")
-    .attr("class", "legend-text")
-    .attr("x", 350)
-    .attr("y", 0)
-    .style("fill", "Black")
-    .style("font-size", 10)
-    .attr("font-weight", 700)
-    .text(d => d.Date)
-    .attr("text-anchor", "middle")
 
-  legend.append("text")
-    .attr("class", "legend-text")
-    .attr("x", 395)
-    .attr("y", 0)
-    .style("fill", "Black")
-    .style("font-size", 10)
-    .attr("font-weight", 700)
-    .text(d => d.Sample)
-    .attr("text-anchor", "middle")
 
   legend.append("circle")
     .attr("cx", 440)
     .attr("cy", -3.5)
-    .attr("r", 15)
-    .attr("fill", d => weightScale(d.weight))
+    .attr("r", 20)
+    .attr("fill", d => weightscale(d.weight))
 
   legend.append("text")
     .attr("class", "legend-text")
@@ -125,7 +99,7 @@ d3.csv("polls.csv", function (error, data) {
     .style("fill", "Black")
     .style("font-size", 10)
     .attr("font-weight", 700)
-    .text(d => d.weight)
+    .text(d => d.weight == 0 ? "" : d.weight + "%")
     .attr("text-anchor", "middle")
 
 
@@ -199,7 +173,7 @@ d3.csv("polls.csv", function (error, data) {
     .style("fill", "Black")
     .style("font-size", 15)
     .attr("font-weight", 700)
-    .text(d => d.Biden + "%")
+    .text(d => d.Biden == 0 ? "" : d.Biden + "%")
     .attr("text-anchor", "middle")
   legend.append("text")
     .attr("class", "legend-text")
@@ -208,7 +182,7 @@ d3.csv("polls.csv", function (error, data) {
     .style("fill", "Black")
     .style("font-size", 15)
     .attr("font-weight", 700)
-    .text(d => d.Bloomberg + "%")
+    .text(d => d.Bloomberg == 0 ? "" : d.Bloomberg + "%")
     .attr("text-anchor", "middle")
   legend.append("text")
     .attr("class", "legend-text")
@@ -217,7 +191,7 @@ d3.csv("polls.csv", function (error, data) {
     .style("fill", "Black")
     .style("font-size", 15)
     .attr("font-weight", 700)
-    .text(d => d.Booker + "%")
+    .text(d => d.Booker == 0 ? "" : d.Booker + "%")
     .attr("text-anchor", "middle")
   legend.append("text")
     .attr("class", "legend-text")
@@ -226,7 +200,7 @@ d3.csv("polls.csv", function (error, data) {
     .style("fill", "Black")
     .style("font-size", 15)
     .attr("font-weight", 700)
-    .text(d => d.Buttigieg + "%")
+    .text(d => d.Buttigieg == 0 ? "" : d.Buttigieg + "%")
     .attr("text-anchor", "middle")
   legend.append("text")
     .attr("class", "legend-text")
@@ -235,7 +209,7 @@ d3.csv("polls.csv", function (error, data) {
     .style("fill", "Black")
     .style("font-size", 15)
     .attr("font-weight", 700)
-    .text(d => d.Klobuchar + "%")
+    .text(d => d.Klobuchar == 0 ? "" : d.Klobuchar + "%")
     .attr("text-anchor", "middle")
   legend.append("text")
     .attr("class", "legend-text")
@@ -244,7 +218,7 @@ d3.csv("polls.csv", function (error, data) {
     .style("fill", "Black")
     .style("font-size", 15)
     .attr("font-weight", 700)
-    .text(d => d.Sanders + "%")
+    .text(d => d.Sanders == 0 ? "" : d.Sanders + "%")
     .attr("text-anchor", "middle")
   legend.append("text")
     .attr("class", "legend-text")
@@ -253,7 +227,7 @@ d3.csv("polls.csv", function (error, data) {
     .style("fill", "Black")
     .style("font-size", 15)
     .attr("font-weight", 700)
-    .text(d => d.Steyer + "%")
+    .text(d => d.Steyer == 0 ? "" : d.Steyer + "%")
     .attr("text-anchor", "middle")
   legend.append("text")
     .attr("class", "legend-text")
@@ -262,7 +236,7 @@ d3.csv("polls.csv", function (error, data) {
     .style("fill", "Black")
     .style("font-size", 15)
     .attr("font-weight", 700)
-    .text(d => d.Warren + "%")
+    .text(d => d.Warren == 0 ? "" : d.Warren + "%")
     .attr("text-anchor", "middle")
   legend.append("text")
     .attr("class", "legend-text")
@@ -271,47 +245,14 @@ d3.csv("polls.csv", function (error, data) {
     .style("fill", "Black")
     .style("font-size", 15)
     .attr("font-weight", 700)
-    .text(d => d.Yang + "%")
+    .text(d => d.Yang == 0 ? "" : d.Yang + "%")
     .attr("text-anchor", "middle")
 
 
 
-  svg.append("text")
-    .attr("x", 20)
-    .attr("y", 40)
-    .style("fill", "Black")
-    .style("font-size", 15)
-    .attr("font-weight", 500)
-    .text("Pollster")
-    .attr("text-anchor", "start")
 
 
-  svg.append("text")
-    .attr("x", 300)
-    .attr("y", 40)
-    .style("fill", "Black")
-    .style("font-size", 15)
-    .attr("font-weight", 500)
-    .text("Grade")
-    .attr("text-anchor", "middle")
-
-  svg.append("text")
-    .attr("x", 350)
-    .attr("y", 40)
-    .style("fill", "Black")
-    .style("font-size", 15)
-    .attr("font-weight", 500)
-    .text("Date")
-    .attr("text-anchor", "middle")
-
-  svg.append("text")
-    .attr("x", 440)
-    .attr("y", 40)
-    .style("fill", "Black")
-    .style("font-size", 12)
-    .attr("font-weight", 500)
-    .text("Weight")
-    .attr("text-anchor", "middle")
+  
   svg.append("text")
     .attr("x", 500)
     .attr("y", 40)
@@ -400,4 +341,160 @@ d3.csv("polls.csv", function (error, data) {
     .attr("y2", 60)
     .attr("stroke-width", 2)
     .attr("stroke", "black")
+
+  
+
+    legend.append("rect")
+    .attr("x", 475)
+    .attr("y", -30)
+    .attr("width", 50)
+    .attr("height", 50)
+    .style("fill", d => d.Bidendel == 0 ? "none" : delScale(d.Bidendel))
+
+  legend.append("rect")
+    .attr("x", 525)
+    .attr("y", -30)
+    .attr("width", 50)
+    .attr("height", 50)
+    .style("fill", d => d.Buttigiegdel == 0 ? "none" : delScale(d.Bloomberg))
+  legend.append("rect")
+    .attr("x", 575)
+    .attr("y", -30)
+    .attr("width", 50)
+    .attr("height", 50)
+    .style("fill", d => d.Bookerdel == 0 ? "none" : delScale(d.Bookerdel))
+
+  legend.append("rect")
+    .attr("x", 625)
+    .attr("y", -30)
+    .attr("width", 50)
+    .attr("height", 50)
+    .style("fill", d => d.Buttigiegdel == 0 ? "none" : delScale(d.Buttigiegdel))
+
+  legend.append("rect")
+    .attr("x", 675)
+    .attr("y", -30)
+    .attr("width", 50)
+    .attr("height", 50)
+    .style("fill", d => d.Klobuchardel == 0 ? "none" : delScale(d.Klobuchardel))
+
+  legend.append("rect")
+    .attr("x", 725)
+    .attr("y", -30)
+    .attr("width", 50)
+    .attr("height", 50)
+    .style("fill", d => d.Sandersdel == 0 ? "none" : delScale(d.Sandersdel))
+
+  legend.append("rect")
+    .attr("x", 775)
+    .attr("y", -30)
+    .attr("width", 50)
+    .attr("height", 50)
+    .style("fill", d => d.Steyerdel == 0 ? "none" : delScale(d.Steyerdel))
+
+  legend.append("rect")
+    .attr("x", 825)
+    .attr("y", -30)
+    .attr("width", 50)
+    .attr("height", 50)
+    .style("fill", d => d.Warrendel == 0 ? "none" : delScale(d.Warrendel))
+
+  legend.append("rect")
+    .attr("x", 875)
+    .attr("y", -30)
+    .attr("width", 50)
+    .attr("height", 50)
+    .style("fill", d => d.Yangdel == 0 ? "none" : delScale(d.Yangdel))
+
+  legend.append("text")
+    .attr("class", "legend-text")
+    .attr("x", 500)
+    .attr("y", 0)
+    .style("fill", "Black")
+    .style("font-size", 15)
+    .attr("font-weight", 700)
+    .text(d => d.Bidendel == 0 ? "" : d.Bidendel )
+    .attr("text-anchor", "middle")
+  legend.append("text")
+    .attr("class", "legend-text")
+    .attr("x", 550)
+    .attr("y", 0)
+    .style("fill", "Black")
+    .style("font-size", 15)
+    .attr("font-weight", 700)
+    .text(d => d.Bloombergdel == 0 ? "" : d.Bloombergdel )
+    .attr("text-anchor", "middle")
+  legend.append("text")
+    .attr("class", "legend-text")
+    .attr("x", 600)
+    .attr("y", 0)
+    .style("fill", "Black")
+    .style("font-size", 15)
+    .attr("font-weight", 700)
+    .text(d => d.Bookerdel == 0 ? "" : d.Bookerdel )
+    .attr("text-anchor", "middle")
+  legend.append("text")
+    .attr("class", "legend-text")
+    .attr("x", 650)
+    .attr("y", 0)
+    .style("fill", "Black")
+    .style("font-size", 15)
+    .attr("font-weight", 700)
+    .text(d => d.Buttigiegdel == 0 ? "" : d.Buttigiegdel )
+    .attr("text-anchor", "middle")
+  legend.append("text")
+    .attr("class", "legend-text")
+    .attr("x", 700)
+    .attr("y", 0)
+    .style("fill", "Black")
+    .style("font-size", 15)
+    .attr("font-weight", 700)
+    .text(d => d.Klobuchardel == 0 ? "" : d.Klobuchardel)
+    .attr("text-anchor", "middle")
+  legend.append("text")
+    .attr("class", "legend-text")
+    .attr("x", 750)
+    .attr("y", 0)
+    .style("fill", "Black")
+    .style("font-size", 15)
+    .attr("font-weight", 700)
+    .text(d => d.Sandersdel == 0 ? "" : d.Sandersdel)
+    .attr("text-anchor", "middle")
+  legend.append("text")
+    .attr("class", "legend-text")
+    .attr("x", 800)
+    .attr("y", 0)
+    .style("fill", "Black")
+    .style("font-size", 15)
+    .attr("font-weight", 700)
+    .text(d => d.Steyerdel == 0 ? "" : d.Steyerdel )
+    .attr("text-anchor", "middle")
+  legend.append("text")
+    .attr("class", "legend-text")
+    .attr("x", 850)
+    .attr("y", 0)
+    .style("fill", "Black")
+    .style("font-size", 15)
+    .attr("font-weight", 700)
+    .text(d => d.Warrendel == 0 ? "" : d.Warrendel )
+    .attr("text-anchor", "middle")
+  legend.append("text")
+    .attr("class", "legend-text")
+    .attr("x", 900)
+    .attr("y", 0)
+    .style("fill", "Black")
+    .style("font-size", 15)
+    .attr("font-weight", 700)
+    .text(d => d.Yangdel == 0 ? "" : d.Yangdel )
+    .attr("text-anchor", "middle")
+
+    legend.append("text")
+    .attr("class", "legend-text")
+    .attr("x", 500)
+    .attr("y", 0)
+    .style("fill", "Black")
+    .style("font-size", 20)
+    .attr("font-weight", 500)
+    .text(d => d.transition)
+    .attr("text-anchor", "middle")
 });

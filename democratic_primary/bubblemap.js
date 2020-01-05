@@ -85,7 +85,7 @@ d3.csv("bubblemap.csv", function (error, data) {
     .data(data)
     .enter()
     .append("a")
-    .attr("xlink:href", d=> d.state+".html")
+    .attr("xlink:href", d => d.state + ".html")
     .append("circle")
     .attr("cx", d => x(d.xValue))
     .attr("cy", d => y(d.yValue))
@@ -198,7 +198,7 @@ d3.csv("bubblemap.csv", function (error, data) {
         .attr("fill", color(d.fourth))
         .style("font-weight", "600")
         .style("font-size", "15")
-        .attr("text-anchor","middle")
+        .attr("text-anchor", "middle")
         ;
 
 
@@ -238,6 +238,20 @@ d3.csv("bubblemap.csv", function (error, data) {
     .attr("font-weight", "700")
     .attr("font-size", "20")
     .attr("fill", "black")
+  d3.csv("update.csv", function (error, data) {
 
-
+    svg.selectAll("updated")
+      .data(data)
+      .enter()
+      .append("text")
+      .text(d => d.updated)
+      .attr("x", 200)
+      .attr("y", 20)
+      .attr("fill", "black")
+      .attr("font-size", 10)
+      .attr("fill", "grey")
+      .attr("text-anchor", "middle")
+      .attr("font-weight", 900)
+      .attr("text-decoration","underline")
+  })
 })
