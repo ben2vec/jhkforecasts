@@ -125,7 +125,7 @@ d3.csv("polls.csv", function (error, data) {
     .style("fill", "Black")
     .style("font-size", 10)
     .attr("font-weight", 700)
-    .text(d => d.weight)
+    .text(d => d.weight ==0 ? "-":d.weight)
     .attr("text-anchor", "middle")
 
 

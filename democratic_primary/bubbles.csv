@@ -1,523 +1,523 @@
 state,candidate,win,vote,delegates,color,cx,cy
-Iowa,Biden,24.6,18.6,13,#00FF90,210,100
-New Hampshire,Biden,24.0,18.8,6,#00FF90,210,100
-Nevada,Biden,44.3,26.3,15,#00FF90,100,100
-South Carolina,Biden,86.2,40.8,52,#00FF90,100,100
-Alabama,Biden,87.8,43.2,48,#00FF90,100,100
-American Samoa,Biden,53.9,30.1,3,#00FF90,100,100
-Arkansas,Biden,79.5,39.0,22,#00FF90,100,100
-California,Biden,34.2,23.6,155,#00FF90,100,100
-Colorado,Biden,28.8,22.2,23,#00FF90,210,100
-Democrats Abroad,Biden,53.7,30.1,6,#00FF90,100,100
-Maine,Biden,26.9,21.4,8,#00FF90,210,100
-Massachusetts,Biden,20.2,19.6,27,#00FF90,210,100
-Minnesota,Biden,30.8,21.6,22,#00FF90,100,100
-North Carolina,Biden,77.1,38.1,72,#00FF90,100,100
-Oklahoma,Biden,69.9,35.5,23,#00FF90,100,100
-Tennessee,Biden,79.1,38.7,44,#00FF90,100,100
-Texas,Biden,64.0,32.9,115,#00FF90,100,100
-Utah,Biden,22.6,19.4,9,#00FF90,210,100
-Vermont,Biden,11.2,16.0,4,#00FF90,320,100
-Virginia,Biden,50.7,28.7,44,#00FF90,100,100
-Idaho,Biden,35.8,24.7,10,#00FF90,100,100
-Michigan,Biden,52.3,30.4,56,#00FF90,100,100
-Mississippi,Biden,91.2,46.2,35,#00FF90,100,100
-Missouri,Biden,72.3,36.8,45,#00FF90,100,100
-North Dakota,Biden,42.4,26.3,5,#00FF90,100,100
-Washington,Biden,21.1,19.0,26,#00FF90,320,100
-Northern Marianas,Biden,52.1,30.1,3,#00FF90,100,100
-Ohio,Biden,50.8,29.7,62,#00FF90,100,100
-Arizona,Biden,47.6,29.1,29,#00FF90,100,100
-Florida,Biden,74.0,37.9,143,#00FF90,100,100
-Illinois,Biden,49.3,29.2,67,#00FF90,100,100
-Georgia,Biden,74.1,38.0,73,#00FF90,100,100
-Puerto Rico,Biden,50.2,30.1,23,#00FF90,100,100
-Alaska,Biden,43.9,28.6,6,#00FF90,100,100
-Hawaii,Biden,23.3,20.6,8,#00FF90,210,100
-Louisiana,Biden,85.1,44.6,50,#00FF90,100,100
-Wyoming,Biden,44.6,28.2,6,#00FF90,100,100
-Wisconsin,Biden,34.4,24.5,32,#00FF90,100,100
-Connecticut,Biden,22.7,20.5,19,#00FF90,210,100
-Delaware,Biden,53.9,33.3,10,#00FF90,100,100
-Maryland,Biden,42.9,28.9,41,#00FF90,100,100
-New York,Biden,41.7,27.9,121,#00FF90,100,100
-Pennsylvania,Biden,55.6,33.4,111,#00FF90,100,100
-Rhode Island,Biden,23.8,21.0,8,#00FF90,210,100
-Guam,Biden,45.8,30.1,3,#00FF90,100,100
-Kansas,Biden,33.3,24.6,15,#00FF90,100,100
-Indiana,Biden,33.8,25.2,31,#00FF90,100,100
-Nebraska,Biden,33.2,24.6,11,#00FF90,100,100
-West Virginia,Biden,55.1,33.8,18,#00FF90,100,100
-Kentucky,Biden,44.5,30.3,24,#00FF90,100,100
-Oregon,Biden,27.5,23.0,21,#00FF90,210,100
-District of Columbia,Biden,76.0,44.7,19,#00FF90,100,100
-Montana,Biden,37.4,27.9,8,#00FF90,100,100
-New Jersey,Biden,37.7,27.6,53,#00FF90,100,100
-New Mexico,Biden,23.2,21.2,11,#00FF90,210,100
-South Dakota,Biden,31.1,24.2,5,#00FF90,100,100
-Virgin Islands,Biden,42.3,30.1,3,#00FF90,100,100
-US,Biden,50.4,29.0,1922,#00FF90,100,100
-Iowa,Bloomberg,0.0,3.7,0,#00B050,980,100
-New Hampshire,Bloomberg,0.0,3.7,0,#00B050,980,100
-Nevada,Bloomberg,0.0,3.8,0,#00B050,980,100
-South Carolina,Bloomberg,0.0,4.8,0,#00B050,980,100
-Alabama,Bloomberg,1.0,4.3,0,#00B050,540,100
-American Samoa,Bloomberg,2.1,4.9,0,#00B050,540,100
-Arkansas,Bloomberg,1.2,4.7,0,#00B050,540,100
-California,Bloomberg,3.0,5.5,0,#00B050,650,100
-Colorado,Bloomberg,2.7,4.0,0,#00B050,650,100
-Democrats Abroad,Bloomberg,2.3,4.9,0,#00B050,540,100
-Maine,Bloomberg,1.7,2.9,0,#00B050,650,100
-Massachusetts,Bloomberg,1.9,2.9,0,#00B050,650,100
-Minnesota,Bloomberg,1.9,1.7,0,#00B050,760,100
-North Carolina,Bloomberg,1.4,4.4,0,#00B050,540,100
-Oklahoma,Bloomberg,1.7,4.7,0,#00B050,540,100
-Tennessee,Bloomberg,1.3,4.6,0,#00B050,540,100
-Texas,Bloomberg,2.6,5.9,0,#00B050,540,100
-Utah,Bloomberg,2.4,3.6,0,#00B050,650,100
-Vermont,Bloomberg,1.3,2.8,0,#00B050,760,100
-Virginia,Bloomberg,2.0,3.3,0,#00B050,760,100
-Idaho,Bloomberg,2.3,3.7,0,#00B050,650,100
-Michigan,Bloomberg,1.4,1.8,0,#00B050,870,100
-Mississippi,Bloomberg,0.5,4.0,0,#00B050,540,100
-Missouri,Bloomberg,1.7,4.5,0,#00B050,540,100
-North Dakota,Bloomberg,1.9,1.9,0,#00B050,870,100
-Washington,Bloomberg,2.3,3.6,0,#00B050,650,100
-Northern Marianas,Bloomberg,2.9,4.9,0,#00B050,540,100
-Ohio,Bloomberg,1.6,1.8,0,#00B050,870,100
-Arizona,Bloomberg,1.7,3.0,0,#00B050,650,100
-Florida,Bloomberg,1.7,4.7,0,#00B050,540,100
-Illinois,Bloomberg,1.6,1.0,0,#00B050,870,100
-Georgia,Bloomberg,3.0,8.0,0,#00B050,430,100
-Puerto Rico,Bloomberg,3.1,4.9,0,#00B050,540,100
-Alaska,Bloomberg,2.4,3.3,0,#00B050,650,100
-Hawaii,Bloomberg,2.9,4.0,0,#00B050,650,100
-Louisiana,Bloomberg,1.1,4.2,0,#00B050,540,100
-Wyoming,Bloomberg,2.4,3.4,0,#00B050,650,100
-Wisconsin,Bloomberg,2.7,3.6,0,#00B050,650,100
-Connecticut,Bloomberg,2.8,2.9,0,#00B050,650,100
-Delaware,Bloomberg,1.9,2.2,0,#00B050,650,100
-Maryland,Bloomberg,2.4,3.0,0,#00B050,650,100
-New York,Bloomberg,6.2,8.8,0,#00B050,540,100
-Pennsylvania,Bloomberg,2.1,2.0,0,#00B050,870,100
-Rhode Island,Bloomberg,3.0,3.1,0,#00B050,650,100
-Guam,Bloomberg,3.5,4.9,0,#00B050,540,100
-Kansas,Bloomberg,2.5,1.9,0,#00B050,870,100
-Indiana,Bloomberg,2.5,1.7,0,#00B050,870,100
-Nebraska,Bloomberg,2.7,1.9,0,#00B050,870,100
-West Virginia,Bloomberg,3.5,5.1,0,#00B050,540,100
-Kentucky,Bloomberg,3.4,3.8,0,#00B050,540,100
-Oregon,Bloomberg,2.9,1.9,0,#00B050,870,100
-District of Columbia,Bloomberg,2.0,3.9,0,#00B050,540,100
-Montana,Bloomberg,3.3,3.1,0,#00B050,650,100
-New Jersey,Bloomberg,3.5,2.7,0,#00B050,760,100
-New Mexico,Bloomberg,3.9,3.8,0,#00B050,650,100
-South Dakota,Bloomberg,3.3,1.9,0,#00B050,870,100
-Virgin Islands,Bloomberg,4.3,4.9,0,#00B050,540,100
-US,Bloomberg,1.4,3.7,0,#00B050,540,100
-Iowa,Booker,1.6,2.1,0,#006541,870,100
-New Hampshire,Booker,1.7,2.0,0,#006541,870,100
-Nevada,Booker,1.7,1.8,0,#006541,870,100
-South Carolina,Booker,0.9,3.1,0,#006541,650,100
-Alabama,Booker,0.6,2.8,0,#006541,760,100
+Iowa,Biden,24.4,19.4,11,#00FF90,210,100
+New Hampshire,Biden,24.8,19.7,6,#00FF90,210,100
+Nevada,Biden,45.9,27.9,15,#00FF90,100,100
+South Carolina,Biden,89.3,43.3,52,#00FF90,100,100
+Alabama,Biden,87.4,42.5,49,#00FF90,100,100
+American Samoa,Biden,53.2,29.7,3,#00FF90,100,100
+Arkansas,Biden,79.9,38.6,22,#00FF90,100,100
+California,Biden,35.7,23.9,159,#00FF90,100,100
+Colorado,Biden,29.4,22.4,23,#00FF90,210,100
+Democrats Abroad,Biden,53.0,29.7,6,#00FF90,100,100
+Maine,Biden,25.6,20.7,8,#00FF90,210,100
+Massachusetts,Biden,19.8,19.4,27,#00FF90,210,100
+Minnesota,Biden,31.7,21.7,27,#00FF90,100,100
+North Carolina,Biden,76.5,37.4,98,#00FF90,100,100
+Oklahoma,Biden,70.9,35.3,33,#00FF90,100,100
+Tennessee,Biden,78.4,38.2,45,#00FF90,100,100
+Texas,Biden,65.2,33.2,144,#00FF90,100,100
+Utah,Biden,26.2,20.3,10,#00FF90,210,100
+Vermont,Biden,13.8,16.4,4,#00FF90,320,100
+Virginia,Biden,52.3,28.9,46,#00FF90,100,100
+Idaho,Biden,29.1,23.3,9,#00FF90,210,100
+Michigan,Biden,51.8,29.9,56,#00FF90,100,100
+Mississippi,Biden,90.2,45.0,35,#00FF90,100,100
+Missouri,Biden,72.6,36.5,47,#00FF90,100,100
+North Dakota,Biden,42.2,26.0,5,#00FF90,100,100
+Washington,Biden,25.0,20.3,29,#00FF90,210,100
+Northern Marianas,Biden,51.0,29.7,3,#00FF90,100,100
+Ohio,Biden,50.1,29.4,76,#00FF90,100,100
+Arizona,Biden,48.5,28.9,29,#00FF90,100,100
+Florida,Biden,74.0,37.6,151,#00FF90,100,100
+Illinois,Biden,48.3,28.8,69,#00FF90,100,100
+Georgia,Biden,78.5,39.7,98,#00FF90,100,100
+Puerto Rico,Biden,49.4,29.7,23,#00FF90,100,100
+Alaska,Biden,47.2,29.4,7,#00FF90,100,100
+Hawaii,Biden,29.9,22.7,9,#00FF90,210,100
+Louisiana,Biden,84.6,43.8,51,#00FF90,100,100
+Wyoming,Biden,41.4,27.2,8,#00FF90,100,100
+Wisconsin,Biden,35.0,24.5,31,#00FF90,100,100
+Connecticut,Biden,23.7,20.6,19,#00FF90,320,100
+Delaware,Biden,53.8,33.0,10,#00FF90,100,100
+Maryland,Biden,43.2,28.7,42,#00FF90,100,100
+New York,Biden,42.8,27.8,123,#00FF90,100,100
+Pennsylvania,Biden,53.4,32.6,113,#00FF90,100,100
+Rhode Island,Biden,25.4,21.4,9,#00FF90,100,100
+Guam,Biden,45.3,29.7,3,#00FF90,100,100
+Kansas,Biden,32.1,23.8,15,#00FF90,100,100
+Indiana,Biden,35.5,25.3,32,#00FF90,100,100
+Nebraska,Biden,32.1,23.8,11,#00FF90,100,100
+West Virginia,Biden,48.0,31.0,17,#00FF90,100,100
+Kentucky,Biden,46.6,30.7,25,#00FF90,100,100
+Oregon,Biden,29.5,23.6,22,#00FF90,100,100
+District of Columbia,Biden,74.6,43.7,19,#00FF90,100,100
+Montana,Biden,38.5,27.9,8,#00FF90,100,100
+New Jersey,Biden,38.4,27.7,55,#00FF90,100,100
+New Mexico,Biden,29.1,23.6,13,#00FF90,100,100
+South Dakota,Biden,30.5,23.7,6,#00FF90,100,100
+Virgin Islands,Biden,42.2,29.7,3,#00FF90,100,100
+US,Biden,51.7,28.9,2069,#00FF90,100,100
+Iowa,Bloomberg,0.0,0.0,0,#00B050,980,100
+New Hampshire,Bloomberg,0.0,0.0,0,#00B050,980,100
+Nevada,Bloomberg,0.0,0.0,0,#00B050,980,100
+South Carolina,Bloomberg,0.0,0.0,0,#00B050,980,100
+Alabama,Bloomberg,1.4,7.0,0,#00B050,540,100
+American Samoa,Bloomberg,2.5,5.0,0,#00B050,540,100
+Arkansas,Bloomberg,2.1,7.2,0,#00B050,540,100
+California,Bloomberg,3.7,6.3,0,#00B050,540,100
+Colorado,Bloomberg,3.4,5.8,0,#00B050,540,100
+Democrats Abroad,Bloomberg,2.5,5.0,0,#00B050,540,100
+Maine,Bloomberg,3.0,5.0,0,#00B050,540,100
+Massachusetts,Bloomberg,2.4,4.5,0,#00B050,540,100
+Minnesota,Bloomberg,2.8,3.1,0,#00B050,650,100
+North Carolina,Bloomberg,2.3,6.9,0,#00B050,540,100
+Oklahoma,Bloomberg,3.0,7.0,0,#00B050,540,100
+Tennessee,Bloomberg,2.2,7.1,0,#00B050,540,100
+Texas,Bloomberg,3.5,7.2,0,#00B050,540,100
+Utah,Bloomberg,3.8,5.9,0,#00B050,540,100
+Vermont,Bloomberg,2.4,4.3,0,#00B050,540,100
+Virginia,Bloomberg,3.1,5.3,0,#00B050,540,100
+Idaho,Bloomberg,2.7,5.2,0,#00B050,540,100
+Michigan,Bloomberg,1.9,3.3,0,#00B050,650,100
+Mississippi,Bloomberg,1.1,6.9,0,#00B050,540,100
+Missouri,Bloomberg,2.8,7.0,0,#00B050,540,100
+North Dakota,Bloomberg,2.3,3.0,0,#00B050,650,100
+Washington,Bloomberg,3.6,5.5,0,#00B050,650,100
+Northern Marianas,Bloomberg,3.1,5.0,0,#00B050,540,100
+Ohio,Bloomberg,2.1,3.3,0,#00B050,650,100
+Arizona,Bloomberg,3.0,5.2,0,#00B050,540,100
+Florida,Bloomberg,2.4,6.4,0,#00B050,540,100
+Illinois,Bloomberg,2.1,2.6,0,#00B050,650,100
+Georgia,Bloomberg,3.1,8.0,0,#00B050,430,100
+Puerto Rico,Bloomberg,3.2,5.0,0,#00B050,540,100
+Alaska,Bloomberg,3.4,5.1,0,#00B050,540,100
+Hawaii,Bloomberg,4.5,6.1,0,#00B050,540,100
+Louisiana,Bloomberg,2.0,7.0,0,#00B050,540,100
+Wyoming,Bloomberg,3.4,5.0,0,#00B050,540,100
+Wisconsin,Bloomberg,2.9,2.9,0,#00B050,760,100
+Connecticut,Bloomberg,4.2,4.8,0,#00B050,540,100
+Delaware,Bloomberg,3.0,4.0,0,#00B050,540,100
+Maryland,Bloomberg,4.1,5.0,0,#00B050,540,100
+New York,Bloomberg,7.3,9.8,0,#00B050,430,100
+Pennsylvania,Bloomberg,3.0,3.5,0,#00B050,650,100
+Rhode Island,Bloomberg,4.3,4.9,0,#00B050,540,100
+Guam,Bloomberg,3.7,5.0,0,#00B050,540,100
+Kansas,Bloomberg,3.4,3.4,0,#00B050,650,100
+Indiana,Bloomberg,3.4,3.1,0,#00B050,650,100
+Nebraska,Bloomberg,3.7,3.4,0,#00B050,650,100
+West Virginia,Bloomberg,5.8,7.9,0,#00B050,540,100
+Kentucky,Bloomberg,4.5,6.0,0,#00B050,540,100
+Oregon,Bloomberg,3.9,4.0,0,#00B050,650,100
+District of Columbia,Bloomberg,3.5,7.3,0,#00B050,430,100
+Montana,Bloomberg,4.7,5.4,0,#00B050,540,100
+New Jersey,Bloomberg,4.3,4.3,0,#00B050,650,100
+New Mexico,Bloomberg,5.1,6.0,0,#00B050,540,100
+South Dakota,Bloomberg,3.7,3.0,0,#00B050,760,100
+Virgin Islands,Bloomberg,4.6,5.0,0,#00B050,540,100
+US,Bloomberg,2.6,4.9,0,#00B050,540,100
+Iowa,Booker,1.4,2.3,0,#006541,870,100
+New Hampshire,Booker,1.5,2.2,0,#006541,870,100
+Nevada,Booker,1.3,2.0,0,#006541,870,100
+South Carolina,Booker,0.5,3.2,0,#006541,760,100
+Alabama,Booker,0.7,2.6,0,#006541,760,100
 American Samoa,Booker,1.4,2.4,0,#006541,870,100
-Arkansas,Booker,0.8,2.4,0,#006541,760,100
-California,Booker,1.7,2.2,0,#006541,760,100
-Colorado,Booker,1.6,2.1,0,#006541,870,100
+Arkansas,Booker,0.9,2.5,0,#006541,760,100
+California,Booker,2.1,2.4,0,#006541,760,100
+Colorado,Booker,1.5,2.0,0,#006541,870,100
 Democrats Abroad,Booker,1.4,2.4,0,#006541,870,100
-Maine,Booker,1.7,2.0,0,#006541,760,100
-Massachusetts,Booker,1.3,1.5,0,#006541,870,100
-Minnesota,Booker,2.0,1.7,0,#006541,870,100
-North Carolina,Booker,0.7,2.1,0,#006541,760,100
+Maine,Booker,1.8,1.9,0,#006541,870,100
+Massachusetts,Booker,1.5,1.7,0,#006541,870,100
+Minnesota,Booker,2.0,1.8,0,#006541,870,100
+North Carolina,Booker,0.8,2.1,0,#006541,870,100
 Oklahoma,Booker,1.0,1.9,0,#006541,870,100
-Tennessee,Booker,0.9,2.6,0,#006541,760,100
-Texas,Booker,1.1,2.0,0,#006541,870,100
-Utah,Booker,1.9,2.3,0,#006541,870,100
-Vermont,Booker,1.3,1.7,0,#006541,870,100
-Virginia,Booker,1.7,2.2,0,#006541,870,100
-Idaho,Booker,1.9,2.3,0,#006541,760,100
-Michigan,Booker,1.3,1.9,0,#006541,760,100
-Mississippi,Booker,0.4,2.9,0,#006541,760,100
-Missouri,Booker,1.5,2.4,0,#006541,760,100
-North Dakota,Booker,1.9,2.2,0,#006541,650,100
-Washington,Booker,2.2,2.2,0,#006541,870,100
-Northern Marianas,Booker,1.8,2.4,0,#006541,870,100
-Ohio,Booker,1.8,2.1,0,#006541,760,100
-Arizona,Booker,1.4,1.2,0,#006541,870,100
-Florida,Booker,1.0,1.7,0,#006541,870,100
-Illinois,Booker,1.9,2.4,0,#006541,650,100
-Georgia,Booker,1.3,2.2,0,#006541,760,100
-Puerto Rico,Booker,2.0,2.4,0,#006541,870,100
-Alaska,Booker,2.0,2.1,0,#006541,760,100
-Hawaii,Booker,2.2,2.2,0,#006541,760,100
-Louisiana,Booker,1.0,2.8,0,#006541,760,100
-Wyoming,Booker,2.1,2.2,0,#006541,760,100
-Wisconsin,Booker,2.4,2.2,0,#006541,870,100
-Connecticut,Booker,2.5,2.0,0,#006541,870,100
-Delaware,Booker,2.0,2.1,0,#006541,760,100
-Maryland,Booker,2.4,2.3,0,#006541,760,100
-New York,Booker,2.7,2.1,0,#006541,760,100
-Pennsylvania,Booker,2.1,1.7,0,#006541,760,100
-Rhode Island,Booker,2.8,2.1,0,#006541,760,100
+Tennessee,Booker,1.1,2.6,0,#006541,760,100
+Texas,Booker,1.3,2.1,0,#006541,980,100
+Utah,Booker,2.0,2.3,0,#006541,870,100
+Vermont,Booker,1.3,1.8,0,#006541,870,100
+Virginia,Booker,1.8,2.3,0,#006541,870,100
+Idaho,Booker,1.8,2.2,0,#006541,760,100
+Michigan,Booker,1.6,2.0,0,#006541,870,100
+Mississippi,Booker,0.6,2.7,0,#006541,760,100
+Missouri,Booker,1.3,2.5,0,#006541,760,100
+North Dakota,Booker,2.2,2.3,0,#006541,870,100
+Washington,Booker,2.0,2.2,0,#006541,870,100
+Northern Marianas,Booker,1.6,2.4,0,#006541,870,100
+Ohio,Booker,1.9,2.2,0,#006541,870,100
+Arizona,Booker,1.6,1.4,0,#006541,870,100
+Florida,Booker,1.1,1.9,0,#006541,870,100
+Illinois,Booker,1.7,2.5,0,#006541,760,100
+Georgia,Booker,1.0,2.4,0,#006541,760,100
+Puerto Rico,Booker,1.9,2.4,0,#006541,870,100
+Alaska,Booker,2.0,2.2,0,#006541,760,100
+Hawaii,Booker,2.5,2.3,0,#006541,870,100
+Louisiana,Booker,0.8,2.6,0,#006541,760,100
+Wyoming,Booker,2.2,2.2,0,#006541,760,100
+Wisconsin,Booker,2.4,2.4,0,#006541,870,100
+Connecticut,Booker,2.8,2.1,0,#006541,870,100
+Delaware,Booker,2.1,2.2,0,#006541,760,100
+Maryland,Booker,2.3,2.3,0,#006541,760,100
+New York,Booker,2.5,2.2,0,#006541,870,100
+Pennsylvania,Booker,2.0,1.8,0,#006541,870,100
+Rhode Island,Booker,2.8,2.3,0,#006541,870,100
 Guam,Booker,2.5,2.4,0,#006541,870,100
-Kansas,Booker,2.8,2.1,0,#006541,760,100
-Indiana,Booker,2.6,2.1,0,#006541,650,100
-Nebraska,Booker,3.2,2.1,0,#006541,760,100
-West Virginia,Booker,2.3,2.1,0,#006541,870,100
-Kentucky,Booker,2.8,2.3,0,#006541,870,100
-Oregon,Booker,3.0,2.2,0,#006541,760,100
-District of Columbia,Booker,1.7,2.8,0,#006541,760,100
-Montana,Booker,3.0,2.1,0,#006541,760,100
-New Jersey,Booker,4.9,5.9,0,#006541,540,100
-New Mexico,Booker,3.1,1.9,0,#006541,870,100
-South Dakota,Booker,3.5,2.0,0,#006541,760,100
-Virgin Islands,Booker,3.1,2.4,0,#006541,870,100
-US,Booker,1.1,2.2,0,#006541,870,100
-Iowa,Buttigieg,30.9,20.8,14,#36AEFF,100,100
-New Hampshire,Buttigieg,18.9,17.0,6,#36AEFF,430,100
-Nevada,Buttigieg,5.1,9.0,0,#36AEFF,430,100
-South Carolina,Buttigieg,2.0,7.6,0,#36AEFF,430,100
-Alabama,Buttigieg,1.4,7.3,0,#36AEFF,430,100
-American Samoa,Buttigieg,4.6,8.6,0,#36AEFF,430,100
-Arkansas,Buttigieg,2.7,8.8,0,#36AEFF,430,100
-California,Buttigieg,5.7,9.1,0,#36AEFF,430,100
-Colorado,Buttigieg,5.8,9.6,0,#36AEFF,430,100
-Democrats Abroad,Buttigieg,4.6,8.6,0,#36AEFF,430,100
-Maine,Buttigieg,9.4,12.7,0,#36AEFF,430,100
-Massachusetts,Buttigieg,7.3,11.7,1,#36AEFF,430,100
-Minnesota,Buttigieg,12.2,13.5,3,#36AEFF,540,100
-North Carolina,Buttigieg,2.7,8.3,0,#36AEFF,430,100
-Oklahoma,Buttigieg,3.4,8.9,0,#36AEFF,430,100
-Tennessee,Buttigieg,2.9,9.2,0,#36AEFF,430,100
+Kansas,Booker,2.9,2.1,0,#006541,870,100
+Indiana,Booker,2.5,2.2,0,#006541,870,100
+Nebraska,Booker,3.3,2.1,0,#006541,870,100
+West Virginia,Booker,2.6,2.1,0,#006541,870,100
+Kentucky,Booker,2.7,2.3,0,#006541,870,100
+Oregon,Booker,3.1,2.2,0,#006541,870,100
+District of Columbia,Booker,2.0,2.7,0,#006541,760,100
+Montana,Booker,3.2,2.2,0,#006541,760,100
+New Jersey,Booker,4.6,5.5,0,#006541,540,100
+New Mexico,Booker,3.2,2.1,0,#006541,870,100
+South Dakota,Booker,3.3,2.1,0,#006541,870,100
+Virgin Islands,Booker,2.8,2.4,0,#006541,870,100
+US,Booker,1.3,2.3,0,#006541,870,100
+Iowa,Buttigieg,31.4,21.7,12,#36AEFF,100,100
+New Hampshire,Buttigieg,18.7,17.4,6,#36AEFF,320,100
+Nevada,Buttigieg,5.0,9.4,0,#36AEFF,430,100
+South Carolina,Buttigieg,1.6,8.1,0,#36AEFF,430,100
+Alabama,Buttigieg,1.7,7.6,0,#36AEFF,430,100
+American Samoa,Buttigieg,5.0,8.8,0,#36AEFF,430,100
+Arkansas,Buttigieg,2.9,8.9,0,#36AEFF,430,100
+California,Buttigieg,5.8,9.0,0,#36AEFF,430,100
+Colorado,Buttigieg,5.6,9.0,0,#36AEFF,430,100
+Democrats Abroad,Buttigieg,4.9,8.8,0,#36AEFF,430,100
+Maine,Buttigieg,9.0,12.0,0,#36AEFF,430,100
+Massachusetts,Buttigieg,7.1,11.2,1,#36AEFF,430,100
+Minnesota,Buttigieg,11.8,13.3,3,#36AEFF,540,100
+North Carolina,Buttigieg,3.0,8.1,0,#36AEFF,430,100
+Oklahoma,Buttigieg,3.7,9.0,0,#36AEFF,430,100
+Tennessee,Buttigieg,3.4,9.4,0,#36AEFF,430,100
 Texas,Buttigieg,4.4,9.1,0,#36AEFF,430,100
-Utah,Buttigieg,7.8,10.9,0,#36AEFF,430,100
-Vermont,Buttigieg,5.9,11.2,0,#36AEFF,430,100
-Virginia,Buttigieg,8.3,12.2,1,#36AEFF,430,100
-Idaho,Buttigieg,7.1,10.3,0,#36AEFF,430,100
-Michigan,Buttigieg,6.5,11.4,2,#36AEFF,430,100
-Mississippi,Buttigieg,1.1,6.3,0,#36AEFF,430,100
-Missouri,Buttigieg,3.8,9.7,0,#36AEFF,430,100
-North Dakota,Buttigieg,13.7,15.4,3,#36AEFF,430,100
-Washington,Buttigieg,6.7,10.4,1,#36AEFF,430,100
-Northern Marianas,Buttigieg,4.8,8.6,0,#36AEFF,430,100
-Ohio,Buttigieg,8.6,12.7,2,#36AEFF,430,100
-Arizona,Buttigieg,6.5,10.5,1,#36AEFF,430,100
-Florida,Buttigieg,3.6,9.0,0,#36AEFF,430,100
-Illinois,Buttigieg,10.6,14.2,10,#36AEFF,430,100
-Georgia,Buttigieg,3.4,8.0,0,#36AEFF,540,100
-Puerto Rico,Buttigieg,5.3,8.6,0,#36AEFF,430,100
-Alaska,Buttigieg,5.4,8.7,0,#36AEFF,430,100
-Hawaii,Buttigieg,5.6,8.2,0,#36AEFF,430,100
-Louisiana,Buttigieg,1.7,6.7,0,#36AEFF,430,100
-Wyoming,Buttigieg,7.0,10.3,0,#36AEFF,430,100
-Wisconsin,Buttigieg,10.6,12.9,1,#36AEFF,430,100
-Connecticut,Buttigieg,8.8,11.6,1,#36AEFF,430,100
-Delaware,Buttigieg,6.2,10.1,0,#36AEFF,430,100
-Maryland,Buttigieg,6.5,9.6,0,#36AEFF,430,100
-New York,Buttigieg,6.6,9.3,0,#36AEFF,430,100
-Pennsylvania,Buttigieg,7.8,12.5,3,#36AEFF,430,100
-Rhode Island,Buttigieg,9.0,12.0,0,#36AEFF,430,100
-Guam,Buttigieg,5.8,8.6,0,#36AEFF,430,100
-Kansas,Buttigieg,13.5,14.8,2,#36AEFF,430,100
-Indiana,Buttigieg,20.8,19.5,24,#36AEFF,210,100
-Nebraska,Buttigieg,13.4,14.8,2,#36AEFF,430,100
-West Virginia,Buttigieg,7.7,11.0,0,#36AEFF,430,100
-Kentucky,Buttigieg,6.9,10.0,1,#36AEFF,430,100
-Oregon,Buttigieg,7.4,10.1,1,#36AEFF,430,100
-District of Columbia,Buttigieg,2.4,5.8,0,#36AEFF,430,100
-Montana,Buttigieg,7.1,9.5,0,#36AEFF,430,100
-New Jersey,Buttigieg,7.8,10.1,2,#36AEFF,430,100
-New Mexico,Buttigieg,6.9,8.7,0,#36AEFF,430,100
-South Dakota,Buttigieg,13.8,15.0,3,#36AEFF,430,100
-Virgin Islands,Buttigieg,6.7,8.6,0,#36AEFF,430,100
-US,Buttigieg,6.8,10.7,84,#36AEFF,430,100
-Iowa,Klobuchar,3.5,6.2,0,#0077FF,540,100
-New Hampshire,Klobuchar,2.3,3.6,0,#0077FF,650,100
-Nevada,Klobuchar,1.8,2.2,0,#0077FF,760,100
-South Carolina,Klobuchar,0.6,2.2,0,#0077FF,870,100
-Alabama,Klobuchar,0.5,1.5,0,#0077FF,870,100
-American Samoa,Klobuchar,1.9,2.8,0,#0077FF,760,100
+Utah,Buttigieg,7.9,10.4,0,#36AEFF,430,100
+Vermont,Buttigieg,7.3,11.0,0,#36AEFF,430,100
+Virginia,Buttigieg,8.5,12.2,1,#36AEFF,430,100
+Idaho,Buttigieg,5.5,9.0,0,#36AEFF,430,100
+Michigan,Buttigieg,6.8,11.4,2,#36AEFF,430,100
+Mississippi,Buttigieg,1.3,6.8,0,#36AEFF,430,100
+Missouri,Buttigieg,4.4,9.8,0,#36AEFF,430,100
+North Dakota,Buttigieg,14.0,15.1,3,#36AEFF,320,100
+Washington,Buttigieg,7.1,9.7,0,#36AEFF,430,100
+Northern Marianas,Buttigieg,5.1,8.8,0,#36AEFF,430,100
+Ohio,Buttigieg,8.7,12.4,2,#36AEFF,430,100
+Arizona,Buttigieg,6.5,10.0,1,#36AEFF,430,100
+Florida,Buttigieg,3.9,9.0,0,#36AEFF,430,100
+Illinois,Buttigieg,10.9,13.9,7,#36AEFF,430,100
+Georgia,Buttigieg,3.0,7.9,0,#36AEFF,540,100
+Puerto Rico,Buttigieg,5.6,8.8,0,#36AEFF,430,100
+Alaska,Buttigieg,5.2,8.3,0,#36AEFF,430,100
+Hawaii,Buttigieg,5.9,8.0,0,#36AEFF,430,100
+Louisiana,Buttigieg,2.2,7.0,0,#36AEFF,430,100
+Wyoming,Buttigieg,6.6,9.7,0,#36AEFF,430,100
+Wisconsin,Buttigieg,11.0,13.2,4,#36AEFF,430,100
+Connecticut,Buttigieg,9.3,11.3,1,#36AEFF,430,100
+Delaware,Buttigieg,6.3,9.9,0,#36AEFF,430,100
+Maryland,Buttigieg,6.9,9.5,0,#36AEFF,430,100
+New York,Buttigieg,7.3,9.3,0,#36AEFF,540,100
+Pennsylvania,Buttigieg,8.7,12.3,3,#36AEFF,430,100
+Rhode Island,Buttigieg,9.8,11.6,0,#36AEFF,430,100
+Guam,Buttigieg,6.3,8.8,0,#36AEFF,430,100
+Kansas,Buttigieg,13.7,14.3,2,#36AEFF,430,100
+Indiana,Buttigieg,19.2,18.4,23,#36AEFF,210,100
+Nebraska,Buttigieg,13.3,14.3,2,#36AEFF,430,100
+West Virginia,Buttigieg,8.0,10.6,0,#36AEFF,430,100
+Kentucky,Buttigieg,7.4,10.0,1,#36AEFF,430,100
+Oregon,Buttigieg,7.6,9.5,0,#36AEFF,430,100
+District of Columbia,Buttigieg,3.2,6.4,0,#36AEFF,540,100
+Montana,Buttigieg,7.1,9.0,0,#36AEFF,430,100
+New Jersey,Buttigieg,8.3,9.9,0,#36AEFF,430,100
+New Mexico,Buttigieg,7.7,8.9,0,#36AEFF,430,100
+South Dakota,Buttigieg,14.0,14.5,1,#36AEFF,430,100
+Virgin Islands,Buttigieg,7.1,8.8,0,#36AEFF,430,100
+US,Buttigieg,7.2,10.5,75,#36AEFF,430,100
+Iowa,Klobuchar,4.0,6.7,0,#0077FF,540,100
+New Hampshire,Klobuchar,2.3,4.2,0,#0077FF,540,100
+Nevada,Klobuchar,1.7,2.3,0,#0077FF,760,100
+South Carolina,Klobuchar,0.5,2.4,0,#0077FF,870,100
+Alabama,Klobuchar,0.5,1.7,0,#0077FF,870,100
+American Samoa,Klobuchar,1.9,2.9,0,#0077FF,760,100
 Arkansas,Klobuchar,0.8,1.9,0,#0077FF,870,100
-California,Klobuchar,1.7,2.0,0,#0077FF,870,100
-Colorado,Klobuchar,1.6,2.2,0,#0077FF,760,100
-Democrats Abroad,Klobuchar,1.7,2.8,0,#0077FF,760,100
-Maine,Klobuchar,1.7,2.1,0,#0077FF,870,100
-Massachusetts,Klobuchar,1.5,2.5,0,#0077FF,760,100
-Minnesota,Klobuchar,15.3,15.5,16,#0077FF,320,100
-North Carolina,Klobuchar,0.9,2.0,0,#0077FF,870,100
+California,Klobuchar,2.0,2.1,0,#0077FF,870,100
+Colorado,Klobuchar,1.8,2.2,0,#0077FF,760,100
+Democrats Abroad,Klobuchar,1.7,2.9,0,#0077FF,760,100
+Maine,Klobuchar,1.9,2.1,0,#0077FF,760,100
+Massachusetts,Klobuchar,2.0,2.7,0,#0077FF,760,100
+Minnesota,Klobuchar,14.7,14.5,5,#0077FF,430,100
+North Carolina,Klobuchar,0.9,2.0,0,#0077FF,760,100
 Oklahoma,Klobuchar,1.0,2.0,0,#0077FF,760,100
-Tennessee,Klobuchar,0.7,1.6,0,#0077FF,870,100
-Texas,Klobuchar,1.3,2.2,0,#0077FF,760,100
-Utah,Klobuchar,2.6,3.4,0,#0077FF,760,100
-Vermont,Klobuchar,1.6,2.6,0,#0077FF,650,100
-Virginia,Klobuchar,2.0,3.7,0,#0077FF,540,100
-Idaho,Klobuchar,1.8,2.4,0,#0077FF,870,100
-Michigan,Klobuchar,2.1,4.0,0,#0077FF,540,100
-Mississippi,Klobuchar,0.3,1.3,0,#0077FF,980,100
-Missouri,Klobuchar,1.1,1.7,0,#0077FF,870,100
-North Dakota,Klobuchar,4.1,6.7,0,#0077FF,540,100
-Washington,Klobuchar,2.5,3.1,0,#0077FF,760,100
-Northern Marianas,Klobuchar,1.9,2.8,0,#0077FF,760,100
-Ohio,Klobuchar,2.6,4.8,0,#0077FF,540,100
-Arizona,Klobuchar,1.7,2.3,0,#0077FF,760,100
-Florida,Klobuchar,1.2,2.3,0,#0077FF,760,100
-Illinois,Klobuchar,3.1,5.5,0,#0077FF,540,100
-Georgia,Klobuchar,1.2,2.1,0,#0077FF,870,100
-Puerto Rico,Klobuchar,2.3,2.8,0,#0077FF,760,100
-Alaska,Klobuchar,2.0,1.9,0,#0077FF,870,100
-Hawaii,Klobuchar,2.1,2.2,0,#0077FF,870,100
-Louisiana,Klobuchar,0.7,1.3,0,#0077FF,870,100
-Wyoming,Klobuchar,2.1,2.3,0,#0077FF,870,100
-Wisconsin,Klobuchar,3.6,4.5,0,#0077FF,540,100
-Connecticut,Klobuchar,2.9,2.5,0,#0077FF,760,100
-Delaware,Klobuchar,1.9,1.8,0,#0077FF,870,100
-Maryland,Klobuchar,2.4,1.7,0,#0077FF,870,100
-New York,Klobuchar,2.7,1.9,0,#0077FF,870,100
-Pennsylvania,Klobuchar,2.7,4.3,0,#0077FF,540,100
-Rhode Island,Klobuchar,2.7,2.1,0,#0077FF,870,100
-Guam,Klobuchar,2.7,2.8,0,#0077FF,760,100
-Kansas,Klobuchar,6.0,7.4,0,#0077FF,540,100
-Indiana,Klobuchar,4.4,5.6,0,#0077FF,540,100
-Nebraska,Klobuchar,5.8,7.4,0,#0077FF,540,100
-West Virginia,Klobuchar,2.5,2.3,0,#0077FF,760,100
-Kentucky,Klobuchar,2.9,2.2,0,#0077FF,760,100
-Oregon,Klobuchar,3.2,3.0,0,#0077FF,650,100
-District of Columbia,Klobuchar,1.5,1.3,0,#0077FF,870,100
-Montana,Klobuchar,3.2,2.2,0,#0077FF,870,100
-New Jersey,Klobuchar,2.9,1.9,0,#0077FF,870,100
+Tennessee,Klobuchar,0.8,1.7,0,#0077FF,870,100
+Texas,Klobuchar,1.4,2.2,0,#0077FF,760,100
+Utah,Klobuchar,2.8,3.8,0,#0077FF,760,100
+Vermont,Klobuchar,1.8,2.9,0,#0077FF,760,100
+Virginia,Klobuchar,2.3,3.6,0,#0077FF,650,100
+Idaho,Klobuchar,1.6,2.0,0,#0077FF,870,100
+Michigan,Klobuchar,2.2,4.1,0,#0077FF,540,100
+Mississippi,Klobuchar,0.3,1.5,0,#0077FF,980,100
+Missouri,Klobuchar,0.9,1.8,0,#0077FF,870,100
+North Dakota,Klobuchar,4.1,6.4,0,#0077FF,540,100
+Washington,Klobuchar,2.9,3.4,0,#0077FF,760,100
+Northern Marianas,Klobuchar,2.1,2.9,0,#0077FF,760,100
+Ohio,Klobuchar,2.9,4.7,0,#0077FF,540,100
+Arizona,Klobuchar,1.9,2.2,0,#0077FF,760,100
+Florida,Klobuchar,1.3,2.3,0,#0077FF,760,100
+Illinois,Klobuchar,3.4,5.3,0,#0077FF,540,100
+Georgia,Klobuchar,1.2,1.9,0,#0077FF,870,100
+Puerto Rico,Klobuchar,2.5,2.9,0,#0077FF,760,100
+Alaska,Klobuchar,2.3,1.8,0,#0077FF,870,100
+Hawaii,Klobuchar,2.2,2.3,0,#0077FF,760,100
+Louisiana,Klobuchar,0.7,1.6,0,#0077FF,980,100
+Wyoming,Klobuchar,2.1,2.2,0,#0077FF,870,100
+Wisconsin,Klobuchar,3.6,4.8,0,#0077FF,540,100
+Connecticut,Klobuchar,3.2,2.7,0,#0077FF,760,100
+Delaware,Klobuchar,2.2,1.8,0,#0077FF,870,100
+Maryland,Klobuchar,2.5,1.9,0,#0077FF,870,100
+New York,Klobuchar,2.7,1.9,0,#0077FF,760,100
+Pennsylvania,Klobuchar,3.2,4.4,0,#0077FF,540,100
+Rhode Island,Klobuchar,2.8,2.1,0,#0077FF,760,100
+Guam,Klobuchar,3.0,2.9,0,#0077FF,760,100
+Kansas,Klobuchar,6.1,7.6,0,#0077FF,540,100
+Indiana,Klobuchar,4.6,5.6,0,#0077FF,540,100
+Nebraska,Klobuchar,6.4,7.6,0,#0077FF,540,100
+West Virginia,Klobuchar,2.7,2.3,0,#0077FF,760,100
+Kentucky,Klobuchar,3.0,2.4,0,#0077FF,760,100
+Oregon,Klobuchar,3.6,3.3,0,#0077FF,760,100
+District of Columbia,Klobuchar,1.5,1.4,0,#0077FF,980,100
+Montana,Klobuchar,3.0,2.0,0,#0077FF,870,100
+New Jersey,Klobuchar,3.1,1.9,0,#0077FF,870,100
 New Mexico,Klobuchar,3.2,1.9,0,#0077FF,760,100
-South Dakota,Klobuchar,6.2,7.4,0,#0077FF,540,100
-Virgin Islands,Klobuchar,3.3,2.8,0,#0077FF,760,100
-US,Klobuchar,1.6,3.2,16,#0077FF,760,100
-Iowa,Sanders,20.1,17.4,12,#002E66,320,100
-New Hampshire,Sanders,28.2,20.2,7,#002E66,100,100
-Nevada,Sanders,25.7,21.2,12,#002E66,210,100
-South Carolina,Sanders,4.3,12.6,1,#002E66,210,100
-Alabama,Sanders,2.8,11.4,1,#002E66,320,100
-American Samoa,Sanders,18.9,19.6,2,#002E66,210,100
-Arkansas,Sanders,5.4,12.9,0,#002E66,320,100
-California,Sanders,30.5,22.4,147,#002E66,210,100
-Colorado,Sanders,34.4,24.0,25,#002E66,100,100
-Democrats Abroad,Sanders,19.4,19.6,4,#002E66,210,100
-Maine,Sanders,26.3,21.3,8,#002E66,320,100
-Massachusetts,Sanders,19.0,19.1,26,#002E66,320,100
-Minnesota,Sanders,18.6,17.0,18,#002E66,210,100
-North Carolina,Sanders,8.6,16.2,31,#002E66,210,100
-Oklahoma,Sanders,11.5,17.3,12,#002E66,210,100
-Tennessee,Sanders,5.3,13.1,3,#002E66,320,100
-Texas,Sanders,11.4,16.1,57,#002E66,320,100
-Utah,Sanders,37.2,24.3,11,#002E66,100,100
-Vermont,Sanders,62.2,32.7,8,#002E66,100,100
-Virginia,Sanders,17.3,18.3,28,#002E66,210,100
-Idaho,Sanders,33.8,24.2,9,#002E66,210,100
-Michigan,Sanders,21.8,21.4,39,#002E66,210,100
-Mississippi,Sanders,2.1,10.6,0,#002E66,320,100
-Missouri,Sanders,7.2,14.1,4,#002E66,320,100
-North Dakota,Sanders,18.2,17.9,3,#002E66,210,100
-Washington,Sanders,37.3,24.6,34,#002E66,100,100
-Northern Marianas,Sanders,18.9,19.6,2,#002E66,210,100
-Ohio,Sanders,19.5,19.7,41,#002E66,210,100
-Arizona,Sanders,23.1,21.3,21,#002E66,210,100
-Florida,Sanders,6.9,14.0,15,#002E66,320,100
-Illinois,Sanders,17.0,18.4,42,#002E66,210,100
-Georgia,Sanders,8.7,15.6,30,#002E66,210,100
-Puerto Rico,Sanders,18.9,19.6,15,#002E66,210,100
-Alaska,Sanders,24.4,21.9,5,#002E66,210,100
-Hawaii,Sanders,35.7,25.0,9,#002E66,100,100
-Louisiana,Sanders,3.3,11.3,1,#002E66,320,100
-Wyoming,Sanders,22.3,20.4,4,#002E66,210,100
-Wisconsin,Sanders,23.6,20.5,27,#002E66,210,100
-Connecticut,Sanders,31.8,24.3,22,#002E66,100,100
-Delaware,Sanders,18.0,20.3,6,#002E66,210,100
-Maryland,Sanders,22.0,21.3,30,#002E66,210,100
-New York,Sanders,21.2,20.0,87,#002E66,210,100
-Pennsylvania,Sanders,14.7,17.6,59,#002E66,210,100
-Rhode Island,Sanders,31.8,24.4,10,#002E66,100,100
-Guam,Sanders,19.5,19.6,2,#002E66,210,100
-Kansas,Sanders,21.0,19.4,12,#002E66,210,100
-Indiana,Sanders,17.8,17.9,22,#002E66,320,100
-Nebraska,Sanders,20.9,19.4,9,#002E66,210,100
-West Virginia,Sanders,9.3,13.6,1,#002E66,320,100
-Kentucky,Sanders,19.0,19.9,16,#002E66,210,100
-Oregon,Sanders,29.0,23.9,22,#002E66,100,100
-District of Columbia,Sanders,5.5,12.1,0,#002E66,320,100
-Montana,Sanders,23.4,21.9,6,#002E66,210,100
-New Jersey,Sanders,21.5,20.6,39,#002E66,210,100
-New Mexico,Sanders,31.6,25.1,13,#002E66,100,100
-South Dakota,Sanders,20.5,19.3,4,#002E66,210,100
-Virgin Islands,Sanders,18.9,19.6,2,#002E66,210,100
-US,Sanders,19.9,19.2,1076,#002E66,210,100
-Iowa,Steyer,2.0,2.9,0,#E7B5FF,650,100
-New Hampshire,Steyer,2.0,2.6,0,#E7B5FF,760,100
-Nevada,Steyer,2.0,3.4,0,#E7B5FF,650,100
-South Carolina,Steyer,1.3,4.5,0,#E7B5FF,540,100
-Alabama,Steyer,0.6,1.3,0,#E7B5FF,980,100
-American Samoa,Steyer,1.4,1.3,0,#E7B5FF,980,100
-Arkansas,Steyer,0.7,1.2,0,#E7B5FF,980,100
-California,Steyer,1.7,1.7,0,#E7B5FF,980,100
-Colorado,Steyer,1.7,1.1,0,#E7B5FF,980,100
-Democrats Abroad,Steyer,1.2,1.3,0,#E7B5FF,980,100
-Maine,Steyer,1.4,1.1,0,#E7B5FF,980,100
-Massachusetts,Steyer,1.1,1.0,0,#E7B5FF,980,100
-Minnesota,Steyer,1.5,1.0,0,#E7B5FF,980,100
+South Dakota,Klobuchar,6.4,7.5,0,#0077FF,540,100
+Virgin Islands,Klobuchar,3.5,2.9,0,#0077FF,760,100
+US,Klobuchar,1.7,3.2,5,#0077FF,760,100
+Iowa,Sanders,21.6,18.4,10,#002E66,320,100
+New Hampshire,Sanders,29.7,21.4,7,#002E66,100,100
+Nevada,Sanders,26.3,22.1,12,#002E66,210,100
+South Carolina,Sanders,3.6,12.6,1,#002E66,210,100
+Alabama,Sanders,2.1,8.9,0,#002E66,320,100
+American Samoa,Sanders,20.0,19.7,2,#002E66,210,100
+Arkansas,Sanders,3.5,10.4,0,#002E66,320,100
+California,Sanders,29.1,22.0,146,#002E66,210,100
+Colorado,Sanders,39.1,25.4,26,#002E66,100,100
+Democrats Abroad,Sanders,19.4,19.7,4,#002E66,210,100
+Maine,Sanders,20.9,19.0,7,#002E66,320,100
+Massachusetts,Sanders,16.4,17.6,24,#002E66,320,100
+Minnesota,Sanders,18.8,16.9,21,#002E66,210,100
+North Carolina,Sanders,7.4,14.8,7,#002E66,210,100
+Oklahoma,Sanders,9.0,14.8,2,#002E66,210,100
+Tennessee,Sanders,4.2,10.6,1,#002E66,320,100
+Texas,Sanders,9.7,14.6,15,#002E66,320,100
+Utah,Sanders,34.1,23.1,11,#002E66,100,100
+Vermont,Sanders,51.4,29.2,7,#002E66,100,100
+Virginia,Sanders,14.1,16.1,26,#002E66,320,100
+Idaho,Sanders,46.5,28.5,10,#002E66,100,100
+Michigan,Sanders,21.2,20.7,39,#002E66,210,100
+Mississippi,Sanders,1.5,8.1,0,#002E66,320,100
+Missouri,Sanders,5.6,11.7,1,#002E66,320,100
+North Dakota,Sanders,18.0,17.5,3,#002E66,210,100
+Washington,Sanders,33.4,23.3,33,#002E66,100,100
+Northern Marianas,Sanders,19.6,19.7,2,#002E66,210,100
+Ohio,Sanders,19.2,19.3,49,#002E66,210,100
+Arizona,Sanders,21.5,20.4,21,#002E66,210,100
+Florida,Sanders,5.8,12.5,4,#002E66,320,100
+Illinois,Sanders,17.6,18.1,43,#002E66,210,100
+Georgia,Sanders,5.1,12.0,2,#002E66,320,100
+Puerto Rico,Sanders,19.5,19.7,15,#002E66,210,100
+Alaska,Sanders,21.8,21.0,5,#002E66,210,100
+Hawaii,Sanders,30.1,23.1,9,#002E66,100,100
+Louisiana,Sanders,2.3,8.6,0,#002E66,320,100
+Wyoming,Sanders,27.5,22.5,6,#002E66,210,100
+Wisconsin,Sanders,22.8,20.4,26,#002E66,210,100
+Connecticut,Sanders,24.2,20.9,20,#002E66,210,100
+Delaware,Sanders,15.3,18.0,6,#002E66,210,100
+Maryland,Sanders,17.5,18.3,27,#002E66,320,100
+New York,Sanders,17.4,18.0,80,#002E66,210,100
+Pennsylvania,Sanders,14.9,17.5,61,#002E66,210,100
+Rhode Island,Sanders,25.2,21.1,9,#002E66,210,100
+Guam,Sanders,19.9,19.7,2,#002E66,210,100
+Kansas,Sanders,21.2,19.2,12,#002E66,210,100
+Indiana,Sanders,17.5,17.8,22,#002E66,320,100
+Nebraska,Sanders,20.5,19.2,9,#002E66,210,100
+West Virginia,Sanders,18.4,19.1,11,#002E66,210,100
+Kentucky,Sanders,15.2,16.9,14,#002E66,210,100
+Oregon,Sanders,27.5,22.9,22,#002E66,210,100
+District of Columbia,Sanders,4.3,9.3,0,#002E66,320,100
+Montana,Sanders,22.8,21.2,6,#002E66,210,100
+New Jersey,Sanders,18.5,18.5,37,#002E66,210,100
+New Mexico,Sanders,27.0,22.9,12,#002E66,210,100
+South Dakota,Sanders,20.7,19.1,5,#002E66,210,100
+Virgin Islands,Sanders,19.2,19.7,2,#002E66,210,100
+US,Sanders,17.5,18.3,954,#002E66,210,100
+Iowa,Steyer,1.7,2.9,0,#E7B5FF,650,100
+New Hampshire,Steyer,1.9,2.8,0,#E7B5FF,760,100
+Nevada,Steyer,1.9,3.4,0,#E7B5FF,650,100
+South Carolina,Steyer,0.9,4.9,0,#E7B5FF,540,100
+Alabama,Steyer,0.5,1.5,0,#E7B5FF,980,100
+American Samoa,Steyer,1.4,1.4,0,#E7B5FF,980,100
+Arkansas,Steyer,0.9,1.3,0,#E7B5FF,980,100
+California,Steyer,2.0,1.7,0,#E7B5FF,980,100
+Colorado,Steyer,1.5,1.1,0,#E7B5FF,980,100
+Democrats Abroad,Steyer,1.6,1.4,0,#E7B5FF,980,100
+Maine,Steyer,1.6,1.2,0,#E7B5FF,980,100
+Massachusetts,Steyer,1.6,1.1,0,#E7B5FF,980,100
+Minnesota,Steyer,1.8,1.0,0,#E7B5FF,980,100
 North Carolina,Steyer,0.9,1.5,0,#E7B5FF,980,100
-Oklahoma,Steyer,1.0,1.3,0,#E7B5FF,980,100
-Tennessee,Steyer,0.7,1.2,0,#E7B5FF,980,100
-Texas,Steyer,1.3,1.4,0,#E7B5FF,980,100
+Oklahoma,Steyer,1.0,1.4,0,#E7B5FF,980,100
+Tennessee,Steyer,0.9,1.3,0,#E7B5FF,980,100
+Texas,Steyer,1.3,1.5,0,#E7B5FF,870,100
 Utah,Steyer,1.7,1.3,0,#E7B5FF,980,100
-Vermont,Steyer,0.8,1.0,0,#E7B5FF,980,100
-Virginia,Steyer,1.3,1.1,0,#E7B5FF,980,100
-Idaho,Steyer,1.5,1.1,0,#E7B5FF,980,100
-Michigan,Steyer,1.3,0.8,0,#E7B5FF,980,100
-Mississippi,Steyer,0.4,1.4,0,#E7B5FF,870,100
-Missouri,Steyer,1.0,1.1,0,#E7B5FF,980,100
-North Dakota,Steyer,1.4,1.3,0,#E7B5FF,980,100
-Washington,Steyer,1.5,1.0,0,#E7B5FF,980,100
-Northern Marianas,Steyer,1.3,1.3,0,#E7B5FF,980,100
-Ohio,Steyer,1.5,1.1,0,#E7B5FF,980,100
-Arizona,Steyer,1.3,1.0,0,#E7B5FF,980,100
-Florida,Steyer,1.0,0.9,0,#E7B5FF,980,100
+Vermont,Steyer,1.2,1.1,0,#E7B5FF,980,100
+Virginia,Steyer,1.5,1.2,0,#E7B5FF,980,100
+Idaho,Steyer,1.5,0.9,0,#E7B5FF,980,100
+Michigan,Steyer,1.4,0.8,0,#E7B5FF,980,100
+Mississippi,Steyer,0.4,1.5,0,#E7B5FF,870,100
+Missouri,Steyer,1.0,1.2,0,#E7B5FF,980,100
+North Dakota,Steyer,1.8,1.4,0,#E7B5FF,980,100
+Washington,Steyer,1.7,1.0,0,#E7B5FF,980,100
+Northern Marianas,Steyer,1.6,1.4,0,#E7B5FF,980,100
+Ohio,Steyer,1.7,1.1,0,#E7B5FF,980,100
+Arizona,Steyer,1.6,1.0,0,#E7B5FF,980,100
+Florida,Steyer,1.0,1.0,0,#E7B5FF,980,100
 Illinois,Steyer,1.5,1.2,0,#E7B5FF,980,100
-Georgia,Steyer,1.0,1.0,0,#E7B5FF,980,100
-Puerto Rico,Steyer,1.5,1.3,0,#E7B5FF,980,100
-Alaska,Steyer,1.6,1.0,0,#E7B5FF,980,100
-Hawaii,Steyer,2.0,1.3,0,#E7B5FF,980,100
-Louisiana,Steyer,0.8,1.4,0,#E7B5FF,980,100
-Wyoming,Steyer,1.6,1.3,0,#E7B5FF,980,100
-Wisconsin,Steyer,1.9,0.7,0,#E7B5FF,980,100
-Connecticut,Steyer,2.2,1.0,0,#E7B5FF,980,100
-Delaware,Steyer,1.8,0.8,0,#E7B5FF,980,100
-Maryland,Steyer,1.9,1.1,0,#E7B5FF,980,100
-New York,Steyer,2.1,0.7,0,#E7B5FF,980,100
-Pennsylvania,Steyer,1.8,0.9,0,#E7B5FF,980,100
-Rhode Island,Steyer,2.4,1.0,0,#E7B5FF,980,100
-Guam,Steyer,2.2,1.3,0,#E7B5FF,980,100
-Kansas,Steyer,2.3,1.1,0,#E7B5FF,980,100
-Indiana,Steyer,2.3,0.8,0,#E7B5FF,980,100
-Nebraska,Steyer,2.5,1.1,0,#E7B5FF,980,100
-West Virginia,Steyer,2.3,1.5,0,#E7B5FF,980,100
-Kentucky,Steyer,2.3,1.1,0,#E7B5FF,980,100
-Oregon,Steyer,2.7,1.0,0,#E7B5FF,980,100
-District of Columbia,Steyer,1.4,1.3,0,#E7B5FF,980,100
-Montana,Steyer,2.5,1.0,0,#E7B5FF,980,100
-New Jersey,Steyer,2.5,0.8,0,#E7B5FF,980,100
-New Mexico,Steyer,2.6,1.2,0,#E7B5FF,980,100
-South Dakota,Steyer,2.7,1.2,0,#E7B5FF,980,100
-Virgin Islands,Steyer,2.6,1.3,0,#E7B5FF,980,100
-US,Steyer,1.1,1.3,0,#E7B5FF,980,100
-Iowa,Warren,15.0,14.8,2,#B722FF,430,100
-New Hampshire,Warren,19.8,17.3,6,#B722FF,320,100
-Nevada,Warren,16.5,17.1,10,#B722FF,320,100
-South Carolina,Warren,3.5,11.2,1,#B722FF,320,100
-Alabama,Warren,4.4,14.6,3,#B722FF,210,100
-American Samoa,Warren,13.5,16.6,2,#B722FF,320,100
-Arkansas,Warren,7.4,15.5,9,#B722FF,210,100
-California,Warren,17.7,17.3,114,#B722FF,320,100
-Colorado,Warren,19.5,18.5,19,#B722FF,320,100
-Democrats Abroad,Warren,13.5,16.6,3,#B722FF,320,100
-Maine,Warren,28.0,21.7,8,#B722FF,100,100
-Massachusetts,Warren,45.0,27.7,38,#B722FF,100,100
-Minnesota,Warren,14.9,15.2,16,#B722FF,430,100
-North Carolina,Warren,6.2,14.0,7,#B722FF,320,100
-Oklahoma,Warren,8.6,14.8,2,#B722FF,320,100
-Tennessee,Warren,7.5,15.5,17,#B722FF,210,100
-Texas,Warren,11.8,16.1,56,#B722FF,210,100
-Utah,Warren,20.1,18.3,9,#B722FF,320,100
-Vermont,Warren,13.5,17.6,4,#B722FF,210,100
-Virginia,Warren,14.1,16.4,25,#B722FF,320,100
-Idaho,Warren,12.1,14.7,1,#B722FF,320,100
-Michigan,Warren,11.4,15.4,28,#B722FF,320,100
-Mississippi,Warren,3.1,13.8,1,#B722FF,210,100
-Missouri,Warren,9.6,16.1,19,#B722FF,210,100
-North Dakota,Warren,13.9,15.6,3,#B722FF,320,100
-Washington,Warren,22.5,19.7,27,#B722FF,210,100
-Northern Marianas,Warren,13.8,16.6,2,#B722FF,320,100
-Ohio,Warren,11.4,15.0,31,#B722FF,320,100
-Arizona,Warren,13.6,16.3,16,#B722FF,320,100
-Florida,Warren,9.1,16.2,61,#B722FF,210,100
-Illinois,Warren,12.9,15.4,35,#B722FF,320,100
-Georgia,Warren,5.4,11.6,2,#B722FF,320,100
-Puerto Rico,Warren,14.0,16.6,13,#B722FF,320,100
-Alaska,Warren,14.6,16.7,4,#B722FF,320,100
-Hawaii,Warren,21.2,19.3,7,#B722FF,320,100
-Louisiana,Warren,5.0,14.1,3,#B722FF,210,100
-Wyoming,Warren,14.1,16.1,3,#B722FF,320,100
-Wisconsin,Warren,17.5,17.8,23,#B722FF,320,100
-Connecticut,Warren,21.8,20.0,18,#B722FF,320,100
-Delaware,Warren,11.1,15.4,5,#B722FF,320,100
-Maryland,Warren,15.9,17.4,25,#B722FF,320,100
-New York,Warren,13.1,15.2,66,#B722FF,320,100
-Pennsylvania,Warren,10.3,14.3,13,#B722FF,320,100
-Rhode Island,Warren,20.2,19.2,8,#B722FF,320,100
-Guam,Warren,14.6,16.6,2,#B722FF,320,100
-Kansas,Warren,15.1,15.6,10,#B722FF,320,100
-Indiana,Warren,12.6,14.5,5,#B722FF,430,100
-Nebraska,Warren,14.8,15.6,7,#B722FF,320,100
-West Virginia,Warren,14.0,16.8,9,#B722FF,210,100
-Kentucky,Warren,14.8,16.7,13,#B722FF,320,100
-Oregon,Warren,19.0,18.7,17,#B722FF,320,100
-District of Columbia,Warren,7.1,14.4,1,#B722FF,210,100
-Montana,Warren,15.0,16.4,5,#B722FF,320,100
-New Jersey,Warren,14.9,16.6,32,#B722FF,320,100
-New Mexico,Warren,20.0,19.2,10,#B722FF,320,100
-South Dakota,Warren,14.7,15.7,3,#B722FF,320,100
-Virgin Islands,Warren,14.7,16.6,2,#B722FF,320,100
-US,Warren,15.5,16.5,881,#B722FF,320,100
+Georgia,Steyer,0.9,1.3,0,#E7B5FF,980,100
+Puerto Rico,Steyer,1.7,1.4,0,#E7B5FF,980,100
+Alaska,Steyer,1.8,1.0,0,#E7B5FF,980,100
+Hawaii,Steyer,2.2,1.2,0,#E7B5FF,980,100
+Louisiana,Steyer,0.9,1.5,0,#E7B5FF,870,100
+Wyoming,Steyer,2.0,1.3,0,#E7B5FF,980,100
+Wisconsin,Steyer,2.0,0.7,0,#E7B5FF,980,100
+Connecticut,Steyer,2.6,1.1,0,#E7B5FF,980,100
+Delaware,Steyer,1.8,0.9,0,#E7B5FF,980,100
+Maryland,Steyer,2.4,1.2,0,#E7B5FF,980,100
+New York,Steyer,2.2,0.8,0,#E7B5FF,980,100
+Pennsylvania,Steyer,2.1,0.9,0,#E7B5FF,980,100
+Rhode Island,Steyer,2.4,1.1,0,#E7B5FF,980,100
+Guam,Steyer,2.4,1.4,0,#E7B5FF,980,100
+Kansas,Steyer,2.6,1.1,0,#E7B5FF,980,100
+Indiana,Steyer,2.5,0.8,0,#E7B5FF,980,100
+Nebraska,Steyer,2.8,1.1,0,#E7B5FF,980,100
+West Virginia,Steyer,2.3,1.6,0,#E7B5FF,980,100
+Kentucky,Steyer,2.4,1.2,0,#E7B5FF,980,100
+Oregon,Steyer,2.5,0.9,0,#E7B5FF,980,100
+District of Columbia,Steyer,1.6,1.4,0,#E7B5FF,870,100
+Montana,Steyer,2.7,0.9,0,#E7B5FF,980,100
+New Jersey,Steyer,2.6,0.9,0,#E7B5FF,980,100
+New Mexico,Steyer,3.0,1.2,0,#E7B5FF,980,100
+South Dakota,Steyer,2.9,1.2,0,#E7B5FF,980,100
+Virgin Islands,Steyer,2.8,1.4,0,#E7B5FF,980,100
+US,Steyer,1.0,1.4,0,#E7B5FF,980,100
+Iowa,Warren,13.3,15.0,8,#B722FF,430,100
+New Hampshire,Warren,18.2,17.4,6,#B722FF,430,100
+Nevada,Warren,15.0,17.5,9,#B722FF,320,100
+South Carolina,Warren,2.7,12.0,1,#B722FF,320,100
+Alabama,Warren,4.6,14.5,3,#B722FF,210,100
+American Samoa,Warren,12.4,16.2,1,#B722FF,320,100
+Arkansas,Warren,7.5,15.5,9,#B722FF,210,100
+California,Warren,16.0,16.6,111,#B722FF,320,100
+Colorado,Warren,14.3,16.5,17,#B722FF,320,100
+Democrats Abroad,Warren,13.2,16.2,3,#B722FF,320,100
+Maine,Warren,33.1,23.4,9,#B722FF,100,100
+Massachusetts,Warren,46.7,27.9,39,#B722FF,100,100
+Minnesota,Warren,13.9,15.0,19,#B722FF,320,100
+North Carolina,Warren,6.7,13.7,5,#B722FF,320,100
+Oklahoma,Warren,8.6,14.9,2,#B722FF,320,100
+Tennessee,Warren,7.6,15.3,18,#B722FF,210,100
+Texas,Warren,10.9,15.8,69,#B722FF,210,100
+Utah,Warren,17.4,17.0,8,#B722FF,320,100
+Vermont,Warren,18.2,19.0,5,#B722FF,210,100
+Virginia,Warren,14.0,16.3,26,#B722FF,210,100
+Idaho,Warren,8.2,13.0,1,#B722FF,320,100
+Michigan,Warren,10.8,15.0,28,#B722FF,320,100
+Mississippi,Warren,3.6,13.8,1,#B722FF,210,100
+Missouri,Warren,9.5,15.8,20,#B722FF,210,100
+North Dakota,Warren,12.9,15.3,3,#B722FF,430,100
+Washington,Warren,20.2,18.6,27,#B722FF,320,100
+Northern Marianas,Warren,13.2,16.2,1,#B722FF,320,100
+Ohio,Warren,11.0,14.6,9,#B722FF,320,100
+Arizona,Warren,12.3,15.7,16,#B722FF,320,100
+Florida,Warren,8.7,16.0,64,#B722FF,210,100
+Illinois,Warren,12.2,15.0,36,#B722FF,320,100
+Georgia,Warren,5.7,13.3,5,#B722FF,210,100
+Puerto Rico,Warren,13.3,16.2,13,#B722FF,320,100
+Alaska,Warren,13.0,15.8,4,#B722FF,320,100
+Hawaii,Warren,18.0,17.8,7,#B722FF,320,100
+Louisiana,Warren,5.1,14.1,3,#B722FF,210,100
+Wyoming,Warren,11.2,14.6,0,#B722FF,320,100
+Wisconsin,Warren,17.0,17.7,23,#B722FF,320,100
+Connecticut,Warren,25.7,21.5,20,#B722FF,100,100
+Delaware,Warren,12.4,16.4,5,#B722FF,320,100
+Maryland,Warren,17.6,18.6,27,#B722FF,210,100
+New York,Warren,14.3,16.1,71,#B722FF,320,100
+Pennsylvania,Warren,9.9,13.9,9,#B722FF,320,100
+Rhode Island,Warren,23.2,20.6,8,#B722FF,320,100
+Guam,Warren,13.4,16.2,2,#B722FF,320,100
+Kansas,Warren,14.4,15.2,10,#B722FF,320,100
+Indiana,Warren,11.8,14.2,5,#B722FF,430,100
+Nebraska,Warren,14.1,15.2,7,#B722FF,320,100
+West Virginia,Warren,8.4,11.7,0,#B722FF,320,100
+Kentucky,Warren,14.2,16.5,14,#B722FF,320,100
+Oregon,Warren,17.1,17.7,17,#B722FF,320,100
+District of Columbia,Warren,6.9,14.1,1,#B722FF,210,100
+Montana,Warren,13.1,15.5,5,#B722FF,320,100
+New Jersey,Warren,16.1,17.5,35,#B722FF,320,100
+New Mexico,Warren,16.1,17.3,9,#B722FF,320,100
+South Dakota,Warren,14.3,15.4,4,#B722FF,320,100
+Virgin Islands,Warren,13.8,16.2,2,#B722FF,320,100
+US,Warren,14.8,16.2,880,#B722FF,320,100
 Iowa,Yang,1.9,3.0,0,purple,760,100
-New Hampshire,Yang,2.7,4.4,0,purple,540,100
-Nevada,Yang,2.6,4.8,0,purple,540,100
-South Carolina,Yang,0.8,2.9,0,purple,760,100
-Alabama,Yang,0.6,3.1,0,purple,650,100
+New Hampshire,Yang,2.4,4.4,0,purple,650,100
+Nevada,Yang,2.5,5.0,0,purple,540,100
+South Carolina,Yang,0.5,3.2,0,purple,650,100
+Alabama,Yang,0.8,3.2,0,purple,650,100
 American Samoa,Yang,1.9,3.4,0,purple,650,100
-Arkansas,Yang,1.0,3.1,0,purple,650,100
-California,Yang,3.4,5.7,0,purple,540,100
-Colorado,Yang,3.5,5.8,0,purple,540,100
+Arkansas,Yang,1.0,3.2,0,purple,650,100
+California,Yang,3.2,5.5,0,purple,650,100
+Colorado,Yang,3.0,5.1,0,purple,650,100
 Democrats Abroad,Yang,1.9,3.4,0,purple,650,100
-Maine,Yang,2.4,4.3,0,purple,540,100
-Massachusetts,Yang,2.2,3.5,0,purple,540,100
-Minnesota,Yang,2.3,2.3,0,purple,650,100
+Maine,Yang,2.6,4.2,0,purple,650,100
+Massachusetts,Yang,2.0,3.5,0,purple,650,100
+Minnesota,Yang,2.3,2.3,0,purple,760,100
 North Carolina,Yang,1.1,2.9,0,purple,650,100
-Oklahoma,Yang,1.4,3.2,0,purple,650,100
-Tennessee,Yang,1.0,3.2,0,purple,650,100
-Texas,Yang,1.7,3.8,0,purple,650,100
-Utah,Yang,3.4,6.0,0,purple,540,100
-Vermont,Yang,1.8,3.9,0,purple,540,100
-Virginia,Yang,2.1,3.8,0,purple,650,100
-Idaho,Yang,3.3,6.1,0,purple,540,100
-Michigan,Yang,1.5,2.4,0,purple,650,100
-Mississippi,Yang,0.5,3.1,0,purple,650,100
-Missouri,Yang,1.4,3.2,0,purple,650,100
-North Dakota,Yang,2.1,2.3,0,purple,760,100
-Washington,Yang,3.6,6.0,0,purple,540,100
+Oklahoma,Yang,1.6,3.3,0,purple,650,100
+Tennessee,Yang,1.1,3.2,0,purple,650,100
+Texas,Yang,1.8,3.7,0,purple,650,100
+Utah,Yang,3.9,5.7,0,purple,650,100
+Vermont,Yang,2.3,3.9,0,purple,650,100
+Virginia,Yang,2.1,3.7,0,purple,760,100
+Idaho,Yang,2.7,5.4,0,purple,650,100
+Michigan,Yang,1.8,2.4,0,purple,760,100
+Mississippi,Yang,0.7,3.1,0,purple,650,100
+Missouri,Yang,1.5,3.2,0,purple,650,100
+North Dakota,Yang,2.1,2.4,0,purple,760,100
+Washington,Yang,3.8,5.6,0,purple,540,100
 Northern Marianas,Yang,2.1,3.4,0,purple,650,100
-Ohio,Yang,1.9,2.6,0,purple,650,100
-Arizona,Yang,2.6,4.9,0,purple,540,100
-Florida,Yang,1.1,2.8,0,purple,650,100
-Illinois,Yang,1.8,2.2,0,purple,760,100
-Georgia,Yang,1.5,3.1,0,purple,650,100
-Puerto Rico,Yang,2.3,3.4,0,purple,650,100
-Alaska,Yang,3.3,5.3,0,purple,540,100
-Hawaii,Yang,4.7,6.8,0,purple,540,100
+Ohio,Yang,1.9,2.6,0,purple,760,100
+Arizona,Yang,2.8,4.6,0,purple,650,100
+Florida,Yang,1.4,2.8,0,purple,650,100
+Illinois,Yang,1.7,2.2,0,purple,870,100
+Georgia,Yang,1.3,3.1,0,purple,650,100
+Puerto Rico,Yang,2.5,3.4,0,purple,650,100
+Alaska,Yang,3.0,4.9,0,purple,650,100
+Hawaii,Yang,4.2,6.0,0,purple,650,100
 Louisiana,Yang,0.9,3.2,0,purple,650,100
-Wyoming,Yang,3.3,5.3,0,purple,540,100
-Wisconsin,Yang,2.7,2.8,0,purple,760,100
-Connecticut,Yang,4.1,4.7,0,purple,540,100
-Delaware,Yang,2.9,3.5,0,purple,540,100
-Maryland,Yang,3.2,4.2,0,purple,540,100
-New York,Yang,3.3,3.7,0,purple,650,100
-Pennsylvania,Yang,2.5,2.7,0,purple,650,100
-Rhode Island,Yang,3.9,4.6,0,purple,540,100
+Wyoming,Yang,3.3,4.8,0,purple,650,100
+Wisconsin,Yang,2.8,2.8,0,purple,650,100
+Connecticut,Yang,3.8,4.6,0,purple,650,100
+Delaware,Yang,2.7,3.4,0,purple,650,100
+Maryland,Yang,3.2,4.0,0,purple,650,100
+New York,Yang,3.1,3.6,0,purple,650,100
+Pennsylvania,Yang,2.4,2.6,0,purple,760,100
+Rhode Island,Yang,3.9,4.4,0,purple,650,100
 Guam,Yang,3.0,3.4,0,purple,650,100
-Kansas,Yang,3.1,2.7,0,purple,650,100
-Indiana,Yang,2.7,2.2,0,purple,760,100
-Nebraska,Yang,3.2,2.7,0,purple,650,100
-West Virginia,Yang,3.0,3.4,0,purple,650,100
-Kentucky,Yang,3.1,3.3,0,purple,650,100
-Oregon,Yang,4.9,5.8,0,purple,540,100
+Kansas,Yang,3.1,2.8,0,purple,760,100
+Indiana,Yang,2.6,2.2,0,purple,760,100
+Nebraska,Yang,3.3,2.8,0,purple,760,100
+West Virginia,Yang,3.3,3.3,0,purple,650,100
+Kentucky,Yang,3.4,3.4,0,purple,650,100
+Oregon,Yang,4.8,5.5,0,purple,540,100
 District of Columbia,Yang,1.9,3.3,0,purple,650,100
-Montana,Yang,4.7,5.5,0,purple,540,100
-New Jersey,Yang,3.8,3.4,0,purple,650,100
-New Mexico,Yang,5.1,6.4,0,purple,540,100
-South Dakota,Yang,3.7,2.8,0,purple,650,100
+Montana,Yang,4.5,5.4,0,purple,650,100
+New Jersey,Yang,3.8,3.4,0,purple,760,100
+New Mexico,Yang,5.1,5.6,0,purple,650,100
+South Dakota,Yang,3.7,2.9,0,purple,650,100
 Virgin Islands,Yang,3.6,3.4,0,purple,650,100
-US,Yang,1.7,3.8,0,purple,650,100
+US,Yang,1.7,3.7,0,purple,650,100

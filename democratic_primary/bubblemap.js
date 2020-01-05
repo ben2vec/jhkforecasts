@@ -102,7 +102,7 @@ d3.csv("bubblemap.csv", function (error, data) {
 
       tipSVG.append("text")
         .text(d.state)
-        .attr("y", 15)
+        .attr("y", 20)
         .attr("x", 87.5)
         .attr("fill", "black")
         .style("font-weight", "600")
