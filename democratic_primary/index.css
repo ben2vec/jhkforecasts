@@ -160,12 +160,7 @@ div.tooltip {
     display: inline;
   }
  
-#bubblemap{
-    display:none;
-  }
-  #bubblemap2{
-    display:inline;
-  }
+
   .computer{
     display:none;
   }
@@ -191,12 +186,7 @@ div.tooltip {
     display: none;
   }
   
-  #bubblemap{
-    display:inline;
-  }
-  #bubblemap2{
-    display:none;
-  }
+ 
   .computer{
     display:inline;
   }
