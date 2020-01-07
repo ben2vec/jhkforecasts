@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)https://c0.pubmine.com/sf/0.0.1/html/safeframe.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta name="robots" content="noindex,nofollow,noarchive,nosnippet,noodp">
+        <title></title>
+        <script>
+            window.onerror = function() { return true; };
+        </script>
+        <style>
+            #sf_body {
+                margin: 0;
+                padding: 0;
+            }
+            #sf_align {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        </style>
+    <!--<base target="_blank">--><base href="." target="_blank"></head>
+    <body id="sf_body" marginwidth="0" marginheight="0" style="background:transparent;margin:0%;">
+        <div id="sf_align" class="sf_el">
+          <script class="sf_lib">
+              !function(e){var t={};function n(r){if(t[r])return t[r].exports;var s=t[r]={i:r,l:!1,exports:{}};return e[r].call(s.exports,s,s.exports,n),s.l=!0,s.exports}n.m=e,n.c=t,n.d=function(e,t,r){n.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},n.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},n.t=function(e,t){if(1&t&&(e=n(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var r=Object.create(null);if(n.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var s in e)n.d(r,s,function(t){return e[t]}.bind(null,s));return r},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,"a",t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p="",n(n.s=1)}([function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default=function(e){return"string"==typeof e&&e.length>0}},function(e,t,n){"use strict";var r=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(t,"__esModule",{value:!0});var s=r(n(2));t.default=new s.default(window)},function(e,t,n){"use strict";var r=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(t,"__esModule",{value:!0});var s=r(n(3)),i=r(n(4)),a=r(n(5)),o=r(n(6)),u=r(n(0)),d=n(8),c=function(){function e(e){var t=this;this.win=e,this.isWinFocused=!1,this.geometry={},this.callbackFn=i.default,this.callbackRegistered=!1,this.register=function(e,n,r){t.callbackRegistered?t.sendError("$sf.ext.register callback already initialized"):a.default(r)&&(t.callbackFn=r,t.callbackRegistered=!0)},this.supports=function(){return t.supportedFeatures},this.geom=function(){return t.geometry},this.meta=function(e,n){var r,s=t.metaData;if(s){var i=s.shared,a=s.nonShared;u.default(e)&&(u.default(n)?o.default(a)&&(r=a[n][e]):r=i[e])}return r},this.cookie=function(e,n){if(!t.pendingCommand){var r=o.default(n),s=r?d.ESafeFrameEvents.WRITE_COOKIE:d.ESafeFrameEvents.READ_COOKIE,i={cookie:e};r&&(i.value=n.info),t.pendingCommand=s,t.sendMessage(s,{cmd:s,info:i})}},this.inViewPercentage=function(){var e=t.geometry.self,n=e&&e.iv||0;return n>0&&(n=Math.floor(100*n)),n},this.winHasFocus=function(){return t.isWinFocused||t.document.hasFocus()},this.handleMessage=function(e){var n=JSON.parse(e.data);if(t.isValidMessageEvent(e.source,n)){e.stopImmediatePropagation();var r=n.cmd,s=n.params;t.pendingCommand===s.cmd&&(t.pendingCommand=void 0),t.processMessage(r,s)}},this.sendMessage=function(e,n){top.postMessage(JSON.stringify({cmd:e,guid:t.guid,id:t.positionId,params:n}),"*")},this.sendError=function(e){var n=d.ESafeFrameEvents.ERROR;t.sendMessage(n,{cmd:n,info:e})},this.isValidMessageEvent=function(e,n){return e===top&&o.default(n)&&n.guid===t.guid},this.processMessage=function(e,n){void 0===n&&(n={});var r=n.cmd,s=n.info,i=n.reason;switch(r){case d.ESafeFrameEvents.GEOMETRY_UPDATE:t.geometry=n.info;break;case d.ESafeFrameEvents.FOCUS_CHANGE:t.isWinFocused=!!n.info}t.callbackFn(e,{cmd:r,info:s,reason:i})},this.parent=e.parent,this.document=e.document,this.init()}return e.prototype.expand=function(){},e.prototype.collapse=function(){},e.prototype.status=function(){return"collapsed"},e.prototype.init=function(){try{if(this.isValidFrame()&&(this.parseRenderParams(),this.isValidRenderParams())){var e=this.renderParams,t=e.geom,n=e.conf,r=e.has_focus,s=e.meta,i=e.guid;this.guid=i,this.geometry=t,this.metaData=s,this.isWinFocused=r;var a=n.supports,o=n.id;this.positionId=o,this.supportedFeatures={"exp-ovr":!!a["exp-ovr"],"exp-push":!!a["exp-push"],"read-cookie":!!a["read-cookie"],"write-cookie":!!a["write-cookie"]},this.insertStyles(),this.addNavigationHandler(),this.setupListeners(),this.win.$sf=this.getNamespace(),this.render()}}catch(e){this.sendError("Safeframe initialization error: "+e.message)}},e.prototype.isValidRenderParams=function(){var e=this.renderParams,t=e.guid,n=e.html,r=e.conf;return u.default(t)&&u.default(n)&&o.default(r)},e.prototype.insertStyles=function(){var e=this.renderParams.conf,t=e.bg,n=e.css;s.default("\n            #sf_body {\n                background-color: "+t+";\n            }\n        "),s.default(unescape(n))},e.prototype.isValidFrame=function(){return top===this.parent},e.prototype.parseRenderParams=function(){try{var e=this.win.name;this.win.name="",this.renderParams=JSON.parse(e)}catch(e){this.sendError("Safeframe parsing render parameters error: "+e.message)}},e.prototype.addNavigationHandler=function(){var e=this.renderParams.conf.tgt;e!==d.EBaseTargets.SELF&&e!==d.EBaseTargets.PARENT||(e=d.EBaseTargets.TOP);var t=this.document,n=t.createElement("base");n.setAttribute("target",e),t.head.appendChild(n)},e.prototype.setupListeners=function(){this.win.addEventListener("message",this.handleMessage)},e.prototype.render=function(){try{var e=this.renderParams.html;this.document.write(e)}catch(e){this.sendError("Safeframe render error: "+e.message)}},e.prototype.getNamespace=function(){return{ext:{collapse:this.collapse,cookie:this.cookie,expand:this.expand,geom:this.geom,inViewPercentage:this.inViewPercentage,meta:this.meta,register:this.register,status:this.status,supports:this.supports,winHasFocus:this.winHasFocus}}},e}();t.default=c},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var r=n(0);t.default=function(e){if(r.default(e)){var t=document.createElement("style");document.body.appendChild(t),t.styleSheet?t.styleSheet.cssText=e:t.appendChild(document.createTextNode(e))}}},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default=function(){}},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default=function(e){return"function"==typeof e}},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var r=n(7);t.default=function(e){return!r.default(e)&&"object"==typeof e&&Object.keys(e).length>0}},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default=function(e){return null===e}},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),function(e){e.TOP="_top",e.SELF="_self",e.BLANK="_blank",e.PARENT="_parent"}(t.EBaseTargets||(t.EBaseTargets={})),function(e){e.BEFORE_HOOK="onBeforePosMsg",e.RENDER_END="onEndPosRender",e.FAILURE="onFailure",e.MESSAGE="onPosMsg",e.RENDER_START="onStartPosRender",e.SUCCESS="onSuccess"}(t.EHostEvents||(t.EHostEvents={})),function(e){e.GEOMETRY_UPDATE="geom-update",e.FOCUS_CHANGE="focus-change",e.READ_COOKIE="read-cookie",e.WRITE_COOKIE="write-cookie",e.FAILURE="failed",e.ERROR="error"}(t.ESafeFrameEvents||(t.ESafeFrameEvents={}))}]);
+          </script><script type="text/javascript">document.writeln("\n	<style>\n		.rtb_300x250_container {\n			border: 1px solid #ccc;\n			cursor: pointer;\n			font-family: Arial, \"Helvetica Neue\", Helvetica, sans-serif;\n			height: 248px;\n			line-height: 1.2em;\n			position: relative;\n			width: 298px;\n		}\n		.rtb_300x250_container:active,\n		.rtb_300x250_container:hover {\n			color: #666;\n			filter: brightness(115%);\n			-webkit-filter: brightness(115%);\n			text-decoration: none;\n		}\n		\n		.rtb_300x250_container .photo {\n			height: auto;\n			width: 298px;\n		}\n		\n		.rtb_300x250_container .headline {\n			font-size: 17px;\n			line-height: 1.2em;\n			font-weight: bold;\n			margin: 8px 10px 0 60px;\n			-webkit-touch-callout: none; \/* iOS Safari *\/\n			-webkit-user-select: none; \/* Safari *\/\n			-khtml-user-select: none; \/* Konqueror HTML *\/\n			-moz-user-select: none; \/* Firefox *\/\n			-ms-user-select: none; \/* Internet Explorer\/Edge *\/\n			user-select: none; \/* Non-prefixed version, currently supported by Chrome and Opera *\/\n		}\n		\n		.rtb_300x250_container .logo {\n			background-image: url(https:\/\/d31otfhas71ais.cloudfront.net\/images\/gundrymd\/logo.png);\n			background-repeat: no-repeat;\n			background-size: 40px 40px;\n			height: 40px;\n			left: 12px;\n			position: absolute;\n			top: 162px;\n			width: 40px;\n		}\n\n		.rtb_300x250_container .brand {\n			bottom: 1px;\n			color: #999;\n			font-size: 11px;\n			right: 5px;\n			position: absolute;\n		}\n	<\/style>\n	<div class=\"rtb_300x250_container\" onclick=\"window.open(\'https:\/\/rtb-use.mfadsrvr.com\/click\/DPHjm5FDCGsGwHXEnro5MAQkTA1tVZll-c1b39Jz9jBDHCNgE7MaO3_6q7WDOGAonYNUJuz2a6Ir_D4IhWIjiq5SiZ1N7hohQ_fta66sm4r6Xa3a6e0fzsorQa0oGhKRQ8CjCYbTrGL6Z0bsjEQPOSRRkR4nBgSW5uwdY59fX3sG2oTA7uOaObIyrzj2zqbsjLkfxuDonZFsHyHP7ugZ8Fme4COmdadjEODebuS3blvQxVipQa8CeAg7yNmPAnCXTpeHUaRBR4EotSsC2N1QthQ9-RMdhjY2nDtDPcSMZyVJ38UhRt5Og1IQcbqyQ4Jl2nFQK_kSqa6BnIxUSeRDwazizdRp0imfcuUi4j5MhuZ2QxbUFS2UMp3CXul55YMTxCmJyzLvinc9f3-O7hLG2UPVzxlwq0ZmThs8Gy53mrUq4_ByKoKnJe4Vtjg\/\/https%3A%2F%2Fs.pubmine.com%2Fclick2%2F4TVkeyZXaCoiOuKMzUh12qNkxX9QAjeFH7Bk9G9iZeA-JUBolMC7CvtzWueKsPNPHE23jV0hbMDKJj8O2Z6YaZltGT_EpLryEtX3G_HQVtFyz1ln8vzAh2sO7peZwbRrzEjd99Xf3dOYN7H0limhoj2QvK2Wldg8z7lAWaTCeZwaEuIPfVfTbNZXSiwSEWU%2F%2F\/http:\/\/tracking.lifestylejournal.com\/aff_c?offer_id=1761&aff_id=1561&aff_sub=MFRB_Dark_Spot&aff_sub5=3a46732b-ed1b-42c1-95a5-43329e59ff8e\')\">\n		<div class=\"logo\"><\/div>\n		<div><img class=\"photo\" src=\"https:\/\/de9a11s35xj3d.cloudfront.net\/340f0dad87073cc68e6f7ce81a218d84.jpg\"><\/div>\n		<div class=\"headline\">MD: If You Have Dark spots, Do This Immediately (It\'s Genius!)<\/div>\n	<\/div>\n<img src=\"https:\/\/rtb-use.mfadsrvr.com\/sync?ssp=bidswitch&amp;seller_network=bidswitch_wordpress&amp;bid_id=3a46732b-ed1b-42c1-95a5-43329e59ff8e&amp;initiator=me\" alt=\" \" style=\"display:none\"\/><img src=\"https:\/\/us-east-sync.bidswitch.net\/sync?ssp=wordpress&amp;dsp_id=250&amp;imp=1\" alt=\" \" style=\"display:none\"\/><script>window.__bsw_pixi=1;window.__bsw_pixu=\"https:\/\/x.bidswitch.net\/sync\";<\/script><script src=\"\/\/x.bidswitch.net\/pixel-health.min.js?43092\"><\/script>");document.writeln("<img src=\"https:\/\/s.pubmine.com\/imp_pixel?pc=4TVkeyZXaCoiOuKMzUh12qNkxX9QAjeFH7Bk9G9iZeA-JUBolMC7CvtzWueKsPNPHE23jV0hbMDKJj8O2Z6YaZltGT_EpLryEtX3G_HQVtFyz1ln8vzAh2sO7peZwbRrzEjd99Xf3dOYN7H0limhoj2QvK2Wldg8z7lAWaTCeZwaEuIPfVfTbNZXSiwSEWU&amp;tuuid=910cfe27-e411-4977-8ee2-61dbf932fda4&amp;rid=2935164639130\" alt=\" \" style=\"display:none\"\/><img src=\"https:\/\/s.pubmine.com\/wl_pixel?pc=4TVkeyZXaCoiOuKMzUh12qNkxX9QAjeFH7Bk9G9iZeA-JUBolMC7CvtzWueKsPNPHE23jV0hbMDKJj8O2Z6YaZltGT_EpLryEtX3G_HQVtFyz1ln8vzAh2sO7peZwbRrzEjd99Xf3dOYN7H0limhoj2QvK2Wldg8z7lAWaTCeZwaEuIPfVfTbNZXSiwSEWU&amp;tuuid=910cfe27-e411-4977-8ee2-61dbf932fda4&amp;rid=2935164639130\" alt=\" \" style=\"display:none\"\/>");</script>
+	<style>
+		.rtb_300x250_container {
+			border: 1px solid #ccc;
+			cursor: pointer;
+			font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+			height: 248px;
+			line-height: 1.2em;
+			position: relative;
+			width: 298px;
+		}
+		.rtb_300x250_container:active,
+		.rtb_300x250_container:hover {
+			color: #666;
+			filter: brightness(115%);
+			-webkit-filter: brightness(115%);
+			text-decoration: none;
+		}
+		
+		.rtb_300x250_container .photo {
+			height: auto;
+			width: 298px;
+		}
+		
+		.rtb_300x250_container .headline {
+			font-size: 17px;
+			line-height: 1.2em;
+			font-weight: bold;
+			margin: 8px 10px 0 60px;
+			-webkit-touch-callout: none; /* iOS Safari */
+			-webkit-user-select: none; /* Safari */
+			-khtml-user-select: none; /* Konqueror HTML */
+			-moz-user-select: none; /* Firefox */
+			-ms-user-select: none; /* Internet Explorer/Edge */
+			user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+		}
+		
+		.rtb_300x250_container .logo {
+			background-image: url(https://d31otfhas71ais.cloudfront.net/images/gundrymd/logo.png);
+			background-repeat: no-repeat;
+			background-size: 40px 40px;
+			height: 40px;
+			left: 12px;
+			position: absolute;
+			top: 162px;
+			width: 40px;
+		}
+
+		.rtb_300x250_container .brand {
+			bottom: 1px;
+			color: #999;
+			font-size: 11px;
+			right: 5px;
+			position: absolute;
+		}
+	</style>
+	<div class="rtb_300x250_container" onclick="window.open(&#39;https://rtb-use.mfadsrvr.com/click/DPHjm5FDCGsGwHXEnro5MAQkTA1tVZll-c1b39Jz9jBDHCNgE7MaO3_6q7WDOGAonYNUJuz2a6Ir_D4IhWIjiq5SiZ1N7hohQ_fta66sm4r6Xa3a6e0fzsorQa0oGhKRQ8CjCYbTrGL6Z0bsjEQPOSRRkR4nBgSW5uwdY59fX3sG2oTA7uOaObIyrzj2zqbsjLkfxuDonZFsHyHP7ugZ8Fme4COmdadjEODebuS3blvQxVipQa8CeAg7yNmPAnCXTpeHUaRBR4EotSsC2N1QthQ9-RMdhjY2nDtDPcSMZyVJ38UhRt5Og1IQcbqyQ4Jl2nFQK_kSqa6BnIxUSeRDwazizdRp0imfcuUi4j5MhuZ2QxbUFS2UMp3CXul55YMTxCmJyzLvinc9f3-O7hLG2UPVzxlwq0ZmThs8Gy53mrUq4_ByKoKnJe4Vtjg//https%3A%2F%2Fs.pubmine.com%2Fclick2%2F4TVkeyZXaCoiOuKMzUh12qNkxX9QAjeFH7Bk9G9iZeA-JUBolMC7CvtzWueKsPNPHE23jV0hbMDKJj8O2Z6YaZltGT_EpLryEtX3G_HQVtFyz1ln8vzAh2sO7peZwbRrzEjd99Xf3dOYN7H0limhoj2QvK2Wldg8z7lAWaTCeZwaEuIPfVfTbNZXSiwSEWU%2F%2F/http://tracking.lifestylejournal.com/aff_c?offer_id=1761&amp;aff_id=1561&amp;aff_sub=MFRB_Dark_Spot&amp;aff_sub5=3a46732b-ed1b-42c1-95a5-43329e59ff8e&#39;)">
+		<div class="logo"></div>
+		<div><img class="photo" src="./340f0dad87073cc68e6f7ce81a218d84.jpg"></div>
+		<div class="headline">MD: If You Have Dark spots, Do This Immediately (It's Genius!)</div>
+	</div>
+<img src="./sync(2)" alt=" " style="display:none"><img src="./sync(3)" alt=" " style="display:none"><script>window.__bsw_pixi=1;window.__bsw_pixu="https://x.bidswitch.net/sync";</script><script src="./pixel-health.min.js"></script>
+<img src="./imp_pixel(1)" alt=" " style="display:none"><img src="./wl_pixel(1)" alt=" " style="display:none">
+
+        </div><style>
+            #sf_body {
+                background-color: transparent;
+            }
+        </style>
+    
+
+</body></html>

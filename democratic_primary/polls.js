@@ -66,13 +66,14 @@ d3.csv("polls.csv", function (error, data) {
 
   legend.append("text")
     .attr("class", "legend-text")
-    .attr("x", 20)
-    .attr("y", 0)
+    .attr("x", 0)
+    .attr("y", -10)
     .style("fill", "Black")
     .style("font-size", 15)
     .attr("font-weight", 500)
     .text(d => d.Pollster)
     .attr("text-anchor", "start")
+    .call(wrap,275)
 
   legend.append("rect")
     .attr("x", 275)
@@ -400,4 +401,28 @@ d3.csv("polls.csv", function (error, data) {
     .attr("y2", 60)
     .attr("stroke-width", 2)
     .attr("stroke", "black")
+
+    function wrap(text, width) {
+      text.each(function() {
+        var text = d3.select(this),
+            words = text.text().split(/\s+/).reverse(),
+            word,
+            line = [],
+            lineNumber = 0,
+            lineHeight = 10, // ems
+            y = text.attr("y"),
+            dy = parseFloat(text.attr("dy")),
+            tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em");
+        while (word = words.pop()) {
+          line.push(word);
+          tspan.text(line.join(" "));
+          if (tspan.node().getComputedTextLength() > width) {
+            line.pop();
+            tspan.text(line.join(" "));
+            line = [word];
+            tspan = text.append("tspan").attr("x", 0).attr("y",10).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
+          }
+        }
+      });
+    }
 });
