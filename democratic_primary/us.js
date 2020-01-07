@@ -49,7 +49,7 @@ d3.csv("states.csv", function (error, data) {
     .range([height, 0]);
 
   var svg = d3.select("#chart").append("svg")
-    .attr("viewBox", "0 0 1000 500")
+    .attr("viewBox", "0 0 1000 400")
     .append('g')
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
@@ -307,7 +307,7 @@ d3.csv("states.csv", function (error, data) {
         d3.selectAll(".mouse-per-line text")
           .style("opacity", "0");
         d3.selectAll("#tooltip")
-          .style('display', 'inline')
+          .style('display', 'none')
 
       })
       .on('mouseover', function () { // on mouse in show line, circles and text
