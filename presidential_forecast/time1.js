@@ -8,8 +8,8 @@ var margin = { top: 75, right: 20, bottom: 0, left: 60 }
 var width = 1200 - margin.left - margin.right
 var height = 900 - margin.top - margin.bottom
 
-var lineOpacity = .8
-var lineStroke = "5px"
+var lineOpacity = 1
+var lineStroke = "8px"
 
 var axisPad = 12 // axis formatting
 var R = 7 //legend marker

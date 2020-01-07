@@ -9,7 +9,7 @@ var width2 = 1200 - margin.left - margin.right
 var height2 = 500 - margin.top - margin.bottom
 
 var lineOpacity = .8
-var lineStroke = "5px"
+var lineStroke2 = "5px"
 
 var axisPad = 12 // axis formatting
 var R = 7 //legend marker
@@ -188,7 +188,7 @@ d3.csv("timechange.csv", function (error, data) {
             .style('stroke', (d, i) => colorScale(i))
             .style('fill', 'none')
             .style('opacity', lineOpacity)
-            .style('stroke-width', lineStroke)
+            .style('stroke-width', lineStroke2)
 
 
         // APPEND CIRCLE MARKERS //

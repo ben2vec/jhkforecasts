@@ -9,7 +9,7 @@ var width = 1200 - margin.left - margin.right
 var height = 900 - margin.top - margin.bottom
 
 var lineOpacity = 1
-var lineStroke = "5px"
+var lineStroke = "7px"
 
 var axisPad = 12 // axis formatting
 var R = 7 //legend marker
@@ -59,7 +59,7 @@ d3.csv("timechange.csv", function (error, data) {
 
 
     var yScale = d3.scaleLinear()
-        .domain([0, 100])
+        .domain([0, maxYValue])
         .range([height, 0]);
 
     var svg = d3.select("#chart2").append("svg")
