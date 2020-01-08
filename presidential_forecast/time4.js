@@ -1,7 +1,7 @@
 var glines
 var mouseG
 var tooltip
-var parseDate = d3.timeParse("%Y-%m-%d %H:%M:%S")
+var parseDate = d3.timeParse("%Y.%m.%d"))
 var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"]
 
 var margin = { top: 75, right: 20, bottom: 0, left: 60 }
