@@ -1,14 +1,15 @@
 var glines
 var mouseG
 var tooltip2
-var parseDate = d3.timeParse("%Y.%m.%d"))
+var parseDate = d3.timeParse("%Y.%m.%d")
 var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"]
 
 var margin = { top: 75, right: 20, bottom: 0, left: 60 }
 var width = 1200 - margin.left - margin.right
 var height = 900 - margin.top - margin.bottom
 
-var lineOpacity = 1
+    var lineOpacity = 1
+    
 var lineStroke = "8px"
 
 var axisPad = 12 // axis formatting
