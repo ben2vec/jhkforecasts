@@ -11,8 +11,8 @@
 
         var tool_tip1 = d3.tip()
         .attr("class", "d3-tip")
-        .offset([-30,0])
-        .html("<div id='tipDiv'></div>");
+        .offset([-60,-30])
+        .html("<div id='tipDiv1'></div>");
       
       svg.call(tool_tip1)
 
@@ -78,7 +78,7 @@
                                 .attr("stroke-width","0.5")
                                 .on('mouseover', function(d) {
                                     tool_tip1.show();
-                                    var tipSVG = d3.select("#tipDiv")
+                                    var tipSVG = d3.select("#tipDiv1")
                                       .append("svg")
                                       .attr("width", 150)
                                   .attr("height", 50);
