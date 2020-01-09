@@ -3,7 +3,7 @@ Alabama,Biden,40.8,49,AL,637.0,338.6934
 Alaska,Biden,28.7,6,AK,245.0,400.0
 Arizona,Biden,29.8,30,AZ,315.0,306.5801
 Arkansas,Biden,37.2,29,AR,560.0,315.6387
-California,Biden,24.8,162,CA,223.0,253.9219
+California,Biden,24.3,159,CA,223.0,253.9219
 Colorado,Biden,23.8,24,CO,400.0,245.5645
 Connecticut,Biden,23.7,22,CT,-1000.0,-1000.0
 Delaware,Biden,33.5,13,DE,-1000.0,-1000.0
@@ -21,7 +21,7 @@ Maine,Biden,22.6,8,ME,807.3105,109.855
 Maryland,Biden,31.2,46,MD,-1000.0,-1000.0
 Massachusetts,Biden,20.9,29,MA,-1000.0,-1000.0
 Michigan,Biden,30.1,56,MI,645.6465,181.3647
-Minnesota,Biden,22.9,30,MN,530.8594,141.5874
+Minnesota,Biden,21.6,23,MN,530.8594,141.5874
 Mississippi,Biden,42.6,36,MS,598.6016,342.1514
 Missouri,Biden,35.5,46,MO,557.0,261.123
 Montana,Biden,26.9,8,MT,370.0981,112.7705
@@ -29,7 +29,7 @@ Nebraska,Biden,22.3,11,NE,473.8364,210.0527
 Nevada,Biden,28.0,15,NV,267.8765,219.0957
 New Hampshire,Biden,20.3,6,NH,-1000.0,-1000.0
 New Jersey,Biden,29.1,56,NJ,785.0,210.0
-New Mexico,Biden,26.1,16,NM,385.3774,314.1035
+New Mexico,Biden,26.0,16,NM,385.3774,314.1035
 New York,Biden,29.5,159,NY,753.5781,163.2588
 North Carolina,Biden,37.3,75,NC,728.6084,284.5029
 North Dakota,Biden,25.2,6,ND,467.0742,117.3823
@@ -54,7 +54,7 @@ Alabama,Bloomberg,6.8,0,AL,637.0,338.6934
 Alaska,Bloomberg,4.6,0,AK,245.0,400.0
 Arizona,Bloomberg,5.6,0,AZ,315.0,306.5801
 Arkansas,Bloomberg,6.6,0,AR,560.0,315.6387
-California,Bloomberg,5.9,0,CA,223.0,253.9219
+California,Bloomberg,5.8,0,CA,223.0,253.9219
 Colorado,Bloomberg,4.4,0,CO,400.0,245.5645
 Connecticut,Bloomberg,3.4,0,CT,-1000.0,-1000.0
 Delaware,Bloomberg,6.0,0,DE,-1000.0,-1000.0
@@ -72,7 +72,7 @@ Maine,Bloomberg,3.4,0,ME,807.3105,109.855
 Maryland,Bloomberg,6.0,0,MD,-1000.0,-1000.0
 Massachusetts,Bloomberg,5.1,0,MA,-1000.0,-1000.0
 Michigan,Bloomberg,4.5,0,MI,645.6465,181.3647
-Minnesota,Bloomberg,4.1,0,MN,530.8594,141.5874
+Minnesota,Bloomberg,3.9,0,MN,530.8594,141.5874
 Mississippi,Bloomberg,6.9,0,MS,598.6016,342.1514
 Missouri,Bloomberg,6.1,0,MO,557.0,261.123
 Montana,Bloomberg,5.1,0,MT,370.0981,112.7705
@@ -105,7 +105,7 @@ Alabama,Booker,2.9,0,AL,637.0,338.6934
 Alaska,Booker,1.6,0,AK,245.0,400.0
 Arizona,Booker,1.1,0,AZ,315.0,306.5801
 Arkansas,Booker,2.8,0,AR,560.0,315.6387
-California,Booker,2.1,0,CA,223.0,253.9219
+California,Booker,1.9,0,CA,223.0,253.9219
 Colorado,Booker,1.4,0,CO,400.0,245.5645
 Connecticut,Booker,2.1,0,CT,-1000.0,-1000.0
 Delaware,Booker,2.3,0,DE,-1000.0,-1000.0
@@ -123,7 +123,7 @@ Maine,Booker,1.7,0,ME,807.3105,109.855
 Maryland,Booker,2.7,0,MD,-1000.0,-1000.0
 Massachusetts,Booker,2.1,0,MA,-1000.0,-1000.0
 Michigan,Booker,1.7,0,MI,645.6465,181.3647
-Minnesota,Booker,1.3,0,MN,530.8594,141.5874
+Minnesota,Booker,1.2,0,MN,530.8594,141.5874
 Mississippi,Booker,3.2,0,MS,598.6016,342.1514
 Missouri,Booker,2.9,0,MO,557.0,261.123
 Montana,Booker,1.5,0,MT,370.0981,112.7705
@@ -156,7 +156,7 @@ Alabama,Buttigieg,6.8,0,AL,637.0,338.6934
 Alaska,Buttigieg,9.0,0,AK,245.0,400.0
 Arizona,Buttigieg,9.3,0,AZ,315.0,306.5801
 Arkansas,Buttigieg,8.3,0,AR,560.0,315.6387
-California,Buttigieg,8.7,0,CA,223.0,253.9219
+California,Buttigieg,8.8,0,CA,223.0,253.9219
 Colorado,Buttigieg,9.5,0,CO,400.0,245.5645
 Connecticut,Buttigieg,11.4,1,CT,-1000.0,-1000.0
 Delaware,Buttigieg,9.7,0,DE,-1000.0,-1000.0
@@ -174,7 +174,7 @@ Maine,Buttigieg,11.9,0,ME,807.3105,109.855
 Maryland,Buttigieg,9.1,0,MD,-1000.0,-1000.0
 Massachusetts,Buttigieg,10.9,1,MA,-1000.0,-1000.0
 Michigan,Buttigieg,10.7,2,MI,645.6465,181.3647
-Minnesota,Buttigieg,12.9,1,MN,530.8594,141.5874
+Minnesota,Buttigieg,12.2,1,MN,530.8594,141.5874
 Mississippi,Buttigieg,6.2,0,MS,598.6016,342.1514
 Missouri,Buttigieg,9.1,0,MO,557.0,261.123
 Montana,Buttigieg,9.7,0,MT,370.0981,112.7705
@@ -207,13 +207,13 @@ Alabama,Klobuchar,2.7,0,AL,637.0,338.6934
 Alaska,Klobuchar,2.2,0,AK,245.0,400.0
 Arizona,Klobuchar,2.3,0,AZ,315.0,306.5801
 Arkansas,Klobuchar,2.8,0,AR,560.0,315.6387
-California,Klobuchar,2.3,0,CA,223.0,253.9219
+California,Klobuchar,2.5,0,CA,223.0,253.9219
 Colorado,Klobuchar,2.8,0,CO,400.0,245.5645
 Connecticut,Klobuchar,3.4,0,CT,-1000.0,-1000.0
 Delaware,Klobuchar,1.9,0,DE,-1000.0,-1000.0
 Florida,Klobuchar,2.9,0,FL,714.0,397.8154
 Georgia,Klobuchar,2.6,0,GA,680.0117,335.2354
-Hawaii,Klobuchar,2.7,0,HI,380.0,465.0
+Hawaii,Klobuchar,2.8,0,HI,380.0,465.0
 Idaho,Klobuchar,2.4,0,ID,310.1851,155.0
 Illinois,Klobuchar,3.7,0,IL,596.6602,231.2954
 Indiana,Klobuchar,4.3,0,IN,633.4111,228.4214
@@ -225,7 +225,7 @@ Maine,Klobuchar,2.3,0,ME,807.3105,109.855
 Maryland,Klobuchar,2.0,0,MD,-1000.0,-1000.0
 Massachusetts,Klobuchar,3.2,0,MA,-1000.0,-1000.0
 Michigan,Klobuchar,3.2,0,MI,645.6465,181.3647
-Minnesota,Klobuchar,11.0,1,MN,530.8594,141.5874
+Minnesota,Klobuchar,15.2,16,MN,530.8594,141.5874
 Mississippi,Klobuchar,2.4,0,MS,598.6016,342.1514
 Missouri,Klobuchar,2.8,0,MO,557.0,261.123
 Montana,Klobuchar,2.3,0,MT,370.0981,112.7705
@@ -245,7 +245,7 @@ Rhode Island,Klobuchar,2.3,0,RI,-1000.0,-1000.0
 South Carolina,Klobuchar,2.7,0,SC,712.4395,315.6387
 South Dakota,Klobuchar,6.6,0,SD,468.0742,163.5166
 Tennessee,Klobuchar,2.7,0,TN,640.8594,294.8193
-Texas,Klobuchar,2.7,0,TX,480.9902,374.2861
+Texas,Klobuchar,2.8,0,TX,480.9902,374.2861
 Utah,Klobuchar,5.2,0,UT,330.1084,234.978
 Vermont,Klobuchar,3.5,0,VT,-1000.0,-1000.0
 Virginia,Klobuchar,3.7,0,VA,731.0264,252.7842
@@ -258,7 +258,7 @@ Alabama,Sanders,13.4,2,AL,637.0,338.6934
 Alaska,Sanders,21.3,5,AK,245.0,400.0
 Arizona,Sanders,20.4,21,AZ,315.0,306.5801
 Arkansas,Sanders,14.9,2,AR,560.0,315.6387
-California,Sanders,22.2,145,CA,223.0,253.9219
+California,Sanders,22.3,146,CA,223.0,253.9219
 Colorado,Sanders,25.0,26,CO,400.0,245.5645
 Connecticut,Sanders,20.7,19,CT,-1000.0,-1000.0
 Delaware,Sanders,17.8,7,DE,-1000.0,-1000.0
@@ -276,7 +276,7 @@ Maine,Sanders,18.9,7,ME,807.3105,109.855
 Maryland,Sanders,17.9,26,MD,-1000.0,-1000.0
 Massachusetts,Sanders,17.8,25,MA,-1000.0,-1000.0
 Michigan,Sanders,20.5,38,MI,645.6465,181.3647
-Minnesota,Sanders,17.7,23,MN,530.8594,141.5874
+Minnesota,Sanders,16.7,18,MN,530.8594,141.5874
 Mississippi,Sanders,12.8,0,MS,598.6016,342.1514
 Missouri,Sanders,16.1,21,MO,557.0,261.123
 Montana,Sanders,22.0,6,MT,370.0981,112.7705
@@ -296,7 +296,7 @@ Rhode Island,Sanders,20.3,8,RI,-1000.0,-1000.0
 South Carolina,Sanders,14.1,3,SC,712.4395,315.6387
 South Dakota,Sanders,21.8,6,SD,468.0742,163.5166
 Tennessee,Sanders,15.0,18,TN,640.8594,294.8193
-Texas,Sanders,17.2,73,TX,480.9902,374.2861
+Texas,Sanders,17.3,73,TX,480.9902,374.2861
 Utah,Sanders,24.7,11,UT,330.1084,234.978
 Vermont,Sanders,31.4,8,VT,-1000.0,-1000.0
 Virginia,Sanders,17.6,33,VA,731.0264,252.7842
@@ -327,7 +327,7 @@ Maine,Steyer,2.1,0,ME,807.3105,109.855
 Maryland,Steyer,2.2,0,MD,-1000.0,-1000.0
 Massachusetts,Steyer,1.7,0,MA,-1000.0,-1000.0
 Michigan,Steyer,1.0,0,MI,645.6465,181.3647
-Minnesota,Steyer,1.3,0,MN,530.8594,141.5874
+Minnesota,Steyer,1.2,0,MN,530.8594,141.5874
 Mississippi,Steyer,1.9,0,MS,598.6016,342.1514
 Missouri,Steyer,1.4,0,MO,557.0,261.123
 Montana,Steyer,1.3,0,MT,370.0981,112.7705
@@ -360,7 +360,7 @@ Alabama,Warren,11.9,1,AL,637.0,338.6934
 Alaska,Warren,17.0,4,AK,245.0,400.0
 Arizona,Warren,15.7,16,AZ,315.0,306.5801
 Arkansas,Warren,12.9,0,AR,560.0,315.6387
-California,Warren,16.7,109,CA,223.0,253.9219
+California,Warren,16.9,111,CA,223.0,253.9219
 Colorado,Warren,16.7,17,CO,400.0,245.5645
 Connecticut,Warren,19.7,18,CT,-1000.0,-1000.0
 Delaware,Warren,14.6,1,DE,-1000.0,-1000.0
@@ -378,7 +378,7 @@ Maine,Warren,23.8,9,ME,807.3105,109.855
 Maryland,Warren,16.0,24,MD,-1000.0,-1000.0
 Massachusetts,Warren,25.3,36,MA,-1000.0,-1000.0
 Michigan,Warren,15.4,29,MI,645.6465,181.3647
-Minnesota,Warren,16.0,21,MN,530.8594,141.5874
+Minnesota,Warren,15.2,16,MN,530.8594,141.5874
 Mississippi,Warren,11.1,0,MS,598.6016,342.1514
 Missouri,Warren,13.0,1,MO,557.0,261.123
 Montana,Warren,16.6,5,MT,370.0981,112.7705
@@ -386,7 +386,7 @@ Nebraska,Warren,15.6,8,NE,473.8364,210.0527
 Nevada,Warren,17.1,9,NV,267.8765,219.0957
 New Hampshire,Warren,16.4,5,NH,-1000.0,-1000.0
 New Jersey,Warren,16.3,31,NJ,785.0,210.0
-New Mexico,Warren,14.4,2,NM,385.3774,314.1035
+New Mexico,Warren,14.5,2,NM,385.3774,314.1035
 New York,Warren,14.6,19,NY,753.5781,163.2588
 North Carolina,Warren,12.8,2,NC,728.6084,284.5029
 North Dakota,Warren,16.2,4,ND,467.0742,117.3823
@@ -411,7 +411,7 @@ Alabama,Yang,2.9,0,AL,637.0,338.6934
 Alaska,Yang,3.6,0,AK,245.0,400.0
 Arizona,Yang,4.2,0,AZ,315.0,306.5801
 Arkansas,Yang,3.0,0,AR,560.0,315.6387
-California,Yang,5.2,0,CA,223.0,253.9219
+California,Yang,5.3,0,CA,223.0,253.9219
 Colorado,Yang,4.4,0,CO,400.0,245.5645
 Connecticut,Yang,3.5,0,CT,-1000.0,-1000.0
 Delaware,Yang,2.6,0,DE,-1000.0,-1000.0
@@ -429,7 +429,7 @@ Maine,Yang,3.2,0,ME,807.3105,109.855
 Maryland,Yang,2.9,0,MD,-1000.0,-1000.0
 Massachusetts,Yang,2.9,0,MA,-1000.0,-1000.0
 Michigan,Yang,2.9,0,MI,645.6465,181.3647
-Minnesota,Yang,2.9,0,MN,530.8594,141.5874
+Minnesota,Yang,2.7,0,MN,530.8594,141.5874
 Mississippi,Yang,2.9,0,MS,598.6016,342.1514
 Missouri,Yang,3.1,0,MO,557.0,261.123
 Montana,Yang,4.6,0,MT,370.0981,112.7705
