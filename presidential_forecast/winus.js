@@ -20,7 +20,7 @@ var glines
         .domain(category)
         .range(["#FF6060", "#0091FF", "#FFE130"])
   
-        d3.csv("timechange.csv", function(error, data){
+        d3.csv("time.csv", function(error, data){
         
           var data = data.filter(function(d){return d.state == 'US';})
   
