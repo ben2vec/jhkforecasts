@@ -104,11 +104,17 @@
     .append("a")
     .attr("xlink:href", function(d) {return  d.properties.name})
     .append("path")
+    .attr("class","states")
     .attr("d", path)
     .style("stroke", "#fff")
     .style("stroke-width", "1")
     .style("fill", function(d) {return color(d.properties.gopWin);})
     .attr("text-anchor","middle").on('mouseover', function(d) {
+
+      d3.select(this)
+      .style("opacity", .3)
+      
+  
         tool_tip.show();
         var tipSVG = d3.select("#tipDiv")
           .append("svg")
@@ -175,16 +181,23 @@
       .style("font-weight","600")
       .style("font-size","15");
       })
-      .on('mouseout', tool_tip.hide);
+      .on('mouseout', 
+      function(d) {
+
+        d3.select(this)
+        .style("opacity",1)
+        
+    tool_tip.hide()});
   
     	
               svg.selectAll("path2")
     .data(json.features)
       .enter()
       .append("path")
+      .attr("class","states")
     .attr("d", path)
     .style("stroke", d => d.properties.tippingPoint >= 3 ? "black": "none")
-    .style("stroke-width", "1.5")
+    .style("stroke-width", "1")
     .style("fill", "none")
     
     svg.append("rect")
@@ -204,7 +217,8 @@
       .attr("fill","black")
       .style("font-weight","500")
       .style("font-size","15");
-  ;
+
+      
     d3.csv("US Map.csv", function(error, data){
 
 
@@ -222,6 +236,8 @@
 .attr("font-size","10")
 .attr("fill","black")
 .attr("text-anchor","middle")
+
+
     });	
   });
 });

@@ -95,22 +95,23 @@ h1{ font-family: brandon-grotesque, sans-serif;
     }
     
     .radio-toolbar label {
-        display: inline-block;
-        background-color:none;
-        padding:5px 5px;
-        font-family: brandon-grotesque,sans-serif;
-        font-size: 16px;
-        border: black;
+      border: none;
+      color: black;
+      padding: 10px 10px;
+      font-size: 16px;
+      font-family: brandon-grotesque;
+      border-radius: 10px;
+      cursor: pointer;;
     }
     
     .radio-toolbar label:hover {
-      background-color: rgb(184, 184, 184);
+      background-color: #ddd;
     }
     
     
     
     .radio-toolbar input[type="radio"]:checked + label {
-        background-color: rgb(204, 204, 204);
+        background-color: #e7e7e7;
         stroke: rgb(0, 0, 0);
         stroke-width: 1px;
     }
