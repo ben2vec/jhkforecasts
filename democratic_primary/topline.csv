@@ -1,10 +1,10 @@
-category,win,delegates
-Joe Biden,53.0,2084
-Bernie Sanders,21.0,1143
-Elizabeth Warren,13.4,697
-Pete Buttigieg,5.6,49
-Micheal Bloomberg,2.2,5
-Andrew Yang,1.5,0
-Amy Klobuchar,1.2,3
-Cory Booker,1.1,0
-Tom Steyer,1.0,0
+category,win,delegates,voteShare
+Joe Biden,52.3,2084,29.2
+Bernie Sanders,20.9,1143,20.0
+Elizabeth Warren,13.5,697,15.5
+Pete Buttigieg,5.6,49,9.8
+Micheal Bloomberg,2.3,5,4.6
+Amy Klobuchar,1.6,3,3.3
+Andrew Yang,1.6,0,3.5
+Cory Booker,1.2,0,2.1
+Tom Steyer,1.1,0,1.9

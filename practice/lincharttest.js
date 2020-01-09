@@ -11,7 +11,7 @@ var margin = {top: 20, right: 80, bottom: 30, left: 50},
         var y = d3.scale.linear()
             .range([height, 0]);
         
-            var color = d3.scale.ordinal().range(["#00FF90", "#00B050", "#006541", "#36AEFF","#0077FF","002E66","E7B5FF","B722FF","0070B0"]);
+            var color = d3.scale.ordinal().range(["#00FF90", "#00B050", "#006541", "#98d2f8","#0077FF","002E66","E7B5FF","B722FF","0070B0"]);
         
         var xAxis = d3.svg.axis()
             .scale(x)
