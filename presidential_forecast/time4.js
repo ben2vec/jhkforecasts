@@ -59,7 +59,7 @@ d3.csv("time.csv", function (error, data) {
 
 
     var yScale = d3.scaleLinear()
-        .domain([0, maxYValue])
+        .domain([0, 100])
         .range([height2, 0]);
 
     var svg = d3.select("#chart4").append("svg")
