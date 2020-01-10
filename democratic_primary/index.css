@@ -17,9 +17,12 @@ h1{ font-family: brandon-grotesque, sans-serif;
     font-weight: inherit;
      font-style: inherit;}
  a{text-decoration:inherit;
-  color: black;
+  color: inherit;}
 
- }
+  a:hover{
+    text-decoration:underline;
+    color: inherit;
+  }
  .center {
      display: center;
      margin-left: auto;
@@ -51,6 +54,8 @@ h1{ font-family: brandon-grotesque, sans-serif;
   }
   
   
+
+
   .line {
     fill: none;
     stroke-width: 3px;

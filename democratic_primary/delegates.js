@@ -1,21 +1,21 @@
 
 
 var delegateScale = d3.scaleLinear()
-  .domain([0, .50,1])
+  .domain([0, .50, 1])
   .range(["white", "#0091FF", "#002E66"]);
 
 
 
 d3.csv("delegates.csv", function (error, data) {
 
-  
+
 
 
   var svg = d3.select("#delegates").append("svg")
     .attr("viewBox", "-50 0 1050 3500")
     .append('g')
 
-  
+
 
 
   var svgLegend = svg.append('g')
@@ -44,19 +44,22 @@ d3.csv("delegates.csv", function (error, data) {
 
 
 
-  legend.append("text")
-    .attr("class", "legend-text")
+  legend.append("a")
+    .attr("xlink:href", d => d.state=="-->"?"":d.state)
+    .append("text")
+    .attr("class", "statelink")
     .attr("x", 300)
     .attr("y", -5)
     .style("fill", "Black")
-    .style("font-size", 15)
+    .style("font-size", "12pt")
     .attr("font-weight", 700)
     .text(d => d.state)
     .attr("text-anchor", "middle")
+  
 
   legend.append("text")
     .attr("class", "legend-text")
-    .attr("x",100)
+    .attr("x", 100)
     .attr("y", -5)
     .style("fill", "Black")
     .style("font-size", 12)
@@ -74,8 +77,9 @@ d3.csv("delegates.csv", function (error, data) {
     .text(d => d.delegates)
     .attr("text-anchor", "middle")
 
-  
-  
+
+
+
 
 
 
@@ -85,7 +89,7 @@ d3.csv("delegates.csv", function (error, data) {
     .attr("width", 50)
     .attr("height", 40)
     .style("fill", d => delegateScale(d.bidenper))
-    .style("opacity",.8)
+    .style("opacity", .8)
 
   legend.append("rect")
     .attr("x", 525)
@@ -93,14 +97,14 @@ d3.csv("delegates.csv", function (error, data) {
     .attr("width", 50)
     .attr("height", 40)
     .style("fill", d => delegateScale(d.bloombergper))
-    .style("opacity",.8)
+    .style("opacity", .8)
   legend.append("rect")
     .attr("x", 575)
     .attr("y", -30)
     .attr("width", 50)
     .attr("height", 40)
     .style("fill", d => delegateScale(d.bookerper))
-    .style("opacity",.8)
+    .style("opacity", .8)
 
   legend.append("rect")
     .attr("x", 625)
@@ -108,7 +112,7 @@ d3.csv("delegates.csv", function (error, data) {
     .attr("width", 50)
     .attr("height", 40)
     .style("fill", d => delegateScale(d.buttigiegper))
-    .style("opacity",.8)
+    .style("opacity", .8)
 
   legend.append("rect")
     .attr("x", 675)
@@ -116,7 +120,7 @@ d3.csv("delegates.csv", function (error, data) {
     .attr("width", 50)
     .attr("height", 40)
     .style("fill", d => delegateScale(d.klobucharper))
-    .style("opacity",.8)
+    .style("opacity", .8)
 
   legend.append("rect")
     .attr("x", 725)
@@ -124,7 +128,7 @@ d3.csv("delegates.csv", function (error, data) {
     .attr("width", 50)
     .attr("height", 40)
     .style("fill", d => delegateScale(d.sandersper))
-    .style("opacity",.8)
+    .style("opacity", .8)
 
   legend.append("rect")
     .attr("x", 775)
@@ -132,15 +136,15 @@ d3.csv("delegates.csv", function (error, data) {
     .attr("width", 50)
     .attr("height", 40)
     .style("fill", d => delegateScale(d.steyerper))
-    .style("opacity",.8)
+    .style("opacity", .8)
 
   legend.append("rect")
     .attr("x", 825)
     .attr("y", -30)
     .attr("width", 50)
-    .attr("height",40)
+    .attr("height", 40)
     .style("fill", d => delegateScale(d.warrenper))
-    .style("opacity",.8)
+    .style("opacity", .8)
 
   legend.append("rect")
     .attr("x", 875)
@@ -148,7 +152,7 @@ d3.csv("delegates.csv", function (error, data) {
     .attr("width", 50)
     .attr("height", 40)
     .style("fill", d => delegateScale(d.yangper))
-    .style("opacity",.8)
+    .style("opacity", .8)
 
   legend.append("text")
     .attr("class", "legend-text")
@@ -157,7 +161,7 @@ d3.csv("delegates.csv", function (error, data) {
     .style("fill", "Black")
     .style("font-size", 15)
     .attr("font-weight", 700)
-    .text(d => d.biden == 0 ? "":d.biden)
+    .text(d => d.biden == 0 ? "" : d.biden)
     .attr("text-anchor", "middle")
   legend.append("text")
     .attr("class", "legend-text")
@@ -166,7 +170,7 @@ d3.csv("delegates.csv", function (error, data) {
     .style("fill", "Black")
     .style("font-size", 15)
     .attr("font-weight", 700)
-    .text(d => d.bloomberg == 0 ? "":d.bloomberg )
+    .text(d => d.bloomberg == 0 ? "" : d.bloomberg)
     .attr("text-anchor", "middle")
   legend.append("text")
     .attr("class", "legend-text")
@@ -175,7 +179,7 @@ d3.csv("delegates.csv", function (error, data) {
     .style("fill", "Black")
     .style("font-size", 15)
     .attr("font-weight", 700)
-    .text(d => d.booker == 0 ? "":d.booker)
+    .text(d => d.booker == 0 ? "" : d.booker)
     .attr("text-anchor", "middle")
   legend.append("text")
     .attr("class", "legend-text")
@@ -184,7 +188,7 @@ d3.csv("delegates.csv", function (error, data) {
     .style("fill", "Black")
     .style("font-size", 15)
     .attr("font-weight", 700)
-    .text(d => d.buttigieg == 0 ? "":d.buttigieg)
+    .text(d => d.buttigieg == 0 ? "" : d.buttigieg)
     .attr("text-anchor", "middle")
   legend.append("text")
     .attr("class", "legend-text")
@@ -193,7 +197,7 @@ d3.csv("delegates.csv", function (error, data) {
     .style("fill", "Black")
     .style("font-size", 15)
     .attr("font-weight", 700)
-    .text(d => d.klobuchar == 0 ? "":d.klobuchar)
+    .text(d => d.klobuchar == 0 ? "" : d.klobuchar)
     .attr("text-anchor", "middle")
   legend.append("text")
     .attr("class", "legend-text")
@@ -202,7 +206,7 @@ d3.csv("delegates.csv", function (error, data) {
     .style("fill", "Black")
     .style("font-size", 15)
     .attr("font-weight", 700)
-    .text(d => d.sanders == 0 ? "":d.sanders)
+    .text(d => d.sanders == 0 ? "" : d.sanders)
     .attr("text-anchor", "middle")
   legend.append("text")
     .attr("class", "legend-text")
@@ -211,7 +215,7 @@ d3.csv("delegates.csv", function (error, data) {
     .style("fill", "Black")
     .style("font-size", 15)
     .attr("font-weight", 700)
-    .text(d => d.steyer == 0 ? "":d.steyer)
+    .text(d => d.steyer == 0 ? "" : d.steyer)
     .attr("text-anchor", "middle")
   legend.append("text")
     .attr("class", "legend-text")
@@ -220,7 +224,7 @@ d3.csv("delegates.csv", function (error, data) {
     .style("fill", "Black")
     .style("font-size", 15)
     .attr("font-weight", 700)
-    .text(d => d.warren == 0 ? "":d.warren)
+    .text(d => d.warren == 0 ? "" : d.warren)
     .attr("text-anchor", "middle")
   legend.append("text")
     .attr("class", "legend-text")
@@ -229,7 +233,7 @@ d3.csv("delegates.csv", function (error, data) {
     .style("fill", "Black")
     .style("font-size", 15)
     .attr("font-weight", 700)
-    .text(d => d.yang == 0 ? "":d.yang)
+    .text(d => d.yang == 0 ? "" : d.yang)
     .attr("text-anchor", "middle")
 
 
@@ -253,7 +257,7 @@ d3.csv("delegates.csv", function (error, data) {
     .text("State")
     .attr("text-anchor", "middle")
 
-  
+
 
   svg.append("text")
     .attr("x", 425)
@@ -342,11 +346,11 @@ d3.csv("delegates.csv", function (error, data) {
     .attr("x2", 950)
     .attr("y1", -30)
     .attr("y2", -30)
-    .attr("stroke",d=> d.date ==""?"#E2E2E2":"black")
-    .attr("stroke-width", d=> d.date ==""?1:2)
+    .attr("stroke", d => d.date == "" ? "#E2E2E2" : "black")
+    .attr("stroke-width", d => d.date == "" ? 1 : 2)
 
-    
-    
+
+
 
   svg.append("line")
     .attr("x1", 0)
@@ -355,4 +359,6 @@ d3.csv("delegates.csv", function (error, data) {
     .attr("y2", 60)
     .attr("stroke-width", 2)
     .attr("stroke", "black")
+
+  
 });
