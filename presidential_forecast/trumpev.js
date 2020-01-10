@@ -10,14 +10,33 @@ var category = ["Trump", "Democrats", "3rd Party"]
         
       console.log(data)  
       
-      var max = d3.max(data,d=> d.gopPerc)
+      var max = d3.max(data,d=> d.demPerc)
 
       console.log(max)
         
-      var svg = d3.select("#trumpev").append("svg")
-            .attr("viewBox", '-100 0 738 175')
+      var svg = d3.select("#demev").append("svg")
+            .attr("viewBox", '0 0 538 175')
 
+            svg.append("line")
+            .attr("x1",20)
+            .attr("y1",5)
+            .attr("x2",538)
+            .attr("y2",5)
+            .attr("stroke-width",.5)
+            .attr("stroke","lightgray")
+            .attr("opacity",1)
 
+            svg.append("line")
+            .attr("x1",20)
+            .attr("y1",75)
+            .attr("x2",538)
+            .attr("y2",75)
+            .attr("stroke-width",.5)
+            .attr("stroke","lightgray")
+            .attr("opacity",1)
+
+            
+    
 
 
         
@@ -27,48 +46,62 @@ var category = ["Trump", "Democrats", "3rd Party"]
             .append("rect")
             .attr("x",d => d.ev)
             .attr("y",d => d.gopY )
-            .attr("width",1.1)
+            .attr("width",1.5)
             .attr("height",d => d.gop)
-            .attr("fill", "#FF6060");
+            .attr("fill",d => d.ev==269?"#FF6060":d.ev>268? "#FF6060":"#0091FF");
             
             svg.append("text")
             .text("270")
             .attr("x",270)
             .attr("y", 160)
             .attr("fill","black")
+            .attr("font-size",10)
+            .attr("font-weight",700)
+            .attr("text-anchor","middle");
+
+            svg.append("text")
+            .text("300")
+            .attr("x",238)
+            .attr("y", 160)
+            .attr("fill",colorScale("Democrats"))
             .attr("font-size",8)
+            .attr("font-weight",700)
             .attr("text-anchor","middle");
 
             svg.append("text")
-            .text("200")
-            .attr("x",200)
+            .text("400")
+            .attr("x",138)
             .attr("y", 160)
-            .attr("fill","black")
-            .attr("font-size",6)
+            .attr("fill",colorScale("Democrats"))
+            .attr("font-size",8)
+            .attr("font-weight",700)
             .attr("text-anchor","middle");
 
             svg.append("text")
-            .text("100")
-            .attr("x",100)
+            .text("500")
+            .attr("x",38)
             .attr("y", 160)
-            .attr("fill","black")
-            .attr("font-size",6)
+            .attr("fill",colorScale("Democrats"))
+            .attr("font-size",8)
+            .attr("font-weight",700)
             .attr("text-anchor","middle");
 
             svg.append("text")
             .text("300")
             .attr("x",300)
             .attr("y", 160)
-            .attr("fill","black")
-            .attr("font-size",6)
+            .attr("fill",colorScale("Trump"))
+            .attr("font-size",8)
+            .attr("font-weight",700)
             .attr("text-anchor","middle");
 
             svg.append("text")
             .text("400")
             .attr("x",400)
             .attr("y", 160)
-            .attr("fill","black")
-            .attr("font-size",6)
+            .attr("fill",colorScale("Trump"))
+            .attr("font-size",8)
+            .attr("font-weight",700)
             .attr("text-anchor","middle");
 
 
@@ -76,26 +109,31 @@ var category = ["Trump", "Democrats", "3rd Party"]
             .text("500")
             .attr("x",500)
             .attr("y", 160)
-            .attr("fill","black")
-            .attr("font-size",6)
+            .attr("fill",colorScale("Trump"))
+            .attr("font-size",8)
+            .attr("font-weight",700)
             .attr("text-anchor","middle");
 
-            svg.append("line")
-        .attr("x1",270)
-        .attr("y1",0)
-        .attr("x2",270)
-        .attr("y2",150)
-        .attr("stroke-width",1)
-        .attr("stroke","black")
-        .attr("opacity",.3)
+         
 
         svg.append("text")
-            .text("Trump")
-            .attr("x",538)
-            .attr("y", 70)
-            .attr("fill","black")
-            .attr("font-size",20)
+            .text("Trump Wins")
+            .attr("font-weight",700)
+            .attr("x",488)
+            .attr("y", 30)
+            .attr("fill",colorScale("Trump"))
+            .attr("font-size",15)
             .attr("text-anchor","middle");
+
+            svg.append("text")
+            .text("Democrats Wins")
+            .attr("font-weight",700)
+            .attr("x",60)
+            .attr("y", 30)
+            .attr("fill",colorScale("Democrats"))
+            .attr("font-size",15)
+            .attr("text-anchor","middle");
+
 
             svg.append("text")
             .text(max+"%")
@@ -103,15 +141,25 @@ var category = ["Trump", "Democrats", "3rd Party"]
             .attr("y", 5)
             .attr("fill","black")
             .attr("font-size",7)
+            .attr("font-weight",700)
             .attr("text-anchor","middle")
-    
-            svg.append("line")
-        .attr("x1",20)
-        .attr("y1",5)
-        .attr("x2",538)
-        .attr("y2",5)
-        .attr("stroke-width",.5)
-        .attr("stroke","lightgray")
-        .attr("opacity",.4)
 
+            svg.append("text")
+            .text(max/2+"%")
+            .attr("x",10)
+            .attr("y", 75)
+            .attr("fill","black")
+            .attr("font-size",7)
+            .attr("font-weight",700)
+            .attr("text-anchor","middle")
+            svg.append("line")
+            .attr("x1",269.5)
+            .attr("y1",0)
+            .attr("x2",269.5)
+            .attr("y2",150)
+            .attr("stroke-width",1)
+            .attr("stroke","black")
+            .attr("opacity",1)
+    
+            
     })
