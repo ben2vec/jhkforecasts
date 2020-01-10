@@ -91,7 +91,7 @@ d3.csv("delegatetime.csv", function (error, data) {
 
   svg.append("text")
     .attr("x", "20")
-    .attr("y", "5")
+    .attr("y", yScaletwo(1990)-5)
     .attr('fill', 'grey')
     .attr('font-size', '15')
     .attr('font-weight', 500)
