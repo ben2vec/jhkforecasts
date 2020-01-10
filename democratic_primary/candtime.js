@@ -83,8 +83,8 @@ d3.csv("states.csv", function (error, data) {
     })
     
    svg.append("line")
-   .attr("x1","468")
-   .attr("x2","468")
+   .attr("x1",xScale(new Date(2020,0,3)))
+   .attr("x2",xScale(new Date(2020,0,3)))
    .attr("y1","0")
    .attr("y2","280")
    .attr("stroke","grey")

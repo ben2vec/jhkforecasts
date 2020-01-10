@@ -1,0 +1,511 @@
+rank,state,state2,value
+1,Alabama,Georgia,82.9
+2,Alabama,Louisiana,80.7
+3,Alabama,Maryland,79.2
+4,Alabama,South Carolina,78.1
+5,Alabama,Mississippi,75.5
+6,Alabama,Florida,71.2
+7,Alabama,Tennessee,69.0
+8,Alabama,Illinois,68.0
+9,Alabama,North Carolina,67.0
+10,Alabama,Texas,64.6
+1,Alaska,Michigan,66.6
+2,Alaska,Arizona,64.4
+3,Alaska,Nevada,64.0
+4,Alaska,New Jersey,64.0
+5,Alaska,Missouri,63.6
+6,Alaska,Nebraska,63.1
+7,Alaska,Kansas,63.1
+8,Alaska,Colorado,62.1
+9,Alaska,Delaware,62.0
+10,Alaska,Pennsylvania,61.9
+1,Arizona,Colorado,78.0
+2,Arizona,Arkansas,75.3
+3,Arizona,New Mexico,69.9
+4,Arizona,Nevada,69.6
+5,Arizona,Oklahoma,66.4
+6,Arizona,Montana,66.0
+7,Arizona,Missouri,65.9
+8,Arizona,Idaho,65.4
+9,Arizona,Wyoming,64.4
+10,Arizona,Michigan,64.0
+1,Arkansas,North Carolina,79.4
+2,Arkansas,Tennessee,79.0
+3,Arkansas,Ohio,78.3
+4,Arkansas,Illinois,78.3
+5,Arkansas,Missouri,77.6
+6,Arkansas,Michigan,75.5
+7,Arkansas,Pennsylvania,74.7
+8,Arkansas,New Jersey,74.6
+9,Arkansas,Arizona,74.4
+10,Arkansas,Oklahoma,72.7
+1,California,Texas,75.6
+2,California,Nevada,70.8
+3,California,New Mexico,69.4
+4,California,Colorado,67.8
+5,California,Arizona,63.6
+6,California,Oregon,63.0
+7,California,New York,59.6
+8,California,Illinois,58.4
+9,California,Hawaii,58.1
+10,California,Maryland,55.9
+1,Colorado,Arizona,77.9
+2,Colorado,Illinois,77.8
+3,Colorado,Nevada,76.9
+4,Colorado,Missouri,76.6
+5,Colorado,New Mexico,74.8
+6,Colorado,Arkansas,73.2
+7,Colorado,New York,72.7
+8,Colorado,Indiana,72.6
+9,Colorado,Pennsylvania,72.4
+10,Colorado,Minnesota,71.4
+1,Connecticut,Massachusetts,95.3
+2,Connecticut,New Hampshire,88.3
+3,Connecticut,Rhode island,82.3
+4,Connecticut,Vermont,81.0
+5,Connecticut,Wisconsin,80.6
+6,Connecticut,Minnesota,79.7
+7,Connecticut,Delaware,77.8
+8,Connecticut,Kentucky,77.1
+9,Connecticut,Ohio,72.7
+10,Connecticut,Maine,72.5
+1,Delaware,Ohio,92.4
+2,Delaware,Rhode island,87.4
+3,Delaware,New Jersey,87.0
+4,Delaware,Pennsylvania,84.5
+5,Delaware,North Carolina,80.3
+6,Delaware,Kentucky,80.2
+7,Delaware,Connecticut,78.6
+8,Delaware,Indiana,78.1
+9,Delaware,Michigan,77.4
+10,Delaware,Missouri,75.8
+1,Florida,North Carolina,75.6
+2,Florida,Illinois,75.0
+3,Florida,Alabama,74.2
+4,Florida,Arkansas,73.4
+5,Florida,Texas,72.2
+6,Florida,Georgia,70.4
+7,Florida,Tennessee,69.8
+8,Florida,Maryland,69.6
+9,Florida,New York,69.5
+10,Florida,New Jersey,68.3
+1,Georgia,South Carolina,86.2
+2,Georgia,Alabama,82.1
+3,Georgia,Maryland,76.8
+4,Georgia,Louisiana,70.9
+5,Georgia,North Carolina,69.0
+6,Georgia,Florida,67.6
+7,Georgia,Mississippi,67.1
+8,Georgia,Tennessee,65.5
+9,Georgia,Illinois,60.1
+10,Georgia,Texas,59.4
+1,Hawaii,California,60.5
+2,Hawaii,New Mexico,60.1
+3,Hawaii,New York,50.9
+4,Hawaii,Texas,50.2
+5,Hawaii,Colorado,49.6
+6,Hawaii,Nevada,49.3
+7,Hawaii,Illinois,48.5
+8,Hawaii,Alabama,48.3
+9,Hawaii,Maryland,48.1
+10,Hawaii,Minnesota,46.5
+1,Idaho,Wyoming,87.6
+2,Idaho,Montana,85.6
+3,Idaho,North Dakota,82.8
+4,Idaho,South Dakota,80.8
+5,Idaho,Oregon,79.9
+6,Idaho,Nebraska,78.9
+7,Idaho,Kansas,77.5
+8,Idaho,Washington,74.0
+9,Idaho,Maine,72.5
+10,Idaho,Utah,72.5
+1,Illinois,New York,84.2
+2,Illinois,Tennessee,82.4
+3,Illinois,Missouri,81.5
+4,Illinois,Virginia,80.1
+5,Illinois,North Carolina,79.9
+6,Illinois,Indiana,78.4
+7,Illinois,Arkansas,78.3
+8,Illinois,Pennsylvania,77.8
+9,Illinois,Ohio,77.0
+10,Illinois,New Jersey,76.7
+1,Indiana,Missouri,88.6
+2,Indiana,Michigan,83.6
+3,Indiana,Ohio,82.9
+4,Indiana,Wisconsin,82.5
+5,Indiana,Pennsylvania,82.2
+6,Indiana,Kentucky,81.5
+7,Indiana,New Jersey,80.6
+8,Indiana,Minnesota,78.8
+9,Indiana,Delaware,77.7
+10,Indiana,New York,77.6
+1,Iowa,Kansas,84.7
+2,Iowa,Nebraska,84.6
+3,Iowa,Wisconsin,78.9
+4,Iowa,South Dakota,78.7
+5,Iowa,Minnesota,77.9
+6,Iowa,West Virginia,73.3
+7,Iowa,New Hampshire,73.1
+8,Iowa,North Dakota,71.6
+9,Iowa,Missouri,71.1
+10,Iowa,Utah,70.7
+1,Kansas,Nebraska,98.0
+2,Kansas,South Dakota,89.9
+3,Kansas,Iowa,84.7
+4,Kansas,North Dakota,81.8
+5,Kansas,Wyoming,81.2
+6,Kansas,Montana,81.2
+7,Kansas,Idaho,78.4
+8,Kansas,Wisconsin,77.1
+9,Kansas,Minnesota,76.3
+10,Kansas,Oregon,75.1
+1,Kentucky,Ohio,81.5
+2,Kentucky,Wisconsin,81.3
+3,Kentucky,Indiana,80.6
+4,Kentucky,Delaware,79.5
+5,Kentucky,Tennessee,78.9
+6,Kentucky,Missouri,78.5
+7,Kentucky,Minnesota,77.2
+8,Kentucky,Pennsylvania,76.5
+9,Kentucky,Connecticut,76.4
+10,Kentucky,Rhode island,75.7
+1,Louisiana,Mississippi,81.1
+2,Louisiana,Alabama,80.1
+3,Louisiana,South Carolina,77.6
+4,Louisiana,Georgia,71.9
+5,Louisiana,Maryland,63.6
+6,Louisiana,Florida,59.8
+7,Louisiana,Texas,59.1
+8,Louisiana,Arkansas,57.4
+9,Louisiana,North Carolina,56.6
+10,Louisiana,Tennessee,55.7
+1,Maine,North Dakota,79.6
+2,Maine,Wyoming,77.9
+3,Maine,West Virginia,75.2
+4,Maine,South Dakota,75.0
+5,Maine,Massachusetts,74.2
+6,Maine,Rhode island,72.9
+7,Maine,Kansas,72.4
+8,Maine,Connecticut,72.3
+9,Maine,Nebraska,72.1
+10,Maine,Idaho,71.9
+1,Maryland,Alabama,79.8
+2,Maryland,Georgia,77.0
+3,Maryland,Tennessee,72.8
+4,Maryland,North Carolina,72.7
+5,Maryland,South Carolina,71.6
+6,Maryland,New York,71.1
+7,Maryland,New Jersey,70.3
+8,Maryland,Illinois,68.8
+9,Maryland,Pennsylvania,68.5
+10,Maryland,Florida,68.0
+1,Massachusetts,Connecticut,95.6
+2,Massachusetts,New Hampshire,86.0
+3,Massachusetts,Rhode island,85.8
+4,Massachusetts,Wisconsin,82.8
+5,Massachusetts,Minnesota,82.1
+6,Massachusetts,Vermont,80.2
+7,Massachusetts,Maine,74.8
+8,Massachusetts,Kentucky,74.6
+9,Massachusetts,Delaware,74.6
+10,Massachusetts,New Jersey,74.5
+1,Michigan,Ohio,84.1
+2,Michigan,Indiana,84.1
+3,Michigan,New Jersey,84.1
+4,Michigan,Missouri,83.7
+5,Michigan,Pennsylvania,78.9
+6,Michigan,Delaware,77.6
+7,Michigan,Virginia,77.2
+8,Michigan,North Carolina,76.1
+9,Michigan,Tennessee,76.0
+10,Michigan,Arkansas,75.7
+1,Minnesota,Wisconsin,95.2
+2,Minnesota,Massachusetts,81.8
+3,Minnesota,Connecticut,79.9
+4,Minnesota,Iowa,79.1
+5,Minnesota,Indiana,78.6
+6,Minnesota,Nebraska,78.4
+7,Minnesota,Kentucky,77.9
+8,Minnesota,Kansas,77.4
+9,Minnesota,Missouri,76.6
+10,Minnesota,South Dakota,75.1
+1,Mississippi,Louisiana,81.1
+2,Mississippi,Alabama,75.1
+3,Mississippi,South Carolina,73.3
+4,Mississippi,Georgia,66.2
+5,Mississippi,District of Columbia,60.6
+6,Mississippi,Maryland,60.4
+7,Mississippi,Florida,55.0
+8,Mississippi,Tennessee,54.1
+9,Mississippi,Arkansas,53.9
+10,Mississippi,North Carolina,53.6
+1,Missouri,Indiana,88.3
+2,Missouri,Michigan,83.5
+3,Missouri,Ohio,82.3
+4,Missouri,Pennsylvania,81.2
+5,Missouri,Illinois,80.3
+6,Missouri,Kentucky,79.6
+7,Missouri,Wisconsin,79.3
+8,Missouri,Virginia,78.1
+9,Missouri,New Jersey,76.9
+10,Missouri,Arkansas,76.9
+1,Montana,Wyoming,90.3
+2,Montana,South Dakota,87.7
+3,Montana,North Dakota,87.5
+4,Montana,Idaho,85.9
+5,Montana,Nebraska,82.9
+6,Montana,Kansas,81.0
+7,Montana,Oregon,79.1
+8,Montana,Washington,72.9
+9,Montana,Utah,72.1
+10,Montana,Maine,70.9
+1,Nebraska,Kansas,98.0
+2,Nebraska,South Dakota,91.8
+3,Nebraska,Iowa,84.6
+4,Nebraska,North Dakota,83.8
+5,Nebraska,Montana,83.1
+6,Nebraska,Wyoming,82.6
+7,Nebraska,Idaho,79.9
+8,Nebraska,Minnesota,77.2
+9,Nebraska,Wisconsin,77.2
+10,Nebraska,Oregon,76.2
+1,Nevada,Colorado,76.6
+2,Nevada,New Mexico,73.2
+3,Nevada,California,69.2
+4,Nevada,Arizona,69.0
+5,Nevada,Oregon,68.1
+6,Nevada,Illinois,67.4
+7,Nevada,Idaho,65.8
+8,Nevada,New York,65.8
+9,Nevada,Alaska,64.0
+10,Nevada,Virginia,63.9
+1,New Hampshire,Connecticut,88.2
+2,New Hampshire,Vermont,87.6
+3,New Hampshire,Massachusetts,85.5
+4,New Hampshire,Rhode island,74.9
+5,New Hampshire,Iowa,74.0
+6,New Hampshire,Wisconsin,73.8
+7,New Hampshire,West Virginia,71.9
+8,New Hampshire,Minnesota,70.7
+9,New Hampshire,Delaware,70.0
+10,New Hampshire,Kentucky,69.5
+1,New Jersey,Pennsylvania,87.3
+2,New Jersey,Delaware,86.9
+3,New Jersey,New York,86.8
+4,New Jersey,Rhode island,86.5
+5,New Jersey,Ohio,84.3
+6,New Jersey,Michigan,83.9
+7,New Jersey,North Carolina,82.6
+8,New Jersey,Indiana,80.8
+9,New Jersey,Virginia,79.5
+10,New Jersey,Tennessee,77.2
+1,New Mexico,Colorado,74.7
+2,New Mexico,Nevada,73.4
+3,New Mexico,Texas,72.8
+4,New Mexico,California,69.5
+5,New Mexico,Arizona,69.0
+6,New Mexico,Illinois,66.6
+7,New Mexico,Florida,63.2
+8,New Mexico,New York,60.5
+9,New Mexico,Hawaii,59.7
+10,New Mexico,Missouri,59.6
+1,New York,New Jersey,86.8
+2,New York,Pennsylvania,85.2
+3,New York,Illinois,84.4
+4,New York,Virginia,82.6
+5,New York,North Carolina,78.6
+6,New York,Indiana,78.6
+7,New York,Rhode island,76.8
+8,New York,Delaware,76.1
+9,New York,Michigan,74.9
+10,New York,Tennessee,74.7
+1,North Carolina,Tennessee,86.2
+2,North Carolina,New Jersey,82.0
+3,North Carolina,Illinois,80.0
+4,North Carolina,Ohio,79.7
+5,North Carolina,Arkansas,79.6
+6,North Carolina,Delaware,79.0
+7,North Carolina,New York,79.0
+8,North Carolina,Virginia,78.3
+9,North Carolina,Pennsylvania,76.7
+10,North Carolina,Florida,76.4
+1,North Dakota,Wyoming,95.0
+2,North Dakota,South Dakota,88.9
+3,North Dakota,Montana,87.5
+4,North Dakota,Nebraska,84.3
+5,North Dakota,Kansas,82.4
+6,North Dakota,Idaho,82.2
+7,North Dakota,Maine,79.6
+8,North Dakota,Iowa,73.2
+9,North Dakota,West Virginia,71.8
+10,North Dakota,Oklahoma,71.7
+1,Ohio,Delaware,92.6
+2,Ohio,Pennsylvania,84.5
+3,Ohio,New Jersey,84.2
+4,Ohio,Michigan,83.9
+5,Ohio,Indiana,83.5
+6,Ohio,Kentucky,82.5
+7,Ohio,Missouri,82.3
+8,Ohio,Rhode island,82.1
+9,Ohio,North Carolina,79.9
+10,Ohio,Tennessee,78.9
+1,Oklahoma,Arkansas,75.7
+2,Oklahoma,Kansas,74.9
+3,Oklahoma,Missouri,73.6
+4,Oklahoma,Nebraska,73.1
+5,Oklahoma,North Dakota,72.8
+6,Oklahoma,Wyoming,72.6
+7,Oklahoma,Ohio,71.5
+8,Oklahoma,Montana,71.4
+9,Oklahoma,South Dakota,71.0
+10,Oklahoma,Arizona,70.7
+1,Oregon,Washington,88.3
+2,Oregon,Idaho,81.8
+3,Oregon,Utah,78.8
+4,Oregon,Montana,78.2
+5,Oregon,Nebraska,76.6
+6,Oregon,South Dakota,76.0
+7,Oregon,Kansas,75.6
+8,Oregon,Wisconsin,72.9
+9,Oregon,Wyoming,72.8
+10,Oregon,Minnesota,72.7
+1,Pennsylvania,New Jersey,87.5
+2,Pennsylvania,New York,84.9
+3,Pennsylvania,Delaware,84.8
+4,Pennsylvania,Ohio,84.1
+5,Pennsylvania,Indiana,82.3
+6,Pennsylvania,Virginia,82.0
+7,Pennsylvania,Missouri,80.9
+8,Pennsylvania,Michigan,78.4
+9,Pennsylvania,Illinois,77.9
+10,Pennsylvania,Tennessee,77.8
+1,Rhode island,Delaware,87.4
+2,Rhode island,New Jersey,86.9
+3,Rhode island,Massachusetts,86.0
+4,Rhode island,Connecticut,82.9
+5,Rhode island,Ohio,82.7
+6,Rhode island,Wisconsin,78.0
+7,Rhode island,Indiana,76.4
+8,Rhode island,New Hampshire,76.3
+9,Rhode island,Kentucky,76.2
+10,Rhode island,Pennsylvania,76.2
+1,South Carolina,Georgia,85.5
+2,South Carolina,Alabama,77.4
+3,South Carolina,Louisiana,76.5
+4,South Carolina,Mississippi,72.9
+5,South Carolina,Maryland,70.7
+6,South Carolina,North Carolina,65.1
+7,South Carolina,Florida,62.2
+8,South Carolina,Tennessee,59.3
+9,South Carolina,Arkansas,53.9
+10,South Carolina,District of Columbia,53.4
+1,South Dakota,Nebraska,91.9
+2,South Dakota,Kansas,90.0
+3,South Dakota,North Dakota,88.9
+4,South Dakota,Montana,88.3
+5,South Dakota,Wyoming,86.3
+6,South Dakota,Idaho,81.2
+7,South Dakota,Iowa,79.0
+8,South Dakota,Oregon,76.0
+9,South Dakota,Maine,75.0
+10,South Dakota,Minnesota,74.8
+1,Tennessee,North Carolina,85.1
+2,Tennessee,Illinois,81.5
+3,Tennessee,Kentucky,78.8
+4,Tennessee,Virginia,77.7
+5,Tennessee,Ohio,77.7
+6,Tennessee,Arkansas,77.2
+7,Tennessee,Pennsylvania,76.4
+8,Tennessee,New Jersey,76.0
+9,Tennessee,Indiana,75.2
+10,Tennessee,Missouri,75.1
+1,Texas,California,75.6
+2,Texas,New Mexico,72.3
+3,Texas,Florida,71.8
+4,Texas,Colorado,70.9
+5,Texas,Illinois,69.0
+6,Texas,Alabama,66.6
+7,Texas,Arizona,65.7
+8,Texas,Arkansas,64.7
+9,Texas,Maryland,64.3
+10,Texas,Louisiana,63.8
+1,Utah,Oregon,78.7
+2,Utah,Nebraska,73.8
+3,Utah,Idaho,73.5
+4,Utah,Kansas,73.0
+5,Utah,South Dakota,71.7
+6,Utah,Montana,71.4
+7,Utah,Iowa,70.9
+8,Utah,Wyoming,69.4
+9,Utah,Washington,69.3
+10,Utah,Minnesota,66.7
+1,Vermont,New Hampshire,87.6
+2,Vermont,Connecticut,80.6
+3,Vermont,Massachusetts,79.5
+4,Vermont,West Virginia,69.2
+5,Vermont,Iowa,68.9
+6,Vermont,Rhode island,67.1
+7,Vermont,Wisconsin,66.0
+8,Vermont,Delaware,65.4
+9,Vermont,Minnesota,65.2
+10,Vermont,Kentucky,64.8
+1,Virginia,New York,83.5
+2,Virginia,Pennsylvania,82.9
+3,Virginia,Illinois,80.6
+4,Virginia,New Jersey,80.1
+5,Virginia,Tennessee,79.7
+6,Virginia,North Carolina,79.3
+7,Virginia,Missouri,79.0
+8,Virginia,Indiana,78.1
+9,Virginia,Michigan,77.1
+10,Virginia,Ohio,74.3
+1,Washington,Oregon,88.3
+2,Washington,Idaho,73.6
+3,Washington,Montana,70.0
+4,Washington,Minnesota,69.8
+5,Washington,Utah,68.5
+6,Washington,Massachusetts,68.2
+7,Washington,Nebraska,68.0
+8,Washington,South Dakota,67.9
+9,Washington,Kansas,66.8
+10,Washington,Wisconsin,66.4
+1,West Virginia,Maine,75.5
+2,West Virginia,Iowa,74.9
+3,West Virginia,New Hampshire,73.0
+4,West Virginia,North Dakota,72.0
+5,West Virginia,Vermont,71.2
+6,West Virginia,Kansas,70.2
+7,West Virginia,South Dakota,70.0
+8,West Virginia,Wyoming,69.3
+9,West Virginia,Nebraska,69.2
+10,West Virginia,Massachusetts,68.9
+1,Wisconsin,Minnesota,95.2
+2,Wisconsin,Massachusetts,82.6
+3,Wisconsin,Indiana,82.2
+4,Wisconsin,Kentucky,82.1
+5,Wisconsin,Connecticut,80.7
+6,Wisconsin,Iowa,80.1
+7,Wisconsin,Missouri,79.3
+8,Wisconsin,Nebraska,78.3
+9,Wisconsin,Kansas,78.2
+10,Wisconsin,Rhode island,77.8
+1,Wyoming,North Dakota,95.0
+2,Wyoming,Montana,90.3
+3,Wyoming,Idaho,87.0
+4,Wyoming,South Dakota,86.3
+5,Wyoming,Nebraska,83.2
+6,Wyoming,Kansas,81.7
+7,Wyoming,Maine,77.9
+8,Wyoming,Oregon,73.2
+9,Wyoming,Oklahoma,71.6
+10,Wyoming,Iowa,69.9
+1,District of Columbia,Mississippi,60.5
+2,District of Columbia,South Carolina,55.7
+3,District of Columbia,Louisiana,54.0
+4,District of Columbia,Maryland,53.6
+5,District of Columbia,Alabama,53.0
+6,District of Columbia,Virginia,48.6
+7,District of Columbia,Georgia,48.1
+8,District of Columbia,New York,42.9
+9,District of Columbia,North Carolina,41.1
+10,District of Columbia,Pennsylvania,40.8

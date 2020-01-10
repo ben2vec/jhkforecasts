@@ -1,5 +1,9 @@
 State,Pollster,Grade,Sample,Date,weight,Biden,Bloomberg,Booker,Buttigieg,Klobuchar,Sanders,Steyer,Warren,Yang
+US,Ipsos,B-,707  a,1/9,19.5,15.0,6.0,2.0,5.0,1.0,17.0,3.0,10.0,3.0
 California,Capitol Weekly,-,1053  lv,1/9,11.3,20.0,6.0,1.0,11.0,5.0,24.0,2.0,21.0,7.0
+Wisconsin,Fox News/Beacon Research/Shaw & Co. Research,A-,671  lv,1/8,45.3,23.0,7.0,3.0,9.0,4.0,21.0,2.0,13.0,3.0
+Nevada,Fox News/Beacon Research/Shaw & Co. Research,A-,635  lv,1/8,44.0,23.0,2.0,3.0,6.0,2.0,17.0,12.0,12.0,4.0
+South Carolina,Fox News/Beacon Research/Shaw & Co. Research,A-,808  lv,1/8,49.9,36.0,2.0,2.0,4.0,1.0,14.0,15.0,10.0,2.0
 New Hampshire,Monmouth University,A+,404  lv,1/7,0.0,24.0,0.0,0.0,23.0,0.0,21.0,0.0,18.0,0.0
 New Hampshire,Monmouth University,A+,404  lv,1/7,0.0,21.0,0.0,2.0,20.0,7.0,21.0,0.0,15.0,5.0
 New Hampshire,Monmouth University,A+,404  lv,1/7,52.4,19.0,0.0,1.0,20.0,6.0,18.0,4.0,15.0,3.0
@@ -15,7 +19,7 @@ US,Harris Insights & Analytics,C+,431  rv,12/28,7.5,28.0,11.0,2.0,6.0,2.0,16.0,2
 US,YouGov,B-,586  lv,12/24,0.0,30.0,4.0,2.0,7.0,5.0,17.0,1.0,19.0,3.0
 US,YouGov,B-,412  lv,12/23,0.0,34.0,4.0,3.0,7.0,2.0,19.0,0.0,20.0,4.0
 US,Morning Consult,B/C,7178  lv,12/22,0.0,31.0,6.0,3.0,9.0,3.0,21.0,3.0,15.0,5.0
-US,Ipsos,B-,709  a,12/19,9.2,18.0,5.0,1.0,4.0,1.0,15.0,2.0,10.0,2.0
+US,Ipsos,B-,709  a,12/19,0.0,18.0,5.0,1.0,4.0,1.0,15.0,2.0,10.0,2.0
 US,McLaughlin & Associates,C/D,480  lv,12/18,0.0,23.0,5.0,4.0,5.0,2.0,17.0,3.0,15.0,4.0
 US,McLaughlin & Associates,C/D,480  lv,12/18,3.1,27.0,5.0,3.0,5.0,2.0,17.0,4.0,15.0,5.0
 US,NBC News/Wall Street Journal,A/B,410  lv,12/17,14.9,28.0,4.0,2.0,9.0,5.0,21.0,1.0,18.0,3.0
@@ -97,7 +101,7 @@ Nevada,YouGov,B-,626  lv,11/13,4.7,33.0,0.0,2.0,9.0,2.0,23.0,2.0,21.0,1.0
 New Hampshire,YouGov,B-,510  lv,11/13,0.0,22.0,0.0,1.0,16.0,3.0,20.0,1.0,31.0,1.0
 Iowa,YouGov,B-,718  lv,11/13,0.0,22.0,0.0,1.0,21.0,5.0,22.0,2.0,18.0,1.0
 Iowa,Selzer & Co.,A+,500  lv,11/13,18.0,15.0,2.0,3.0,25.0,6.0,15.0,3.0,16.0,3.0
-Nevada,Fox News/Beacon Research/Shaw & Co. Research,A-,627  lv,11/13,11.3,24.0,0.0,1.0,8.0,2.0,18.0,5.0,18.0,3.0
+Nevada,Fox News/Beacon Research/Shaw & Co. Research,A-,627  lv,11/13,0.0,24.0,0.0,1.0,8.0,2.0,18.0,5.0,18.0,3.0
 North Carolina,Fox News/Beacon Research/Shaw & Co. Research,A-,669  lv,11/13,11.7,37.0,0.0,2.0,6.0,1.0,14.0,2.0,15.0,2.0
 California,Public Policy Institute of California,A/B,682  lv,11/12,9.7,24.0,0.0,1.0,7.0,1.0,17.0,1.0,23.0,5.0
 California,Capitol Weekly,-,695  lv,11/12,0.0,18.0,0.0,1.0,14.0,3.0,21.0,1.0,27.0,4.0
@@ -238,8 +242,8 @@ US,Harris Insights & Analytics,C+,782  lv,10/4,0.0,35.0,0.0,2.0,3.0,1.0,12.0,1.0
 US,IBD/TIPP,A/B,341  rv,10/3,0.0,26.0,0.0,0.0,7.0,1.0,10.0,0.0,27.0,3.0
 US,Harris Insights & Analytics,C+,783  lv,10/3,0.0,33.0,0.0,2.0,3.0,2.0,12.0,1.0,22.0,3.0
 Wisconsin,Change Research,C,663  lv,10/2,1.8,11.0,0.0,1.0,6.0,1.0,25.0,0.0,34.0,3.0
-Wisconsin,Fox News/Beacon Research/Shaw & Co. Research,A-,663  lv,10/2,7.5,28.0,0.0,2.0,7.0,2.0,17.0,0.0,22.0,2.0
-South Carolina,Fox News/Beacon Research/Shaw & Co. Research,A-,803  lv,10/2,8.2,41.0,0.0,3.0,2.0,0.0,10.0,4.0,12.0,1.0
+Wisconsin,Fox News/Beacon Research/Shaw & Co. Research,A-,663  lv,10/2,0.0,28.0,0.0,2.0,7.0,2.0,17.0,0.0,22.0,2.0
+South Carolina,Fox News/Beacon Research/Shaw & Co. Research,A-,803  lv,10/2,0.0,41.0,0.0,3.0,2.0,0.0,10.0,4.0,12.0,1.0
 Ohio,Emerson College,A-,353  lv,10/2,5.4,29.0,0.0,0.0,5.0,0.0,27.0,0.0,21.0,3.0
 Michigan,Denno Research,-,217  lv,9/24,1.2,27.0,0.0,1.0,4.0,1.0,12.0,0.0,23.0,1.0
 US,Harris Insights & Analytics,C+,783  lv,10/2,0.0,32.0,0.0,2.0,4.0,2.0,14.0,1.0,22.0,2.0
@@ -839,10 +843,6 @@ US,Harris Insights & Analytics,C+,459  rv,11/28,0.0,25.0,2.0,3.0,0.0,0.0,15.0,0.
 Massachusetts,YouGov,B-,655  rv,11/14,0.6,19.0,0.0,3.0,0.0,3.0,14.0,0.0,11.0,0.0
 US,Morning Consult,B/C,733  rv,11/9,0.0,26.0,2.0,3.0,0.0,1.0,19.0,0.0,5.0,0.0
 US,Harris Insights & Analytics,C+,370  rv,11/6,0.0,30.0,5.0,5.0,0.0,0.0,20.0,0.0,5.0,0.0
-,,,  ,,,,,,,,,,,
-,,,  ,,,,,,,,,,,
-,,,  ,,,,,,,,,,,
-,,,  ,,,,,,,,,,,
 ,,,  ,,,,,,,,,,,
 ,,,  ,,,,,,,,,,,
 ,,,  ,,,,,,,,,,,
