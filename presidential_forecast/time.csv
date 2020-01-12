@@ -74,12 +74,12 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.1,South Carolina,win,1,Trump,85.5
 2019.11.1,South Carolina,win,1,Democrats,14.5
 2019.11.1,South Carolina,win,1,3rd Party,0.0
-2019.11.1,Rhode island,vote,1,Trump,36.4
-2019.11.1,Rhode island,vote,1,Democrats,58.6
-2019.11.1,Rhode island,vote,1,3rd Party,4.9
-2019.11.1,Rhode island,win,1,Trump,4.3
-2019.11.1,Rhode island,win,1,Democrats,95.7
-2019.11.1,Rhode island,win,1,3rd Party,0.0
+2019.11.1,Rhode Island,vote,1,Trump,36.4
+2019.11.1,Rhode Island,vote,1,Democrats,58.6
+2019.11.1,Rhode Island,vote,1,3rd Party,4.9
+2019.11.1,Rhode Island,win,1,Trump,4.3
+2019.11.1,Rhode Island,win,1,Democrats,95.7
+2019.11.1,Rhode Island,win,1,3rd Party,0.0
 2019.11.1,Pennsylvania,vote,1,Trump,46.9
 2019.11.1,Pennsylvania,vote,1,Democrats,49.7
 2019.11.1,Pennsylvania,vote,1,3rd Party,3.3
@@ -419,12 +419,12 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.2,South Carolina,win,1,Trump,85.5
 2019.11.2,South Carolina,win,1,Democrats,14.5
 2019.11.2,South Carolina,win,1,3rd Party,0.0
-2019.11.2,Rhode island,vote,1,Trump,36.4
-2019.11.2,Rhode island,vote,1,Democrats,58.6
-2019.11.2,Rhode island,vote,1,3rd Party,4.9
-2019.11.2,Rhode island,win,1,Trump,4.3
-2019.11.2,Rhode island,win,1,Democrats,95.7
-2019.11.2,Rhode island,win,1,3rd Party,0.0
+2019.11.2,Rhode Island,vote,1,Trump,36.4
+2019.11.2,Rhode Island,vote,1,Democrats,58.6
+2019.11.2,Rhode Island,vote,1,3rd Party,4.9
+2019.11.2,Rhode Island,win,1,Trump,4.3
+2019.11.2,Rhode Island,win,1,Democrats,95.7
+2019.11.2,Rhode Island,win,1,3rd Party,0.0
 2019.11.2,Pennsylvania,vote,1,Trump,46.9
 2019.11.2,Pennsylvania,vote,1,Democrats,49.7
 2019.11.2,Pennsylvania,vote,1,3rd Party,3.3
@@ -764,12 +764,12 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.3,South Carolina,win,1,Trump,85.5
 2019.11.3,South Carolina,win,1,Democrats,14.5
 2019.11.3,South Carolina,win,1,3rd Party,0.0
-2019.11.3,Rhode island,vote,1,Trump,36.4
-2019.11.3,Rhode island,vote,1,Democrats,58.6
-2019.11.3,Rhode island,vote,1,3rd Party,4.9
-2019.11.3,Rhode island,win,1,Trump,4.3
-2019.11.3,Rhode island,win,1,Democrats,95.7
-2019.11.3,Rhode island,win,1,3rd Party,0.0
+2019.11.3,Rhode Island,vote,1,Trump,36.4
+2019.11.3,Rhode Island,vote,1,Democrats,58.6
+2019.11.3,Rhode Island,vote,1,3rd Party,4.9
+2019.11.3,Rhode Island,win,1,Trump,4.3
+2019.11.3,Rhode Island,win,1,Democrats,95.7
+2019.11.3,Rhode Island,win,1,3rd Party,0.0
 2019.11.3,Pennsylvania,vote,1,Trump,46.9
 2019.11.3,Pennsylvania,vote,1,Democrats,49.7
 2019.11.3,Pennsylvania,vote,1,3rd Party,3.3
@@ -1109,12 +1109,12 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.4,South Carolina,win,1,Trump,85.2
 2019.11.4,South Carolina,win,1,Democrats,14.8
 2019.11.4,South Carolina,win,1,3rd Party,0.0
-2019.11.4,Rhode island,vote,1,Trump,36.4
-2019.11.4,Rhode island,vote,1,Democrats,58.6
-2019.11.4,Rhode island,vote,1,3rd Party,4.9
-2019.11.4,Rhode island,win,1,Trump,4.2
-2019.11.4,Rhode island,win,1,Democrats,95.8
-2019.11.4,Rhode island,win,1,3rd Party,0.0
+2019.11.4,Rhode Island,vote,1,Trump,36.4
+2019.11.4,Rhode Island,vote,1,Democrats,58.6
+2019.11.4,Rhode Island,vote,1,3rd Party,4.9
+2019.11.4,Rhode Island,win,1,Trump,4.2
+2019.11.4,Rhode Island,win,1,Democrats,95.8
+2019.11.4,Rhode Island,win,1,3rd Party,0.0
 2019.11.4,Pennsylvania,vote,1,Trump,46.8
 2019.11.4,Pennsylvania,vote,1,Democrats,49.8
 2019.11.4,Pennsylvania,vote,1,3rd Party,3.3
@@ -1454,12 +1454,12 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.5,South Carolina,win,1,Trump,85.6
 2019.11.5,South Carolina,win,1,Democrats,14.4
 2019.11.5,South Carolina,win,1,3rd Party,0.0
-2019.11.5,Rhode island,vote,1,Trump,36.3
-2019.11.5,Rhode island,vote,1,Democrats,58.7
-2019.11.5,Rhode island,vote,1,3rd Party,4.9
-2019.11.5,Rhode island,win,1,Trump,4.1
-2019.11.5,Rhode island,win,1,Democrats,95.9
-2019.11.5,Rhode island,win,1,3rd Party,0.0
+2019.11.5,Rhode Island,vote,1,Trump,36.3
+2019.11.5,Rhode Island,vote,1,Democrats,58.7
+2019.11.5,Rhode Island,vote,1,3rd Party,4.9
+2019.11.5,Rhode Island,win,1,Trump,4.1
+2019.11.5,Rhode Island,win,1,Democrats,95.9
+2019.11.5,Rhode Island,win,1,3rd Party,0.0
 2019.11.5,Pennsylvania,vote,1,Trump,46.9
 2019.11.5,Pennsylvania,vote,1,Democrats,49.6
 2019.11.5,Pennsylvania,vote,1,3rd Party,3.3
@@ -1799,12 +1799,12 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.6,South Carolina,win,1,Trump,85.0
 2019.11.6,South Carolina,win,1,Democrats,15.0
 2019.11.6,South Carolina,win,1,3rd Party,0.0
-2019.11.6,Rhode island,vote,1,Trump,36.2
-2019.11.6,Rhode island,vote,1,Democrats,58.8
-2019.11.6,Rhode island,vote,1,3rd Party,4.9
-2019.11.6,Rhode island,win,1,Trump,3.9
-2019.11.6,Rhode island,win,1,Democrats,96.1
-2019.11.6,Rhode island,win,1,3rd Party,0.0
+2019.11.6,Rhode Island,vote,1,Trump,36.2
+2019.11.6,Rhode Island,vote,1,Democrats,58.8
+2019.11.6,Rhode Island,vote,1,3rd Party,4.9
+2019.11.6,Rhode Island,win,1,Trump,3.9
+2019.11.6,Rhode Island,win,1,Democrats,96.1
+2019.11.6,Rhode Island,win,1,3rd Party,0.0
 2019.11.6,Pennsylvania,vote,1,Trump,46.7
 2019.11.6,Pennsylvania,vote,1,Democrats,49.9
 2019.11.6,Pennsylvania,vote,1,3rd Party,3.3
@@ -2144,12 +2144,12 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.7,South Carolina,win,1,Trump,85.0
 2019.11.7,South Carolina,win,1,Democrats,15.0
 2019.11.7,South Carolina,win,1,3rd Party,0.0
-2019.11.7,Rhode island,vote,1,Trump,36.2
-2019.11.7,Rhode island,vote,1,Democrats,58.8
-2019.11.7,Rhode island,vote,1,3rd Party,4.9
-2019.11.7,Rhode island,win,1,Trump,3.9
-2019.11.7,Rhode island,win,1,Democrats,96.1
-2019.11.7,Rhode island,win,1,3rd Party,0.0
+2019.11.7,Rhode Island,vote,1,Trump,36.2
+2019.11.7,Rhode Island,vote,1,Democrats,58.8
+2019.11.7,Rhode Island,vote,1,3rd Party,4.9
+2019.11.7,Rhode Island,win,1,Trump,3.9
+2019.11.7,Rhode Island,win,1,Democrats,96.1
+2019.11.7,Rhode Island,win,1,3rd Party,0.0
 2019.11.7,Pennsylvania,vote,1,Trump,46.7
 2019.11.7,Pennsylvania,vote,1,Democrats,49.9
 2019.11.7,Pennsylvania,vote,1,3rd Party,3.3
@@ -2489,12 +2489,12 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.8,South Carolina,win,1,Trump,85.4
 2019.11.8,South Carolina,win,1,Democrats,14.6
 2019.11.8,South Carolina,win,1,3rd Party,0.0
-2019.11.8,Rhode island,vote,1,Trump,36.3
-2019.11.8,Rhode island,vote,1,Democrats,58.7
-2019.11.8,Rhode island,vote,1,3rd Party,4.9
-2019.11.8,Rhode island,win,1,Trump,4.0
-2019.11.8,Rhode island,win,1,Democrats,96.0
-2019.11.8,Rhode island,win,1,3rd Party,0.0
+2019.11.8,Rhode Island,vote,1,Trump,36.3
+2019.11.8,Rhode Island,vote,1,Democrats,58.7
+2019.11.8,Rhode Island,vote,1,3rd Party,4.9
+2019.11.8,Rhode Island,win,1,Trump,4.0
+2019.11.8,Rhode Island,win,1,Democrats,96.0
+2019.11.8,Rhode Island,win,1,3rd Party,0.0
 2019.11.8,Pennsylvania,vote,1,Trump,46.7
 2019.11.8,Pennsylvania,vote,1,Democrats,49.9
 2019.11.8,Pennsylvania,vote,1,3rd Party,3.3
@@ -2834,12 +2834,12 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.9,South Carolina,win,1,Trump,85.4
 2019.11.9,South Carolina,win,1,Democrats,14.6
 2019.11.9,South Carolina,win,1,3rd Party,0.0
-2019.11.9,Rhode island,vote,1,Trump,36.3
-2019.11.9,Rhode island,vote,1,Democrats,58.7
-2019.11.9,Rhode island,vote,1,3rd Party,4.9
-2019.11.9,Rhode island,win,1,Trump,4.0
-2019.11.9,Rhode island,win,1,Democrats,96.0
-2019.11.9,Rhode island,win,1,3rd Party,0.0
+2019.11.9,Rhode Island,vote,1,Trump,36.3
+2019.11.9,Rhode Island,vote,1,Democrats,58.7
+2019.11.9,Rhode Island,vote,1,3rd Party,4.9
+2019.11.9,Rhode Island,win,1,Trump,4.0
+2019.11.9,Rhode Island,win,1,Democrats,96.0
+2019.11.9,Rhode Island,win,1,3rd Party,0.0
 2019.11.9,Pennsylvania,vote,1,Trump,46.7
 2019.11.9,Pennsylvania,vote,1,Democrats,49.9
 2019.11.9,Pennsylvania,vote,1,3rd Party,3.3
@@ -3179,12 +3179,12 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.10,South Carolina,win,1,Trump,85.4
 2019.11.10,South Carolina,win,1,Democrats,14.6
 2019.11.10,South Carolina,win,1,3rd Party,0.0
-2019.11.10,Rhode island,vote,1,Trump,36.3
-2019.11.10,Rhode island,vote,1,Democrats,58.7
-2019.11.10,Rhode island,vote,1,3rd Party,4.9
-2019.11.10,Rhode island,win,1,Trump,4.0
-2019.11.10,Rhode island,win,1,Democrats,96.0
-2019.11.10,Rhode island,win,1,3rd Party,0.0
+2019.11.10,Rhode Island,vote,1,Trump,36.3
+2019.11.10,Rhode Island,vote,1,Democrats,58.7
+2019.11.10,Rhode Island,vote,1,3rd Party,4.9
+2019.11.10,Rhode Island,win,1,Trump,4.0
+2019.11.10,Rhode Island,win,1,Democrats,96.0
+2019.11.10,Rhode Island,win,1,3rd Party,0.0
 2019.11.10,Pennsylvania,vote,1,Trump,46.7
 2019.11.10,Pennsylvania,vote,1,Democrats,49.9
 2019.11.10,Pennsylvania,vote,1,3rd Party,3.3
@@ -3599,18 +3599,18 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.11,South Carolina,win,1,Trump,85.4
 2019.11.11,South Carolina,win,1,Democrats,14.6
 2019.11.11,South Carolina,win,1,3rd Party,0.0
-2019.11.11,Rhode island,vote,1,Trump,36.3
-2019.11.11,Rhode island,vote,1,Democrats,58.7
-2019.11.11,Rhode island,vote,1,3rd Party,4.9
-2019.11.11,Rhode island,win,1,Trump,4.0
-2019.11.11,Rhode island,win,1,Democrats,96.0
-2019.11.11,Rhode island,win,1,3rd Party,0.0
-2019.11.11,Rhode island,vote,1,Trump,36.3
-2019.11.11,Rhode island,vote,1,Democrats,58.7
-2019.11.11,Rhode island,vote,1,3rd Party,4.9
-2019.11.11,Rhode island,win,1,Trump,4.0
-2019.11.11,Rhode island,win,1,Democrats,96.0
-2019.11.11,Rhode island,win,1,3rd Party,0.0
+2019.11.11,Rhode Island,vote,1,Trump,36.3
+2019.11.11,Rhode Island,vote,1,Democrats,58.7
+2019.11.11,Rhode Island,vote,1,3rd Party,4.9
+2019.11.11,Rhode Island,win,1,Trump,4.0
+2019.11.11,Rhode Island,win,1,Democrats,96.0
+2019.11.11,Rhode Island,win,1,3rd Party,0.0
+2019.11.11,Rhode Island,vote,1,Trump,36.3
+2019.11.11,Rhode Island,vote,1,Democrats,58.7
+2019.11.11,Rhode Island,vote,1,3rd Party,4.9
+2019.11.11,Rhode Island,win,1,Trump,4.0
+2019.11.11,Rhode Island,win,1,Democrats,96.0
+2019.11.11,Rhode Island,win,1,3rd Party,0.0
 2019.11.11,Pennsylvania,vote,1,Trump,46.7
 2019.11.11,Pennsylvania,vote,1,Democrats,49.9
 2019.11.11,Pennsylvania,vote,1,3rd Party,3.3
@@ -4214,12 +4214,12 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.13,South Carolina,win,1,Trump,85.4
 2019.11.13,South Carolina,win,1,Democrats,14.6
 2019.11.13,South Carolina,win,1,3rd Party,0.0
-2019.11.13,Rhode island,vote,1,Trump,36.3
-2019.11.13,Rhode island,vote,1,Democrats,58.7
-2019.11.13,Rhode island,vote,1,3rd Party,4.9
-2019.11.13,Rhode island,win,1,Trump,4.0
-2019.11.13,Rhode island,win,1,Democrats,96.0
-2019.11.13,Rhode island,win,1,3rd Party,0.0
+2019.11.13,Rhode Island,vote,1,Trump,36.3
+2019.11.13,Rhode Island,vote,1,Democrats,58.7
+2019.11.13,Rhode Island,vote,1,3rd Party,4.9
+2019.11.13,Rhode Island,win,1,Trump,4.0
+2019.11.13,Rhode Island,win,1,Democrats,96.0
+2019.11.13,Rhode Island,win,1,3rd Party,0.0
 2019.11.13,Pennsylvania,vote,1,Trump,46.7
 2019.11.13,Pennsylvania,vote,1,Democrats,49.9
 2019.11.13,Pennsylvania,vote,1,3rd Party,3.3
@@ -4559,12 +4559,12 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.14,South Carolina,win,1,Trump,85.4
 2019.11.14,South Carolina,win,1,Democrats,14.6
 2019.11.14,South Carolina,win,1,3rd Party,0.0
-2019.11.14,Rhode island,vote,1,Trump,36.3
-2019.11.14,Rhode island,vote,1,Democrats,58.7
-2019.11.14,Rhode island,vote,1,3rd Party,4.9
-2019.11.14,Rhode island,win,1,Trump,4.0
-2019.11.14,Rhode island,win,1,Democrats,96.0
-2019.11.14,Rhode island,win,1,3rd Party,0.0
+2019.11.14,Rhode Island,vote,1,Trump,36.3
+2019.11.14,Rhode Island,vote,1,Democrats,58.7
+2019.11.14,Rhode Island,vote,1,3rd Party,4.9
+2019.11.14,Rhode Island,win,1,Trump,4.0
+2019.11.14,Rhode Island,win,1,Democrats,96.0
+2019.11.14,Rhode Island,win,1,3rd Party,0.0
 2019.11.14,Pennsylvania,vote,1,Trump,46.7
 2019.11.14,Pennsylvania,vote,1,Democrats,49.9
 2019.11.14,Pennsylvania,vote,1,3rd Party,3.3
@@ -4904,12 +4904,12 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.15,South Carolina,win,1,Trump,85.6
 2019.11.15,South Carolina,win,1,Democrats,14.4
 2019.11.15,South Carolina,win,1,3rd Party,0.0
-2019.11.15,Rhode island,vote,1,Trump,36.3
-2019.11.15,Rhode island,vote,1,Democrats,58.7
-2019.11.15,Rhode island,vote,1,3rd Party,4.9
-2019.11.15,Rhode island,win,1,Trump,4.0
-2019.11.15,Rhode island,win,1,Democrats,96.0
-2019.11.15,Rhode island,win,1,3rd Party,0.0
+2019.11.15,Rhode Island,vote,1,Trump,36.3
+2019.11.15,Rhode Island,vote,1,Democrats,58.7
+2019.11.15,Rhode Island,vote,1,3rd Party,4.9
+2019.11.15,Rhode Island,win,1,Trump,4.0
+2019.11.15,Rhode Island,win,1,Democrats,96.0
+2019.11.15,Rhode Island,win,1,3rd Party,0.0
 2019.11.15,Pennsylvania,vote,1,Trump,46.7
 2019.11.15,Pennsylvania,vote,1,Democrats,49.9
 2019.11.15,Pennsylvania,vote,1,3rd Party,3.3
@@ -5249,12 +5249,12 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.16,South Carolina,win,1,Trump,85.6
 2019.11.16,South Carolina,win,1,Democrats,14.4
 2019.11.16,South Carolina,win,1,3rd Party,0.0
-2019.11.16,Rhode island,vote,1,Trump,36.3
-2019.11.16,Rhode island,vote,1,Democrats,58.7
-2019.11.16,Rhode island,vote,1,3rd Party,4.9
-2019.11.16,Rhode island,win,1,Trump,4.0
-2019.11.16,Rhode island,win,1,Democrats,96.0
-2019.11.16,Rhode island,win,1,3rd Party,0.0
+2019.11.16,Rhode Island,vote,1,Trump,36.3
+2019.11.16,Rhode Island,vote,1,Democrats,58.7
+2019.11.16,Rhode Island,vote,1,3rd Party,4.9
+2019.11.16,Rhode Island,win,1,Trump,4.0
+2019.11.16,Rhode Island,win,1,Democrats,96.0
+2019.11.16,Rhode Island,win,1,3rd Party,0.0
 2019.11.16,Pennsylvania,vote,1,Trump,46.7
 2019.11.16,Pennsylvania,vote,1,Democrats,49.9
 2019.11.16,Pennsylvania,vote,1,3rd Party,3.3
@@ -5594,12 +5594,12 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.17,South Carolina,win,1,Trump,85.6
 2019.11.17,South Carolina,win,1,Democrats,14.4
 2019.11.17,South Carolina,win,1,3rd Party,0.0
-2019.11.17,Rhode island,vote,1,Trump,36.3
-2019.11.17,Rhode island,vote,1,Democrats,58.7
-2019.11.17,Rhode island,vote,1,3rd Party,4.9
-2019.11.17,Rhode island,win,1,Trump,4.0
-2019.11.17,Rhode island,win,1,Democrats,96.0
-2019.11.17,Rhode island,win,1,3rd Party,0.0
+2019.11.17,Rhode Island,vote,1,Trump,36.3
+2019.11.17,Rhode Island,vote,1,Democrats,58.7
+2019.11.17,Rhode Island,vote,1,3rd Party,4.9
+2019.11.17,Rhode Island,win,1,Trump,4.0
+2019.11.17,Rhode Island,win,1,Democrats,96.0
+2019.11.17,Rhode Island,win,1,3rd Party,0.0
 2019.11.17,Pennsylvania,vote,1,Trump,46.7
 2019.11.17,Pennsylvania,vote,1,Democrats,49.9
 2019.11.17,Pennsylvania,vote,1,3rd Party,3.3
@@ -5939,12 +5939,12 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.18,South Carolina,win,1,Trump,85.6
 2019.11.18,South Carolina,win,1,Democrats,14.4
 2019.11.18,South Carolina,win,1,3rd Party,0.0
-2019.11.18,Rhode island,vote,1,Trump,36.3
-2019.11.18,Rhode island,vote,1,Democrats,58.7
-2019.11.18,Rhode island,vote,1,3rd Party,4.9
-2019.11.18,Rhode island,win,1,Trump,4.0
-2019.11.18,Rhode island,win,1,Democrats,96.0
-2019.11.18,Rhode island,win,1,3rd Party,0.0
+2019.11.18,Rhode Island,vote,1,Trump,36.3
+2019.11.18,Rhode Island,vote,1,Democrats,58.7
+2019.11.18,Rhode Island,vote,1,3rd Party,4.9
+2019.11.18,Rhode Island,win,1,Trump,4.0
+2019.11.18,Rhode Island,win,1,Democrats,96.0
+2019.11.18,Rhode Island,win,1,3rd Party,0.0
 2019.11.18,Pennsylvania,vote,1,Trump,46.7
 2019.11.18,Pennsylvania,vote,1,Democrats,49.9
 2019.11.18,Pennsylvania,vote,1,3rd Party,3.3
@@ -6247,7 +6247,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.19,Oklahoma,win,1,Trump,99.9
 2019.11.19,Oregon,win,1,Trump,12.1
 2019.11.19,Pennsylvania,win,1,Trump,38.9
-2019.11.19,Rhode island,win,1,Trump,4.1
+2019.11.19,Rhode Island,win,1,Trump,4.1
 2019.11.19,South Carolina,win,1,Trump,85.7
 2019.11.19,South Dakota,win,1,Trump,99.5
 2019.11.19,Tennessee,win,1,Trump,98.2
@@ -6304,7 +6304,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.19,Oklahoma,win,1,Democrats,0.1
 2019.11.19,Oregon,win,1,Democrats,87.9
 2019.11.19,Pennsylvania,win,1,Democrats,61.1
-2019.11.19,Rhode island,win,1,Democrats,95.9
+2019.11.19,Rhode Island,win,1,Democrats,95.9
 2019.11.19,South Carolina,win,1,Democrats,14.3
 2019.11.19,South Dakota,win,1,Democrats,0.5
 2019.11.19,Tennessee,win,1,Democrats,1.8
@@ -6361,7 +6361,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.19,Oklahoma,win,1,3rd Party,0.0
 2019.11.19,Oregon,win,1,3rd Party,0.0
 2019.11.19,Pennsylvania,win,1,3rd Party,0.0
-2019.11.19,Rhode island,win,1,3rd Party,0.0
+2019.11.19,Rhode Island,win,1,3rd Party,0.0
 2019.11.19,South Carolina,win,1,3rd Party,0.0
 2019.11.19,South Dakota,win,1,3rd Party,0.0
 2019.11.19,Tennessee,win,1,3rd Party,0.0
@@ -6418,7 +6418,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.19,Oklahoma,vote,1,Trump,66.2
 2019.11.19,Oregon,vote,1,Trump,38.4
 2019.11.19,Pennsylvania,vote,1,Trump,46.7
-2019.11.19,Rhode island,vote,1,Trump,36.3
+2019.11.19,Rhode Island,vote,1,Trump,36.3
 2019.11.19,South Carolina,vote,1,Trump,55.4
 2019.11.19,South Dakota,vote,1,Trump,61.8
 2019.11.19,Tennessee,vote,1,Trump,61.2
@@ -6475,7 +6475,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.19,Oklahoma,vote,1,Democrats,31.5
 2019.11.19,Oregon,vote,1,Democrats,54.7
 2019.11.19,Pennsylvania,vote,1,Democrats,49.8
-2019.11.19,Rhode island,vote,1,Democrats,58.6
+2019.11.19,Rhode Island,vote,1,Democrats,58.6
 2019.11.19,South Carolina,vote,1,Democrats,41.4
 2019.11.19,South Dakota,vote,1,Democrats,33.9
 2019.11.19,Tennessee,vote,1,Democrats,36.0
@@ -6532,7 +6532,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.19,Oklahoma,vote,1,3rd Party,2.2
 2019.11.19,Oregon,vote,1,3rd Party,6.8
 2019.11.19,Pennsylvania,vote,1,3rd Party,3.4
-2019.11.19,Rhode island,vote,1,3rd Party,5.0
+2019.11.19,Rhode Island,vote,1,3rd Party,5.0
 2019.11.19,South Carolina,vote,1,3rd Party,3.1
 2019.11.19,South Dakota,vote,1,3rd Party,4.2
 2019.11.19,Tennessee,vote,1,3rd Party,2.7
@@ -6592,7 +6592,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.20,Oklahoma,win,1,Trump,99.9
 2019.11.20,Oregon,win,1,Trump,12.1
 2019.11.20,Pennsylvania,win,1,Trump,38.9
-2019.11.20,Rhode island,win,1,Trump,4.1
+2019.11.20,Rhode Island,win,1,Trump,4.1
 2019.11.20,South Carolina,win,1,Trump,85.8
 2019.11.20,South Dakota,win,1,Trump,99.5
 2019.11.20,Tennessee,win,1,Trump,98.2
@@ -6649,7 +6649,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.20,Oklahoma,win,1,Democrats,0.1
 2019.11.20,Oregon,win,1,Democrats,87.9
 2019.11.20,Pennsylvania,win,1,Democrats,61.1
-2019.11.20,Rhode island,win,1,Democrats,95.9
+2019.11.20,Rhode Island,win,1,Democrats,95.9
 2019.11.20,South Carolina,win,1,Democrats,14.2
 2019.11.20,South Dakota,win,1,Democrats,0.5
 2019.11.20,Tennessee,win,1,Democrats,1.8
@@ -6706,7 +6706,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.20,Oklahoma,win,1,3rd Party,0.0
 2019.11.20,Oregon,win,1,3rd Party,0.0
 2019.11.20,Pennsylvania,win,1,3rd Party,0.0
-2019.11.20,Rhode island,win,1,3rd Party,0.0
+2019.11.20,Rhode Island,win,1,3rd Party,0.0
 2019.11.20,South Carolina,win,1,3rd Party,0.0
 2019.11.20,South Dakota,win,1,3rd Party,0.0
 2019.11.20,Tennessee,win,1,3rd Party,0.0
@@ -6763,7 +6763,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.20,Oklahoma,vote,1,Trump,66.2
 2019.11.20,Oregon,vote,1,Trump,38.4
 2019.11.20,Pennsylvania,vote,1,Trump,46.7
-2019.11.20,Rhode island,vote,1,Trump,36.3
+2019.11.20,Rhode Island,vote,1,Trump,36.3
 2019.11.20,South Carolina,vote,1,Trump,55.4
 2019.11.20,South Dakota,vote,1,Trump,61.8
 2019.11.20,Tennessee,vote,1,Trump,61.2
@@ -6820,7 +6820,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.20,Oklahoma,vote,1,Democrats,31.5
 2019.11.20,Oregon,vote,1,Democrats,54.7
 2019.11.20,Pennsylvania,vote,1,Democrats,49.8
-2019.11.20,Rhode island,vote,1,Democrats,58.6
+2019.11.20,Rhode Island,vote,1,Democrats,58.6
 2019.11.20,South Carolina,vote,1,Democrats,41.4
 2019.11.20,South Dakota,vote,1,Democrats,33.9
 2019.11.20,Tennessee,vote,1,Democrats,36.0
@@ -6877,7 +6877,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.20,Oklahoma,vote,1,3rd Party,2.2
 2019.11.20,Oregon,vote,1,3rd Party,6.8
 2019.11.20,Pennsylvania,vote,1,3rd Party,3.4
-2019.11.20,Rhode island,vote,1,3rd Party,5.0
+2019.11.20,Rhode Island,vote,1,3rd Party,5.0
 2019.11.20,South Carolina,vote,1,3rd Party,3.1
 2019.11.20,South Dakota,vote,1,3rd Party,4.2
 2019.11.20,Tennessee,vote,1,3rd Party,2.7
@@ -6937,7 +6937,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.21,Oklahoma,win,1,Trump,99.9
 2019.11.21,Oregon,win,1,Trump,12.1
 2019.11.21,Pennsylvania,win,1,Trump,39.0
-2019.11.21,Rhode island,win,1,Trump,4.1
+2019.11.21,Rhode Island,win,1,Trump,4.1
 2019.11.21,South Carolina,win,1,Trump,85.8
 2019.11.21,South Dakota,win,1,Trump,99.5
 2019.11.21,Tennessee,win,1,Trump,98.2
@@ -6994,7 +6994,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.21,Oklahoma,win,1,Democrats,0.1
 2019.11.21,Oregon,win,1,Democrats,87.9
 2019.11.21,Pennsylvania,win,1,Democrats,61.0
-2019.11.21,Rhode island,win,1,Democrats,95.9
+2019.11.21,Rhode Island,win,1,Democrats,95.9
 2019.11.21,South Carolina,win,1,Democrats,14.2
 2019.11.21,South Dakota,win,1,Democrats,0.5
 2019.11.21,Tennessee,win,1,Democrats,1.8
@@ -7051,7 +7051,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.21,Oklahoma,win,1,3rd Party,0.0
 2019.11.21,Oregon,win,1,3rd Party,0.0
 2019.11.21,Pennsylvania,win,1,3rd Party,0.0
-2019.11.21,Rhode island,win,1,3rd Party,0.0
+2019.11.21,Rhode Island,win,1,3rd Party,0.0
 2019.11.21,South Carolina,win,1,3rd Party,0.0
 2019.11.21,South Dakota,win,1,3rd Party,0.0
 2019.11.21,Tennessee,win,1,3rd Party,0.0
@@ -7108,7 +7108,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.21,Oklahoma,vote,1,Trump,66.2
 2019.11.21,Oregon,vote,1,Trump,38.4
 2019.11.21,Pennsylvania,vote,1,Trump,46.7
-2019.11.21,Rhode island,vote,1,Trump,36.3
+2019.11.21,Rhode Island,vote,1,Trump,36.3
 2019.11.21,South Carolina,vote,1,Trump,55.4
 2019.11.21,South Dakota,vote,1,Trump,61.8
 2019.11.21,Tennessee,vote,1,Trump,61.2
@@ -7165,7 +7165,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.21,Oklahoma,vote,1,Democrats,31.5
 2019.11.21,Oregon,vote,1,Democrats,54.7
 2019.11.21,Pennsylvania,vote,1,Democrats,49.8
-2019.11.21,Rhode island,vote,1,Democrats,58.6
+2019.11.21,Rhode Island,vote,1,Democrats,58.6
 2019.11.21,South Carolina,vote,1,Democrats,41.4
 2019.11.21,South Dakota,vote,1,Democrats,33.9
 2019.11.21,Tennessee,vote,1,Democrats,36.0
@@ -7222,7 +7222,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.21,Oklahoma,vote,1,3rd Party,2.2
 2019.11.21,Oregon,vote,1,3rd Party,6.8
 2019.11.21,Pennsylvania,vote,1,3rd Party,3.4
-2019.11.21,Rhode island,vote,1,3rd Party,5.0
+2019.11.21,Rhode Island,vote,1,3rd Party,5.0
 2019.11.21,South Carolina,vote,1,3rd Party,3.1
 2019.11.21,South Dakota,vote,1,3rd Party,4.2
 2019.11.21,Tennessee,vote,1,3rd Party,2.7
@@ -7282,7 +7282,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.22,Oklahoma,win,1,Trump,99.9
 2019.11.22,Oregon,win,1,Trump,12.4
 2019.11.22,Pennsylvania,win,1,Trump,40.5
-2019.11.22,Rhode island,win,1,Trump,4.3
+2019.11.22,Rhode Island,win,1,Trump,4.3
 2019.11.22,South Carolina,win,1,Trump,86.3
 2019.11.22,South Dakota,win,1,Trump,99.6
 2019.11.22,Tennessee,win,1,Trump,98.3
@@ -7339,7 +7339,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.22,Oklahoma,win,1,Democrats,0.1
 2019.11.22,Oregon,win,1,Democrats,87.6
 2019.11.22,Pennsylvania,win,1,Democrats,59.5
-2019.11.22,Rhode island,win,1,Democrats,95.7
+2019.11.22,Rhode Island,win,1,Democrats,95.7
 2019.11.22,South Carolina,win,1,Democrats,13.7
 2019.11.22,South Dakota,win,1,Democrats,0.4
 2019.11.22,Tennessee,win,1,Democrats,1.7
@@ -7396,7 +7396,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.22,Oklahoma,win,1,3rd Party,0.0
 2019.11.22,Oregon,win,1,3rd Party,0.0
 2019.11.22,Pennsylvania,win,1,3rd Party,0.0
-2019.11.22,Rhode island,win,1,3rd Party,0.0
+2019.11.22,Rhode Island,win,1,3rd Party,0.0
 2019.11.22,South Carolina,win,1,3rd Party,0.0
 2019.11.22,South Dakota,win,1,3rd Party,0.0
 2019.11.22,Tennessee,win,1,3rd Party,0.0
@@ -7453,7 +7453,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.22,Oklahoma,vote,1,Trump,66.2
 2019.11.22,Oregon,vote,1,Trump,38.5
 2019.11.22,Pennsylvania,vote,1,Trump,46.9
-2019.11.22,Rhode island,vote,1,Trump,36.4
+2019.11.22,Rhode Island,vote,1,Trump,36.4
 2019.11.22,South Carolina,vote,1,Trump,55.5
 2019.11.22,South Dakota,vote,1,Trump,61.9
 2019.11.22,Tennessee,vote,1,Trump,61.3
@@ -7510,7 +7510,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.22,Oklahoma,vote,1,Democrats,31.4
 2019.11.22,Oregon,vote,1,Democrats,54.6
 2019.11.22,Pennsylvania,vote,1,Democrats,49.6
-2019.11.22,Rhode island,vote,1,Democrats,58.5
+2019.11.22,Rhode Island,vote,1,Democrats,58.5
 2019.11.22,South Carolina,vote,1,Democrats,41.3
 2019.11.22,South Dakota,vote,1,Democrats,33.8
 2019.11.22,Tennessee,vote,1,Democrats,36.0
@@ -7567,7 +7567,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.22,Oklahoma,vote,1,3rd Party,2.2
 2019.11.22,Oregon,vote,1,3rd Party,6.8
 2019.11.22,Pennsylvania,vote,1,3rd Party,3.4
-2019.11.22,Rhode island,vote,1,3rd Party,5.0
+2019.11.22,Rhode Island,vote,1,3rd Party,5.0
 2019.11.22,South Carolina,vote,1,3rd Party,3.1
 2019.11.22,South Dakota,vote,1,3rd Party,4.2
 2019.11.22,Tennessee,vote,1,3rd Party,2.7
@@ -7627,7 +7627,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.23,Oklahoma,win,1,Trump,99.9
 2019.11.23,Oregon,win,1,Trump,12.4
 2019.11.23,Pennsylvania,win,1,Trump,40.5
-2019.11.23,Rhode island,win,1,Trump,4.3
+2019.11.23,Rhode Island,win,1,Trump,4.3
 2019.11.23,South Carolina,win,1,Trump,86.3
 2019.11.23,South Dakota,win,1,Trump,99.6
 2019.11.23,Tennessee,win,1,Trump,98.3
@@ -7684,7 +7684,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.23,Oklahoma,win,1,Democrats,0.1
 2019.11.23,Oregon,win,1,Democrats,87.6
 2019.11.23,Pennsylvania,win,1,Democrats,59.5
-2019.11.23,Rhode island,win,1,Democrats,95.7
+2019.11.23,Rhode Island,win,1,Democrats,95.7
 2019.11.23,South Carolina,win,1,Democrats,13.7
 2019.11.23,South Dakota,win,1,Democrats,0.4
 2019.11.23,Tennessee,win,1,Democrats,1.7
@@ -7741,7 +7741,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.23,Oklahoma,win,1,3rd Party,0.0
 2019.11.23,Oregon,win,1,3rd Party,0.0
 2019.11.23,Pennsylvania,win,1,3rd Party,0.0
-2019.11.23,Rhode island,win,1,3rd Party,0.0
+2019.11.23,Rhode Island,win,1,3rd Party,0.0
 2019.11.23,South Carolina,win,1,3rd Party,0.0
 2019.11.23,South Dakota,win,1,3rd Party,0.0
 2019.11.23,Tennessee,win,1,3rd Party,0.0
@@ -7798,7 +7798,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.23,Oklahoma,vote,1,Trump,66.2
 2019.11.23,Oregon,vote,1,Trump,38.5
 2019.11.23,Pennsylvania,vote,1,Trump,46.9
-2019.11.23,Rhode island,vote,1,Trump,36.4
+2019.11.23,Rhode Island,vote,1,Trump,36.4
 2019.11.23,South Carolina,vote,1,Trump,55.5
 2019.11.23,South Dakota,vote,1,Trump,61.9
 2019.11.23,Tennessee,vote,1,Trump,61.3
@@ -7855,7 +7855,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.23,Oklahoma,vote,1,Democrats,31.4
 2019.11.23,Oregon,vote,1,Democrats,54.6
 2019.11.23,Pennsylvania,vote,1,Democrats,49.6
-2019.11.23,Rhode island,vote,1,Democrats,58.5
+2019.11.23,Rhode Island,vote,1,Democrats,58.5
 2019.11.23,South Carolina,vote,1,Democrats,41.3
 2019.11.23,South Dakota,vote,1,Democrats,33.8
 2019.11.23,Tennessee,vote,1,Democrats,36.0
@@ -7912,7 +7912,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.23,Oklahoma,vote,1,3rd Party,2.2
 2019.11.23,Oregon,vote,1,3rd Party,6.8
 2019.11.23,Pennsylvania,vote,1,3rd Party,3.4
-2019.11.23,Rhode island,vote,1,3rd Party,5.0
+2019.11.23,Rhode Island,vote,1,3rd Party,5.0
 2019.11.23,South Carolina,vote,1,3rd Party,3.1
 2019.11.23,South Dakota,vote,1,3rd Party,4.2
 2019.11.23,Tennessee,vote,1,3rd Party,2.7
@@ -7972,7 +7972,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.24,Oklahoma,win,1,Trump,99.9
 2019.11.24,Oregon,win,1,Trump,12.4
 2019.11.24,Pennsylvania,win,1,Trump,40.5
-2019.11.24,Rhode island,win,1,Trump,4.3
+2019.11.24,Rhode Island,win,1,Trump,4.3
 2019.11.24,South Carolina,win,1,Trump,86.3
 2019.11.24,South Dakota,win,1,Trump,99.6
 2019.11.24,Tennessee,win,1,Trump,98.3
@@ -8029,7 +8029,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.24,Oklahoma,win,1,Democrats,0.1
 2019.11.24,Oregon,win,1,Democrats,87.6
 2019.11.24,Pennsylvania,win,1,Democrats,59.5
-2019.11.24,Rhode island,win,1,Democrats,95.7
+2019.11.24,Rhode Island,win,1,Democrats,95.7
 2019.11.24,South Carolina,win,1,Democrats,13.7
 2019.11.24,South Dakota,win,1,Democrats,0.4
 2019.11.24,Tennessee,win,1,Democrats,1.7
@@ -8086,7 +8086,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.24,Oklahoma,win,1,3rd Party,0.0
 2019.11.24,Oregon,win,1,3rd Party,0.0
 2019.11.24,Pennsylvania,win,1,3rd Party,0.0
-2019.11.24,Rhode island,win,1,3rd Party,0.0
+2019.11.24,Rhode Island,win,1,3rd Party,0.0
 2019.11.24,South Carolina,win,1,3rd Party,0.0
 2019.11.24,South Dakota,win,1,3rd Party,0.0
 2019.11.24,Tennessee,win,1,3rd Party,0.0
@@ -8143,7 +8143,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.24,Oklahoma,vote,1,Trump,66.2
 2019.11.24,Oregon,vote,1,Trump,38.5
 2019.11.24,Pennsylvania,vote,1,Trump,46.9
-2019.11.24,Rhode island,vote,1,Trump,36.4
+2019.11.24,Rhode Island,vote,1,Trump,36.4
 2019.11.24,South Carolina,vote,1,Trump,55.5
 2019.11.24,South Dakota,vote,1,Trump,61.9
 2019.11.24,Tennessee,vote,1,Trump,61.3
@@ -8200,7 +8200,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.24,Oklahoma,vote,1,Democrats,31.4
 2019.11.24,Oregon,vote,1,Democrats,54.6
 2019.11.24,Pennsylvania,vote,1,Democrats,49.6
-2019.11.24,Rhode island,vote,1,Democrats,58.5
+2019.11.24,Rhode Island,vote,1,Democrats,58.5
 2019.11.24,South Carolina,vote,1,Democrats,41.3
 2019.11.24,South Dakota,vote,1,Democrats,33.8
 2019.11.24,Tennessee,vote,1,Democrats,36.0
@@ -8257,7 +8257,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.24,Oklahoma,vote,1,3rd Party,2.2
 2019.11.24,Oregon,vote,1,3rd Party,6.8
 2019.11.24,Pennsylvania,vote,1,3rd Party,3.4
-2019.11.24,Rhode island,vote,1,3rd Party,5.0
+2019.11.24,Rhode Island,vote,1,3rd Party,5.0
 2019.11.24,South Carolina,vote,1,3rd Party,3.1
 2019.11.24,South Dakota,vote,1,3rd Party,4.2
 2019.11.24,Tennessee,vote,1,3rd Party,2.7
@@ -8317,7 +8317,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.25,Oklahoma,win,1,Trump,99.9
 2019.11.25,Oregon,win,1,Trump,12.4
 2019.11.25,Pennsylvania,win,1,Trump,40.5
-2019.11.25,Rhode island,win,1,Trump,4.3
+2019.11.25,Rhode Island,win,1,Trump,4.3
 2019.11.25,South Carolina,win,1,Trump,86.3
 2019.11.25,South Dakota,win,1,Trump,99.6
 2019.11.25,Tennessee,win,1,Trump,98.3
@@ -8374,7 +8374,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.25,Oklahoma,win,1,Democrats,0.1
 2019.11.25,Oregon,win,1,Democrats,87.6
 2019.11.25,Pennsylvania,win,1,Democrats,59.5
-2019.11.25,Rhode island,win,1,Democrats,95.7
+2019.11.25,Rhode Island,win,1,Democrats,95.7
 2019.11.25,South Carolina,win,1,Democrats,13.7
 2019.11.25,South Dakota,win,1,Democrats,0.4
 2019.11.25,Tennessee,win,1,Democrats,1.7
@@ -8431,7 +8431,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.25,Oklahoma,win,1,3rd Party,0.0
 2019.11.25,Oregon,win,1,3rd Party,0.0
 2019.11.25,Pennsylvania,win,1,3rd Party,0.0
-2019.11.25,Rhode island,win,1,3rd Party,0.0
+2019.11.25,Rhode Island,win,1,3rd Party,0.0
 2019.11.25,South Carolina,win,1,3rd Party,0.0
 2019.11.25,South Dakota,win,1,3rd Party,0.0
 2019.11.25,Tennessee,win,1,3rd Party,0.0
@@ -8488,7 +8488,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.25,Oklahoma,vote,1,Trump,66.2
 2019.11.25,Oregon,vote,1,Trump,38.5
 2019.11.25,Pennsylvania,vote,1,Trump,46.9
-2019.11.25,Rhode island,vote,1,Trump,36.4
+2019.11.25,Rhode Island,vote,1,Trump,36.4
 2019.11.25,South Carolina,vote,1,Trump,55.5
 2019.11.25,South Dakota,vote,1,Trump,61.9
 2019.11.25,Tennessee,vote,1,Trump,61.3
@@ -8545,7 +8545,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.25,Oklahoma,vote,1,Democrats,31.4
 2019.11.25,Oregon,vote,1,Democrats,54.6
 2019.11.25,Pennsylvania,vote,1,Democrats,49.6
-2019.11.25,Rhode island,vote,1,Democrats,58.5
+2019.11.25,Rhode Island,vote,1,Democrats,58.5
 2019.11.25,South Carolina,vote,1,Democrats,41.3
 2019.11.25,South Dakota,vote,1,Democrats,33.8
 2019.11.25,Tennessee,vote,1,Democrats,36.0
@@ -8602,7 +8602,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.25,Oklahoma,vote,1,3rd Party,2.2
 2019.11.25,Oregon,vote,1,3rd Party,6.8
 2019.11.25,Pennsylvania,vote,1,3rd Party,3.4
-2019.11.25,Rhode island,vote,1,3rd Party,5.0
+2019.11.25,Rhode Island,vote,1,3rd Party,5.0
 2019.11.25,South Carolina,vote,1,3rd Party,3.1
 2019.11.25,South Dakota,vote,1,3rd Party,4.2
 2019.11.25,Tennessee,vote,1,3rd Party,2.7
@@ -8662,7 +8662,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.26,Oklahoma,win,1,Trump,99.9
 2019.11.26,Oregon,win,1,Trump,12.4
 2019.11.26,Pennsylvania,win,1,Trump,40.5
-2019.11.26,Rhode island,win,1,Trump,4.3
+2019.11.26,Rhode Island,win,1,Trump,4.3
 2019.11.26,South Carolina,win,1,Trump,86.3
 2019.11.26,South Dakota,win,1,Trump,99.6
 2019.11.26,Tennessee,win,1,Trump,98.3
@@ -8719,7 +8719,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.26,Oklahoma,win,1,Democrats,0.1
 2019.11.26,Oregon,win,1,Democrats,87.6
 2019.11.26,Pennsylvania,win,1,Democrats,59.5
-2019.11.26,Rhode island,win,1,Democrats,95.7
+2019.11.26,Rhode Island,win,1,Democrats,95.7
 2019.11.26,South Carolina,win,1,Democrats,13.7
 2019.11.26,South Dakota,win,1,Democrats,0.4
 2019.11.26,Tennessee,win,1,Democrats,1.7
@@ -8776,7 +8776,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.26,Oklahoma,win,1,3rd Party,0.0
 2019.11.26,Oregon,win,1,3rd Party,0.0
 2019.11.26,Pennsylvania,win,1,3rd Party,0.0
-2019.11.26,Rhode island,win,1,3rd Party,0.0
+2019.11.26,Rhode Island,win,1,3rd Party,0.0
 2019.11.26,South Carolina,win,1,3rd Party,0.0
 2019.11.26,South Dakota,win,1,3rd Party,0.0
 2019.11.26,Tennessee,win,1,3rd Party,0.0
@@ -8833,7 +8833,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.26,Oklahoma,vote,1,Trump,66.2
 2019.11.26,Oregon,vote,1,Trump,38.5
 2019.11.26,Pennsylvania,vote,1,Trump,46.9
-2019.11.26,Rhode island,vote,1,Trump,36.4
+2019.11.26,Rhode Island,vote,1,Trump,36.4
 2019.11.26,South Carolina,vote,1,Trump,55.5
 2019.11.26,South Dakota,vote,1,Trump,61.9
 2019.11.26,Tennessee,vote,1,Trump,61.3
@@ -8890,7 +8890,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.26,Oklahoma,vote,1,Democrats,31.4
 2019.11.26,Oregon,vote,1,Democrats,54.6
 2019.11.26,Pennsylvania,vote,1,Democrats,49.6
-2019.11.26,Rhode island,vote,1,Democrats,58.5
+2019.11.26,Rhode Island,vote,1,Democrats,58.5
 2019.11.26,South Carolina,vote,1,Democrats,41.3
 2019.11.26,South Dakota,vote,1,Democrats,33.8
 2019.11.26,Tennessee,vote,1,Democrats,36.0
@@ -8947,7 +8947,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.26,Oklahoma,vote,1,3rd Party,2.2
 2019.11.26,Oregon,vote,1,3rd Party,6.8
 2019.11.26,Pennsylvania,vote,1,3rd Party,3.4
-2019.11.26,Rhode island,vote,1,3rd Party,5.0
+2019.11.26,Rhode Island,vote,1,3rd Party,5.0
 2019.11.26,South Carolina,vote,1,3rd Party,3.1
 2019.11.26,South Dakota,vote,1,3rd Party,4.2
 2019.11.26,Tennessee,vote,1,3rd Party,2.7
@@ -9007,7 +9007,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.27,Oklahoma,win,1,Trump,99.9
 2019.11.27,Oregon,win,1,Trump,12.5
 2019.11.27,Pennsylvania,win,1,Trump,40.5
-2019.11.27,Rhode island,win,1,Trump,4.3
+2019.11.27,Rhode Island,win,1,Trump,4.3
 2019.11.27,South Carolina,win,1,Trump,86.3
 2019.11.27,South Dakota,win,1,Trump,99.6
 2019.11.27,Tennessee,win,1,Trump,98.3
@@ -9064,7 +9064,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.27,Oklahoma,win,1,Democrats,0.1
 2019.11.27,Oregon,win,1,Democrats,87.5
 2019.11.27,Pennsylvania,win,1,Democrats,59.5
-2019.11.27,Rhode island,win,1,Democrats,95.7
+2019.11.27,Rhode Island,win,1,Democrats,95.7
 2019.11.27,South Carolina,win,1,Democrats,13.7
 2019.11.27,South Dakota,win,1,Democrats,0.4
 2019.11.27,Tennessee,win,1,Democrats,1.7
@@ -9121,7 +9121,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.27,Oklahoma,win,1,3rd Party,0.0
 2019.11.27,Oregon,win,1,3rd Party,0.0
 2019.11.27,Pennsylvania,win,1,3rd Party,0.0
-2019.11.27,Rhode island,win,1,3rd Party,0.0
+2019.11.27,Rhode Island,win,1,3rd Party,0.0
 2019.11.27,South Carolina,win,1,3rd Party,0.0
 2019.11.27,South Dakota,win,1,3rd Party,0.0
 2019.11.27,Tennessee,win,1,3rd Party,0.0
@@ -9178,7 +9178,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.27,Oklahoma,vote,1,Trump,66.2
 2019.11.27,Oregon,vote,1,Trump,38.6
 2019.11.27,Pennsylvania,vote,1,Trump,46.9
-2019.11.27,Rhode island,vote,1,Trump,36.4
+2019.11.27,Rhode Island,vote,1,Trump,36.4
 2019.11.27,South Carolina,vote,1,Trump,55.5
 2019.11.27,South Dakota,vote,1,Trump,61.9
 2019.11.27,Tennessee,vote,1,Trump,61.3
@@ -9235,7 +9235,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.27,Oklahoma,vote,1,Democrats,31.4
 2019.11.27,Oregon,vote,1,Democrats,54.6
 2019.11.27,Pennsylvania,vote,1,Democrats,49.6
-2019.11.27,Rhode island,vote,1,Democrats,58.5
+2019.11.27,Rhode Island,vote,1,Democrats,58.5
 2019.11.27,South Carolina,vote,1,Democrats,41.3
 2019.11.27,South Dakota,vote,1,Democrats,33.8
 2019.11.27,Tennessee,vote,1,Democrats,36.0
@@ -9292,7 +9292,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.27,Oklahoma,vote,1,3rd Party,2.2
 2019.11.27,Oregon,vote,1,3rd Party,6.8
 2019.11.27,Pennsylvania,vote,1,3rd Party,3.4
-2019.11.27,Rhode island,vote,1,3rd Party,5.0
+2019.11.27,Rhode Island,vote,1,3rd Party,5.0
 2019.11.27,South Carolina,vote,1,3rd Party,3.1
 2019.11.27,South Dakota,vote,1,3rd Party,4.2
 2019.11.27,Tennessee,vote,1,3rd Party,2.7
@@ -9352,7 +9352,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.28,Oklahoma,win,1,Trump,99.9
 2019.11.28,Oregon,win,1,Trump,11.8
 2019.11.28,Pennsylvania,win,1,Trump,38.0
-2019.11.28,Rhode island,win,1,Trump,3.8
+2019.11.28,Rhode Island,win,1,Trump,3.8
 2019.11.28,South Carolina,win,1,Trump,85.2
 2019.11.28,South Dakota,win,1,Trump,99.5
 2019.11.28,Tennessee,win,1,Trump,98.0
@@ -9409,7 +9409,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.28,Oklahoma,win,1,Democrats,0.1
 2019.11.28,Oregon,win,1,Democrats,88.2
 2019.11.28,Pennsylvania,win,1,Democrats,62.0
-2019.11.28,Rhode island,win,1,Democrats,96.2
+2019.11.28,Rhode Island,win,1,Democrats,96.2
 2019.11.28,South Carolina,win,1,Democrats,14.8
 2019.11.28,South Dakota,win,1,Democrats,0.5
 2019.11.28,Tennessee,win,1,Democrats,2.0
@@ -9466,7 +9466,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.28,Oklahoma,win,1,3rd Party,0.0
 2019.11.28,Oregon,win,1,3rd Party,0.0
 2019.11.28,Pennsylvania,win,1,3rd Party,0.0
-2019.11.28,Rhode island,win,1,3rd Party,0.0
+2019.11.28,Rhode Island,win,1,3rd Party,0.0
 2019.11.28,South Carolina,win,1,3rd Party,0.0
 2019.11.28,South Dakota,win,1,3rd Party,0.0
 2019.11.28,Tennessee,win,1,3rd Party,0.0
@@ -9523,7 +9523,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.28,Oklahoma,vote,1,Trump,66.1
 2019.11.28,Oregon,vote,1,Trump,38.4
 2019.11.28,Pennsylvania,vote,1,Trump,46.5
-2019.11.28,Rhode island,vote,1,Trump,36.1
+2019.11.28,Rhode Island,vote,1,Trump,36.1
 2019.11.28,South Carolina,vote,1,Trump,55.3
 2019.11.28,South Dakota,vote,1,Trump,61.7
 2019.11.28,Tennessee,vote,1,Trump,61.1
@@ -9580,7 +9580,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.28,Oklahoma,vote,1,Democrats,31.6
 2019.11.28,Oregon,vote,1,Democrats,54.8
 2019.11.28,Pennsylvania,vote,1,Democrats,50.0
-2019.11.28,Rhode island,vote,1,Democrats,58.8
+2019.11.28,Rhode Island,vote,1,Democrats,58.8
 2019.11.28,South Carolina,vote,1,Democrats,41.5
 2019.11.28,South Dakota,vote,1,Democrats,34.0
 2019.11.28,Tennessee,vote,1,Democrats,36.2
@@ -9637,7 +9637,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.28,Oklahoma,vote,1,3rd Party,2.2
 2019.11.28,Oregon,vote,1,3rd Party,6.8
 2019.11.28,Pennsylvania,vote,1,3rd Party,3.4
-2019.11.28,Rhode island,vote,1,3rd Party,5.0
+2019.11.28,Rhode Island,vote,1,3rd Party,5.0
 2019.11.28,South Carolina,vote,1,3rd Party,3.1
 2019.11.28,South Dakota,vote,1,3rd Party,4.2
 2019.11.28,Tennessee,vote,1,3rd Party,2.7
@@ -9697,7 +9697,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.29,Oklahoma,win,1,Trump,99.9
 2019.11.29,Oregon,win,1,Trump,11.8
 2019.11.29,Pennsylvania,win,1,Trump,38.0
-2019.11.29,Rhode island,win,1,Trump,3.8
+2019.11.29,Rhode Island,win,1,Trump,3.8
 2019.11.29,South Carolina,win,1,Trump,85.2
 2019.11.29,South Dakota,win,1,Trump,99.5
 2019.11.29,Tennessee,win,1,Trump,98.0
@@ -9754,7 +9754,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.29,Oklahoma,win,1,Democrats,0.1
 2019.11.29,Oregon,win,1,Democrats,88.2
 2019.11.29,Pennsylvania,win,1,Democrats,62.0
-2019.11.29,Rhode island,win,1,Democrats,96.2
+2019.11.29,Rhode Island,win,1,Democrats,96.2
 2019.11.29,South Carolina,win,1,Democrats,14.8
 2019.11.29,South Dakota,win,1,Democrats,0.5
 2019.11.29,Tennessee,win,1,Democrats,2.0
@@ -9811,7 +9811,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.29,Oklahoma,win,1,3rd Party,0.0
 2019.11.29,Oregon,win,1,3rd Party,0.0
 2019.11.29,Pennsylvania,win,1,3rd Party,0.0
-2019.11.29,Rhode island,win,1,3rd Party,0.0
+2019.11.29,Rhode Island,win,1,3rd Party,0.0
 2019.11.29,South Carolina,win,1,3rd Party,0.0
 2019.11.29,South Dakota,win,1,3rd Party,0.0
 2019.11.29,Tennessee,win,1,3rd Party,0.0
@@ -9868,7 +9868,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.29,Oklahoma,vote,1,Trump,66.1
 2019.11.29,Oregon,vote,1,Trump,38.4
 2019.11.29,Pennsylvania,vote,1,Trump,46.5
-2019.11.29,Rhode island,vote,1,Trump,36.1
+2019.11.29,Rhode Island,vote,1,Trump,36.1
 2019.11.29,South Carolina,vote,1,Trump,55.3
 2019.11.29,South Dakota,vote,1,Trump,61.7
 2019.11.29,Tennessee,vote,1,Trump,61.1
@@ -9925,7 +9925,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.29,Oklahoma,vote,1,Democrats,31.6
 2019.11.29,Oregon,vote,1,Democrats,54.8
 2019.11.29,Pennsylvania,vote,1,Democrats,50.0
-2019.11.29,Rhode island,vote,1,Democrats,58.8
+2019.11.29,Rhode Island,vote,1,Democrats,58.8
 2019.11.29,South Carolina,vote,1,Democrats,41.5
 2019.11.29,South Dakota,vote,1,Democrats,34.0
 2019.11.29,Tennessee,vote,1,Democrats,36.2
@@ -9982,7 +9982,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.29,Oklahoma,vote,1,3rd Party,2.2
 2019.11.29,Oregon,vote,1,3rd Party,6.8
 2019.11.29,Pennsylvania,vote,1,3rd Party,3.4
-2019.11.29,Rhode island,vote,1,3rd Party,5.0
+2019.11.29,Rhode Island,vote,1,3rd Party,5.0
 2019.11.29,South Carolina,vote,1,3rd Party,3.1
 2019.11.29,South Dakota,vote,1,3rd Party,4.2
 2019.11.29,Tennessee,vote,1,3rd Party,2.7
@@ -10042,7 +10042,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.30,Oklahoma,win,1,Trump,99.9
 2019.11.30,Oregon,win,1,Trump,11.8
 2019.11.30,Pennsylvania,win,1,Trump,38.0
-2019.11.30,Rhode island,win,1,Trump,3.8
+2019.11.30,Rhode Island,win,1,Trump,3.8
 2019.11.30,South Carolina,win,1,Trump,85.2
 2019.11.30,South Dakota,win,1,Trump,99.5
 2019.11.30,Tennessee,win,1,Trump,98.0
@@ -10099,7 +10099,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.30,Oklahoma,win,1,Democrats,0.1
 2019.11.30,Oregon,win,1,Democrats,88.2
 2019.11.30,Pennsylvania,win,1,Democrats,62.0
-2019.11.30,Rhode island,win,1,Democrats,96.2
+2019.11.30,Rhode Island,win,1,Democrats,96.2
 2019.11.30,South Carolina,win,1,Democrats,14.8
 2019.11.30,South Dakota,win,1,Democrats,0.5
 2019.11.30,Tennessee,win,1,Democrats,2.0
@@ -10156,7 +10156,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.30,Oklahoma,win,1,3rd Party,0.0
 2019.11.30,Oregon,win,1,3rd Party,0.0
 2019.11.30,Pennsylvania,win,1,3rd Party,0.0
-2019.11.30,Rhode island,win,1,3rd Party,0.0
+2019.11.30,Rhode Island,win,1,3rd Party,0.0
 2019.11.30,South Carolina,win,1,3rd Party,0.0
 2019.11.30,South Dakota,win,1,3rd Party,0.0
 2019.11.30,Tennessee,win,1,3rd Party,0.0
@@ -10213,7 +10213,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.30,Oklahoma,vote,1,Trump,66.1
 2019.11.30,Oregon,vote,1,Trump,38.4
 2019.11.30,Pennsylvania,vote,1,Trump,46.5
-2019.11.30,Rhode island,vote,1,Trump,36.1
+2019.11.30,Rhode Island,vote,1,Trump,36.1
 2019.11.30,South Carolina,vote,1,Trump,55.3
 2019.11.30,South Dakota,vote,1,Trump,61.7
 2019.11.30,Tennessee,vote,1,Trump,61.1
@@ -10270,7 +10270,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.30,Oklahoma,vote,1,Democrats,31.6
 2019.11.30,Oregon,vote,1,Democrats,54.8
 2019.11.30,Pennsylvania,vote,1,Democrats,50.0
-2019.11.30,Rhode island,vote,1,Democrats,58.8
+2019.11.30,Rhode Island,vote,1,Democrats,58.8
 2019.11.30,South Carolina,vote,1,Democrats,41.5
 2019.11.30,South Dakota,vote,1,Democrats,34.0
 2019.11.30,Tennessee,vote,1,Democrats,36.2
@@ -10327,7 +10327,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.11.30,Oklahoma,vote,1,3rd Party,2.2
 2019.11.30,Oregon,vote,1,3rd Party,6.8
 2019.11.30,Pennsylvania,vote,1,3rd Party,3.4
-2019.11.30,Rhode island,vote,1,3rd Party,5.0
+2019.11.30,Rhode Island,vote,1,3rd Party,5.0
 2019.11.30,South Carolina,vote,1,3rd Party,3.1
 2019.11.30,South Dakota,vote,1,3rd Party,4.2
 2019.11.30,Tennessee,vote,1,3rd Party,2.7
@@ -10387,7 +10387,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.1,Oklahoma,win,1,Trump,99.9
 2019.12.1,Oregon,win,1,Trump,11.8
 2019.12.1,Pennsylvania,win,1,Trump,38.0
-2019.12.1,Rhode island,win,1,Trump,3.8
+2019.12.1,Rhode Island,win,1,Trump,3.8
 2019.12.1,South Carolina,win,1,Trump,85.2
 2019.12.1,South Dakota,win,1,Trump,99.5
 2019.12.1,Tennessee,win,1,Trump,98.0
@@ -10444,7 +10444,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.1,Oklahoma,win,1,Democrats,0.1
 2019.12.1,Oregon,win,1,Democrats,88.2
 2019.12.1,Pennsylvania,win,1,Democrats,62.0
-2019.12.1,Rhode island,win,1,Democrats,96.2
+2019.12.1,Rhode Island,win,1,Democrats,96.2
 2019.12.1,South Carolina,win,1,Democrats,14.8
 2019.12.1,South Dakota,win,1,Democrats,0.5
 2019.12.1,Tennessee,win,1,Democrats,2.0
@@ -10501,7 +10501,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.1,Oklahoma,win,1,3rd Party,0.0
 2019.12.1,Oregon,win,1,3rd Party,0.0
 2019.12.1,Pennsylvania,win,1,3rd Party,0.0
-2019.12.1,Rhode island,win,1,3rd Party,0.0
+2019.12.1,Rhode Island,win,1,3rd Party,0.0
 2019.12.1,South Carolina,win,1,3rd Party,0.0
 2019.12.1,South Dakota,win,1,3rd Party,0.0
 2019.12.1,Tennessee,win,1,3rd Party,0.0
@@ -10558,7 +10558,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.1,Oklahoma,vote,1,Trump,66.1
 2019.12.1,Oregon,vote,1,Trump,38.4
 2019.12.1,Pennsylvania,vote,1,Trump,46.5
-2019.12.1,Rhode island,vote,1,Trump,36.1
+2019.12.1,Rhode Island,vote,1,Trump,36.1
 2019.12.1,South Carolina,vote,1,Trump,55.3
 2019.12.1,South Dakota,vote,1,Trump,61.7
 2019.12.1,Tennessee,vote,1,Trump,61.1
@@ -10615,7 +10615,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.1,Oklahoma,vote,1,Democrats,31.6
 2019.12.1,Oregon,vote,1,Democrats,54.8
 2019.12.1,Pennsylvania,vote,1,Democrats,50.0
-2019.12.1,Rhode island,vote,1,Democrats,58.8
+2019.12.1,Rhode Island,vote,1,Democrats,58.8
 2019.12.1,South Carolina,vote,1,Democrats,41.5
 2019.12.1,South Dakota,vote,1,Democrats,34.0
 2019.12.1,Tennessee,vote,1,Democrats,36.2
@@ -10672,7 +10672,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.1,Oklahoma,vote,1,3rd Party,2.2
 2019.12.1,Oregon,vote,1,3rd Party,6.8
 2019.12.1,Pennsylvania,vote,1,3rd Party,3.4
-2019.12.1,Rhode island,vote,1,3rd Party,5.0
+2019.12.1,Rhode Island,vote,1,3rd Party,5.0
 2019.12.1,South Carolina,vote,1,3rd Party,3.1
 2019.12.1,South Dakota,vote,1,3rd Party,4.2
 2019.12.1,Tennessee,vote,1,3rd Party,2.7
@@ -10732,7 +10732,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.2,Oklahoma,win,1,Trump,99.9
 2019.12.2,Oregon,win,1,Trump,11.8
 2019.12.2,Pennsylvania,win,1,Trump,38.0
-2019.12.2,Rhode island,win,1,Trump,3.8
+2019.12.2,Rhode Island,win,1,Trump,3.8
 2019.12.2,South Carolina,win,1,Trump,85.2
 2019.12.2,South Dakota,win,1,Trump,99.5
 2019.12.2,Tennessee,win,1,Trump,98.0
@@ -10789,7 +10789,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.2,Oklahoma,win,1,Democrats,0.1
 2019.12.2,Oregon,win,1,Democrats,88.2
 2019.12.2,Pennsylvania,win,1,Democrats,62.0
-2019.12.2,Rhode island,win,1,Democrats,96.2
+2019.12.2,Rhode Island,win,1,Democrats,96.2
 2019.12.2,South Carolina,win,1,Democrats,14.8
 2019.12.2,South Dakota,win,1,Democrats,0.5
 2019.12.2,Tennessee,win,1,Democrats,2.0
@@ -10846,7 +10846,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.2,Oklahoma,win,1,3rd Party,0.0
 2019.12.2,Oregon,win,1,3rd Party,0.0
 2019.12.2,Pennsylvania,win,1,3rd Party,0.0
-2019.12.2,Rhode island,win,1,3rd Party,0.0
+2019.12.2,Rhode Island,win,1,3rd Party,0.0
 2019.12.2,South Carolina,win,1,3rd Party,0.0
 2019.12.2,South Dakota,win,1,3rd Party,0.0
 2019.12.2,Tennessee,win,1,3rd Party,0.0
@@ -10903,7 +10903,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.2,Oklahoma,vote,1,Trump,66.1
 2019.12.2,Oregon,vote,1,Trump,38.4
 2019.12.2,Pennsylvania,vote,1,Trump,46.5
-2019.12.2,Rhode island,vote,1,Trump,36.1
+2019.12.2,Rhode Island,vote,1,Trump,36.1
 2019.12.2,South Carolina,vote,1,Trump,55.3
 2019.12.2,South Dakota,vote,1,Trump,61.7
 2019.12.2,Tennessee,vote,1,Trump,61.1
@@ -10960,7 +10960,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.2,Oklahoma,vote,1,Democrats,31.6
 2019.12.2,Oregon,vote,1,Democrats,54.8
 2019.12.2,Pennsylvania,vote,1,Democrats,50.0
-2019.12.2,Rhode island,vote,1,Democrats,58.8
+2019.12.2,Rhode Island,vote,1,Democrats,58.8
 2019.12.2,South Carolina,vote,1,Democrats,41.5
 2019.12.2,South Dakota,vote,1,Democrats,34.0
 2019.12.2,Tennessee,vote,1,Democrats,36.2
@@ -11017,7 +11017,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.2,Oklahoma,vote,1,3rd Party,2.2
 2019.12.2,Oregon,vote,1,3rd Party,6.8
 2019.12.2,Pennsylvania,vote,1,3rd Party,3.4
-2019.12.2,Rhode island,vote,1,3rd Party,5.0
+2019.12.2,Rhode Island,vote,1,3rd Party,5.0
 2019.12.2,South Carolina,vote,1,3rd Party,3.1
 2019.12.2,South Dakota,vote,1,3rd Party,4.2
 2019.12.2,Tennessee,vote,1,3rd Party,2.7
@@ -11077,7 +11077,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.3,Oklahoma,win,1,Trump,99.9
 2019.12.3,Oregon,win,1,Trump,11.8
 2019.12.3,Pennsylvania,win,1,Trump,38.0
-2019.12.3,Rhode island,win,1,Trump,3.8
+2019.12.3,Rhode Island,win,1,Trump,3.8
 2019.12.3,South Carolina,win,1,Trump,85.2
 2019.12.3,South Dakota,win,1,Trump,99.5
 2019.12.3,Tennessee,win,1,Trump,98.0
@@ -11134,7 +11134,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.3,Oklahoma,win,1,Democrats,0.1
 2019.12.3,Oregon,win,1,Democrats,88.2
 2019.12.3,Pennsylvania,win,1,Democrats,62.0
-2019.12.3,Rhode island,win,1,Democrats,96.2
+2019.12.3,Rhode Island,win,1,Democrats,96.2
 2019.12.3,South Carolina,win,1,Democrats,14.8
 2019.12.3,South Dakota,win,1,Democrats,0.5
 2019.12.3,Tennessee,win,1,Democrats,2.0
@@ -11191,7 +11191,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.3,Oklahoma,win,1,3rd Party,0.0
 2019.12.3,Oregon,win,1,3rd Party,0.0
 2019.12.3,Pennsylvania,win,1,3rd Party,0.0
-2019.12.3,Rhode island,win,1,3rd Party,0.0
+2019.12.3,Rhode Island,win,1,3rd Party,0.0
 2019.12.3,South Carolina,win,1,3rd Party,0.0
 2019.12.3,South Dakota,win,1,3rd Party,0.0
 2019.12.3,Tennessee,win,1,3rd Party,0.0
@@ -11248,7 +11248,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.3,Oklahoma,vote,1,Trump,66.1
 2019.12.3,Oregon,vote,1,Trump,38.4
 2019.12.3,Pennsylvania,vote,1,Trump,46.5
-2019.12.3,Rhode island,vote,1,Trump,36.1
+2019.12.3,Rhode Island,vote,1,Trump,36.1
 2019.12.3,South Carolina,vote,1,Trump,55.3
 2019.12.3,South Dakota,vote,1,Trump,61.7
 2019.12.3,Tennessee,vote,1,Trump,61.1
@@ -11305,7 +11305,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.3,Oklahoma,vote,1,Democrats,31.6
 2019.12.3,Oregon,vote,1,Democrats,54.8
 2019.12.3,Pennsylvania,vote,1,Democrats,50.0
-2019.12.3,Rhode island,vote,1,Democrats,58.8
+2019.12.3,Rhode Island,vote,1,Democrats,58.8
 2019.12.3,South Carolina,vote,1,Democrats,41.5
 2019.12.3,South Dakota,vote,1,Democrats,34.0
 2019.12.3,Tennessee,vote,1,Democrats,36.2
@@ -11362,7 +11362,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.3,Oklahoma,vote,1,3rd Party,2.2
 2019.12.3,Oregon,vote,1,3rd Party,6.8
 2019.12.3,Pennsylvania,vote,1,3rd Party,3.4
-2019.12.3,Rhode island,vote,1,3rd Party,5.0
+2019.12.3,Rhode Island,vote,1,3rd Party,5.0
 2019.12.3,South Carolina,vote,1,3rd Party,3.1
 2019.12.3,South Dakota,vote,1,3rd Party,4.2
 2019.12.3,Tennessee,vote,1,3rd Party,2.7
@@ -11422,7 +11422,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.4,Oklahoma,win,1,Trump,99.9
 2019.12.4,Oregon,win,1,Trump,11.8
 2019.12.4,Pennsylvania,win,1,Trump,38.0
-2019.12.4,Rhode island,win,1,Trump,3.8
+2019.12.4,Rhode Island,win,1,Trump,3.8
 2019.12.4,South Carolina,win,1,Trump,85.2
 2019.12.4,South Dakota,win,1,Trump,99.5
 2019.12.4,Tennessee,win,1,Trump,98.0
@@ -11479,7 +11479,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.4,Oklahoma,win,1,Democrats,0.1
 2019.12.4,Oregon,win,1,Democrats,88.2
 2019.12.4,Pennsylvania,win,1,Democrats,62.0
-2019.12.4,Rhode island,win,1,Democrats,96.2
+2019.12.4,Rhode Island,win,1,Democrats,96.2
 2019.12.4,South Carolina,win,1,Democrats,14.8
 2019.12.4,South Dakota,win,1,Democrats,0.5
 2019.12.4,Tennessee,win,1,Democrats,2.0
@@ -11536,7 +11536,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.4,Oklahoma,win,1,3rd Party,0.0
 2019.12.4,Oregon,win,1,3rd Party,0.0
 2019.12.4,Pennsylvania,win,1,3rd Party,0.0
-2019.12.4,Rhode island,win,1,3rd Party,0.0
+2019.12.4,Rhode Island,win,1,3rd Party,0.0
 2019.12.4,South Carolina,win,1,3rd Party,0.0
 2019.12.4,South Dakota,win,1,3rd Party,0.0
 2019.12.4,Tennessee,win,1,3rd Party,0.0
@@ -11593,7 +11593,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.4,Oklahoma,vote,1,Trump,66.1
 2019.12.4,Oregon,vote,1,Trump,38.4
 2019.12.4,Pennsylvania,vote,1,Trump,46.5
-2019.12.4,Rhode island,vote,1,Trump,36.1
+2019.12.4,Rhode Island,vote,1,Trump,36.1
 2019.12.4,South Carolina,vote,1,Trump,55.3
 2019.12.4,South Dakota,vote,1,Trump,61.7
 2019.12.4,Tennessee,vote,1,Trump,61.1
@@ -11650,7 +11650,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.4,Oklahoma,vote,1,Democrats,31.6
 2019.12.4,Oregon,vote,1,Democrats,54.8
 2019.12.4,Pennsylvania,vote,1,Democrats,50.0
-2019.12.4,Rhode island,vote,1,Democrats,58.8
+2019.12.4,Rhode Island,vote,1,Democrats,58.8
 2019.12.4,South Carolina,vote,1,Democrats,41.5
 2019.12.4,South Dakota,vote,1,Democrats,34.0
 2019.12.4,Tennessee,vote,1,Democrats,36.2
@@ -11707,7 +11707,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.4,Oklahoma,vote,1,3rd Party,2.2
 2019.12.4,Oregon,vote,1,3rd Party,6.8
 2019.12.4,Pennsylvania,vote,1,3rd Party,3.4
-2019.12.4,Rhode island,vote,1,3rd Party,5.0
+2019.12.4,Rhode Island,vote,1,3rd Party,5.0
 2019.12.4,South Carolina,vote,1,3rd Party,3.1
 2019.12.4,South Dakota,vote,1,3rd Party,4.2
 2019.12.4,Tennessee,vote,1,3rd Party,2.7
@@ -11767,7 +11767,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.5,Oklahoma,win,1,Trump,99.9
 2019.12.5,Oregon,win,1,Trump,11.8
 2019.12.5,Pennsylvania,win,1,Trump,38.0
-2019.12.5,Rhode island,win,1,Trump,3.8
+2019.12.5,Rhode Island,win,1,Trump,3.8
 2019.12.5,South Carolina,win,1,Trump,85.2
 2019.12.5,South Dakota,win,1,Trump,99.5
 2019.12.5,Tennessee,win,1,Trump,98.0
@@ -11824,7 +11824,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.5,Oklahoma,win,1,Democrats,0.1
 2019.12.5,Oregon,win,1,Democrats,88.2
 2019.12.5,Pennsylvania,win,1,Democrats,62.0
-2019.12.5,Rhode island,win,1,Democrats,96.2
+2019.12.5,Rhode Island,win,1,Democrats,96.2
 2019.12.5,South Carolina,win,1,Democrats,14.8
 2019.12.5,South Dakota,win,1,Democrats,0.5
 2019.12.5,Tennessee,win,1,Democrats,2.0
@@ -11881,7 +11881,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.5,Oklahoma,win,1,3rd Party,0.0
 2019.12.5,Oregon,win,1,3rd Party,0.0
 2019.12.5,Pennsylvania,win,1,3rd Party,0.0
-2019.12.5,Rhode island,win,1,3rd Party,0.0
+2019.12.5,Rhode Island,win,1,3rd Party,0.0
 2019.12.5,South Carolina,win,1,3rd Party,0.0
 2019.12.5,South Dakota,win,1,3rd Party,0.0
 2019.12.5,Tennessee,win,1,3rd Party,0.0
@@ -11938,7 +11938,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.5,Oklahoma,vote,1,Trump,66.1
 2019.12.5,Oregon,vote,1,Trump,38.4
 2019.12.5,Pennsylvania,vote,1,Trump,46.5
-2019.12.5,Rhode island,vote,1,Trump,36.1
+2019.12.5,Rhode Island,vote,1,Trump,36.1
 2019.12.5,South Carolina,vote,1,Trump,55.3
 2019.12.5,South Dakota,vote,1,Trump,61.7
 2019.12.5,Tennessee,vote,1,Trump,61.1
@@ -11995,7 +11995,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.5,Oklahoma,vote,1,Democrats,31.6
 2019.12.5,Oregon,vote,1,Democrats,54.8
 2019.12.5,Pennsylvania,vote,1,Democrats,50.0
-2019.12.5,Rhode island,vote,1,Democrats,58.8
+2019.12.5,Rhode Island,vote,1,Democrats,58.8
 2019.12.5,South Carolina,vote,1,Democrats,41.5
 2019.12.5,South Dakota,vote,1,Democrats,34.0
 2019.12.5,Tennessee,vote,1,Democrats,36.2
@@ -12052,7 +12052,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.5,Oklahoma,vote,1,3rd Party,2.2
 2019.12.5,Oregon,vote,1,3rd Party,6.8
 2019.12.5,Pennsylvania,vote,1,3rd Party,3.4
-2019.12.5,Rhode island,vote,1,3rd Party,5.0
+2019.12.5,Rhode Island,vote,1,3rd Party,5.0
 2019.12.5,South Carolina,vote,1,3rd Party,3.1
 2019.12.5,South Dakota,vote,1,3rd Party,4.2
 2019.12.5,Tennessee,vote,1,3rd Party,2.7
@@ -12112,7 +12112,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.6,Oklahoma,win,1,Trump,99.9
 2019.12.6,Oregon,win,1,Trump,11.8
 2019.12.6,Pennsylvania,win,1,Trump,38.0
-2019.12.6,Rhode island,win,1,Trump,3.8
+2019.12.6,Rhode Island,win,1,Trump,3.8
 2019.12.6,South Carolina,win,1,Trump,85.2
 2019.12.6,South Dakota,win,1,Trump,99.5
 2019.12.6,Tennessee,win,1,Trump,98.0
@@ -12169,7 +12169,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.6,Oklahoma,win,1,Democrats,0.1
 2019.12.6,Oregon,win,1,Democrats,88.2
 2019.12.6,Pennsylvania,win,1,Democrats,62.0
-2019.12.6,Rhode island,win,1,Democrats,96.2
+2019.12.6,Rhode Island,win,1,Democrats,96.2
 2019.12.6,South Carolina,win,1,Democrats,14.8
 2019.12.6,South Dakota,win,1,Democrats,0.5
 2019.12.6,Tennessee,win,1,Democrats,2.0
@@ -12226,7 +12226,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.6,Oklahoma,win,1,3rd Party,0.0
 2019.12.6,Oregon,win,1,3rd Party,0.0
 2019.12.6,Pennsylvania,win,1,3rd Party,0.0
-2019.12.6,Rhode island,win,1,3rd Party,0.0
+2019.12.6,Rhode Island,win,1,3rd Party,0.0
 2019.12.6,South Carolina,win,1,3rd Party,0.0
 2019.12.6,South Dakota,win,1,3rd Party,0.0
 2019.12.6,Tennessee,win,1,3rd Party,0.0
@@ -12283,7 +12283,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.6,Oklahoma,vote,1,Trump,66.1
 2019.12.6,Oregon,vote,1,Trump,38.4
 2019.12.6,Pennsylvania,vote,1,Trump,46.5
-2019.12.6,Rhode island,vote,1,Trump,36.1
+2019.12.6,Rhode Island,vote,1,Trump,36.1
 2019.12.6,South Carolina,vote,1,Trump,55.3
 2019.12.6,South Dakota,vote,1,Trump,61.7
 2019.12.6,Tennessee,vote,1,Trump,61.1
@@ -12340,7 +12340,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.6,Oklahoma,vote,1,Democrats,31.6
 2019.12.6,Oregon,vote,1,Democrats,54.8
 2019.12.6,Pennsylvania,vote,1,Democrats,50.0
-2019.12.6,Rhode island,vote,1,Democrats,58.8
+2019.12.6,Rhode Island,vote,1,Democrats,58.8
 2019.12.6,South Carolina,vote,1,Democrats,41.5
 2019.12.6,South Dakota,vote,1,Democrats,34.0
 2019.12.6,Tennessee,vote,1,Democrats,36.2
@@ -12397,7 +12397,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.6,Oklahoma,vote,1,3rd Party,2.2
 2019.12.6,Oregon,vote,1,3rd Party,6.8
 2019.12.6,Pennsylvania,vote,1,3rd Party,3.4
-2019.12.6,Rhode island,vote,1,3rd Party,5.0
+2019.12.6,Rhode Island,vote,1,3rd Party,5.0
 2019.12.6,South Carolina,vote,1,3rd Party,3.1
 2019.12.6,South Dakota,vote,1,3rd Party,4.2
 2019.12.6,Tennessee,vote,1,3rd Party,2.7
@@ -12457,7 +12457,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.7,Oklahoma,win,1,Trump,99.9
 2019.12.7,Oregon,win,1,Trump,11.8
 2019.12.7,Pennsylvania,win,1,Trump,38.0
-2019.12.7,Rhode island,win,1,Trump,3.8
+2019.12.7,Rhode Island,win,1,Trump,3.8
 2019.12.7,South Carolina,win,1,Trump,85.2
 2019.12.7,South Dakota,win,1,Trump,99.5
 2019.12.7,Tennessee,win,1,Trump,98.0
@@ -12514,7 +12514,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.7,Oklahoma,win,1,Democrats,0.1
 2019.12.7,Oregon,win,1,Democrats,88.2
 2019.12.7,Pennsylvania,win,1,Democrats,62.0
-2019.12.7,Rhode island,win,1,Democrats,96.2
+2019.12.7,Rhode Island,win,1,Democrats,96.2
 2019.12.7,South Carolina,win,1,Democrats,14.8
 2019.12.7,South Dakota,win,1,Democrats,0.5
 2019.12.7,Tennessee,win,1,Democrats,2.0
@@ -12571,7 +12571,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.7,Oklahoma,win,1,3rd Party,0.0
 2019.12.7,Oregon,win,1,3rd Party,0.0
 2019.12.7,Pennsylvania,win,1,3rd Party,0.0
-2019.12.7,Rhode island,win,1,3rd Party,0.0
+2019.12.7,Rhode Island,win,1,3rd Party,0.0
 2019.12.7,South Carolina,win,1,3rd Party,0.0
 2019.12.7,South Dakota,win,1,3rd Party,0.0
 2019.12.7,Tennessee,win,1,3rd Party,0.0
@@ -12628,7 +12628,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.7,Oklahoma,vote,1,Trump,66.1
 2019.12.7,Oregon,vote,1,Trump,38.4
 2019.12.7,Pennsylvania,vote,1,Trump,46.5
-2019.12.7,Rhode island,vote,1,Trump,36.1
+2019.12.7,Rhode Island,vote,1,Trump,36.1
 2019.12.7,South Carolina,vote,1,Trump,55.3
 2019.12.7,South Dakota,vote,1,Trump,61.7
 2019.12.7,Tennessee,vote,1,Trump,61.1
@@ -12685,7 +12685,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.7,Oklahoma,vote,1,Democrats,31.6
 2019.12.7,Oregon,vote,1,Democrats,54.8
 2019.12.7,Pennsylvania,vote,1,Democrats,50.0
-2019.12.7,Rhode island,vote,1,Democrats,58.8
+2019.12.7,Rhode Island,vote,1,Democrats,58.8
 2019.12.7,South Carolina,vote,1,Democrats,41.5
 2019.12.7,South Dakota,vote,1,Democrats,34.0
 2019.12.7,Tennessee,vote,1,Democrats,36.2
@@ -12742,7 +12742,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.7,Oklahoma,vote,1,3rd Party,2.2
 2019.12.7,Oregon,vote,1,3rd Party,6.8
 2019.12.7,Pennsylvania,vote,1,3rd Party,3.4
-2019.12.7,Rhode island,vote,1,3rd Party,5.0
+2019.12.7,Rhode Island,vote,1,3rd Party,5.0
 2019.12.7,South Carolina,vote,1,3rd Party,3.1
 2019.12.7,South Dakota,vote,1,3rd Party,4.2
 2019.12.7,Tennessee,vote,1,3rd Party,2.7
@@ -12802,7 +12802,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.8,Oklahoma,win,1,Trump,99.9
 2019.12.8,Oregon,win,1,Trump,11.8
 2019.12.8,Pennsylvania,win,1,Trump,38.0
-2019.12.8,Rhode island,win,1,Trump,3.8
+2019.12.8,Rhode Island,win,1,Trump,3.8
 2019.12.8,South Carolina,win,1,Trump,85.2
 2019.12.8,South Dakota,win,1,Trump,99.5
 2019.12.8,Tennessee,win,1,Trump,98.0
@@ -12859,7 +12859,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.8,Oklahoma,win,1,Democrats,0.1
 2019.12.8,Oregon,win,1,Democrats,88.2
 2019.12.8,Pennsylvania,win,1,Democrats,62.0
-2019.12.8,Rhode island,win,1,Democrats,96.2
+2019.12.8,Rhode Island,win,1,Democrats,96.2
 2019.12.8,South Carolina,win,1,Democrats,14.8
 2019.12.8,South Dakota,win,1,Democrats,0.5
 2019.12.8,Tennessee,win,1,Democrats,2.0
@@ -12916,7 +12916,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.8,Oklahoma,win,1,3rd Party,0.0
 2019.12.8,Oregon,win,1,3rd Party,0.0
 2019.12.8,Pennsylvania,win,1,3rd Party,0.0
-2019.12.8,Rhode island,win,1,3rd Party,0.0
+2019.12.8,Rhode Island,win,1,3rd Party,0.0
 2019.12.8,South Carolina,win,1,3rd Party,0.0
 2019.12.8,South Dakota,win,1,3rd Party,0.0
 2019.12.8,Tennessee,win,1,3rd Party,0.0
@@ -12973,7 +12973,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.8,Oklahoma,vote,1,Trump,66.1
 2019.12.8,Oregon,vote,1,Trump,38.4
 2019.12.8,Pennsylvania,vote,1,Trump,46.5
-2019.12.8,Rhode island,vote,1,Trump,36.1
+2019.12.8,Rhode Island,vote,1,Trump,36.1
 2019.12.8,South Carolina,vote,1,Trump,55.3
 2019.12.8,South Dakota,vote,1,Trump,61.7
 2019.12.8,Tennessee,vote,1,Trump,61.1
@@ -13030,7 +13030,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.8,Oklahoma,vote,1,Democrats,31.6
 2019.12.8,Oregon,vote,1,Democrats,54.8
 2019.12.8,Pennsylvania,vote,1,Democrats,50.0
-2019.12.8,Rhode island,vote,1,Democrats,58.8
+2019.12.8,Rhode Island,vote,1,Democrats,58.8
 2019.12.8,South Carolina,vote,1,Democrats,41.5
 2019.12.8,South Dakota,vote,1,Democrats,34.0
 2019.12.8,Tennessee,vote,1,Democrats,36.2
@@ -13087,7 +13087,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.8,Oklahoma,vote,1,3rd Party,2.2
 2019.12.8,Oregon,vote,1,3rd Party,6.8
 2019.12.8,Pennsylvania,vote,1,3rd Party,3.4
-2019.12.8,Rhode island,vote,1,3rd Party,5.0
+2019.12.8,Rhode Island,vote,1,3rd Party,5.0
 2019.12.8,South Carolina,vote,1,3rd Party,3.1
 2019.12.8,South Dakota,vote,1,3rd Party,4.2
 2019.12.8,Tennessee,vote,1,3rd Party,2.7
@@ -13147,7 +13147,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.9,Oklahoma,win,1,Trump,99.9
 2019.12.9,Oregon,win,1,Trump,11.8
 2019.12.9,Pennsylvania,win,1,Trump,38.0
-2019.12.9,Rhode island,win,1,Trump,3.8
+2019.12.9,Rhode Island,win,1,Trump,3.8
 2019.12.9,South Carolina,win,1,Trump,85.2
 2019.12.9,South Dakota,win,1,Trump,99.5
 2019.12.9,Tennessee,win,1,Trump,98.0
@@ -13204,7 +13204,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.9,Oklahoma,win,1,Democrats,0.1
 2019.12.9,Oregon,win,1,Democrats,88.2
 2019.12.9,Pennsylvania,win,1,Democrats,62.0
-2019.12.9,Rhode island,win,1,Democrats,96.2
+2019.12.9,Rhode Island,win,1,Democrats,96.2
 2019.12.9,South Carolina,win,1,Democrats,14.8
 2019.12.9,South Dakota,win,1,Democrats,0.5
 2019.12.9,Tennessee,win,1,Democrats,2.0
@@ -13261,7 +13261,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.9,Oklahoma,win,1,3rd Party,0.0
 2019.12.9,Oregon,win,1,3rd Party,0.0
 2019.12.9,Pennsylvania,win,1,3rd Party,0.0
-2019.12.9,Rhode island,win,1,3rd Party,0.0
+2019.12.9,Rhode Island,win,1,3rd Party,0.0
 2019.12.9,South Carolina,win,1,3rd Party,0.0
 2019.12.9,South Dakota,win,1,3rd Party,0.0
 2019.12.9,Tennessee,win,1,3rd Party,0.0
@@ -13318,7 +13318,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.9,Oklahoma,vote,1,Trump,66.1
 2019.12.9,Oregon,vote,1,Trump,38.4
 2019.12.9,Pennsylvania,vote,1,Trump,46.5
-2019.12.9,Rhode island,vote,1,Trump,36.1
+2019.12.9,Rhode Island,vote,1,Trump,36.1
 2019.12.9,South Carolina,vote,1,Trump,55.3
 2019.12.9,South Dakota,vote,1,Trump,61.7
 2019.12.9,Tennessee,vote,1,Trump,61.1
@@ -13375,7 +13375,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.9,Oklahoma,vote,1,Democrats,31.6
 2019.12.9,Oregon,vote,1,Democrats,54.8
 2019.12.9,Pennsylvania,vote,1,Democrats,50.0
-2019.12.9,Rhode island,vote,1,Democrats,58.8
+2019.12.9,Rhode Island,vote,1,Democrats,58.8
 2019.12.9,South Carolina,vote,1,Democrats,41.5
 2019.12.9,South Dakota,vote,1,Democrats,34.0
 2019.12.9,Tennessee,vote,1,Democrats,36.2
@@ -13432,7 +13432,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.9,Oklahoma,vote,1,3rd Party,2.2
 2019.12.9,Oregon,vote,1,3rd Party,6.8
 2019.12.9,Pennsylvania,vote,1,3rd Party,3.4
-2019.12.9,Rhode island,vote,1,3rd Party,5.0
+2019.12.9,Rhode Island,vote,1,3rd Party,5.0
 2019.12.9,South Carolina,vote,1,3rd Party,3.1
 2019.12.9,South Dakota,vote,1,3rd Party,4.2
 2019.12.9,Tennessee,vote,1,3rd Party,2.7
@@ -13492,7 +13492,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.10,Oklahoma,win,1,Trump,99.9
 2019.12.10,Oregon,win,1,Trump,11.6
 2019.12.10,Pennsylvania,win,1,Trump,37.6
-2019.12.10,Rhode island,win,1,Trump,3.7
+2019.12.10,Rhode Island,win,1,Trump,3.7
 2019.12.10,South Carolina,win,1,Trump,85.1
 2019.12.10,South Dakota,win,1,Trump,99.5
 2019.12.10,Tennessee,win,1,Trump,98.0
@@ -13549,7 +13549,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.10,Oklahoma,win,1,Democrats,0.1
 2019.12.10,Oregon,win,1,Democrats,88.4
 2019.12.10,Pennsylvania,win,1,Democrats,62.4
-2019.12.10,Rhode island,win,1,Democrats,96.3
+2019.12.10,Rhode Island,win,1,Democrats,96.3
 2019.12.10,South Carolina,win,1,Democrats,14.9
 2019.12.10,South Dakota,win,1,Democrats,0.5
 2019.12.10,Tennessee,win,1,Democrats,2.0
@@ -13606,7 +13606,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.10,Oklahoma,win,1,3rd Party,0.0
 2019.12.10,Oregon,win,1,3rd Party,0.0
 2019.12.10,Pennsylvania,win,1,3rd Party,0.0
-2019.12.10,Rhode island,win,1,3rd Party,0.0
+2019.12.10,Rhode Island,win,1,3rd Party,0.0
 2019.12.10,South Carolina,win,1,3rd Party,0.0
 2019.12.10,South Dakota,win,1,3rd Party,0.0
 2019.12.10,Tennessee,win,1,3rd Party,0.0
@@ -13663,7 +13663,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.10,Oklahoma,vote,1,Trump,66.0
 2019.12.10,Oregon,vote,1,Trump,38.3
 2019.12.10,Pennsylvania,vote,1,Trump,46.5
-2019.12.10,Rhode island,vote,1,Trump,36.1
+2019.12.10,Rhode Island,vote,1,Trump,36.1
 2019.12.10,South Carolina,vote,1,Trump,55.2
 2019.12.10,South Dakota,vote,1,Trump,61.6
 2019.12.10,Tennessee,vote,1,Trump,61.0
@@ -13720,7 +13720,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.10,Oklahoma,vote,1,Democrats,31.6
 2019.12.10,Oregon,vote,1,Democrats,54.8
 2019.12.10,Pennsylvania,vote,1,Democrats,50.0
-2019.12.10,Rhode island,vote,1,Democrats,58.8
+2019.12.10,Rhode Island,vote,1,Democrats,58.8
 2019.12.10,South Carolina,vote,1,Democrats,41.6
 2019.12.10,South Dakota,vote,1,Democrats,34.1
 2019.12.10,Tennessee,vote,1,Democrats,36.2
@@ -13777,7 +13777,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.10,Oklahoma,vote,1,3rd Party,2.2
 2019.12.10,Oregon,vote,1,3rd Party,6.8
 2019.12.10,Pennsylvania,vote,1,3rd Party,3.4
-2019.12.10,Rhode island,vote,1,3rd Party,5.0
+2019.12.10,Rhode Island,vote,1,3rd Party,5.0
 2019.12.10,South Carolina,vote,1,3rd Party,3.1
 2019.12.10,South Dakota,vote,1,3rd Party,4.2
 2019.12.10,Tennessee,vote,1,3rd Party,2.7
@@ -13837,7 +13837,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.11,Oklahoma,win,1,Trump,99.9
 2019.12.11,Oregon,win,1,Trump,12.0
 2019.12.11,Pennsylvania,win,1,Trump,38.6
-2019.12.11,Rhode island,win,1,Trump,3.9
+2019.12.11,Rhode Island,win,1,Trump,3.9
 2019.12.11,South Carolina,win,1,Trump,85.7
 2019.12.11,South Dakota,win,1,Trump,99.5
 2019.12.11,Tennessee,win,1,Trump,98.1
@@ -13894,7 +13894,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.11,Oklahoma,win,1,Democrats,0.1
 2019.12.11,Oregon,win,1,Democrats,88.0
 2019.12.11,Pennsylvania,win,1,Democrats,61.4
-2019.12.11,Rhode island,win,1,Democrats,96.1
+2019.12.11,Rhode Island,win,1,Democrats,96.1
 2019.12.11,South Carolina,win,1,Democrats,14.3
 2019.12.11,South Dakota,win,1,Democrats,0.5
 2019.12.11,Tennessee,win,1,Democrats,1.9
@@ -13951,7 +13951,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.11,Oklahoma,win,1,3rd Party,0.0
 2019.12.11,Oregon,win,1,3rd Party,0.0
 2019.12.11,Pennsylvania,win,1,3rd Party,0.0
-2019.12.11,Rhode island,win,1,3rd Party,0.0
+2019.12.11,Rhode Island,win,1,3rd Party,0.0
 2019.12.11,South Carolina,win,1,3rd Party,0.0
 2019.12.11,South Dakota,win,1,3rd Party,0.0
 2019.12.11,Tennessee,win,1,3rd Party,0.0
@@ -14008,7 +14008,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.11,Oklahoma,vote,1,Trump,66.1
 2019.12.11,Oregon,vote,1,Trump,38.4
 2019.12.11,Pennsylvania,vote,1,Trump,46.6
-2019.12.11,Rhode island,vote,1,Trump,36.2
+2019.12.11,Rhode Island,vote,1,Trump,36.2
 2019.12.11,South Carolina,vote,1,Trump,55.4
 2019.12.11,South Dakota,vote,1,Trump,61.8
 2019.12.11,Tennessee,vote,1,Trump,61.1
@@ -14065,7 +14065,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.11,Oklahoma,vote,1,Democrats,31.5
 2019.12.11,Oregon,vote,1,Democrats,54.7
 2019.12.11,Pennsylvania,vote,1,Democrats,49.9
-2019.12.11,Rhode island,vote,1,Democrats,58.7
+2019.12.11,Rhode Island,vote,1,Democrats,58.7
 2019.12.11,South Carolina,vote,1,Democrats,41.4
 2019.12.11,South Dakota,vote,1,Democrats,33.9
 2019.12.11,Tennessee,vote,1,Democrats,36.1
@@ -14122,7 +14122,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.11,Oklahoma,vote,1,3rd Party,2.2
 2019.12.11,Oregon,vote,1,3rd Party,6.8
 2019.12.11,Pennsylvania,vote,1,3rd Party,3.4
-2019.12.11,Rhode island,vote,1,3rd Party,5.0
+2019.12.11,Rhode Island,vote,1,3rd Party,5.0
 2019.12.11,South Carolina,vote,1,3rd Party,3.1
 2019.12.11,South Dakota,vote,1,3rd Party,4.2
 2019.12.11,Tennessee,vote,1,3rd Party,2.7
@@ -14182,7 +14182,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.12,Oklahoma,win,1,Trump,99.9
 2019.12.12,Oregon,win,1,Trump,12.7
 2019.12.12,Pennsylvania,win,1,Trump,40.0
-2019.12.12,Rhode island,win,1,Trump,4.5
+2019.12.12,Rhode Island,win,1,Trump,4.5
 2019.12.12,South Carolina,win,1,Trump,86.5
 2019.12.12,South Dakota,win,1,Trump,99.6
 2019.12.12,Tennessee,win,1,Trump,98.4
@@ -14239,7 +14239,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.12,Oklahoma,win,1,Democrats,0.1
 2019.12.12,Oregon,win,1,Democrats,87.3
 2019.12.12,Pennsylvania,win,1,Democrats,60.0
-2019.12.12,Rhode island,win,1,Democrats,95.5
+2019.12.12,Rhode Island,win,1,Democrats,95.5
 2019.12.12,South Carolina,win,1,Democrats,13.5
 2019.12.12,South Dakota,win,1,Democrats,0.4
 2019.12.12,Tennessee,win,1,Democrats,1.6
@@ -14296,7 +14296,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.12,Oklahoma,win,1,3rd Party,0.0
 2019.12.12,Oregon,win,1,3rd Party,0.0
 2019.12.12,Pennsylvania,win,1,3rd Party,0.0
-2019.12.12,Rhode island,win,1,3rd Party,0.0
+2019.12.12,Rhode Island,win,1,3rd Party,0.0
 2019.12.12,South Carolina,win,1,3rd Party,0.0
 2019.12.12,South Dakota,win,1,3rd Party,0.0
 2019.12.12,Tennessee,win,1,3rd Party,0.0
@@ -14353,7 +14353,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.12,Oklahoma,vote,1,Trump,66.3
 2019.12.12,Oregon,vote,1,Trump,38.7
 2019.12.12,Pennsylvania,vote,1,Trump,46.8
-2019.12.12,Rhode island,vote,1,Trump,36.5
+2019.12.12,Rhode Island,vote,1,Trump,36.5
 2019.12.12,South Carolina,vote,1,Trump,55.6
 2019.12.12,South Dakota,vote,1,Trump,62.0
 2019.12.12,Tennessee,vote,1,Trump,61.3
@@ -14410,7 +14410,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.12,Oklahoma,vote,1,Democrats,31.3
 2019.12.12,Oregon,vote,1,Democrats,54.5
 2019.12.12,Pennsylvania,vote,1,Democrats,49.7
-2019.12.12,Rhode island,vote,1,Democrats,58.4
+2019.12.12,Rhode Island,vote,1,Democrats,58.4
 2019.12.12,South Carolina,vote,1,Democrats,41.2
 2019.12.12,South Dakota,vote,1,Democrats,33.7
 2019.12.12,Tennessee,vote,1,Democrats,35.9
@@ -14467,7 +14467,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.12,Oklahoma,vote,1,3rd Party,2.2
 2019.12.12,Oregon,vote,1,3rd Party,6.8
 2019.12.12,Pennsylvania,vote,1,3rd Party,3.4
-2019.12.12,Rhode island,vote,1,3rd Party,5.0
+2019.12.12,Rhode Island,vote,1,3rd Party,5.0
 2019.12.12,South Carolina,vote,1,3rd Party,3.1
 2019.12.12,South Dakota,vote,1,3rd Party,4.2
 2019.12.12,Tennessee,vote,1,3rd Party,2.7
@@ -14527,7 +14527,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.13,Oklahoma,win,1,Trump,99.9
 2019.12.13,Oregon,win,1,Trump,12.7
 2019.12.13,Pennsylvania,win,1,Trump,40.0
-2019.12.13,Rhode island,win,1,Trump,4.5
+2019.12.13,Rhode Island,win,1,Trump,4.5
 2019.12.13,South Carolina,win,1,Trump,86.5
 2019.12.13,South Dakota,win,1,Trump,99.6
 2019.12.13,Tennessee,win,1,Trump,98.4
@@ -14584,7 +14584,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.13,Oklahoma,win,1,Democrats,0.1
 2019.12.13,Oregon,win,1,Democrats,87.3
 2019.12.13,Pennsylvania,win,1,Democrats,60.0
-2019.12.13,Rhode island,win,1,Democrats,95.5
+2019.12.13,Rhode Island,win,1,Democrats,95.5
 2019.12.13,South Carolina,win,1,Democrats,13.5
 2019.12.13,South Dakota,win,1,Democrats,0.4
 2019.12.13,Tennessee,win,1,Democrats,1.6
@@ -14641,7 +14641,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.13,Oklahoma,win,1,3rd Party,0.0
 2019.12.13,Oregon,win,1,3rd Party,0.0
 2019.12.13,Pennsylvania,win,1,3rd Party,0.0
-2019.12.13,Rhode island,win,1,3rd Party,0.0
+2019.12.13,Rhode Island,win,1,3rd Party,0.0
 2019.12.13,South Carolina,win,1,3rd Party,0.0
 2019.12.13,South Dakota,win,1,3rd Party,0.0
 2019.12.13,Tennessee,win,1,3rd Party,0.0
@@ -14698,7 +14698,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.13,Oklahoma,vote,1,Trump,66.3
 2019.12.13,Oregon,vote,1,Trump,38.7
 2019.12.13,Pennsylvania,vote,1,Trump,46.8
-2019.12.13,Rhode island,vote,1,Trump,36.5
+2019.12.13,Rhode Island,vote,1,Trump,36.5
 2019.12.13,South Carolina,vote,1,Trump,55.6
 2019.12.13,South Dakota,vote,1,Trump,62.0
 2019.12.13,Tennessee,vote,1,Trump,61.3
@@ -14755,7 +14755,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.13,Oklahoma,vote,1,Democrats,31.3
 2019.12.13,Oregon,vote,1,Democrats,54.5
 2019.12.13,Pennsylvania,vote,1,Democrats,49.7
-2019.12.13,Rhode island,vote,1,Democrats,58.4
+2019.12.13,Rhode Island,vote,1,Democrats,58.4
 2019.12.13,South Carolina,vote,1,Democrats,41.2
 2019.12.13,South Dakota,vote,1,Democrats,33.7
 2019.12.13,Tennessee,vote,1,Democrats,35.9
@@ -14812,7 +14812,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.13,Oklahoma,vote,1,3rd Party,2.2
 2019.12.13,Oregon,vote,1,3rd Party,6.8
 2019.12.13,Pennsylvania,vote,1,3rd Party,3.4
-2019.12.13,Rhode island,vote,1,3rd Party,5.0
+2019.12.13,Rhode Island,vote,1,3rd Party,5.0
 2019.12.13,South Carolina,vote,1,3rd Party,3.1
 2019.12.13,South Dakota,vote,1,3rd Party,4.2
 2019.12.13,Tennessee,vote,1,3rd Party,2.7
@@ -14872,7 +14872,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.14,Oklahoma,win,1,Trump,99.9
 2019.12.14,Oregon,win,1,Trump,12.7
 2019.12.14,Pennsylvania,win,1,Trump,40.0
-2019.12.14,Rhode island,win,1,Trump,4.5
+2019.12.14,Rhode Island,win,1,Trump,4.5
 2019.12.14,South Carolina,win,1,Trump,86.5
 2019.12.14,South Dakota,win,1,Trump,99.6
 2019.12.14,Tennessee,win,1,Trump,98.4
@@ -14929,7 +14929,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.14,Oklahoma,win,1,Democrats,0.1
 2019.12.14,Oregon,win,1,Democrats,87.3
 2019.12.14,Pennsylvania,win,1,Democrats,60.0
-2019.12.14,Rhode island,win,1,Democrats,95.5
+2019.12.14,Rhode Island,win,1,Democrats,95.5
 2019.12.14,South Carolina,win,1,Democrats,13.5
 2019.12.14,South Dakota,win,1,Democrats,0.4
 2019.12.14,Tennessee,win,1,Democrats,1.6
@@ -14986,7 +14986,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.14,Oklahoma,win,1,3rd Party,0.0
 2019.12.14,Oregon,win,1,3rd Party,0.0
 2019.12.14,Pennsylvania,win,1,3rd Party,0.0
-2019.12.14,Rhode island,win,1,3rd Party,0.0
+2019.12.14,Rhode Island,win,1,3rd Party,0.0
 2019.12.14,South Carolina,win,1,3rd Party,0.0
 2019.12.14,South Dakota,win,1,3rd Party,0.0
 2019.12.14,Tennessee,win,1,3rd Party,0.0
@@ -15043,7 +15043,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.14,Oklahoma,vote,1,Trump,66.3
 2019.12.14,Oregon,vote,1,Trump,38.7
 2019.12.14,Pennsylvania,vote,1,Trump,46.8
-2019.12.14,Rhode island,vote,1,Trump,36.5
+2019.12.14,Rhode Island,vote,1,Trump,36.5
 2019.12.14,South Carolina,vote,1,Trump,55.6
 2019.12.14,South Dakota,vote,1,Trump,62.0
 2019.12.14,Tennessee,vote,1,Trump,61.3
@@ -15100,7 +15100,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.14,Oklahoma,vote,1,Democrats,31.3
 2019.12.14,Oregon,vote,1,Democrats,54.5
 2019.12.14,Pennsylvania,vote,1,Democrats,49.7
-2019.12.14,Rhode island,vote,1,Democrats,58.4
+2019.12.14,Rhode Island,vote,1,Democrats,58.4
 2019.12.14,South Carolina,vote,1,Democrats,41.2
 2019.12.14,South Dakota,vote,1,Democrats,33.7
 2019.12.14,Tennessee,vote,1,Democrats,35.9
@@ -15157,7 +15157,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.14,Oklahoma,vote,1,3rd Party,2.2
 2019.12.14,Oregon,vote,1,3rd Party,6.8
 2019.12.14,Pennsylvania,vote,1,3rd Party,3.4
-2019.12.14,Rhode island,vote,1,3rd Party,5.0
+2019.12.14,Rhode Island,vote,1,3rd Party,5.0
 2019.12.14,South Carolina,vote,1,3rd Party,3.1
 2019.12.14,South Dakota,vote,1,3rd Party,4.2
 2019.12.14,Tennessee,vote,1,3rd Party,2.7
@@ -15217,7 +15217,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.15,Oklahoma,win,1,Trump,99.9
 2019.12.15,Oregon,win,1,Trump,12.7
 2019.12.15,Pennsylvania,win,1,Trump,40.0
-2019.12.15,Rhode island,win,1,Trump,4.5
+2019.12.15,Rhode Island,win,1,Trump,4.5
 2019.12.15,South Carolina,win,1,Trump,86.5
 2019.12.15,South Dakota,win,1,Trump,99.6
 2019.12.15,Tennessee,win,1,Trump,98.4
@@ -15274,7 +15274,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.15,Oklahoma,win,1,Democrats,0.1
 2019.12.15,Oregon,win,1,Democrats,87.3
 2019.12.15,Pennsylvania,win,1,Democrats,60.0
-2019.12.15,Rhode island,win,1,Democrats,95.5
+2019.12.15,Rhode Island,win,1,Democrats,95.5
 2019.12.15,South Carolina,win,1,Democrats,13.5
 2019.12.15,South Dakota,win,1,Democrats,0.4
 2019.12.15,Tennessee,win,1,Democrats,1.6
@@ -15331,7 +15331,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.15,Oklahoma,win,1,3rd Party,0.0
 2019.12.15,Oregon,win,1,3rd Party,0.0
 2019.12.15,Pennsylvania,win,1,3rd Party,0.0
-2019.12.15,Rhode island,win,1,3rd Party,0.0
+2019.12.15,Rhode Island,win,1,3rd Party,0.0
 2019.12.15,South Carolina,win,1,3rd Party,0.0
 2019.12.15,South Dakota,win,1,3rd Party,0.0
 2019.12.15,Tennessee,win,1,3rd Party,0.0
@@ -15388,7 +15388,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.15,Oklahoma,vote,1,Trump,66.3
 2019.12.15,Oregon,vote,1,Trump,38.7
 2019.12.15,Pennsylvania,vote,1,Trump,46.8
-2019.12.15,Rhode island,vote,1,Trump,36.5
+2019.12.15,Rhode Island,vote,1,Trump,36.5
 2019.12.15,South Carolina,vote,1,Trump,55.6
 2019.12.15,South Dakota,vote,1,Trump,62.0
 2019.12.15,Tennessee,vote,1,Trump,61.3
@@ -15445,7 +15445,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.15,Oklahoma,vote,1,Democrats,31.3
 2019.12.15,Oregon,vote,1,Democrats,54.5
 2019.12.15,Pennsylvania,vote,1,Democrats,49.7
-2019.12.15,Rhode island,vote,1,Democrats,58.4
+2019.12.15,Rhode Island,vote,1,Democrats,58.4
 2019.12.15,South Carolina,vote,1,Democrats,41.2
 2019.12.15,South Dakota,vote,1,Democrats,33.7
 2019.12.15,Tennessee,vote,1,Democrats,35.9
@@ -15502,7 +15502,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.15,Oklahoma,vote,1,3rd Party,2.2
 2019.12.15,Oregon,vote,1,3rd Party,6.8
 2019.12.15,Pennsylvania,vote,1,3rd Party,3.4
-2019.12.15,Rhode island,vote,1,3rd Party,5.0
+2019.12.15,Rhode Island,vote,1,3rd Party,5.0
 2019.12.15,South Carolina,vote,1,3rd Party,3.1
 2019.12.15,South Dakota,vote,1,3rd Party,4.2
 2019.12.15,Tennessee,vote,1,3rd Party,2.7
@@ -15562,7 +15562,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.16,Oklahoma,win,1,Trump,99.9
 2019.12.16,Oregon,win,1,Trump,13.0
 2019.12.16,Pennsylvania,win,1,Trump,40.6
-2019.12.16,Rhode island,win,1,Trump,4.6
+2019.12.16,Rhode Island,win,1,Trump,4.6
 2019.12.16,South Carolina,win,1,Trump,86.8
 2019.12.16,South Dakota,win,1,Trump,99.6
 2019.12.16,Tennessee,win,1,Trump,98.5
@@ -15619,7 +15619,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.16,Oklahoma,win,1,Democrats,0.1
 2019.12.16,Oregon,win,1,Democrats,87.0
 2019.12.16,Pennsylvania,win,1,Democrats,59.4
-2019.12.16,Rhode island,win,1,Democrats,95.4
+2019.12.16,Rhode Island,win,1,Democrats,95.4
 2019.12.16,South Carolina,win,1,Democrats,13.2
 2019.12.16,South Dakota,win,1,Democrats,0.4
 2019.12.16,Tennessee,win,1,Democrats,1.5
@@ -15676,7 +15676,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.16,Oklahoma,win,1,3rd Party,0.0
 2019.12.16,Oregon,win,1,3rd Party,0.0
 2019.12.16,Pennsylvania,win,1,3rd Party,0.0
-2019.12.16,Rhode island,win,1,3rd Party,0.0
+2019.12.16,Rhode Island,win,1,3rd Party,0.0
 2019.12.16,South Carolina,win,1,3rd Party,0.0
 2019.12.16,South Dakota,win,1,3rd Party,0.0
 2019.12.16,Tennessee,win,1,3rd Party,0.0
@@ -15733,7 +15733,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.16,Oklahoma,vote,1,Trump,66.4
 2019.12.16,Oregon,vote,1,Trump,38.7
 2019.12.16,Pennsylvania,vote,1,Trump,46.9
-2019.12.16,Rhode island,vote,1,Trump,36.5
+2019.12.16,Rhode Island,vote,1,Trump,36.5
 2019.12.16,South Carolina,vote,1,Trump,55.7
 2019.12.16,South Dakota,vote,1,Trump,62.1
 2019.12.16,Tennessee,vote,1,Trump,61.4
@@ -15790,7 +15790,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.16,Oklahoma,vote,1,Democrats,31.3
 2019.12.16,Oregon,vote,1,Democrats,54.4
 2019.12.16,Pennsylvania,vote,1,Democrats,49.6
-2019.12.16,Rhode island,vote,1,Democrats,58.4
+2019.12.16,Rhode Island,vote,1,Democrats,58.4
 2019.12.16,South Carolina,vote,1,Democrats,41.1
 2019.12.16,South Dakota,vote,1,Democrats,33.6
 2019.12.16,Tennessee,vote,1,Democrats,35.8
@@ -15847,7 +15847,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.16,Oklahoma,vote,1,3rd Party,2.2
 2019.12.16,Oregon,vote,1,3rd Party,6.8
 2019.12.16,Pennsylvania,vote,1,3rd Party,3.4
-2019.12.16,Rhode island,vote,1,3rd Party,5.0
+2019.12.16,Rhode Island,vote,1,3rd Party,5.0
 2019.12.16,South Carolina,vote,1,3rd Party,3.1
 2019.12.16,South Dakota,vote,1,3rd Party,4.2
 2019.12.16,Tennessee,vote,1,3rd Party,2.7
@@ -15907,7 +15907,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.17,Oklahoma,win,1,Trump,99.9
 2019.12.17,Oregon,win,1,Trump,14.0
 2019.12.17,Pennsylvania,win,1,Trump,43.1
-2019.12.17,Rhode island,win,1,Trump,5.3
+2019.12.17,Rhode Island,win,1,Trump,5.3
 2019.12.17,South Carolina,win,1,Trump,87.9
 2019.12.17,South Dakota,win,1,Trump,99.7
 2019.12.17,Tennessee,win,1,Trump,98.8
@@ -15964,7 +15964,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.17,Oklahoma,win,1,Democrats,0.1
 2019.12.17,Oregon,win,1,Democrats,86.0
 2019.12.17,Pennsylvania,win,1,Democrats,56.9
-2019.12.17,Rhode island,win,1,Democrats,94.7
+2019.12.17,Rhode Island,win,1,Democrats,94.7
 2019.12.17,South Carolina,win,1,Democrats,12.1
 2019.12.17,South Dakota,win,1,Democrats,0.3
 2019.12.17,Tennessee,win,1,Democrats,1.2
@@ -16021,7 +16021,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.17,Oklahoma,win,1,3rd Party,0.0
 2019.12.17,Oregon,win,1,3rd Party,0.0
 2019.12.17,Pennsylvania,win,1,3rd Party,0.0
-2019.12.17,Rhode island,win,1,3rd Party,0.0
+2019.12.17,Rhode Island,win,1,3rd Party,0.0
 2019.12.17,South Carolina,win,1,3rd Party,0.0
 2019.12.17,South Dakota,win,1,3rd Party,0.0
 2019.12.17,Tennessee,win,1,3rd Party,0.0
@@ -16078,7 +16078,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.17,Oklahoma,vote,1,Trump,66.6
 2019.12.17,Oregon,vote,1,Trump,39.0
 2019.12.17,Pennsylvania,vote,1,Trump,47.3
-2019.12.17,Rhode island,vote,1,Trump,36.8
+2019.12.17,Rhode Island,vote,1,Trump,36.8
 2019.12.17,South Carolina,vote,1,Trump,56.0
 2019.12.17,South Dakota,vote,1,Trump,62.3
 2019.12.17,Tennessee,vote,1,Trump,61.7
@@ -16135,7 +16135,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.17,Oklahoma,vote,1,Democrats,31.0
 2019.12.17,Oregon,vote,1,Democrats,54.2
 2019.12.17,Pennsylvania,vote,1,Democrats,49.2
-2019.12.17,Rhode island,vote,1,Democrats,58.1
+2019.12.17,Rhode Island,vote,1,Democrats,58.1
 2019.12.17,South Carolina,vote,1,Democrats,40.8
 2019.12.17,South Dakota,vote,1,Democrats,33.4
 2019.12.17,Tennessee,vote,1,Democrats,35.5
@@ -16192,7 +16192,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.17,Oklahoma,vote,1,3rd Party,2.2
 2019.12.17,Oregon,vote,1,3rd Party,6.8
 2019.12.17,Pennsylvania,vote,1,3rd Party,3.4
-2019.12.17,Rhode island,vote,1,3rd Party,5.0
+2019.12.17,Rhode Island,vote,1,3rd Party,5.0
 2019.12.17,South Carolina,vote,1,3rd Party,3.1
 2019.12.17,South Dakota,vote,1,3rd Party,4.2
 2019.12.17,Tennessee,vote,1,3rd Party,2.7
@@ -16252,7 +16252,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.18,Oklahoma,win,1,Trump,99.9
 2019.12.18,Oregon,win,1,Trump,13.9
 2019.12.18,Pennsylvania,win,1,Trump,43.5
-2019.12.18,Rhode island,win,1,Trump,5.2
+2019.12.18,Rhode Island,win,1,Trump,5.2
 2019.12.18,South Carolina,win,1,Trump,87.9
 2019.12.18,South Dakota,win,1,Trump,99.7
 2019.12.18,Tennessee,win,1,Trump,98.7
@@ -16309,7 +16309,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.18,Oklahoma,win,1,Democrats,0.1
 2019.12.18,Oregon,win,1,Democrats,86.1
 2019.12.18,Pennsylvania,win,1,Democrats,56.5
-2019.12.18,Rhode island,win,1,Democrats,94.8
+2019.12.18,Rhode Island,win,1,Democrats,94.8
 2019.12.18,South Carolina,win,1,Democrats,12.1
 2019.12.18,South Dakota,win,1,Democrats,0.3
 2019.12.18,Tennessee,win,1,Democrats,1.3
@@ -16366,7 +16366,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.18,Oklahoma,win,1,3rd Party,0.0
 2019.12.18,Oregon,win,1,3rd Party,0.0
 2019.12.18,Pennsylvania,win,1,3rd Party,0.0
-2019.12.18,Rhode island,win,1,3rd Party,0.0
+2019.12.18,Rhode Island,win,1,3rd Party,0.0
 2019.12.18,South Carolina,win,1,3rd Party,0.0
 2019.12.18,South Dakota,win,1,3rd Party,0.0
 2019.12.18,Tennessee,win,1,3rd Party,0.0
@@ -16423,7 +16423,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.18,Oklahoma,vote,1,Trump,66.6
 2019.12.18,Oregon,vote,1,Trump,39.0
 2019.12.18,Pennsylvania,vote,1,Trump,47.3
-2019.12.18,Rhode island,vote,1,Trump,36.8
+2019.12.18,Rhode Island,vote,1,Trump,36.8
 2019.12.18,South Carolina,vote,1,Trump,56.0
 2019.12.18,South Dakota,vote,1,Trump,62.3
 2019.12.18,Tennessee,vote,1,Trump,61.6
@@ -16480,7 +16480,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.18,Oklahoma,vote,1,Democrats,31.1
 2019.12.18,Oregon,vote,1,Democrats,54.2
 2019.12.18,Pennsylvania,vote,1,Democrats,49.2
-2019.12.18,Rhode island,vote,1,Democrats,58.1
+2019.12.18,Rhode Island,vote,1,Democrats,58.1
 2019.12.18,South Carolina,vote,1,Democrats,40.8
 2019.12.18,South Dakota,vote,1,Democrats,33.4
 2019.12.18,Tennessee,vote,1,Democrats,35.6
@@ -16537,7 +16537,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.18,Oklahoma,vote,1,3rd Party,2.2
 2019.12.18,Oregon,vote,1,3rd Party,6.8
 2019.12.18,Pennsylvania,vote,1,3rd Party,3.4
-2019.12.18,Rhode island,vote,1,3rd Party,5.0
+2019.12.18,Rhode Island,vote,1,3rd Party,5.0
 2019.12.18,South Carolina,vote,1,3rd Party,3.1
 2019.12.18,South Dakota,vote,1,3rd Party,4.2
 2019.12.18,Tennessee,vote,1,3rd Party,2.7
@@ -16597,7 +16597,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.19,Oklahoma,win,1,Trump,99.9
 2019.12.19,Oregon,win,1,Trump,13.9
 2019.12.19,Pennsylvania,win,1,Trump,43.5
-2019.12.19,Rhode island,win,1,Trump,5.2
+2019.12.19,Rhode Island,win,1,Trump,5.2
 2019.12.19,South Carolina,win,1,Trump,87.9
 2019.12.19,South Dakota,win,1,Trump,99.7
 2019.12.19,Tennessee,win,1,Trump,98.7
@@ -16654,7 +16654,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.19,Oklahoma,win,1,Democrats,0.1
 2019.12.19,Oregon,win,1,Democrats,86.1
 2019.12.19,Pennsylvania,win,1,Democrats,56.5
-2019.12.19,Rhode island,win,1,Democrats,94.8
+2019.12.19,Rhode Island,win,1,Democrats,94.8
 2019.12.19,South Carolina,win,1,Democrats,12.1
 2019.12.19,South Dakota,win,1,Democrats,0.3
 2019.12.19,Tennessee,win,1,Democrats,1.3
@@ -16711,7 +16711,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.19,Oklahoma,win,1,3rd Party,0.0
 2019.12.19,Oregon,win,1,3rd Party,0.0
 2019.12.19,Pennsylvania,win,1,3rd Party,0.0
-2019.12.19,Rhode island,win,1,3rd Party,0.0
+2019.12.19,Rhode Island,win,1,3rd Party,0.0
 2019.12.19,South Carolina,win,1,3rd Party,0.0
 2019.12.19,South Dakota,win,1,3rd Party,0.0
 2019.12.19,Tennessee,win,1,3rd Party,0.0
@@ -16768,7 +16768,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.19,Oklahoma,vote,1,Trump,66.6
 2019.12.19,Oregon,vote,1,Trump,39.0
 2019.12.19,Pennsylvania,vote,1,Trump,47.3
-2019.12.19,Rhode island,vote,1,Trump,36.8
+2019.12.19,Rhode Island,vote,1,Trump,36.8
 2019.12.19,South Carolina,vote,1,Trump,56.0
 2019.12.19,South Dakota,vote,1,Trump,62.3
 2019.12.19,Tennessee,vote,1,Trump,61.6
@@ -16825,7 +16825,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.19,Oklahoma,vote,1,Democrats,31.1
 2019.12.19,Oregon,vote,1,Democrats,54.2
 2019.12.19,Pennsylvania,vote,1,Democrats,49.2
-2019.12.19,Rhode island,vote,1,Democrats,58.1
+2019.12.19,Rhode Island,vote,1,Democrats,58.1
 2019.12.19,South Carolina,vote,1,Democrats,40.8
 2019.12.19,South Dakota,vote,1,Democrats,33.4
 2019.12.19,Tennessee,vote,1,Democrats,35.6
@@ -16882,7 +16882,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.19,Oklahoma,vote,1,3rd Party,2.2
 2019.12.19,Oregon,vote,1,3rd Party,6.8
 2019.12.19,Pennsylvania,vote,1,3rd Party,3.4
-2019.12.19,Rhode island,vote,1,3rd Party,5.0
+2019.12.19,Rhode Island,vote,1,3rd Party,5.0
 2019.12.19,South Carolina,vote,1,3rd Party,3.1
 2019.12.19,South Dakota,vote,1,3rd Party,4.2
 2019.12.19,Tennessee,vote,1,3rd Party,2.7
@@ -16942,7 +16942,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.20,Oklahoma,win,1,Trump,99.9
 2019.12.20,Oregon,win,1,Trump,13.9
 2019.12.20,Pennsylvania,win,1,Trump,43.5
-2019.12.20,Rhode island,win,1,Trump,5.3
+2019.12.20,Rhode Island,win,1,Trump,5.3
 2019.12.20,South Carolina,win,1,Trump,87.9
 2019.12.20,South Dakota,win,1,Trump,99.7
 2019.12.20,Tennessee,win,1,Trump,98.8
@@ -16999,7 +16999,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.20,Oklahoma,win,1,Democrats,0.1
 2019.12.20,Oregon,win,1,Democrats,86.1
 2019.12.20,Pennsylvania,win,1,Democrats,56.5
-2019.12.20,Rhode island,win,1,Democrats,94.7
+2019.12.20,Rhode Island,win,1,Democrats,94.7
 2019.12.20,South Carolina,win,1,Democrats,12.1
 2019.12.20,South Dakota,win,1,Democrats,0.3
 2019.12.20,Tennessee,win,1,Democrats,1.2
@@ -17056,7 +17056,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.20,Oklahoma,win,1,3rd Party,0.0
 2019.12.20,Oregon,win,1,3rd Party,0.0
 2019.12.20,Pennsylvania,win,1,3rd Party,0.0
-2019.12.20,Rhode island,win,1,3rd Party,0.0
+2019.12.20,Rhode Island,win,1,3rd Party,0.0
 2019.12.20,South Carolina,win,1,3rd Party,0.0
 2019.12.20,South Dakota,win,1,3rd Party,0.0
 2019.12.20,Tennessee,win,1,3rd Party,0.0
@@ -17113,7 +17113,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.20,Oklahoma,vote,1,Trump,66.6
 2019.12.20,Oregon,vote,1,Trump,39.0
 2019.12.20,Pennsylvania,vote,1,Trump,47.3
-2019.12.20,Rhode island,vote,1,Trump,36.8
+2019.12.20,Rhode Island,vote,1,Trump,36.8
 2019.12.20,South Carolina,vote,1,Trump,56.0
 2019.12.20,South Dakota,vote,1,Trump,62.3
 2019.12.20,Tennessee,vote,1,Trump,61.6
@@ -17170,7 +17170,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.20,Oklahoma,vote,1,Democrats,31.1
 2019.12.20,Oregon,vote,1,Democrats,54.2
 2019.12.20,Pennsylvania,vote,1,Democrats,49.2
-2019.12.20,Rhode island,vote,1,Democrats,58.1
+2019.12.20,Rhode Island,vote,1,Democrats,58.1
 2019.12.20,South Carolina,vote,1,Democrats,40.8
 2019.12.20,South Dakota,vote,1,Democrats,33.4
 2019.12.20,Tennessee,vote,1,Democrats,35.6
@@ -17227,7 +17227,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.20,Oklahoma,vote,1,3rd Party,2.2
 2019.12.20,Oregon,vote,1,3rd Party,6.8
 2019.12.20,Pennsylvania,vote,1,3rd Party,3.4
-2019.12.20,Rhode island,vote,1,3rd Party,5.0
+2019.12.20,Rhode Island,vote,1,3rd Party,5.0
 2019.12.20,South Carolina,vote,1,3rd Party,3.1
 2019.12.20,South Dakota,vote,1,3rd Party,4.2
 2019.12.20,Tennessee,vote,1,3rd Party,2.7
@@ -17287,7 +17287,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.21,Oklahoma,win,1,Trump,99.9
 2019.12.21,Oregon,win,1,Trump,14.2
 2019.12.21,Pennsylvania,win,1,Trump,44.0
-2019.12.21,Rhode island,win,1,Trump,5.5
+2019.12.21,Rhode Island,win,1,Trump,5.5
 2019.12.21,South Carolina,win,1,Trump,88.1
 2019.12.21,South Dakota,win,1,Trump,99.7
 2019.12.21,Tennessee,win,1,Trump,98.8
@@ -17344,7 +17344,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.21,Oklahoma,win,1,Democrats,0.1
 2019.12.21,Oregon,win,1,Democrats,85.8
 2019.12.21,Pennsylvania,win,1,Democrats,56.0
-2019.12.21,Rhode island,win,1,Democrats,94.5
+2019.12.21,Rhode Island,win,1,Democrats,94.5
 2019.12.21,South Carolina,win,1,Democrats,11.9
 2019.12.21,South Dakota,win,1,Democrats,0.3
 2019.12.21,Tennessee,win,1,Democrats,1.2
@@ -17401,7 +17401,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.21,Oklahoma,win,1,3rd Party,0.0
 2019.12.21,Oregon,win,1,3rd Party,0.0
 2019.12.21,Pennsylvania,win,1,3rd Party,0.0
-2019.12.21,Rhode island,win,1,3rd Party,0.0
+2019.12.21,Rhode Island,win,1,3rd Party,0.0
 2019.12.21,South Carolina,win,1,3rd Party,0.0
 2019.12.21,South Dakota,win,1,3rd Party,0.0
 2019.12.21,Tennessee,win,1,3rd Party,0.0
@@ -17458,7 +17458,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.21,Oklahoma,vote,1,Trump,66.7
 2019.12.21,Oregon,vote,1,Trump,39.0
 2019.12.21,Pennsylvania,vote,1,Trump,47.4
-2019.12.21,Rhode island,vote,1,Trump,37.0
+2019.12.21,Rhode Island,vote,1,Trump,37.0
 2019.12.21,South Carolina,vote,1,Trump,56.0
 2019.12.21,South Dakota,vote,1,Trump,62.4
 2019.12.21,Tennessee,vote,1,Trump,61.7
@@ -17515,7 +17515,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.21,Oklahoma,vote,1,Democrats,31.0
 2019.12.21,Oregon,vote,1,Democrats,54.1
 2019.12.21,Pennsylvania,vote,1,Democrats,49.1
-2019.12.21,Rhode island,vote,1,Democrats,57.9
+2019.12.21,Rhode Island,vote,1,Democrats,57.9
 2019.12.21,South Carolina,vote,1,Democrats,40.8
 2019.12.21,South Dakota,vote,1,Democrats,33.3
 2019.12.21,Tennessee,vote,1,Democrats,35.5
@@ -17572,7 +17572,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.21,Oklahoma,vote,1,3rd Party,2.2
 2019.12.21,Oregon,vote,1,3rd Party,6.8
 2019.12.21,Pennsylvania,vote,1,3rd Party,3.4
-2019.12.21,Rhode island,vote,1,3rd Party,5.0
+2019.12.21,Rhode Island,vote,1,3rd Party,5.0
 2019.12.21,South Carolina,vote,1,3rd Party,3.1
 2019.12.21,South Dakota,vote,1,3rd Party,4.2
 2019.12.21,Tennessee,vote,1,3rd Party,2.7
@@ -17632,7 +17632,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.22,Oklahoma,win,1,Trump,99.9
 2019.12.22,Oregon,win,1,Trump,14.2
 2019.12.22,Pennsylvania,win,1,Trump,44.0
-2019.12.22,Rhode island,win,1,Trump,5.5
+2019.12.22,Rhode Island,win,1,Trump,5.5
 2019.12.22,South Carolina,win,1,Trump,88.1
 2019.12.22,South Dakota,win,1,Trump,99.7
 2019.12.22,Tennessee,win,1,Trump,98.8
@@ -17689,7 +17689,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.22,Oklahoma,win,1,Democrats,0.1
 2019.12.22,Oregon,win,1,Democrats,85.8
 2019.12.22,Pennsylvania,win,1,Democrats,56.0
-2019.12.22,Rhode island,win,1,Democrats,94.5
+2019.12.22,Rhode Island,win,1,Democrats,94.5
 2019.12.22,South Carolina,win,1,Democrats,11.9
 2019.12.22,South Dakota,win,1,Democrats,0.3
 2019.12.22,Tennessee,win,1,Democrats,1.2
@@ -17746,7 +17746,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.22,Oklahoma,win,1,3rd Party,0.0
 2019.12.22,Oregon,win,1,3rd Party,0.0
 2019.12.22,Pennsylvania,win,1,3rd Party,0.0
-2019.12.22,Rhode island,win,1,3rd Party,0.0
+2019.12.22,Rhode Island,win,1,3rd Party,0.0
 2019.12.22,South Carolina,win,1,3rd Party,0.0
 2019.12.22,South Dakota,win,1,3rd Party,0.0
 2019.12.22,Tennessee,win,1,3rd Party,0.0
@@ -17803,7 +17803,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.22,Oklahoma,vote,1,Trump,66.7
 2019.12.22,Oregon,vote,1,Trump,39.0
 2019.12.22,Pennsylvania,vote,1,Trump,47.4
-2019.12.22,Rhode island,vote,1,Trump,37.0
+2019.12.22,Rhode Island,vote,1,Trump,37.0
 2019.12.22,South Carolina,vote,1,Trump,56.0
 2019.12.22,South Dakota,vote,1,Trump,62.4
 2019.12.22,Tennessee,vote,1,Trump,61.7
@@ -17860,7 +17860,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.22,Oklahoma,vote,1,Democrats,31.0
 2019.12.22,Oregon,vote,1,Democrats,54.1
 2019.12.22,Pennsylvania,vote,1,Democrats,49.1
-2019.12.22,Rhode island,vote,1,Democrats,57.9
+2019.12.22,Rhode Island,vote,1,Democrats,57.9
 2019.12.22,South Carolina,vote,1,Democrats,40.8
 2019.12.22,South Dakota,vote,1,Democrats,33.3
 2019.12.22,Tennessee,vote,1,Democrats,35.5
@@ -17917,7 +17917,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.22,Oklahoma,vote,1,3rd Party,2.2
 2019.12.22,Oregon,vote,1,3rd Party,6.8
 2019.12.22,Pennsylvania,vote,1,3rd Party,3.4
-2019.12.22,Rhode island,vote,1,3rd Party,5.0
+2019.12.22,Rhode Island,vote,1,3rd Party,5.0
 2019.12.22,South Carolina,vote,1,3rd Party,3.1
 2019.12.22,South Dakota,vote,1,3rd Party,4.2
 2019.12.22,Tennessee,vote,1,3rd Party,2.7
@@ -17977,7 +17977,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.23,Oklahoma,win,1,Trump,99.9
 2019.12.23,Oregon,win,1,Trump,14.2
 2019.12.23,Pennsylvania,win,1,Trump,44.0
-2019.12.23,Rhode island,win,1,Trump,5.5
+2019.12.23,Rhode Island,win,1,Trump,5.5
 2019.12.23,South Carolina,win,1,Trump,88.1
 2019.12.23,South Dakota,win,1,Trump,99.7
 2019.12.23,Tennessee,win,1,Trump,98.8
@@ -18034,7 +18034,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.23,Oklahoma,win,1,Democrats,0.1
 2019.12.23,Oregon,win,1,Democrats,85.8
 2019.12.23,Pennsylvania,win,1,Democrats,56.0
-2019.12.23,Rhode island,win,1,Democrats,94.5
+2019.12.23,Rhode Island,win,1,Democrats,94.5
 2019.12.23,South Carolina,win,1,Democrats,11.9
 2019.12.23,South Dakota,win,1,Democrats,0.3
 2019.12.23,Tennessee,win,1,Democrats,1.2
@@ -18091,7 +18091,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.23,Oklahoma,win,1,3rd Party,0.0
 2019.12.23,Oregon,win,1,3rd Party,0.0
 2019.12.23,Pennsylvania,win,1,3rd Party,0.0
-2019.12.23,Rhode island,win,1,3rd Party,0.0
+2019.12.23,Rhode Island,win,1,3rd Party,0.0
 2019.12.23,South Carolina,win,1,3rd Party,0.0
 2019.12.23,South Dakota,win,1,3rd Party,0.0
 2019.12.23,Tennessee,win,1,3rd Party,0.0
@@ -18148,7 +18148,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.23,Oklahoma,vote,1,Trump,66.7
 2019.12.23,Oregon,vote,1,Trump,39.0
 2019.12.23,Pennsylvania,vote,1,Trump,47.4
-2019.12.23,Rhode island,vote,1,Trump,37.0
+2019.12.23,Rhode Island,vote,1,Trump,37.0
 2019.12.23,South Carolina,vote,1,Trump,56.0
 2019.12.23,South Dakota,vote,1,Trump,62.4
 2019.12.23,Tennessee,vote,1,Trump,61.7
@@ -18205,7 +18205,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.23,Oklahoma,vote,1,Democrats,31.0
 2019.12.23,Oregon,vote,1,Democrats,54.1
 2019.12.23,Pennsylvania,vote,1,Democrats,49.1
-2019.12.23,Rhode island,vote,1,Democrats,57.9
+2019.12.23,Rhode Island,vote,1,Democrats,57.9
 2019.12.23,South Carolina,vote,1,Democrats,40.8
 2019.12.23,South Dakota,vote,1,Democrats,33.3
 2019.12.23,Tennessee,vote,1,Democrats,35.5
@@ -18262,7 +18262,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.23,Oklahoma,vote,1,3rd Party,2.2
 2019.12.23,Oregon,vote,1,3rd Party,6.8
 2019.12.23,Pennsylvania,vote,1,3rd Party,3.4
-2019.12.23,Rhode island,vote,1,3rd Party,5.0
+2019.12.23,Rhode Island,vote,1,3rd Party,5.0
 2019.12.23,South Carolina,vote,1,3rd Party,3.1
 2019.12.23,South Dakota,vote,1,3rd Party,4.2
 2019.12.23,Tennessee,vote,1,3rd Party,2.7
@@ -18322,7 +18322,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.24,Oklahoma,win,1,Trump,99.9
 2019.12.24,Oregon,win,1,Trump,14.2
 2019.12.24,Pennsylvania,win,1,Trump,44.0
-2019.12.24,Rhode island,win,1,Trump,5.5
+2019.12.24,Rhode Island,win,1,Trump,5.5
 2019.12.24,South Carolina,win,1,Trump,88.1
 2019.12.24,South Dakota,win,1,Trump,99.7
 2019.12.24,Tennessee,win,1,Trump,98.8
@@ -18379,7 +18379,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.24,Oklahoma,win,1,Democrats,0.1
 2019.12.24,Oregon,win,1,Democrats,85.8
 2019.12.24,Pennsylvania,win,1,Democrats,56.0
-2019.12.24,Rhode island,win,1,Democrats,94.5
+2019.12.24,Rhode Island,win,1,Democrats,94.5
 2019.12.24,South Carolina,win,1,Democrats,11.9
 2019.12.24,South Dakota,win,1,Democrats,0.3
 2019.12.24,Tennessee,win,1,Democrats,1.2
@@ -18436,7 +18436,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.24,Oklahoma,win,1,3rd Party,0.0
 2019.12.24,Oregon,win,1,3rd Party,0.0
 2019.12.24,Pennsylvania,win,1,3rd Party,0.0
-2019.12.24,Rhode island,win,1,3rd Party,0.0
+2019.12.24,Rhode Island,win,1,3rd Party,0.0
 2019.12.24,South Carolina,win,1,3rd Party,0.0
 2019.12.24,South Dakota,win,1,3rd Party,0.0
 2019.12.24,Tennessee,win,1,3rd Party,0.0
@@ -18493,7 +18493,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.24,Oklahoma,vote,1,Trump,66.7
 2019.12.24,Oregon,vote,1,Trump,39.0
 2019.12.24,Pennsylvania,vote,1,Trump,47.4
-2019.12.24,Rhode island,vote,1,Trump,37.0
+2019.12.24,Rhode Island,vote,1,Trump,37.0
 2019.12.24,South Carolina,vote,1,Trump,56.0
 2019.12.24,South Dakota,vote,1,Trump,62.4
 2019.12.24,Tennessee,vote,1,Trump,61.7
@@ -18550,7 +18550,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.24,Oklahoma,vote,1,Democrats,31.0
 2019.12.24,Oregon,vote,1,Democrats,54.1
 2019.12.24,Pennsylvania,vote,1,Democrats,49.1
-2019.12.24,Rhode island,vote,1,Democrats,57.9
+2019.12.24,Rhode Island,vote,1,Democrats,57.9
 2019.12.24,South Carolina,vote,1,Democrats,40.8
 2019.12.24,South Dakota,vote,1,Democrats,33.3
 2019.12.24,Tennessee,vote,1,Democrats,35.5
@@ -18607,7 +18607,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.24,Oklahoma,vote,1,3rd Party,2.2
 2019.12.24,Oregon,vote,1,3rd Party,6.8
 2019.12.24,Pennsylvania,vote,1,3rd Party,3.4
-2019.12.24,Rhode island,vote,1,3rd Party,5.0
+2019.12.24,Rhode Island,vote,1,3rd Party,5.0
 2019.12.24,South Carolina,vote,1,3rd Party,3.1
 2019.12.24,South Dakota,vote,1,3rd Party,4.2
 2019.12.24,Tennessee,vote,1,3rd Party,2.7
@@ -18667,7 +18667,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.25,Oklahoma,win,1,Trump,99.9
 2019.12.25,Oregon,win,1,Trump,14.2
 2019.12.25,Pennsylvania,win,1,Trump,44.0
-2019.12.25,Rhode island,win,1,Trump,5.5
+2019.12.25,Rhode Island,win,1,Trump,5.5
 2019.12.25,South Carolina,win,1,Trump,88.1
 2019.12.25,South Dakota,win,1,Trump,99.7
 2019.12.25,Tennessee,win,1,Trump,98.8
@@ -18724,7 +18724,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.25,Oklahoma,win,1,Democrats,0.1
 2019.12.25,Oregon,win,1,Democrats,85.8
 2019.12.25,Pennsylvania,win,1,Democrats,56.0
-2019.12.25,Rhode island,win,1,Democrats,94.5
+2019.12.25,Rhode Island,win,1,Democrats,94.5
 2019.12.25,South Carolina,win,1,Democrats,11.9
 2019.12.25,South Dakota,win,1,Democrats,0.3
 2019.12.25,Tennessee,win,1,Democrats,1.2
@@ -18781,7 +18781,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.25,Oklahoma,win,1,3rd Party,0.0
 2019.12.25,Oregon,win,1,3rd Party,0.0
 2019.12.25,Pennsylvania,win,1,3rd Party,0.0
-2019.12.25,Rhode island,win,1,3rd Party,0.0
+2019.12.25,Rhode Island,win,1,3rd Party,0.0
 2019.12.25,South Carolina,win,1,3rd Party,0.0
 2019.12.25,South Dakota,win,1,3rd Party,0.0
 2019.12.25,Tennessee,win,1,3rd Party,0.0
@@ -18838,7 +18838,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.25,Oklahoma,vote,1,Trump,66.7
 2019.12.25,Oregon,vote,1,Trump,39.0
 2019.12.25,Pennsylvania,vote,1,Trump,47.4
-2019.12.25,Rhode island,vote,1,Trump,37.0
+2019.12.25,Rhode Island,vote,1,Trump,37.0
 2019.12.25,South Carolina,vote,1,Trump,56.0
 2019.12.25,South Dakota,vote,1,Trump,62.4
 2019.12.25,Tennessee,vote,1,Trump,61.7
@@ -18895,7 +18895,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.25,Oklahoma,vote,1,Democrats,31.0
 2019.12.25,Oregon,vote,1,Democrats,54.1
 2019.12.25,Pennsylvania,vote,1,Democrats,49.1
-2019.12.25,Rhode island,vote,1,Democrats,57.9
+2019.12.25,Rhode Island,vote,1,Democrats,57.9
 2019.12.25,South Carolina,vote,1,Democrats,40.8
 2019.12.25,South Dakota,vote,1,Democrats,33.3
 2019.12.25,Tennessee,vote,1,Democrats,35.5
@@ -18952,7 +18952,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.25,Oklahoma,vote,1,3rd Party,2.2
 2019.12.25,Oregon,vote,1,3rd Party,6.8
 2019.12.25,Pennsylvania,vote,1,3rd Party,3.4
-2019.12.25,Rhode island,vote,1,3rd Party,5.0
+2019.12.25,Rhode Island,vote,1,3rd Party,5.0
 2019.12.25,South Carolina,vote,1,3rd Party,3.1
 2019.12.25,South Dakota,vote,1,3rd Party,4.2
 2019.12.25,Tennessee,vote,1,3rd Party,2.7
@@ -19012,7 +19012,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.26,Oklahoma,win,1,Trump,99.9
 2019.12.26,Oregon,win,1,Trump,14.2
 2019.12.26,Pennsylvania,win,1,Trump,44.0
-2019.12.26,Rhode island,win,1,Trump,5.5
+2019.12.26,Rhode Island,win,1,Trump,5.5
 2019.12.26,South Carolina,win,1,Trump,88.1
 2019.12.26,South Dakota,win,1,Trump,99.7
 2019.12.26,Tennessee,win,1,Trump,98.8
@@ -19069,7 +19069,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.26,Oklahoma,win,1,Democrats,0.1
 2019.12.26,Oregon,win,1,Democrats,85.8
 2019.12.26,Pennsylvania,win,1,Democrats,56.0
-2019.12.26,Rhode island,win,1,Democrats,94.5
+2019.12.26,Rhode Island,win,1,Democrats,94.5
 2019.12.26,South Carolina,win,1,Democrats,11.9
 2019.12.26,South Dakota,win,1,Democrats,0.3
 2019.12.26,Tennessee,win,1,Democrats,1.2
@@ -19126,7 +19126,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.26,Oklahoma,win,1,3rd Party,0.0
 2019.12.26,Oregon,win,1,3rd Party,0.0
 2019.12.26,Pennsylvania,win,1,3rd Party,0.0
-2019.12.26,Rhode island,win,1,3rd Party,0.0
+2019.12.26,Rhode Island,win,1,3rd Party,0.0
 2019.12.26,South Carolina,win,1,3rd Party,0.0
 2019.12.26,South Dakota,win,1,3rd Party,0.0
 2019.12.26,Tennessee,win,1,3rd Party,0.0
@@ -19183,7 +19183,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.26,Oklahoma,vote,1,Trump,66.7
 2019.12.26,Oregon,vote,1,Trump,39.0
 2019.12.26,Pennsylvania,vote,1,Trump,47.4
-2019.12.26,Rhode island,vote,1,Trump,37.0
+2019.12.26,Rhode Island,vote,1,Trump,37.0
 2019.12.26,South Carolina,vote,1,Trump,56.0
 2019.12.26,South Dakota,vote,1,Trump,62.4
 2019.12.26,Tennessee,vote,1,Trump,61.7
@@ -19240,7 +19240,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.26,Oklahoma,vote,1,Democrats,31.0
 2019.12.26,Oregon,vote,1,Democrats,54.1
 2019.12.26,Pennsylvania,vote,1,Democrats,49.1
-2019.12.26,Rhode island,vote,1,Democrats,57.9
+2019.12.26,Rhode Island,vote,1,Democrats,57.9
 2019.12.26,South Carolina,vote,1,Democrats,40.8
 2019.12.26,South Dakota,vote,1,Democrats,33.3
 2019.12.26,Tennessee,vote,1,Democrats,35.5
@@ -19297,7 +19297,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.26,Oklahoma,vote,1,3rd Party,2.2
 2019.12.26,Oregon,vote,1,3rd Party,6.8
 2019.12.26,Pennsylvania,vote,1,3rd Party,3.4
-2019.12.26,Rhode island,vote,1,3rd Party,5.0
+2019.12.26,Rhode Island,vote,1,3rd Party,5.0
 2019.12.26,South Carolina,vote,1,3rd Party,3.1
 2019.12.26,South Dakota,vote,1,3rd Party,4.2
 2019.12.26,Tennessee,vote,1,3rd Party,2.7
@@ -19357,7 +19357,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.27,Oklahoma,win,1,Trump,99.9
 2019.12.27,Oregon,win,1,Trump,14.2
 2019.12.27,Pennsylvania,win,1,Trump,44.0
-2019.12.27,Rhode island,win,1,Trump,5.5
+2019.12.27,Rhode Island,win,1,Trump,5.5
 2019.12.27,South Carolina,win,1,Trump,88.1
 2019.12.27,South Dakota,win,1,Trump,99.7
 2019.12.27,Tennessee,win,1,Trump,98.8
@@ -19414,7 +19414,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.27,Oklahoma,win,1,Democrats,0.1
 2019.12.27,Oregon,win,1,Democrats,85.8
 2019.12.27,Pennsylvania,win,1,Democrats,56.0
-2019.12.27,Rhode island,win,1,Democrats,94.5
+2019.12.27,Rhode Island,win,1,Democrats,94.5
 2019.12.27,South Carolina,win,1,Democrats,11.9
 2019.12.27,South Dakota,win,1,Democrats,0.3
 2019.12.27,Tennessee,win,1,Democrats,1.2
@@ -19471,7 +19471,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.27,Oklahoma,win,1,3rd Party,0.0
 2019.12.27,Oregon,win,1,3rd Party,0.0
 2019.12.27,Pennsylvania,win,1,3rd Party,0.0
-2019.12.27,Rhode island,win,1,3rd Party,0.0
+2019.12.27,Rhode Island,win,1,3rd Party,0.0
 2019.12.27,South Carolina,win,1,3rd Party,0.0
 2019.12.27,South Dakota,win,1,3rd Party,0.0
 2019.12.27,Tennessee,win,1,3rd Party,0.0
@@ -19528,7 +19528,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.27,Oklahoma,vote,1,Trump,66.7
 2019.12.27,Oregon,vote,1,Trump,39.0
 2019.12.27,Pennsylvania,vote,1,Trump,47.4
-2019.12.27,Rhode island,vote,1,Trump,37.0
+2019.12.27,Rhode Island,vote,1,Trump,37.0
 2019.12.27,South Carolina,vote,1,Trump,56.0
 2019.12.27,South Dakota,vote,1,Trump,62.4
 2019.12.27,Tennessee,vote,1,Trump,61.7
@@ -19585,7 +19585,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.27,Oklahoma,vote,1,Democrats,31.0
 2019.12.27,Oregon,vote,1,Democrats,54.1
 2019.12.27,Pennsylvania,vote,1,Democrats,49.1
-2019.12.27,Rhode island,vote,1,Democrats,57.9
+2019.12.27,Rhode Island,vote,1,Democrats,57.9
 2019.12.27,South Carolina,vote,1,Democrats,40.8
 2019.12.27,South Dakota,vote,1,Democrats,33.3
 2019.12.27,Tennessee,vote,1,Democrats,35.5
@@ -19642,7 +19642,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.27,Oklahoma,vote,1,3rd Party,2.2
 2019.12.27,Oregon,vote,1,3rd Party,6.8
 2019.12.27,Pennsylvania,vote,1,3rd Party,3.4
-2019.12.27,Rhode island,vote,1,3rd Party,5.0
+2019.12.27,Rhode Island,vote,1,3rd Party,5.0
 2019.12.27,South Carolina,vote,1,3rd Party,3.1
 2019.12.27,South Dakota,vote,1,3rd Party,4.2
 2019.12.27,Tennessee,vote,1,3rd Party,2.7
@@ -19702,7 +19702,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.28,Oklahoma,win,1,Trump,99.9
 2019.12.28,Oregon,win,1,Trump,14.2
 2019.12.28,Pennsylvania,win,1,Trump,44.0
-2019.12.28,Rhode island,win,1,Trump,5.5
+2019.12.28,Rhode Island,win,1,Trump,5.5
 2019.12.28,South Carolina,win,1,Trump,88.1
 2019.12.28,South Dakota,win,1,Trump,99.7
 2019.12.28,Tennessee,win,1,Trump,98.8
@@ -19759,7 +19759,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.28,Oklahoma,win,1,Democrats,0.1
 2019.12.28,Oregon,win,1,Democrats,85.8
 2019.12.28,Pennsylvania,win,1,Democrats,56.0
-2019.12.28,Rhode island,win,1,Democrats,94.5
+2019.12.28,Rhode Island,win,1,Democrats,94.5
 2019.12.28,South Carolina,win,1,Democrats,11.9
 2019.12.28,South Dakota,win,1,Democrats,0.3
 2019.12.28,Tennessee,win,1,Democrats,1.2
@@ -19816,7 +19816,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.28,Oklahoma,win,1,3rd Party,0.0
 2019.12.28,Oregon,win,1,3rd Party,0.0
 2019.12.28,Pennsylvania,win,1,3rd Party,0.0
-2019.12.28,Rhode island,win,1,3rd Party,0.0
+2019.12.28,Rhode Island,win,1,3rd Party,0.0
 2019.12.28,South Carolina,win,1,3rd Party,0.0
 2019.12.28,South Dakota,win,1,3rd Party,0.0
 2019.12.28,Tennessee,win,1,3rd Party,0.0
@@ -19873,7 +19873,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.28,Oklahoma,vote,1,Trump,66.7
 2019.12.28,Oregon,vote,1,Trump,39.0
 2019.12.28,Pennsylvania,vote,1,Trump,47.4
-2019.12.28,Rhode island,vote,1,Trump,37.0
+2019.12.28,Rhode Island,vote,1,Trump,37.0
 2019.12.28,South Carolina,vote,1,Trump,56.0
 2019.12.28,South Dakota,vote,1,Trump,62.4
 2019.12.28,Tennessee,vote,1,Trump,61.7
@@ -19930,7 +19930,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.28,Oklahoma,vote,1,Democrats,31.0
 2019.12.28,Oregon,vote,1,Democrats,54.1
 2019.12.28,Pennsylvania,vote,1,Democrats,49.1
-2019.12.28,Rhode island,vote,1,Democrats,57.9
+2019.12.28,Rhode Island,vote,1,Democrats,57.9
 2019.12.28,South Carolina,vote,1,Democrats,40.8
 2019.12.28,South Dakota,vote,1,Democrats,33.3
 2019.12.28,Tennessee,vote,1,Democrats,35.5
@@ -19987,7 +19987,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.28,Oklahoma,vote,1,3rd Party,2.2
 2019.12.28,Oregon,vote,1,3rd Party,6.8
 2019.12.28,Pennsylvania,vote,1,3rd Party,3.4
-2019.12.28,Rhode island,vote,1,3rd Party,5.0
+2019.12.28,Rhode Island,vote,1,3rd Party,5.0
 2019.12.28,South Carolina,vote,1,3rd Party,3.1
 2019.12.28,South Dakota,vote,1,3rd Party,4.2
 2019.12.28,Tennessee,vote,1,3rd Party,2.7
@@ -20047,7 +20047,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.29,Oklahoma,win,1,Trump,99.9
 2019.12.29,Oregon,win,1,Trump,14.2
 2019.12.29,Pennsylvania,win,1,Trump,44.0
-2019.12.29,Rhode island,win,1,Trump,5.5
+2019.12.29,Rhode Island,win,1,Trump,5.5
 2019.12.29,South Carolina,win,1,Trump,88.1
 2019.12.29,South Dakota,win,1,Trump,99.7
 2019.12.29,Tennessee,win,1,Trump,98.8
@@ -20104,7 +20104,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.29,Oklahoma,win,1,Democrats,0.1
 2019.12.29,Oregon,win,1,Democrats,85.8
 2019.12.29,Pennsylvania,win,1,Democrats,56.0
-2019.12.29,Rhode island,win,1,Democrats,94.5
+2019.12.29,Rhode Island,win,1,Democrats,94.5
 2019.12.29,South Carolina,win,1,Democrats,11.9
 2019.12.29,South Dakota,win,1,Democrats,0.3
 2019.12.29,Tennessee,win,1,Democrats,1.2
@@ -20161,7 +20161,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.29,Oklahoma,win,1,3rd Party,0.0
 2019.12.29,Oregon,win,1,3rd Party,0.0
 2019.12.29,Pennsylvania,win,1,3rd Party,0.0
-2019.12.29,Rhode island,win,1,3rd Party,0.0
+2019.12.29,Rhode Island,win,1,3rd Party,0.0
 2019.12.29,South Carolina,win,1,3rd Party,0.0
 2019.12.29,South Dakota,win,1,3rd Party,0.0
 2019.12.29,Tennessee,win,1,3rd Party,0.0
@@ -20218,7 +20218,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.29,Oklahoma,vote,1,Trump,66.7
 2019.12.29,Oregon,vote,1,Trump,39.0
 2019.12.29,Pennsylvania,vote,1,Trump,47.4
-2019.12.29,Rhode island,vote,1,Trump,37.0
+2019.12.29,Rhode Island,vote,1,Trump,37.0
 2019.12.29,South Carolina,vote,1,Trump,56.0
 2019.12.29,South Dakota,vote,1,Trump,62.4
 2019.12.29,Tennessee,vote,1,Trump,61.7
@@ -20275,7 +20275,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.29,Oklahoma,vote,1,Democrats,31.0
 2019.12.29,Oregon,vote,1,Democrats,54.1
 2019.12.29,Pennsylvania,vote,1,Democrats,49.1
-2019.12.29,Rhode island,vote,1,Democrats,57.9
+2019.12.29,Rhode Island,vote,1,Democrats,57.9
 2019.12.29,South Carolina,vote,1,Democrats,40.8
 2019.12.29,South Dakota,vote,1,Democrats,33.3
 2019.12.29,Tennessee,vote,1,Democrats,35.5
@@ -20332,7 +20332,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.29,Oklahoma,vote,1,3rd Party,2.2
 2019.12.29,Oregon,vote,1,3rd Party,6.8
 2019.12.29,Pennsylvania,vote,1,3rd Party,3.4
-2019.12.29,Rhode island,vote,1,3rd Party,5.0
+2019.12.29,Rhode Island,vote,1,3rd Party,5.0
 2019.12.29,South Carolina,vote,1,3rd Party,3.1
 2019.12.29,South Dakota,vote,1,3rd Party,4.2
 2019.12.29,Tennessee,vote,1,3rd Party,2.7
@@ -20392,7 +20392,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.30,Oklahoma,win,1,Trump,99.9
 2019.12.30,Oregon,win,1,Trump,14.2
 2019.12.30,Pennsylvania,win,1,Trump,44.0
-2019.12.30,Rhode island,win,1,Trump,5.5
+2019.12.30,Rhode Island,win,1,Trump,5.5
 2019.12.30,South Carolina,win,1,Trump,88.1
 2019.12.30,South Dakota,win,1,Trump,99.7
 2019.12.30,Tennessee,win,1,Trump,98.8
@@ -20449,7 +20449,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.30,Oklahoma,win,1,Democrats,0.1
 2019.12.30,Oregon,win,1,Democrats,85.8
 2019.12.30,Pennsylvania,win,1,Democrats,56.0
-2019.12.30,Rhode island,win,1,Democrats,94.5
+2019.12.30,Rhode Island,win,1,Democrats,94.5
 2019.12.30,South Carolina,win,1,Democrats,11.9
 2019.12.30,South Dakota,win,1,Democrats,0.3
 2019.12.30,Tennessee,win,1,Democrats,1.2
@@ -20506,7 +20506,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.30,Oklahoma,win,1,3rd Party,0.0
 2019.12.30,Oregon,win,1,3rd Party,0.0
 2019.12.30,Pennsylvania,win,1,3rd Party,0.0
-2019.12.30,Rhode island,win,1,3rd Party,0.0
+2019.12.30,Rhode Island,win,1,3rd Party,0.0
 2019.12.30,South Carolina,win,1,3rd Party,0.0
 2019.12.30,South Dakota,win,1,3rd Party,0.0
 2019.12.30,Tennessee,win,1,3rd Party,0.0
@@ -20563,7 +20563,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.30,Oklahoma,vote,1,Trump,66.7
 2019.12.30,Oregon,vote,1,Trump,39.0
 2019.12.30,Pennsylvania,vote,1,Trump,47.4
-2019.12.30,Rhode island,vote,1,Trump,37.0
+2019.12.30,Rhode Island,vote,1,Trump,37.0
 2019.12.30,South Carolina,vote,1,Trump,56.0
 2019.12.30,South Dakota,vote,1,Trump,62.4
 2019.12.30,Tennessee,vote,1,Trump,61.7
@@ -20620,7 +20620,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.30,Oklahoma,vote,1,Democrats,31.0
 2019.12.30,Oregon,vote,1,Democrats,54.1
 2019.12.30,Pennsylvania,vote,1,Democrats,49.1
-2019.12.30,Rhode island,vote,1,Democrats,57.9
+2019.12.30,Rhode Island,vote,1,Democrats,57.9
 2019.12.30,South Carolina,vote,1,Democrats,40.8
 2019.12.30,South Dakota,vote,1,Democrats,33.3
 2019.12.30,Tennessee,vote,1,Democrats,35.5
@@ -20677,7 +20677,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.30,Oklahoma,vote,1,3rd Party,2.2
 2019.12.30,Oregon,vote,1,3rd Party,6.8
 2019.12.30,Pennsylvania,vote,1,3rd Party,3.4
-2019.12.30,Rhode island,vote,1,3rd Party,5.0
+2019.12.30,Rhode Island,vote,1,3rd Party,5.0
 2019.12.30,South Carolina,vote,1,3rd Party,3.1
 2019.12.30,South Dakota,vote,1,3rd Party,4.2
 2019.12.30,Tennessee,vote,1,3rd Party,2.7
@@ -20737,7 +20737,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.31,Oklahoma,win,1,Trump,99.9
 2019.12.31,Oregon,win,1,Trump,14.1
 2019.12.31,Pennsylvania,win,1,Trump,44.0
-2019.12.31,Rhode island,win,1,Trump,5.5
+2019.12.31,Rhode Island,win,1,Trump,5.5
 2019.12.31,South Carolina,win,1,Trump,88.1
 2019.12.31,South Dakota,win,1,Trump,99.7
 2019.12.31,Tennessee,win,1,Trump,98.8
@@ -20794,7 +20794,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.31,Oklahoma,win,1,Democrats,0.1
 2019.12.31,Oregon,win,1,Democrats,85.9
 2019.12.31,Pennsylvania,win,1,Democrats,56.0
-2019.12.31,Rhode island,win,1,Democrats,94.5
+2019.12.31,Rhode Island,win,1,Democrats,94.5
 2019.12.31,South Carolina,win,1,Democrats,11.9
 2019.12.31,South Dakota,win,1,Democrats,0.3
 2019.12.31,Tennessee,win,1,Democrats,1.2
@@ -20851,7 +20851,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.31,Oklahoma,win,1,3rd Party,0.0
 2019.12.31,Oregon,win,1,3rd Party,0.0
 2019.12.31,Pennsylvania,win,1,3rd Party,0.0
-2019.12.31,Rhode island,win,1,3rd Party,0.0
+2019.12.31,Rhode Island,win,1,3rd Party,0.0
 2019.12.31,South Carolina,win,1,3rd Party,0.0
 2019.12.31,South Dakota,win,1,3rd Party,0.0
 2019.12.31,Tennessee,win,1,3rd Party,0.0
@@ -20908,7 +20908,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.31,Oklahoma,vote,1,Trump,66.7
 2019.12.31,Oregon,vote,1,Trump,39.0
 2019.12.31,Pennsylvania,vote,1,Trump,47.4
-2019.12.31,Rhode island,vote,1,Trump,37.0
+2019.12.31,Rhode Island,vote,1,Trump,37.0
 2019.12.31,South Carolina,vote,1,Trump,56.0
 2019.12.31,South Dakota,vote,1,Trump,62.4
 2019.12.31,Tennessee,vote,1,Trump,61.7
@@ -20965,7 +20965,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.31,Oklahoma,vote,1,Democrats,31.0
 2019.12.31,Oregon,vote,1,Democrats,54.1
 2019.12.31,Pennsylvania,vote,1,Democrats,49.1
-2019.12.31,Rhode island,vote,1,Democrats,57.9
+2019.12.31,Rhode Island,vote,1,Democrats,57.9
 2019.12.31,South Carolina,vote,1,Democrats,40.8
 2019.12.31,South Dakota,vote,1,Democrats,33.3
 2019.12.31,Tennessee,vote,1,Democrats,35.5
@@ -21022,7 +21022,7 @@ date,state,index,dataPoint,candidate,percentage
 2019.12.31,Oklahoma,vote,1,3rd Party,2.2
 2019.12.31,Oregon,vote,1,3rd Party,6.8
 2019.12.31,Pennsylvania,vote,1,3rd Party,3.4
-2019.12.31,Rhode island,vote,1,3rd Party,5.0
+2019.12.31,Rhode Island,vote,1,3rd Party,5.0
 2019.12.31,South Carolina,vote,1,3rd Party,3.1
 2019.12.31,South Dakota,vote,1,3rd Party,4.2
 2019.12.31,Tennessee,vote,1,3rd Party,2.7
@@ -21082,7 +21082,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.1,Oklahoma,win,1,Trump,99.9
 2020.1.1,Oregon,win,1,Trump,14.1
 2020.1.1,Pennsylvania,win,1,Trump,44.0
-2020.1.1,Rhode island,win,1,Trump,5.5
+2020.1.1,Rhode Island,win,1,Trump,5.5
 2020.1.1,South Carolina,win,1,Trump,88.1
 2020.1.1,South Dakota,win,1,Trump,99.7
 2020.1.1,Tennessee,win,1,Trump,98.8
@@ -21139,7 +21139,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.1,Oklahoma,win,1,Democrats,0.1
 2020.1.1,Oregon,win,1,Democrats,85.9
 2020.1.1,Pennsylvania,win,1,Democrats,56.0
-2020.1.1,Rhode island,win,1,Democrats,94.5
+2020.1.1,Rhode Island,win,1,Democrats,94.5
 2020.1.1,South Carolina,win,1,Democrats,11.9
 2020.1.1,South Dakota,win,1,Democrats,0.3
 2020.1.1,Tennessee,win,1,Democrats,1.2
@@ -21196,7 +21196,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.1,Oklahoma,win,1,3rd Party,0.0
 2020.1.1,Oregon,win,1,3rd Party,0.0
 2020.1.1,Pennsylvania,win,1,3rd Party,0.0
-2020.1.1,Rhode island,win,1,3rd Party,0.0
+2020.1.1,Rhode Island,win,1,3rd Party,0.0
 2020.1.1,South Carolina,win,1,3rd Party,0.0
 2020.1.1,South Dakota,win,1,3rd Party,0.0
 2020.1.1,Tennessee,win,1,3rd Party,0.0
@@ -21253,7 +21253,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.1,Oklahoma,vote,1,Trump,66.7
 2020.1.1,Oregon,vote,1,Trump,39.0
 2020.1.1,Pennsylvania,vote,1,Trump,47.4
-2020.1.1,Rhode island,vote,1,Trump,37.0
+2020.1.1,Rhode Island,vote,1,Trump,37.0
 2020.1.1,South Carolina,vote,1,Trump,56.0
 2020.1.1,South Dakota,vote,1,Trump,62.4
 2020.1.1,Tennessee,vote,1,Trump,61.7
@@ -21310,7 +21310,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.1,Oklahoma,vote,1,Democrats,31.0
 2020.1.1,Oregon,vote,1,Democrats,54.1
 2020.1.1,Pennsylvania,vote,1,Democrats,49.1
-2020.1.1,Rhode island,vote,1,Democrats,57.9
+2020.1.1,Rhode Island,vote,1,Democrats,57.9
 2020.1.1,South Carolina,vote,1,Democrats,40.8
 2020.1.1,South Dakota,vote,1,Democrats,33.3
 2020.1.1,Tennessee,vote,1,Democrats,35.5
@@ -21367,7 +21367,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.1,Oklahoma,vote,1,3rd Party,2.2
 2020.1.1,Oregon,vote,1,3rd Party,6.8
 2020.1.1,Pennsylvania,vote,1,3rd Party,3.4
-2020.1.1,Rhode island,vote,1,3rd Party,5.0
+2020.1.1,Rhode Island,vote,1,3rd Party,5.0
 2020.1.1,South Carolina,vote,1,3rd Party,3.1
 2020.1.1,South Dakota,vote,1,3rd Party,4.2
 2020.1.1,Tennessee,vote,1,3rd Party,2.7
@@ -21427,7 +21427,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.2,Oklahoma,win,1,Trump,99.9
 2020.1.2,Oregon,win,1,Trump,13.2
 2020.1.2,Pennsylvania,win,1,Trump,42.9
-2020.1.2,Rhode island,win,1,Trump,4.7
+2020.1.2,Rhode Island,win,1,Trump,4.7
 2020.1.2,South Carolina,win,1,Trump,87.2
 2020.1.2,South Dakota,win,1,Trump,99.6
 2020.1.2,Tennessee,win,1,Trump,98.5
@@ -21484,7 +21484,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.2,Oklahoma,win,1,Democrats,0.1
 2020.1.2,Oregon,win,1,Democrats,86.8
 2020.1.2,Pennsylvania,win,1,Democrats,57.1
-2020.1.2,Rhode island,win,1,Democrats,95.3
+2020.1.2,Rhode Island,win,1,Democrats,95.3
 2020.1.2,South Carolina,win,1,Democrats,12.8
 2020.1.2,South Dakota,win,1,Democrats,0.4
 2020.1.2,Tennessee,win,1,Democrats,1.5
@@ -21541,7 +21541,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.2,Oklahoma,win,1,3rd Party,0.0
 2020.1.2,Oregon,win,1,3rd Party,0.0
 2020.1.2,Pennsylvania,win,1,3rd Party,0.0
-2020.1.2,Rhode island,win,1,3rd Party,0.0
+2020.1.2,Rhode Island,win,1,3rd Party,0.0
 2020.1.2,South Carolina,win,1,3rd Party,0.0
 2020.1.2,South Dakota,win,1,3rd Party,0.0
 2020.1.2,Tennessee,win,1,3rd Party,0.0
@@ -21598,7 +21598,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.2,Oklahoma,vote,1,Trump,66.3
 2020.1.2,Oregon,vote,1,Trump,38.8
 2020.1.2,Pennsylvania,vote,1,Trump,47.3
-2020.1.2,Rhode island,vote,1,Trump,36.6
+2020.1.2,Rhode Island,vote,1,Trump,36.6
 2020.1.2,South Carolina,vote,1,Trump,55.8
 2020.1.2,South Dakota,vote,1,Trump,62.1
 2020.1.2,Tennessee,vote,1,Trump,61.4
@@ -21655,7 +21655,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.2,Oklahoma,vote,1,Democrats,31.3
 2020.1.2,Oregon,vote,1,Democrats,54.4
 2020.1.2,Pennsylvania,vote,1,Democrats,49.2
-2020.1.2,Rhode island,vote,1,Democrats,58.3
+2020.1.2,Rhode Island,vote,1,Democrats,58.3
 2020.1.2,South Carolina,vote,1,Democrats,41.0
 2020.1.2,South Dakota,vote,1,Democrats,33.6
 2020.1.2,Tennessee,vote,1,Democrats,35.8
@@ -21712,7 +21712,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.2,Oklahoma,vote,1,3rd Party,2.2
 2020.1.2,Oregon,vote,1,3rd Party,6.8
 2020.1.2,Pennsylvania,vote,1,3rd Party,3.4
-2020.1.2,Rhode island,vote,1,3rd Party,5.0
+2020.1.2,Rhode Island,vote,1,3rd Party,5.0
 2020.1.2,South Carolina,vote,1,3rd Party,3.1
 2020.1.2,South Dakota,vote,1,3rd Party,4.2
 2020.1.2,Tennessee,vote,1,3rd Party,2.7
@@ -21772,7 +21772,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.3,Oklahoma,win,1,Trump,99.9
 2020.1.3,Oregon,win,1,Trump,13.7
 2020.1.3,Pennsylvania,win,1,Trump,43.6
-2020.1.3,Rhode island,win,1,Trump,5.0
+2020.1.3,Rhode Island,win,1,Trump,5.0
 2020.1.3,South Carolina,win,1,Trump,87.7
 2020.1.3,South Dakota,win,1,Trump,99.6
 2020.1.3,Tennessee,win,1,Trump,98.7
@@ -21829,7 +21829,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.3,Oklahoma,win,1,Democrats,0.1
 2020.1.3,Oregon,win,1,Democrats,86.3
 2020.1.3,Pennsylvania,win,1,Democrats,56.4
-2020.1.3,Rhode island,win,1,Democrats,95.0
+2020.1.3,Rhode Island,win,1,Democrats,95.0
 2020.1.3,South Carolina,win,1,Democrats,12.3
 2020.1.3,South Dakota,win,1,Democrats,0.4
 2020.1.3,Tennessee,win,1,Democrats,1.3
@@ -21886,7 +21886,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.3,Oklahoma,win,1,3rd Party,0.0
 2020.1.3,Oregon,win,1,3rd Party,0.0
 2020.1.3,Pennsylvania,win,1,3rd Party,0.0
-2020.1.3,Rhode island,win,1,3rd Party,0.0
+2020.1.3,Rhode Island,win,1,3rd Party,0.0
 2020.1.3,South Carolina,win,1,3rd Party,0.0
 2020.1.3,South Dakota,win,1,3rd Party,0.0
 2020.1.3,Tennessee,win,1,3rd Party,0.0
@@ -21943,7 +21943,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.3,Oklahoma,vote,1,Trump,66.5
 2020.1.3,Oregon,vote,1,Trump,38.9
 2020.1.3,Pennsylvania,vote,1,Trump,47.4
-2020.1.3,Rhode island,vote,1,Trump,36.8
+2020.1.3,Rhode Island,vote,1,Trump,36.8
 2020.1.3,South Carolina,vote,1,Trump,55.9
 2020.1.3,South Dakota,vote,1,Trump,62.2
 2020.1.3,Tennessee,vote,1,Trump,61.6
@@ -22000,7 +22000,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.3,Oklahoma,vote,1,Democrats,31.2
 2020.1.3,Oregon,vote,1,Democrats,54.2
 2020.1.3,Pennsylvania,vote,1,Democrats,49.1
-2020.1.3,Rhode island,vote,1,Democrats,58.1
+2020.1.3,Rhode Island,vote,1,Democrats,58.1
 2020.1.3,South Carolina,vote,1,Democrats,40.9
 2020.1.3,South Dakota,vote,1,Democrats,33.5
 2020.1.3,Tennessee,vote,1,Democrats,35.7
@@ -22057,7 +22057,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.3,Oklahoma,vote,1,3rd Party,2.2
 2020.1.3,Oregon,vote,1,3rd Party,6.8
 2020.1.3,Pennsylvania,vote,1,3rd Party,3.4
-2020.1.3,Rhode island,vote,1,3rd Party,5.0
+2020.1.3,Rhode Island,vote,1,3rd Party,5.0
 2020.1.3,South Carolina,vote,1,3rd Party,3.1
 2020.1.3,South Dakota,vote,1,3rd Party,4.2
 2020.1.3,Tennessee,vote,1,3rd Party,2.7
@@ -22117,7 +22117,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.4,Oklahoma,win,1,Trump,99.9
 2020.1.4,Oregon,win,1,Trump,13.7
 2020.1.4,Pennsylvania,win,1,Trump,43.1
-2020.1.4,Rhode island,win,1,Trump,4.9
+2020.1.4,Rhode Island,win,1,Trump,4.9
 2020.1.4,South Carolina,win,1,Trump,87.3
 2020.1.4,South Dakota,win,1,Trump,99.6
 2020.1.4,Tennessee,win,1,Trump,98.6
@@ -22174,7 +22174,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.4,Oklahoma,win,1,Democrats,0.1
 2020.1.4,Oregon,win,1,Democrats,86.3
 2020.1.4,Pennsylvania,win,1,Democrats,56.9
-2020.1.4,Rhode island,win,1,Democrats,95.1
+2020.1.4,Rhode Island,win,1,Democrats,95.1
 2020.1.4,South Carolina,win,1,Democrats,12.7
 2020.1.4,South Dakota,win,1,Democrats,0.4
 2020.1.4,Tennessee,win,1,Democrats,1.4
@@ -22231,7 +22231,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.4,Oklahoma,win,1,3rd Party,0.0
 2020.1.4,Oregon,win,1,3rd Party,0.0
 2020.1.4,Pennsylvania,win,1,3rd Party,0.0
-2020.1.4,Rhode island,win,1,3rd Party,0.0
+2020.1.4,Rhode Island,win,1,3rd Party,0.0
 2020.1.4,South Carolina,win,1,3rd Party,0.0
 2020.1.4,South Dakota,win,1,3rd Party,0.0
 2020.1.4,Tennessee,win,1,3rd Party,0.0
@@ -22288,7 +22288,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.4,Oklahoma,vote,1,Trump,66.4
 2020.1.4,Oregon,vote,1,Trump,38.8
 2020.1.4,Pennsylvania,vote,1,Trump,47.3
-2020.1.4,Rhode island,vote,1,Trump,36.7
+2020.1.4,Rhode Island,vote,1,Trump,36.7
 2020.1.4,South Carolina,vote,1,Trump,55.9
 2020.1.4,South Dakota,vote,1,Trump,62.2
 2020.1.4,Tennessee,vote,1,Trump,61.5
@@ -22345,7 +22345,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.4,Oklahoma,vote,1,Democrats,31.3
 2020.1.4,Oregon,vote,1,Democrats,54.3
 2020.1.4,Pennsylvania,vote,1,Democrats,49.3
-2020.1.4,Rhode island,vote,1,Democrats,58.2
+2020.1.4,Rhode Island,vote,1,Democrats,58.2
 2020.1.4,South Carolina,vote,1,Democrats,40.9
 2020.1.4,South Dakota,vote,1,Democrats,33.5
 2020.1.4,Tennessee,vote,1,Democrats,35.7
@@ -22402,7 +22402,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.4,Oklahoma,vote,1,3rd Party,2.2
 2020.1.4,Oregon,vote,1,3rd Party,6.8
 2020.1.4,Pennsylvania,vote,1,3rd Party,3.4
-2020.1.4,Rhode island,vote,1,3rd Party,5.0
+2020.1.4,Rhode Island,vote,1,3rd Party,5.0
 2020.1.4,South Carolina,vote,1,3rd Party,3.1
 2020.1.4,South Dakota,vote,1,3rd Party,4.2
 2020.1.4,Tennessee,vote,1,3rd Party,2.7
@@ -22462,7 +22462,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.5,Oklahoma,win,1,Trump,99.9
 2020.1.5,Oregon,win,1,Trump,13.7
 2020.1.5,Pennsylvania,win,1,Trump,43.1
-2020.1.5,Rhode island,win,1,Trump,4.9
+2020.1.5,Rhode Island,win,1,Trump,4.9
 2020.1.5,South Carolina,win,1,Trump,87.3
 2020.1.5,South Dakota,win,1,Trump,99.6
 2020.1.5,Tennessee,win,1,Trump,98.5
@@ -22519,7 +22519,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.5,Oklahoma,win,1,Democrats,0.1
 2020.1.5,Oregon,win,1,Democrats,86.3
 2020.1.5,Pennsylvania,win,1,Democrats,56.9
-2020.1.5,Rhode island,win,1,Democrats,95.1
+2020.1.5,Rhode Island,win,1,Democrats,95.1
 2020.1.5,South Carolina,win,1,Democrats,12.7
 2020.1.5,South Dakota,win,1,Democrats,0.4
 2020.1.5,Tennessee,win,1,Democrats,1.5
@@ -22576,7 +22576,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.5,Oklahoma,win,1,3rd Party,0.0
 2020.1.5,Oregon,win,1,3rd Party,0.0
 2020.1.5,Pennsylvania,win,1,3rd Party,0.0
-2020.1.5,Rhode island,win,1,3rd Party,0.0
+2020.1.5,Rhode Island,win,1,3rd Party,0.0
 2020.1.5,South Carolina,win,1,3rd Party,0.0
 2020.1.5,South Dakota,win,1,3rd Party,0.0
 2020.1.5,Tennessee,win,1,3rd Party,0.0
@@ -22633,7 +22633,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.5,Oklahoma,vote,1,Trump,66.4
 2020.1.5,Oregon,vote,1,Trump,38.8
 2020.1.5,Pennsylvania,vote,1,Trump,47.3
-2020.1.5,Rhode island,vote,1,Trump,36.7
+2020.1.5,Rhode Island,vote,1,Trump,36.7
 2020.1.5,South Carolina,vote,1,Trump,55.9
 2020.1.5,South Dakota,vote,1,Trump,62.2
 2020.1.5,Tennessee,vote,1,Trump,61.5
@@ -22690,7 +22690,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.5,Oklahoma,vote,1,Democrats,31.3
 2020.1.5,Oregon,vote,1,Democrats,54.3
 2020.1.5,Pennsylvania,vote,1,Democrats,49.3
-2020.1.5,Rhode island,vote,1,Democrats,58.2
+2020.1.5,Rhode Island,vote,1,Democrats,58.2
 2020.1.5,South Carolina,vote,1,Democrats,40.9
 2020.1.5,South Dakota,vote,1,Democrats,33.5
 2020.1.5,Tennessee,vote,1,Democrats,35.7
@@ -22747,7 +22747,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.5,Oklahoma,vote,1,3rd Party,2.2
 2020.1.5,Oregon,vote,1,3rd Party,6.8
 2020.1.5,Pennsylvania,vote,1,3rd Party,3.4
-2020.1.5,Rhode island,vote,1,3rd Party,5.0
+2020.1.5,Rhode Island,vote,1,3rd Party,5.0
 2020.1.5,South Carolina,vote,1,3rd Party,3.1
 2020.1.5,South Dakota,vote,1,3rd Party,4.2
 2020.1.5,Tennessee,vote,1,3rd Party,2.7
@@ -22807,7 +22807,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.6,Oklahoma,win,1,Trump,99.9
 2020.1.6,Oregon,win,1,Trump,13.7
 2020.1.6,Pennsylvania,win,1,Trump,43.0
-2020.1.6,Rhode island,win,1,Trump,4.9
+2020.1.6,Rhode Island,win,1,Trump,4.9
 2020.1.6,South Carolina,win,1,Trump,87.2
 2020.1.6,South Dakota,win,1,Trump,99.6
 2020.1.6,Tennessee,win,1,Trump,98.5
@@ -22864,7 +22864,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.6,Oklahoma,win,1,Democrats,0.1
 2020.1.6,Oregon,win,1,Democrats,86.3
 2020.1.6,Pennsylvania,win,1,Democrats,57.0
-2020.1.6,Rhode island,win,1,Democrats,95.1
+2020.1.6,Rhode Island,win,1,Democrats,95.1
 2020.1.6,South Carolina,win,1,Democrats,12.8
 2020.1.6,South Dakota,win,1,Democrats,0.4
 2020.1.6,Tennessee,win,1,Democrats,1.5
@@ -22921,7 +22921,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.6,Oklahoma,win,1,3rd Party,0.0
 2020.1.6,Oregon,win,1,3rd Party,0.0
 2020.1.6,Pennsylvania,win,1,3rd Party,0.0
-2020.1.6,Rhode island,win,1,3rd Party,0.0
+2020.1.6,Rhode Island,win,1,3rd Party,0.0
 2020.1.6,South Carolina,win,1,3rd Party,0.0
 2020.1.6,South Dakota,win,1,3rd Party,0.0
 2020.1.6,Tennessee,win,1,3rd Party,0.0
@@ -22978,7 +22978,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.6,Oklahoma,vote,1,Trump,66.4
 2020.1.6,Oregon,vote,1,Trump,38.9
 2020.1.6,Pennsylvania,vote,1,Trump,47.3
-2020.1.6,Rhode island,vote,1,Trump,36.7
+2020.1.6,Rhode Island,vote,1,Trump,36.7
 2020.1.6,South Carolina,vote,1,Trump,55.9
 2020.1.6,South Dakota,vote,1,Trump,62.2
 2020.1.6,Tennessee,vote,1,Trump,61.5
@@ -23035,7 +23035,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.6,Oklahoma,vote,1,Democrats,31.3
 2020.1.6,Oregon,vote,1,Democrats,54.3
 2020.1.6,Pennsylvania,vote,1,Democrats,49.3
-2020.1.6,Rhode island,vote,1,Democrats,58.2
+2020.1.6,Rhode Island,vote,1,Democrats,58.2
 2020.1.6,South Carolina,vote,1,Democrats,40.9
 2020.1.6,South Dakota,vote,1,Democrats,33.5
 2020.1.6,Tennessee,vote,1,Democrats,35.7
@@ -23092,7 +23092,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.6,Oklahoma,vote,1,3rd Party,2.2
 2020.1.6,Oregon,vote,1,3rd Party,6.8
 2020.1.6,Pennsylvania,vote,1,3rd Party,3.4
-2020.1.6,Rhode island,vote,1,3rd Party,5.0
+2020.1.6,Rhode Island,vote,1,3rd Party,5.0
 2020.1.6,South Carolina,vote,1,3rd Party,3.1
 2020.1.6,South Dakota,vote,1,3rd Party,4.2
 2020.1.6,Tennessee,vote,1,3rd Party,2.7
@@ -23152,7 +23152,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.7,Oklahoma,win,1,Trump,99.9
 2020.1.7,Oregon,win,1,Trump,13.7
 2020.1.7,Pennsylvania,win,1,Trump,43.0
-2020.1.7,Rhode island,win,1,Trump,4.9
+2020.1.7,Rhode Island,win,1,Trump,4.9
 2020.1.7,South Carolina,win,1,Trump,87.3
 2020.1.7,South Dakota,win,1,Trump,99.6
 2020.1.7,Tennessee,win,1,Trump,98.6
@@ -23209,7 +23209,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.7,Oklahoma,win,1,Democrats,0.1
 2020.1.7,Oregon,win,1,Democrats,86.3
 2020.1.7,Pennsylvania,win,1,Democrats,57.0
-2020.1.7,Rhode island,win,1,Democrats,95.1
+2020.1.7,Rhode Island,win,1,Democrats,95.1
 2020.1.7,South Carolina,win,1,Democrats,12.7
 2020.1.7,South Dakota,win,1,Democrats,0.4
 2020.1.7,Tennessee,win,1,Democrats,1.4
@@ -23266,7 +23266,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.7,Oklahoma,win,1,3rd Party,0.0
 2020.1.7,Oregon,win,1,3rd Party,0.0
 2020.1.7,Pennsylvania,win,1,3rd Party,0.0
-2020.1.7,Rhode island,win,1,3rd Party,0.0
+2020.1.7,Rhode Island,win,1,3rd Party,0.0
 2020.1.7,South Carolina,win,1,3rd Party,0.0
 2020.1.7,South Dakota,win,1,3rd Party,0.0
 2020.1.7,Tennessee,win,1,3rd Party,0.0
@@ -23323,7 +23323,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.7,Oklahoma,vote,1,Trump,66.4
 2020.1.7,Oregon,vote,1,Trump,38.9
 2020.1.7,Pennsylvania,vote,1,Trump,47.2
-2020.1.7,Rhode island,vote,1,Trump,36.7
+2020.1.7,Rhode Island,vote,1,Trump,36.7
 2020.1.7,South Carolina,vote,1,Trump,55.9
 2020.1.7,South Dakota,vote,1,Trump,62.2
 2020.1.7,Tennessee,vote,1,Trump,61.5
@@ -23380,7 +23380,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.7,Oklahoma,vote,1,Democrats,31.3
 2020.1.7,Oregon,vote,1,Democrats,54.3
 2020.1.7,Pennsylvania,vote,1,Democrats,49.3
-2020.1.7,Rhode island,vote,1,Democrats,58.2
+2020.1.7,Rhode Island,vote,1,Democrats,58.2
 2020.1.7,South Carolina,vote,1,Democrats,40.9
 2020.1.7,South Dakota,vote,1,Democrats,33.5
 2020.1.7,Tennessee,vote,1,Democrats,35.7
@@ -23437,7 +23437,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.7,Oklahoma,vote,1,3rd Party,2.2
 2020.1.7,Oregon,vote,1,3rd Party,6.8
 2020.1.7,Pennsylvania,vote,1,3rd Party,3.4
-2020.1.7,Rhode island,vote,1,3rd Party,5.0
+2020.1.7,Rhode Island,vote,1,3rd Party,5.0
 2020.1.7,South Carolina,vote,1,3rd Party,3.1
 2020.1.7,South Dakota,vote,1,3rd Party,4.2
 2020.1.7,Tennessee,vote,1,3rd Party,2.7
@@ -23497,7 +23497,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.8,Oklahoma,win,1,Trump,99.9
 2020.1.8,Oregon,win,1,Trump,13.7
 2020.1.8,Pennsylvania,win,1,Trump,43.0
-2020.1.8,Rhode island,win,1,Trump,4.9
+2020.1.8,Rhode Island,win,1,Trump,4.9
 2020.1.8,South Carolina,win,1,Trump,87.2
 2020.1.8,South Dakota,win,1,Trump,99.6
 2020.1.8,Tennessee,win,1,Trump,98.5
@@ -23554,7 +23554,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.8,Oklahoma,win,1,Democrats,0.1
 2020.1.8,Oregon,win,1,Democrats,86.3
 2020.1.8,Pennsylvania,win,1,Democrats,57.0
-2020.1.8,Rhode island,win,1,Democrats,95.1
+2020.1.8,Rhode Island,win,1,Democrats,95.1
 2020.1.8,South Carolina,win,1,Democrats,12.8
 2020.1.8,South Dakota,win,1,Democrats,0.4
 2020.1.8,Tennessee,win,1,Democrats,1.5
@@ -23611,7 +23611,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.8,Oklahoma,win,1,3rd Party,0.0
 2020.1.8,Oregon,win,1,3rd Party,0.0
 2020.1.8,Pennsylvania,win,1,3rd Party,0.0
-2020.1.8,Rhode island,win,1,3rd Party,0.0
+2020.1.8,Rhode Island,win,1,3rd Party,0.0
 2020.1.8,South Carolina,win,1,3rd Party,0.0
 2020.1.8,South Dakota,win,1,3rd Party,0.0
 2020.1.8,Tennessee,win,1,3rd Party,0.0
@@ -23668,7 +23668,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.8,Oklahoma,vote,1,Trump,66.4
 2020.1.8,Oregon,vote,1,Trump,38.9
 2020.1.8,Pennsylvania,vote,1,Trump,47.2
-2020.1.8,Rhode island,vote,1,Trump,36.7
+2020.1.8,Rhode Island,vote,1,Trump,36.7
 2020.1.8,South Carolina,vote,1,Trump,55.9
 2020.1.8,South Dakota,vote,1,Trump,62.2
 2020.1.8,Tennessee,vote,1,Trump,61.5
@@ -23725,7 +23725,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.8,Oklahoma,vote,1,Democrats,31.3
 2020.1.8,Oregon,vote,1,Democrats,54.3
 2020.1.8,Pennsylvania,vote,1,Democrats,49.3
-2020.1.8,Rhode island,vote,1,Democrats,58.2
+2020.1.8,Rhode Island,vote,1,Democrats,58.2
 2020.1.8,South Carolina,vote,1,Democrats,40.9
 2020.1.8,South Dakota,vote,1,Democrats,33.5
 2020.1.8,Tennessee,vote,1,Democrats,35.7
@@ -23782,7 +23782,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.8,Oklahoma,vote,1,3rd Party,2.2
 2020.1.8,Oregon,vote,1,3rd Party,6.8
 2020.1.8,Pennsylvania,vote,1,3rd Party,3.4
-2020.1.8,Rhode island,vote,1,3rd Party,5.0
+2020.1.8,Rhode Island,vote,1,3rd Party,5.0
 2020.1.8,South Carolina,vote,1,3rd Party,3.1
 2020.1.8,South Dakota,vote,1,3rd Party,4.2
 2020.1.8,Tennessee,vote,1,3rd Party,2.7
@@ -23842,7 +23842,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.9,Oklahoma,win,1,Trump,99.9
 2020.1.9,Oregon,win,1,Trump,13.7
 2020.1.9,Pennsylvania,win,1,Trump,43.0
-2020.1.9,Rhode island,win,1,Trump,4.9
+2020.1.9,Rhode Island,win,1,Trump,4.9
 2020.1.9,South Carolina,win,1,Trump,87.1
 2020.1.9,South Dakota,win,1,Trump,99.6
 2020.1.9,Tennessee,win,1,Trump,98.5
@@ -23899,7 +23899,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.9,Oklahoma,win,1,Democrats,0.1
 2020.1.9,Oregon,win,1,Democrats,86.3
 2020.1.9,Pennsylvania,win,1,Democrats,57.0
-2020.1.9,Rhode island,win,1,Democrats,95.1
+2020.1.9,Rhode Island,win,1,Democrats,95.1
 2020.1.9,South Carolina,win,1,Democrats,12.9
 2020.1.9,South Dakota,win,1,Democrats,0.4
 2020.1.9,Tennessee,win,1,Democrats,1.5
@@ -23956,7 +23956,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.9,Oklahoma,win,1,3rd Party,0.0
 2020.1.9,Oregon,win,1,3rd Party,0.0
 2020.1.9,Pennsylvania,win,1,3rd Party,0.0
-2020.1.9,Rhode island,win,1,3rd Party,0.0
+2020.1.9,Rhode Island,win,1,3rd Party,0.0
 2020.1.9,South Carolina,win,1,3rd Party,0.0
 2020.1.9,South Dakota,win,1,3rd Party,0.0
 2020.1.9,Tennessee,win,1,3rd Party,0.0
@@ -24013,7 +24013,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.9,Oklahoma,vote,1,Trump,66.4
 2020.1.9,Oregon,vote,1,Trump,38.9
 2020.1.9,Pennsylvania,vote,1,Trump,47.2
-2020.1.9,Rhode island,vote,1,Trump,36.7
+2020.1.9,Rhode Island,vote,1,Trump,36.7
 2020.1.9,South Carolina,vote,1,Trump,56.0
 2020.1.9,South Dakota,vote,1,Trump,62.2
 2020.1.9,Tennessee,vote,1,Trump,61.6
@@ -24070,7 +24070,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.9,Oklahoma,vote,1,Democrats,31.3
 2020.1.9,Oregon,vote,1,Democrats,54.3
 2020.1.9,Pennsylvania,vote,1,Democrats,49.3
-2020.1.9,Rhode island,vote,1,Democrats,58.2
+2020.1.9,Rhode Island,vote,1,Democrats,58.2
 2020.1.9,South Carolina,vote,1,Democrats,40.9
 2020.1.9,South Dakota,vote,1,Democrats,33.5
 2020.1.9,Tennessee,vote,1,Democrats,35.7
@@ -24127,7 +24127,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.9,Oklahoma,vote,1,3rd Party,2.2
 2020.1.9,Oregon,vote,1,3rd Party,6.8
 2020.1.9,Pennsylvania,vote,1,3rd Party,3.4
-2020.1.9,Rhode island,vote,1,3rd Party,5.0
+2020.1.9,Rhode Island,vote,1,3rd Party,5.0
 2020.1.9,South Carolina,vote,1,3rd Party,3.1
 2020.1.9,South Dakota,vote,1,3rd Party,4.2
 2020.1.9,Tennessee,vote,1,3rd Party,2.7
@@ -24187,7 +24187,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.10,Oklahoma,win,1,Trump,99.9
 2020.1.10,Oregon,win,1,Trump,13.6
 2020.1.10,Pennsylvania,win,1,Trump,42.9
-2020.1.10,Rhode island,win,1,Trump,4.9
+2020.1.10,Rhode Island,win,1,Trump,4.9
 2020.1.10,South Carolina,win,1,Trump,86.8
 2020.1.10,South Dakota,win,1,Trump,99.6
 2020.1.10,Tennessee,win,1,Trump,98.4
@@ -24244,7 +24244,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.10,Oklahoma,win,1,Democrats,0.1
 2020.1.10,Oregon,win,1,Democrats,86.4
 2020.1.10,Pennsylvania,win,1,Democrats,57.1
-2020.1.10,Rhode island,win,1,Democrats,95.1
+2020.1.10,Rhode Island,win,1,Democrats,95.1
 2020.1.10,South Carolina,win,1,Democrats,13.2
 2020.1.10,South Dakota,win,1,Democrats,0.4
 2020.1.10,Tennessee,win,1,Democrats,1.6
@@ -24301,7 +24301,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.10,Oklahoma,win,1,3rd Party,0.0
 2020.1.10,Oregon,win,1,3rd Party,0.0
 2020.1.10,Pennsylvania,win,1,3rd Party,0.0
-2020.1.10,Rhode island,win,1,3rd Party,0.0
+2020.1.10,Rhode Island,win,1,3rd Party,0.0
 2020.1.10,South Carolina,win,1,3rd Party,0.0
 2020.1.10,South Dakota,win,1,3rd Party,0.0
 2020.1.10,Tennessee,win,1,3rd Party,0.0
@@ -24358,7 +24358,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.10,Oklahoma,vote,1,Trump,66.4
 2020.1.10,Oregon,vote,1,Trump,38.8
 2020.1.10,Pennsylvania,vote,1,Trump,47.2
-2020.1.10,Rhode island,vote,1,Trump,36.7
+2020.1.10,Rhode Island,vote,1,Trump,36.7
 2020.1.10,South Carolina,vote,1,Trump,56.0
 2020.1.10,South Dakota,vote,1,Trump,62.2
 2020.1.10,Tennessee,vote,1,Trump,61.5
@@ -24415,7 +24415,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.10,Oklahoma,vote,1,Democrats,31.3
 2020.1.10,Oregon,vote,1,Democrats,54.3
 2020.1.10,Pennsylvania,vote,1,Democrats,49.3
-2020.1.10,Rhode island,vote,1,Democrats,58.2
+2020.1.10,Rhode Island,vote,1,Democrats,58.2
 2020.1.10,South Carolina,vote,1,Democrats,40.9
 2020.1.10,South Dakota,vote,1,Democrats,33.5
 2020.1.10,Tennessee,vote,1,Democrats,35.7
@@ -24472,7 +24472,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.10,Oklahoma,vote,1,3rd Party,2.2
 2020.1.10,Oregon,vote,1,3rd Party,6.8
 2020.1.10,Pennsylvania,vote,1,3rd Party,3.4
-2020.1.10,Rhode island,vote,1,3rd Party,5.0
+2020.1.10,Rhode Island,vote,1,3rd Party,5.0
 2020.1.10,South Carolina,vote,1,3rd Party,3.1
 2020.1.10,South Dakota,vote,1,3rd Party,4.2
 2020.1.10,Tennessee,vote,1,3rd Party,2.7
@@ -24532,7 +24532,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.11,Oklahoma,win,1,Trump,99.8
 2020.1.11,Oregon,win,1,Trump,14.3
 2020.1.11,Pennsylvania,win,1,Trump,43.2
-2020.1.11,Rhode island,win,1,Trump,5.5
+2020.1.11,Rhode Island,win,1,Trump,5.5
 2020.1.11,South Carolina,win,1,Trump,85.6
 2020.1.11,South Dakota,win,1,Trump,99.3
 2020.1.11,Tennessee,win,1,Trump,98.0
@@ -24589,7 +24589,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.11,Oklahoma,win,1,Democrats,0.2
 2020.1.11,Oregon,win,1,Democrats,85.7
 2020.1.11,Pennsylvania,win,1,Democrats,56.9
-2020.1.11,Rhode island,win,1,Democrats,94.5
+2020.1.11,Rhode Island,win,1,Democrats,94.5
 2020.1.11,South Carolina,win,1,Democrats,14.4
 2020.1.11,South Dakota,win,1,Democrats,0.7
 2020.1.11,Tennessee,win,1,Democrats,2.0
@@ -24646,7 +24646,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.11,Oklahoma,win,1,3rd Party,0.0
 2020.1.11,Oregon,win,1,3rd Party,0.0
 2020.1.11,Pennsylvania,win,1,3rd Party,0.0
-2020.1.11,Rhode island,win,1,3rd Party,0.0
+2020.1.11,Rhode Island,win,1,3rd Party,0.0
 2020.1.11,South Carolina,win,1,3rd Party,0.0
 2020.1.11,South Dakota,win,1,3rd Party,0.0
 2020.1.11,Tennessee,win,1,3rd Party,0.0
@@ -24703,7 +24703,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.11,Oklahoma,vote,1,Trump,66.4
 2020.1.11,Oregon,vote,1,Trump,38.9
 2020.1.11,Pennsylvania,vote,1,Trump,47.2
-2020.1.11,Rhode island,vote,1,Trump,36.7
+2020.1.11,Rhode Island,vote,1,Trump,36.7
 2020.1.11,South Carolina,vote,1,Trump,56.0
 2020.1.11,South Dakota,vote,1,Trump,62.2
 2020.1.11,Tennessee,vote,1,Trump,61.5
@@ -24760,7 +24760,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.11,Oklahoma,vote,1,Democrats,31.3
 2020.1.11,Oregon,vote,1,Democrats,54.3
 2020.1.11,Pennsylvania,vote,1,Democrats,49.3
-2020.1.11,Rhode island,vote,1,Democrats,58.2
+2020.1.11,Rhode Island,vote,1,Democrats,58.2
 2020.1.11,South Carolina,vote,1,Democrats,40.8
 2020.1.11,South Dakota,vote,1,Democrats,33.5
 2020.1.11,Tennessee,vote,1,Democrats,35.7
@@ -24817,7 +24817,7 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.11,Oklahoma,vote,1,3rd Party,2.2
 2020.1.11,Oregon,vote,1,3rd Party,6.8
 2020.1.11,Pennsylvania,vote,1,3rd Party,3.4
-2020.1.11,Rhode island,vote,1,3rd Party,5.0
+2020.1.11,Rhode Island,vote,1,3rd Party,5.0
 2020.1.11,South Carolina,vote,1,3rd Party,3.1
 2020.1.11,South Dakota,vote,1,3rd Party,4.2
 2020.1.11,Tennessee,vote,1,3rd Party,2.7

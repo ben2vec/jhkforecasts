@@ -37,7 +37,7 @@ Ohio,Polls,6.3,0.0
 Oklahoma,Polls,0.0,0.0
 Oregon,Polls,0.0,0.0
 Pennsylvania,Polls,17.3,-3.5
-Rhode island,Polls,0.0,0.0
+Rhode Island,Polls,0.0,0.0
 South Carolina,Polls,0.5,20.7
 South Dakota,Polls,0.0,0.0
 Tennessee,Polls,0.0,0.0
@@ -93,7 +93,7 @@ Ohio,Fundamentals,43.8,6.8
 Oklahoma,Fundamentals,52.8,34.9
 Oregon,Fundamentals,50.5,-13.4
 Pennsylvania,Fundamentals,39.0,-1.6
-Rhode island,Fundamentals,51.1,-22.3
+Rhode Island,Fundamentals,51.1,-22.3
 South Carolina,Fundamentals,48.5,14.0
 South Dakota,Fundamentals,50.6,28.6
 Tennessee,Fundamentals,52.8,25.2
@@ -149,7 +149,7 @@ Ohio,Experts,35.1,9.4
 Oklahoma,Experts,42.3,36.7
 Oregon,Experts,40.4,-18.4
 Pennsylvania,Experts,31.2,-1.4
-Rhode island,Experts,40.9,-20.7
+Rhode Island,Experts,40.9,-20.7
 South Carolina,Experts,38.8,17.8
 South Dakota,Experts,40.5,28.7
 Tennessee,Experts,42.2,27.1
@@ -205,7 +205,7 @@ Ohio,State Similarity,14.8,5.0
 Oklahoma,State Similarity,4.9,24.1
 Oregon,State Similarity,9.0,-13.6
 Pennsylvania,State Similarity,12.6,-2.9
-Rhode island,State Similarity,8.1,-20.6
+Rhode Island,State Similarity,8.1,-20.6
 South Carolina,State Similarity,12.3,10.6
 South Dakota,State Similarity,8.9,29.5
 Tennessee,State Similarity,5.0,21.7
