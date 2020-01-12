@@ -197,7 +197,7 @@
       .attr("class","states")
     .attr("d", path)
     .style("stroke", d => d.properties.tippingPoint >= 3 ? "black": "none")
-    .style("stroke-width", "1")
+    .style("stroke-width", "1.5")
     .style("fill", "none")
     
     svg.append("rect")
