@@ -1,132 +1,138 @@
 State,Pollster,Grade,Sample,Date,weight,Biden,Bloomberg,Booker,Buttigieg,Klobuchar,Sanders,Steyer,Warren,Yang
-US,Ipsos,B-,436  rv,1/9,14.7,23.0,8.0,2.0,7.0,1.0,20.0,3.0,15.0,3.0
+New Hampshire,RKM Research and Communications Inc.,A/B,434  lv,1/12,30.8,26.0,4.0,1.0,7.0,2.0,22.0,2.0,18.0,2.0
+US,Quinnipiac University,B+,651  rv,1/12,29.5,25.0,6.0,1.0,8.0,4.0,19.0,1.0,16.0,5.0
+Iowa,Monmouth University,A+,405  lv,1/12,0.0,28.0,0.0,0.0,25.0,0.0,24.0,0.0,16.0,0.0
+Iowa,Monmouth University,A+,405  lv,1/12,56.3,24.0,0.0,4.0,17.0,8.0,18.0,4.0,15.0,3.0
+US,IBD/TIPP,A/B,333  rv,1/11,17.2,26.0,7.0,0.0,9.0,0.0,15.0,0.0,20.0,0.0
+US,Ipsos,B-,436  rv,1/9,13.4,23.0,8.0,2.0,7.0,1.0,20.0,3.0,15.0,3.0
 US,Ipsos,B-,707  a,1/9,0.0,15.0,6.0,2.0,5.0,1.0,17.0,3.0,10.0,3.0
-California,Capitol Weekly,-,1053  lv,1/9,10.8,20.0,6.0,1.0,11.0,5.0,24.0,2.0,21.0,7.0
-Nevada,Myers Research/Strategic Services,-,600  lv,1/8,9.1,28.0,0.0,2.0,6.0,4.0,29.0,8.0,14.0,5.0
-Iowa,Selzer & Co.,A+,701  lv,1/8,70.7,15.0,1.0,3.0,16.0,6.0,20.0,2.0,17.0,5.0
-Wisconsin,Fox News/Beacon Research/Shaw & Co. Research,A-,671  lv,1/8,41.3,23.0,7.0,3.0,9.0,4.0,21.0,2.0,13.0,3.0
-Nevada,Fox News/Beacon Research/Shaw & Co. Research,A-,635  lv,1/8,40.2,23.0,2.0,3.0,6.0,2.0,17.0,12.0,12.0,4.0
-South Carolina,Fox News/Beacon Research/Shaw & Co. Research,A-,808  lv,1/8,45.5,36.0,2.0,2.0,4.0,1.0,14.0,15.0,10.0,2.0
-New Hampshire,Patinkin Research Strategies,-,600  lv,1/7,8.7,21.0,0.0,2.0,17.0,6.0,19.0,6.0,10.0,5.0
+California,Capitol Weekly,-,1053  lv,1/9,10.0,20.0,6.0,1.0,11.0,5.0,24.0,2.0,21.0,7.0
+Nevada,Myers Research/Strategic Services,-,600  lv,1/8,8.4,28.0,0.0,2.0,6.0,4.0,29.0,8.0,14.0,5.0
+Iowa,Selzer & Co.,A+,701  lv,1/8,65.3,15.0,1.0,3.0,16.0,6.0,20.0,2.0,17.0,5.0
+Wisconsin,Fox News/Beacon Research/Shaw & Co. Research,A-,671  lv,1/8,38.0,23.0,7.0,3.0,9.0,4.0,21.0,2.0,13.0,3.0
+Nevada,Fox News/Beacon Research/Shaw & Co. Research,A-,635  lv,1/8,37.0,23.0,2.0,3.0,6.0,2.0,17.0,12.0,12.0,4.0
+South Carolina,Fox News/Beacon Research/Shaw & Co. Research,A-,808  lv,1/8,41.9,36.0,2.0,2.0,4.0,1.0,14.0,15.0,10.0,2.0
+New Hampshire,Patinkin Research Strategies,-,600  lv,1/7,8.0,21.0,0.0,2.0,17.0,6.0,19.0,6.0,10.0,5.0
 New Hampshire,Monmouth University,A+,404  lv,1/7,0.0,24.0,0.0,0.0,23.0,0.0,21.0,0.0,18.0,0.0
 New Hampshire,Monmouth University,A+,404  lv,1/7,0.0,21.0,0.0,2.0,20.0,7.0,21.0,0.0,15.0,5.0
-New Hampshire,Monmouth University,A+,404  lv,1/7,48.1,19.0,0.0,1.0,20.0,6.0,18.0,4.0,15.0,3.0
-US,YouGov,B-,574  lv,1/7,16.0,27.0,3.0,1.0,7.0,3.0,20.0,2.0,22.0,3.0
-New Mexico,Emerson College,A-,447  lv,1/6,30.8,27.0,3.0,2.0,7.0,2.0,28.0,1.0,8.0,10.0
-US,Morning Consult,B/C,17213  lv,1/5,24.2,31.0,7.0,2.0,8.0,3.0,23.0,4.0,14.0,4.0
-New Hampshire,YouGov,B-,487  lv,1/3,11.2,25.0,0.0,3.0,13.0,7.0,27.0,3.0,18.0,2.0
-Iowa,YouGov,B-,747  lv,1/3,13.2,23.0,0.0,2.0,23.0,7.0,23.0,2.0,16.0,2.0
+New Hampshire,Monmouth University,A+,404  lv,1/7,44.5,19.0,0.0,1.0,20.0,6.0,18.0,4.0,15.0,3.0
+US,YouGov,B-,574  lv,1/7,14.7,27.0,3.0,1.0,7.0,3.0,20.0,2.0,22.0,3.0
+New Mexico,Emerson College,A-,447  lv,1/6,28.5,27.0,3.0,2.0,7.0,2.0,28.0,1.0,8.0,10.0
+US,Morning Consult,B/C,17213  lv,1/5,22.6,31.0,7.0,2.0,8.0,3.0,23.0,4.0,14.0,4.0
+New Hampshire,YouGov,B-,487  lv,1/3,10.5,25.0,0.0,3.0,13.0,7.0,27.0,3.0,18.0,2.0
+Iowa,YouGov,B-,747  lv,1/3,12.3,23.0,0.0,2.0,23.0,7.0,23.0,2.0,16.0,2.0
+Connecticut,Sacred Heart University,B/C,348  rv,1/2,4.9,33.0,0.0,0.0,11.0,0.0,19.0,0.0,18.0,0.0
 US,YouGov,B-,548  lv,12/31,0.0,29.0,3.0,2.0,8.0,4.0,19.0,2.0,18.0,3.0
-US,Harris Insights & Analytics,C+,780  rv,12/29,8.7,30.0,7.0,2.0,7.0,2.0,17.0,2.0,12.0,3.0
+US,Harris Insights & Analytics,C+,780  rv,12/29,8.2,30.0,7.0,2.0,7.0,2.0,17.0,2.0,12.0,3.0
 US,Morning Consult,B/C,17787  lv,12/29,0.0,32.0,6.0,3.0,8.0,3.0,21.0,3.0,14.0,4.0
-US,Harris Insights & Analytics,C+,431  rv,12/28,7.0,28.0,11.0,2.0,6.0,2.0,16.0,2.0,11.0,2.0
+US,Harris Insights & Analytics,C+,431  rv,12/28,6.6,28.0,11.0,2.0,6.0,2.0,16.0,2.0,11.0,2.0
 US,YouGov,B-,586  lv,12/24,0.0,30.0,4.0,2.0,7.0,5.0,17.0,1.0,19.0,3.0
 US,YouGov,B-,412  lv,12/23,0.0,34.0,4.0,3.0,7.0,2.0,19.0,0.0,20.0,4.0
 US,Morning Consult,B/C,7178  lv,12/22,0.0,31.0,6.0,3.0,9.0,3.0,21.0,3.0,15.0,5.0
 US,Ipsos,B-,709  a,12/19,0.0,18.0,5.0,1.0,4.0,1.0,15.0,2.0,10.0,2.0
 US,McLaughlin & Associates,C/D,480  lv,12/18,0.0,23.0,5.0,4.0,5.0,2.0,17.0,3.0,15.0,4.0
-US,McLaughlin & Associates,C/D,480  lv,12/18,3.0,27.0,5.0,3.0,5.0,2.0,17.0,4.0,15.0,5.0
-US,NBC News/Wall Street Journal,A/B,410  lv,12/17,14.3,28.0,4.0,2.0,9.0,5.0,21.0,1.0,18.0,3.0
+US,McLaughlin & Associates,C/D,480  lv,12/18,2.9,27.0,5.0,3.0,5.0,2.0,17.0,4.0,15.0,5.0
+US,NBC News/Wall Street Journal,A/B,410  lv,12/17,13.7,28.0,4.0,2.0,9.0,5.0,21.0,1.0,18.0,3.0
 US,YouGov,B-,555  lv,12/17,0.0,29.0,4.0,2.0,7.0,4.0,19.0,2.0,17.0,3.0
-US,Emerson College,A-,525  lv,12/17,18.8,32.0,3.0,2.0,8.0,2.0,25.0,2.0,12.0,6.0
-Iowa,Civiqs,-,632  lv,12/16,4.7,15.0,0.0,3.0,24.0,4.0,21.0,2.0,18.0,3.0
-US,SSRS,A/B,408  rv,12/15,12.4,26.0,5.0,3.0,8.0,3.0,20.0,1.0,16.0,3.0
+US,Emerson College,A-,525  lv,12/17,18.0,32.0,3.0,2.0,8.0,2.0,25.0,2.0,12.0,6.0
+Iowa,Civiqs,-,632  lv,12/16,4.5,15.0,0.0,3.0,24.0,4.0,21.0,2.0,18.0,3.0
+US,SSRS,A/B,408  rv,12/15,11.9,26.0,5.0,3.0,8.0,3.0,20.0,1.0,16.0,3.0
 US,Morning Consult,B/C,13384  lv,12/15,0.0,31.0,7.0,3.0,8.0,2.0,22.0,3.0,15.0,4.0
-US,Quinnipiac University,B+,567  rv,12/15,12.5,30.0,7.0,2.0,9.0,3.0,16.0,1.0,17.0,3.0
+US,Quinnipiac University,B+,567  rv,12/15,0.0,30.0,7.0,2.0,9.0,3.0,16.0,1.0,17.0,3.0
 US,Echelon Insights,-,447  lv,12/14,0.0,65.0,0.0,0.0,20.0,0.0,0.0,0.0,0.0,0.0
 US,Echelon Insights,-,447  lv,12/14,0.0,59.0,0.0,0.0,0.0,0.0,0.0,0.0,29.0,0.0
 US,Echelon Insights,-,447  lv,12/14,0.0,58.0,0.0,0.0,0.0,0.0,32.0,0.0,0.0,0.0
-US,Echelon Insights,-,447  lv,12/14,4.0,37.0,6.0,1.0,6.0,2.0,14.0,1.0,14.0,2.0
+US,Echelon Insights,-,447  lv,12/14,3.9,37.0,6.0,1.0,6.0,2.0,14.0,1.0,14.0,2.0
 US,Harris Insights & Analytics,C+,456  rv,12/14,0.0,29.0,5.0,2.0,5.0,3.0,13.0,3.0,13.0,3.0
-US,Suffolk University,A-,384  lv,12/14,14.7,23.0,6.0,3.0,8.0,3.0,14.0,1.0,13.0,2.0
-US,IBD/TIPP,A/B,312  rv,12/14,10.0,26.0,5.0,3.0,9.0,2.0,18.0,2.0,14.0,2.0
-US,Marist College,A+,704  rv,12/11,31.2,24.0,4.0,4.0,13.0,4.0,22.0,0.0,17.0,5.0
-US,Fox News/Beacon Research/Shaw & Co. Research,A-,453  lv,12/11,15.2,30.0,5.0,2.0,7.0,5.0,20.0,1.0,13.0,3.0
-South Carolina,Change Research,C,392  lv,12/11,3.7,27.0,3.0,5.0,9.0,2.0,20.0,5.0,19.0,2.0
-California,Change Research,C,862  lv,12/10,4.6,19.0,3.0,3.0,12.0,1.0,26.0,2.0,23.0,4.0
+US,Suffolk University,A-,384  lv,12/14,14.1,23.0,6.0,3.0,8.0,3.0,14.0,1.0,13.0,2.0
+US,IBD/TIPP,A/B,312  rv,12/14,0.0,26.0,5.0,3.0,9.0,2.0,18.0,2.0,14.0,2.0
+US,Marist College,A+,704  rv,12/11,30.0,24.0,4.0,4.0,13.0,4.0,22.0,0.0,17.0,5.0
+US,Fox News/Beacon Research/Shaw & Co. Research,A-,453  lv,12/11,14.6,30.0,5.0,2.0,7.0,5.0,20.0,1.0,13.0,3.0
+South Carolina,Change Research,C,392  lv,12/11,3.5,27.0,3.0,5.0,9.0,2.0,20.0,5.0,19.0,2.0
+California,Change Research,C,862  lv,12/10,4.4,19.0,3.0,3.0,12.0,1.0,26.0,2.0,23.0,4.0
 US,YouGov,B-,497  lv,12/10,0.0,26.0,4.0,3.0,11.0,2.0,16.0,1.0,21.0,3.0
-Iowa,Emerson College,A-,325  lv,12/10,12.5,23.0,2.0,4.0,18.0,10.0,22.0,3.0,12.0,2.0
-Texas,SSRS,A/B,327  lv,12/9,10.6,35.0,5.0,2.0,9.0,1.0,15.0,2.0,13.0,3.0
+Iowa,Emerson College,A-,325  lv,12/10,12.1,23.0,2.0,4.0,18.0,10.0,22.0,3.0,12.0,2.0
+Texas,SSRS,A/B,327  lv,12/9,10.2,35.0,5.0,2.0,9.0,1.0,15.0,2.0,13.0,3.0
 US,Quinnipiac University,B+,665  rv,12/9,0.0,29.0,5.0,1.0,9.0,3.0,17.0,1.0,15.0,4.0
 US,Zogby Interactive/JZ Analytics,C,443  lv,12/8,0.0,28.0,9.0,0.0,8.0,2.0,20.0,3.0,12.0,3.0
-US,Zogby Interactive/JZ Analytics,C,443  lv,12/8,3.5,30.0,8.0,0.0,7.0,2.0,20.0,3.0,16.0,4.0
-Wisconsin,Marquette University Law School,A/B,358  lv,12/8,10.9,23.0,3.0,4.0,15.0,3.0,19.0,0.0,16.0,3.0
-California,SSRS,A/B,508  lv,12/8,13.1,21.0,5.0,3.0,9.0,2.0,20.0,1.0,17.0,6.0
-New Hampshire,MassINC Polling Group,A/B,442  lv,12/8,12.1,17.0,2.0,1.0,18.0,3.0,15.0,3.0,12.0,5.0
-US,Monmouth University,A+,384  rv,12/8,20.0,26.0,5.0,2.0,8.0,4.0,21.0,1.0,17.0,3.0
+US,Zogby Interactive/JZ Analytics,C,443  lv,12/8,3.3,30.0,8.0,0.0,7.0,2.0,20.0,3.0,16.0,4.0
+Wisconsin,Marquette University Law School,A/B,358  lv,12/8,10.5,23.0,3.0,4.0,15.0,3.0,19.0,0.0,16.0,3.0
+California,SSRS,A/B,508  lv,12/8,12.6,21.0,5.0,3.0,9.0,2.0,20.0,1.0,17.0,6.0
+New Hampshire,MassINC Polling Group,A/B,442  lv,12/8,11.7,17.0,2.0,1.0,18.0,3.0,15.0,3.0,12.0,5.0
+US,Monmouth University,A+,384  rv,12/8,19.3,26.0,5.0,2.0,8.0,4.0,21.0,1.0,17.0,3.0
 US,Morning Consult,B/C,15442  lv,12/8,0.0,30.0,6.0,3.0,9.0,2.0,22.0,3.0,16.0,4.0
 California,Capitol Weekly,-,581  lv,12/7,0.0,19.0,5.0,2.0,13.0,4.0,19.0,1.0,21.0,5.0
 California,Capitol Weekly,-,581  lv,12/7,0.0,19.0,5.0,2.0,14.0,4.0,19.0,1.0,23.0,5.0
 US,Ipsos,B-,719  a,12/5,0.0,19.0,4.0,1.0,6.0,1.0,14.0,1.0,9.0,3.0
 US,YouGov,B-,541  lv,12/3,0.0,27.0,3.0,3.0,12.0,3.0,13.0,0.0,18.0,2.0
 South Carolina,YouGov,B-,400  lv,12/2,0.0,61.0,0.0,0.0,0.0,0.0,0.0,0.0,29.0,0.0
-South Carolina,YouGov,B-,400  lv,12/2,5.1,39.0,2.0,2.0,10.0,2.0,13.0,7.0,10.0,3.0
-US,David Binder Research,-,1200  lv,12/1,4.2,29.0,8.0,2.0,10.0,2.0,15.0,2.0,14.0,2.0
+South Carolina,YouGov,B-,400  lv,12/2,5.0,39.0,2.0,2.0,10.0,2.0,13.0,7.0,10.0,3.0
+US,David Binder Research,-,1200  lv,12/1,4.1,29.0,8.0,2.0,10.0,2.0,15.0,2.0,14.0,2.0
 US,Morning Consult,B/C,15773  lv,12/1,0.0,29.0,5.0,2.0,9.0,2.0,20.0,2.0,15.0,4.0
 US,Harris Insights & Analytics,C+,437  rv,12/1,0.0,31.0,6.0,1.0,9.0,2.0,15.0,2.0,10.0,2.0
 US,Harris Insights & Analytics,C+,756  rv,11/29,0.0,20.0,4.0,1.0,5.0,2.0,12.0,2.0,9.0,2.0
 US,Harris Insights & Analytics,C+,756  rv,11/29,0.0,29.0,7.0,1.0,8.0,2.0,16.0,2.0,13.0,3.0
-California,"University of California, Berkeley",B/C,1694  lv,11/27,7.2,14.0,2.0,1.0,12.0,3.0,24.0,1.0,22.0,3.0
+California,"University of California, Berkeley",B/C,1694  lv,11/27,7.0,14.0,2.0,1.0,12.0,3.0,24.0,1.0,22.0,3.0
 US,YouGov,B-,550  lv,11/26,0.0,23.0,3.0,2.0,12.0,3.0,15.0,1.0,17.0,3.0
-New Hampshire,Emerson College,A-,549  lv,11/26,12.8,14.0,1.0,2.0,22.0,2.0,26.0,3.0,14.0,5.0
-Delaware,Data for Progress,B/C,528  lv,11/25,4.5,35.0,1.0,3.0,8.0,1.0,13.0,0.0,11.0,1.0
-Illinois,Victory Research,B/C,1200  lv,11/25,6.3,23.0,4.0,2.0,16.0,3.0,15.0,2.0,17.0,1.0
+New Hampshire,Emerson College,A-,549  lv,11/26,12.5,14.0,1.0,2.0,22.0,2.0,26.0,3.0,14.0,5.0
+Delaware,Data for Progress,B/C,528  lv,11/25,4.3,35.0,1.0,3.0,8.0,1.0,13.0,0.0,11.0,1.0
+Illinois,Victory Research,B/C,1200  lv,11/25,6.1,23.0,4.0,2.0,16.0,3.0,15.0,2.0,17.0,1.0
 US,Quinnipiac University,B+,574  rv,11/25,0.0,24.0,3.0,2.0,16.0,3.0,13.0,0.0,14.0,2.0
 US,SSRS,A/B,431  rv,11/24,0.0,35.0,0.0,0.0,17.0,0.0,23.0,0.0,20.0,0.0
 US,SSRS,A/B,431  rv,11/24,0.0,28.0,3.0,2.0,11.0,2.0,17.0,3.0,14.0,3.0
-New Hampshire,Suffolk University,A-,500  lv,11/24,11.4,12.0,0.0,2.0,13.0,1.0,16.0,2.0,14.0,4.0
+New Hampshire,Suffolk University,A-,500  lv,11/24,11.0,12.0,0.0,2.0,13.0,1.0,16.0,2.0,14.0,4.0
 US,Morning Consult,B/C,8102  lv,11/24,0.0,30.0,2.0,2.0,9.0,2.0,21.0,2.0,15.0,4.0
 US,Ipsos,B-,698  a,11/22,0.0,21.0,0.0,1.0,7.0,2.0,17.0,2.0,11.0,5.0
-California,SurveyUSA,A,558  lv,11/22,16.4,28.0,3.0,3.0,8.0,1.0,18.0,3.0,13.0,5.0
+California,SurveyUSA,A,558  lv,11/22,15.9,28.0,3.0,3.0,8.0,1.0,18.0,3.0,13.0,5.0
 California,SurveyUSA,A,558  lv,11/22,0.0,30.0,0.0,3.0,9.0,1.0,19.0,2.0,13.0,4.0
-US,SocialSphere,B/C,987  lv,11/21,5.4,30.0,2.0,2.0,6.0,1.0,23.0,2.0,12.0,4.0
-US,SurveyUSA,A,1088  lv,11/21,23.6,30.0,3.0,2.0,11.0,2.0,17.0,2.0,15.0,4.0
+US,SocialSphere,B/C,987  lv,11/21,5.3,30.0,2.0,2.0,6.0,1.0,23.0,2.0,12.0,4.0
+US,SurveyUSA,A,1088  lv,11/21,23.0,30.0,3.0,2.0,11.0,2.0,17.0,2.0,15.0,4.0
 US,SurveyUSA,A,1088  lv,11/21,0.0,32.0,0.0,2.0,12.0,2.0,17.0,2.0,16.0,4.0
-US,Change Research,C,1142  lv,11/20,3.6,22.0,1.0,1.0,14.0,2.0,23.0,0.0,23.0,4.0
+US,Change Research,C,1142  lv,11/20,3.5,22.0,1.0,1.0,14.0,2.0,23.0,0.0,23.0,4.0
 US,Emerson College,A-,468  lv,11/20,0.0,27.0,1.0,1.0,7.0,1.0,27.0,2.0,20.0,4.0
 Iowa,Civiqs,-,614  lv,11/19,0.0,12.0,1.0,1.0,26.0,5.0,18.0,2.0,19.0,4.0
 US,YouGov,B-,586  lv,11/19,0.0,30.0,0.0,1.0,9.0,2.0,12.0,1.0,22.0,2.0
-New York,Siena College,A-,380  rv,11/18,8.1,24.0,0.0,2.0,5.0,1.0,13.0,0.0,14.0,2.0
-US,Swayable,-,1787  lv,11/18,3.8,30.0,0.0,2.0,7.0,2.0,17.0,2.0,18.0,4.0
+New York,Siena College,A-,380  rv,11/18,7.9,24.0,0.0,2.0,5.0,1.0,13.0,0.0,14.0,2.0
+US,Swayable,-,1787  lv,11/18,3.7,30.0,0.0,2.0,7.0,2.0,17.0,2.0,18.0,4.0
 US,Swayable,-,3709  a,11/18,0.0,27.0,0.0,2.0,6.0,2.0,20.0,2.0,15.0,5.0
-Georgia,SurveyUSA,A,536  lv,11/18,12.0,36.0,6.0,0.0,7.0,0.0,17.0,0.0,14.0,0.0
+Georgia,SurveyUSA,A,536  lv,11/18,11.7,36.0,6.0,0.0,7.0,0.0,17.0,0.0,14.0,0.0
 Georgia,SurveyUSA,A,536  lv,11/18,0.0,39.0,0.0,0.0,7.0,0.0,18.0,0.0,14.0,0.0
 New Hampshire,St. Anselm,-,255  lv,11/18,2.1,15.0,0.0,3.0,25.0,6.0,9.0,5.0,15.0,2.0
 Wisconsin,Marquette University Law School,A/B,340  lv,11/17,0.0,30.0,0.0,3.0,13.0,3.0,17.0,1.0,15.0,2.0
 US,Morning Consult,B/C,17050  lv,11/17,0.0,32.0,3.0,2.0,8.0,2.0,20.0,1.0,17.0,3.0
-South Carolina,Quinnipiac University,B+,768  lv,11/17,9.4,33.0,0.0,2.0,6.0,1.0,11.0,5.0,13.0,4.0
+South Carolina,Quinnipiac University,B+,768  lv,11/17,9.2,33.0,0.0,2.0,6.0,1.0,11.0,5.0,13.0,4.0
 US,Harris Insights & Analytics,C+,449  rv,11/17,0.0,30.0,3.0,1.0,7.0,1.0,18.0,1.0,15.0,2.0
-Texas,University of Texas at Tyler,B/C,427  rv,11/14,3.1,28.0,0.0,1.0,8.0,2.0,18.0,2.0,19.0,2.0
+Texas,University of Texas at Tyler,B/C,427  rv,11/14,3.0,28.0,0.0,1.0,8.0,2.0,18.0,2.0,19.0,2.0
 US,Ipsos,B-,685  a,11/14,0.0,19.0,3.0,1.0,6.0,1.0,19.0,1.0,13.0,2.0
 US,Ipsos,B-,702  a,11/14,0.0,23.0,0.0,2.0,6.0,1.0,18.0,1.0,11.0,2.0
-South Carolina,University of North Florida,A/B,436  lv,11/13,8.1,36.0,1.0,2.0,3.0,1.0,10.0,8.0,10.0,1.0
+South Carolina,University of North Florida,A/B,436  lv,11/13,7.9,36.0,1.0,2.0,3.0,1.0,10.0,8.0,10.0,1.0
 South Carolina,YouGov,B-,877  lv,11/13,0.0,45.0,0.0,2.0,8.0,1.0,15.0,2.0,17.0,0.0
-Nevada,YouGov,B-,626  lv,11/13,4.5,33.0,0.0,2.0,9.0,2.0,23.0,2.0,21.0,1.0
+Nevada,YouGov,B-,626  lv,11/13,4.4,33.0,0.0,2.0,9.0,2.0,23.0,2.0,21.0,1.0
 New Hampshire,YouGov,B-,510  lv,11/13,0.0,22.0,0.0,1.0,16.0,3.0,20.0,1.0,31.0,1.0
 Iowa,YouGov,B-,718  lv,11/13,0.0,22.0,0.0,1.0,21.0,5.0,22.0,2.0,18.0,1.0
 Iowa,Selzer & Co.,A+,500  lv,11/13,0.0,15.0,2.0,3.0,25.0,6.0,15.0,3.0,16.0,3.0
 Nevada,Fox News/Beacon Research/Shaw & Co. Research,A-,627  lv,11/13,0.0,24.0,0.0,1.0,8.0,2.0,18.0,5.0,18.0,3.0
-North Carolina,Fox News/Beacon Research/Shaw & Co. Research,A-,669  lv,11/13,11.4,37.0,0.0,2.0,6.0,1.0,14.0,2.0,15.0,2.0
-California,Public Policy Institute of California,A/B,682  lv,11/12,9.4,24.0,0.0,1.0,7.0,1.0,17.0,1.0,23.0,5.0
+North Carolina,Fox News/Beacon Research/Shaw & Co. Research,A-,669  lv,11/13,11.1,37.0,0.0,2.0,6.0,1.0,14.0,2.0,15.0,2.0
+California,Public Policy Institute of California,A/B,682  lv,11/12,9.2,24.0,0.0,1.0,7.0,1.0,17.0,1.0,23.0,5.0
 California,Capitol Weekly,-,695  lv,11/12,0.0,18.0,0.0,1.0,14.0,3.0,21.0,1.0,27.0,4.0
 US,YouGov,B-,600  lv,11/12,0.0,23.0,0.0,1.0,9.0,2.0,17.0,1.0,26.0,4.0
-Iowa,Monmouth University,A+,451  lv,11/11,16.2,19.0,0.0,2.0,22.0,5.0,13.0,3.0,18.0,3.0
-Georgia,Climate Nexus,-,457  lv,11/10,2.3,31.0,0.0,2.0,4.0,1.0,14.0,1.0,14.0,2.0
-Iowa,University of Iowa,B/C,465  lv,11/10,3.3,15.0,0.0,0.0,16.0,1.0,18.0,3.0,23.0,3.0
+Iowa,Monmouth University,A+,451  lv,11/11,0.0,19.0,0.0,2.0,22.0,5.0,13.0,3.0,18.0,3.0
+Georgia,Climate Nexus,-,457  lv,11/10,2.2,31.0,0.0,2.0,4.0,1.0,14.0,1.0,14.0,2.0
+Iowa,University of Iowa,B/C,465  lv,11/10,3.2,15.0,0.0,0.0,16.0,1.0,18.0,3.0,23.0,3.0
 US,Morning Consult,B/C,16400  lv,11/10,0.0,32.0,2.0,3.0,8.0,2.0,20.0,1.0,19.0,3.0
-New Hampshire,Quinnipiac University,B+,1134  lv,11/10,10.4,20.0,0.0,1.0,15.0,3.0,14.0,3.0,16.0,4.0
-Arizona,OH Predictive Insights/MBQF,B/C,260  lv,11/8,2.7,29.0,0.0,2.0,9.0,2.0,16.0,1.0,18.0,4.0
-North Carolina,High Point University,A/B,347  a,11/7,5.9,33.0,0.0,2.0,4.0,3.0,18.0,2.0,13.0,2.0
-Iowa,Public Policy Polling,B,715  lv,11/6,6.1,13.0,0.0,1.0,20.0,9.0,14.0,6.0,21.0,3.0
-Iowa,Quinnipiac University,B+,698  lv,11/5,7.7,15.0,0.0,1.0,19.0,5.0,17.0,3.0,20.0,3.0
+New Hampshire,Quinnipiac University,B+,1134  lv,11/10,10.1,20.0,0.0,1.0,15.0,3.0,14.0,3.0,16.0,4.0
+Arizona,OH Predictive Insights/MBQF,B/C,260  lv,11/8,2.6,29.0,0.0,2.0,9.0,2.0,16.0,1.0,18.0,4.0
+North Carolina,High Point University,A/B,347  a,11/7,5.8,33.0,0.0,2.0,4.0,3.0,18.0,2.0,13.0,2.0
+Iowa,Public Policy Polling,B,715  lv,11/6,5.9,13.0,0.0,1.0,20.0,9.0,14.0,6.0,21.0,3.0
+Iowa,Quinnipiac University,B+,698  lv,11/5,7.5,15.0,0.0,1.0,19.0,5.0,17.0,3.0,20.0,3.0
 US,YouGov,B-,579  lv,11/5,0.0,26.0,0.0,2.0,8.0,2.0,14.0,1.0,25.0,1.0
 US,Change Research,C,456  lv,11/3,0.0,17.0,0.0,1.0,14.0,2.0,17.0,1.0,21.0,4.0
 US,Ipsos,B-,686  a,11/4,0.0,22.0,0.0,1.0,6.0,0.0,15.0,1.0,11.0,2.0
-US,USC Dornsife/LA Times,B/C,2599  lv,11/3,5.6,28.0,0.0,1.0,6.0,2.0,13.0,1.0,16.0,2.0
+US,USC Dornsife/LA Times,B/C,2599  lv,11/3,5.5,28.0,0.0,1.0,6.0,2.0,13.0,1.0,16.0,2.0
 US,Monmouth University,A+,345  rv,11/3,0.0,23.0,0.0,3.0,9.0,2.0,20.0,1.0,23.0,3.0
 US,Morning Consult,B/C,16071  lv,11/3,0.0,32.0,0.0,2.0,7.0,2.0,20.0,1.0,20.0,3.0
-Nevada,Emerson College,A-,451  lv,11/3,8.2,30.0,0.0,1.0,5.0,1.0,19.0,3.0,22.0,5.0
-Michigan,Emerson College,A-,454  lv,11/3,8.3,34.0,0.0,3.0,8.0,0.0,28.0,0.0,19.0,2.0
+Nevada,Emerson College,A-,451  lv,11/3,8.0,30.0,0.0,1.0,5.0,1.0,19.0,3.0,22.0,5.0
+Michigan,Emerson College,A-,454  lv,11/3,8.1,34.0,0.0,3.0,8.0,0.0,28.0,0.0,19.0,2.0
 US,Harris Insights & Analytics,C+,429  rv,11/2,0.0,26.0,0.0,2.0,6.0,3.0,14.0,1.0,15.0,1.0
 Nevada,Mellman Group,B/C,600  lv,11/2,3.4,29.0,0.0,1.0,7.0,3.0,19.0,4.0,19.0,3.0
 US,YouGov,B-,541  lv,10/31,0.0,28.0,0.0,3.0,8.0,2.0,12.0,1.0,27.0,2.0
@@ -135,40 +141,40 @@ US,Harris Insights & Analytics,C+,640  rv,10/31,0.0,19.0,6.0,3.0,2.0,1.0,12.0,1.
 US,Harris Insights & Analytics,C+,640  rv,10/31,0.0,33.0,0.0,3.0,4.0,3.0,18.0,1.0,15.0,2.0
 US,NBC News/Wall Street Journal,A/B,414  lv,10/30,0.0,27.0,0.0,2.0,6.0,5.0,19.0,0.0,23.0,3.0
 US,Fox News/Beacon Research/Shaw & Co. Research,A-,471  lv,10/30,0.0,31.0,0.0,2.0,7.0,2.0,19.0,1.0,21.0,3.0
-US,ABC News/Washington Post,A+,402  rv,10/30,11.4,28.0,0.0,2.0,9.0,2.0,17.0,1.0,23.0,2.0
+US,ABC News/Washington Post,A+,402  rv,10/30,11.2,28.0,0.0,2.0,9.0,2.0,17.0,1.0,23.0,2.0
 US,ABC News/Washington Post,A+,452  a,10/30,0.0,27.0,0.0,2.0,7.0,1.0,19.0,1.0,21.0,2.0
-Iowa,Siena College/New York Times Upshot,A+,439  lv,10/30,13.1,17.0,0.0,2.0,18.0,4.0,19.0,2.0,22.0,3.0
+Iowa,Siena College/New York Times Upshot,A+,439  lv,10/30,12.9,17.0,0.0,2.0,18.0,4.0,19.0,2.0,22.0,3.0
 US,YouGov,B-,630  lv,10/29,0.0,27.0,0.0,1.0,8.0,2.0,14.0,1.0,23.0,3.0
-Arizona,Emerson College,A-,339  lv,10/28,6.7,28.0,0.0,0.0,12.0,2.0,21.0,0.0,21.0,5.0
+Arizona,Emerson College,A-,339  lv,10/28,6.5,28.0,0.0,0.0,12.0,2.0,21.0,0.0,21.0,5.0
 US,Swayable,-,2172  lv,10/27,0.0,29.0,0.0,3.0,6.0,2.0,17.0,1.0,19.0,3.0
 Massachusetts,Evan Falchuk and Lou DiNatale,-,443  lv,10/25,0.0,35.0,0.0,0.0,0.0,0.0,13.0,0.0,41.0,0.0
 US,Swayable,-,4358  a,10/27,0.0,27.0,0.0,3.0,5.0,2.0,19.0,2.0,15.0,4.0
-Texas,YouGov,B-,541  lv,10/27,3.5,23.0,0.0,1.0,6.0,2.0,12.0,1.0,18.0,4.0
+Texas,YouGov,B-,541  lv,10/27,3.4,23.0,0.0,1.0,6.0,2.0,12.0,1.0,18.0,4.0
 Pennsylvania,Franklin & Marshall College,B/C,226  rv,10/27,1.9,30.0,0.0,1.0,8.0,2.0,12.0,0.0,18.0,1.0
-New Hampshire,University of New Hampshire,B,574  lv,10/27,4.8,15.0,0.0,2.0,10.0,5.0,21.0,3.0,18.0,5.0
+New Hampshire,University of New Hampshire,B,574  lv,10/27,4.7,15.0,0.0,2.0,10.0,5.0,21.0,3.0,18.0,5.0
 US,Morning Consult,B/C,15431  lv,10/27,0.0,32.0,0.0,2.0,7.0,2.0,20.0,1.0,20.0,3.0
-Wisconsin,Siena College/New York Times Upshot,A+,292  lv,10/26,9.5,23.0,0.0,1.0,5.0,0.0,20.0,0.0,25.0,2.0
-North Carolina,Siena College/New York Times Upshot,A+,324  rv,10/26,9.2,29.0,0.0,1.0,1.0,0.0,13.0,0.0,15.0,0.0
-Florida,Siena College/New York Times Upshot,A+,236  rv,10/26,7.6,27.0,0.0,0.0,5.0,2.0,13.0,0.0,19.0,0.0
+Wisconsin,Siena College/New York Times Upshot,A+,292  lv,10/26,9.3,23.0,0.0,1.0,5.0,0.0,20.0,0.0,25.0,2.0
+North Carolina,Siena College/New York Times Upshot,A+,324  rv,10/26,9.0,29.0,0.0,1.0,1.0,0.0,13.0,0.0,15.0,0.0
+Florida,Siena College/New York Times Upshot,A+,236  rv,10/26,7.4,27.0,0.0,0.0,5.0,2.0,13.0,0.0,19.0,0.0
 US,Suffolk University,A-,399  lv,10/26,0.0,26.0,0.0,2.0,10.0,2.0,13.0,1.0,17.0,3.0
-Pennsylvania,Siena College/New York Times Upshot,A+,304  rv,10/25,8.8,28.0,0.0,0.0,4.0,1.0,14.0,0.0,16.0,2.0
-Michigan,Siena College/New York Times Upshot,A+,203  lv,10/25,7.6,30.0,0.0,0.0,3.0,1.0,17.0,0.0,21.0,1.0
+Pennsylvania,Siena College/New York Times Upshot,A+,304  rv,10/25,8.6,28.0,0.0,0.0,4.0,1.0,14.0,0.0,16.0,2.0
+Michigan,Siena College/New York Times Upshot,A+,203  lv,10/25,7.4,30.0,0.0,0.0,3.0,1.0,17.0,0.0,21.0,1.0
 US,Echelon Insights,-,449  lv,10/25,0.0,62.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 US,Echelon Insights,-,449  lv,10/25,0.0,60.0,0.0,0.0,0.0,0.0,28.0,0.0,0.0,0.0
 US,Echelon Insights,-,449  lv,10/25,0.0,49.0,0.0,0.0,0.0,0.0,0.0,0.0,38.0,0.0
 US,Echelon Insights,-,449  lv,10/25,0.0,32.0,0.0,2.0,6.0,2.0,15.0,1.0,22.0,1.0
-Arizona,Siena College/New York Times Upshot,A+,209  rv,10/23,6.9,24.0,0.0,0.0,5.0,1.0,16.0,0.0,15.0,1.0
+Arizona,Siena College/New York Times Upshot,A+,209  rv,10/23,6.8,24.0,0.0,0.0,5.0,1.0,16.0,0.0,15.0,1.0
 US,McLaughlin & Associates,C/D,468  lv,10/22,0.0,0.0,1.0,4.0,5.0,2.0,23.0,2.0,20.0,6.0
 US,McLaughlin & Associates,C/D,468  lv,10/22,0.0,28.0,0.0,3.0,3.0,2.0,18.0,0.0,16.0,6.0
-Maine,Maine People's Resource Center,B/C,728  lv,10/21,2.9,27.0,0.0,3.0,9.0,0.0,15.0,0.0,22.0,2.0
+Maine,Maine People's Resource Center,B/C,728  lv,10/21,2.8,27.0,0.0,3.0,9.0,0.0,15.0,0.0,22.0,2.0
 Iowa,Civiqs,-,598  lv,10/22,0.0,12.0,0.0,1.0,20.0,4.0,18.0,3.0,28.0,2.0
 US,YouGov,B-,628  lv,10/22,0.0,24.0,0.0,2.0,8.0,1.0,15.0,1.0,21.0,3.0
 US,Harris Insights & Analytics,C+,440  rv,10/22,0.0,27.0,0.0,1.0,6.0,1.0,14.0,1.0,19.0,2.0
 South Carolina,Change Research,C,731  lv,10/21,0.0,30.0,0.0,3.0,9.0,3.0,13.0,5.0,19.0,4.0
 US,Quinnipiac University,B+,713  rv,10/21,0.0,21.0,0.0,1.0,10.0,3.0,15.0,1.0,28.0,1.0
-South Carolina,Monmouth University,A+,402  lv,10/21,11.3,33.0,0.0,2.0,3.0,2.0,12.0,4.0,16.0,2.0
+South Carolina,Monmouth University,A+,402  lv,10/21,11.1,33.0,0.0,2.0,3.0,2.0,12.0,4.0,16.0,2.0
 US,Emerson College,A-,430  lv,10/21,0.0,27.0,0.0,3.0,6.0,1.0,25.0,1.0,21.0,4.0
-Massachusetts,MassINC Polling Group,A/B,456  lv,10/20,6.2,18.0,0.0,0.0,7.0,1.0,13.0,1.0,33.0,1.0
+Massachusetts,MassINC Polling Group,A/B,456  lv,10/20,6.1,18.0,0.0,0.0,7.0,1.0,13.0,1.0,33.0,1.0
 US,SSRS,A/B,424  rv,10/20,0.0,34.0,0.0,1.0,6.0,3.0,16.0,1.0,19.0,2.0
 US,Morning Consult,B/C,11521  lv,10/20,0.0,30.0,0.0,3.0,6.0,2.0,18.0,1.0,21.0,3.0
 California,Change Research,C,1631  lv,10/18,0.0,19.0,0.0,1.0,9.0,2.0,24.0,1.0,28.0,3.0
@@ -180,13 +186,13 @@ Minnesota,Kaiser Family Foundation,-,249  lv,10/15,1.3,14.0,0.0,1.0,7.0,15.0,13.
 Michigan,Kaiser Family Foundation,-,208  lv,10/15,1.3,19.0,0.0,1.0,7.0,1.0,15.0,0.0,25.0,1.0
 Wyoming,Montana State University Billings,B/C,14  lv,10/16,,0.0,0.0,0.0,0.0,1.0,0.0,0.0,82.0,2.0
 Montana,Montana State University Billings,B/C,40  lv,10/16,,15.0,0.0,0.0,2.0,2.0,2.0,0.0,40.0,0.0
-Iowa,Suffolk University,A-,500  lv,10/18,7.4,18.0,0.0,1.0,13.0,3.0,9.0,3.0,17.0,1.0
+Iowa,Suffolk University,A-,500  lv,10/18,7.2,18.0,0.0,1.0,13.0,3.0,9.0,3.0,17.0,1.0
 US,Harris Insights & Analytics,C+,1839  lv,10/18,0.0,34.0,0.0,2.0,4.0,2.0,16.0,1.0,18.0,2.0
 US,Ipsos,B-,703  a,10/18,0.0,21.0,0.0,1.0,5.0,1.0,16.0,0.0,15.0,2.0
 US,Harris Insights & Analytics,C+,763  lv,10/18,0.0,33.0,0.0,1.0,4.0,2.0,17.0,2.0,18.0,2.0
 California,SurveyUSA,A,553  lv,10/16,0.0,33.0,0.0,2.0,4.0,1.0,17.0,1.0,18.0,4.0
 US,SurveyUSA,A,1071  lv,10/16,0.0,32.0,0.0,2.0,5.0,2.0,17.0,1.0,22.0,2.0
-US,Public Religion Research Institute,A/B,436  rv,10/13,5.2,25.0,0.0,3.0,4.0,1.0,17.0,0.0,16.0,3.0
+US,Public Religion Research Institute,A/B,436  rv,10/13,5.1,25.0,0.0,3.0,4.0,1.0,17.0,0.0,16.0,3.0
 US,Public Religion Research Institute,A/B,487  a,10/13,0.0,24.0,0.0,3.0,4.0,1.0,16.0,0.0,16.0,3.0
 US,Harris Insights & Analytics,C+,815  lv,10/17,0.0,34.0,0.0,2.0,3.0,2.0,15.0,2.0,16.0,2.0
 US,Swayable,-,2077  lv,10/8,0.0,33.0,0.0,3.0,4.0,2.0,16.0,0.0,21.0,3.0
@@ -197,19 +203,19 @@ US,YouGov,B-,623  lv,10/15,0.0,25.0,0.0,2.0,6.0,2.0,13.0,1.0,28.0,2.0
 US,Harris Insights & Analytics,C+,828  lv,10/15,0.0,35.0,0.0,2.0,4.0,1.0,14.0,1.0,17.0,2.0
 California,Capitol Weekly,-,590  lv,10/14,0.0,21.0,0.0,2.0,6.0,1.0,15.0,1.0,35.0,3.0
 US,Harris Insights & Analytics,C+,789  lv,10/14,0.0,34.0,0.0,2.0,4.0,1.0,15.0,0.0,20.0,3.0
-Maine,Public Policy Polling,B,366  v,10/13,2.9,19.0,0.0,2.0,9.0,0.0,12.0,0.0,31.0,3.0
+Maine,Public Policy Polling,B,366  v,10/13,2.8,19.0,0.0,2.0,9.0,0.0,12.0,0.0,31.0,3.0
 US,Morning Consult,B/C,15683  lv,10/13,0.0,32.0,0.0,2.0,5.0,1.0,19.0,1.0,21.0,3.0
 US,Quinnipiac University,B+,505  rv,10/13,0.0,27.0,0.0,2.0,8.0,2.0,11.0,2.0,30.0,2.0
 New Hampshire,RKM Research and Communications Inc.,A/B,422  lv,10/13,0.0,20.0,0.0,2.0,5.0,2.0,15.0,1.0,20.0,1.0
-New Hampshire,RKM Research and Communications Inc.,A/B,422  lv,10/13,5.5,24.0,0.0,2.0,9.0,2.0,22.0,1.0,25.0,1.0
+New Hampshire,RKM Research and Communications Inc.,A/B,422  lv,10/13,0.0,24.0,0.0,2.0,9.0,2.0,22.0,1.0,25.0,1.0
 South Carolina,YouGov,B-,846  lv,10/11,0.0,43.0,0.0,3.0,4.0,1.0,16.0,2.0,18.0,1.0
 New Hampshire,YouGov,B-,488  lv,10/11,0.0,24.0,0.0,1.0,7.0,2.0,17.0,4.0,32.0,5.0
 Iowa,YouGov,B-,597  lv,10/11,0.0,22.0,0.0,2.0,14.0,2.0,21.0,3.0,22.0,0.0
 US,Harris Insights & Analytics,C+,1841  lv,10/11,0.0,35.0,0.0,2.0,5.0,1.0,15.0,1.0,18.0,2.0
 US,Harris Insights & Analytics,C+,812  lv,10/11,0.0,36.0,0.0,2.0,6.0,1.0,14.0,1.0,16.0,2.0
 New York,Siena College,A-,340  rv,10/10,0.0,21.0,0.0,1.0,4.0,1.0,16.0,0.0,21.0,3.0
-South Carolina,Optimus,C/D,607  lv,10/10,1.1,32.0,0.0,2.0,4.0,0.0,8.0,0.0,16.0,2.0
-New Hampshire,Optimus,C/D,610  lv,10/10,1.1,18.0,0.0,2.0,7.0,0.0,9.0,0.0,25.0,2.0
+South Carolina,Optimus,C/D,607  lv,10/10,1.0,32.0,0.0,2.0,4.0,0.0,8.0,0.0,16.0,2.0
+New Hampshire,Optimus,C/D,610  lv,10/10,1.0,18.0,0.0,2.0,7.0,0.0,9.0,0.0,25.0,2.0
 Iowa,Optimus,C/D,548  lv,10/10,1.0,22.0,0.0,2.0,17.0,0.0,5.0,0.0,25.0,1.0
 US,Harris Insights & Analytics,C+,813  lv,10/10,0.0,35.0,0.0,2.0,6.0,0.0,14.0,1.0,17.0,2.0
 North Carolina,East Carolina University,-,291  lv,10/9,1.3,29.0,0.0,1.0,4.0,3.0,19.0,0.0,17.0,9.0
@@ -239,8 +245,8 @@ US,Harris Insights & Analytics,C+,888  rv,10/6,0.0,41.0,0.0,0.0,0.0,0.0,38.0,0.0
 US,Morning Consult,B/C,16529  lv,10/6,0.0,33.0,0.0,2.0,5.0,1.0,19.0,1.0,21.0,3.0
 US,Swayable,-,3491  lv,9/26,0.0,33.0,0.0,2.0,5.0,1.0,16.0,1.0,20.0,2.0
 US,Swayable,-,7120  a,9/26,0.0,28.0,0.0,2.0,4.0,2.0,19.0,2.0,15.0,3.0
-US,Avalanche Strategy,-,1043  lv,10/4,0.0,27.0,0.0,0.0,7.0,0.0,12.0,0.0,29.0,0.0
-US,YouGov Blue/Data for Progress,-,1276  lv,10/4,2.1,23.0,0.0,2.0,6.0,1.0,15.0,0.0,36.0,3.0
+US,Avalanche Strategy,-,1043  lv,10/4,1.6,27.0,0.0,0.0,7.0,0.0,12.0,0.0,29.0,0.0
+US,YouGov Blue/Data for Progress,-,1276  lv,10/4,2.0,23.0,0.0,2.0,6.0,1.0,15.0,0.0,36.0,3.0
 US,Harris Insights & Analytics,C+,1840  lv,10/4,0.0,35.0,0.0,2.0,4.0,1.0,13.0,1.0,19.0,2.0
 US,Harris Insights & Analytics,C+,782  lv,10/4,0.0,35.0,0.0,2.0,3.0,1.0,12.0,1.0,17.0,2.0
 US,IBD/TIPP,A/B,341  rv,10/3,0.0,26.0,0.0,0.0,7.0,1.0,10.0,0.0,27.0,3.0
@@ -248,7 +254,7 @@ US,Harris Insights & Analytics,C+,783  lv,10/3,0.0,33.0,0.0,2.0,3.0,2.0,12.0,1.0
 Wisconsin,Change Research,C,663  lv,10/2,1.7,11.0,0.0,1.0,6.0,1.0,25.0,0.0,34.0,3.0
 Wisconsin,Fox News/Beacon Research/Shaw & Co. Research,A-,663  lv,10/2,0.0,28.0,0.0,2.0,7.0,2.0,17.0,0.0,22.0,2.0
 South Carolina,Fox News/Beacon Research/Shaw & Co. Research,A-,803  lv,10/2,0.0,41.0,0.0,3.0,2.0,0.0,10.0,4.0,12.0,1.0
-Ohio,Emerson College,A-,353  lv,10/2,5.3,29.0,0.0,0.0,5.0,0.0,27.0,0.0,21.0,3.0
+Ohio,Emerson College,A-,353  lv,10/2,5.2,29.0,0.0,0.0,5.0,0.0,27.0,0.0,21.0,3.0
 Michigan,Denno Research,-,217  lv,9/24,1.2,27.0,0.0,1.0,4.0,1.0,12.0,0.0,23.0,1.0
 US,Harris Insights & Analytics,C+,783  lv,10/2,0.0,32.0,0.0,2.0,4.0,2.0,14.0,1.0,22.0,2.0
 US,YouGov,B-,602  lv,10/1,0.0,22.0,0.0,2.0,7.0,1.0,14.0,1.0,26.0,3.0
@@ -271,7 +277,7 @@ US,Harris Insights & Analytics,C+,3100  rv,9/27,0.0,28.0,0.0,2.0,4.0,1.0,15.0,1.
 US,Harris Insights & Analytics,C+,772  lv,9/27,0.0,33.0,0.0,3.0,5.0,2.0,13.0,1.0,19.0,1.0
 US,Harris Insights & Analytics,C+,1309  rv,9/27,0.0,28.0,0.0,3.0,4.0,2.0,13.0,1.0,15.0,2.0
 Nevada,SSRS,A/B,324  lv,9/26,4.2,22.0,0.0,2.0,4.0,1.0,22.0,4.0,18.0,3.0
-South Carolina,SSRS,A/B,406  lv,9/26,4.7,37.0,0.0,2.0,4.0,1.0,11.0,3.0,16.0,0.0
+South Carolina,SSRS,A/B,406  lv,9/26,4.6,37.0,0.0,2.0,4.0,1.0,11.0,3.0,16.0,0.0
 US,Harris Insights & Analytics,C+,801  lv,9/26,0.0,31.0,0.0,3.0,5.0,2.0,13.0,0.0,20.0,2.0
 US,Harris Insights & Analytics,C+,1335  rv,9/26,0.0,28.0,0.0,3.0,3.0,1.0,14.0,0.0,15.0,2.0
 California,Public Policy Institute of California,A/B,692  lv,9/25,0.0,22.0,0.0,2.0,6.0,1.0,21.0,1.0,23.0,3.0
@@ -285,7 +291,7 @@ US,Harris Insights & Analytics,C+,812  lv,9/24,0.0,34.0,0.0,1.0,4.0,1.0,15.0,0.0
 US,Harris Insights & Analytics,C+,1352  rv,9/24,0.0,29.0,0.0,1.0,4.0,1.0,16.0,1.0,16.0,2.0
 US,Quinnipiac University,B+,561  rv,9/23,0.0,25.0,0.0,0.0,7.0,2.0,16.0,0.0,27.0,2.0
 US,Emerson College,A-,462  lv,9/23,0.0,25.0,0.0,2.0,6.0,0.0,22.0,0.0,23.0,8.0
-Nevada,Suffolk University,A-,500  lv,9/23,5.9,23.0,0.0,2.0,3.0,0.0,14.0,3.0,19.0,3.0
+Nevada,Suffolk University,A-,500  lv,9/23,5.8,23.0,0.0,2.0,3.0,0.0,14.0,3.0,19.0,3.0
 US,Harris Insights & Analytics,C+,789  lv,9/23,0.0,33.0,0.0,2.0,5.0,1.0,17.0,0.0,19.0,2.0
 US,Harris Insights & Analytics,C+,1331  rv,9/23,0.0,28.0,0.0,1.0,4.0,1.0,17.0,1.0,16.0,2.0
 US,David Binder Research,-,1200  lv,9/22,0.0,34.0,0.0,3.0,5.0,1.0,15.0,1.0,17.0,2.0
@@ -300,21 +306,21 @@ Georgia,Landmark Communications,B,500  lv,9/21,3.3,41.0,0.0,2.0,5.0,1.0,8.0,0.0,
 New Hampshire,Monmouth University,A+,401  lv,9/21,0.0,25.0,0.0,2.0,10.0,2.0,12.0,2.0,27.0,2.0
 US,Harris Insights & Analytics,C+,440  rv,9/21,0.0,31.0,0.0,2.0,5.0,2.0,16.0,1.0,14.0,2.0
 South Carolina,Tel Opinion Research,B/C,600  lv,9/20,0.0,41.0,0.0,0.0,0.0,0.0,9.0,0.0,19.0,0.0
-South Carolina,Tel Opinion Research,B/C,600  lv,9/20,2.0,36.0,0.0,0.0,3.0,0.0,7.0,0.0,14.0,1.0
+South Carolina,Tel Opinion Research,B/C,600  lv,9/20,1.9,36.0,0.0,0.0,3.0,0.0,7.0,0.0,14.0,1.0
 South Carolina,Tel Opinion Research,B/C,600  lv,9/20,0.0,19.0,0.0,0.0,2.0,0.0,3.0,1.0,9.0,0.0
 US,Harris Insights & Analytics,C+,1831  lv,9/20,0.0,32.0,0.0,3.0,5.0,1.0,15.0,1.0,17.0,2.0
 US,Harris Insights & Analytics,C+,761  lv,9/20,0.0,32.0,0.0,3.0,5.0,1.0,15.0,1.0,20.0,2.0
 US,Harris Insights & Analytics,C+,1340  rv,9/20,0.0,28.0,0.0,3.0,4.0,1.0,16.0,1.0,17.0,2.0
 North Carolina,High Point University,A/B,348  a,9/19,0.0,31.0,0.0,4.0,3.0,1.0,20.0,0.0,15.0,4.0
 New Hampshire,Tel Opinion Research,B/C,600  lv,9/19,0.0,28.0,0.0,0.0,0.0,0.0,14.0,0.0,39.0,0.0
-New Hampshire,Tel Opinion Research,B/C,600  lv,9/19,2.0,24.0,0.0,0.0,9.0,0.0,13.0,0.0,29.0,1.0
+New Hampshire,Tel Opinion Research,B/C,600  lv,9/19,1.9,24.0,0.0,0.0,9.0,0.0,13.0,0.0,29.0,1.0
 New Hampshire,Tel Opinion Research,B/C,600  lv,9/19,0.0,15.0,0.0,0.0,4.0,2.0,8.0,0.0,18.0,0.0
 Maryland,Goucher College,-,300  lv,9/19,1.2,33.0,0.0,1.0,5.0,1.0,10.0,0.0,21.0,1.0
 US,Harris Insights & Analytics,C+,773  lv,9/19,0.0,31.0,0.0,3.0,5.0,1.0,16.0,1.0,19.0,2.0
 US,Harris Insights & Analytics,C+,1343  rv,9/19,0.0,26.0,0.0,3.0,4.0,1.0,16.0,1.0,16.0,2.0
 California,"University of California, Berkeley",B/C,2272  lv,9/18,0.0,20.0,0.0,1.0,6.0,2.0,19.0,0.0,29.0,2.0
 Florida,Tel Opinion Research,B/C,800  lv,9/18,0.0,43.0,0.0,0.0,0.0,0.0,10.0,0.0,26.0,0.0
-Florida,Tel Opinion Research,B/C,800  lv,9/18,2.2,37.0,0.0,0.0,5.0,0.0,9.0,0.0,18.0,2.0
+Florida,Tel Opinion Research,B/C,800  lv,9/18,2.1,37.0,0.0,0.0,5.0,0.0,9.0,0.0,18.0,2.0
 Florida,Tel Opinion Research,B/C,800  lv,9/18,0.0,24.0,0.0,0.0,2.0,0.0,5.0,0.0,11.0,1.0
 Iowa,Selzer & Co.,A+,602  lv,9/18,0.0,20.0,0.0,3.0,9.0,3.0,11.0,2.0,22.0,2.0
 US,Harris Insights & Analytics,C+,768  lv,9/18,0.0,34.0,0.0,2.0,5.0,1.0,14.0,1.0,18.0,2.0
@@ -327,19 +333,19 @@ US,YouGov,B-,603  lv,9/17,0.0,25.0,0.0,2.0,8.0,1.0,15.0,0.0,19.0,3.0
 US,Harris Insights & Analytics,C+,799  lv,9/17,0.0,32.0,0.0,3.0,5.0,2.0,14.0,1.0,15.0,2.0
 US,Harris Insights & Analytics,C+,1329  rv,9/17,0.0,27.0,0.0,3.0,4.0,1.0,14.0,1.0,13.0,3.0
 Missouri,Show Me Victories,-,400  lv,9/16,1.2,34.0,0.0,1.0,10.0,1.0,14.0,0.0,22.0,1.0
-New Jersey,Monmouth University,A+,325  rv,9/16,6.8,26.0,0.0,9.0,6.0,1.0,18.0,0.0,20.0,1.0
-US,Civiqs,-,1291  lv,9/16,1.9,24.0,0.0,1.0,7.0,1.0,14.0,1.0,30.0,2.0
+New Jersey,Monmouth University,A+,325  rv,9/16,6.7,26.0,0.0,9.0,6.0,1.0,18.0,0.0,20.0,1.0
+US,Civiqs,-,1291  lv,9/16,1.8,24.0,0.0,1.0,7.0,1.0,14.0,1.0,30.0,2.0
 Iowa,David Binder Research,-,500  lv,9/16,1.4,25.0,0.0,2.0,12.0,8.0,9.0,3.0,23.0,2.0
 US,SurveyUSA,A,1017  lv,9/16,0.0,33.0,0.0,4.0,5.0,1.0,17.0,0.0,19.0,3.0
 US,NBC News/Wall Street Journal,A/B,506  lv,9/16,0.0,31.0,0.0,2.0,7.0,2.0,14.0,1.0,25.0,4.0
 California,Emerson College,A-,424  lv,9/16,5.1,26.0,0.0,1.0,4.0,0.0,26.0,1.0,20.0,7.0
 US,Harris Insights & Analytics,C+,812  lv,9/16,0.0,33.0,0.0,4.0,5.0,1.0,14.0,1.0,14.0,2.0
 US,Harris Insights & Analytics,C+,1332  rv,9/16,0.0,29.0,0.0,3.0,4.0,1.0,14.0,1.0,12.0,2.0
-Virginia,Research America Inc.,B/C,882  rv,9/15,2.2,23.0,0.0,1.0,4.0,2.0,9.0,0.0,9.0,2.0
+Virginia,Research America Inc.,B/C,882  rv,9/15,2.1,23.0,0.0,1.0,4.0,2.0,9.0,0.0,9.0,2.0
 Virginia,Research America Inc.,B/C,1009  a,9/15,0.0,23.0,0.0,1.0,4.0,2.0,10.0,0.0,10.0,3.0
 California,Change Research,C,3325  lv,9/15,0.0,18.0,0.0,2.0,10.0,1.0,23.0,0.0,25.0,3.0
 Texas,University of Texas at Tyler,B/C,474  rv,9/15,0.0,28.0,0.0,6.0,4.0,0.0,17.0,1.0,11.0,1.0
-Florida,Florida Atlantic University,B/C,407  lv,9/15,2.0,34.0,0.0,1.0,5.0,0.0,14.0,0.0,24.0,2.0
+Florida,Florida Atlantic University,B/C,407  lv,9/15,1.9,34.0,0.0,1.0,5.0,0.0,14.0,0.0,24.0,2.0
 California,SurveyUSA,A,547  lv,9/15,0.0,27.0,0.0,2.0,3.0,1.0,18.0,0.0,16.0,7.0
 US,Morning Consult,B/C,7487  lv,9/15,0.0,32.0,0.0,3.0,5.0,2.0,20.0,1.0,18.0,3.0
 California,Capitol Weekly,-,599  lv,9/13,0.0,18.0,0.0,1.0,7.0,1.0,21.0,0.0,29.0,4.0
@@ -354,7 +360,7 @@ US,Harris Insights & Analytics,C+,801  lv,9/12,0.0,38.0,0.0,1.0,4.0,1.0,14.0,1.0
 US,Harris Insights & Analytics,C+,1319  rv,9/12,0.0,32.0,0.0,2.0,3.0,1.0,15.0,1.0,11.0,2.0
 Georgia,Change Research,C,755  lv,9/11,1.5,33.0,0.0,2.0,7.0,1.0,17.0,0.0,22.0,3.0
 US,GQR Research (GQRR),C+,241  lv,9/11,1.4,30.0,0.0,4.0,4.0,2.0,21.0,0.0,19.0,2.0
-New Hampshire,Harris Insights & Analytics,C+,595  lv,9/11,1.9,22.0,0.0,3.0,5.0,1.0,21.0,2.0,15.0,2.0
+New Hampshire,Harris Insights & Analytics,C+,595  lv,9/11,1.8,22.0,0.0,3.0,5.0,1.0,21.0,2.0,15.0,2.0
 US,Harris Insights & Analytics,C+,807  lv,9/11,0.0,35.0,0.0,2.0,5.0,1.0,17.0,1.0,15.0,3.0
 US,Harris Insights & Analytics,C+,1313  rv,9/11,0.0,30.0,0.0,2.0,4.0,1.0,18.0,1.0,11.0,2.0
 US,McLaughlin & Associates,C/D,454  lv,9/10,0.0,28.0,0.0,4.0,6.0,1.0,21.0,0.0,12.0,2.0
@@ -365,7 +371,7 @@ US,YouGov,B-,632  lv,9/10,0.0,24.0,0.0,2.0,5.0,1.0,17.0,0.0,24.0,2.0
 US,Harris Insights & Analytics,C+,815  lv,9/10,0.0,33.0,0.0,2.0,4.0,1.0,17.0,1.0,15.0,3.0
 US,Harris Insights & Analytics,C+,1339  rv,9/10,0.0,29.0,0.0,2.0,4.0,2.0,17.0,2.0,12.0,3.0
 US,SSRS,A/B,908  rv,9/9,0.0,24.0,0.0,2.0,6.0,1.0,17.0,1.0,18.0,2.0
-Texas,Quinnipiac University,B+,456  rv,9/9,3.5,28.0,0.0,1.0,3.0,2.0,12.0,0.0,18.0,1.0
+Texas,Quinnipiac University,B+,456  rv,9/9,3.4,28.0,0.0,1.0,3.0,2.0,12.0,0.0,18.0,1.0
 New Hampshire,Emerson College,A-,483  lv,9/9,0.0,24.0,0.0,4.0,11.0,1.0,13.0,1.0,21.0,3.0
 US,Harris Insights & Analytics,C+,788  lv,9/9,0.0,30.0,0.0,3.0,5.0,1.0,17.0,1.0,15.0,3.0
 US,Harris Insights & Analytics,C+,1322  rv,9/9,0.0,26.0,0.0,2.0,5.0,1.0,17.0,2.0,13.0,3.0
@@ -385,10 +391,10 @@ US,Harris Insights & Analytics,C+,1891  lv,9/6,0.0,33.0,0.0,2.0,5.0,1.0,15.0,1.0
 US,Harris Insights & Analytics,C+,3137  rv,9/6,0.0,28.0,0.0,2.0,5.0,1.0,17.0,1.0,13.0,2.0
 US,Harris Insights & Analytics,C+,829  lv,9/6,0.0,33.0,0.0,2.0,4.0,1.0,15.0,1.0,14.0,3.0
 US,Harris Insights & Analytics,C+,1352  rv,9/6,0.0,29.0,0.0,2.0,4.0,1.0,17.0,1.0,13.0,2.0
-Texas,Ragnar Research Partners,-,600  lv,9/5,1.2,23.0,0.0,1.0,6.0,0.0,12.0,0.0,15.0,0.0
+Texas,Ragnar Research Partners,-,600  lv,9/5,1.1,23.0,0.0,1.0,6.0,0.0,12.0,0.0,15.0,0.0
 US,ABC News/Washington Post,A+,437  a,9/5,0.0,27.0,0.0,1.0,4.0,1.0,19.0,0.0,17.0,3.0
 US,ABC News/Washington Post,A+,391  rv,9/5,0.0,29.0,0.0,1.0,4.0,2.0,19.0,1.0,18.0,3.0
-Massachusetts,Suffolk University,A-,500  lv,9/5,5.2,26.0,0.0,1.0,5.0,0.0,8.0,0.0,24.0,1.0
+Massachusetts,Suffolk University,A-,500  lv,9/5,5.1,26.0,0.0,1.0,5.0,0.0,8.0,0.0,24.0,1.0
 US,Harris Insights & Analytics,C+,846  lv,9/5,0.0,33.0,0.0,1.0,4.0,1.0,15.0,1.0,15.0,3.0
 US,Harris Insights & Analytics,C+,1372  rv,9/5,0.0,30.0,0.0,1.0,4.0,1.0,16.0,1.0,13.0,2.0
 US,TargetPoint/GQR Research,-,600  lv,9/4,1.2,26.0,0.0,1.0,5.0,2.0,15.0,0.0,23.0,0.0
@@ -443,11 +449,11 @@ US,Echelon Insights,-,479  rv,8/21,0.0,55.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 US,Echelon Insights,-,479  rv,8/21,0.0,52.0,0.0,0.0,0.0,0.0,0.0,0.0,32.0,0.0
 US,Echelon Insights,-,479  rv,8/21,0.0,55.0,0.0,0.0,0.0,0.0,35.0,0.0,0.0,0.0
 US,Harris Insights & Analytics,C+,1326  rv,8/21,0.0,28.0,0.0,2.0,4.0,1.0,17.0,1.0,10.0,2.0
-New Jersey,Change Research,C,635  lv,8/20,1.3,26.0,0.0,5.0,12.0,0.0,21.0,1.0,23.0,1.0
+New Jersey,Change Research,C,635  lv,8/20,1.2,26.0,0.0,5.0,12.0,0.0,21.0,1.0,23.0,1.0
 US,Monmouth University,A+,298  rv,8/20,0.0,19.0,0.0,4.0,4.0,1.0,20.0,0.0,20.0,3.0
 US,YouGov,B-,559  lv,8/20,0.0,22.0,0.0,2.0,7.0,0.0,19.0,0.0,17.0,1.0
 US,Harris Insights & Analytics,C+,1335  rv,8/20,0.0,28.0,0.0,3.0,4.0,1.0,17.0,1.0,9.0,2.0
-Colorado,Emerson College,A-,403  lv,8/19,4.2,25.0,0.0,2.0,5.0,0.0,26.0,0.0,20.0,4.0
+Colorado,Emerson College,A-,403  lv,8/19,4.1,25.0,0.0,2.0,5.0,0.0,26.0,0.0,20.0,4.0
 US,Harris Insights & Analytics,C+,1341  rv,8/19,0.0,27.0,0.0,3.0,3.0,1.0,17.0,1.0,9.0,2.0
 US,Swayable,-,1958  lv,8/6,0.0,31.0,0.0,3.0,5.0,1.0,17.0,0.0,15.0,2.0
 US,Swayable,-,4016  a,8/6,0.0,27.0,0.0,3.0,4.0,1.0,20.0,0.0,12.0,2.0
@@ -461,7 +467,7 @@ US,Harris Insights & Analytics,C+,909  rv,8/18,0.0,42.0,0.0,0.0,0.0,0.0,0.0,0.0,
 US,Harris Insights & Analytics,C+,909  rv,8/18,0.0,44.0,0.0,0.0,0.0,0.0,38.0,0.0,0.0,0.0
 US,Morning Consult,B/C,17115  lv,8/18,0.0,31.0,0.0,3.0,5.0,1.0,20.0,1.0,15.0,3.0
 US,Harris Insights & Analytics,C+,1350  rv,8/17,0.0,26.0,0.0,3.0,4.0,1.0,16.0,1.0,11.0,2.0
-Nevada,Gravis Marketing,C+,382  rv,8/16,1.3,25.0,0.0,3.0,5.0,2.0,10.0,6.0,15.0,2.0
+Nevada,Gravis Marketing,C+,382  rv,8/16,1.2,25.0,0.0,3.0,5.0,2.0,10.0,6.0,15.0,2.0
 US,Harris Insights & Analytics,C+,3118  rv,8/16,0.0,29.0,0.0,2.0,4.0,1.0,15.0,1.0,11.0,2.0
 US,Harris Insights & Analytics,C+,1317  rv,8/16,0.0,27.0,0.0,2.0,4.0,1.0,16.0,1.0,12.0,2.0
 US,Harris Insights & Analytics,C+,1336  rv,8/15,0.0,28.0,0.0,2.0,3.0,1.0,14.0,1.0,12.0,3.0
@@ -493,7 +499,7 @@ US,Quinnipiac University,B+,807  rv,8/5,0.0,32.0,0.0,2.0,5.0,1.0,14.0,0.0,21.0,1
 US,Ipsos,B-,1258  a,8/5,0.0,22.0,0.0,3.0,4.0,1.0,18.0,0.0,9.0,2.0
 US,Harris Insights & Analytics,C+,1339  rv,8/5,0.0,27.0,0.0,3.0,2.0,1.0,16.0,1.0,11.0,2.0
 US,Pew Research Center,B/C,1757  rv,8/4,2.1,26.0,0.0,1.0,5.0,1.0,12.0,0.0,16.0,1.0
-US,Public Policy Polling,B,588  v,8/4,2.3,36.0,0.0,4.0,4.0,2.0,12.0,0.0,13.0,2.0
+US,Public Policy Polling,B,588  v,8/4,2.2,36.0,0.0,4.0,4.0,2.0,12.0,0.0,13.0,2.0
 US,Change Research,C,1450  lv,8/4,0.0,23.0,0.0,2.0,9.0,1.0,23.0,0.0,26.0,2.0
 Iowa,Monmouth University,A+,401  lv,8/4,0.0,28.0,0.0,1.0,8.0,3.0,9.0,3.0,19.0,2.0
 Pennsylvania,Franklin & Marshall College,B/C,295  rv,8/4,0.0,28.0,0.0,2.0,6.0,0.0,12.0,0.0,21.0,0.0
@@ -536,7 +542,7 @@ California,Public Policy Institute of California,A/B,766  lv,7/23,0.0,11.0,0.0,0
 US,Fox News/Beacon Research/Shaw & Co. Research,A-,455  lv,7/23,0.0,33.0,0.0,2.0,5.0,3.0,15.0,1.0,12.0,3.0
 US,YouGov,B-,600  lv,7/23,0.0,25.0,0.0,2.0,6.0,1.0,13.0,1.0,18.0,2.0
 South Carolina,Monmouth University,A+,405  lv,7/22,0.0,39.0,0.0,2.0,5.0,1.0,10.0,2.0,9.0,0.0
-Ohio,Quinnipiac University,B+,556  rv,7/22,2.9,31.0,0.0,1.0,6.0,1.0,14.0,1.0,13.0,1.0
+Ohio,Quinnipiac University,B+,556  rv,7/22,2.8,31.0,0.0,1.0,6.0,1.0,14.0,1.0,13.0,1.0
 US,Morning Consult,B/C,17285  lv,7/21,0.0,33.0,0.0,2.0,5.0,1.0,18.0,1.0,14.0,2.0
 US,Swayable,-,1921  lv,7/7,0.0,28.0,0.0,3.0,6.0,0.0,18.0,0.0,12.0,1.0
 US,Swayable,-,4004  a,7/7,0.0,25.0,0.0,3.0,5.0,0.0,21.0,0.0,10.0,2.0
@@ -545,22 +551,22 @@ South Carolina,YouGov,B-,915  lv,7/18,0.0,39.0,0.0,3.0,5.0,1.0,17.0,1.0,12.0,1.0
 New Hampshire,YouGov,B-,504  lv,7/18,0.0,27.0,0.0,1.0,7.0,1.0,20.0,1.0,18.0,1.0
 Iowa,YouGov,B-,576  lv,7/18,0.0,24.0,0.0,3.0,7.0,4.0,19.0,2.0,17.0,0.0
 California,YouGov,B-,1404  lv,7/18,2.5,24.0,0.0,1.0,6.0,1.0,16.0,1.0,19.0,1.0
-Michigan,Climate Nexus,-,324  lv,7/17,0.9,35.0,0.0,2.0,4.0,1.0,16.0,1.0,14.0,1.0
+Michigan,Climate Nexus,-,324  lv,7/17,0.8,35.0,0.0,2.0,4.0,1.0,16.0,1.0,14.0,1.0
 US,Harris Insights & Analytics,C+,910  rv,7/17,0.0,26.0,0.0,2.0,4.0,1.0,14.0,1.0,9.0,1.0
 Tennessee,SurveyMonkey,D-,128  rv,7/16,0.2,33.0,0.0,1.0,6.0,1.0,13.0,0.0,18.0,0.0
-Mississippi,SurveyMonkey,D-,282  rv,7/16,0.3,47.0,0.0,3.0,3.0,1.0,21.0,0.0,7.0,0.0
+Mississippi,SurveyMonkey,D-,282  rv,7/16,0.2,47.0,0.0,3.0,3.0,1.0,21.0,0.0,7.0,0.0
 Georgia,SurveyMonkey,D-,402  rv,7/16,0.3,31.0,0.0,2.0,5.0,2.0,12.0,0.0,13.0,4.0
 Alabama,SurveyMonkey,D-,257  rv,7/16,0.2,36.0,0.0,2.0,5.0,0.0,15.0,0.0,9.0,1.0
 US,SurveyMonkey,D-,5548  rv,7/16,0.3,25.0,0.0,3.0,8.0,1.0,16.0,0.0,16.0,2.0
 US,YouGov,B-,572  lv,7/16,0.0,23.0,0.0,3.0,7.0,1.0,13.0,1.0,15.0,1.0
-California,Quinnipiac University,B+,519  rv,7/15,2.7,21.0,0.0,1.0,3.0,0.0,18.0,0.0,16.0,2.0
+California,Quinnipiac University,B+,519  rv,7/15,2.6,21.0,0.0,1.0,3.0,0.0,18.0,0.0,16.0,2.0
 New Hampshire,University of New Hampshire,B,386  lv,7/15,0.0,24.0,0.0,2.0,10.0,0.0,19.0,0.0,19.0,1.0
 US,YouGov,B-,1097  lv,7/14,0.0,25.0,0.0,1.0,6.0,0.0,16.0,0.0,23.0,2.0
-Colorado,Public Policy Polling,B,561  v,7/14,0.0,22.0,0.0,0.0,7.0,0.0,15.0,0.0,19.0,0.0
+Colorado,Public Policy Polling,B,561  v,7/14,1.6,22.0,0.0,0.0,7.0,0.0,15.0,0.0,19.0,0.0
 US,Morning Consult,B/C,16504  lv,7/14,0.0,32.0,0.0,2.0,5.0,1.0,19.0,0.0,14.0,2.0
 US,Harris Insights & Analytics,C+,446  rv,7/13,0.0,29.0,0.0,1.0,1.0,1.0,16.0,0.0,9.0,0.0
 New Hampshire,St. Anselm,-,351  lv,7/12,0.0,21.0,0.0,1.0,12.0,3.0,10.0,0.0,17.0,5.0
-Missouri,Remington Research Group,C-,1122  lv,7/11,0.0,43.0,0.0,0.0,5.0,0.0,4.0,0.0,15.0,0.0
+Missouri,Remington Research Group,C-,1122  lv,7/11,0.7,43.0,0.0,0.0,5.0,0.0,4.0,0.0,15.0,0.0
 California,Change Research,C,1609  lv,7/11,0.0,17.0,0.0,1.0,8.0,1.0,20.0,0.0,22.0,2.0
 South Carolina,Fox News/Beacon Research/Shaw & Co. Research,A-,701  lv,7/10,0.0,35.0,0.0,3.0,2.0,0.0,14.0,0.0,5.0,1.0
 New Hampshire,Change Research,C,1084  lv,7/9,1.1,19.0,0.0,1.0,13.0,1.0,20.0,0.0,22.0,1.0
@@ -637,7 +643,7 @@ Iowa,YouGov,B-,441  lv,6/12,0.0,30.0,0.0,3.0,11.0,4.0,22.0,0.0,12.0,0.0
 US,Fox News/Beacon Research/Shaw & Co. Research,A-,449  lv,6/12,0.0,32.0,0.0,3.0,8.0,2.0,13.0,0.0,9.0,2.0
 Minnesota,Change Research,C,772  lv,6/12,0.9,20.0,0.0,1.0,11.0,16.0,19.0,0.0,21.0,2.0
 Florida,Climate Nexus,-,676  rv,6/11,0.8,32.0,0.0,2.0,6.0,1.0,16.0,0.0,10.0,2.0
-Nevada,Monmouth University,A+,370  lv,6/11,4.5,36.0,0.0,2.0,7.0,1.0,13.0,0.0,19.0,2.0
+Nevada,Monmouth University,A+,370  lv,6/11,4.4,36.0,0.0,2.0,7.0,1.0,13.0,0.0,19.0,2.0
 US,YouGov,B-,513  lv,6/11,0.0,26.0,0.0,2.0,8.0,1.0,12.0,0.0,16.0,1.0
 California,"University of California, Berkeley",B/C,2131  lv,6/10,0.0,22.0,0.0,1.0,10.0,1.0,17.0,0.0,18.0,1.0
 US,Change Research,C,1621  lv,6/10,0.0,26.0,0.0,1.0,14.0,1.0,21.0,0.0,19.0,1.0
@@ -655,7 +661,7 @@ Texas,Change Research,C,1218  lv,6/3,1.0,24.0,0.0,1.0,8.0,1.0,13.0,0.0,12.0,1.0
 California,Capitol Weekly,-,951  lv,5/31,0.0,29.0,0.0,2.0,9.0,1.0,22.0,0.0,11.0,0.0
 Texas,Quinnipiac University,B+,407  rv,6/4,0.0,30.0,0.0,1.0,3.0,0.0,15.0,0.0,11.0,1.0
 US,YouGov,B-,550  lv,6/4,0.0,27.0,0.0,2.0,9.0,1.0,16.0,0.0,11.0,1.0
-North Carolina,Emerson College,A-,397  lv,6/3,2.7,39.0,0.0,1.0,8.0,1.0,22.0,0.0,15.0,1.0
+North Carolina,Emerson College,A-,397  lv,6/3,2.6,39.0,0.0,1.0,8.0,1.0,22.0,0.0,15.0,1.0
 US,Morning Consult,B/C,16587  lv,6/2,0.0,38.0,0.0,3.0,7.0,1.0,19.0,0.0,10.0,1.0
 US,Harris Insights & Analytics,C+,431  rv,6/2,0.0,35.0,0.0,3.0,8.0,1.0,16.0,0.0,5.0,0.0
 Wisconsin,Zogby Interactive/JZ Analytics,C,238  lv,5/29,0.6,28.0,0.0,2.0,7.0,3.0,13.0,0.0,14.0,0.0
@@ -769,7 +775,7 @@ Iowa,David Binder Research,-,500  lv,3/24,0.0,25.0,0.0,7.0,6.0,6.0,17.0,0.0,8.0,
 US,Morning Consult,B/C,13725  lv,3/24,0.0,35.0,0.0,4.0,2.0,2.0,25.0,0.0,7.0,0.0
 US,McLaughlin & Associates,C/D,447  lv,3/24,0.0,28.0,0.0,3.0,3.0,1.0,17.0,0.0,5.0,0.0
 Iowa,Emerson College,A-,249  lv,3/24,0.0,25.0,0.0,6.0,11.0,2.0,24.0,0.0,9.0,0.0
-Alabama,Change Research,C,1200  lv,3/23,0.8,42.0,0.0,9.0,3.0,1.0,13.0,0.0,6.0,1.0
+Alabama,Change Research,C,1200  lv,3/23,0.7,42.0,0.0,9.0,3.0,1.0,13.0,0.0,6.0,1.0
 Alabama,Change Research,C,1200  lv,3/23,0.0,0.0,0.0,14.0,4.0,2.0,27.0,0.0,12.0,1.0
 Florida,Tel Opinion Research,B/C,800  lv,3/21,0.0,37.0,0.0,2.0,0.0,1.0,13.0,0.0,6.0,0.0
 US,Fox News/Beacon Research/Shaw & Co. Research,A-,403  lv,3/20,0.0,31.0,0.0,4.0,1.0,1.0,23.0,0.0,4.0,1.0
@@ -847,12 +853,6 @@ US,Harris Insights & Analytics,C+,459  rv,11/28,0.0,25.0,2.0,3.0,0.0,0.0,15.0,0.
 Massachusetts,YouGov,B-,655  rv,11/14,0.6,19.0,0.0,3.0,0.0,3.0,14.0,0.0,11.0,0.0
 US,Morning Consult,B/C,733  rv,11/9,0.0,26.0,2.0,3.0,0.0,1.0,19.0,0.0,5.0,0.0
 US,Harris Insights & Analytics,C+,370  rv,11/6,0.0,30.0,5.0,5.0,0.0,0.0,20.0,0.0,5.0,0.0
-,,,  ,,,,,,,,,,,
-,,,  ,,,,,,,,,,,
-,,,  ,,,,,,,,,,,
-,,,  ,,,,,,,,,,,
-,,,  ,,,,,,,,,,,
-,,,  ,,,,,,,,,,,
 ,,,  ,,,,,,,,,,,
 ,,,  ,,,,,,,,,,,
 ,,,  ,,,,,,,,,,,
