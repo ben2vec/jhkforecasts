@@ -9,7 +9,7 @@ var width = 1000 - margin.left - margin.right
 var height = 400 - margin.top - margin.bottom
 
 var lineOpacity = .8
-var lineStroke = "4px"
+var lineStroke = "2px"
 
 var axisPad = 12 // axis formatting
 var R = 7 //legend marker
@@ -237,8 +237,8 @@ d3.csv("states.csv", function (error, data) {
       .attr('d', d => line(d.values))
       .style('stroke', (d, i) => color(i))
       .style('fill', 'none')
-      .style('opacity', lineOpacity)
-      .style('stroke-width', lineStroke)
+      .style('opacity', .7)
+      .style('stroke-width', "4px")
 
 
     // APPEND CIRCLE MARKERS //

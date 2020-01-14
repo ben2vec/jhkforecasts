@@ -403,7 +403,15 @@ var otherScale = d3.scaleLinear()
         .attr("fill","#black")
         .attr("alignment-baseline", "middle");
 
-
+        svg.append("text")
+        .text(gop>dem?"R+ "+Math.round(Math.abs(gop-dem)*10)/10+"%":"D+ "+Math.round(Math.abs(gop-dem)*10)/10+"%")
+        .attr("y",100)
+        .attr("x",250)
+        .attr("text-anchor","middle")
+        .attr("font-weight",700)
+        .attr("font-size",12)
+        .attr("fill",gop>dem?"#FF6060":"#0091FF")
+        .attr("alignment-baseline", "middle");
 
        
 

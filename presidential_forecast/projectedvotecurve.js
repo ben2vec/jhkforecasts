@@ -141,8 +141,8 @@
       svg.append("path")
         .data([data])
         .attr("d", goparea2)
-        .attr("fill", "#FF6060")
-        .attr("opacity",.2)
+        .attr("fill", "#798285")
+        .attr("opacity",.5)
 
       svg.append("path")
         .data([data])
@@ -239,8 +239,8 @@
         svg.append("path")
         .data([data])
         .attr("d", demarea2)
-        .attr("fill", "#0091FF")
-        .attr("opacity",.2)
+        .attr("fill", "#798285")
+        .attr("opacity",.5)
 
       svg.append("path")
         .data([data])
@@ -338,8 +338,8 @@
       svg.append("path")
         .data([data])
         .attr("d", thirdarea2)
-        .attr("fill", "#FFE130")
-        .attr("opacity",.2)
+        .attr("fill", "#798285")
+        .attr("opacity",.5)
 
      
         svg.append("path")
