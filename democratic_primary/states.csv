@@ -96048,3 +96048,1047 @@ date,state,dataPoint,candidate,percentage
 2020-01-13,South Dakota,2,Yang,4.1
 2020-01-13,Virgin Islands,2,Yang,3.4
 2020-01-13,US,2,Yang,1.7
+2020-01-14,Iowa,1,Biden,20.2
+2020-01-14,New Hampshire,1,Biden,21.5
+2020-01-14,Nevada,1,Biden,26.4
+2020-01-14,South Carolina,1,Biden,41.6
+2020-01-14,Alabama,1,Biden,41.0
+2020-01-14,American Samoa,1,Biden,29.2
+2020-01-14,Arkansas,1,Biden,37.6
+2020-01-14,California,1,Biden,24.1
+2020-01-14,Colorado,1,Biden,23.5
+2020-01-14,Democrats Abroad,1,Biden,29.2
+2020-01-14,Maine,1,Biden,24.1
+2020-01-14,Massachusetts,1,Biden,21.0
+2020-01-14,Minnesota,1,Biden,21.9
+2020-01-14,North Carolina,1,Biden,35.7
+2020-01-14,Oklahoma,1,Biden,32.8
+2020-01-14,Tennessee,1,Biden,37.4
+2020-01-14,Texas,1,Biden,33.0
+2020-01-14,Utah,1,Biden,20.5
+2020-01-14,Vermont,1,Biden,18.2
+2020-01-14,Virginia,1,Biden,32.7
+2020-01-14,Idaho,1,Biden,24.0
+2020-01-14,Michigan,1,Biden,29.7
+2020-01-14,Mississippi,1,Biden,42.9
+2020-01-14,Missouri,1,Biden,35.9
+2020-01-14,North Dakota,1,Biden,25.1
+2020-01-14,Washington,1,Biden,20.4
+2020-01-14,Northern Marianas,1,Biden,29.2
+2020-01-14,Arizona,1,Biden,29.7
+2020-01-14,Florida,1,Biden,29.5
+2020-01-14,Illinois,1,Biden,35.1
+2020-01-14,Ohio,1,Biden,28.7
+2020-01-14,Georgia,1,Biden,39.9
+2020-01-14,Puerto Rico,1,Biden,29.2
+2020-01-14,Alaska,1,Biden,28.7
+2020-01-14,Hawaii,1,Biden,22.8
+2020-01-14,Louisiana,1,Biden,44.3
+2020-01-14,Wyoming,1,Biden,27.4
+2020-01-14,Wisconsin,1,Biden,24.0
+2020-01-14,Connecticut,1,Biden,23.3
+2020-01-14,Delaware,1,Biden,33.7
+2020-01-14,Maryland,1,Biden,31.0
+2020-01-14,New York,1,Biden,29.3
+2020-01-14,Pennsylvania,1,Biden,31.8
+2020-01-14,Rhode Island,1,Biden,24.5
+2020-01-14,Guam,1,Biden,29.2
+2020-01-14,Kansas,1,Biden,21.8
+2020-01-14,Indiana,1,Biden,26.9
+2020-01-14,Nebraska,1,Biden,21.9
+2020-01-14,West Virginia,1,Biden,30.0
+2020-01-14,Kentucky,1,Biden,32.3
+2020-01-14,Oregon,1,Biden,22.8
+2020-01-14,District of Columbia,1,Biden,42.9
+2020-01-14,Montana,1,Biden,26.6
+2020-01-14,New Jersey,1,Biden,30.0
+2020-01-14,New Mexico,1,Biden,25.6
+2020-01-14,South Dakota,1,Biden,22.5
+2020-01-14,Virgin Islands,1,Biden,29.2
+2020-01-14,US,1,Biden,29.0
+2020-01-14,Iowa,1,Bloomberg,0.0
+2020-01-14,New Hampshire,1,Bloomberg,0.0
+2020-01-14,Nevada,1,Bloomberg,0.0
+2020-01-14,South Carolina,1,Bloomberg,0.0
+2020-01-14,Alabama,1,Bloomberg,7.4
+2020-01-14,American Samoa,1,Bloomberg,5.6
+2020-01-14,Arkansas,1,Bloomberg,7.2
+2020-01-14,California,1,Bloomberg,4.9
+2020-01-14,Colorado,1,Bloomberg,4.8
+2020-01-14,Democrats Abroad,1,Bloomberg,5.6
+2020-01-14,Maine,1,Bloomberg,3.6
+2020-01-14,Massachusetts,1,Bloomberg,5.9
+2020-01-14,Minnesota,1,Bloomberg,4.8
+2020-01-14,North Carolina,1,Bloomberg,7.5
+2020-01-14,Oklahoma,1,Bloomberg,3.7
+2020-01-14,Tennessee,1,Bloomberg,7.2
+2020-01-14,Texas,1,Bloomberg,7.0
+2020-01-14,Utah,1,Bloomberg,2.5
+2020-01-14,Vermont,1,Bloomberg,5.2
+2020-01-14,Virginia,1,Bloomberg,6.5
+2020-01-14,Idaho,1,Bloomberg,2.4
+2020-01-14,Michigan,1,Bloomberg,5.5
+2020-01-14,Mississippi,1,Bloomberg,7.5
+2020-01-14,Missouri,1,Bloomberg,6.9
+2020-01-14,North Dakota,1,Bloomberg,2.4
+2020-01-14,Washington,1,Bloomberg,5.5
+2020-01-14,Northern Marianas,1,Bloomberg,5.6
+2020-01-14,Arizona,1,Bloomberg,5.4
+2020-01-14,Florida,1,Bloomberg,5.9
+2020-01-14,Illinois,1,Bloomberg,6.9
+2020-01-14,Ohio,1,Bloomberg,6.0
+2020-01-14,Georgia,1,Bloomberg,7.5
+2020-01-14,Puerto Rico,1,Bloomberg,5.6
+2020-01-14,Alaska,1,Bloomberg,4.7
+2020-01-14,Hawaii,1,Bloomberg,6.2
+2020-01-14,Louisiana,1,Bloomberg,3.9
+2020-01-14,Wyoming,1,Bloomberg,2.3
+2020-01-14,Wisconsin,1,Bloomberg,6.4
+2020-01-14,Connecticut,1,Bloomberg,7.1
+2020-01-14,Delaware,1,Bloomberg,6.4
+2020-01-14,Maryland,1,Bloomberg,6.7
+2020-01-14,New York,1,Bloomberg,10.5
+2020-01-14,Pennsylvania,1,Bloomberg,5.1
+2020-01-14,Rhode Island,1,Bloomberg,6.8
+2020-01-14,Guam,1,Bloomberg,5.6
+2020-01-14,Kansas,1,Bloomberg,5.3
+2020-01-14,Indiana,1,Bloomberg,2.3
+2020-01-14,Nebraska,1,Bloomberg,5.0
+2020-01-14,West Virginia,1,Bloomberg,6.6
+2020-01-14,Kentucky,1,Bloomberg,7.6
+2020-01-14,Oregon,1,Bloomberg,1.3
+2020-01-14,District of Columbia,1,Bloomberg,6.7
+2020-01-14,Montana,1,Bloomberg,5.3
+2020-01-14,New Jersey,1,Bloomberg,3.5
+2020-01-14,New Mexico,1,Bloomberg,2.9
+2020-01-14,South Dakota,1,Bloomberg,2.4
+2020-01-14,Virgin Islands,1,Bloomberg,5.6
+2020-01-14,US,1,Bloomberg,5.1
+2020-01-14,Iowa,1,Booker,0.0
+2020-01-14,New Hampshire,1,Booker,0.0
+2020-01-14,Nevada,1,Booker,0.0
+2020-01-14,South Carolina,1,Booker,0.0
+2020-01-14,Alabama,1,Booker,0.0
+2020-01-14,American Samoa,1,Booker,0.0
+2020-01-14,Arkansas,1,Booker,0.0
+2020-01-14,California,1,Booker,0.0
+2020-01-14,Colorado,1,Booker,0.0
+2020-01-14,Democrats Abroad,1,Booker,0.0
+2020-01-14,Maine,1,Booker,0.0
+2020-01-14,Massachusetts,1,Booker,0.0
+2020-01-14,Minnesota,1,Booker,0.0
+2020-01-14,North Carolina,1,Booker,0.0
+2020-01-14,Oklahoma,1,Booker,0.0
+2020-01-14,Tennessee,1,Booker,0.0
+2020-01-14,Texas,1,Booker,0.0
+2020-01-14,Utah,1,Booker,0.0
+2020-01-14,Vermont,1,Booker,0.0
+2020-01-14,Virginia,1,Booker,0.0
+2020-01-14,Idaho,1,Booker,0.0
+2020-01-14,Michigan,1,Booker,0.0
+2020-01-14,Mississippi,1,Booker,0.0
+2020-01-14,Missouri,1,Booker,0.0
+2020-01-14,North Dakota,1,Booker,0.0
+2020-01-14,Washington,1,Booker,0.0
+2020-01-14,Northern Marianas,1,Booker,0.0
+2020-01-14,Arizona,1,Booker,0.0
+2020-01-14,Florida,1,Booker,0.0
+2020-01-14,Illinois,1,Booker,0.0
+2020-01-14,Ohio,1,Booker,0.0
+2020-01-14,Georgia,1,Booker,0.0
+2020-01-14,Puerto Rico,1,Booker,0.0
+2020-01-14,Alaska,1,Booker,0.0
+2020-01-14,Hawaii,1,Booker,0.0
+2020-01-14,Louisiana,1,Booker,0.0
+2020-01-14,Wyoming,1,Booker,0.0
+2020-01-14,Wisconsin,1,Booker,0.0
+2020-01-14,Connecticut,1,Booker,0.0
+2020-01-14,Delaware,1,Booker,0.0
+2020-01-14,Maryland,1,Booker,0.0
+2020-01-14,New York,1,Booker,0.0
+2020-01-14,Pennsylvania,1,Booker,0.0
+2020-01-14,Rhode Island,1,Booker,0.0
+2020-01-14,Guam,1,Booker,0.0
+2020-01-14,Kansas,1,Booker,0.0
+2020-01-14,Indiana,1,Booker,0.0
+2020-01-14,Nebraska,1,Booker,0.0
+2020-01-14,West Virginia,1,Booker,0.0
+2020-01-14,Kentucky,1,Booker,0.0
+2020-01-14,Oregon,1,Booker,0.0
+2020-01-14,District of Columbia,1,Booker,0.0
+2020-01-14,Montana,1,Booker,0.0
+2020-01-14,New Jersey,1,Booker,0.0
+2020-01-14,New Mexico,1,Booker,0.0
+2020-01-14,South Dakota,1,Booker,0.0
+2020-01-14,Virgin Islands,1,Booker,0.0
+2020-01-14,US,1,Booker,0.0
+2020-01-14,Iowa,1,Buttigieg,18.1
+2020-01-14,New Hampshire,1,Buttigieg,16.6
+2020-01-14,Nevada,1,Buttigieg,8.5
+2020-01-14,South Carolina,1,Buttigieg,6.4
+2020-01-14,Alabama,1,Buttigieg,6.8
+2020-01-14,American Samoa,1,Buttigieg,8.8
+2020-01-14,Arkansas,1,Buttigieg,8.3
+2020-01-14,California,1,Buttigieg,8.2
+2020-01-14,Colorado,1,Buttigieg,9.6
+2020-01-14,Democrats Abroad,1,Buttigieg,8.8
+2020-01-14,Maine,1,Buttigieg,11.7
+2020-01-14,Massachusetts,1,Buttigieg,10.7
+2020-01-14,Minnesota,1,Buttigieg,11.4
+2020-01-14,North Carolina,1,Buttigieg,7.2
+2020-01-14,Oklahoma,1,Buttigieg,8.8
+2020-01-14,Tennessee,1,Buttigieg,8.9
+2020-01-14,Texas,1,Buttigieg,8.3
+2020-01-14,Utah,1,Buttigieg,10.7
+2020-01-14,Vermont,1,Buttigieg,9.9
+2020-01-14,Virginia,1,Buttigieg,10.3
+2020-01-14,Idaho,1,Buttigieg,10.0
+2020-01-14,Michigan,1,Buttigieg,10.7
+2020-01-14,Mississippi,1,Buttigieg,6.1
+2020-01-14,Missouri,1,Buttigieg,9.3
+2020-01-14,North Dakota,1,Buttigieg,13.6
+2020-01-14,Washington,1,Buttigieg,9.8
+2020-01-14,Northern Marianas,1,Buttigieg,8.8
+2020-01-14,Arizona,1,Buttigieg,11.3
+2020-01-14,Florida,1,Buttigieg,9.2
+2020-01-14,Illinois,1,Buttigieg,8.0
+2020-01-14,Ohio,1,Buttigieg,12.0
+2020-01-14,Georgia,1,Buttigieg,7.1
+2020-01-14,Puerto Rico,1,Buttigieg,8.8
+2020-01-14,Alaska,1,Buttigieg,9.0
+2020-01-14,Hawaii,1,Buttigieg,8.2
+2020-01-14,Louisiana,1,Buttigieg,6.5
+2020-01-14,Wyoming,1,Buttigieg,10.8
+2020-01-14,Wisconsin,1,Buttigieg,11.5
+2020-01-14,Connecticut,1,Buttigieg,10.8
+2020-01-14,Delaware,1,Buttigieg,9.6
+2020-01-14,Maryland,1,Buttigieg,9.1
+2020-01-14,New York,1,Buttigieg,9.5
+2020-01-14,Pennsylvania,1,Buttigieg,11.4
+2020-01-14,Rhode Island,1,Buttigieg,11.4
+2020-01-14,Guam,1,Buttigieg,8.8
+2020-01-14,Kansas,1,Buttigieg,12.2
+2020-01-14,Indiana,1,Buttigieg,16.1
+2020-01-14,Nebraska,1,Buttigieg,12.3
+2020-01-14,West Virginia,1,Buttigieg,10.4
+2020-01-14,Kentucky,1,Buttigieg,8.8
+2020-01-14,Oregon,1,Buttigieg,9.8
+2020-01-14,District of Columbia,1,Buttigieg,5.8
+2020-01-14,Montana,1,Buttigieg,9.8
+2020-01-14,New Jersey,1,Buttigieg,10.6
+2020-01-14,New Mexico,1,Buttigieg,8.3
+2020-01-14,South Dakota,1,Buttigieg,13.0
+2020-01-14,Virgin Islands,1,Buttigieg,8.8
+2020-01-14,US,1,Buttigieg,9.9
+2020-01-14,Iowa,1,Klobuchar,7.0
+2020-01-14,New Hampshire,1,Klobuchar,4.7
+2020-01-14,Nevada,1,Klobuchar,2.9
+2020-01-14,South Carolina,1,Klobuchar,2.3
+2020-01-14,Alabama,1,Klobuchar,2.7
+2020-01-14,American Samoa,1,Klobuchar,3.0
+2020-01-14,Arkansas,1,Klobuchar,2.9
+2020-01-14,California,1,Klobuchar,2.8
+2020-01-14,Colorado,1,Klobuchar,2.8
+2020-01-14,Democrats Abroad,1,Klobuchar,3.0
+2020-01-14,Maine,1,Klobuchar,2.4
+2020-01-14,Massachusetts,1,Klobuchar,3.3
+2020-01-14,Minnesota,1,Klobuchar,15.4
+2020-01-14,North Carolina,1,Klobuchar,2.7
+2020-01-14,Oklahoma,1,Klobuchar,3.0
+2020-01-14,Tennessee,1,Klobuchar,2.8
+2020-01-14,Texas,1,Klobuchar,2.9
+2020-01-14,Utah,1,Klobuchar,5.4
+2020-01-14,Vermont,1,Klobuchar,3.6
+2020-01-14,Virginia,1,Klobuchar,3.8
+2020-01-14,Idaho,1,Klobuchar,2.4
+2020-01-14,Michigan,1,Klobuchar,3.3
+2020-01-14,Mississippi,1,Klobuchar,2.5
+2020-01-14,Missouri,1,Klobuchar,2.9
+2020-01-14,North Dakota,1,Klobuchar,4.6
+2020-01-14,Washington,1,Klobuchar,4.7
+2020-01-14,Northern Marianas,1,Klobuchar,3.0
+2020-01-14,Arizona,1,Klobuchar,3.5
+2020-01-14,Florida,1,Klobuchar,2.3
+2020-01-14,Illinois,1,Klobuchar,2.9
+2020-01-14,Ohio,1,Klobuchar,3.8
+2020-01-14,Georgia,1,Klobuchar,2.6
+2020-01-14,Puerto Rico,1,Klobuchar,3.0
+2020-01-14,Alaska,1,Klobuchar,2.3
+2020-01-14,Hawaii,1,Klobuchar,2.8
+2020-01-14,Louisiana,1,Klobuchar,2.7
+2020-01-14,Wyoming,1,Klobuchar,2.9
+2020-01-14,Wisconsin,1,Klobuchar,4.6
+2020-01-14,Connecticut,1,Klobuchar,3.3
+2020-01-14,Delaware,1,Klobuchar,1.9
+2020-01-14,Maryland,1,Klobuchar,2.1
+2020-01-14,New York,1,Klobuchar,2.1
+2020-01-14,Pennsylvania,1,Klobuchar,3.5
+2020-01-14,Rhode Island,1,Klobuchar,2.4
+2020-01-14,Guam,1,Klobuchar,3.0
+2020-01-14,Kansas,1,Klobuchar,6.7
+2020-01-14,Indiana,1,Klobuchar,4.5
+2020-01-14,Nebraska,1,Klobuchar,6.7
+2020-01-14,West Virginia,1,Klobuchar,3.6
+2020-01-14,Kentucky,1,Klobuchar,3.6
+2020-01-14,Oregon,1,Klobuchar,4.9
+2020-01-14,District of Columbia,1,Klobuchar,2.5
+2020-01-14,Montana,1,Klobuchar,2.4
+2020-01-14,New Jersey,1,Klobuchar,2.3
+2020-01-14,New Mexico,1,Klobuchar,2.4
+2020-01-14,South Dakota,1,Klobuchar,6.7
+2020-01-14,Virgin Islands,1,Klobuchar,3.0
+2020-01-14,US,1,Klobuchar,3.6
+2020-01-14,Iowa,1,Sanders,20.1
+2020-01-14,New Hampshire,1,Sanders,21.8
+2020-01-14,Nevada,1,Sanders,22.6
+2020-01-14,South Carolina,1,Sanders,15.0
+2020-01-14,Alabama,1,Sanders,13.8
+2020-01-14,American Samoa,1,Sanders,20.3
+2020-01-14,Arkansas,1,Sanders,15.1
+2020-01-14,California,1,Sanders,23.9
+2020-01-14,Colorado,1,Sanders,24.9
+2020-01-14,Democrats Abroad,1,Sanders,20.3
+2020-01-14,Maine,1,Sanders,20.1
+2020-01-14,Massachusetts,1,Sanders,18.2
+2020-01-14,Minnesota,1,Sanders,16.7
+2020-01-14,North Carolina,1,Sanders,17.3
+2020-01-14,Oklahoma,1,Sanders,22.1
+2020-01-14,Tennessee,1,Sanders,15.2
+2020-01-14,Texas,1,Sanders,17.8
+2020-01-14,Utah,1,Sanders,25.1
+2020-01-14,Vermont,1,Sanders,31.9
+2020-01-14,Virginia,1,Sanders,17.9
+2020-01-14,Idaho,1,Sanders,28.6
+2020-01-14,Michigan,1,Sanders,20.5
+2020-01-14,Mississippi,1,Sanders,13.2
+2020-01-14,Missouri,1,Sanders,16.3
+2020-01-14,North Dakota,1,Sanders,21.7
+2020-01-14,Washington,1,Sanders,23.1
+2020-01-14,Northern Marianas,1,Sanders,20.3
+2020-01-14,Arizona,1,Sanders,19.7
+2020-01-14,Florida,1,Sanders,20.4
+2020-01-14,Illinois,1,Sanders,15.3
+2020-01-14,Ohio,1,Sanders,18.8
+2020-01-14,Georgia,1,Sanders,14.7
+2020-01-14,Puerto Rico,1,Sanders,20.3
+2020-01-14,Alaska,1,Sanders,21.3
+2020-01-14,Hawaii,1,Sanders,23.4
+2020-01-14,Louisiana,1,Sanders,14.1
+2020-01-14,Wyoming,1,Sanders,22.6
+2020-01-14,Wisconsin,1,Sanders,21.2
+2020-01-14,Connecticut,1,Sanders,20.2
+2020-01-14,Delaware,1,Sanders,18.0
+2020-01-14,Maryland,1,Sanders,18.4
+2020-01-14,New York,1,Sanders,18.3
+2020-01-14,Pennsylvania,1,Sanders,18.5
+2020-01-14,Rhode Island,1,Sanders,20.7
+2020-01-14,Guam,1,Sanders,20.3
+2020-01-14,Kansas,1,Sanders,22.5
+2020-01-14,Indiana,1,Sanders,19.5
+2020-01-14,Nebraska,1,Sanders,22.5
+2020-01-14,West Virginia,1,Sanders,21.5
+2020-01-14,Kentucky,1,Sanders,19.0
+2020-01-14,Oregon,1,Sanders,24.3
+2020-01-14,District of Columbia,1,Sanders,14.3
+2020-01-14,Montana,1,Sanders,22.4
+2020-01-14,New Jersey,1,Sanders,20.5
+2020-01-14,New Mexico,1,Sanders,26.0
+2020-01-14,South Dakota,1,Sanders,22.2
+2020-01-14,Virgin Islands,1,Sanders,20.3
+2020-01-14,US,1,Sanders,20.1
+2020-01-14,Iowa,1,Steyer,3.4
+2020-01-14,New Hampshire,1,Steyer,4.0
+2020-01-14,Nevada,1,Steyer,8.3
+2020-01-14,South Carolina,1,Steyer,9.3
+2020-01-14,Alabama,1,Steyer,2.3
+2020-01-14,American Samoa,1,Steyer,1.6
+2020-01-14,Arkansas,1,Steyer,1.7
+2020-01-14,California,1,Steyer,2.4
+2020-01-14,Colorado,1,Steyer,2.3
+2020-01-14,Democrats Abroad,1,Steyer,1.6
+2020-01-14,Maine,1,Steyer,2.2
+2020-01-14,Massachusetts,1,Steyer,1.9
+2020-01-14,Minnesota,1,Steyer,1.3
+2020-01-14,North Carolina,1,Steyer,2.1
+2020-01-14,Oklahoma,1,Steyer,1.7
+2020-01-14,Tennessee,1,Steyer,1.7
+2020-01-14,Texas,1,Steyer,1.8
+2020-01-14,Utah,1,Steyer,2.4
+2020-01-14,Vermont,1,Steyer,1.9
+2020-01-14,Virginia,1,Steyer,1.4
+2020-01-14,Idaho,1,Steyer,1.3
+2020-01-14,Michigan,1,Steyer,1.1
+2020-01-14,Mississippi,1,Steyer,2.6
+2020-01-14,Missouri,1,Steyer,1.6
+2020-01-14,North Dakota,1,Steyer,1.8
+2020-01-14,Washington,1,Steyer,2.1
+2020-01-14,Northern Marianas,1,Steyer,1.6
+2020-01-14,Arizona,1,Steyer,1.3
+2020-01-14,Florida,1,Steyer,2.1
+2020-01-14,Illinois,1,Steyer,1.4
+2020-01-14,Ohio,1,Steyer,1.4
+2020-01-14,Georgia,1,Steyer,2.2
+2020-01-14,Puerto Rico,1,Steyer,1.6
+2020-01-14,Alaska,1,Steyer,2.3
+2020-01-14,Hawaii,1,Steyer,2.5
+2020-01-14,Louisiana,1,Steyer,2.5
+2020-01-14,Wyoming,1,Steyer,2.5
+2020-01-14,Wisconsin,1,Steyer,1.5
+2020-01-14,Connecticut,1,Steyer,2.2
+2020-01-14,Delaware,1,Steyer,1.8
+2020-01-14,Maryland,1,Steyer,2.6
+2020-01-14,New York,1,Steyer,1.7
+2020-01-14,Pennsylvania,1,Steyer,1.2
+2020-01-14,Rhode Island,1,Steyer,2.2
+2020-01-14,Guam,1,Steyer,1.6
+2020-01-14,Kansas,1,Steyer,1.4
+2020-01-14,Indiana,1,Steyer,1.0
+2020-01-14,Nebraska,1,Steyer,1.4
+2020-01-14,West Virginia,1,Steyer,2.1
+2020-01-14,Kentucky,1,Steyer,1.4
+2020-01-14,Oregon,1,Steyer,2.1
+2020-01-14,District of Columbia,1,Steyer,2.4
+2020-01-14,Montana,1,Steyer,1.3
+2020-01-14,New Jersey,1,Steyer,1.9
+2020-01-14,New Mexico,1,Steyer,2.1
+2020-01-14,South Dakota,1,Steyer,1.5
+2020-01-14,Virgin Islands,1,Steyer,1.6
+2020-01-14,US,1,Steyer,2.1
+2020-01-14,Iowa,1,Warren,16.9
+2020-01-14,New Hampshire,1,Warren,17.0
+2020-01-14,Nevada,1,Warren,15.7
+2020-01-14,South Carolina,1,Warren,11.8
+2020-01-14,Alabama,1,Warren,12.5
+2020-01-14,American Samoa,1,Warren,17.2
+2020-01-14,Arkansas,1,Warren,13.5
+2020-01-14,California,1,Warren,18.3
+2020-01-14,Colorado,1,Warren,17.2
+2020-01-14,Democrats Abroad,1,Warren,17.2
+2020-01-14,Maine,1,Warren,22.2
+2020-01-14,Massachusetts,1,Warren,25.6
+2020-01-14,Minnesota,1,Warren,15.2
+2020-01-14,North Carolina,1,Warren,13.6
+2020-01-14,Oklahoma,1,Warren,13.9
+2020-01-14,Tennessee,1,Warren,13.0
+2020-01-14,Texas,1,Warren,14.7
+2020-01-14,Utah,1,Warren,18.0
+2020-01-14,Vermont,1,Warren,16.1
+2020-01-14,Virginia,1,Warren,13.6
+2020-01-14,Idaho,1,Warren,15.7
+2020-01-14,Michigan,1,Warren,15.7
+2020-01-14,Mississippi,1,Warren,11.6
+2020-01-14,Missouri,1,Warren,13.4
+2020-01-14,North Dakota,1,Warren,17.0
+2020-01-14,Washington,1,Warren,19.3
+2020-01-14,Northern Marianas,1,Warren,17.2
+2020-01-14,Arizona,1,Warren,15.5
+2020-01-14,Florida,1,Warren,15.9
+2020-01-14,Illinois,1,Warren,17.0
+2020-01-14,Ohio,1,Warren,15.7
+2020-01-14,Georgia,1,Warren,12.4
+2020-01-14,Puerto Rico,1,Warren,17.2
+2020-01-14,Alaska,1,Warren,17.4
+2020-01-14,Hawaii,1,Warren,18.4
+2020-01-14,Louisiana,1,Warren,12.2
+2020-01-14,Wyoming,1,Warren,16.7
+2020-01-14,Wisconsin,1,Warren,17.0
+2020-01-14,Connecticut,1,Warren,19.2
+2020-01-14,Delaware,1,Warren,15.3
+2020-01-14,Maryland,1,Warren,16.6
+2020-01-14,New York,1,Warren,15.2
+2020-01-14,Pennsylvania,1,Warren,14.9
+2020-01-14,Rhode Island,1,Warren,18.4
+2020-01-14,Guam,1,Warren,17.2
+2020-01-14,Kansas,1,Warren,15.8
+2020-01-14,Indiana,1,Warren,16.0
+2020-01-14,Nebraska,1,Warren,15.9
+2020-01-14,West Virginia,1,Warren,12.0
+2020-01-14,Kentucky,1,Warren,13.6
+2020-01-14,Oregon,1,Warren,19.6
+2020-01-14,District of Columbia,1,Warren,11.5
+2020-01-14,Montana,1,Warren,17.0
+2020-01-14,New Jersey,1,Warren,17.5
+2020-01-14,New Mexico,1,Warren,15.3
+2020-01-14,South Dakota,1,Warren,17.0
+2020-01-14,Virgin Islands,1,Warren,17.2
+2020-01-14,US,1,Warren,16.0
+2020-01-14,Iowa,1,Yang,3.9
+2020-01-14,New Hampshire,1,Yang,3.9
+2020-01-14,Nevada,1,Yang,5.1
+2020-01-14,South Carolina,1,Yang,3.2
+2020-01-14,Alabama,1,Yang,3.2
+2020-01-14,American Samoa,1,Yang,3.8
+2020-01-14,Arkansas,1,Yang,3.2
+2020-01-14,California,1,Yang,5.0
+2020-01-14,Colorado,1,Yang,4.6
+2020-01-14,Democrats Abroad,1,Yang,3.8
+2020-01-14,Maine,1,Yang,3.4
+2020-01-14,Massachusetts,1,Yang,3.1
+2020-01-14,Minnesota,1,Yang,2.9
+2020-01-14,North Carolina,1,Yang,3.5
+2020-01-14,Oklahoma,1,Yang,3.6
+2020-01-14,Tennessee,1,Yang,3.3
+2020-01-14,Texas,1,Yang,4.2
+2020-01-14,Utah,1,Yang,5.0
+2020-01-14,Vermont,1,Yang,2.9
+2020-01-14,Virginia,1,Yang,3.4
+2020-01-14,Idaho,1,Yang,5.1
+2020-01-14,Michigan,1,Yang,3.1
+2020-01-14,Mississippi,1,Yang,3.2
+2020-01-14,Missouri,1,Yang,3.3
+2020-01-14,North Dakota,1,Yang,3.5
+2020-01-14,Washington,1,Yang,4.8
+2020-01-14,Northern Marianas,1,Yang,3.8
+2020-01-14,Arizona,1,Yang,3.3
+2020-01-14,Florida,1,Yang,4.4
+2020-01-14,Illinois,1,Yang,3.1
+2020-01-14,Ohio,1,Yang,3.2
+2020-01-14,Georgia,1,Yang,3.3
+2020-01-14,Puerto Rico,1,Yang,3.8
+2020-01-14,Alaska,1,Yang,3.9
+2020-01-14,Hawaii,1,Yang,5.2
+2020-01-14,Louisiana,1,Yang,3.4
+2020-01-14,Wyoming,1,Yang,4.4
+2020-01-14,Wisconsin,1,Yang,3.4
+2020-01-14,Connecticut,1,Yang,3.5
+2020-01-14,Delaware,1,Yang,2.9
+2020-01-14,Maryland,1,Yang,3.1
+2020-01-14,New York,1,Yang,3.0
+2020-01-14,Pennsylvania,1,Yang,3.2
+2020-01-14,Rhode Island,1,Yang,3.4
+2020-01-14,Guam,1,Yang,3.8
+2020-01-14,Kansas,1,Yang,4.0
+2020-01-14,Indiana,1,Yang,3.3
+2020-01-14,Nebraska,1,Yang,4.0
+2020-01-14,West Virginia,1,Yang,3.5
+2020-01-14,Kentucky,1,Yang,3.3
+2020-01-14,Oregon,1,Yang,4.7
+2020-01-14,District of Columbia,1,Yang,3.4
+2020-01-14,Montana,1,Yang,4.9
+2020-01-14,New Jersey,1,Yang,3.3
+2020-01-14,New Mexico,1,Yang,7.0
+2020-01-14,South Dakota,1,Yang,4.3
+2020-01-14,Virgin Islands,1,Yang,3.8
+2020-01-14,US,1,Yang,3.8
+2020-01-14,Iowa,2,Biden,26.9
+2020-01-14,New Hampshire,2,Biden,29.6
+2020-01-14,Nevada,2,Biden,43.5
+2020-01-14,South Carolina,2,Biden,86.6
+2020-01-14,Alabama,2,Biden,85.5
+2020-01-14,American Samoa,2,Biden,51.6
+2020-01-14,Arkansas,2,Biden,78.2
+2020-01-14,California,2,Biden,34.2
+2020-01-14,Colorado,2,Biden,32.2
+2020-01-14,Democrats Abroad,2,Biden,51.2
+2020-01-14,Maine,2,Biden,34.4
+2020-01-14,Massachusetts,2,Biden,25.2
+2020-01-14,Minnesota,2,Biden,32.8
+2020-01-14,North Carolina,2,Biden,73.2
+2020-01-14,Oklahoma,2,Biden,61.2
+2020-01-14,Tennessee,2,Biden,77.9
+2020-01-14,Texas,2,Biden,65.4
+2020-01-14,Utah,2,Biden,24.3
+2020-01-14,Vermont,2,Biden,15.5
+2020-01-14,Virginia,2,Biden,64.7
+2020-01-14,Idaho,2,Biden,29.6
+2020-01-14,Michigan,2,Biden,52.7
+2020-01-14,Mississippi,2,Biden,87.9
+2020-01-14,Missouri,2,Biden,72.2
+2020-01-14,North Dakota,2,Biden,38.1
+2020-01-14,Washington,2,Biden,24.9
+2020-01-14,Northern Marianas,2,Biden,50.0
+2020-01-14,Arizona,2,Biden,51.9
+2020-01-14,Florida,2,Biden,51.2
+2020-01-14,Illinois,2,Biden,68.7
+2020-01-14,Ohio,2,Biden,49.8
+2020-01-14,Georgia,2,Biden,79.4
+2020-01-14,Puerto Rico,2,Biden,48.6
+2020-01-14,Alaska,2,Biden,46.1
+2020-01-14,Hawaii,2,Biden,30.2
+2020-01-14,Louisiana,2,Biden,86.0
+2020-01-14,Wyoming,2,Biden,41.6
+2020-01-14,Wisconsin,2,Biden,33.6
+2020-01-14,Connecticut,2,Biden,30.8
+2020-01-14,Delaware,2,Biden,57.1
+2020-01-14,Maryland,2,Biden,50.4
+2020-01-14,New York,2,Biden,47.0
+2020-01-14,Pennsylvania,2,Biden,53.0
+2020-01-14,Rhode Island,2,Biden,33.5
+2020-01-14,Guam,2,Biden,44.7
+2020-01-14,Kansas,2,Biden,27.7
+2020-01-14,Indiana,2,Biden,39.0
+2020-01-14,Nebraska,2,Biden,27.7
+2020-01-14,West Virginia,2,Biden,46.2
+2020-01-14,Kentucky,2,Biden,52.2
+2020-01-14,Oregon,2,Biden,27.2
+2020-01-14,District of Columbia,2,Biden,74.1
+2020-01-14,Montana,2,Biden,36.3
+2020-01-14,New Jersey,2,Biden,42.7
+2020-01-14,New Mexico,2,Biden,32.2
+2020-01-14,South Dakota,2,Biden,27.8
+2020-01-14,Virgin Islands,2,Biden,42.0
+2020-01-14,US,2,Biden,52.2
+2020-01-14,Iowa,2,Bloomberg,0.0
+2020-01-14,New Hampshire,2,Bloomberg,0.0
+2020-01-14,Nevada,2,Bloomberg,0.0
+2020-01-14,South Carolina,2,Bloomberg,0.0
+2020-01-14,Alabama,2,Bloomberg,1.6
+2020-01-14,American Samoa,2,Bloomberg,2.5
+2020-01-14,Arkansas,2,Bloomberg,2.0
+2020-01-14,California,2,Bloomberg,2.4
+2020-01-14,Colorado,2,Bloomberg,2.5
+2020-01-14,Democrats Abroad,2,Bloomberg,2.3
+2020-01-14,Maine,2,Bloomberg,2.0
+2020-01-14,Massachusetts,2,Bloomberg,2.9
+2020-01-14,Minnesota,2,Bloomberg,3.1
+2020-01-14,North Carolina,2,Bloomberg,2.2
+2020-01-14,Oklahoma,2,Bloomberg,1.4
+2020-01-14,Tennessee,2,Bloomberg,2.4
+2020-01-14,Texas,2,Bloomberg,2.7
+2020-01-14,Utah,2,Bloomberg,1.7
+2020-01-14,Vermont,2,Bloomberg,1.9
+2020-01-14,Virginia,2,Bloomberg,2.5
+2020-01-14,Idaho,2,Bloomberg,1.4
+2020-01-14,Michigan,2,Bloomberg,2.3
+2020-01-14,Mississippi,2,Bloomberg,1.5
+2020-01-14,Missouri,2,Bloomberg,2.3
+2020-01-14,North Dakota,2,Bloomberg,1.7
+2020-01-14,Washington,2,Bloomberg,3.3
+2020-01-14,Northern Marianas,2,Bloomberg,2.7
+2020-01-14,Arizona,2,Bloomberg,2.8
+2020-01-14,Florida,2,Bloomberg,2.8
+2020-01-14,Illinois,2,Bloomberg,2.6
+2020-01-14,Ohio,2,Bloomberg,3.0
+2020-01-14,Georgia,2,Bloomberg,2.4
+2020-01-14,Puerto Rico,2,Bloomberg,2.9
+2020-01-14,Alaska,2,Bloomberg,2.7
+2020-01-14,Hawaii,2,Bloomberg,3.8
+2020-01-14,Louisiana,2,Bloomberg,0.9
+2020-01-14,Wyoming,2,Bloomberg,1.7
+2020-01-14,Wisconsin,2,Bloomberg,4.2
+2020-01-14,Connecticut,2,Bloomberg,5.0
+2020-01-14,Delaware,2,Bloomberg,3.4
+2020-01-14,Maryland,2,Bloomberg,4.0
+2020-01-14,New York,2,Bloomberg,7.0
+2020-01-14,Pennsylvania,2,Bloomberg,3.2
+2020-01-14,Rhode Island,2,Bloomberg,4.8
+2020-01-14,Guam,2,Bloomberg,3.6
+2020-01-14,Kansas,2,Bloomberg,4.2
+2020-01-14,Indiana,2,Bloomberg,2.6
+2020-01-14,Nebraska,2,Bloomberg,4.2
+2020-01-14,West Virginia,2,Bloomberg,4.5
+2020-01-14,Kentucky,2,Bloomberg,5.3
+2020-01-14,Oregon,2,Bloomberg,2.3
+2020-01-14,District of Columbia,2,Bloomberg,3.0
+2020-01-14,Montana,2,Bloomberg,4.3
+2020-01-14,New Jersey,2,Bloomberg,3.2
+2020-01-14,New Mexico,2,Bloomberg,2.9
+2020-01-14,South Dakota,2,Bloomberg,3.1
+2020-01-14,Virgin Islands,2,Bloomberg,4.4
+2020-01-14,US,2,Bloomberg,2.1
+2020-01-14,Iowa,2,Booker,0.0
+2020-01-14,New Hampshire,2,Booker,0.0
+2020-01-14,Nevada,2,Booker,0.0
+2020-01-14,South Carolina,2,Booker,0.0
+2020-01-14,Alabama,2,Booker,0.0
+2020-01-14,American Samoa,2,Booker,0.0
+2020-01-14,Arkansas,2,Booker,0.0
+2020-01-14,California,2,Booker,0.0
+2020-01-14,Colorado,2,Booker,0.0
+2020-01-14,Democrats Abroad,2,Booker,0.0
+2020-01-14,Maine,2,Booker,0.0
+2020-01-14,Massachusetts,2,Booker,0.0
+2020-01-14,Minnesota,2,Booker,0.0
+2020-01-14,North Carolina,2,Booker,0.0
+2020-01-14,Oklahoma,2,Booker,0.0
+2020-01-14,Tennessee,2,Booker,0.0
+2020-01-14,Texas,2,Booker,0.0
+2020-01-14,Utah,2,Booker,0.0
+2020-01-14,Vermont,2,Booker,0.0
+2020-01-14,Virginia,2,Booker,0.0
+2020-01-14,Idaho,2,Booker,0.0
+2020-01-14,Michigan,2,Booker,0.0
+2020-01-14,Mississippi,2,Booker,0.0
+2020-01-14,Missouri,2,Booker,0.0
+2020-01-14,North Dakota,2,Booker,0.0
+2020-01-14,Washington,2,Booker,0.0
+2020-01-14,Northern Marianas,2,Booker,0.0
+2020-01-14,Arizona,2,Booker,0.0
+2020-01-14,Florida,2,Booker,0.0
+2020-01-14,Illinois,2,Booker,0.0
+2020-01-14,Ohio,2,Booker,0.0
+2020-01-14,Georgia,2,Booker,0.0
+2020-01-14,Puerto Rico,2,Booker,0.0
+2020-01-14,Alaska,2,Booker,0.0
+2020-01-14,Hawaii,2,Booker,0.0
+2020-01-14,Louisiana,2,Booker,0.0
+2020-01-14,Wyoming,2,Booker,0.0
+2020-01-14,Wisconsin,2,Booker,0.0
+2020-01-14,Connecticut,2,Booker,0.0
+2020-01-14,Delaware,2,Booker,0.0
+2020-01-14,Maryland,2,Booker,0.0
+2020-01-14,New York,2,Booker,0.0
+2020-01-14,Pennsylvania,2,Booker,0.0
+2020-01-14,Rhode Island,2,Booker,0.0
+2020-01-14,Guam,2,Booker,0.0
+2020-01-14,Kansas,2,Booker,0.0
+2020-01-14,Indiana,2,Booker,0.0
+2020-01-14,Nebraska,2,Booker,0.0
+2020-01-14,West Virginia,2,Booker,0.0
+2020-01-14,Kentucky,2,Booker,0.0
+2020-01-14,Oregon,2,Booker,0.0
+2020-01-14,District of Columbia,2,Booker,0.0
+2020-01-14,Montana,2,Booker,0.0
+2020-01-14,New Jersey,2,Booker,0.0
+2020-01-14,New Mexico,2,Booker,0.0
+2020-01-14,South Dakota,2,Booker,0.0
+2020-01-14,Virgin Islands,2,Booker,0.0
+2020-01-14,US,2,Booker,0.0
+2020-01-14,Iowa,2,Buttigieg,20.8
+2020-01-14,New Hampshire,2,Buttigieg,15.9
+2020-01-14,Nevada,2,Buttigieg,4.5
+2020-01-14,South Carolina,2,Buttigieg,1.5
+2020-01-14,Alabama,2,Buttigieg,1.6
+2020-01-14,American Samoa,2,Buttigieg,4.7
+2020-01-14,Arkansas,2,Buttigieg,2.8
+2020-01-14,California,2,Buttigieg,4.5
+2020-01-14,Colorado,2,Buttigieg,5.7
+2020-01-14,Democrats Abroad,2,Buttigieg,4.5
+2020-01-14,Maine,2,Buttigieg,7.6
+2020-01-14,Massachusetts,2,Buttigieg,6.6
+2020-01-14,Minnesota,2,Buttigieg,9.5
+2020-01-14,North Carolina,2,Buttigieg,2.5
+2020-01-14,Oklahoma,2,Buttigieg,3.7
+2020-01-14,Tennessee,2,Buttigieg,3.0
+2020-01-14,Texas,2,Buttigieg,3.8
+2020-01-14,Utah,2,Buttigieg,7.1
+2020-01-14,Vermont,2,Buttigieg,5.3
+2020-01-14,Virginia,2,Buttigieg,4.7
+2020-01-14,Idaho,2,Buttigieg,5.5
+2020-01-14,Michigan,2,Buttigieg,6.3
+2020-01-14,Mississippi,2,Buttigieg,1.3
+2020-01-14,Missouri,2,Buttigieg,4.0
+2020-01-14,North Dakota,2,Buttigieg,10.5
+2020-01-14,Washington,2,Buttigieg,6.5
+2020-01-14,Northern Marianas,2,Buttigieg,4.7
+2020-01-14,Arizona,2,Buttigieg,6.9
+2020-01-14,Florida,2,Buttigieg,5.1
+2020-01-14,Illinois,2,Buttigieg,3.3
+2020-01-14,Ohio,2,Buttigieg,8.5
+2020-01-14,Georgia,2,Buttigieg,2.2
+2020-01-14,Puerto Rico,2,Buttigieg,5.2
+2020-01-14,Alaska,2,Buttigieg,5.4
+2020-01-14,Hawaii,2,Buttigieg,5.6
+2020-01-14,Louisiana,2,Buttigieg,1.5
+2020-01-14,Wyoming,2,Buttigieg,7.2
+2020-01-14,Wisconsin,2,Buttigieg,9.1
+2020-01-14,Connecticut,2,Buttigieg,9.1
+2020-01-14,Delaware,2,Buttigieg,6.0
+2020-01-14,Maryland,2,Buttigieg,6.3
+2020-01-14,New York,2,Buttigieg,6.4
+2020-01-14,Pennsylvania,2,Buttigieg,7.6
+2020-01-14,Rhode Island,2,Buttigieg,9.1
+2020-01-14,Guam,2,Buttigieg,5.9
+2020-01-14,Kansas,2,Buttigieg,10.3
+2020-01-14,Indiana,2,Buttigieg,14.7
+2020-01-14,Nebraska,2,Buttigieg,10.7
+2020-01-14,West Virginia,2,Buttigieg,7.6
+2020-01-14,Kentucky,2,Buttigieg,5.7
+2020-01-14,Oregon,2,Buttigieg,7.7
+2020-01-14,District of Columbia,2,Buttigieg,2.8
+2020-01-14,Montana,2,Buttigieg,7.5
+2020-01-14,New Jersey,2,Buttigieg,8.2
+2020-01-14,New Mexico,2,Buttigieg,6.3
+2020-01-14,South Dakota,2,Buttigieg,11.5
+2020-01-14,Virgin Islands,2,Buttigieg,7.0
+2020-01-14,US,2,Buttigieg,5.5
+2020-01-14,Iowa,2,Klobuchar,3.4
+2020-01-14,New Hampshire,2,Klobuchar,2.3
+2020-01-14,Nevada,2,Klobuchar,1.8
+2020-01-14,South Carolina,2,Klobuchar,0.6
+2020-01-14,Alabama,2,Klobuchar,0.6
+2020-01-14,American Samoa,2,Klobuchar,1.8
+2020-01-14,Arkansas,2,Klobuchar,1.0
+2020-01-14,California,2,Klobuchar,1.8
+2020-01-14,Colorado,2,Klobuchar,1.9
+2020-01-14,Democrats Abroad,2,Klobuchar,1.7
+2020-01-14,Maine,2,Klobuchar,1.6
+2020-01-14,Massachusetts,2,Klobuchar,2.0
+2020-01-14,Minnesota,2,Klobuchar,15.6
+2020-01-14,North Carolina,2,Klobuchar,1.2
+2020-01-14,Oklahoma,2,Klobuchar,1.1
+2020-01-14,Tennessee,2,Klobuchar,1.0
+2020-01-14,Texas,2,Klobuchar,1.3
+2020-01-14,Utah,2,Klobuchar,2.9
+2020-01-14,Vermont,2,Klobuchar,1.9
+2020-01-14,Virginia,2,Klobuchar,1.9
+2020-01-14,Idaho,2,Klobuchar,1.6
+2020-01-14,Michigan,2,Klobuchar,1.7
+2020-01-14,Mississippi,2,Klobuchar,0.7
+2020-01-14,Missouri,2,Klobuchar,1.3
+2020-01-14,North Dakota,2,Klobuchar,2.6
+2020-01-14,Washington,2,Klobuchar,2.9
+2020-01-14,Northern Marianas,2,Klobuchar,1.8
+2020-01-14,Arizona,2,Klobuchar,2.2
+2020-01-14,Florida,2,Klobuchar,1.6
+2020-01-14,Illinois,2,Klobuchar,1.4
+2020-01-14,Ohio,2,Klobuchar,2.6
+2020-01-14,Georgia,2,Klobuchar,1.1
+2020-01-14,Puerto Rico,2,Klobuchar,2.1
+2020-01-14,Alaska,2,Klobuchar,2.0
+2020-01-14,Hawaii,2,Klobuchar,2.6
+2020-01-14,Louisiana,2,Klobuchar,0.9
+2020-01-14,Wyoming,2,Klobuchar,2.3
+2020-01-14,Wisconsin,2,Klobuchar,3.5
+2020-01-14,Connecticut,2,Klobuchar,3.5
+2020-01-14,Delaware,2,Klobuchar,2.0
+2020-01-14,Maryland,2,Klobuchar,2.1
+2020-01-14,New York,2,Klobuchar,2.5
+2020-01-14,Pennsylvania,2,Klobuchar,2.8
+2020-01-14,Rhode Island,2,Klobuchar,2.9
+2020-01-14,Guam,2,Klobuchar,2.8
+2020-01-14,Kansas,2,Klobuchar,5.3
+2020-01-14,Indiana,2,Klobuchar,3.4
+2020-01-14,Nebraska,2,Klobuchar,5.3
+2020-01-14,West Virginia,2,Klobuchar,3.1
+2020-01-14,Kentucky,2,Klobuchar,3.1
+2020-01-14,Oregon,2,Klobuchar,4.0
+2020-01-14,District of Columbia,2,Klobuchar,1.9
+2020-01-14,Montana,2,Klobuchar,3.2
+2020-01-14,New Jersey,2,Klobuchar,2.9
+2020-01-14,New Mexico,2,Klobuchar,2.9
+2020-01-14,South Dakota,2,Klobuchar,5.8
+2020-01-14,Virgin Islands,2,Klobuchar,3.2
+2020-01-14,US,2,Klobuchar,1.6
+2020-01-14,Iowa,2,Sanders,27.5
+2020-01-14,New Hampshire,2,Sanders,31.1
+2020-01-14,Nevada,2,Sanders,30.2
+2020-01-14,South Carolina,2,Sanders,5.4
+2020-01-14,Alabama,2,Sanders,5.3
+2020-01-14,American Samoa,2,Sanders,21.4
+2020-01-14,Arkansas,2,Sanders,7.7
+2020-01-14,California,2,Sanders,34.2
+2020-01-14,Colorado,2,Sanders,37.8
+2020-01-14,Democrats Abroad,2,Sanders,21.9
+2020-01-14,Maine,2,Sanders,22.5
+2020-01-14,Massachusetts,2,Sanders,18.8
+2020-01-14,Minnesota,2,Sanders,18.9
+2020-01-14,North Carolina,2,Sanders,11.8
+2020-01-14,Oklahoma,2,Sanders,22.1
+2020-01-14,Tennessee,2,Sanders,8.4
+2020-01-14,Texas,2,Sanders,14.7
+2020-01-14,Utah,2,Sanders,40.4
+2020-01-14,Vermont,2,Sanders,61.3
+2020-01-14,Virginia,2,Sanders,15.2
+2020-01-14,Idaho,2,Sanders,46.7
+2020-01-14,Michigan,2,Sanders,21.8
+2020-01-14,Mississippi,2,Sanders,3.8
+2020-01-14,Missouri,2,Sanders,10.5
+2020-01-14,North Dakota,2,Sanders,27.4
+2020-01-14,Washington,2,Sanders,34.4
+2020-01-14,Northern Marianas,2,Sanders,22.2
+2020-01-14,Arizona,2,Sanders,20.4
+2020-01-14,Florida,2,Sanders,22.1
+2020-01-14,Illinois,2,Sanders,9.7
+2020-01-14,Ohio,2,Sanders,19.6
+2020-01-14,Georgia,2,Sanders,7.2
+2020-01-14,Puerto Rico,2,Sanders,21.7
+2020-01-14,Alaska,2,Sanders,23.8
+2020-01-14,Hawaii,2,Sanders,32.1
+2020-01-14,Louisiana,2,Sanders,5.1
+2020-01-14,Wyoming,2,Sanders,27.9
+2020-01-14,Wisconsin,2,Sanders,27.3
+2020-01-14,Connecticut,2,Sanders,23.7
+2020-01-14,Delaware,2,Sanders,16.3
+2020-01-14,Maryland,2,Sanders,17.5
+2020-01-14,New York,2,Sanders,18.8
+2020-01-14,Pennsylvania,2,Sanders,17.2
+2020-01-14,Rhode Island,2,Sanders,24.8
+2020-01-14,Guam,2,Sanders,21.9
+2020-01-14,Kansas,2,Sanders,30.3
+2020-01-14,Indiana,2,Sanders,20.5
+2020-01-14,Nebraska,2,Sanders,29.4
+2020-01-14,West Virginia,2,Sanders,24.2
+2020-01-14,Kentucky,2,Sanders,18.2
+2020-01-14,Oregon,2,Sanders,31.4
+2020-01-14,District of Columbia,2,Sanders,8.2
+2020-01-14,Montana,2,Sanders,25.7
+2020-01-14,New Jersey,2,Sanders,21.2
+2020-01-14,New Mexico,2,Sanders,33.8
+2020-01-14,South Dakota,2,Sanders,27.0
+2020-01-14,Virgin Islands,2,Sanders,20.8
+2020-01-14,US,2,Sanders,21.5
+2020-01-14,Iowa,2,Steyer,1.4
+2020-01-14,New Hampshire,2,Steyer,1.7
+2020-01-14,Nevada,2,Steyer,4.0
+2020-01-14,South Carolina,2,Steyer,1.8
+2020-01-14,Alabama,2,Steyer,0.5
+2020-01-14,American Samoa,2,Steyer,1.1
+2020-01-14,Arkansas,2,Steyer,0.7
+2020-01-14,California,2,Steyer,1.4
+2020-01-14,Colorado,2,Steyer,1.4
+2020-01-14,Democrats Abroad,2,Steyer,1.1
+2020-01-14,Maine,2,Steyer,1.3
+2020-01-14,Massachusetts,2,Steyer,1.3
+2020-01-14,Minnesota,2,Steyer,1.6
+2020-01-14,North Carolina,2,Steyer,0.8
+2020-01-14,Oklahoma,2,Steyer,1.0
+2020-01-14,Tennessee,2,Steyer,0.6
+2020-01-14,Texas,2,Steyer,0.9
+2020-01-14,Utah,2,Steyer,1.6
+2020-01-14,Vermont,2,Steyer,1.1
+2020-01-14,Virginia,2,Steyer,0.9
+2020-01-14,Idaho,2,Steyer,0.9
+2020-01-14,Michigan,2,Steyer,1.0
+2020-01-14,Mississippi,2,Steyer,0.5
+2020-01-14,Missouri,2,Steyer,1.0
+2020-01-14,North Dakota,2,Steyer,1.3
+2020-01-14,Washington,2,Steyer,1.7
+2020-01-14,Northern Marianas,2,Steyer,1.4
+2020-01-14,Arizona,2,Steyer,1.2
+2020-01-14,Florida,2,Steyer,1.6
+2020-01-14,Illinois,2,Steyer,0.9
+2020-01-14,Ohio,2,Steyer,1.2
+2020-01-14,Georgia,2,Steyer,0.9
+2020-01-14,Puerto Rico,2,Steyer,1.5
+2020-01-14,Alaska,2,Steyer,1.9
+2020-01-14,Hawaii,2,Steyer,2.2
+2020-01-14,Louisiana,2,Steyer,0.7
+2020-01-14,Wyoming,2,Steyer,1.9
+2020-01-14,Wisconsin,2,Steyer,2.0
+2020-01-14,Connecticut,2,Steyer,2.8
+2020-01-14,Delaware,2,Steyer,1.8
+2020-01-14,Maryland,2,Steyer,2.4
+2020-01-14,New York,2,Steyer,2.0
+2020-01-14,Pennsylvania,2,Steyer,1.6
+2020-01-14,Rhode Island,2,Steyer,2.2
+2020-01-14,Guam,2,Steyer,2.1
+2020-01-14,Kansas,2,Steyer,2.4
+2020-01-14,Indiana,2,Steyer,1.9
+2020-01-14,Nebraska,2,Steyer,2.7
+2020-01-14,West Virginia,2,Steyer,2.2
+2020-01-14,Kentucky,2,Steyer,2.1
+2020-01-14,Oregon,2,Steyer,2.5
+2020-01-14,District of Columbia,2,Steyer,1.5
+2020-01-14,Montana,2,Steyer,2.6
+2020-01-14,New Jersey,2,Steyer,2.5
+2020-01-14,New Mexico,2,Steyer,2.7
+2020-01-14,South Dakota,2,Steyer,3.0
+2020-01-14,Virgin Islands,2,Steyer,2.8
+2020-01-14,US,2,Steyer,0.8
+2020-01-14,Iowa,2,Warren,17.6
+2020-01-14,New Hampshire,2,Warren,16.8
+2020-01-14,Nevada,2,Warren,13.2
+2020-01-14,South Carolina,2,Warren,3.1
+2020-01-14,Alabama,2,Warren,3.8
+2020-01-14,American Samoa,2,Warren,14.5
+2020-01-14,Arkansas,2,Warren,6.1
+2020-01-14,California,2,Warren,18.4
+2020-01-14,Colorado,2,Warren,15.6
+2020-01-14,Democrats Abroad,2,Warren,14.8
+2020-01-14,Maine,2,Warren,28.3
+2020-01-14,Massachusetts,2,Warren,40.8
+2020-01-14,Minnesota,2,Warren,15.8
+2020-01-14,North Carolina,2,Warren,6.5
+2020-01-14,Oklahoma,2,Warren,7.6
+2020-01-14,Tennessee,2,Warren,5.6
+2020-01-14,Texas,2,Warren,9.0
+2020-01-14,Utah,2,Warren,18.7
+2020-01-14,Vermont,2,Warren,11.4
+2020-01-14,Virginia,2,Warren,8.1
+2020-01-14,Idaho,2,Warren,11.5
+2020-01-14,Michigan,2,Warren,11.9
+2020-01-14,Mississippi,2,Warren,3.1
+2020-01-14,Missouri,2,Warren,6.8
+2020-01-14,North Dakota,2,Warren,16.0
+2020-01-14,Washington,2,Warren,22.9
+2020-01-14,Northern Marianas,2,Warren,14.8
+2020-01-14,Arizona,2,Warren,12.2
+2020-01-14,Florida,2,Warren,12.5
+2020-01-14,Illinois,2,Warren,11.4
+2020-01-14,Ohio,2,Warren,12.7
+2020-01-14,Georgia,2,Warren,5.1
+2020-01-14,Puerto Rico,2,Warren,15.0
+2020-01-14,Alaska,2,Warren,15.1
+2020-01-14,Hawaii,2,Warren,19.2
+2020-01-14,Louisiana,2,Warren,3.6
+2020-01-14,Wyoming,2,Warren,14.3
+2020-01-14,Wisconsin,2,Warren,17.1
+2020-01-14,Connecticut,2,Warren,21.1
+2020-01-14,Delaware,2,Warren,10.9
+2020-01-14,Maryland,2,Warren,14.2
+2020-01-14,New York,2,Warren,12.9
+2020-01-14,Pennsylvania,2,Warren,11.6
+2020-01-14,Rhode Island,2,Warren,19.0
+2020-01-14,Guam,2,Warren,15.7
+2020-01-14,Kansas,2,Warren,15.5
+2020-01-14,Indiana,2,Warren,14.3
+2020-01-14,Nebraska,2,Warren,15.7
+2020-01-14,West Virginia,2,Warren,8.7
+2020-01-14,Kentucky,2,Warren,10.0
+2020-01-14,Oregon,2,Warren,20.5
+2020-01-14,District of Columbia,2,Warren,5.9
+2020-01-14,Montana,2,Warren,15.4
+2020-01-14,New Jersey,2,Warren,15.4
+2020-01-14,New Mexico,2,Warren,13.2
+2020-01-14,South Dakota,2,Warren,17.2
+2020-01-14,Virgin Islands,2,Warren,15.6
+2020-01-14,US,2,Warren,14.2
+2020-01-14,Iowa,2,Yang,2.0
+2020-01-14,New Hampshire,2,Yang,2.2
+2020-01-14,Nevada,2,Yang,2.5
+2020-01-14,South Carolina,2,Yang,0.8
+2020-01-14,Alabama,2,Yang,0.7
+2020-01-14,American Samoa,2,Yang,2.0
+2020-01-14,Arkansas,2,Yang,1.1
+2020-01-14,California,2,Yang,2.7
+2020-01-14,Colorado,2,Yang,2.5
+2020-01-14,Democrats Abroad,2,Yang,2.0
+2020-01-14,Maine,2,Yang,1.9
+2020-01-14,Massachusetts,2,Yang,2.1
+2020-01-14,Minnesota,2,Yang,2.4
+2020-01-14,North Carolina,2,Yang,1.4
+2020-01-14,Oklahoma,2,Yang,1.6
+2020-01-14,Tennessee,2,Yang,0.8
+2020-01-14,Texas,2,Yang,1.7
+2020-01-14,Utah,2,Yang,2.9
+2020-01-14,Vermont,2,Yang,1.4
+2020-01-14,Virginia,2,Yang,1.7
+2020-01-14,Idaho,2,Yang,2.5
+2020-01-14,Michigan,2,Yang,1.9
+2020-01-14,Mississippi,2,Yang,0.7
+2020-01-14,Missouri,2,Yang,1.5
+2020-01-14,North Dakota,2,Yang,2.2
+2020-01-14,Washington,2,Yang,3.0
+2020-01-14,Northern Marianas,2,Yang,2.1
+2020-01-14,Arizona,2,Yang,2.0
+2020-01-14,Florida,2,Yang,2.7
+2020-01-14,Illinois,2,Yang,1.6
+2020-01-14,Ohio,2,Yang,2.2
+2020-01-14,Georgia,2,Yang,1.4
+2020-01-14,Puerto Rico,2,Yang,2.5
+2020-01-14,Alaska,2,Yang,2.7
+2020-01-14,Hawaii,2,Yang,4.0
+2020-01-14,Louisiana,2,Yang,0.9
+2020-01-14,Wyoming,2,Yang,2.9
+2020-01-14,Wisconsin,2,Yang,3.0
+2020-01-14,Connecticut,2,Yang,3.6
+2020-01-14,Delaware,2,Yang,2.2
+2020-01-14,Maryland,2,Yang,2.7
+2020-01-14,New York,2,Yang,3.0
+2020-01-14,Pennsylvania,2,Yang,2.7
+2020-01-14,Rhode Island,2,Yang,3.3
+2020-01-14,Guam,2,Yang,2.9
+2020-01-14,Kansas,2,Yang,4.1
+2020-01-14,Indiana,2,Yang,3.2
+2020-01-14,Nebraska,2,Yang,3.9
+2020-01-14,West Virginia,2,Yang,3.1
+2020-01-14,Kentucky,2,Yang,3.0
+2020-01-14,Oregon,2,Yang,4.1
+2020-01-14,District of Columbia,2,Yang,2.3
+2020-01-14,Montana,2,Yang,4.6
+2020-01-14,New Jersey,2,Yang,3.5
+2020-01-14,New Mexico,2,Yang,5.5
+2020-01-14,South Dakota,2,Yang,4.4
+2020-01-14,Virgin Islands,2,Yang,4.0
+2020-01-14,US,2,Yang,1.8
