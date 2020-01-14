@@ -189,6 +189,13 @@ a:hover{
    #bubblemap2 {
      display: inline;
    }
+
+   #projected {
+    display: none;
+  }
+  #phoneprojectedvote {
+    display: inline;
+  }
    .computer {
      display: none;
    }
@@ -219,6 +226,13 @@ a:hover{
    #bubblemap2 {
      display: none;
    }
+   #projected {
+    display: inline;
+  }
+  #phoneprojectedvote {
+    display: none;
+  }
+
    .computer {
      display: inline;
    }

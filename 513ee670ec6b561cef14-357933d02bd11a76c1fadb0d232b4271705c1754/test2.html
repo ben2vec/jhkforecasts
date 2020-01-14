@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+  /* set the CSS */
+
+  .line {
+    fill: none;
+    stroke: black;
+    stroke-width: 2px;
+    stroke-linecap: round;
+  }
+
+  
+</style>
+
+<body>
+
+
+<table  style="border-collapse: collapse; border: none;"  cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="width: 5%;  " valign="middle" width="5%">
+     
+      </td>
+  <td style="width: 25%; border-right: solid grey 1.0pt; " valign="middle" width="25%">
+  <h1  style="text-align: center;font-weight: 700;" >Trump</h1>
+  </td>
+  <td style="width: 65%;  border-left: none; " valign="bottom" width="65%">
+    <div id="trumpvote"></div>
+   </td>
+   <td style="width: 5%;  " valign="middle" width="5%">
+     
+  </td>
+  </tr>
+  </tbody>
+  </table>
+
+  <!-- load the d3.js library -->
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script>
+
+    // set the dimensions and margins of the graph
+    var margin = { top: 0, right: 0, bottom: 0, left: 0 },
+      width = 960 - margin.left - margin.right,
+      height = 300 - margin.top - margin.bottom;
+
+    // parse the date / time
+
+    // set the ranges
+    var x = d3.scaleLinear().range([0, width])
+      .domain([0, 100]);
+    var y = d3.scaleLinear().range([height, 0])
+      .domain([0, .3]);
+
+
+    var area = d3.area()
+      .x1(function (d) { return x(d.vote); })
+      .y0(height)
+      .y1(d => d.prob > .1 ? d.prob < .9 ? y(d.density) : height : height)
+      
+    var area2 = d3.area()
+      .x1(function (d) { return x(d.vote); })
+      .y0(height)
+      .y1(d => y(d.density) )
+    // define the line
+    var valueline = d3.line()
+      .curve(d3.curveCatmullRom)
+      .x(function (d) { return x(d.vote); })
+      .y(function (d) { return y(d.density); });
+
+    // append the svg obgect to the body of the page
+    // appends a 'group' element to 'svg'
+    // moves the 'group' element to the top left margin
+    var svg = d3.select("#trumpvote").append("svg")
+      .attr("viewBox","0 0 960 300");
+
+    // Get the data
+    d3.csv("data.csv", function (error, data) {
+      if (error) throw error;
+
+      // format the data
+      data.forEach(function (d) {
+        d.vote = +d.vote;
+        d.density = +d.density
+        d.prob = +d.prob;
+      });
+
+      // Scale the range of the data
+      svg.append("path")
+        .data([data])
+        .attr("d", area2)
+        .attr("fill",d => "#e2e5e9")
+      svg.append("path")
+        .data([data])
+        .attr("d", area)
+        .attr("fill","#FF6060")
+
+       
+
+      // Add the valueline path.
+      
+
+      var projectedvote = d3.median(data, d => d.vote)
+      var densemax = d3.max(data, d => d.density)
+
+      
+
+      svg.append("circle")
+        .attr("cx", x(projectedvote))
+        .attr("cy", y(densemax))
+        .attr("r", 4)
+        .attr("fill", "#FF6060")
+        .attr("stroke","white")
+        .attr("stroke-width",2)
+
+
+      // Add the X Axis
+    
+
+      // Add the Y Axis
+
+
+    });
+
+  </script>
+</body>
