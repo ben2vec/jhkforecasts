@@ -1,53 +1,53 @@
 state,index,weight,margin
 Alabama,Polls,0.0,0.0
-Alaska,Polls,0.5,5.8
-Arizona,Polls,15.1,0.5
+Alaska,Polls,0.5,6.4
+Arizona,Polls,15.5,0.9
 Arkansas,Polls,0.0,0.0
-California,Polls,12.9,-17.2
-Colorado,Polls,3.7,-7.8
-Connecticut,Polls,0.8,-15.3
+California,Polls,13.1,-17.7
+Colorado,Polls,3.8,-8.0
+Connecticut,Polls,0.8,-7.0
 Delaware,Polls,0.0,0.0
-Florida,Polls,16.0,-0.2
-Georgia,Polls,10.1,4.4
+Florida,Polls,16.3,-0.4
+Georgia,Polls,10.3,4.5
 Hawaii,Polls,0.0,0.0
 Idaho,Polls,0.0,0.0
 Illinois,Polls,0.0,0.0
 Indiana,Polls,0.0,0.0
-Iowa,Polls,12.4,7.3
+Iowa,Polls,12.6,7.7
 Kansas,Polls,0.0,0.0
-Kentucky,Polls,1.2,19.8
+Kentucky,Polls,1.3,20.2
 Louisiana,Polls,0.0,0.0
-Maine,Polls,2.3,-2.9
+Maine,Polls,2.3,1.6
 Maryland,Polls,0.0,0.0
-Massachusetts,Polls,2.5,-32.6
-Michigan,Polls,14.9,-3.3
-Minnesota,Polls,2.0,-9.2
+Massachusetts,Polls,2.6,-33.0
+Michigan,Polls,15.3,-3.3
+Minnesota,Polls,2.0,-9.7
 Mississippi,Polls,0.0,0.0
-Missouri,Polls,0.4,17.2
-Montana,Polls,0.3,10.4
+Missouri,Polls,0.4,17.5
+Montana,Polls,0.3,10.0
 Nebraska,Polls,0.0,0.0
-Nevada,Polls,7.8,2.1
-New Hampshire,Polls,3.8,-1.2
+Nevada,Polls,7.9,1.6
+New Hampshire,Polls,3.8,-1.7
 New Jersey,Polls,0.0,0.0
-New Mexico,Polls,3.4,-8.9
-New York,Polls,0.3,-21.5
-North Carolina,Polls,23.4,1.0
-North Dakota,Polls,0.7,19.1
-Ohio,Polls,6.4,0.5
+New Mexico,Polls,3.4,-9.2
+New York,Polls,0.3,-21.9
+North Carolina,Polls,23.7,1.1
+North Dakota,Polls,0.8,22.8
+Ohio,Polls,6.5,1.7
 Oklahoma,Polls,0.0,0.0
 Oregon,Polls,0.0,0.0
-Pennsylvania,Polls,17.4,-2.9
+Pennsylvania,Polls,17.7,-3.1
 Rhode Island,Polls,0.0,0.0
-South Carolina,Polls,0.5,21.3
+South Carolina,Polls,0.5,20.8
 South Dakota,Polls,0.0,0.0
 Tennessee,Polls,0.0,0.0
-Texas,Polls,11.1,4.5
-Utah,Polls,0.6,3.2
+Texas,Polls,11.2,4.2
+Utah,Polls,0.6,2.9
 Vermont,Polls,0.0,0.0
-Virginia,Polls,5.4,-1.4
-Washington,Polls,2.3,-18.2
+Virginia,Polls,5.5,0.2
+Washington,Polls,2.3,-17.8
 West Virginia,Polls,0.0,0.0
-Wisconsin,Polls,18.6,-0.2
+Wisconsin,Polls,19.0,-0.4
 Wyoming,Polls,0.0,0.0
 District of Columbia,Polls,0.0,0.0
 Maine-1,Polls,0.0,0.0
@@ -55,169 +55,169 @@ Maine-2,Polls,0.0,0.0
 Nebraska-1,Polls,0.0,0.0
 Nebraska-2,Polls,0.0,0.0
 Nebraska-3,Polls,0.0,0.0
-Alabama,Fundamentals,49.1,28.0
+Alabama,Fundamentals,49.1,27.9
 Alaska,Fundamentals,48.6,13.9
-Arizona,Fundamentals,41.1,4.7
+Arizona,Fundamentals,40.9,4.7
 Arkansas,Fundamentals,51.4,29.1
-California,Fundamentals,42.6,-28.9
+California,Fundamentals,42.5,-28.9
 Colorado,Fundamentals,47.6,-5.8
-Connecticut,Fundamentals,49.0,-16.4
-Delaware,Fundamentals,48.6,-17.1
-Florida,Fundamentals,39.8,1.9
-Georgia,Fundamentals,43.5,6.5
+Connecticut,Fundamentals,49.0,-16.5
+Delaware,Fundamentals,48.5,-17.1
+Florida,Fundamentals,39.6,1.9
+Georgia,Fundamentals,43.4,6.4
 Hawaii,Fundamentals,50.3,-40.9
 Idaho,Fundamentals,50.7,33.9
 Illinois,Fundamentals,48.0,-17.7
-Indiana,Fundamentals,47.9,17.2
-Iowa,Fundamentals,42.8,4.1
+Indiana,Fundamentals,47.8,17.2
+Iowa,Fundamentals,42.7,4.1
 Kansas,Fundamentals,49.2,19.4
 Kentucky,Fundamentals,49.6,28.2
 Louisiana,Fundamentals,49.1,22.4
-Maine,Fundamentals,46.7,-8.0
+Maine,Fundamentals,46.6,-8.0
 Maryland,Fundamentals,48.8,-27.8
-Massachusetts,Fundamentals,49.9,-30.1
-Michigan,Fundamentals,40.5,-2.4
-Minnesota,Fundamentals,47.0,-4.5
+Massachusetts,Fundamentals,49.8,-30.1
+Michigan,Fundamentals,40.3,-2.4
+Minnesota,Fundamentals,46.9,-4.5
 Mississippi,Fundamentals,49.1,18.3
-Missouri,Fundamentals,48.3,17.5
+Missouri,Fundamentals,48.3,17.4
 Montana,Fundamentals,50.5,16.2
 Nebraska,Fundamentals,49.3,26.9
-Nevada,Fundamentals,44.3,-2.8
-New Hampshire,Fundamentals,46.3,-3.7
+Nevada,Fundamentals,44.2,-2.9
+New Hampshire,Fundamentals,46.2,-3.7
 New Jersey,Fundamentals,48.5,-15.8
-New Mexico,Fundamentals,46.9,-11.7
-New York,Fundamentals,48.4,-25.0
-North Carolina,Fundamentals,36.7,3.1
+New Mexico,Fundamentals,46.8,-11.7
+New York,Fundamentals,48.3,-25.0
+North Carolina,Fundamentals,36.5,3.1
 North Dakota,Fundamentals,48.9,33.2
-Ohio,Fundamentals,44.4,7.0
-Oklahoma,Fundamentals,52.9,35.2
-Oregon,Fundamentals,49.5,-13.2
-Pennsylvania,Fundamentals,39.2,-1.3
-Rhode Island,Fundamentals,49.7,-22.0
+Ohio,Fundamentals,44.3,7.0
+Oklahoma,Fundamentals,52.9,35.1
+Oregon,Fundamentals,49.4,-13.2
+Pennsylvania,Fundamentals,39.0,-1.3
+Rhode Island,Fundamentals,49.6,-22.0
 South Carolina,Fundamentals,47.9,14.3
 South Dakota,Fundamentals,50.6,28.8
-Tennessee,Fundamentals,49.9,25.5
-Texas,Fundamentals,43.4,10.8
+Tennessee,Fundamentals,49.9,25.4
+Texas,Fundamentals,43.3,10.8
 Utah,Fundamentals,50.1,29.3
 Vermont,Fundamentals,48.5,-34.6
-Virginia,Fundamentals,45.8,-5.2
-Washington,Fundamentals,48.4,-16.5
+Virginia,Fundamentals,45.7,-5.2
+Washington,Fundamentals,48.4,-16.6
 West Virginia,Fundamentals,49.7,34.0
-Wisconsin,Fundamentals,39.4,0.4
+Wisconsin,Fundamentals,39.3,0.4
 Wyoming,Fundamentals,50.6,45.2
-District of Columbia,Fundamentals,48.2,-82.8
+District of Columbia,Fundamentals,48.2,-82.9
 Maine-1,Fundamentals,55.6,-20.2
 Maine-2,Fundamentals,55.6,3.3
 Nebraska-1,Fundamentals,55.6,22.2
 Nebraska-2,Fundamentals,55.6,4.2
-Nebraska-3,Fundamentals,55.6,54.2
-Alabama,Experts,39.3,28.7
-Alaska,Experts,38.9,18.0
-Arizona,Experts,32.9,1.6
-Arkansas,Experts,41.1,31.1
-California,Experts,34.1,-27.2
-Colorado,Experts,38.1,-13.1
-Connecticut,Experts,39.2,-19.8
-Delaware,Experts,38.9,-18.6
-Florida,Experts,31.8,0.8
-Georgia,Experts,34.8,7.3
-Hawaii,Experts,40.3,-38.9
-Idaho,Experts,40.5,35.2
-Illinois,Experts,38.4,-19.7
-Indiana,Experts,38.3,19.0
-Iowa,Experts,34.2,4.7
-Kansas,Experts,39.4,20.8
-Kentucky,Experts,39.7,30.0
-Louisiana,Experts,39.3,24.0
-Maine,Experts,37.3,-5.9
-Maryland,Experts,39.1,-26.5
-Massachusetts,Experts,39.9,-28.1
-Michigan,Experts,32.4,-3.0
-Minnesota,Experts,37.6,-8.6
-Mississippi,Experts,39.3,19.7
-Missouri,Experts,38.6,18.6
-Montana,Experts,40.4,18.9
-Nebraska,Experts,39.4,26.9
-Nevada,Experts,35.5,-4.8
-New Hampshire,Experts,37.0,-5.9
-New Jersey,Experts,38.8,-20.4
-New Mexico,Experts,37.5,-16.0
-New York,Experts,38.7,-24.7
-North Carolina,Experts,29.4,2.9
-North Dakota,Experts,39.1,32.6
-Ohio,Experts,35.5,9.4
-Oklahoma,Experts,42.3,36.7
-Oregon,Experts,39.6,-18.4
-Pennsylvania,Experts,31.3,-1.4
-Rhode Island,Experts,39.7,-20.7
-South Carolina,Experts,38.3,17.8
-South Dakota,Experts,40.5,28.7
-Tennessee,Experts,39.9,27.1
-Texas,Experts,34.7,11.9
-Utah,Experts,40.1,30.9
+Nebraska-3,Fundamentals,55.6,54.1
+Alabama,Experts,39.3,29.0
+Alaska,Experts,38.9,18.4
+Arizona,Experts,32.7,1.3
+Arkansas,Experts,41.1,31.2
+California,Experts,34.0,-27.1
+Colorado,Experts,38.1,-14.5
+Connecticut,Experts,39.2,-19.9
+Delaware,Experts,38.8,-18.9
+Florida,Experts,31.6,0.6
+Georgia,Experts,34.8,6.9
+Hawaii,Experts,40.2,-38.7
+Idaho,Experts,40.5,35.6
+Illinois,Experts,38.4,-19.8
+Indiana,Experts,38.3,19.2
+Iowa,Experts,34.1,4.8
+Kansas,Experts,39.4,21.0
+Kentucky,Experts,39.7,30.1
+Louisiana,Experts,39.3,24.1
+Maine,Experts,37.3,-5.8
+Maryland,Experts,39.0,-26.3
+Massachusetts,Experts,39.9,-27.9
+Michigan,Experts,32.2,-3.5
+Minnesota,Experts,37.5,-8.0
+Mississippi,Experts,39.3,19.9
+Missouri,Experts,38.6,18.9
+Montana,Experts,40.4,19.1
+Nebraska,Experts,39.4,27.4
+Nevada,Experts,35.4,-5.6
+New Hampshire,Experts,37.0,-4.7
+New Jersey,Experts,38.8,-20.3
+New Mexico,Experts,37.4,-15.6
+New York,Experts,38.7,-24.3
+North Carolina,Experts,29.2,1.3
+North Dakota,Experts,39.1,33.2
+Ohio,Experts,35.4,6.9
+Oklahoma,Experts,42.3,36.8
+Oregon,Experts,39.6,-17.5
+Pennsylvania,Experts,31.2,-1.1
+Rhode Island,Experts,39.7,-19.3
+South Carolina,Experts,38.3,18.3
+South Dakota,Experts,40.5,29.3
+Tennessee,Experts,39.9,27.3
+Texas,Experts,34.6,10.6
+Utah,Experts,40.1,27.5
 Vermont,Experts,38.8,-31.6
-Virginia,Experts,36.6,-12.4
-Washington,Experts,38.7,-19.8
-West Virginia,Experts,39.8,37.2
-Wisconsin,Experts,31.5,-0.9
-Wyoming,Experts,40.5,46.1
+Virginia,Experts,36.5,-12.7
+Washington,Experts,38.7,-19.9
+West Virginia,Experts,39.8,37.1
+Wisconsin,Experts,31.4,-0.7
+Wyoming,Experts,40.5,46.5
 District of Columbia,Experts,38.6,-56.8
 Maine-1,Experts,44.4,-20.0
-Maine-2,Experts,44.4,5.4
+Maine-2,Experts,44.4,4.1
 Nebraska-1,Experts,44.4,24.8
-Nebraska-2,Experts,44.4,2.7
+Nebraska-2,Experts,44.4,1.4
 Nebraska-3,Experts,44.4,56.8
-Alabama,State Similarity,11.6,25.5
-Alaska,State Similarity,12.0,13.3
-Arizona,State Similarity,10.9,3.9
-Arkansas,State Similarity,7.4,22.6
-California,State Similarity,10.4,-31.9
-Colorado,State Similarity,10.5,-7.2
-Connecticut,State Similarity,10.9,-16.4
-Delaware,State Similarity,12.6,-18.5
-Florida,State Similarity,12.5,-0.1
-Georgia,State Similarity,11.5,4.1
-Hawaii,State Similarity,9.4,-32.7
-Idaho,State Similarity,8.8,35.2
-Illinois,State Similarity,13.6,-18.8
-Indiana,State Similarity,13.8,16.1
-Iowa,State Similarity,10.5,2.5
-Kansas,State Similarity,11.4,19.0
-Kentucky,State Similarity,9.5,27.7
-Louisiana,State Similarity,11.5,20.4
-Maine,State Similarity,13.7,-8.4
-Maryland,State Similarity,12.1,-29.1
-Massachusetts,State Similarity,7.7,-26.5
-Michigan,State Similarity,12.2,-3.5
-Minnesota,State Similarity,13.5,-4.9
-Mississippi,State Similarity,11.5,16.2
-Missouri,State Similarity,12.7,16.5
-Montana,State Similarity,8.8,17.4
-Nebraska,State Similarity,11.2,26.8
-Nevada,State Similarity,12.4,-3.3
-New Hampshire,State Similarity,12.9,-4.8
-New Jersey,State Similarity,12.7,-17.1
-New Mexico,State Similarity,12.3,-11.3
-New York,State Similarity,12.6,-26.4
-North Carolina,State Similarity,10.5,1.4
-North Dakota,State Similarity,11.2,32.9
+Alabama,State Similarity,11.7,25.7
+Alaska,State Similarity,12.1,13.6
+Arizona,State Similarity,10.9,3.8
+Arkansas,State Similarity,7.5,23.7
+California,State Similarity,10.5,-31.9
+Colorado,State Similarity,10.6,-7.2
+Connecticut,State Similarity,11.0,-16.1
+Delaware,State Similarity,12.7,-18.2
+Florida,State Similarity,12.5,0.2
+Georgia,State Similarity,11.5,4.4
+Hawaii,State Similarity,9.5,-33.1
+Idaho,State Similarity,8.8,35.6
+Illinois,State Similarity,13.7,-18.6
+Indiana,State Similarity,13.9,16.2
+Iowa,State Similarity,10.6,2.5
+Kansas,State Similarity,11.5,19.0
+Kentucky,State Similarity,9.5,28.3
+Louisiana,State Similarity,11.6,20.6
+Maine,State Similarity,13.8,-8.4
+Maryland,State Similarity,12.2,-28.7
+Massachusetts,State Similarity,7.8,-25.2
+Michigan,State Similarity,12.2,-3.4
+Minnesota,State Similarity,13.6,-5.0
+Mississippi,State Similarity,11.6,16.3
+Missouri,State Similarity,12.7,16.6
+Montana,State Similarity,8.8,17.9
+Nebraska,State Similarity,11.3,26.8
+Nevada,State Similarity,12.4,-3.4
+New Hampshire,State Similarity,13.0,-4.6
+New Jersey,State Similarity,12.8,-16.8
+New Mexico,State Similarity,12.3,-11.5
+New York,State Similarity,12.7,-26.2
+North Carolina,State Similarity,10.5,1.5
+North Dakota,State Similarity,11.3,32.9
 Ohio,State Similarity,13.8,6.1
-Oklahoma,State Similarity,4.7,20.0
-Oregon,State Similarity,10.9,-13.5
-Pennsylvania,State Similarity,12.1,-2.9
-Rhode Island,State Similarity,10.6,-22.1
-South Carolina,State Similarity,13.3,12.1
-South Dakota,State Similarity,8.8,29.7
-Tennessee,State Similarity,10.2,22.6
-Texas,State Similarity,10.9,9.4
-Utah,State Similarity,9.2,24.7
-Vermont,State Similarity,12.7,-35.6
-Virginia,State Similarity,12.2,-7.2
-Washington,State Similarity,10.6,-18.7
-West Virginia,State Similarity,10.5,31.1
-Wisconsin,State Similarity,10.4,-0.4
-Wyoming,State Similarity,8.8,46.4
-District of Columbia,State Similarity,13.2,-84.8
+Oklahoma,State Similarity,4.8,21.6
+Oregon,State Similarity,11.0,-13.7
+Pennsylvania,State Similarity,12.1,-2.7
+Rhode Island,State Similarity,10.7,-21.8
+South Carolina,State Similarity,13.3,12.4
+South Dakota,State Similarity,8.9,30.2
+Tennessee,State Similarity,10.2,23.0
+Texas,State Similarity,10.9,9.3
+Utah,State Similarity,9.3,25.2
+Vermont,State Similarity,12.7,-35.4
+Virginia,State Similarity,12.2,-7.0
+Washington,State Similarity,10.6,-18.5
+West Virginia,State Similarity,10.6,31.3
+Wisconsin,State Similarity,10.4,-0.3
+Wyoming,State Similarity,8.9,46.8
+District of Columbia,State Similarity,13.2,-84.6
 Maine-1,State Similarity,0.0,0.0
 Maine-2,State Similarity,0.0,0.0
 Nebraska-1,State Similarity,0.0,0.0

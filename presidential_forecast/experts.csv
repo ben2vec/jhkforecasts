@@ -1,0 +1,337 @@
+state,expert,rating,margin
+Alabama,Crystal Ball 2020,Solid R,0.0
+Alabama,Cook Political Report,Solid R,0.0
+Alabama,Inside Elections,Solid R,0.0
+Alabama,Bitecofer,Solid R,0.0
+Alabama,Politico,Solid R,0.0
+Alabama,Adjusted Margin,0,29.0
+Alaska,Crystal Ball 2020,Solid R,0.0
+Alaska,Cook Political Report,Solid R,0.0
+Alaska,Inside Elections,Solid R,0.0
+Alaska,Bitecofer,Solid R,0.0
+Alaska,Politico,Solid R,0.0
+Alaska,Adjusted Margin,0,18.4
+Arizona,Crystal Ball 2020,Tossup,0.0
+Arizona,Cook Political Report,Tossup,0.0
+Arizona,Inside Elections,Tilt R,0.0
+Arizona,Bitecofer,Tossup,0.0
+Arizona,Politico,Tossup,0.0
+Arizona,Adjusted Margin,0,1.3
+Arkansas,Crystal Ball 2020,Solid R,0.0
+Arkansas,Cook Political Report,Solid R,0.0
+Arkansas,Inside Elections,Solid R,0.0
+Arkansas,Bitecofer,Solid R,0.0
+Arkansas,Politico,Solid R,0.0
+Arkansas,Adjusted Margin,0,31.2
+California,Crystal Ball 2020,Solid D,0.0
+California,Cook Political Report,Solid D,0.0
+California,Inside Elections,Solid D,0.0
+California,Bitecofer,Solid D,0.0
+California,Politico,Solid D,0.0
+California,Adjusted Margin,0,-27.1
+Colorado,Crystal Ball 2020,Lean D,0.0
+Colorado,Cook Political Report,Likely D,0.0
+Colorado,Inside Elections,Solid D,0.0
+Colorado,Bitecofer,Solid D,0.0
+Colorado,Politico,Solid D,0.0
+Colorado,Adjusted Margin,0,-14.5
+Connecticut,Crystal Ball 2020,Solid D,0.0
+Connecticut,Cook Political Report,Solid D,0.0
+Connecticut,Inside Elections,Solid D,0.0
+Connecticut,Bitecofer,Solid D,0.0
+Connecticut,Politico,Solid D,0.0
+Connecticut,Adjusted Margin,0,-19.9
+Delaware,Crystal Ball 2020,Solid D,0.0
+Delaware,Cook Political Report,Solid D,0.0
+Delaware,Inside Elections,Solid D,0.0
+Delaware,Bitecofer,Solid D,0.0
+Delaware,Politico,Solid D,0.0
+Delaware,Adjusted Margin,0,-18.9
+Florida,Crystal Ball 2020,Lean R,0.0
+Florida,Cook Political Report,Tossup,0.0
+Florida,Inside Elections,Tossup,0.0
+Florida,Bitecofer,Tossup,0.0
+Florida,Politico,Tossup,0.0
+Florida,Adjusted Margin,0,0.6
+Georgia,Crystal Ball 2020,Lean R,0.0
+Georgia,Cook Political Report,Lean R,0.0
+Georgia,Inside Elections,Likely R,0.0
+Georgia,Bitecofer,Lean R,0.0
+Georgia,Politico,Lean R,0.0
+Georgia,Adjusted Margin,0,6.9
+Hawaii,Crystal Ball 2020,Solid D,0.0
+Hawaii,Cook Political Report,Solid D,0.0
+Hawaii,Inside Elections,Solid D,0.0
+Hawaii,Bitecofer,Solid D,0.0
+Hawaii,Politico,Solid D,0.0
+Hawaii,Adjusted Margin,0,-38.7
+Idaho,Crystal Ball 2020,Solid R,0.0
+Idaho,Cook Political Report,Solid R,0.0
+Idaho,Inside Elections,Solid R,0.0
+Idaho,Bitecofer,Solid R,0.0
+Idaho,Politico,Solid R,0.0
+Idaho,Adjusted Margin,0,35.6
+Illinois,Crystal Ball 2020,Solid D,0.0
+Illinois,Cook Political Report,Solid D,0.0
+Illinois,Inside Elections,Solid D,0.0
+Illinois,Bitecofer,Solid D,0.0
+Illinois,Politico,Solid D,0.0
+Illinois,Adjusted Margin,0,-19.8
+Indiana,Crystal Ball 2020,Solid R,0.0
+Indiana,Cook Political Report,Solid R,0.0
+Indiana,Inside Elections,Solid R,0.0
+Indiana,Bitecofer,Solid R,0.0
+Indiana,Politico,Solid R,0.0
+Indiana,Adjusted Margin,0,19.2
+Iowa,Crystal Ball 2020,Lean R,0.0
+Iowa,Cook Political Report,Lean R,0.0
+Iowa,Inside Elections,Lean R,0.0
+Iowa,Bitecofer,Tossup,0.0
+Iowa,Politico,Lean R,0.0
+Iowa,Adjusted Margin,0,4.8
+Kansas,Crystal Ball 2020,Solid R,0.0
+Kansas,Cook Political Report,Solid R,0.0
+Kansas,Inside Elections,Solid R,0.0
+Kansas,Bitecofer,Solid R,0.0
+Kansas,Politico,Solid R,0.0
+Kansas,Adjusted Margin,0,21.0
+Kentucky,Crystal Ball 2020,Solid R,0.0
+Kentucky,Cook Political Report,Solid R,0.0
+Kentucky,Inside Elections,Solid R,0.0
+Kentucky,Bitecofer,Solid R,0.0
+Kentucky,Politico,Solid R,0.0
+Kentucky,Adjusted Margin,0,30.1
+Louisiana,Crystal Ball 2020,Solid R,0.0
+Louisiana,Cook Political Report,Solid R,0.0
+Louisiana,Inside Elections,Solid R,0.0
+Louisiana,Bitecofer,Solid R,0.0
+Louisiana,Politico,Solid R,0.0
+Louisiana,Adjusted Margin,0,24.1
+Maine,Crystal Ball 2020,Lean D,0.0
+Maine,Cook Political Report,Lean D,0.0
+Maine,Inside Elections,Lean D,0.0
+Maine,Bitecofer,Likely D,0.0
+Maine,Politico,Lean D,0.0
+Maine,Adjusted Margin,0,-5.8
+Maryland,Crystal Ball 2020,Solid D,0.0
+Maryland,Cook Political Report,Solid D,0.0
+Maryland,Inside Elections,Solid D,0.0
+Maryland,Bitecofer,Solid D,0.0
+Maryland,Politico,Solid D,0.0
+Maryland,Adjusted Margin,0,-26.3
+Massachusetts,Crystal Ball 2020,Solid D,0.0
+Massachusetts,Cook Political Report,Solid D,0.0
+Massachusetts,Inside Elections,Solid D,0.0
+Massachusetts,Bitecofer,Solid D,0.0
+Massachusetts,Politico,Solid D,0.0
+Massachusetts,Adjusted Margin,0,-27.9
+Michigan,Crystal Ball 2020,Lean D,0.0
+Michigan,Cook Political Report,Lean D,0.0
+Michigan,Inside Elections,Tilt D,0.0
+Michigan,Bitecofer,Lean D,0.0
+Michigan,Politico,Tossup,0.0
+Michigan,Adjusted Margin,0,-3.5
+Minnesota,Crystal Ball 2020,Lean D,0.0
+Minnesota,Cook Political Report,Lean D,0.0
+Minnesota,Inside Elections,Likely D,0.0
+Minnesota,Bitecofer,Likely D,0.0
+Minnesota,Politico,Lean D,0.0
+Minnesota,Adjusted Margin,0,-8.0
+Mississippi,Crystal Ball 2020,Solid R,0.0
+Mississippi,Cook Political Report,Solid R,0.0
+Mississippi,Inside Elections,Solid R,0.0
+Mississippi,Bitecofer,Solid R,0.0
+Mississippi,Politico,Solid R,0.0
+Mississippi,Adjusted Margin,0,19.9
+Missouri,Crystal Ball 2020,Solid R,0.0
+Missouri,Cook Political Report,Solid R,0.0
+Missouri,Inside Elections,Solid R,0.0
+Missouri,Bitecofer,Solid R,0.0
+Missouri,Politico,Solid R,0.0
+Missouri,Adjusted Margin,0,18.9
+Montana,Crystal Ball 2020,Solid R,0.0
+Montana,Cook Political Report,Solid R,0.0
+Montana,Inside Elections,Solid R,0.0
+Montana,Bitecofer,Solid R,0.0
+Montana,Politico,Solid R,0.0
+Montana,Adjusted Margin,0,19.1
+Nebraska,Crystal Ball 2020,Solid R,0.0
+Nebraska,Cook Political Report,Solid R,0.0
+Nebraska,Inside Elections,Solid R,0.0
+Nebraska,Bitecofer,Solid R,0.0
+Nebraska,Politico,Solid R,0.0
+Nebraska,Adjusted Margin,0,27.4
+Nevada,Crystal Ball 2020,Lean D,0.0
+Nevada,Cook Political Report,Likely D,0.0
+Nevada,Inside Elections,Lean D,0.0
+Nevada,Bitecofer,Lean D,0.0
+Nevada,Politico,Tossup,0.0
+Nevada,Adjusted Margin,0,-5.6
+New Hampshire,Crystal Ball 2020,Lean D,0.0
+New Hampshire,Cook Political Report,Lean D,0.0
+New Hampshire,Inside Elections,Lean D,0.0
+New Hampshire,Bitecofer,Lean D,0.0
+New Hampshire,Politico,Tossup,0.0
+New Hampshire,Adjusted Margin,0,-4.7
+New Jersey,Crystal Ball 2020,Solid D,0.0
+New Jersey,Cook Political Report,Solid D,0.0
+New Jersey,Inside Elections,Solid D,0.0
+New Jersey,Bitecofer,Solid D,0.0
+New Jersey,Politico,Solid D,0.0
+New Jersey,Adjusted Margin,0,-20.3
+New Mexico,Crystal Ball 2020,Likely D,0.0
+New Mexico,Cook Political Report,Solid D,0.0
+New Mexico,Inside Elections,Solid D,0.0
+New Mexico,Bitecofer,Solid D,0.0
+New Mexico,Politico,Likely D,0.0
+New Mexico,Adjusted Margin,0,-15.6
+New York,Crystal Ball 2020,Solid D,0.0
+New York,Cook Political Report,Solid D,0.0
+New York,Inside Elections,Solid D,0.0
+New York,Bitecofer,Solid D,0.0
+New York,Politico,Solid D,0.0
+New York,Adjusted Margin,0,-24.3
+North Carolina,Crystal Ball 2020,Lean R,0.0
+North Carolina,Cook Political Report,Tossup,0.0
+North Carolina,Inside Elections,Tossup,0.0
+North Carolina,Bitecofer,Tossup,0.0
+North Carolina,Politico,Tossup,0.0
+North Carolina,Adjusted Margin,0,1.3
+North Dakota,Crystal Ball 2020,Solid R,0.0
+North Dakota,Cook Political Report,Solid R,0.0
+North Dakota,Inside Elections,Solid R,0.0
+North Dakota,Bitecofer,Solid R,0.0
+North Dakota,Politico,Solid R,0.0
+North Dakota,Adjusted Margin,0,33.2
+Ohio,Crystal Ball 2020,Lean R,0.0
+Ohio,Cook Political Report,Lean R,0.0
+Ohio,Inside Elections,Likely R,0.0
+Ohio,Bitecofer,Lean R,0.0
+Ohio,Politico,Lean R,0.0
+Ohio,Adjusted Margin,0,6.9
+Oklahoma,Crystal Ball 2020,Solid R,0.0
+Oklahoma,Cook Political Report,Solid R,0.0
+Oklahoma,Inside Elections,Solid R,0.0
+Oklahoma,Bitecofer,Solid R,0.0
+Oklahoma,Politico,Solid R,0.0
+Oklahoma,Adjusted Margin,0,36.8
+Oregon,Crystal Ball 2020,Solid D,0.0
+Oregon,Cook Political Report,Solid D,0.0
+Oregon,Inside Elections,Solid D,0.0
+Oregon,Bitecofer,Solid D,0.0
+Oregon,Politico,Likely D,0.0
+Oregon,Adjusted Margin,0,-17.5
+Pennsylvania,Crystal Ball 2020,Tossup,0.0
+Pennsylvania,Cook Political Report,Tossup,0.0
+Pennsylvania,Inside Elections,Tilt D,0.0
+Pennsylvania,Bitecofer,Lean D,0.0
+Pennsylvania,Politico,Tossup,0.0
+Pennsylvania,Adjusted Margin,0,-1.1
+Rhode Island,Crystal Ball 2020,Solid D,0.0
+Rhode Island,Cook Political Report,Solid D,0.0
+Rhode Island,Inside Elections,Solid D,0.0
+Rhode Island,Bitecofer,Solid D,0.0
+Rhode Island,Politico,Likely D,0.0
+Rhode Island,Adjusted Margin,0,-19.3
+South Carolina,Crystal Ball 2020,Solid R,0.0
+South Carolina,Cook Political Report,Solid R,0.0
+South Carolina,Inside Elections,Solid R,0.0
+South Carolina,Bitecofer,Solid R,0.0
+South Carolina,Politico,Solid R,0.0
+South Carolina,Adjusted Margin,0,18.3
+South Dakota,Crystal Ball 2020,Solid R,0.0
+South Dakota,Cook Political Report,Solid R,0.0
+South Dakota,Inside Elections,Solid R,0.0
+South Dakota,Bitecofer,Solid R,0.0
+South Dakota,Politico,Solid R,0.0
+South Dakota,Adjusted Margin,0,29.3
+Tennessee,Crystal Ball 2020,Solid R,0.0
+Tennessee,Cook Political Report,Solid R,0.0
+Tennessee,Inside Elections,Solid R,0.0
+Tennessee,Bitecofer,Solid R,0.0
+Tennessee,Politico,Solid R,0.0
+Tennessee,Adjusted Margin,0,27.3
+Texas,Crystal Ball 2020,Lean R,0.0
+Texas,Cook Political Report,Likely R,0.0
+Texas,Inside Elections,Solid R,0.0
+Texas,Bitecofer,Likely R,0.0
+Texas,Politico,Lean R,0.0
+Texas,Adjusted Margin,0,10.6
+Utah,Crystal Ball 2020,Solid R,0.0
+Utah,Cook Political Report,Solid R,0.0
+Utah,Inside Elections,Solid R,0.0
+Utah,Bitecofer,Solid R,0.0
+Utah,Politico,Likely R,0.0
+Utah,Adjusted Margin,0,27.5
+Vermont,Crystal Ball 2020,Solid D,0.0
+Vermont,Cook Political Report,Solid D,0.0
+Vermont,Inside Elections,Solid D,0.0
+Vermont,Bitecofer,Solid D,0.0
+Vermont,Politico,Solid D,0.0
+Vermont,Adjusted Margin,0,-31.6
+Virginia,Crystal Ball 2020,Likely D,0.0
+Virginia,Cook Political Report,Likely D,0.0
+Virginia,Inside Elections,Solid D,0.0
+Virginia,Bitecofer,Likely D,0.0
+Virginia,Politico,Lean D,0.0
+Virginia,Adjusted Margin,0,-12.7
+Washington,Crystal Ball 2020,Solid D,0.0
+Washington,Cook Political Report,Solid D,0.0
+Washington,Inside Elections,Solid D,0.0
+Washington,Bitecofer,Solid D,0.0
+Washington,Politico,Solid D,0.0
+Washington,Adjusted Margin,0,-19.9
+West Virginia,Crystal Ball 2020,Solid R,0.0
+West Virginia,Cook Political Report,Solid R,0.0
+West Virginia,Inside Elections,Solid R,0.0
+West Virginia,Bitecofer,Solid R,0.0
+West Virginia,Politico,Solid R,0.0
+West Virginia,Adjusted Margin,0,37.1
+Wisconsin,Crystal Ball 2020,Tossup,0.0
+Wisconsin,Cook Political Report,Tossup,0.0
+Wisconsin,Inside Elections,Tossup,0.0
+Wisconsin,Bitecofer,Lean D,0.0
+Wisconsin,Politico,Tossup,0.0
+Wisconsin,Adjusted Margin,0,-0.7
+Wyoming,Crystal Ball 2020,Solid R,0.0
+Wyoming,Cook Political Report,Solid R,0.0
+Wyoming,Inside Elections,Solid R,0.0
+Wyoming,Bitecofer,Solid R,0.0
+Wyoming,Politico,Solid R,0.0
+Wyoming,Adjusted Margin,0,46.5
+District of Columbia,Crystal Ball 2020,Solid D,0.0
+District of Columbia,Cook Political Report,Solid D,0.0
+District of Columbia,Inside Elections,Solid D,0.0
+District of Columbia,Bitecofer,Solid D,0.0
+District of Columbia,Politico,Solid D,0.0
+District of Columbia,Adjusted Margin,0,-56.8
+Maine-1,Crystal Ball 2020,Solid D,0.0
+Maine-1,Cook Political Report,Solid D,0.0
+Maine-1,Inside Elections,-,0.0
+Maine-1,Bitecofer,Solid D,0.0
+Maine-1,Politico,Solid D,0.0
+Maine-1,Adjusted Margin,0,-20.0
+Maine-2,Crystal Ball 2020,Lean R,0.0
+Maine-2,Cook Political Report,Lean R,0.0
+Maine-2,Inside Elections,-,0.0
+Maine-2,Bitecofer,Tossup,0.0
+Maine-2,Politico,Lean R,0.0
+Maine-2,Adjusted Margin,0,4.1
+Nebraska-1,Crystal Ball 2020,Solid R,0.0
+Nebraska-1,Cook Political Report,Solid R,0.0
+Nebraska-1,Inside Elections,-,0.0
+Nebraska-1,Bitecofer,Solid R,0.0
+Nebraska-1,Politico,Solid R,0.0
+Nebraska-1,Adjusted Margin,0,24.8
+Nebraska-2,Crystal Ball 2020,Tossup,0.0
+Nebraska-2,Cook Political Report,Lean R,0.0
+Nebraska-2,Inside Elections,-,0.0
+Nebraska-2,Bitecofer,Tossup,0.0
+Nebraska-2,Politico,Tossup,0.0
+Nebraska-2,Adjusted Margin,0,1.4
+Nebraska-3,Crystal Ball 2020,Solid R,0.0
+Nebraska-3,Cook Political Report,Solid R,0.0
+Nebraska-3,Inside Elections,-,0.0
+Nebraska-3,Bitecofer,Solid R,0.0
+Nebraska-3,Politico,Solid R,0.0
+Nebraska-3,Adjusted Margin,0,56.8
