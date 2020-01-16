@@ -18,14 +18,48 @@
 	<link rel="stylesheet" href="index.css">
 	<link rel="icon" href="https://jkstats76.files.wordpress.com/2019/02/cropped-site-icon.png?w=32" sizes="32x32">
 	<link rel="icon" href="https://jkstats76.files.wordpress.com/2019/02/cropped-site-icon.png?w=192" sizes="192x192">
-<style>
-	
-	title {
-	  word-wrap: break-word;
-	  width: 500px;
-	  margin-left: 10%;
-	  font-weight: 900;
-	}
+	<style>
+		@media only screen and (min-width:851px) {
+			.title {
+				word-wrap: break-word;
+				width: 700px;
+				margin-left: 10%;
+				font-weight: 900;
+				font-size: 32px;
+			}
+
+			.featured {
+				margin-left: 10%;
+				width: 600px;
+			}
+		}
+
+		@media only screen and (max-width:850px) {
+			.title {
+				margin-left: 10%;
+				font-weight: 900;
+				font-size: 24px;
+			}
+
+			.featured {
+				margin-left: 10%;
+				width: 80%;
+			}
+		}
+
+		.subtitle {
+			word-wrap: break-word;
+			width: 700px;
+			margin-left: 5%;
+			font-weight: 700;
+			font-size: 24px;
+		}
+
+		a {
+			color: #0064c8;
+			font-weight: 500;
+			text-decoration: underline;
+		}
 	</style>
 </head>
 
@@ -84,10 +118,21 @@
 			</tbody>
 		</table>
 	</div>
-<img style="width:40%;margin-left: 10%;margin-top: 40px;margin-bottom: 20 px;border-bottom: black;" src="https://raw.githubusercontent.com/jhkersting/jhkforecasts/master/2020_pres_img-01.jpg">
+	<img class="featured" src="https://raw.githubusercontent.com/jhkersting/jhkforecasts/master/2020_pres_img-01.jpg">
 
-<div class="title"><h1>How the 2020 Presidential Forecast works.</h1></div>
+	<div class="title">
+		<h1>How the 2020 Presidential Forecast works.</h1>
+	</div>
+	<p style="margin-left: 10%;">By : Jack Kersting</p>
 
+	<div class="subtitle">
+		<h2>Overview</h2>
+	</div>
+	<p style="text-indent: 5%;margin-left: 5%;margin-right: 5%;font-size: 20px;"> My 2020 presidential forecast is my
+		first presidential race that I am
+		forecasting. However, it is not my first election forecasting. I created a forecast for the <span><a
+				href="https://jhkforecasts.com/politics/senate_forecast_18">2018 Senate Midterms</a></span> , and did
+		reasonably well.</p>
 </body>
 
 </html>

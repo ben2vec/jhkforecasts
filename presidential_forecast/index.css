@@ -38,10 +38,7 @@
    text-decoration: inherit;
    color: black;
  }
-a:hover{
-  text-decoration: underline;
-  text-decoration-style:wavy;
-}
+
 
  .center {
    display: center;
