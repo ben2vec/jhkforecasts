@@ -64,8 +64,7 @@ d3.csv("evrace.csv", function (error, data) {
   svg.selectAll("rect")
     .data(data)
     .enter()
-    .append("a")
-    .attr("xlink:href", function (d) { return d.pageLink })
+    
     .append("rect")
     .attr("rx", 2)
     .attr("ry", 1)
