@@ -10,10 +10,11 @@
 	<meta name="twitter:creator" content="@jhkersting">
 	<meta name="twitter:title" content="2020 Presidential Forecast Methodology">
 	<meta name="twitter:description" content="The Methodology behind my 2020 Presidential Forecast.">
-	<meta name="twitter:image" content="https://raw.githubusercontent.com/jhkersting/jhkforecasts/master/2020_pres_img-01.jpg">
+	<meta name="twitter:image"
+		content="https://raw.githubusercontent.com/jhkersting/jhkforecasts/master/2020_pres_img-01.jpg">
 	<title>Forecast Methodology</title>
 	<script data-ad-client="ca-pub-8025120308040073" async
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140782021-2"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
@@ -22,9 +23,11 @@
 
 		gtag('config', 'UA-140782021-2');
 	</script>
-	<script src="https://raw.githubusercontent.com/GoogleChrome/lighthouse/master/lighthouse-core/audits/font-display.js"></script>   
-	<script src="https://raw.githubusercontent.com/GoogleChrome/lighthouse/master/lighthouse-core/audits/byte-efficiency/offscreen-images.js"></script>
-	
+	<script
+		src="https://raw.githubusercontent.com/GoogleChrome/lighthouse/master/lighthouse-core/audits/font-display.js"></script>
+	<script
+		src="https://raw.githubusercontent.com/GoogleChrome/lighthouse/master/lighthouse-core/audits/byte-efficiency/offscreen-images.js"></script>
+
 	<link rel="stylesheet" href="https://use.typekit.net/htk2wjy.css">
 	<link rel="stylesheet" href="index.css">
 	<link rel="icon" href="https://jkstats76.files.wordpress.com/2019/02/cropped-site-icon.png?w=32" sizes="32x32">
@@ -212,15 +215,11 @@
 		src="https://jkstats76.files.wordpress.com/2019/04/screen-shot-2019-04-08-at-1.38.24-pm.png" alt="" />
 	<br>
 	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-format="fluid"
-     data-ad-layout-key="-h2+d+5c-9-3e"
-     data-ad-client="ca-pub-8025120308040073"
-     data-ad-slot="8603820464"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+	<ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-h2+d+5c-9-3e"
+		data-ad-client="ca-pub-8025120308040073" data-ad-slot="8603820464"></ins>
+	<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
 	<div class="subtitletwo">
 		<h2>Polling</h2>
 	</div>
@@ -273,8 +272,8 @@
 		</div>
 		<p style="text-indent: 5%;margin-left: 5%;margin-right: 5%;font-size: 20px;">To come up with the final projected
 			vote for each state I have to combine all four indexes. Each index is given points which will determine the
-			weight. The fundamentals and expert's ratings are a set number of points, with fundamentals getting more
-			than expert's. The polling and state similarity index are given points based on the amount of polls they
+			weight. The fundamentals and expert's ratings are a set number of points. The polling and state similarity
+			index are given points based on the amount of polls they
 			have. More polls will give the higher number of points, but will decrease the state similarity number of
 			points. State similarity points do not affect polling points. Then I weight them based on number of points.
 			For example lets say a states indexes have the following points: Polling - 100, Fundamentals - 80, Experts -
@@ -282,16 +281,12 @@
 			Experts - 20%, and State Similarity - 13.3%. The final step before simulating the election is finding each
 			states uncertainty. State will more total points the model becomes less uncertain, which will give a lower
 			variance in the simulations for that state. </p>
-			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-			<ins class="adsbygoogle"
-				 style="display:block"
-				 data-ad-format="fluid"
-				 data-ad-layout-key="-h2+d+5c-9-3e"
-				 data-ad-client="ca-pub-8025120308040073"
-				 data-ad-slot="8603820464"></ins>
-			<script>
-				 (adsbygoogle = window.adsbygoogle || []).push({});
-			</script>
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-h2+d+5c-9-3e"
+			data-ad-client="ca-pub-8025120308040073" data-ad-slot="8603820464"></ins>
+		<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
 		<div class="subtitle">
 			<h2>Simulate the election</h2>
 		</div>
@@ -303,39 +298,42 @@
 			the national number, and the state's region number and combine time to get a final rand number for that
 			state. I then have to adjust the variance calculated from the state to adjust for three random numbers. As
 			if I didn't the variance would be too little as the more random numbers you add together, the more
-			likelyhood of them being closer to .5. If it doesn't make sense,<a href="https://en.wikipedia.org/wiki/Central_limit_theorem">The Central Limit Theorem</a> will explain it a little. This is done for each candidate. It then allocates thats states electoral votes to the candidate with the highest vote share. Finally it adds each candidates electoral votes to see who has 270. If no candidate reaches 270, the simulation gives Trump the win 80% of the time as the republicans control a majority of the state's houses and are gerrymandered in a way where it is almost impossible to flip. And that is pretty much it.</p>
+			likelyhood of them being closer to .5. If it doesn't make sense,<a
+				href="https://en.wikipedia.org/wiki/Central_limit_theorem">The Central Limit Theorem</a> will explain it
+			a little. This is done for each candidate. It then allocates thats states electoral votes to the candidate
+			with the highest vote share. Finally it adds each candidates electoral votes to see who has 270. If no
+			candidate reaches 270, the simulation gives Trump the win 80% of the time as the republicans control a
+			majority of the state's houses and are gerrymandered in a way where it is almost impossible to flip. And
+			that is pretty much it.</p>
 
-		<p style="text-indent: 5%;margin-left: 5%;margin-right: 5%;font-size: 20px;">If you have any question reach out to me on twitter <a href="https://twitter.com/jhkforecasts/">@jhkforecasts</a></p>
-	
+		<p style="text-indent: 5%;margin-left: 5%;margin-right: 5%;font-size: 20px;">If you have any question reach out
+			to me on twitter <a href="https://twitter.com/jhkforecasts/">@jhkforecasts</a></p>
+
+		<div class="subtitletwo">
+			<h2>Updates or changes to model</h2>
+		</div>
+		<p style="text-indent: 5%;margin-left: 5%;margin-right: 5%;font-size: 20px;">January 16,2020: Adjusted the
+			weights of indexes. Expert's weighting becomes weaker. My model will show a small bump in Trump's chances
+			due to fundamentals (right now) favoring Trump more than Experts. I did this as calculating the expert's
+			projected margin is much more of a rough estimate than fundamentals. </p>
+
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-		<ins class="adsbygoogle"
-			 style="display:block"
-			 data-ad-format="fluid"
-			 data-ad-layout-key="-h2+d+5c-9-3e"
-			 data-ad-client="ca-pub-8025120308040073"
-			 data-ad-slot="8603820464"></ins>
+		<ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-h2+d+5c-9-3e"
+			data-ad-client="ca-pub-8025120308040073" data-ad-slot="8603820464"></ins>
 		<script>
-			 (adsbygoogle = window.adsbygoogle || []).push({});
+			(adsbygoogle = window.adsbygoogle || []).push({});
 		</script>
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-		<ins class="adsbygoogle"
-			 style="display:block"
-			 data-ad-format="fluid"
-			 data-ad-layout-key="-h2+d+5c-9-3e"
-			 data-ad-client="ca-pub-8025120308040073"
-			 data-ad-slot="8603820464"></ins>
+		<ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-h2+d+5c-9-3e"
+			data-ad-client="ca-pub-8025120308040073" data-ad-slot="8603820464"></ins>
 		<script>
-			 (adsbygoogle = window.adsbygoogle || []).push({});
+			(adsbygoogle = window.adsbygoogle || []).push({});
 		</script>
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-		<ins class="adsbygoogle"
-			 style="display:block"
-			 data-ad-format="fluid"
-			 data-ad-layout-key="-h2+d+5c-9-3e"
-			 data-ad-client="ca-pub-8025120308040073"
-			 data-ad-slot="8603820464"></ins>
+		<ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-h2+d+5c-9-3e"
+			data-ad-client="ca-pub-8025120308040073" data-ad-slot="8603820464"></ins>
 		<script>
-			 (adsbygoogle = window.adsbygoogle || []).push({});
+			(adsbygoogle = window.adsbygoogle || []).push({});
 		</script>
 </body>
 
