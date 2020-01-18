@@ -235,7 +235,7 @@ d3.csv("Sheet2.csv", function (error, data) {
 
 
     legend.append("a")
-    .attr("xlink:href", function(d) {return d.state})
+    .attr("xlink:href", d=>d.state=="Nebraska-1"?"Nebraska 1":d.state=="Nebraska-2"?"Nebraska 2":d.state=="Nebraska-3"?"Nebraska 3":d.state=="Maine-1"?"Maine 1":d.state=="Maine-2"?"Maine 2":d.state)
     .append("rect")
     .attr("x", 0)
     .attr("y", -20)
