@@ -285,13 +285,12 @@ d3.csv("states.csv", function (error, data) {
       .attr("class", "mouse-per-line");
 
     mousePerLine.append("circle")
-      .attr("r", 4)
-      .style("stroke", "white"
+      .attr("r", 3)
+      .style("stroke", d=>color(d.key)
       )
-      .style("fill", function (d) {
-        return color(d.key)
-      })
-      .style("stroke-width", 3)
+      .style("fill", "white")
+      
+      .style("stroke-width", 2)
       .style("opacity", "0");
 
     mouseG.append('svg:rect') // append a rect to catch mouse movements on canvas
@@ -367,7 +366,7 @@ d3.csv("states.csv", function (error, data) {
     tooltip.html(sortingObj[0].month + "-" + sortingObj[0].day)
       .style('display', 'inline')
       .style('left', d3.event.pageX + 40)
-      .style('top', d3.event.pageY)
+      .style('top', d3.event.pageY-80)
       .style('font-size', 18)
       .style('font-family', 'brandon-grotesque')
       .style('font-weight', 700)
