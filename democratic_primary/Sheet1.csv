@@ -1,8 +1,8 @@
 state,category,Biden,Bloomberg,Booker,Buttigieg,Klobuchar,Sanders,Steyer,Warren,Yang,weight,Bidendel,Bloombergdel,Bookerdel,Buttigiegdel,Klobuchardel,Sandersdel,Steyerdel,Warrendel,Yangdel,transition,delegatecount
-Iowa,Polling,19.0,0.0,2.5,17.7,7.0,19.0,3.3,15.7,3.7,79.2,,,,,,,,,,,41.0
-New Hampshire,Polling,18.7,0.0,1.1,15.8,5.9,20.7,3.9,14.5,4.4,77.8,,,,,,,,,,,24.0
-Nevada,Polling,23.8,0.0,1.9,7.3,2.7,19.9,8.8,13.3,4.6,66.6,,,,,,,,,,,36.0
-South Carolina,Polling,36.3,0.0,2.1,5.7,1.8,14.1,10.2,9.9,2.9,65.2,,,,,,,,,,,54.0
+Iowa,Polling,19.0,2.4,2.5,17.7,7.0,19.0,3.3,15.7,3.7,79.2,,,,,,,,,,,41.0
+New Hampshire,Polling,18.7,2.4,1.1,15.8,5.9,20.7,3.9,14.5,4.4,77.8,,,,,,,,,,,24.0
+Nevada,Polling,23.8,2.9,1.9,7.3,2.7,19.9,8.8,13.3,4.6,66.6,,,,,,,,,,,36.0
+South Carolina,Polling,36.3,4.0,2.1,5.7,1.8,14.1,10.2,9.9,2.9,65.2,,,,,,,,,,,54.0
 Alabama,Polling,40.6,0.0,5.7,9.7,1.2,11.0,0.0,9.7,3.9,2.1,,,,,,,,,,,52.0
 American Samoa,Polling,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,,,,,,,,,,6.0
 Arkansas,Polling,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,,,,,,,,,,31.0
@@ -56,64 +56,64 @@ New Mexico,Polling,26.2,3.7,1.3,6.2,2.0,28.7,1.3,8.4,10.4,34.2,,,,,,,,,,,34.0
 South Dakota,Polling,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,,,,,,,,,,16.0
 Virgin Islands,Polling,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,,,,,,,,,,7.0
 Puerto Rico,Polling,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,,,,,,,,,,51.0
-Iowa,Similar States,22.5,7.4,1.0,12.3,7.3,17.4,2.2,17.1,3.9,9.2,,,,,,,,,,,
-New Hampshire,Similar States,24.6,6.7,1.6,11.7,6.2,17.9,1.7,17.9,3.4,9.9,,,,,,,,,,,
-Nevada,Similar States,26.6,5.6,1.5,10.0,2.5,21.8,1.7,14.5,5.3,14.9,,,,,,,,,,,
-South Carolina,Similar States,37.6,9.1,1.9,7.5,2.5,14.5,1.7,13.5,3.1,15.5,,,,,,,,,,,
-Alabama,Similar States,34.7,8.7,1.4,8.0,2.7,15.3,3.2,14.0,2.9,43.5,,,,,,,,,,,
-American Samoa,Similar States,31.3,8.4,1.7,10.1,2.6,17.7,1.8,15.4,3.2,44.4,,,,,,,,,,,
-Arkansas,Similar States,26.9,6.6,1.4,9.3,2.4,20.8,2.5,14.4,5.0,44.4,,,,,,,,,,,
-California,Similar States,27.5,5.9,1.2,11.4,3.8,18.6,2.6,13.8,4.4,12.9,,,,,,,,,,,
-Colorado,Similar States,27.1,5.2,0.3,11.1,2.4,17.4,1.8,22.5,2.6,39.6,,,,,,,,,,,
-Democrats Abroad,Similar States,24.9,7.3,2.7,10.9,5.7,19.2,1.6,16.3,4.1,44.4,,,,,,,,,,,
-Maine,Similar States,27.3,7.4,1.2,13.8,3.1,17.4,2.2,16.9,3.1,39.1,,,,,,,,,,,
-Massachusetts,Similar States,31.7,7.5,2.3,9.4,2.9,17.7,1.5,13.9,3.3,34.3,,,,,,,,,,,
-Minnesota,Similar States,31.8,4.5,0.6,10.6,2.3,17.9,1.7,16.0,3.6,42.4,,,,,,,,,,,
-North Carolina,Similar States,31.1,8.4,2.0,11.5,2.5,17.8,1.8,13.7,3.4,20.7,,,,,,,,,,,
-Oklahoma,Similar States,29.2,6.1,1.7,9.3,2.6,19.3,1.7,15.3,4.6,43.5,,,,,,,,,,,
-Tennessee,Similar States,19.6,7.4,1.5,12.3,8.9,21.9,2.3,15.8,5.4,44.2,,,,,,,,,,,
-Texas,Similar States,23.6,6.7,1.5,12.4,6.1,18.4,2.2,17.3,3.6,27.5,,,,,,,,,,,
-Utah,Similar States,31.3,8.4,1.9,10.5,2.3,18.3,1.6,14.3,3.2,44.4,,,,,,,,,,,
-Vermont,Similar States,22.8,5.1,1.7,10.9,2.3,22.6,1.9,15.9,5.7,44.4,,,,,,,,,,,
-Virginia,Similar States,33.0,7.7,2.1,10.6,2.3,17.3,1.5,13.6,3.3,40.8,,,,,,,,,,,
-Idaho,Similar States,35.9,9.1,2.0,7.7,2.4,14.7,3.7,13.5,3.1,44.4,,,,,,,,,,,
-Michigan,Similar States,29.0,8.0,2.2,11.8,2.5,19.7,1.6,13.6,3.6,31.6,,,,,,,,,,,
-Mississippi,Similar States,25.5,7.6,2.4,14.3,3.7,14.6,2.9,17.4,3.6,43.4,,,,,,,,,,,
-Missouri,Similar States,33.3,7.6,2.2,10.3,2.2,17.7,1.3,13.7,2.9,42.7,,,,,,,,,,,
-North Dakota,Similar States,21.0,7.4,1.1,11.1,7.7,20.0,1.5,17.9,5.1,44.4,,,,,,,,,,,
-Ohio,Similar States,29.0,3.7,1.5,9.1,2.2,19.5,2.9,15.2,4.7,36.5,,,,,,,,,,,
-Washington,Similar States,32.0,8.8,2.5,8.9,2.5,16.7,1.7,14.5,3.3,43.5,,,,,,,,,,,
-Northern Marianas,Similar States,32.3,8.6,1.9,10.4,2.4,17.5,1.6,14.0,3.5,44.4,,,,,,,,,,,
-Arizona,Similar States,35.3,8.1,1.9,8.2,2.5,14.6,3.7,13.7,3.0,31.6,,,,,,,,,,,
-Florida,Similar States,30.1,7.3,2.1,9.1,2.4,19.6,2.2,15.1,3.7,27.8,,,,,,,,,,,
-Illinois,Similar States,26.8,6.2,1.9,9.0,3.6,19.2,2.5,15.4,4.6,39.5,,,,,,,,,,,
-Georgia,Similar States,37.0,8.9,1.9,7.4,2.4,14.5,3.5,13.1,3.2,31.9,,,,,,,,,,,
-Alaska,Similar States,25.8,4.9,2.2,13.4,3.6,17.4,2.9,15.7,4.7,44.4,,,,,,,,,,,
-Hawaii,Similar States,25.5,5.7,1.0,14.0,6.2,16.4,2.0,18.0,3.4,44.4,,,,,,,,,,,
-Louisiana,Similar States,23.5,6.7,1.4,11.3,4.9,18.0,1.9,17.7,3.7,44.4,,,,,,,,,,,
-Wyoming,Similar States,32.1,8.6,2.1,10.4,2.2,19.4,1.6,14.4,3.5,44.4,,,,,,,,,,,
-Wisconsin,Similar States,33.3,8.7,2.6,8.5,2.6,16.6,2.7,13.2,3.3,17.9,,,,,,,,,,,
-Connecticut,Similar States,31.4,7.8,2.3,10.9,2.5,18.1,1.5,13.4,3.1,40.6,,,,,,,,,,,
-Delaware,Similar States,31.6,7.5,2.3,10.8,2.3,17.9,1.3,13.9,3.0,40.8,,,,,,,,,,,
-Maryland,Similar States,28.6,7.3,2.3,11.4,2.7,19.2,1.7,15.0,3.6,43.3,,,,,,,,,,,
-New York,Similar States,20.0,7.4,1.6,12.8,9.0,20.6,2.1,15.5,5.1,38.2,,,,,,,,,,,
-Pennsylvania,Similar States,29.4,7.3,2.1,9.2,4.0,18.9,1.2,15.0,3.5,30.9,,,,,,,,,,,
-Rhode Island,Similar States,20.0,7.4,1.6,12.7,9.0,20.6,2.1,15.5,5.1,44.4,,,,,,,,,,,
-Guam,Similar States,20.5,6.4,1.6,14.4,4.2,17.6,3.0,19.4,3.8,44.4,,,,,,,,,,,
-Kansas,Similar States,30.2,6.7,1.2,11.4,4.0,17.2,1.4,14.9,3.2,44.4,,,,,,,,,,,
-Indiana,Similar States,18.2,7.4,1.2,10.4,7.5,21.5,1.4,17.6,4.6,44.0,,,,,,,,,,,
-Nebraska,Similar States,36.6,9.8,1.9,7.9,2.3,15.0,3.2,12.5,3.3,44.4,,,,,,,,,,,
-West Virginia,Similar States,22.8,7.1,1.7,10.9,2.3,22.7,1.6,15.9,5.7,44.4,,,,,,,,,,,
-Kentucky,Similar States,32.8,7.3,1.4,10.2,2.1,18.2,1.5,13.0,3.2,44.4,,,,,,,,,,,
-Oregon,Similar States,28.2,7.3,1.4,9.5,2.7,18.8,2.8,15.9,3.8,44.0,,,,,,,,,,,
-District of Columbia,Similar States,20.1,7.3,1.8,13.1,8.4,19.3,2.3,17.0,5.2,44.4,,,,,,,,,,,
-Montana,Similar States,29.0,5.2,0.9,8.2,2.2,21.7,2.5,16.3,4.2,44.4,,,,,,,,,,,
-New Jersey,Similar States,24.7,6.6,6.1,8.9,1.8,19.4,2.5,16.7,3.2,23.1,,,,,,,,,,,
-New Mexico,Similar States,20.8,5.6,1.0,8.1,2.2,25.8,2.8,18.7,5.0,29.3,,,,,,,,,,,
-South Dakota,Similar States,23.8,5.2,0.9,11.9,4.9,23.7,0.9,15.2,3.4,44.4,,,,,,,,,,,
-Virgin Islands,Similar States,28.4,6.4,2.1,8.3,2.9,20.0,1.8,15.9,3.8,44.4,,,,,,,,,,,
-Puerto Rico,Similar States,28.4,6.4,2.1,8.3,2.9,20.0,1.8,15.9,3.8,44.4,,,,,,,,,,,
-Iowa,Demographic Regression,21.5,0.0,0.8,17.0,4.5,18.8,4.9,14.6,3.2,11.5,,,,,,,,,,,
+Iowa,Similar States,22.5,5.0,1.0,12.3,7.3,17.4,2.2,17.1,3.9,9.2,,,,,,,,,,,
+New Hampshire,Similar States,24.6,0.0,1.6,11.7,6.2,17.9,1.7,17.9,3.4,9.9,,,,,,,,,,,
+Nevada,Similar States,26.6,0.0,1.5,10.0,2.5,21.8,1.7,14.5,5.3,14.9,,,,,,,,,,,
+South Carolina,Similar States,37.6,0.0,1.9,7.5,2.5,14.5,1.7,13.5,3.1,15.5,,,,,,,,,,,
+Alabama,Similar States,34.7,7.9,1.4,8.0,2.7,15.3,3.2,14.0,2.9,43.5,,,,,,,,,,,
+American Samoa,Similar States,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,44.4,,,,,,,,,,,
+Arkansas,Similar States,31.3,8.4,1.7,10.1,2.6,17.7,1.8,15.4,3.2,44.4,,,,,,,,,,,
+California,Similar States,26.9,5.7,1.4,9.3,2.4,20.8,2.5,14.4,5.0,12.9,,,,,,,,,,,
+Colorado,Similar States,27.5,4.9,1.2,11.4,3.8,18.6,2.6,13.8,4.4,39.6,,,,,,,,,,,
+Democrats Abroad,Similar States,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,44.4,,,,,,,,,,,
+Maine,Similar States,27.1,7.2,0.3,11.1,2.4,17.4,1.8,22.5,2.6,39.1,,,,,,,,,,,
+Massachusetts,Similar States,24.9,6.0,2.7,10.9,5.7,19.2,1.6,16.3,4.1,34.3,,,,,,,,,,,
+Minnesota,Similar States,27.3,5.1,1.2,13.8,15.1,17.4,2.2,16.9,3.1,42.4,,,,,,,,,,,
+North Carolina,Similar States,31.7,7.5,2.3,9.4,2.9,17.7,1.5,13.9,3.3,20.7,,,,,,,,,,,
+Oklahoma,Similar States,31.8,7.4,0.6,10.6,2.3,17.9,2.8,16.0,3.6,43.5,,,,,,,,,,,
+Tennessee,Similar States,31.1,8.4,2.0,11.5,2.5,17.8,1.8,13.7,3.4,44.2,,,,,,,,,,,
+Texas,Similar States,29.2,6.1,1.7,9.3,2.6,19.3,1.7,15.3,4.6,27.5,,,,,,,,,,,
+Utah,Similar States,19.6,2.4,1.5,12.3,8.9,21.9,2.3,15.8,5.4,44.4,,,,,,,,,,,
+Vermont,Similar States,23.6,4.4,1.5,12.4,6.1,18.4,2.2,17.3,3.6,44.4,,,,,,,,,,,
+Virginia,Similar States,31.3,8.4,1.9,10.5,2.3,18.3,1.6,14.3,3.2,40.8,,,,,,,,,,,
+Idaho,Similar States,22.8,5.1,1.7,10.9,2.3,22.6,0.0,15.9,5.7,44.4,,,,,,,,,,,
+Michigan,Similar States,33.0,7.7,2.1,10.6,2.3,17.3,1.5,13.6,3.3,31.6,,,,,,,,,,,
+Mississippi,Similar States,35.9,7.6,2.0,7.7,2.4,14.7,3.7,13.5,3.1,43.4,,,,,,,,,,,
+Missouri,Similar States,29.0,8.0,2.2,11.8,2.5,19.7,1.6,13.6,3.6,42.7,,,,,,,,,,,
+North Dakota,Similar States,25.5,2.4,2.4,14.3,3.7,14.6,2.9,17.4,3.6,44.4,,,,,,,,,,,
+Ohio,Similar States,33.3,7.6,2.2,10.3,2.2,17.7,1.3,13.7,2.9,36.5,,,,,,,,,,,
+Washington,Similar States,21.0,7.4,1.1,11.1,7.7,20.0,1.5,17.9,5.1,43.5,,,,,,,,,,,
+Northern Marianas,Similar States,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,44.4,,,,,,,,,,,
+Arizona,Similar States,29.0,8.8,1.5,9.1,2.2,19.5,2.9,15.2,4.7,31.6,,,,,,,,,,,
+Florida,Similar States,32.0,8.6,2.5,8.9,2.5,16.7,1.7,14.5,3.3,27.8,,,,,,,,,,,
+Illinois,Similar States,32.3,7.0,1.9,10.4,2.4,17.5,1.6,14.0,3.5,39.5,,,,,,,,,,,
+Georgia,Similar States,35.3,5.8,1.9,8.2,2.5,14.6,3.7,13.7,3.0,31.9,,,,,,,,,,,
+Alaska,Similar States,30.1,5.6,2.1,9.1,2.4,19.6,2.2,15.1,3.7,44.4,,,,,,,,,,,
+Hawaii,Similar States,26.8,7.7,1.9,9.0,3.6,19.2,2.5,15.4,4.6,44.4,,,,,,,,,,,
+Louisiana,Similar States,37.0,2.4,1.9,7.4,2.4,14.5,3.5,13.1,3.2,44.4,,,,,,,,,,,
+Wyoming,Similar States,25.8,2.4,2.2,13.4,3.6,17.4,2.9,15.7,4.7,44.4,,,,,,,,,,,
+Wisconsin,Similar States,25.5,5.2,1.0,14.0,6.2,16.4,2.0,18.0,3.4,17.9,,,,,,,,,,,
+Connecticut,Similar States,23.5,8.6,1.4,11.3,4.9,18.0,1.9,17.7,3.7,40.6,,,,,,,,,,,
+Delaware,Similar States,32.1,7.9,2.1,10.4,2.2,19.4,1.6,14.4,3.5,40.8,,,,,,,,,,,
+Maryland,Similar States,33.3,7.8,2.6,8.5,2.6,16.6,2.7,13.2,3.3,43.3,,,,,,,,,,,
+New York,Similar States,31.4,7.5,2.3,10.9,2.5,18.1,1.5,13.4,3.1,38.2,,,,,,,,,,,
+Pennsylvania,Similar States,31.6,6.1,2.3,10.8,2.3,17.9,1.3,13.9,3.0,30.9,,,,,,,,,,,
+Rhode Island,Similar States,28.6,4.8,2.3,11.4,2.7,19.2,1.7,15.0,3.6,44.4,,,,,,,,,,,
+Guam,Similar States,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,44.4,,,,,,,,,,,
+Kansas,Similar States,20.0,4.8,1.6,12.8,9.0,20.6,2.1,15.5,5.1,44.4,,,,,,,,,,,
+Indiana,Similar States,29.4,2.4,2.1,9.2,4.0,18.9,1.2,15.0,3.5,44.0,,,,,,,,,,,
+Nebraska,Similar States,20.0,6.7,1.6,12.7,9.0,20.6,2.1,15.5,5.1,44.4,,,,,,,,,,,
+West Virginia,Similar States,20.5,7.4,1.6,14.4,4.2,17.6,3.0,19.4,3.8,44.4,,,,,,,,,,,
+Kentucky,Similar States,30.2,7.6,1.2,11.4,4.0,17.2,1.4,14.9,3.2,44.4,,,,,,,,,,,
+Oregon,Similar States,18.2,0.0,1.2,10.4,7.5,21.5,1.4,17.6,4.6,44.0,,,,,,,,,,,
+District of Columbia,Similar States,36.6,7.3,1.9,7.9,2.3,15.0,3.2,12.5,3.3,44.4,,,,,,,,,,,
+Montana,Similar States,22.8,6.3,1.7,10.9,2.3,22.7,0.0,15.9,5.7,44.4,,,,,,,,,,,
+New Jersey,Similar States,32.8,2.4,1.4,10.2,2.1,18.2,1.5,13.0,3.2,23.1,,,,,,,,,,,
+New Mexico,Similar States,28.2,0.0,1.4,9.5,2.7,18.8,2.8,15.9,3.8,29.3,,,,,,,,,,,
+South Dakota,Similar States,20.1,0.0,1.8,13.1,8.4,19.3,2.3,17.0,5.2,44.4,,,,,,,,,,,
+Virgin Islands,Similar States,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,44.4,,,,,,,,,,,
+Puerto Rico,Similar States,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,44.4,,,,,,,,,,,
+Iowa,Demographic Regression,21.5,4.7,0.8,17.0,4.5,18.8,4.9,14.6,3.2,11.5,,,,,,,,,,,
 New Hampshire,Demographic Regression,17.8,0.0,1.5,15.4,2.0,19.7,6.6,17.4,3.2,12.3,,,,,,,,,,,
 Nevada,Demographic Regression,24.9,0.0,0.9,7.0,1.8,22.7,7.0,16.4,4.3,18.6,,,,,,,,,,,
 South Carolina,Demographic Regression,43.1,0.0,3.3,4.4,2.4,11.6,6.4,8.6,3.1,19.3,,,,,,,,,,,
@@ -227,61 +227,61 @@ New Mexico,,,,,,,,,,,,,,,,,,,,,Adjustments for other candidates,
 South Dakota,,,,,,,,,,,,,,,,,,,,,Adjustments for other candidates,
 Virgin Islands,,,,,,,,,,,,,,,,,,,,,Adjustments for other candidates,
 Puerto Rico,,,,,,,,,,,,,,,,,,,,,Adjustments for other candidates,
-Iowa,Projected Vote,21.3,0.0,0.0,18.6,7.3,20.4,3.7,17.0,4.0,,,,,,,,,,,,
-New Hampshire,Projected Vote,21.2,0.0,0.0,16.9,6.0,22.4,4.4,16.8,4.6,,,,,,,,,,,,
-Nevada,Projected Vote,27.6,0.0,0.0,8.6,2.8,23.4,8.4,15.9,5.3,,,,,,,,,,,,
-South Carolina,Projected Vote,42.9,0.0,0.0,6.5,2.3,15.5,9.3,11.6,3.3,,,,,,,,,,,,
-Alabama,Projected Vote,42.4,8.5,0.0,6.7,2.8,14.5,2.6,12.1,3.4,,,,,,,,,,,,
-American Samoa,Projected Vote,31.1,7.7,0.0,9.5,2.9,19.9,1.8,16.4,3.7,,,,,,,,,,,,
-Arkansas,Projected Vote,37.2,7.6,0.0,8.0,2.9,17.7,2.2,12.9,4.4,,,,,,,,,,,,
-California,Projected Vote,26.2,5.6,0.0,8.5,2.8,23.1,3.0,19.3,4.7,,,,,,,,,,,,
-Colorado,Projected Vote,24.1,5.4,0.0,9.5,2.2,25.1,2.2,20.5,4.0,,,,,,,,,,,,
-Democrats Abroad,Projected Vote,28.2,7.2,0.0,10.0,4.3,20.6,1.8,16.9,4.1,,,,,,,,,,,,
-Maine,Projected Vote,24.4,7.6,0.0,12.5,2.6,20.3,2.6,19.3,3.7,,,,,,,,,,,,
-Massachusetts,Projected Vote,24.5,7.2,0.0,10.3,2.5,18.7,2.0,24.8,3.2,,,,,,,,,,,,
-Minnesota,Projected Vote,26.5,4.8,0.0,11.1,11.0,18.9,1.3,15.9,3.6,,,,,,,,,,,,
-North Carolina,Projected Vote,36.9,8.7,0.0,7.6,2.6,18.0,2.3,13.2,3.7,,,,,,,,,,,,
-Oklahoma,Projected Vote,32.2,7.2,0.0,8.1,3.0,23.2,1.8,13.3,4.2,,,,,,,,,,,,
-Tennessee,Projected Vote,32.7,7.7,0.0,9.1,5.7,17.8,2.1,13.5,4.5,,,,,,,,,,,,
-Texas,Projected Vote,29.9,8.0,0.0,9.0,3.8,19.3,2.2,16.7,4.0,,,,,,,,,,,,
-Utah,Projected Vote,26.5,7.0,0.0,9.9,2.4,23.9,2.3,17.0,4.1,,,,,,,,,,,,
-Vermont,Projected Vote,18.9,5.3,0.0,9.6,2.0,35.2,2.0,15.7,4.2,,,,,,,,,,,,
-Virginia,Projected Vote,34.8,7.2,0.0,10.3,3.9,18.4,1.5,13.1,3.8,,,,,,,,,,,,
-Idaho,Projected Vote,29.9,7.1,0.0,8.2,2.3,24.6,3.2,13.7,3.9,,,,,,,,,,,,
-Michigan,Projected Vote,29.4,6.8,0.0,11.1,3.4,22.2,1.2,15.4,3.5,,,,,,,,,,,,
-Mississippi,Projected Vote,39.7,8.1,0.0,9.1,3.1,13.8,2.4,13.1,3.6,,,,,,,,,,,,
-Missouri,Projected Vote,39.1,7.9,0.0,8.6,2.8,16.4,1.6,13.2,3.4,,,,,,,,,,,,
-North Dakota,Projected Vote,23.0,6.3,0.0,11.7,6.2,24.0,1.2,16.4,4.2,,,,,,,,,,,,
-Ohio,Projected Vote,29.7,4.9,0.0,10.9,3.6,21.6,2.0,16.1,4.3,,,,,,,,,,,,
-Washington,Projected Vote,26.7,7.2,0.0,9.2,2.5,22.8,2.4,17.9,4.3,,,,,,,,,,,,
-Northern Marianas,Projected Vote,31.6,7.7,0.0,9.7,2.8,19.8,1.7,15.8,3.8,,,,,,,,,,,,
-Arizona,Projected Vote,33.0,6.6,0.0,9.1,2.4,19.8,2.6,15.5,4.0,,,,,,,,,,,,
-Florida,Projected Vote,36.6,7.6,0.0,7.1,3.5,16.9,2.0,15.6,3.8,,,,,,,,,,,,
-Illinois,Projected Vote,28.0,6.3,0.0,11.5,4.4,20.7,1.8,16.2,4.0,,,,,,,,,,,,
-Georgia,Projected Vote,41.4,9.3,0.0,6.8,2.6,15.2,2.4,11.8,3.5,,,,,,,,,,,,
-Alaska,Projected Vote,27.9,5.1,0.0,10.9,2.9,21.3,2.8,17.4,4.7,,,,,,,,,,,,
-Hawaii,Projected Vote,23.2,5.9,0.0,10.5,3.9,22.8,2.6,19.4,4.7,,,,,,,,,,,,
-Louisiana,Projected Vote,37.9,7.7,0.0,8.1,3.8,16.0,2.0,13.7,3.8,,,,,,,,,,,,
-Wyoming,Projected Vote,30.3,6.7,0.0,9.1,2.1,23.4,2.1,15.4,3.9,,,,,,,,,,,,
-Wisconsin,Projected Vote,26.5,7.6,0.0,11.3,3.9,21.8,1.8,15.9,4.2,,,,,,,,,,,,
-Connecticut,Projected Vote,27.6,7.8,0.0,10.9,2.3,21.1,2.3,17.4,3.5,,,,,,,,,,,,
-Delaware,Projected Vote,35.2,7.0,0.0,9.9,2.1,18.7,1.8,15.2,3.1,,,,,,,,,,,,
-Maryland,Projected Vote,30.0,7.5,0.0,10.2,2.2,20.3,2.3,16.9,3.6,,,,,,,,,,,,
-New York,Projected Vote,25.4,11.4,0.0,10.0,4.7,19.8,2.1,15.6,4.0,,,,,,,,,,,,
-Pennsylvania,Projected Vote,32.1,6.4,0.0,10.8,4.0,19.7,1.3,15.1,3.6,,,,,,,,,,,,
-Rhode Island,Projected Vote,21.3,7.6,0.0,11.8,5.4,22.0,2.5,18.0,4.4,,,,,,,,,,,,
-Guam,Projected Vote,26.2,6.8,0.0,11.6,3.6,20.0,2.4,18.4,4.0,,,,,,,,,,,,
-Kansas,Projected Vote,28.0,6.0,0.0,12.1,4.6,22.1,1.2,15.6,3.4,,,,,,,,,,,,
-Indiana,Projected Vote,22.1,6.2,0.0,16.1,6.0,21.0,1.2,16.4,4.0,,,,,,,,,,,,
-Nebraska,Projected Vote,30.6,7.5,0.0,10.4,3.8,20.8,2.0,14.5,3.4,,,,,,,,,,,,
-West Virginia,Projected Vote,32.1,7.5,0.0,9.0,2.9,24.7,1.7,10.4,4.6,,,,,,,,,,,,
-Kentucky,Projected Vote,35.3,7.7,0.0,8.6,2.8,20.6,1.7,12.8,3.6,,,,,,,,,,,,
-Oregon,Projected Vote,27.5,5.3,0.0,9.3,2.5,23.1,2.9,18.0,4.5,,,,,,,,,,,,
-District of Columbia,Projected Vote,35.5,7.6,0.0,8.2,5.2,16.8,2.1,13.2,4.4,,,,,,,,,,,,
-Montana,Projected Vote,30.2,5.5,0.0,8.5,2.3,22.6,2.6,17.0,4.3,,,,,,,,,,,,
-New Jersey,Projected Vote,27.7,8.0,0.0,8.4,2.8,22.9,1.6,17.3,4.3,,,,,,,,,,,,
-New Mexico,Projected Vote,23.9,5.2,0.0,7.8,2.2,28.2,2.4,16.0,7.2,,,,,,,,,,,,
-South Dakota,Projected Vote,24.8,5.4,0.0,12.5,5.1,24.8,1.0,15.9,3.6,,,,,,,,,,,,
+Iowa,Projected Vote,20.8,3.1,0.0,18.1,7.1,19.9,3.6,16.6,3.9,,,,,,,,,,,,
+New Hampshire,Projected Vote,20.9,0.0,0.0,16.7,5.9,22.1,4.3,16.6,4.5,,,,,,,,,,,,
+Nevada,Projected Vote,27.2,0.0,0.0,8.5,2.8,23.1,8.3,15.7,5.2,,,,,,,,,,,,
+South Carolina,Projected Vote,42.3,0.0,0.0,6.4,2.3,15.3,9.1,11.4,3.3,,,,,,,,,,,,
+Alabama,Projected Vote,42.6,8.2,0.0,6.7,2.8,14.6,2.6,12.2,3.4,,,,,,,,,,,,
+American Samoa,Projected Vote,30.2,6.8,0.0,8.9,3.0,21.3,1.9,16.9,4.0,,,,,,,,,,,,
+Arkansas,Projected Vote,38.8,8.3,0.0,8.2,3.0,16.0,1.9,13.2,3.5,,,,,,,,,,,,
+California,Projected Vote,26.1,5.5,0.0,8.2,2.6,23.4,3.0,19.4,4.7,,,,,,,,,,,,
+Colorado,Projected Vote,24.6,5.4,0.0,9.7,2.8,25.9,2.6,17.2,4.8,,,,,,,,,,,,
+Democrats Abroad,Projected Vote,30.2,6.8,0.0,8.9,3.0,21.3,1.9,16.9,4.0,,,,,,,,,,,,
+Maine,Projected Vote,24.3,7.5,0.0,11.4,2.3,20.3,2.4,21.5,3.4,,,,,,,,,,,,
+Massachusetts,Projected Vote,22.0,6.4,0.0,10.8,3.5,19.1,2.1,25.6,3.5,,,,,,,,,,,,
+Minnesota,Projected Vote,23.1,4.7,0.0,11.8,15.8,17.6,1.4,15.4,3.2,,,,,,,,,,,,
+North Carolina,Projected Vote,37.2,8.5,0.0,7.2,2.7,18.1,2.2,13.3,3.7,,,,,,,,,,,,
+Oklahoma,Projected Vote,32.7,7.7,0.0,8.5,2.8,22.1,2.3,13.3,3.6,,,,,,,,,,,,
+Tennessee,Projected Vote,38.6,8.3,0.0,8.8,2.9,16.2,1.9,12.7,3.6,,,,,,,,,,,,
+Texas,Projected Vote,31.8,7.9,0.0,8.2,2.8,19.7,2.1,16.2,4.3,,,,,,,,,,,,
+Utah,Projected Vote,21.3,4.3,0.0,10.8,5.4,25.8,2.6,17.8,5.1,,,,,,,,,,,,
+Vermont,Projected Vote,19.2,5.0,0.0,10.3,3.8,33.1,2.1,16.3,3.2,,,,,,,,,,,,
+Virginia,Projected Vote,33.9,7.4,0.0,10.3,3.8,18.8,1.6,13.4,3.7,,,,,,,,,,,,
+Idaho,Projected Vote,24.5,5.5,0.0,9.9,2.3,28.9,1.5,15.2,5.2,,,,,,,,,,,,
+Michigan,Projected Vote,30.8,6.7,0.0,10.7,3.3,21.4,1.2,15.5,3.4,,,,,,,,,,,,
+Mississippi,Projected Vote,44.7,8.1,0.0,6.1,2.6,13.9,2.9,11.4,3.4,,,,,,,,,,,,
+Missouri,Projected Vote,37.0,8.0,0.0,9.2,2.9,17.3,1.8,13.1,3.7,,,,,,,,,,,,
+North Dakota,Projected Vote,26.0,4.2,0.0,13.7,4.6,22.3,1.9,16.8,3.7,,,,,,,,,,,,
+Ohio,Projected Vote,30.9,6.6,0.0,11.2,3.6,20.6,1.3,15.3,3.5,,,,,,,,,,,,
+Washington,Projected Vote,21.3,6.4,0.0,10.0,4.8,23.9,2.3,19.2,5.1,,,,,,,,,,,,
+Northern Marianas,Projected Vote,30.2,6.8,0.0,8.9,3.0,21.3,1.9,16.9,4.0,,,,,,,,,,,,
+Arizona,Projected Vote,30.6,6.9,0.0,9.3,2.3,21.2,2.3,15.9,4.6,,,,,,,,,,,,
+Florida,Projected Vote,37.3,8.0,0.0,7.1,3.5,16.1,1.8,15.5,3.7,,,,,,,,,,,,
+Illinois,Projected Vote,30.1,6.7,0.0,12.0,3.9,19.9,1.4,15.6,3.5,,,,,,,,,,,,
+Georgia,Projected Vote,41.4,8.4,0.0,7.1,2.7,15.3,2.5,12.2,3.5,,,,,,,,,,,,
+Alaska,Projected Vote,30.0,5.4,0.0,8.9,2.3,22.4,2.5,17.2,4.2,,,,,,,,,,,,
+Hawaii,Projected Vote,24.0,6.9,0.0,8.3,2.8,24.4,2.8,18.4,5.4,,,,,,,,,,,,
+Louisiana,Projected Vote,45.3,5.8,0.0,6.4,2.7,14.6,2.8,11.8,3.6,,,,,,,,,,,,
+Wyoming,Projected Vote,28.3,4.0,0.0,10.9,2.9,23.2,2.7,16.5,4.5,,,,,,,,,,,,
+Wisconsin,Projected Vote,24.9,6.9,0.0,12.3,4.6,21.7,1.7,16.8,4.1,,,,,,,,,,,,
+Connecticut,Projected Vote,24.1,8.1,0.0,11.0,3.4,21.0,2.4,19.1,3.8,,,,,,,,,,,,
+Delaware,Projected Vote,34.9,7.1,0.0,9.6,2.0,19.1,1.9,15.2,3.2,,,,,,,,,,,,
+Maryland,Projected Vote,32.4,7.8,0.0,8.9,2.2,19.2,2.8,16.2,3.5,,,,,,,,,,,,
+New York,Projected Vote,30.4,11.7,0.0,9.4,2.1,19.2,1.9,15.0,3.3,,,,,,,,,,,,
+Pennsylvania,Projected Vote,33.1,5.9,0.0,11.4,3.5,19.5,1.3,14.8,3.5,,,,,,,,,,,,
+Rhode Island,Projected Vote,25.9,6.6,0.0,11.5,2.6,21.9,2.4,18.3,3.8,,,,,,,,,,,,
+Guam,Projected Vote,30.2,6.8,0.0,8.9,3.0,21.3,1.9,16.9,4.0,,,,,,,,,,,,
+Kansas,Projected Vote,23.1,5.1,0.0,12.7,6.9,23.5,1.5,15.9,4.3,,,,,,,,,,,,
+Indiana,Projected Vote,27.9,4.0,0.0,15.9,4.5,20.3,1.1,15.6,3.6,,,,,,,,,,,,
+Nebraska,Projected Vote,22.8,6.0,0.0,12.6,6.9,23.2,1.5,15.8,4.3,,,,,,,,,,,,
+West Virginia,Projected Vote,30.9,7.6,0.0,10.6,3.8,22.2,2.3,11.9,3.7,,,,,,,,,,,,
+Kentucky,Projected Vote,33.8,7.7,0.0,9.1,3.6,20.0,1.7,13.6,3.6,,,,,,,,,,,,
+Oregon,Projected Vote,23.8,2.0,0.0,10.1,4.9,25.2,2.3,19.5,5.1,,,,,,,,,,,,
+District of Columbia,Projected Vote,44.2,7.8,0.0,5.9,2.4,15.1,2.7,11.4,3.6,,,,,,,,,,,,
+Montana,Projected Vote,27.7,6.1,0.0,9.9,2.4,23.4,1.5,17.0,5.1,,,,,,,,,,,,
+New Jersey,Projected Vote,29.7,7.0,0.0,8.7,2.9,22.6,1.4,16.4,4.3,,,,,,,,,,,,
+New Mexico,Projected Vote,26.8,3.6,0.0,8.5,2.4,26.7,2.5,15.5,7.0,,,,,,,,,,,,
+South Dakota,Projected Vote,23.5,3.1,0.0,13.3,6.9,23.2,1.6,17.0,4.5,,,,,,,,,,,,
 Virgin Islands,Projected Vote,30.2,6.8,0.0,8.9,3.0,21.3,1.9,16.9,4.0,,,,,,,,,,,,
 Puerto Rico,Projected Vote,30.2,6.8,0.0,8.9,3.0,21.3,1.9,16.9,4.0,,,,,,,,,,,,
 Iowa,,,,,,,,,,,,,,,,,,,,,"Simulate Iowa 10,000 times.",
@@ -341,117 +341,117 @@ New Mexico,,,,,,,,,,,,,,,,,,,,,"Simulate New Mexico 10,000 times.",
 South Dakota,,,,,,,,,,,,,,,,,,,,,"Simulate South Dakota 10,000 times.",
 Virgin Islands,,,,,,,,,,,,,,,,,,,,,"Simulate Virgin Islands 10,000 times.",
 Puerto Rico,,,,,,,,,,,,,,,,,,,,,"Simulate Puerto Rico 10,000 times.",
-Iowa,Chance of winning Iowa-->,30.7,0.0,0.0,20.3,3.5,25.8,1.7,16.5,1.6,,,,,,,,,,,,
-New Hampshire,Chance of winning New Hampshire-->,29.0,0.0,0.0,16.2,2.8,32.4,2.3,15.4,2.0,,,,,,,,,,,,
-Nevada,Chance of winning Nevada-->,47.2,0.0,0.0,3.7,1.5,29.8,3.9,11.6,2.2,,,,,,,,,,,,
-South Carolina,Chance of winning South Carolina-->,90.2,0.0,0.0,0.8,0.4,4.3,1.7,2.1,0.5,,,,,,,,,,,,
-Alabama,Chance of winning Alabama-->,88.7,1.4,0.0,1.1,0.6,4.1,0.6,3.0,0.4,,,,,,,,,,,,
-American Samoa,Chance of winning American Samoa-->,59.6,3.0,0.0,4.0,1.3,17.7,1.1,11.8,1.5,,,,,,,,,,,,
-Arkansas,Chance of winning Arkansas-->,78.0,1.8,0.0,2.3,1.0,9.8,1.0,5.1,1.1,,,,,,,,,,,,
-California,Chance of winning California-->,40.8,2.4,0.0,3.9,1.5,29.0,1.7,18.7,2.0,,,,,,,,,,,,
-Colorado,Chance of winning Colorado-->,32.9,2.2,0.0,4.6,1.5,34.4,1.3,21.3,1.9,,,,,,,,,,,,
-Democrats Abroad,Chance of winning Democrats Abroad-->,49.8,3.7,0.0,5.1,2.1,21.9,1.4,14.1,2.0,,,,,,,,,,,,
-Maine,Chance of winning Maine-->,38.0,3.7,0.0,8.9,1.8,23.5,1.8,20.5,1.9,,,,,,,,,,,,
-Massachusetts,Chance of winning Massachusetts-->,34.8,3.0,0.0,5.4,1.4,17.6,1.3,34.8,1.8,,,,,,,,,,,,
-Minnesota,Chance of winning Minnesota-->,46.2,2.3,0.0,7.0,7.2,20.4,1.4,13.6,1.9,,,,,,,,,,,,
-North Carolina,Chance of winning North Carolina-->,76.9,2.5,0.0,2.2,0.8,10.5,0.9,5.1,1.0,,,,,,,,,,,,
-Oklahoma,Chance of winning Oklahoma-->,60.0,2.7,0.0,3.1,1.3,23.8,0.9,6.7,1.5,,,,,,,,,,,,
-Tennessee,Chance of winning Tennessee-->,66.6,3.2,0.0,3.9,2.3,13.7,1.2,7.4,1.8,,,,,,,,,,,,
-Texas,Chance of winning Texas-->,56.2,3.6,0.0,4.2,1.8,18.1,1.3,13.3,1.6,,,,,,,,,,,,
-Utah,Chance of winning Utah-->,42.1,3.0,0.0,5.1,1.5,31.1,1.5,13.8,2.0,,,,,,,,,,,,
-Vermont,Chance of winning Vermont-->,13.3,1.4,0.0,3.4,0.9,70.3,0.8,8.7,1.3,,,,,,,,,,,,
-Virginia,Chance of winning Virginia-->,71.7,2.2,0.0,3.8,1.3,12.8,0.9,6.1,1.3,,,,,,,,,,,,
-Idaho,Chance of winning Idaho-->,51.5,3.0,0.0,3.4,1.4,29.5,1.7,7.9,1.6,,,,,,,,,,,,
-Michigan,Chance of winning Michigan-->,51.8,2.8,0.0,5.9,1.8,23.9,1.3,10.9,1.5,,,,,,,,,,,,
-Mississippi,Chance of winning Mississippi-->,83.3,2.0,0.0,2.4,0.9,5.1,0.9,4.4,0.9,,,,,,,,,,,,
-Missouri,Chance of winning Missouri-->,81.2,1.9,0.0,2.4,0.8,7.6,0.7,4.6,0.9,,,,,,,,,,,,
-North Dakota,Chance of winning North Dakota-->,32.2,3.3,0.0,7.8,3.6,34.3,1.5,14.8,2.4,,,,,,,,,,,,
-Washington,Chance of winning Washington-->,42.5,3.2,0.0,5.1,1.7,27.8,1.4,16.1,2.3,,,,,,,,,,,,
-Northern Marianas,Chance of winning Northern Marianas-->,59.2,3.2,0.0,4.7,1.7,17.7,1.4,10.4,1.6,,,,,,,,,,,,
-Ohio,Chance of winning Ohio-->,52.1,2.4,0.0,6.0,2.0,22.4,1.5,11.6,2.2,,,,,,,,,,,,
-Arizona,Chance of winning Arizona-->,62.9,2.6,0.0,4.1,1.2,16.9,1.4,9.4,1.5,,,,,,,,,,,,
-Florida,Chance of winning Florida-->,73.2,2.6,0.0,2.2,1.3,10.1,0.9,8.4,1.2,,,,,,,,,,,,
-Illinois,Chance of winning Illinois-->,48.3,3.0,0.0,7.2,2.5,22.2,1.7,13.0,2.2,,,,,,,,,,,,
-Georgia,Chance of winning Georgia-->,83.6,2.4,0.0,1.8,0.8,6.0,0.8,3.6,1.0,,,,,,,,,,,,
-Puerto Rico,Chance of winning Puerto Rico-->,51.9,3.2,0.0,4.5,2.1,21.7,1.5,12.9,2.4,,,,,,,,,,,,
-Alaska,Chance of winning Alaska-->,44.8,2.7,0.0,6.7,2.4,23.2,2.1,15.2,2.8,,,,,,,,,,,,
-Hawaii,Chance of winning Hawaii-->,30.9,3.5,0.0,7.4,2.9,29.5,2.2,20.6,3.1,,,,,,,,,,,,
-Louisiana,Chance of winning Louisiana-->,74.2,2.7,0.0,3.0,1.7,9.3,1.3,6.6,1.3,,,,,,,,,,,,
-Wyoming,Chance of winning Wyoming-->,49.8,3.1,0.0,4.9,1.7,26.4,1.9,10.1,2.1,,,,,,,,,,,,
-Wisconsin,Chance of winning Wisconsin-->,41.1,4.3,0.0,7.5,2.8,26.0,2.0,13.8,2.5,,,,,,,,,,,,
-Connecticut,Chance of winning Connecticut-->,41.5,4.9,0.0,7.6,2.3,22.7,2.5,15.6,3.0,,,,,,,,,,,,
-Delaware,Chance of winning Delaware-->,62.2,3.5,0.0,5.0,2.1,14.1,1.7,9.6,1.8,,,,,,,,,,,,
-Maryland,Chance of winning Maryland-->,48.4,4.5,0.0,6.4,2.3,19.7,2.3,13.9,2.5,,,,,,,,,,,,
-New York,Chance of winning New York-->,37.9,8.4,0.0,7.4,4.0,22.3,2.9,13.9,3.3,,,,,,,,,,,,
-Pennsylvania,Chance of winning Pennsylvania-->,54.7,3.4,0.0,6.6,2.7,17.6,2.1,10.7,2.2,,,,,,,,,,,,
-Rhode Island,Chance of winning Rhode Island-->,26.9,5.8,0.0,9.3,4.4,28.1,3.1,19.1,3.5,,,,,,,,,,,,
-Guam,Chance of winning Guam-->,38.3,4.4,0.0,8.7,3.3,21.2,2.6,18.5,3.1,,,,,,,,,,,,
-Kansas,Chance of winning Kansas-->,42.2,3.8,0.0,8.2,3.4,24.8,2.1,12.7,2.7,,,,,,,,,,,,
-Indiana,Chance of winning Indiana-->,28.4,4.5,0.0,15.7,4.8,24.7,2.7,15.6,3.6,,,,,,,,,,,,
-Nebraska,Chance of winning Nebraska-->,48.7,4.5,0.0,6.8,3.2,20.9,2.3,10.9,2.8,,,,,,,,,,,,
-West Virginia,Chance of winning West Virginia-->,50.0,4.4,0.0,4.9,2.2,27.4,2.0,6.1,2.9,,,,,,,,,,,,
-Kentucky,Chance of winning Kentucky-->,58.6,4.3,0.0,4.7,2.2,17.7,2.1,8.1,2.4,,,,,,,,,,,,
-Oregon,Chance of winning Oregon-->,38.6,3.5,0.0,6.4,2.7,25.8,3.1,16.6,3.3,,,,,,,,,,,,
-District of Columbia,Chance of winning District of Columbia-->,59.7,4.7,0.0,5.0,3.6,12.7,2.5,8.6,3.2,,,,,,,,,,,,
-Montana,Chance of winning Montana-->,43.9,3.6,0.0,6.0,2.9,23.2,2.9,14.1,3.4,,,,,,,,,,,,
-New Jersey,Chance of winning New Jersey-->,38.3,5.4,0.0,6.4,3.0,25.5,2.8,15.1,3.5,,,,,,,,,,,,
-New Mexico,Chance of winning New Mexico-->,27.9,3.8,0.0,5.5,2.6,38.3,2.9,13.5,5.4,,,,,,,,,,,,
-South Dakota,Chance of winning South Dakota-->,30.8,4.1,0.0,9.8,4.5,31.0,2.8,13.7,3.3,,,,,,,,,,,,
-Virgin Islands,Chance of winning Virgin Islands-->,44.1,4.6,0.0,6.3,3.1,21.7,2.8,14.2,3.3,,,,,,,,,,,,
+Iowa,Chance of winning Iowa-->,29.3,0.0,0.0,20.8,3.8,26.5,1.8,16.3,1.6,,,,,,,,,,,,
+New Hampshire,Chance of winning New Hampshire-->,28.0,0.0,0.0,16.8,3.1,32.1,2.1,15.7,2.2,,,,,,,,,,,,
+Nevada,Chance of winning Nevada-->,46.2,0.0,0.0,4.2,1.6,30.2,3.8,12.0,2.1,,,,,,,,,,,,
+South Carolina,Chance of winning South Carolina-->,88.9,0.0,0.0,1.3,0.5,4.7,1.7,2.4,0.5,,,,,,,,,,,,
+Alabama,Chance of winning Alabama-->,89.0,1.5,0.0,1.2,0.5,4.0,0.5,2.7,0.6,,,,,,,,,,,,
+American Samoa,Chance of winning American Samoa-->,54.4,2.8,0.0,4.2,1.4,21.8,1.1,12.7,1.8,,,,,,,,,,,,
+Arkansas,Chance of winning Arkansas-->,81.2,2.4,0.0,2.5,0.8,7.1,0.7,4.6,0.9,,,,,,,,,,,,
+California,Chance of winning California-->,39.6,2.4,0.0,4.1,1.4,30.1,1.5,18.7,2.3,,,,,,,,,,,,
+Colorado,Chance of winning Colorado-->,33.9,2.5,0.0,5.0,1.8,39.0,1.4,14.4,2.0,,,,,,,,,,,,
+Democrats Abroad,Chance of winning Democrats Abroad-->,54.0,2.8,0.0,3.8,1.5,22.2,1.2,13.0,1.7,,,,,,,,,,,,
+Maine,Chance of winning Maine-->,35.5,3.8,0.0,7.4,1.6,23.1,1.5,25.4,1.8,,,,,,,,,,,,
+Massachusetts,Chance of winning Massachusetts-->,27.3,2.9,0.0,6.5,2.0,19.3,1.5,38.7,1.8,,,,,,,,,,,,
+Minnesota,Chance of winning Minnesota-->,35.6,3.0,0.0,9.0,15.1,19.3,1.3,14.4,2.3,,,,,,,,,,,,
+North Carolina,Chance of winning North Carolina-->,76.6,2.6,0.0,2.2,0.9,10.7,0.7,5.2,1.1,,,,,,,,,,,,
+Oklahoma,Chance of winning Oklahoma-->,60.9,2.9,0.0,3.4,1.2,22.0,1.0,7.1,1.6,,,,,,,,,,,,
+Tennessee,Chance of winning Tennessee-->,80.9,2.3,0.0,2.5,0.8,7.2,0.6,4.7,0.9,,,,,,,,,,,,
+Texas,Chance of winning Texas-->,59.9,3.3,0.0,3.7,1.4,17.8,1.0,11.3,1.7,,,,,,,,,,,,
+Utah,Chance of winning Utah-->,26.0,2.4,0.0,6.7,2.9,41.8,1.5,16.3,2.6,,,,,,,,,,,,
+Vermont,Chance of winning Vermont-->,15.2,1.6,0.0,4.5,1.5,64.7,1.0,10.2,1.2,,,,,,,,,,,,
+Virginia,Chance of winning Virginia-->,67.5,2.7,0.0,4.5,1.4,14.6,0.9,6.9,1.5,,,,,,,,,,,,
+Idaho,Chance of winning Idaho-->,30.4,2.3,0.0,5.1,1.3,47.7,0.9,9.8,2.4,,,,,,,,,,,,
+Michigan,Chance of winning Michigan-->,55.1,2.9,0.0,5.7,1.6,21.6,1.0,10.5,1.5,,,,,,,,,,,,
+Mississippi,Chance of winning Mississippi-->,91.0,1.2,0.0,1.1,0.5,3.3,0.3,2.2,0.4,,,,,,,,,,,,
+Missouri,Chance of winning Missouri-->,75.3,2.7,0.0,3.3,1.0,10.3,0.8,5.5,1.2,,,,,,,,,,,,
+North Dakota,Chance of winning North Dakota-->,40.0,2.3,0.0,9.9,2.4,27.6,1.2,14.6,2.1,,,,,,,,,,,,
+Washington,Chance of winning Washington-->,26.7,3.7,0.0,6.3,2.8,35.3,1.9,20.5,2.8,,,,,,,,,,,,
+Northern Marianas,Chance of winning Northern Marianas-->,52.5,3.5,0.0,4.3,1.8,22.2,1.3,12.7,1.8,,,,,,,,,,,,
+Ohio,Chance of winning Ohio-->,55.2,3.1,0.0,6.2,2.0,20.2,1.2,10.3,1.9,,,,,,,,,,,,
+Arizona,Chance of winning Arizona-->,53.9,3.1,0.0,4.7,1.5,21.8,1.3,11.5,2.1,,,,,,,,,,,,
+Florida,Chance of winning Florida-->,74.7,2.7,0.0,2.4,1.5,8.8,0.9,7.8,1.3,,,,,,,,,,,,
+Illinois,Chance of winning Illinois-->,53.1,3.3,0.0,7.7,2.1,19.6,1.2,11.4,1.7,,,,,,,,,,,,
+Georgia,Chance of winning Georgia-->,82.6,2.4,0.0,2.0,0.9,6.2,0.9,4.1,1.0,,,,,,,,,,,,
+Puerto Rico,Chance of winning Puerto Rico-->,50.4,3.5,0.0,4.9,1.9,22.3,1.6,13.2,2.3,,,,,,,,,,,,
+Alaska,Chance of winning Alaska-->,48.7,2.9,0.0,5.1,1.8,24.3,1.8,13.3,2.3,,,,,,,,,,,,
+Hawaii,Chance of winning Hawaii-->,31.7,3.9,0.0,5.4,2.0,33.7,2.1,17.9,3.4,,,,,,,,,,,,
+Louisiana,Chance of winning Louisiana-->,87.5,1.3,0.0,1.4,0.8,4.6,0.7,3.0,0.8,,,,,,,,,,,,
+Wyoming,Chance of winning Wyoming-->,43.2,2.4,0.0,6.8,2.2,27.6,1.9,13.3,2.6,,,,,,,,,,,,
+Wisconsin,Chance of winning Wisconsin-->,36.0,4.4,0.0,9.5,3.0,26.9,2.0,15.4,3.0,,,,,,,,,,,,
+Connecticut,Chance of winning Connecticut-->,32.4,6.1,0.0,8.2,3.0,24.5,2.7,20.1,3.1,,,,,,,,,,,,
+Delaware,Chance of winning Delaware-->,59.7,3.7,0.0,5.4,1.8,15.5,1.7,9.9,2.2,,,,,,,,,,,,
+Maryland,Chance of winning Maryland-->,53.6,4.5,0.0,5.7,2.0,17.4,2.3,12.1,2.4,,,,,,,,,,,,
+New York,Chance of winning New York-->,49.3,7.9,0.0,6.1,2.2,18.6,2.3,11.2,2.4,,,,,,,,,,,,
+Pennsylvania,Chance of winning Pennsylvania-->,55.3,3.3,0.0,7.2,2.5,17.7,1.6,10.2,2.2,,,,,,,,,,,,
+Rhode Island,Chance of winning Rhode Island-->,36.2,4.5,0.0,8.3,2.5,25.6,2.5,17.5,3.0,,,,,,,,,,,,
+Guam,Chance of winning Guam-->,46.6,4.3,0.0,5.7,2.5,21.8,2.0,14.1,2.9,,,,,,,,,,,,
+Kansas,Chance of winning Kansas-->,29.6,4.0,0.0,10.4,5.2,30.7,2.5,14.1,3.6,,,,,,,,,,,,
+Indiana,Chance of winning Indiana-->,40.3,3.2,0.0,13.9,3.3,21.2,1.8,13.2,3.2,,,,,,,,,,,,
+Nebraska,Chance of winning Nebraska-->,28.6,4.9,0.0,10.6,5.4,30.3,2.4,14.0,3.9,,,,,,,,,,,,
+West Virginia,Chance of winning West Virginia-->,48.0,4.7,0.0,7.1,3.1,23.7,2.3,8.2,2.9,,,,,,,,,,,,
+Kentucky,Chance of winning Kentucky-->,55.1,4.4,0.0,5.9,2.8,17.8,2.2,9.2,2.6,,,,,,,,,,,,
+Oregon,Chance of winning Oregon-->,28.7,2.7,0.0,7.6,3.9,31.9,2.7,18.8,3.7,,,,,,,,,,,,
+District of Columbia,Chance of winning District of Columbia-->,76.3,3.7,0.0,2.7,1.7,7.4,1.6,4.8,1.8,,,,,,,,,,,,
+Montana,Chance of winning Montana-->,37.7,4.5,0.0,7.7,3.1,26.7,2.4,14.3,3.8,,,,,,,,,,,,
+New Jersey,Chance of winning New Jersey-->,41.8,4.7,0.0,6.6,3.1,24.6,2.5,13.3,3.4,,,,,,,,,,,,
+New Mexico,Chance of winning New Mexico-->,34.3,3.2,0.0,6.2,2.8,33.6,2.8,12.3,4.7,,,,,,,,,,,,
+South Dakota,Chance of winning South Dakota-->,29.0,3.5,0.0,11.4,5.2,28.4,2.6,15.8,4.1,,,,,,,,,,,,
+Virgin Islands,Chance of winning Virgin Islands-->,43.1,5.2,0.0,6.7,3.1,21.4,2.6,14.5,3.5,,,,,,,,,,,,
 Iowa,Projected Delegates,,,,,,,,,,,11.0,0.0,0.0,10.0,0.0,11.0,0.0,9.0,0.0,,41.0
 New Hampshire,Projected Delegates,,,,,,,,,,,7.0,0.0,0.0,5.0,0.0,7.0,0.0,5.0,0.0,,24.0
 Nevada,Projected Delegates,,,,,,,,,,,15.0,0.0,0.0,0.0,0.0,13.0,0.0,9.0,0.0,,36.0
 South Carolina,Projected Delegates,,,,,,,,,,,39.0,0.0,0.0,0.0,0.0,14.0,0.0,1.0,0.0,,54.0
 Alabama,Projected Delegates,,,,,,,,,,,46.0,0.0,0.0,0.0,0.0,5.0,0.0,1.0,0.0,,52.0
 American Samoa,Projected Delegates,,,,,,,,,,,3.0,0.0,0.0,0.0,0.0,2.0,0.0,1.0,0.0,,6.0
-Arkansas,Projected Delegates,,,,,,,,,,,21.0,0.0,0.0,0.0,0.0,10.0,0.0,0.0,0.0,,31.0
-California,Projected Delegates,,,,,,,,,,,159.0,0.0,0.0,0.0,0.0,140.0,0.0,117.0,0.0,,416.0
-Colorado,Projected Delegates,,,,,,,,,,,23.0,0.0,0.0,0.0,0.0,24.0,0.0,20.0,0.0,,67.0
+Arkansas,Projected Delegates,,,,,,,,,,,21.0,0.0,0.0,0.0,0.0,8.0,0.0,2.0,0.0,,31.0
+California,Projected Delegates,,,,,,,,,,,158.0,0.0,0.0,0.0,0.0,141.0,0.0,117.0,0.0,,416.0
+Colorado,Projected Delegates,,,,,,,,,,,24.0,0.0,0.0,0.0,0.0,26.0,0.0,17.0,0.0,,67.0
 Democrats Abroad,Projected Delegates,,,,,,,,,,,6.0,0.0,0.0,0.0,0.0,4.0,0.0,3.0,0.0,,13.0
-Maine,Projected Delegates,,,,,,,,,,,9.0,0.0,0.0,0.0,0.0,8.0,0.0,7.0,0.0,,24.0
-Massachusetts,Projected Delegates,,,,,,,,,,,32.0,0.0,0.0,1.0,0.0,25.0,0.0,33.0,0.0,,91.0
-Minnesota,Projected Delegates,,,,,,,,,,,32.0,0.0,0.0,1.0,1.0,23.0,0.0,19.0,0.0,,75.0
+Maine,Projected Delegates,,,,,,,,,,,9.0,0.0,0.0,0.0,0.0,7.0,0.0,8.0,0.0,,24.0
+Massachusetts,Projected Delegates,,,,,,,,,,,30.0,0.0,0.0,1.0,0.0,26.0,0.0,35.0,0.0,,91.0
+Minnesota,Projected Delegates,,,,,,,,,,,24.0,0.0,0.0,1.0,16.0,18.0,0.0,16.0,0.0,,75.0
 North Carolina,Projected Delegates,,,,,,,,,,,69.0,0.0,0.0,0.0,0.0,34.0,0.0,7.0,0.0,,110.0
-Oklahoma,Projected Delegates,,,,,,,,,,,20.0,0.0,0.0,0.0,0.0,15.0,0.0,2.0,0.0,,37.0
-Tennessee,Projected Delegates,,,,,,,,,,,39.0,0.0,0.0,0.0,0.0,21.0,0.0,4.0,0.0,,64.0
-Texas,Projected Delegates,,,,,,,,,,,103.0,0.0,0.0,0.0,0.0,67.0,0.0,58.0,0.0,,228.0
-Utah,Projected Delegates,,,,,,,,,,,11.0,0.0,0.0,0.0,0.0,10.0,0.0,7.0,0.0,,29.0
+Oklahoma,Projected Delegates,,,,,,,,,,,21.0,0.0,0.0,0.0,0.0,14.0,0.0,2.0,0.0,,37.0
+Tennessee,Projected Delegates,,,,,,,,,,,44.0,0.0,0.0,0.0,0.0,19.0,0.0,1.0,0.0,,64.0
+Texas,Projected Delegates,,,,,,,,,,,107.0,0.0,0.0,0.0,0.0,66.0,0.0,55.0,0.0,,228.0
+Utah,Projected Delegates,,,,,,,,,,,10.0,0.0,0.0,0.0,0.0,12.0,0.0,8.0,0.0,,29.0
 Vermont,Projected Delegates,,,,,,,,,,,4.0,0.0,0.0,0.0,0.0,8.0,0.0,4.0,0.0,,16.0
-Virginia,Projected Delegates,,,,,,,,,,,60.0,0.0,0.0,1.0,0.0,32.0,0.0,6.0,0.0,,99.0
-Idaho,Projected Delegates,,,,,,,,,,,10.0,0.0,0.0,0.0,0.0,9.0,0.0,1.0,0.0,,20.0
-Michigan,Projected Delegates,,,,,,,,,,,54.0,0.0,0.0,2.0,0.0,41.0,0.0,28.0,0.0,,125.0
-Mississippi,Projected Delegates,,,,,,,,,,,32.0,0.0,0.0,0.0,0.0,2.0,0.0,2.0,0.0,,36.0
-Missouri,Projected Delegates,,,,,,,,,,,45.0,0.0,0.0,0.0,0.0,19.0,0.0,4.0,0.0,,68.0
-North Dakota,Projected Delegates,,,,,,,,,,,5.0,0.0,0.0,0.0,0.0,5.0,0.0,4.0,0.0,,14.0
-Ohio,Projected Delegates,,,,,,,,,,,59.0,0.0,0.0,2.0,0.0,43.0,0.0,32.0,0.0,,136.0
-Washington,Projected Delegates,,,,,,,,,,,35.0,0.0,0.0,0.0,0.0,30.0,0.0,24.0,0.0,,89.0
+Virginia,Projected Delegates,,,,,,,,,,,59.0,0.0,0.0,1.0,0.0,33.0,0.0,6.0,0.0,,99.0
+Idaho,Projected Delegates,,,,,,,,,,,7.0,0.0,0.0,0.0,0.0,8.0,0.0,4.0,0.0,,20.0
+Michigan,Projected Delegates,,,,,,,,,,,56.0,0.0,0.0,2.0,0.0,39.0,0.0,28.0,0.0,,125.0
+Mississippi,Projected Delegates,,,,,,,,,,,34.0,0.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,,36.0
+Missouri,Projected Delegates,,,,,,,,,,,44.0,0.0,0.0,0.0,0.0,20.0,0.0,4.0,0.0,,68.0
+North Dakota,Projected Delegates,,,,,,,,,,,6.0,0.0,0.0,0.0,0.0,5.0,0.0,4.0,0.0,,14.0
+Ohio,Projected Delegates,,,,,,,,,,,62.0,0.0,0.0,2.0,0.0,41.0,0.0,31.0,0.0,,136.0
+Washington,Projected Delegates,,,,,,,,,,,29.0,0.0,0.0,0.0,0.0,33.0,0.0,26.0,0.0,,89.0
 Northern Marianas,Projected Delegates,,,,,,,,,,,3.0,0.0,0.0,0.0,0.0,2.0,0.0,1.0,0.0,,6.0
-Arizona,Projected Delegates,,,,,,,,,,,32.0,0.0,0.0,0.0,0.0,19.0,0.0,15.0,0.0,,67.0
-Florida,Projected Delegates,,,,,,,,,,,116.0,0.0,0.0,0.0,0.0,53.0,0.0,49.0,0.0,,219.0
-Illinois,Projected Delegates,,,,,,,,,,,66.0,0.0,0.0,3.0,0.0,48.0,0.0,38.0,0.0,,155.0
+Arizona,Projected Delegates,,,,,,,,,,,30.0,0.0,0.0,0.0,0.0,21.0,0.0,16.0,0.0,,67.0
+Florida,Projected Delegates,,,,,,,,,,,119.0,0.0,0.0,0.0,0.0,51.0,0.0,49.0,0.0,,219.0
+Illinois,Projected Delegates,,,,,,,,,,,70.0,0.0,0.0,3.0,0.0,46.0,0.0,36.0,0.0,,155.0
 Georgia,Projected Delegates,,,,,,,,,,,75.0,0.0,0.0,0.0,0.0,28.0,0.0,2.0,0.0,,105.0
 Alaska,Projected Delegates,,,,,,,,,,,6.0,0.0,0.0,0.0,0.0,5.0,0.0,4.0,0.0,,15.0
-Hawaii,Projected Delegates,,,,,,,,,,,9.0,0.0,0.0,0.0,0.0,8.0,0.0,7.0,0.0,,24.0
-Louisiana,Projected Delegates,,,,,,,,,,,36.0,0.0,0.0,0.0,0.0,15.0,0.0,3.0,0.0,,54.0
+Hawaii,Projected Delegates,,,,,,,,,,,9.0,0.0,0.0,0.0,0.0,9.0,0.0,7.0,0.0,,24.0
+Louisiana,Projected Delegates,,,,,,,,,,,48.0,0.0,0.0,0.0,0.0,5.0,0.0,1.0,0.0,,54.0
 Wyoming,Projected Delegates,,,,,,,,,,,6.0,0.0,0.0,0.0,0.0,5.0,0.0,3.0,0.0,,14.0
-Wisconsin,Projected Delegates,,,,,,,,,,,34.0,0.0,0.0,1.0,0.0,28.0,0.0,21.0,0.0,,84.0
-Connecticut,Projected Delegates,,,,,,,,,,,25.0,0.0,0.0,1.0,0.0,19.0,0.0,16.0,0.0,,60.0
+Wisconsin,Projected Delegates,,,,,,,,,,,33.0,0.0,0.0,1.0,0.0,28.0,0.0,22.0,0.0,,84.0
+Connecticut,Projected Delegates,,,,,,,,,,,22.0,0.0,0.0,1.0,0.0,19.0,0.0,18.0,0.0,,60.0
 Delaware,Projected Delegates,,,,,,,,,,,11.0,0.0,0.0,0.0,0.0,6.0,0.0,5.0,0.0,,21.0
-Maryland,Projected Delegates,,,,,,,,,,,42.0,0.0,0.0,1.0,0.0,29.0,0.0,24.0,0.0,,96.0
-New York,Projected Delegates,,,,,,,,,,,112.0,5.0,0.0,0.0,0.0,88.0,0.0,69.0,0.0,,274.0
-Pennsylvania,Projected Delegates,,,,,,,,,,,88.0,0.0,0.0,3.0,0.0,54.0,0.0,41.0,0.0,,186.0
-Rhode Island,Projected Delegates,,,,,,,,,,,9.0,0.0,0.0,0.0,0.0,9.0,0.0,8.0,0.0,,26.0
+Maryland,Projected Delegates,,,,,,,,,,,46.0,0.0,0.0,0.0,0.0,27.0,0.0,23.0,0.0,,96.0
+New York,Projected Delegates,,,,,,,,,,,148.0,5.0,0.0,0.0,0.0,94.0,0.0,27.0,0.0,,274.0
+Pennsylvania,Projected Delegates,,,,,,,,,,,104.0,0.0,0.0,3.0,0.0,61.0,0.0,18.0,0.0,,186.0
+Rhode Island,Projected Delegates,,,,,,,,,,,10.0,0.0,0.0,0.0,0.0,9.0,0.0,7.0,0.0,,26.0
 Guam,Projected Delegates,,,,,,,,,,,3.0,0.0,0.0,0.0,0.0,2.0,0.0,2.0,0.0,,7.0
-Kansas,Projected Delegates,,,,,,,,,,,17.0,0.0,0.0,0.0,0.0,13.0,0.0,9.0,0.0,,39.0
-Indiana,Projected Delegates,,,,,,,,,,,24.0,0.0,0.0,17.0,0.0,23.0,0.0,18.0,0.0,,82.0
-Nebraska,Projected Delegates,,,,,,,,,,,16.0,0.0,0.0,0.0,0.0,11.0,0.0,2.0,0.0,,29.0
+Kansas,Projected Delegates,,,,,,,,,,,14.0,0.0,0.0,0.0,0.0,15.0,0.0,10.0,0.0,,39.0
+Indiana,Projected Delegates,,,,,,,,,,,29.0,0.0,0.0,16.0,0.0,21.0,0.0,16.0,0.0,,82.0
+Nebraska,Projected Delegates,,,,,,,,,,,11.0,0.0,0.0,0.0,0.0,11.0,0.0,7.0,0.0,,29.0
 West Virginia,Projected Delegates,,,,,,,,,,,16.0,0.0,0.0,0.0,0.0,12.0,0.0,0.0,0.0,,28.0
-Kentucky,Projected Delegates,,,,,,,,,,,33.0,0.0,0.0,0.0,0.0,20.0,0.0,1.0,0.0,,54.0
-Oregon,Projected Delegates,,,,,,,,,,,24.0,0.0,0.0,0.0,0.0,21.0,0.0,16.0,0.0,,61.0
-District of Columbia,Projected Delegates,,,,,,,,,,,13.0,0.0,0.0,0.0,0.0,6.0,0.0,1.0,0.0,,20.0
-Montana,Projected Delegates,,,,,,,,,,,8.0,0.0,0.0,0.0,0.0,6.0,0.0,5.0,0.0,,19.0
-New Jersey,Projected Delegates,,,,,,,,,,,51.0,0.0,0.0,0.0,0.0,42.0,0.0,32.0,0.0,,126.0
-New Mexico,Projected Delegates,,,,,,,,,,,12.0,0.0,0.0,0.0,0.0,14.0,0.0,8.0,0.0,,34.0
-South Dakota,Projected Delegates,,,,,,,,,,,6.0,0.0,0.0,0.0,0.0,6.0,0.0,4.0,0.0,,16.0
+Kentucky,Projected Delegates,,,,,,,,,,,32.0,0.0,0.0,0.0,0.0,19.0,0.0,3.0,0.0,,54.0
+Oregon,Projected Delegates,,,,,,,,,,,21.0,0.0,0.0,1.0,0.0,22.0,0.0,17.0,0.0,,61.0
+District of Columbia,Projected Delegates,,,,,,,,,,,15.0,0.0,0.0,0.0,0.0,5.0,0.0,0.0,0.0,,20.0
+Montana,Projected Delegates,,,,,,,,,,,8.0,0.0,0.0,0.0,0.0,7.0,0.0,5.0,0.0,,19.0
+New Jersey,Projected Delegates,,,,,,,,,,,54.0,0.0,0.0,0.0,0.0,41.0,0.0,30.0,0.0,,126.0
+New Mexico,Projected Delegates,,,,,,,,,,,13.0,0.0,0.0,0.0,0.0,13.0,0.0,8.0,0.0,,34.0
+South Dakota,Projected Delegates,,,,,,,,,,,6.0,0.0,0.0,1.0,0.0,5.0,0.0,4.0,0.0,,16.0
 Virgin Islands,Projected Delegates,,,,,,,,,,,3.0,0.0,0.0,0.0,0.0,2.0,0.0,2.0,0.0,,7.0
 Puerto Rico,Projected Delegates,,,,,,,,,,,23.0,0.0,0.0,0.0,0.0,16.0,0.0,13.0,0.0,,51.0
