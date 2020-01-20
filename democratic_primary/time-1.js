@@ -24,6 +24,7 @@ d3.csv("states.csv", function (error, data) {
 
   var data = data.filter(function (d) { return d.state == keyState; })
 
+
   var res = data.map((d, i) => {
     return {
       date: parseDate(d.date),
@@ -36,7 +37,9 @@ d3.csv("states.csv", function (error, data) {
 
 
   var mindate = new Date(2019, 5, 1),
-    maxdate = new Date(2020, 6, 1);
+  maxdate = parseDate(d3.max(data,d=>d.datetwo))
+  demadjust =new Date(2020 , 0, 4);
+
 
   var xScale = d3.scaleTime()
     .domain([mindate, maxdate])
@@ -54,6 +57,8 @@ d3.csv("states.csv", function (error, data) {
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 
+  
+
   // CREATE AXES // 
   // render axis first before lines so that lines will overlay the horizontal ticks
   var xAxis = d3.axisBottom(xScale)
@@ -62,7 +67,7 @@ d3.csv("states.csv", function (error, data) {
   svg.append("g")
     .attr("class", "x axis")
     .attr("transform", `translate(0, ${height})`)
-    .call(xAxis.ticks(5)
+    .call(xAxis.ticks(8)
       .tickFormat(d3.timeFormat("%b")))
     .call(g => {
       var years = xScale.ticks(d3.timeYear.every(1))
@@ -82,15 +87,33 @@ d3.csv("states.csv", function (error, data) {
     })
     
    svg.append("line")
-   .attr("x1","468")
-   .attr("x2","468")
-   .attr("y1","0")
-   .attr("y2","300")
+   .attr("x1",xScale(demadjust))
+   .attr("x2",xScale(demadjust))
+   .attr("y1",yScale(0))
+   .attr("y2",yScale(d3.extent(res, d => d.percentage)))
    .attr("stroke","grey")
+
+   svg.append("line")
+   .attr("x1",xScale(maxdate))
+   .attr("x2",xScale(maxdate))
+   .attr("y1",yScale(0))
+   .attr("y2",yScale(d3.extent(res, d => d.percentage)))
+   .attr("stroke","grey")
+
+   svg.append("text")
+   .attr("x",xScale(maxdate)-5)
+   .attr("y","20")
+   .attr('fill', 'grey')
+   .attr('font-size', '15')
+   .attr('font-weight', 500)
+   .attr("text-anchor","end")
+    .text(keyState +" Votes")
+
+   
    
    
    svg.append("text")
-   .attr("x","465")
+   .attr("x",xScale(demadjust)-5)
    .attr("y","20")
    .attr('fill', 'grey')
    .attr('font-size', '15')
