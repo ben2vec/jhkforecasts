@@ -1,4 +1,5 @@
 State,Pollster,Grade,Sample,Date,weight,Biden,Bloomberg,Booker,Buttigieg,Klobuchar,Sanders,Steyer,Warren,Yang
+New Jersey,Emerson College,A-,388  lv,1/19,34.1,28.0,9.0,0.0,6.0,4.0,25.0,0.0,15.0,6.0
 Iowa,Neighborhood Research and Media,B/C,300  lv,1/17,10.6,23.0,0.0,0.0,17.0,11.0,10.0,2.0,15.0,2.0
 California,SurveyUSA,A,565  lv,1/16,48.6,30.0,6.0,0.0,8.0,2.0,20.0,4.0,20.0,4.0
 US,SurveyUSA,A,1086  lv,1/16,70.1,32.0,9.0,0.0,9.0,2.0,21.0,3.0,14.0,4.0
@@ -866,7 +867,6 @@ US,Harris Insights & Analytics,C+,459  rv,11/28,0.0,25.0,2.0,3.0,0.0,0.0,15.0,0.
 Massachusetts,YouGov,B-,655  rv,11/14,0.6,19.0,0.0,3.0,0.0,3.0,14.0,0.0,11.0,0.0
 US,Morning Consult,B/C,733  rv,11/9,0.0,26.0,2.0,3.0,0.0,1.0,19.0,0.0,5.0,0.0
 US,Harris Insights & Analytics,C+,370  rv,11/6,0.0,30.0,5.0,5.0,0.0,0.0,20.0,0.0,5.0,0.0
-,,,  ,,,,,,,,,,,
 ,,,  ,,,,,,,,,,,
 ,,,  ,,,,,,,,,,,
 ,,,  ,,,,,,,,,,,
