@@ -102,12 +102,12 @@ d3.csv("states.csv", function (error, data) {
 
    svg.append("text")
    .attr("x",xScale(maxdate)-5)
-   .attr("y","20")
-   .attr('fill', 'grey')
-   .attr('font-size', '15')
+   .attr("y","0")
+   .attr('fill', 'black')
+   .attr('font-size', '12')
    .attr('font-weight', 500)
    .attr("text-anchor","end")
-    .text(keyState +" Votes")
+    .text(keyState =="Iowa"||"Nevada"||"Wyoming"?keyState+" Caucus":keyState+" Primary")
 
    
    
