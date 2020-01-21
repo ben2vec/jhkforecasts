@@ -1,25 +1,4 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-  <title>Kernel Smoother</title>
-  <meta charset="utf-8">
-  <style>
-    
-  </style>
-
-</head>
-<link rel="stylesheet" href="https://use.typekit.net/htk2wjy.css">
-<link rel="stylesheet" href="index.css">
-
-<body>
-
-
-  <div id="example"></div>
-  <script src="https://d3js.org/d3.v4.min.js"></script>
-
-  <script>
-    /**
+  /**
  * Gaussian kernel - applied within the smoothKernel function
  * @param {number} x1 - point being adjusted
  * @param {number} x2 - point used to make adjustment
@@ -493,7 +472,7 @@ ssci.smooth.kernel2 = function(){
 
       //Define charting variables
       var chart_width = 960;
-      var chart_height = 500;
+      var chart_height = 400;
       var margin_top = 30;
       var margin_bottom = 30;
       var margin_left = 80;
@@ -503,7 +482,7 @@ ssci.smooth.kernel2 = function(){
       //Create SVG object
       svg = d3.select("#example")
         .append("svg")
-        .attr("viewBox", "0 0 960 500");
+        .attr("viewBox", "0 0 960 400");
 
 
 
@@ -679,34 +658,7 @@ ssci.smooth.kernel2 = function(){
         .attr("transform", "translate(" + margin_left + ",0)")
         .call(yAxis);
 
-      d3.csv("https://projects.fivethirtyeight.com/polls-page/president_primary_polls.csv", function (error, data) {
-        var parseDate = d3.timeParse("%m/%d/%Y")
-        var data = data.filter(function (d) { return d.state == ""; })
-        var data = data.filter(function (d) { return d.party == "DEM"; })
-
-        var data = data.map((d, i) => {
-          return {
-            end_date: parseDate(d.end_date),
-            answer: d.answer,
-            pct: +d.pct,
-          }
-        })
-        
-        svg.selectAll("circle")
-          .data(data)
-          .enter()
-          .append("circle")
-          .attr("cx", d => x_scale(d.end_date))
-          .attr("cy", d => y_scale(d.pct))
-          .attr("r", 3)
-          .attr("fill", "black")
-      });
+      
       
           
     });
-
-
-  </script>
-</body>
-
-</html>

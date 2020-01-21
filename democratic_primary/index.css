@@ -200,3 +200,51 @@ div.tooltip {
     display:none;
   }
 } 
+.pollline {
+  fill: none;
+  stroke-width: 3px;
+  opacity: 0.8;
+  stroke-linecap: round;
+}
+
+/*x-axis styles*/
+.c_x_axis text {
+  font: 15px brandon-grotesque;
+}
+
+.c_x_axis path,
+.c_x_axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+/*y-axis styles*/
+.c_y_axis text {
+  font: 15px brandon-grotesque;
+}
+
+
+.c_y_axis path,
+.c_y_axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+/*y-axis gridline styles*/
+.c_y_grid {
+  fill: none;
+  stroke: grey;
+  stroke-dasharray: 3 3;
+  stroke-width: 1px;
+  opacity: 0.7;
+}
+
+/*Smoothed line styles*/
+.c_sline1 {
+  fill: none;
+  stroke: darkblue;
+  stroke-width: 3px;
+  opacity: 0.4;
+}
