@@ -78,10 +78,27 @@
   		sm_temp1 = ssci.smooth.kernel2()
   		                      .kernel("Gaussian")
   		                      .data(temp1)
-  		                      .scale(2000000000);
-  		sm_temp1();
+  		                      .scale(1200000000);
+      sm_temp1();
       
-      console.log(temp1)
+      var temp2 = data.map(function(e){
+  			var temp = [];
+  			temp.push(e["Sanders"]);
+  			temp.push(e["date"]);
+  			return temp;
+      });
+      console.log(temp2)
+  		temp2 = temp2.map(function(d){
+  			var temp_time2 = d[1].split("-");
+  			return [new Date(temp_time2[0],temp_time2[1]-1,temp_time2[2]), +d[0]]; 
+  		});
+  		sm_temp2 = ssci.smooth.kernel2()
+  		                      .kernel("Gaussian")
+  		                      .data(temp2)
+  		                      .scale(1200000000);
+  		sm_temp2();
+      
+      console.log(temp2)
 
   		//Define charting variables
   		var chart_width = 960;
@@ -142,6 +159,17 @@
 			cht.append("path")
     				.data(sm_temp1.output())
     				.attr("d", slines(sm_temp1.output()))
+    				.attr("class","c_sline1");
+    
+
+    slines2 = d3.line()
+  			         .x(function(d) { return x_scale(d[0]); })
+                 .y(function(d) { return y_scale(d[1]); })
+                 .curve(d3.curveCatmullRom);
+  						
+			cht.append("path")
+    				.data(sm_temp2.output())
+    				.attr("d", slines(sm_temp2.output()))
     				.attr("class","c_sline1");
     });
     
