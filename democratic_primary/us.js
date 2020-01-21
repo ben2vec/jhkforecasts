@@ -8,7 +8,7 @@ var margin = { top: 80, right: 100, bottom: 40, left: 40 }
 var width = 1000 - margin.left - margin.right
 var height = 400 - margin.top - margin.bottom
 
-var lineOpacity = .8
+var lineOpacity = .9
 var lineStroke = "2px"
 
 var axisPad = 12 // axis formatting
@@ -237,7 +237,7 @@ d3.csv("states.csv", function (error, data) {
       .attr('d', d => line(d.values))
       .style('stroke', (d, i) => color(i))
       .style('fill', 'none')
-      .style('opacity', .7)
+      .style('opacity', .9)
       .style('stroke-width', "4px")
 
 
