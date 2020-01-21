@@ -407,6 +407,10 @@ d3.csv("states.csv", function (error, data) {
         var idx = bisect(d.values, xDate)
         return d.key + " - " + d.values[idx].percentage.toString() + "%"
       })
+
+
+
   }
+  
 
 })
