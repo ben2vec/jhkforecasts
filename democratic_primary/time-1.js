@@ -329,7 +329,7 @@ d3.csv("states.csv", function (error, data) {
         d3.selectAll(".mouse-per-line text")
           .style("opacity", "0");
         d3.selectAll("#tooltip")
-          .style('display', 'inline')
+          .style('display', 'none')
 
       })
       .on('mouseover', function () { // on mouse in show line, circles and text
