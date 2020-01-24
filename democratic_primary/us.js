@@ -284,14 +284,13 @@ d3.csv("states.csv", function (error, data) {
       .append("g")
       .attr("class", "mouse-per-line");
 
-    mousePerLine.append("circle")
-      .attr("r", 4)
-      .style("stroke", "white"
+      mousePerLine.append("circle")
+      .attr("r", 3)
+      .style("stroke", d=>color(d.key)
       )
-      .style("fill", function (d) {
-        return color(d.key)
-      })
-      .style("stroke-width", 3)
+      .style("fill", "white")
+      
+      .style("stroke-width", 2)
       .style("opacity", "0");
 
     mouseG.append('svg:rect') // append a rect to catch mouse movements on canvas
