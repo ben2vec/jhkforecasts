@@ -1,36 +1,4 @@
-<!DOCTYPE html>
-
-<head>
-    <meta charset="utf-8">
-    <script src="https://d3js.org/d3.v4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
-    <link rel="stylesheet" href="https://use.typekit.net/htk2wjy.css">
-    <link rel="stylesheet" href="index.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-    
-</head>
-
-<body>
-    <script>
-        var keyState = "Iowa"
-    </script>
-
-    
-    <select id="selectboxvote" class="custom-select" style="width:200px;">
-        <option value="vote">Projected Vote Share</option>
-    </select>
-    <div id="vote"></div>
-
-
-
-    <script>
-
-        var margin = { top: 20, right: 40, bottom: 100, left: 20 }
+var margin = { top: 20, right: 40, bottom: 100, left: 20 }
         var width = 1000 - margin.left - margin.right
         var height = 600 - margin.top - margin.bottom
 
@@ -43,7 +11,7 @@
 
             var data = data.filter(function (d) { return d.state == keyState; });
 
-            var datatype = "vote"
+            var datatype = "win"
 
             var parseTime = d3.timeParse("%Y-%m-%d"),
                 formatDate = d3.timeFormat("%b - %d"),
@@ -77,7 +45,7 @@
 
             console.log(data)
 
-            var svg = d3.select("#vote").append("svg")
+            var svg = d3.select("#win").append("svg")
                 .attr("viewBox", "0 0 1000 600")
                 .append('g')
                 .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
@@ -207,7 +175,7 @@
                 .attr("width", width - margin.right - margin.left)
                 .attr("height", height)
 
-            update(d3.select('#selectboxvote').property('value'), 0);
+            update(d3.select('#selectboxwin').property('value'), 0);
 
             function update(input, speed) {
 
@@ -364,6 +332,3 @@
 
 
         })
-
-    </script>
-</body>

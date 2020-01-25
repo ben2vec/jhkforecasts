@@ -307,3 +307,29 @@ div.tooltip {
 .select-items div:hover, .same-as-selected {
   background-color: rgba(0, 0, 0, 0.1);
 }
+.custom-select {
+  display: none;
+}
+
+.y-axis line {
+  opacity: .2;
+}
+
+.y-axis path {
+  display: none;
+}
+
+.line {
+  fill: none;
+  stroke-width: 3px;
+  opacity: 1;
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+.hoverCircle {
+  opacity: .75;
+}
