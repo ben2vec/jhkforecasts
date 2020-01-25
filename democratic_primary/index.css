@@ -255,11 +255,10 @@ div.tooltip {
   text-align: center;
   position: relative;
   font-family: brandon-grotesque;
+  font-size: 15px;
 }
 
-.custom-select select {
-  display: none; /*hide original SELECT element: */
-}
+
 
 .select-selected {
   background-color: rgb(130, 183, 236);
@@ -288,7 +287,7 @@ div.tooltip {
   color: #ffffff;
   padding: 8px 16px;
   border: 1px solid transparent;
-  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  border-color: transparent transparent rgba(196, 36, 36, 0.1) transparent;
   cursor: pointer;
 }
 
@@ -303,9 +302,7 @@ div.tooltip {
 }
 
 /* Hide the items when the select box is closed: */
-.select-hide {
-  display: none;
-}
+
 
 .select-items div:hover, .same-as-selected {
   background-color: rgba(0, 0, 0, 0.1);
