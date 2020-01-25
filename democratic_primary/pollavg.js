@@ -6,7 +6,7 @@ var demScale = d3.scaleLinear()
     .domain([0, 50])
     .range(["white", "#0091FF"]);
 
-d3.csv("time.csv", function (error, data) {
+d3.csv("Sheet2.csv", function (error, data) {
     var keys = data.columns.slice(1);
 
     
@@ -16,10 +16,10 @@ d3.csv("time.csv", function (error, data) {
         formatDate = d3.timeFormat("%b - %d"),
         formatMonth = d3.timeFormat("%Y-%m-%d"),
         bisectDate = d3.bisector(d => d.date).left,
-        formatValue = d3.format("0.0%");
+        formatValue = d3.format(".3");
 
     data.forEach(function (d) {
-        d.date = parseTime(d.forecastdate);
+        d.date = parseTime(d.date);
         return d;
     })
 
@@ -74,13 +74,13 @@ d3.csv("time.csv", function (error, data) {
         .attr("text-anchor", "middle")
         .style("font-size", 14)
         .style("font-weight", 700)
-        .text(d => d.values + "%")
+        .text(d => formatValue(d.values) + "%")
     //one month ago
-    now = parseTime(now)
-
+    now = now
+    console.log(now)
     var monthago = formatMonth(d3.utcMonth.offset(now, -1))
 
-    var montharray = data.filter(function (d) { return d.date == monthago; });
+    var montharray = data.filter(function (d) { return formatMonth(d.date) == monthago; });
 
     var copythree = keys.filter(f => f.includes(datatype))
 
@@ -119,7 +119,7 @@ d3.csv("time.csv", function (error, data) {
         .attr("text-anchor", "middle")
         .style("font-size", 14)
         .style("font-weight", 700)
-        .text(d => d.values + "%")
+        .text(d => formatValue(d.values) + "%")
 
 
 
@@ -153,7 +153,7 @@ d3.csv("time.csv", function (error, data) {
             var xshift = 0
             g.selectAll("text")
                 .style("text-anchor", "right")
-                .attr("y", axisPad)
+                .attr("y", 0)
                 .attr('fill', 'black')
                 .attr('font-size', 15)
                 .attr('font-weight', 400)
@@ -167,40 +167,7 @@ d3.csv("time.csv", function (error, data) {
 
     demadjust = new Date(2020, 0, 4);
 
-    svg.append("line")
-        .attr("x1", x(demadjust))
-        .attr("x2", x(demadjust))
-        .attr("y1", y(0))
-        .attr("y2", -height)
-        .attr("stroke", "grey")
-
-    svg.append("line")
-        .attr("x1", x(maxdate))
-        .attr("x2", x(maxdate))
-        .attr("y1", y(0))
-        .attr("y2", -height)
-        .attr("stroke", "grey")
-
-    svg.append("text")
-        .attr("x", x(maxdate) - 5)
-        .attr("y", "0")
-        .attr('fill', 'black')
-        .attr('font-size', '12')
-        .attr('font-weight', 500)
-        .attr("text-anchor", "end")
-        .text(keyState == "Iowa" || "Nevada" || "Wyoming" ? keyState + " Caucus" : keyState + " Primary")
-
-
-
-
-    svg.append("text")
-        .attr("x", x(demadjust) - 5)
-        .attr("y", "20")
-        .attr('fill', 'grey')
-        .attr('font-size', '15')
-        .attr('font-weight', 500)
-        .attr("text-anchor", "end")
-        .text("Demographic Calculation Adjusted >")
+    
 
 
     svg.append("g")
@@ -229,7 +196,7 @@ d3.csv("time.csv", function (error, data) {
         .attr("width", width - margin.right - margin.left)
         .attr("height", height)
 
-    update(d3.select('#selectboxvote').property('value'), 0);
+    update(d3.select('#selectboxpoll').property('value'), 0);
 
     function update(input, speed) {
 
@@ -241,7 +208,7 @@ d3.csv("time.csv", function (error, data) {
                 values: data.map(d => { return { date: d.date, degrees: +d[id] } })
             };
         });
-
+        console.log(cities)
         y.domain([
             d3.min(cities, d => d3.min(d.values, c => c.degrees)),
             d3.max(cities, d => d3.max(d.values, c => c.degrees))
@@ -249,7 +216,7 @@ d3.csv("time.csv", function (error, data) {
 
         svg.selectAll(".y-axis").transition()
             .duration(speed)
-            .call(d3.axisLeft(y).tickSize(-width + margin.right + margin.left).ticks(5)).call(g => {
+            .call(d3.axisLeft(y).tickSize(-width + margin.right + margin.left).ticks(5).tickFormat(d3.format(".2"))).call(g => {
                 var years = x.ticks(d3.timeYear.every(1))
                 var xshift = 0
                 g.selectAll("text")
@@ -357,7 +324,7 @@ d3.csv("time.csv", function (error, data) {
             focus.selectAll(".lineHoverText")
                 .attr("transform",
                     "translate(" + 100 + "," + 420 + ")").style("font-weight", 700)
-                .text(e => d[e] + "%");
+                .text(e => formatValue(d[e]) + "%");
 
 
 
@@ -393,14 +360,7 @@ d3.csv("time.csv", function (error, data) {
         .style("font-weight", 700)
         .text("Month Ago")
 
-        svg.append("text")
-        .attr("x", 500)
-        .attr("y", 520)
-        .attr("text-anchor", "middle")
-        .style("font-size", 25)
-        .style("font-weight", 700)
-        .text(keyState=="US"?"Projected Vote Share":"Projected Vote in "+racename)
-
+        
     legend.append("text")
         .attr("class", "legend-text")
         .style("fill", d => z(d))
