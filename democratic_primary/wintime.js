@@ -1,4 +1,4 @@
-var margin = { top: 20, right: 20, bottom: 100, left: 20 }
+var margin = { top: 20, right: 20, bottom: 100, left: 30 }
 var width = 1000 - margin.left - margin.right
 var height = 550 - margin.top - margin.bottom
 
@@ -183,16 +183,6 @@ d3.csv("time.csv", function (error, data) {
         .attr("y1", y(0))
         .attr("y2", -height)
         .attr("stroke", "grey")
-
-    svg.append("text")
-        .attr("x", x(maxdate) - 5)
-        .attr("y", "0")
-        .attr('fill', 'black')
-        .attr('font-size', '12')
-        .attr('font-weight', 500)
-        .attr("text-anchor", "end")
-        .text(keyState == "Iowa" || "Nevada" || "Wyoming" ? keyState + " Caucus" : keyState + " Primary")
-
 
 
 

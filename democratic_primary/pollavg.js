@@ -1,13 +1,15 @@
-var margin = { top: 20, right: 20, bottom: 100, left: 20 }
+var margin = { top: 20, right: 20, bottom: 100, left: 30 }
 var width = 1000 - margin.left - margin.right
 var height = 550 - margin.top - margin.bottom
 
-var demScale = d3.scaleLinear()
-    .domain([0, 50])
+var demscale = d3.scaleLinear()
+    .domain([0, 30])
     .range(["white", "#0091FF"]);
 
 d3.csv("Sheet2.csv", function (error, data) {
     var keys = data.columns.slice(1);
+var startdate = new Date(2018,10,30)
+
 
     
     var datatype = "avg"
@@ -15,7 +17,7 @@ d3.csv("Sheet2.csv", function (error, data) {
     var parseTime = d3.timeParse("%Y-%m-%d"),
         formatDate = d3.timeFormat("%b - %d"),
         formatMonth = d3.timeFormat("%Y-%m-%d"),
-        bisectDate = d3.bisector(d => d.date).left,
+        bisectDate = d3.bisector(d => d.date).right,
         formatValue = d3.format(".3");
 
     data.forEach(function (d) {
@@ -23,6 +25,7 @@ d3.csv("Sheet2.csv", function (error, data) {
         return d;
     })
 
+    var data = data.filter(function (d) { return d.date > startdate; });
 
 
     //today
@@ -52,7 +55,7 @@ d3.csv("Sheet2.csv", function (error, data) {
 
     var svgnow = svg.append('g')
         .attr('class', 'gnow')
-        .attr("transform", "translate(100,450)")
+        .attr("transform", "translate(100,420)")
 
     var nowv = svgnow.selectAll('.now')
         .data(asoftoday)
@@ -66,9 +69,54 @@ d3.csv("Sheet2.csv", function (error, data) {
         .attr("width", 75)
         .attr("height", 25)
         .attr("rx", 10)
-        .attr("fill", d => demScale(d.values))
+        .attr("fill", d => demscale(d.values))
 
     nowv.append("text")
+        .attr("class", "now-text")
+        .style("fill", "Black")
+        .attr("text-anchor", "middle")
+        .style("font-size", 14)
+        .style("font-weight", 700)
+        .text(d => formatValue(d.values) + "%")
+        //one week ago
+    now = now
+    console.log(now)
+    var weekago = formatMonth(d3.utcWeek.offset(now, -1))
+
+    var weekarray = data.filter(function (d) { return formatMonth(d.date) == weekago; });
+
+    var copyweek = keys.filter(f => f.includes(datatype))
+
+    var oneweekago = copyweek.map(function (id) {
+        return {
+            values: weekarray.map(d => { return +d[id] })
+        };
+    });
+
+    console.log(monthago)
+    console.log(montharray)
+    console.log(onemonthago)
+
+    
+    var svgmonth = svg.append('g')
+        .attr('class', 'gmonth')
+        .attr("transform", "translate(100,450)")
+
+    var monthv = svgmonth.selectAll('.now')
+        .data(oneweekago)
+        .enter().append('g')
+        .attr("class", "month")
+        .attr("transform", function (d, i) { return "translate(" + i * 100 + ",0)" })
+
+    monthv.append("rect")
+        .attr("y", -17.5)
+        .attr("x", -37.5)
+        .attr("width", 75)
+        .attr("height", 25)
+        .attr("rx", 10)
+        .attr("fill", d => demscale(d.values))
+
+    monthv.append("text")
         .attr("class", "now-text")
         .style("fill", "Black")
         .attr("text-anchor", "middle")
@@ -111,7 +159,7 @@ d3.csv("Sheet2.csv", function (error, data) {
         .attr("width", 75)
         .attr("height", 25)
         .attr("rx", 10)
-        .attr("fill", d => demScale(d.values))
+        .attr("fill", d => demscale(d.values))
 
     monthv.append("text")
         .attr("class", "now-text")
@@ -124,12 +172,12 @@ d3.csv("Sheet2.csv", function (error, data) {
 
 
     var mindate = new Date(2019, 5, 1),
-        maxdate = d3.max(data, d => d.primarydate)
+        maxdate = d3.max(data, d => d.date)
     demadjust = new Date(2020, 0, 4);
 
     var x = d3.scaleTime()
         .rangeRound([margin.left, width - margin.right])
-        .domain([mindate, maxdate])
+        .domain([startdate, maxdate])
 
     var y = d3.scaleLinear()
         .rangeRound([height - margin.bottom, margin.top]);
@@ -139,7 +187,7 @@ d3.csv("Sheet2.csv", function (error, data) {
         ;
 
     var line = d3.line()
-        .curve(d3.curveCardinal)
+        .curve(d3.curveBundle)
         .x(d => x(d.date))
         .y(d => y(d.degrees));
 
@@ -165,7 +213,7 @@ d3.csv("Sheet2.csv", function (error, data) {
 
         })
 
-    demadjust = new Date(2020, 0, 4);
+    
 
     
 
@@ -245,92 +293,10 @@ d3.csv("Sheet2.csv", function (error, data) {
             .transition().duration(speed)
             .attr("d", d => line(d.values))
 
-        tooltip(copy);
+        
     }
 
-    function tooltip(copy) {
-        var rect = focus.selectAll(".lineHoverRect")
-            .data(copy)
-
-        rect.enter().append("rect")
-            .attr("class", "lineHoverRect")
-            .attr("y", 402.5)
-            .attr("x", 62.5)
-            .attr("width", 75)
-            .attr("height", 25)
-            .attr("rx", 10)
-            .attr("transform", (_, i) => "translate(" + i * 100 + ",0)")
-            .merge(rect);
-
-        var labels = focus.selectAll(".lineHoverText")
-            .data(copy)
-
-        labels.enter().append("text")
-            .attr("class", "lineHoverText")
-            .attr("text-anchor", "middle")
-            .attr("font-size", 14)
-            .attr("dx", (_, i) => 1 + i * 100 + "px")
-            .merge(labels);
-
-
-
-
-
-
-
-        var circles = focus.selectAll(".hoverCircle")
-            .data(copy)
-
-        circles.enter().append("circle")
-            .attr("class", "hoverCircle")
-            .style("stroke", d => z(d))
-            .style("stroke-width", 2)
-            .style("fill", "white")
-            .attr("r", 3)
-            .merge(circles);
-
-        svg.selectAll(".overlay")
-            .on("mouseover", function () { focus.style("display", null); })
-            .on("mouseout", function () { focus.style("display", "display"); })
-            .on("mousemove", mousemove);
-
-        function mousemove() {
-
-            var x0 = x.invert(d3.mouse(this)[0]),
-                i = bisectDate(data, x0, 1),
-                d0 = data[i - 1],
-                d1 = data[i],
-                d = x0 - d0.date > d1.date - x0 ? d1 : d0;
-
-            focus.select(".lineHover")
-                .attr("transform", "translate(" + x(d.date) + "," + height + ")");
-
-            focus.select(".lineHoverDate")
-                .attr("x", 0)
-                .attr("y", 420)
-                .attr("text-anchor", "start")
-                .style("font-size", 12)
-                .style("font-weight", 700)
-                .text(formatDate(d.date));
-
-            focus.selectAll(".hoverCircle")
-                .attr("cy", e => y(d[e]))
-                .attr("cx", x(d.date));
-
-            focus.selectAll(".lineHoverRect")
-                .style("fill", e => demScale(d[e]))
-                ;
-
-            focus.selectAll(".lineHoverText")
-                .attr("transform",
-                    "translate(" + 100 + "," + 420 + ")").style("font-weight", 700)
-                .text(e => formatValue(d[e]) + "%");
-
-
-
-
-        }
-    }
+    
 
     var cands = ["Biden", "Bloomberg", "Booker", "Buttigieg", "Klobuchar", "Sanders", "Steyer", "Warren", "Yang"]
 
@@ -346,11 +312,18 @@ d3.csv("Sheet2.csv", function (error, data) {
 
     svg.append("text")
         .attr("x", 0)
-        .attr("y", 450)
+        .attr("y", 420)
         .attr("text-anchor", "start")
         .style("font-size", 12)
         .style("font-weight", 700)
         .text("Today")
+        svg.append("text")
+        .attr("x", 0)
+        .attr("y", 450)
+        .attr("text-anchor", "start")
+        .style("font-size", 12)
+        .style("font-weight", 700)
+        .text("Week Ago")
 
     svg.append("text")
         .attr("x", 0)

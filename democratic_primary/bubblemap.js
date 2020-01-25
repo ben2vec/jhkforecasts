@@ -4,7 +4,7 @@ var margin2 = { top: 0, right: 70, bottom: 0, left: 50 }
 var width2 = 860 - margin2.left - margin2.right
 var height2 = 445
 var axisPad = 12
-
+var R =7
 
 
 

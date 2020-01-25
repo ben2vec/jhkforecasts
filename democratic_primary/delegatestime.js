@@ -1,9 +1,13 @@
-var margin = { top: 20, right: 20, bottom: 100, left: 20 }
+var margin = { top: 20, right: 20, bottom: 100, left: 30 }
 var width = 1000 - margin.left - margin.right
 var height = 550 - margin.top - margin.bottom
 
 var demScale = d3.scaleLinear()
     .domain([0, 50])
+    .range(["white", "#0091FF"]);
+
+var delScale = d3.scaleLinear()
+    .domain([0, 1990])
     .range(["white", "#0091FF"]);
 
 d3.csv("time.csv", function (error, data) {
@@ -68,7 +72,7 @@ d3.csv("time.csv", function (error, data) {
         .attr("width", 75)
         .attr("height", 25)
         .attr("rx", 10)
-        .attr("fill", d => demScale(d.values))
+        .attr("fill", d =>keyState =="US"? delScale(d.values):demScale(d.values))
 
     nowv.append("text")
         .attr("class", "now-text")
@@ -114,7 +118,7 @@ d3.csv("time.csv", function (error, data) {
         .attr("width", 75)
         .attr("height", 25)
         .attr("rx", 10)
-        .attr("fill", d => demScale(d.values))
+        .attr("fill",d =>keyState =="US"? delScale(d.values):demScale(d.values))
 
     monthv.append("text")
         .attr("class", "now-text")
@@ -184,16 +188,7 @@ d3.csv("time.csv", function (error, data) {
         .attr("y2", -height)
         .attr("stroke", "grey")
 
-    svg.append("text")
-        .attr("x", x(maxdate) - 5)
-        .attr("y", "0")
-        .attr('fill', 'black')
-        .attr('font-size', '12')
-        .attr('font-weight', 500)
-        .attr("text-anchor", "end")
-        .text(keyState == "Iowa" || "Nevada" || "Wyoming" ? keyState + " Caucus" : keyState + " Primary")
-
-
+    
 
 
     svg.append("text")
@@ -356,7 +351,7 @@ d3.csv("time.csv", function (error, data) {
                 .attr("cx", x(d.date));
 
             focus.selectAll(".lineHoverRect")
-                .style("fill", e => demScale(d[e]))
+                .style("fill", e =>keyState =="US"? delScale(d[e]):demScale(d[e]))
                 ;
 
             focus.selectAll(".lineHoverText")
