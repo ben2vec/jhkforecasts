@@ -9,7 +9,12 @@ var demScale = d3.scaleLinear()
 var demScale = d3.scaleLinear()
   .domain([0, 50])
   .range(["white", "#0091FF"]);
-
+  var racetype = keyState == "Iowa" || "Nevada" || "Wyoming" ? " Caucus" : " Primary"
+  d3.csv("delegates.csv", function (error, data) {
+    var data = data.filter(function (d) { return d.state == keyState; });
+    console.log(data[0].date)
+    document.getElementById("primarydate").innerHTML = racetype+" - "+data[0].date;
+  })
 d3.csv("polls.csv", function (error, data) {
 
   

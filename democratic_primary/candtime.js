@@ -6,7 +6,7 @@ var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept"
 
 var margin = { top: 80, right: 40, bottom: 40, left: 40 }
 var width = 1000 - margin.left - margin.right
-var height = 400 - margin.top - margin.bottom
+var height = 0 - margin.top - margin.bottom
 
 var lineOpacity = .8
 var lineStroke = "4px"
@@ -50,7 +50,7 @@ d3.csv("states.csv", function (error, data) {
     .range([height, 0]);
 
   var svg = d3.select("#chart").append("svg")
-    .attr("viewBox", "0 0 1000 450")
+    .attr("viewBox", "0 0 00 0")
     .append('g')
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
