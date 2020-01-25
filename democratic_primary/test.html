@@ -1,168 +1,156 @@
-<!DOCTYPE html>
-<meta charset="utf-8">
-<style>
+<html>
 
-body {
-  font: 12px Helvetica;
-}
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140782021-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-.axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
-}
+    gtag('config', 'UA-140782021-2');
+  </script>
+  <script data-ad-client="ca-pub-8025120308040073" async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <link rel="icon" href="https://jkstats76.files.wordpress.com/2019/02/cropped-site-icon.png?w=32" sizes="32x32">
+  <link rel="icon" href="https://jkstats76.files.wordpress.com/2019/02/cropped-site-icon.png?w=192" sizes="192x192">
 
-.x.axis path {
-  display: none;
-}
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+  <link rel="stylesheet" href="https://use.typekit.net/htk2wjy.css">
+  <link rel="stylesheet" href="index.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <style>
 
-.line {
-  fill: none;
-  stroke: steelblue;
-  stroke-width: 2px;
-}
-
-</style>
-<body>
-<script src="https://d3js.org/d3.v3.js"></script>
+  </style>
+</head>
 <script>
-
-var margin = {top: 20, right: 50, bottom: 30, left: 50},
-    width = 630 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
-
-var parseDate = d3.time.format("%Y-%m-%d").parse;
-
-var x = d3.time.scale()
-    .range([0, width]);
-
-var y = d3.scale.linear()
-    .range([height, 0]);
-
-var color = d3.scale.category10();
-
-var xAxis = d3.svg.axis()
-    .scale(x)
-    .ticks(5)
-    .innerTickSize(15)
-    .outerTickSize(0)
-    .orient("bottom");
-
-var yAxis = d3.svg.axis()
-    .scale(y)
-    .tickFormat(function(d) { return d + "%";})
-    .ticks(5)
-    .innerTickSize(15)
-    .outerTickSize(0)
-    .orient("left");
-
-var line = d3.svg.line()
-    .interpolate("basis")
-    .x(function(d) { return x(d.date); })
-    .y(function(d) { return y(d.price); });
-
-
-var svg = d3.select("body").append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-  .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-d3.tsv("airbus_data.tsv", function(error, data) {
-  color.domain(d3.keys(data[0]).filter(function(key) { return key !== "date"; }));
-
-  data.forEach(function(d) {
-    d.date = parseDate(d.date);
-  });
-
-  var companies = color.domain().map(function(name) {
-    return {
-      name: name,
-      values: data.map(function(d) {
-        return {date: d.date, price: +d[name]};
-      })
-    };
-  });
-
-
-  x.domain(d3.extent(data, function(d) { return d.date; }));
-
-  y.domain([
-    d3.min(companies, function(c) { return d3.min(c.values, function(v) { return v.price; }); }),
-    d3.max(companies, function(c) { return d3.max(c.values, function(v) { return v.price; }); })
-  ]);
-
-  svg.append("g")
-      .attr("class", "x axis")
-      .attr("transform", "translate(0," + height + ")")
-      .call(xAxis);
-
-  svg.append("g")
-      .attr("class", "y axis")
-      .call(yAxis);
-
-
-  svg.append("line")
-        .attr(
-        {
-            "class":"horizontalGrid",
-            "x1" : 0,
-            "x2" : width,
-            "y1" : y(0),
-            "y2" : y(0),
-            "fill" : "none",
-            "shape-rendering" : "crispEdges",
-            "stroke" : "black",
-            "stroke-width" : "1px",
-            "stroke-dasharray": ("3, 3")
-        });
-
-
-  var company = svg.selectAll(".company")
-      .data(companies)
-    .enter().append("g")
-      .attr("class", "company");
-
-
-
-  var path = svg.selectAll(".company").append("path")
-      .attr("class", "line")
-      .attr("d", function(d) { return line(d.values); })
-      .style("stroke", function(d) { if (d.name == "Airbus") 
-                                        {return "rgb(000,255,000)"}
-                                      else {return "#000";}
-                                         });
-
-
-
-  //var totalLength = path.node().getTotalLength();
-/*
-console.log(path);
-console.log(path.node());
-console.log(path[0][0]);
-console.log(path[0][1]);
-*/
-var totalLength = [path[0][0].getTotalLength(), path[0][1].getTotalLength()];
-
-console.log(totalLength);
-
-
-   d3.select(path[0][0])
-      .attr("stroke-dasharray", totalLength[0] + " " + totalLength[0] ) 
-      .attr("stroke-dashoffset", totalLength[0])
-      .transition()
-        .duration(5000)
-        .ease("linear")
-        .attr("stroke-dashoffset", 0);
-
-   d3.select(path[0][1])
-      .attr("stroke-dasharray", totalLength[1] + " " + totalLength[1] )
-      .attr("stroke-dashoffset", totalLength[1])
-      .transition()
-        .duration(5000)
-        .ease("linear")
-        .attr("stroke-dashoffset", 0);
-
-});
-
+  var keyState = "South Carolina"
 </script>
+
+<h1 style=" text-align: center; font-weight: 300;  "> <a href="https://jhkforecasts.com"><span>JHK Forecasts</span></a>
+</h1>
+
+<body>
+  <div id="bigmenu">
+   <table style="border-collapse: collapse; border: none;" cellspacing="0" cellpadding="0" width="100%">
+			<tbody>
+				<tr>
+					<td style="width: 33%; border-right: solid grey 1.0pt; " valign="middle" width="33%">
+						<a href="https://projects.jhkforecasts.com/democratic_primary/">
+							<img style="text-align: center;" src="demprimarymenu-01.svg">
+						</a>
+					</td>
+					<td style="width: 33%; border-right: solid grey 1.0pt; border-left: none; " valign="middle"
+						width="33%">
+						<a href="https://projects.jhkforecasts.com/presidential_forecast/">
+							<img style="text-align: center;" src="presforecastmenu-01.svg">
+					</td>
+					<td style="width: 33%; ; " valign="middle" width="33%">
+						<a href="https://projects.jhkforecasts.com/senate_forecast/">
+							<img style="text-align: center;" src="senateforecastmenu-01.svg">
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+
+  </div>
+
+
+  <div id="smallmenu">
+    <table style="border-collapse: collapse; border: none;" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+        <tr>
+          <td style="width: 35%; border-right: solid grey 1.0pt; " valign="top" width="35%">
+            <p style="text-align: center;font-weight: 700;font-size: 13px;"><span style="color: black;"><a
+                  href="https://projects.jhkforecasts.com/democratic_primary/"><span style="color: black;">Democratic
+                    Primary</span></a><span></p>
+          </td>
+          <td style="width: 30%; border-right: solid grey 1.0pt; border-left: none; " valign="top" width="30%">
+            <p style="text-align: center;font-weight: 700;font-size: 13px;"><span style="color: black;"><a
+                  href="https://projects.jhkforecasts.com/presidential_forecast/"><span
+                    style="color: black;">Presidential</span></a></span></p>
+          </td>
+          <td style="width: 35%; ; " valign="top" width="35%">
+            <p style="text-align: center;font-weight: 700;font-size: 13px;"><span style="color: black;"><a
+                  href="https://projects.jhkforecasts.com/senate_forecast/"><span
+                    style="color: black;">Senate</span></a></span></p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <div class='header'></div>
+  <h1 style="text-align: center;">South Carolina</h1>
+  <div id="body"></div>
+  <div class="radio-toolbar" style="text-align:center ;">
+    <input type="radio" id="projvote" name="dataPoint" value="1" checked>
+    <label for="projvote">Projected Vote Share</label>
+
+    <input type="radio" id="win%" name="dataPoint" value="2">
+    <label for="win%">Win South Carolina</label>
+  <div id="chart"></div>
+</div>
+  <h2 style="font-weight: 800;margin-left: 20px;">Breakdown</h2>
+  <div id="votecalcs"></div>
+  <h2 style="font-weight: 800;margin-left: 20px;">Similar States</h2>
+  <script src="timetest.js"></script>
+  <div id="usmap"></div>
+  <script src="statemaps.js"></script>
+  <h2 style="font-weight: 800;margin-left: 20px;">Latest Polls</h2>
+  <div id="polls"></div>
+	<script src="polls.js"></script>
+	<script src="votecalcs.js"></script>
+  <script src="bubblemap.js"></script>
+  <script src="delegates.js"></script>
+  <script src="delegatetime.js"></script>
+  <script src="topline.js"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-h2+d+5c-9-3e"
+     data-ad-client="ca-pub-8025120308040073"
+     data-ad-slot="8603820464"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-h2+d+5c-9-3e"
+     data-ad-client="ca-pub-8025120308040073"
+     data-ad-slot="8603820464"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-h2+d+5c-9-3e"
+     data-ad-client="ca-pub-8025120308040073"
+     data-ad-slot="8603820464"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+  
+  </body>
+
+
+
+
+
+</body>
+
+</html

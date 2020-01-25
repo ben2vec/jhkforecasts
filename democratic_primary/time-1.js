@@ -246,6 +246,9 @@ d3.csv("states.csv", function (error, data) {
       .key(d => d.candidate)
       .entries(resNew)
 
+    console.log(resNew) 
+    console.log(res_nested)
+
     // APPEND MULTIPLE LINES //
     var lines = svg.append('g')
       .attr('class', 'lines')
