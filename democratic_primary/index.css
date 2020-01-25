@@ -91,6 +91,7 @@ h1{ font-family: brandon-grotesque, sans-serif;
     }
     .radio-toolbar {
       margin: 10px;
+      display: none;
     }
     
     .radio-toolbar input[type="radio"] {
@@ -331,5 +332,32 @@ div.tooltip {
 }
 
 .hoverCircle {
-  opacity: .75;
+  opacity: 1;
+}
+#win {
+  display: none;
+}
+#delegates {
+  display: none;
+}
+
+.btn {
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  font-size: 16px;
+  font-family: brandon-grotesque;
+  border-radius: 10px;
+  cursor: pointer;
+
+}
+
+.default {
+  background-color: #e7e7e7;
+  color: black;
+}
+
+/* Gray */
+.default:hover {
+  background: #ddd;
 }

@@ -97,12 +97,74 @@
 
     <input type="radio" id="win%" name="dataPoint" value="2">
     <label for="win%">Win New York</label>
-  <div id="chart"></div>
+  <div style="text-align:center ;">
+  <button class="btn default" onclick="votefunc()" id="votebutton">Projected Vote Share</button>
+  <button class="btn default" onclick="winfunc()" id="winbutton">Win State</button>
+  <button class="btn default" onclick="delegatesfunc()" id="winbutton">Projected Delegates</button>
 </div>
+  <select id="selectboxvote" class="custom-select" style="width:200px;">
+    <option value="vote">Projected Vote Share</option>
+</select>
+<div id="vote"></div>
+<select id="selectboxwin" class="custom-select" style="width:200px;">
+  <option value="Win">Win State</option>
+</select>
+<div id="win"></div>
+<select id="selectboxdelegates" class="custom-select" style="width:200px;">
+  <option value="Delegates">Projected Delegates</option>
+</select>
+<div id="delegates"></div>
+
+
+	<script>
+		
+		function votefunc() {
+			var vote = document.getElementById("vote");
+			var win = document.getElementById("win");
+			var delegates = document.getElementById("delegates");
+			
+
+			vote.style.display = "inline";
+				win.style.display = "none";
+				delegates.style.display = "none";
+    }
+  </script>
+
+<script>
+		
+  function winfunc() {
+    var vote = document.getElementById("vote");
+    var win = document.getElementById("win");
+    var delegates = document.getElementById("delegates");
+    
+
+    vote.style.display = "none";
+      win.style.display = "inline";
+      delegates.style.display = "none";
+  }
+</script>
+
+<script>
+		
+  function delegatesfunc() {
+    var vote = document.getElementById("vote");
+    var win = document.getElementById("win");
+    var delegates = document.getElementById("delegates");
+    
+
+    vote.style.display = "none";
+      win.style.display = "none";
+      delegates.style.display = "inline";
+  }
+</script>
+<script src="wintime.js"></script>
+<script src="delegatestime.js"></script> 
+<script src="votetime.js"></script> 
+
   <h2 style="font-weight: 800;margin-left: 20px;">Breakdown</h2>
   <div id="votecalcs"></div>
   <h2 style="font-weight: 800;margin-left: 20px;">Similar States</h2>
-  <script src="time-1.js"></script>
+  
   <div id="usmap"></div>
   <script src="statemaps.js"></script>
   <h2 style="font-weight: 800;margin-left: 20px;">Latest Polls</h2>
@@ -110,8 +172,8 @@
 	<script src="polls.js"></script>
 	<script src="votecalcs.js"></script>
   <script src="bubblemap.js"></script>
-  <script src="delegates.js"></script>
-  <script src="delegatetime.js"></script>
+  
+  
   <script src="topline.js"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"

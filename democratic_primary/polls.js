@@ -37,8 +37,15 @@ d3.csv("polls.csv", function (error, data) {
     }
   })
 
+  
+  console.log(data.length)
+
+  var svgHeight = data.length*50 +60
+
+  console.log(svgHeight)
+
   var svg = d3.select("#polls").append("svg")
-    .attr("viewBox", "-50 0 1050 560")
+    .attr("viewBox", "-50 0 1050 " + svgHeight )
     .append('g')
 
   var maxweight = d3.max(data, d => d.weight)
