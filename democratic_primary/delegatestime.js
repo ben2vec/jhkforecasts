@@ -406,7 +406,7 @@ d3.csv("time.csv", function (error, data) {
         .attr("text-anchor", "middle")
         .style("font-size", 25)
         .style("font-weight", 700)
-        .text(keyState=="US"?"Projected Delegates":"Projected delegates in "+racename)
+        .text(keyState=="US"?"Projected Delegates":"Projected Delegates in "+keyState)
 
 
 })

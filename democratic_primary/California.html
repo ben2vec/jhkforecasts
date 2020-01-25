@@ -92,17 +92,10 @@
 
 
 
-  <h1 id="primarydate" style="text-align: center;"></h1>
+  <h1 style="text-align: center;">California</h1>
   <script>
     var keyState = "California"
-    var racename = (keyState == "California" || "Nevada" || "Wyoming" ? keyState + " Caucus" : keyState + " Primary")
-    
-    d3.csv("delegates.csv", function (error, data) {
-      var data = data.filter(function (d) { return d.state == keyState; });
-      console.log(data[0].date)
-      document.getElementById("primarydate").innerHTML = racename+" - "+data[0].date;
-    })
-  </script>
+   </script>
   
   
   <select id="selectboxvote" class="custom-select" style="width:200px;">

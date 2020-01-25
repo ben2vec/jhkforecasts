@@ -1,6 +1,19 @@
 <html>
 
 <head>
+  <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@jhkforecast">
+	<meta name="twitter:creator" content="@jhkersting">
+	<meta name="twitter:title" content="West Virginia Primary">
+	<meta name="twitter:description" content="Who is leading the race for the West Virginia Primary">
+	<meta name="twitter:image"
+		content="https://raw.githubusercontent.com/jhkersting/jhkforecasts/master/2020_dem_prim_img-01.jpg">
+	<title>West Virginia Primary</title>
+	<script data-ad-client="ca-pub-8025120308040073" async
+		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140782021-2"></script>
   <script>
@@ -19,19 +32,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
   <link rel="stylesheet" href="https://use.typekit.net/htk2wjy.css">
   <link rel="stylesheet" href="index.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-  <style>
 
-  </style>
 </head>
-<script>
-  var keyState = "West Virginia"
-</script>
+
 
 <h1 style=" text-align: center; font-weight: 300;  "> <a href="https://jhkforecasts.com"><span>JHK Forecasts</span></a>
 </h1>
@@ -88,20 +91,13 @@
   </div>
 
 
-  <div class='header'></div>
-  <h1 style="text-align: center;">West Virginia</h1>
-  <div id="body"></div>
-  <div class="radio-toolbar" style="text-align:center ;">
-    <input type="radio" id="projvote" name="dataPoint" value="1" checked>
-    <label for="projvote">Projected Vote Share</label>
 
-    <input type="radio" id="win%" name="dataPoint" value="2">
-    <label for="win%">Win West Virginia</label>
-  <div style="text-align:center ;">
-  <button class="btn default" onclick="votefunc()" id="votebutton">Projected Vote Share</button>
-  <button class="btn default" onclick="winfunc()" id="winbutton">Win State</button>
-  <button class="btn default" onclick="delegatesfunc()" id="winbutton">Projected Delegates</button>
-</div>
+  <h1 style="text-align: center;">West Virginia</h1>
+  <script>
+    var keyState = "West Virginia"
+   </script>
+  
+  
   <select id="selectboxvote" class="custom-select" style="width:200px;">
     <option value="vote">Projected Vote Share</option>
 </select>
@@ -114,7 +110,11 @@
   <option value="Delegates">Projected Delegates</option>
 </select>
 <div id="delegates"></div>
-
+<div style="text-align:center ;">
+  <button class="btn default" onclick="votefunc()" id="votebutton">Projected Vote Share</button>
+  <button class="btn default" onclick="winfunc()" id="winbutton">Win West Virginia</button>
+  <button class="btn default" onclick="delegatesfunc()" id="winbutton">Projected Delegates</button>
+</div>
 
 	<script>
 		
@@ -128,11 +128,7 @@
 				win.style.display = "none";
 				delegates.style.display = "none";
     }
-  </script>
-
-<script>
-		
-  function winfunc() {
+    function winfunc() {
     var vote = document.getElementById("vote");
     var win = document.getElementById("win");
     var delegates = document.getElementById("delegates");
@@ -142,10 +138,6 @@
       win.style.display = "inline";
       delegates.style.display = "none";
   }
-</script>
-
-<script>
-		
   function delegatesfunc() {
     var vote = document.getElementById("vote");
     var win = document.getElementById("win");
@@ -156,7 +148,9 @@
       win.style.display = "none";
       delegates.style.display = "inline";
   }
-</script>
+  </script>
+
+
 <script src="wintime.js"></script>
 <script src="delegatestime.js"></script> 
 <script src="votetime.js"></script> 
@@ -174,38 +168,8 @@
   <script src="bubblemap.js"></script>
   
   
-  <script src="topline.js"></script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-format="fluid"
-     data-ad-layout-key="-h2+d+5c-9-3e"
-     data-ad-client="ca-pub-8025120308040073"
-     data-ad-slot="8603820464"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-format="fluid"
-     data-ad-layout-key="-h2+d+5c-9-3e"
-     data-ad-client="ca-pub-8025120308040073"
-     data-ad-slot="8603820464"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-format="fluid"
-     data-ad-layout-key="-h2+d+5c-9-3e"
-     data-ad-client="ca-pub-8025120308040073"
-     data-ad-slot="8603820464"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 
+  
   
   </body>
 

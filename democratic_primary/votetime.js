@@ -386,14 +386,6 @@ d3.csv("time.csv", function (error, data) {
         .style("font-weight", 700)
         .text("Month Ago")
 
-        svg.append("text")
-        .attr("x", 500)
-        .attr("y", 520)
-        .attr("text-anchor", "middle")
-        .style("font-size", 25)
-        .style("font-weight", 700)
-        .text(keyState=="US"?"Projected Vote Share":"Projected Vote in "+racename)
-
     legend.append("text")
         .attr("class", "legend-text")
         .style("fill", d => z(d))
@@ -402,5 +394,14 @@ d3.csv("time.csv", function (error, data) {
         .style("font-weight", 700)
         .text(d => d)
 
+        svg.append("text")
+        .attr("x", 500)
+        .attr("y", 520)
+        .attr("text-anchor", "middle")
+        .style("font-size", 25)
+        .style("font-weight", 700)
+        .text(keyState=="US"?"Projected Vote Share":"Projected Vote in "+keyState)
+
+  
 
 })

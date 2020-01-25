@@ -399,7 +399,7 @@ d3.csv("time.csv", function (error, data) {
         .attr("text-anchor", "middle")
         .style("font-size", 25)
         .style("font-weight", 700)
-        .text(keyState=="US"?"Win Nomination":"Win "+racename)
+        .text(keyState=="US"?"Win Nomination":"Win "+keyState)
 
 
 })
