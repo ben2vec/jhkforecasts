@@ -187,7 +187,7 @@ var startdate = new Date(2018,10,30)
         ;
 
     var line = d3.line()
-        .curve(d3.curveBundle)
+        .curve(d3.curveStep)
         .x(d => x(d.date))
         .y(d => y(d.degrees));
 

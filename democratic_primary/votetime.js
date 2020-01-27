@@ -141,7 +141,7 @@ d3.csv("time.csv", function (error, data) {
         ;
 
     var line = d3.line()
-        .curve(d3.curveCardinal)
+        .curve(d3.curveStep)
         .x(d => x(d.date))
         .y(d => y(d.degrees));
 
