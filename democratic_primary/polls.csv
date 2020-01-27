@@ -1,4 +1,5 @@
 State,Pollster,Grade,Sample,Date,weight,Biden,Bloomberg,Booker,Buttigieg,Klobuchar,Sanders,Steyer,Warren,Yang
+Iowa,Emerson College,A-,450  lv,1/26,36.9,21.0,0.0,0.0,10.0,13.0,30.0,5.0,11.0,5.0
 Iowa,Suffolk University,A-,500  lv,1/26,38.9,25.0,0.0,0.0,18.0,6.0,19.0,2.0,13.0,3.0
 Iowa,YouGov,B-,1356  lv,1/23,19.9,25.0,0.0,0.0,22.0,7.0,26.0,1.0,15.0,1.0
 New Hampshire,Marist College,A+,1077  rv,1/23,0.0,14.0,0.0,0.0,17.0,10.0,22.0,3.0,12.0,5.0
@@ -94,7 +95,7 @@ US,Fox News/Beacon Research/Shaw & Co. Research,A-,453  lv,12/11,0.0,30.0,5.0,2.
 South Carolina,Change Research,C,392  lv,12/11,3.0,27.0,3.0,5.0,9.0,2.0,20.0,5.0,19.0,2.0
 California,Change Research,C,862  lv,12/10,3.7,19.0,3.0,3.0,12.0,1.0,26.0,2.0,23.0,4.0
 US,YouGov,B-,497  lv,12/10,0.0,26.0,4.0,3.0,11.0,2.0,16.0,1.0,21.0,3.0
-Iowa,Emerson College,A-,325  lv,12/10,10.2,23.0,2.0,4.0,18.0,10.0,22.0,3.0,12.0,2.0
+Iowa,Emerson College,A-,325  lv,12/10,0.0,23.0,2.0,4.0,18.0,10.0,22.0,3.0,12.0,2.0
 Texas,SSRS,A/B,327  lv,12/9,8.7,35.0,5.0,2.0,9.0,1.0,15.0,2.0,13.0,3.0
 US,Quinnipiac University,B+,665  rv,12/9,0.0,29.0,5.0,1.0,9.0,3.0,17.0,1.0,15.0,4.0
 US,Zogby Interactive/JZ Analytics,C,443  lv,12/8,0.0,28.0,9.0,0.0,8.0,2.0,20.0,3.0,12.0,3.0
@@ -901,7 +902,6 @@ US,Harris Insights & Analytics,C+,459  rv,11/28,0.0,25.0,2.0,3.0,0.0,0.0,15.0,0.
 Massachusetts,YouGov,B-,655  rv,11/14,0.7,19.0,0.0,3.0,0.0,3.0,14.0,0.0,11.0,0.0
 US,Morning Consult,B/C,733  rv,11/9,0.0,26.0,2.0,3.0,0.0,1.0,19.0,0.0,5.0,0.0
 US,Harris Insights & Analytics,C+,370  rv,11/6,0.0,30.0,5.0,5.0,0.0,0.0,20.0,0.0,5.0,0.0
-,,,  ,,,,,,,,,,,
 ,,,  ,,,,,,,,,,,
 ,,,  ,,,,,,,,,,,
 ,,,  ,,,,,,,,,,,
