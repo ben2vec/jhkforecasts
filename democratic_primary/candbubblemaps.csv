@@ -1,106 +1,106 @@
 state,cand,vote,delegates,radius,xValue,yValue,abbrev
-Alabama,Biden,43.9,38,13.17935274179923,413,332,AL
-Alaska,Biden,28.8,6,5.236943745506094,41,19,AK
-Arizona,Biden,30.6,35,12.648420802454872,172,282,AZ
-Arkansas,Biden,40.8,22,10.02798380748509,325,290,AR
-California,Biden,25.0,153,26.445269609831602,103,237,CA
-Colorado,Biden,22.4,22,10.02798380748509,224,249,CO
-Connecticut,Biden,23.3,22,10.02798380748509,586,128,CT
-Delaware,Biden,35.0,12,7.406156870279673,557,183,DE
-Florida,Biden,36.7,135,24.84100532095866,483,380,FL
-Georgia,Biden,41.4,73,18.26685215051417,443,298,GA
-Hawaii,Biden,22.0,8,6.047101762397742,88,372,HI
-Idaho,Biden,23.2,8,6.047101762397742,188,173,ID
-Illinois,Biden,28.6,78,18.882069201142663,359,207,IL
-Indiana,Biden,26.9,38,13.17935274179923,413,207,IN
-Iowa,Biden,20.8,13,7.708572471786852,306,195,IA
-Kansas,Biden,23.1,17,8.815089869943867,266,248,KS
-Kentucky,Biden,34.2,32,12.094203524795484,411,251,KY
-Louisiana,Biden,46.1,41,13.689708857005273,326,335,LA
-Maine,Biden,22.7,8,6.047101762397742,628,26,ME
-Maryland,Biden,30.7,44,14.181710703803201,505,185,MD
-Massachusetts,Biden,21.5,30,11.710162209293987,607,89,MA
-Michigan,Biden,28.9,63,16.969637233386923,418,149,MI
-Minnesota,Biden,22.1,26,10.901567736136858,304,142,MN
-Mississippi,Biden,46.3,33,12.281721738615264,373,324,MS
-Missouri,Biden,37.7,45,14.34196110899641,329,251,MO
-Montana,Biden,27.8,8,6.047101762397742,206,131,MT
-Nebraska,Biden,23.4,13,7.708572471786852,258,209,NE
-Nevada,Biden,26.4,17,8.815089869943867,167,220,NV
-New Hampshire,Biden,19.0,7,5.656545744462307,612,54,NH
-New Jersey,Biden,28.4,53,15.564680792639448,551,147,NJ
-New Mexico,Biden,24.5,14,7.999563708002411,215,303,NM
-New York,Biden,28.5,115,22.927209730883344,548,81,NY
-North Carolina,Biden,37.3,71,18.014883501081698,499,278,NC
-North Dakota,Biden,24.8,6,5.236943745506094,257,136,ND
-Ohio,Biden,29.3,72,18.141305287193227,459,191,OH
-Oklahoma,Biden,32.2,21,9.797424624746235,270,294,OK
-Oregon,Biden,23.3,21,9.797424624746235,124,176,OR
-Pennsylvania,Biden,31.7,104,21.803135472273716,498,132,PA
-Rhode Island,Biden,23.8,9,6.413919994074849,619,126,RI
-South Carolina,Biden,41.7,39,13.351639174961631,487,322,SC
+Alabama,Biden,44.0,39,13.351639174961631,413,332,AL
+Alaska,Biden,28.9,6,5.236943745506094,41,19,AK
+Arizona,Biden,30.9,35,12.648420802454872,172,282,AZ
+Arkansas,Biden,40.9,22,10.02798380748509,325,290,AR
+California,Biden,25.6,156,26.703278349923263,103,237,CA
+Colorado,Biden,22.6,22,10.02798380748509,224,249,CO
+Connecticut,Biden,23.4,22,10.02798380748509,586,128,CT
+Delaware,Biden,35.2,12,7.406156870279673,557,183,DE
+Florida,Biden,37.0,136,24.932839295224596,483,380,FL
+Georgia,Biden,41.7,73,18.26685215051417,443,298,GA
+Hawaii,Biden,22.1,8,6.047101762397742,88,372,HI
+Idaho,Biden,23.3,8,6.047101762397742,188,173,ID
+Illinois,Biden,28.8,78,18.882069201142663,359,207,IL
+Indiana,Biden,27.0,38,13.17935274179923,413,207,IN
+Iowa,Biden,21.2,13,7.708572471786852,306,195,IA
+Kansas,Biden,23.2,17,8.815089869943867,266,248,KS
+Kentucky,Biden,34.3,32,12.094203524795484,411,251,KY
+Louisiana,Biden,46.2,41,13.689708857005273,326,335,LA
+Maine,Biden,22.9,8,6.047101762397742,628,26,ME
+Maryland,Biden,30.9,44,14.181710703803201,505,185,MD
+Massachusetts,Biden,21.8,30,11.710162209293987,607,89,MA
+Michigan,Biden,29.3,65,17.23689205639898,418,149,MI
+Minnesota,Biden,22.2,26,10.901567736136858,304,142,MN
+Mississippi,Biden,46.4,33,12.281721738615264,373,324,MS
+Missouri,Biden,37.8,45,14.34196110899641,329,251,MO
+Montana,Biden,27.9,8,6.047101762397742,206,131,MT
+Nebraska,Biden,23.5,13,7.708572471786852,258,209,NE
+Nevada,Biden,27.0,17,8.815089869943867,167,220,NV
+New Hampshire,Biden,19.4,7,5.656545744462307,612,54,NH
+New Jersey,Biden,28.8,53,15.564680792639448,551,147,NJ
+New Mexico,Biden,24.8,15,8.280335106986222,215,303,NM
+New York,Biden,28.9,116,23.026677485245482,548,81,NY
+North Carolina,Biden,37.8,72,18.141305287193227,499,278,NC
+North Dakota,Biden,24.9,6,5.236943745506094,257,136,ND
+Ohio,Biden,29.6,73,18.26685215051417,459,191,OH
+Oklahoma,Biden,32.1,21,9.797424624746235,270,294,OK
+Oregon,Biden,23.4,21,9.797424624746235,124,176,OR
+Pennsylvania,Biden,32.1,111,22.524946752023965,498,132,PA
+Rhode Island,Biden,23.9,10,6.760865303790066,619,126,RI
+South Carolina,Biden,42.3,39,13.351639174961631,487,322,SC
 South Dakota,Biden,23.5,7,5.656545744462307,257,167,SD
-Tennessee,Biden,40.6,45,14.34196110899641,379,284,TN
-Texas,Biden,30.8,122,23.61468728997076,271,355,TX
-Utah,Biden,19.7,9,6.413919994074849,204,218,UT
-Vermont,Biden,16.8,4,4.275946662716565,585,47,VT
-Virginia,Biden,34.9,62,16.83441884554238,508,229,VA
-Washington,Biden,20.7,28,11.313091488924615,154,131,WA
-West Virginia,Biden,34.0,16,8.55189332543313,451,242,WV
-Wisconsin,Biden,24.1,32,12.094203524795484,359,146,WI
-Wyoming,Biden,27.6,7,5.656545744462307,214,177,WY
+Tennessee,Biden,40.7,45,14.34196110899641,379,284,TN
+Texas,Biden,31.3,123,23.711271281158794,271,355,TX
+Utah,Biden,20.0,9,6.413919994074849,204,218,UT
+Vermont,Biden,16.9,5,4.780653702998803,585,47,VT
+Virginia,Biden,35.1,62,16.83441884554238,508,229,VA
+Washington,Biden,20.8,28,11.313091488924615,154,131,WA
+West Virginia,Biden,34.1,16,8.55189332543313,451,242,WV
+Wisconsin,Biden,24.7,32,12.094203524795484,359,146,WI
+Wyoming,Biden,27.7,7,5.656545744462307,214,177,WY
 District of Columbia,Biden,45.1,15,8.280335106986222,536,193,DC
-Alabama,Bloomberg,9.1,0,0.0,413,332,AL
-Alaska,Bloomberg,6.6,0,0.0,41,19,AK
-Arizona,Bloomberg,7.2,0,0.0,172,282,AZ
+Alabama,Bloomberg,9.2,0,0.0,413,332,AL
+Alaska,Bloomberg,6.7,0,0.0,41,19,AK
+Arizona,Bloomberg,7.3,0,0.0,172,282,AZ
 Arkansas,Bloomberg,9.4,0,0.0,325,290,AR
-California,Bloomberg,6.9,0,0.0,103,237,CA
+California,Bloomberg,6.8,0,0.0,103,237,CA
 Colorado,Bloomberg,7.2,0,0.0,224,249,CO
 Connecticut,Bloomberg,8.9,0,0.0,586,128,CT
 Delaware,Bloomberg,8.0,0,0.0,557,183,DE
 Florida,Bloomberg,9.1,0,0.0,483,380,FL
 Georgia,Bloomberg,10.2,2,3.023550881198871,443,298,GA
-Hawaii,Bloomberg,7.4,0,0.0,88,372,HI
+Hawaii,Bloomberg,7.5,0,0.0,88,372,HI
 Idaho,Bloomberg,7.3,0,0.0,188,173,ID
-Illinois,Bloomberg,7.4,0,0.0,359,207,IL
+Illinois,Bloomberg,7.5,0,0.0,359,207,IL
 Indiana,Bloomberg,5.3,0,0.0,413,207,IN
-Iowa,Bloomberg,2.7,0,0.0,306,195,IA
-Kansas,Bloomberg,5.8,0,0.0,266,248,KS
+Iowa,Bloomberg,2.6,0,0.0,306,195,IA
+Kansas,Bloomberg,5.9,0,0.0,266,248,KS
 Kentucky,Bloomberg,9.1,0,0.0,411,251,KY
-Louisiana,Bloomberg,7.5,0,0.0,326,335,LA
-Maine,Bloomberg,8.3,0,0.0,628,26,ME
+Louisiana,Bloomberg,7.6,0,0.0,326,335,LA
+Maine,Bloomberg,8.4,0,0.0,628,26,ME
 Maryland,Bloomberg,8.6,0,0.0,505,185,MD
 Massachusetts,Bloomberg,8.0,0,0.0,607,89,MA
-Michigan,Bloomberg,8.3,0,0.0,418,149,MI
+Michigan,Bloomberg,8.2,0,0.0,418,149,MI
 Minnesota,Bloomberg,6.0,0,0.0,304,142,MN
-Mississippi,Bloomberg,9.1,0,0.0,373,324,MS
+Mississippi,Bloomberg,9.2,0,0.0,373,324,MS
 Missouri,Bloomberg,13.3,4,4.275946662716565,329,251,MO
-Montana,Bloomberg,7.2,0,0.0,206,131,MT
-Nebraska,Bloomberg,7.0,0,0.0,258,209,NE
+Montana,Bloomberg,7.3,0,0.0,206,131,MT
+Nebraska,Bloomberg,7.1,0,0.0,258,209,NE
 Nevada,Bloomberg,0.0,0,0.0,167,220,NV
 New Hampshire,Bloomberg,0.0,0,0.0,612,54,NH
 New Jersey,Bloomberg,8.0,0,0.0,551,147,NJ
 New Mexico,Bloomberg,6.3,0,0.0,215,303,NM
-New York,Bloomberg,15.2,61,16.6981055183381,548,81,NY
-North Carolina,Bloomberg,9.7,0,0.0,499,278,NC
-North Dakota,Bloomberg,5.3,0,0.0,257,136,ND
+New York,Bloomberg,15.1,61,16.6981055183381,548,81,NY
+North Carolina,Bloomberg,9.6,0,0.0,499,278,NC
+North Dakota,Bloomberg,5.4,0,0.0,257,136,ND
 Ohio,Bloomberg,8.3,0,0.0,459,191,OH
 Oklahoma,Bloomberg,9.5,0,0.0,270,294,OK
 Oregon,Bloomberg,7.3,0,0.0,124,176,OR
-Pennsylvania,Bloomberg,7.9,0,0.0,498,132,PA
-Rhode Island,Bloomberg,7.9,0,0.0,619,126,RI
+Pennsylvania,Bloomberg,7.8,0,0.0,498,132,PA
+Rhode Island,Bloomberg,8.0,0,0.0,619,126,RI
 South Carolina,Bloomberg,0.0,0,0.0,487,322,SC
-South Dakota,Bloomberg,6.2,0,0.0,257,167,SD
-Tennessee,Bloomberg,9.2,0,0.0,379,284,TN
+South Dakota,Bloomberg,6.3,0,0.0,257,167,SD
+Tennessee,Bloomberg,9.3,0,0.0,379,284,TN
 Texas,Bloomberg,9.3,0,0.0,271,355,TX
 Utah,Bloomberg,7.2,0,0.0,204,218,UT
 Vermont,Bloomberg,5.8,0,0.0,585,47,VT
-Virginia,Bloomberg,8.4,0,0.0,508,229,VA
-Washington,Bloomberg,7.2,0,0.0,154,131,WA
+Virginia,Bloomberg,8.5,0,0.0,508,229,VA
+Washington,Bloomberg,7.3,0,0.0,154,131,WA
 West Virginia,Bloomberg,8.7,0,0.0,451,242,WV
-Wisconsin,Bloomberg,8.1,0,0.0,359,146,WI
-Wyoming,Bloomberg,6.4,0,0.0,214,177,WY
-District of Columbia,Bloomberg,9.2,0,0.0,536,193,DC
+Wisconsin,Bloomberg,8.0,0,0.0,359,146,WI
+Wyoming,Bloomberg,6.5,0,0.0,214,177,WY
+District of Columbia,Bloomberg,9.3,0,0.0,536,193,DC
 Alabama,Booker,0.0,0,0.0,413,332,AL
 Alaska,Booker,0.0,0,0.0,41,19,AK
 Arizona,Booker,0.0,0,0.0,172,282,AZ
@@ -152,11 +152,11 @@ West Virginia,Booker,0.0,0,0.0,451,242,WV
 Wisconsin,Booker,0.0,0,0.0,359,146,WI
 Wyoming,Booker,0.0,0,0.0,214,177,WY
 District of Columbia,Booker,0.0,0,0.0,536,193,DC
-Alabama,Buttigieg,5.1,0,0.0,413,332,AL
+Alabama,Buttigieg,5.2,0,0.0,413,332,AL
 Alaska,Buttigieg,7.5,0,0.0,41,19,AK
 Arizona,Buttigieg,8.0,0,0.0,172,282,AZ
 Arkansas,Buttigieg,6.2,0,0.0,325,290,AR
-California,Buttigieg,6.8,0,0.0,103,237,CA
+California,Buttigieg,6.9,0,0.0,103,237,CA
 Colorado,Buttigieg,7.7,0,0.0,224,249,CO
 Connecticut,Buttigieg,9.7,0,0.0,586,128,CT
 Delaware,Buttigieg,8.1,0,0.0,557,183,DE
@@ -171,78 +171,78 @@ Kansas,Buttigieg,11.4,0,0.0,266,248,KS
 Kentucky,Buttigieg,6.8,0,0.0,411,251,KY
 Louisiana,Buttigieg,4.8,0,0.0,326,335,LA
 Maine,Buttigieg,10.3,0,0.0,628,26,ME
-Maryland,Buttigieg,7.9,0,0.0,505,185,MD
+Maryland,Buttigieg,8.0,0,0.0,505,185,MD
 Massachusetts,Buttigieg,10.2,1,2.1379733313582827,607,89,MA
-Michigan,Buttigieg,9.3,0,0.0,418,149,MI
+Michigan,Buttigieg,9.4,0,0.0,418,149,MI
 Minnesota,Buttigieg,10.3,1,2.1379733313582827,304,142,MN
 Mississippi,Buttigieg,4.5,0,0.0,373,324,MS
 Missouri,Buttigieg,6.6,0,0.0,329,251,MO
 Montana,Buttigieg,7.9,0,0.0,206,131,MT
 Nebraska,Buttigieg,11.2,0,0.0,258,209,NE
-Nevada,Buttigieg,7.0,0,0.0,167,220,NV
-New Hampshire,Buttigieg,15.6,6,5.236943745506094,612,54,NH
-New Jersey,Buttigieg,7.7,0,0.0,551,147,NJ
-New Mexico,Buttigieg,6.9,0,0.0,215,303,NM
+Nevada,Buttigieg,7.1,0,0.0,167,220,NV
+New Hampshire,Buttigieg,15.8,6,5.236943745506094,612,54,NH
+New Jersey,Buttigieg,7.8,0,0.0,551,147,NJ
+New Mexico,Buttigieg,7.0,0,0.0,215,303,NM
 New York,Buttigieg,7.4,0,0.0,548,81,NY
-North Carolina,Buttigieg,5.7,0,0.0,499,278,NC
+North Carolina,Buttigieg,5.8,0,0.0,499,278,NC
 North Dakota,Buttigieg,11.8,0,0.0,257,136,ND
-Ohio,Buttigieg,9.8,0,0.0,459,191,OH
+Ohio,Buttigieg,9.9,0,0.0,459,191,OH
 Oklahoma,Buttigieg,6.2,0,0.0,270,294,OK
-Oregon,Buttigieg,7.7,0,0.0,124,176,OR
+Oregon,Buttigieg,7.8,0,0.0,124,176,OR
 Pennsylvania,Buttigieg,9.9,0,0.0,498,132,PA
 Rhode Island,Buttigieg,10.0,0,0.0,619,126,RI
-South Carolina,Buttigieg,5.1,0,0.0,487,322,SC
+South Carolina,Buttigieg,5.2,0,0.0,487,322,SC
 South Dakota,Buttigieg,11.6,0,0.0,257,167,SD
 Tennessee,Buttigieg,6.4,0,0.0,379,284,TN
-Texas,Buttigieg,6.4,0,0.0,271,355,TX
+Texas,Buttigieg,6.5,0,0.0,271,355,TX
 Utah,Buttigieg,7.8,0,0.0,204,218,UT
 Vermont,Buttigieg,8.3,0,0.0,585,47,VT
 Virginia,Buttigieg,6.1,0,0.0,508,229,VA
-Washington,Buttigieg,8.2,0,0.0,154,131,WA
+Washington,Buttigieg,8.3,0,0.0,154,131,WA
 West Virginia,Buttigieg,7.8,0,0.0,451,242,WV
-Wisconsin,Buttigieg,10.6,1,2.1379733313582827,359,146,WI
+Wisconsin,Buttigieg,10.7,1,2.1379733313582827,359,146,WI
 Wyoming,Buttigieg,8.4,0,0.0,214,177,WY
 District of Columbia,Buttigieg,4.1,0,0.0,536,193,DC
-Alabama,Klobuchar,3.2,0,0.0,413,332,AL
+Alabama,Klobuchar,3.1,0,0.0,413,332,AL
 Alaska,Klobuchar,2.8,0,0.0,41,19,AK
-Arizona,Klobuchar,2.8,0,0.0,172,282,AZ
+Arizona,Klobuchar,2.7,0,0.0,172,282,AZ
 Arkansas,Klobuchar,3.6,0,0.0,325,290,AR
-California,Klobuchar,2.8,0,0.0,103,237,CA
+California,Klobuchar,2.7,0,0.0,103,237,CA
 Colorado,Klobuchar,2.9,0,0.0,224,249,CO
-Connecticut,Klobuchar,3.3,0,0.0,586,128,CT
+Connecticut,Klobuchar,3.2,0,0.0,586,128,CT
 Delaware,Klobuchar,2.4,0,0.0,557,183,DE
 Florida,Klobuchar,3.8,0,0.0,483,380,FL
-Georgia,Klobuchar,3.1,0,0.0,443,298,GA
+Georgia,Klobuchar,3.0,0,0.0,443,298,GA
 Hawaii,Klobuchar,2.8,0,0.0,88,372,HI
 Idaho,Klobuchar,2.8,0,0.0,188,173,ID
 Illinois,Klobuchar,4.8,0,0.0,359,207,IL
 Indiana,Klobuchar,5.2,0,0.0,413,207,IN
 Iowa,Klobuchar,7.9,0,0.0,306,195,IA
-Kansas,Klobuchar,6.4,0,0.0,266,248,KS
-Kentucky,Klobuchar,4.0,0,0.0,411,251,KY
+Kansas,Klobuchar,6.3,0,0.0,266,248,KS
+Kentucky,Klobuchar,3.9,0,0.0,411,251,KY
 Louisiana,Klobuchar,3.1,0,0.0,326,335,LA
-Maine,Klobuchar,2.8,0,0.0,628,26,ME
+Maine,Klobuchar,2.7,0,0.0,628,26,ME
 Maryland,Klobuchar,2.3,0,0.0,505,185,MD
-Massachusetts,Klobuchar,3.5,0,0.0,607,89,MA
+Massachusetts,Klobuchar,3.4,0,0.0,607,89,MA
 Michigan,Klobuchar,4.0,0,0.0,418,149,MI
 Minnesota,Klobuchar,16.8,20,9.561307405997606,304,142,MN
 Mississippi,Klobuchar,2.9,0,0.0,373,324,MS
 Missouri,Klobuchar,4.1,0,0.0,329,251,MO
 Montana,Klobuchar,2.8,0,0.0,206,131,MT
 Nebraska,Klobuchar,6.3,0,0.0,258,209,NE
-Nevada,Klobuchar,3.1,0,0.0,167,220,NV
-New Hampshire,Klobuchar,7.3,0,0.0,612,54,NH
-New Jersey,Klobuchar,3.1,0,0.0,551,147,NJ
-New Mexico,Klobuchar,2.8,0,0.0,215,303,NM
+Nevada,Klobuchar,3.0,0,0.0,167,220,NV
+New Hampshire,Klobuchar,7.4,0,0.0,612,54,NH
+New Jersey,Klobuchar,3.0,0,0.0,551,147,NJ
+New Mexico,Klobuchar,2.7,0,0.0,215,303,NM
 New York,Klobuchar,2.3,0,0.0,548,81,NY
 North Carolina,Klobuchar,3.1,0,0.0,499,278,NC
 North Dakota,Klobuchar,5.2,0,0.0,257,136,ND
 Ohio,Klobuchar,4.3,0,0.0,459,191,OH
-Oklahoma,Klobuchar,3.8,0,0.0,270,294,OK
+Oklahoma,Klobuchar,3.7,0,0.0,270,294,OK
 Oregon,Klobuchar,3.6,0,0.0,124,176,OR
-Pennsylvania,Klobuchar,4.2,0,0.0,498,132,PA
+Pennsylvania,Klobuchar,4.1,0,0.0,498,132,PA
 Rhode Island,Klobuchar,2.9,0,0.0,619,126,RI
-South Carolina,Klobuchar,2.8,0,0.0,487,322,SC
+South Carolina,Klobuchar,2.7,0,0.0,487,322,SC
 South Dakota,Klobuchar,6.3,0,0.0,257,167,SD
 Tennessee,Klobuchar,3.5,0,0.0,379,284,TN
 Texas,Klobuchar,3.3,0,0.0,271,355,TX
@@ -250,66 +250,66 @@ Utah,Klobuchar,4.2,0,0.0,204,218,UT
 Vermont,Klobuchar,3.2,0,0.0,585,47,VT
 Virginia,Klobuchar,5.0,0,0.0,508,229,VA
 Washington,Klobuchar,3.7,0,0.0,154,131,WA
-West Virginia,Klobuchar,4.1,0,0.0,451,242,WV
+West Virginia,Klobuchar,4.0,0,0.0,451,242,WV
 Wisconsin,Klobuchar,4.8,0,0.0,359,146,WI
-Wyoming,Klobuchar,3.0,0,0.0,214,177,WY
-District of Columbia,Klobuchar,2.8,0,0.0,536,193,DC
-Alabama,Sanders,15.3,13,7.708572471786852,413,332,AL
+Wyoming,Klobuchar,2.9,0,0.0,214,177,WY
+District of Columbia,Klobuchar,2.7,0,0.0,536,193,DC
+Alabama,Sanders,15.2,13,7.708572471786852,413,332,AL
 Alaska,Sanders,24.0,5,4.780653702998803,41,19,AK
-Arizona,Sanders,22.8,26,10.901567736136858,172,282,AZ
+Arizona,Sanders,22.7,26,10.901567736136858,172,282,AZ
 Arkansas,Sanders,16.3,9,6.413919994074849,325,290,AR
-California,Sanders,25.5,156,26.703278349923263,103,237,CA
-Colorado,Sanders,28.7,29,11.513338742622741,224,249,CO
+California,Sanders,25.4,154,26.53155130598816,103,237,CA
+Colorado,Sanders,28.6,28,11.313091488924615,224,249,CO
 Connecticut,Sanders,23.0,21,9.797424624746235,586,128,CT
 Delaware,Sanders,19.7,7,5.656545744462307,557,183,DE
-Florida,Sanders,17.0,63,16.969637233386923,483,380,FL
-Georgia,Sanders,16.3,28,11.313091488924615,443,298,GA
+Florida,Sanders,16.9,62,16.83441884554238,483,380,FL
+Georgia,Sanders,16.2,28,11.313091488924615,443,298,GA
 Hawaii,Sanders,27.0,10,6.760865303790066,88,372,HI
 Idaho,Sanders,31.5,11,7.090855351901601,188,173,ID
 Illinois,Sanders,21.5,59,16.422084763219157,359,207,IL
 Indiana,Sanders,22.0,31,11.903731723017628,413,207,IN
-Iowa,Sanders,23.3,14,7.999563708002411,306,195,IA
-Kansas,Sanders,25.8,19,9.319209695375754,266,248,KS
+Iowa,Sanders,23.2,14,7.999563708002411,306,195,IA
+Kansas,Sanders,25.9,19,9.319209695375754,266,248,KS
 Kentucky,Sanders,21.8,21,9.797424624746235,411,251,KY
 Louisiana,Sanders,15.3,13,7.708572471786852,326,335,LA
-Maine,Sanders,22.6,8,6.047101762397742,628,26,ME
+Maine,Sanders,22.5,8,6.047101762397742,628,26,ME
 Maryland,Sanders,21.0,30,11.710162209293987,505,185,MD
 Massachusetts,Sanders,22.1,31,11.903731723017628,607,89,MA
-Michigan,Sanders,23.2,50,15.117754405994354,418,149,MI
+Michigan,Sanders,23.1,52,15.417144943573703,418,149,MI
 Minnesota,Sanders,19.2,23,10.253359898529963,304,142,MN
 Mississippi,Sanders,14.5,3,3.7030784351398367,373,324,MS
 Missouri,Sanders,15.3,18,9.070652643596613,329,251,MO
 Montana,Sanders,24.2,7,5.656545744462307,206,131,MT
 Nebraska,Sanders,25.1,14,7.999563708002411,258,209,NE
-Nevada,Sanders,24.8,16,8.55189332543313,167,220,NV
-New Hampshire,Sanders,24.9,9,6.413919994074849,612,54,NH
-New Jersey,Sanders,23.6,44,14.181710703803201,551,147,NJ
-New Mexico,Sanders,28.2,17,8.815089869943867,215,303,NM
+Nevada,Sanders,24.6,16,8.55189332543313,167,220,NV
+New Hampshire,Sanders,25.5,9,6.413919994074849,612,54,NH
+New Jersey,Sanders,23.5,44,14.181710703803201,551,147,NJ
+New Mexico,Sanders,28.1,16,8.55189332543313,215,303,NM
 New York,Sanders,19.7,79,19.0027226281483,548,81,NY
-North Carolina,Sanders,19.2,37,13.004784070763023,499,278,NC
+North Carolina,Sanders,19.1,36,12.827839988149698,499,278,NC
 North Dakota,Sanders,25.8,7,5.656545744462307,257,136,ND
-Ohio,Sanders,22.1,55,15.855634585470172,459,191,OH
-Oklahoma,Sanders,24.3,16,8.55189332543313,270,294,OK
+Ohio,Sanders,22.1,54,15.710831236518285,459,191,OH
+Oklahoma,Sanders,24.1,16,8.55189332543313,270,294,OK
 Oregon,Sanders,26.1,24,10.473887491012189,124,176,OR
-Pennsylvania,Sanders,20.9,69,17.759340292543165,498,132,PA
+Pennsylvania,Sanders,20.9,72,18.141305287193227,498,132,PA
 Rhode Island,Sanders,23.6,9,6.413919994074849,619,126,RI
-South Carolina,Sanders,16.8,15,8.280335106986222,487,322,SC
+South Carolina,Sanders,16.6,15,8.280335106986222,487,322,SC
 South Dakota,Sanders,24.7,8,6.047101762397742,257,167,SD
-Tennessee,Sanders,16.4,18,9.070652643596613,379,284,TN
-Texas,Sanders,21.3,84,19.59484924949247,271,355,TX
-Utah,Sanders,29.4,13,7.708572471786852,204,218,UT
-Vermont,Sanders,39.2,11,7.090855351901601,585,47,VT
+Tennessee,Sanders,16.5,18,9.070652643596613,379,284,TN
+Texas,Sanders,21.1,83,19.477864029321502,271,355,TX
+Utah,Sanders,29.3,13,7.708572471786852,204,218,UT
+Vermont,Sanders,39.2,10,6.760865303790066,585,47,VT
 Virginia,Sanders,20.4,36,12.827839988149698,508,229,VA
 Washington,Sanders,26.8,36,12.827839988149698,154,131,WA
-West Virginia,Sanders,24.9,12,7.406156870279673,451,242,WV
-Wisconsin,Sanders,23.9,31,11.903731723017628,359,146,WI
+West Virginia,Sanders,25.0,12,7.406156870279673,451,242,WV
+Wisconsin,Sanders,23.8,31,11.903731723017628,359,146,WI
 Wyoming,Sanders,25.6,6,5.236943745506094,214,177,WY
 District of Columbia,Sanders,15.9,5,4.780653702998803,536,193,DC
 Alabama,Steyer,2.2,0,0.0,413,332,AL
 Alaska,Steyer,2.4,0,0.0,41,19,AK
 Arizona,Steyer,2.1,0,0.0,172,282,AZ
 Arkansas,Steyer,1.8,0,0.0,325,290,AR
-California,Steyer,2.8,0,0.0,103,237,CA
+California,Steyer,2.7,0,0.0,103,237,CA
 Colorado,Steyer,2.4,0,0.0,224,249,CO
 Connecticut,Steyer,2.5,0,0.0,586,128,CT
 Delaware,Steyer,2.0,0,0.0,557,183,DE
@@ -321,34 +321,34 @@ Illinois,Steyer,1.3,0,0.0,359,207,IL
 Indiana,Steyer,1.0,0,0.0,413,207,IN
 Iowa,Steyer,3.3,0,0.0,306,195,IA
 Kansas,Steyer,1.1,0,0.0,266,248,KS
-Kentucky,Steyer,1.7,0,0.0,411,251,KY
+Kentucky,Steyer,1.6,0,0.0,411,251,KY
 Louisiana,Steyer,2.3,0,0.0,326,335,LA
 Maine,Steyer,2.5,0,0.0,628,26,ME
 Maryland,Steyer,2.7,0,0.0,505,185,MD
-Massachusetts,Steyer,2.3,0,0.0,607,89,MA
+Massachusetts,Steyer,2.2,0,0.0,607,89,MA
 Michigan,Steyer,1.1,0,0.0,418,149,MI
 Minnesota,Steyer,1.0,0,0.0,304,142,MN
 Mississippi,Steyer,2.3,0,0.0,373,324,MS
-Missouri,Steyer,1.6,0,0.0,329,251,MO
+Missouri,Steyer,1.5,0,0.0,329,251,MO
 Montana,Steyer,2.0,0,0.0,206,131,MT
 Nebraska,Steyer,1.1,0,0.0,258,209,NE
 Nevada,Steyer,8.2,0,0.0,167,220,NV
-New Hampshire,Steyer,3.8,0,0.0,612,54,NH
+New Hampshire,Steyer,3.5,0,0.0,612,54,NH
 New Jersey,Steyer,1.5,0,0.0,551,147,NJ
 New Mexico,Steyer,2.3,0,0.0,215,303,NM
-New York,Steyer,2.2,0,0.0,548,81,NY
+New York,Steyer,2.1,0,0.0,548,81,NY
 North Carolina,Steyer,2.1,0,0.0,499,278,NC
 North Dakota,Steyer,1.4,0,0.0,257,136,ND
 Ohio,Steyer,1.3,0,0.0,459,191,OH
-Oklahoma,Steyer,2.7,0,0.0,270,294,OK
+Oklahoma,Steyer,3.2,0,0.0,270,294,OK
 Oregon,Steyer,2.3,0,0.0,124,176,OR
 Pennsylvania,Steyer,1.1,0,0.0,498,132,PA
 Rhode Island,Steyer,2.5,0,0.0,619,126,RI
-South Carolina,Steyer,9.0,0,0.0,487,322,SC
+South Carolina,Steyer,8.9,0,0.0,487,322,SC
 South Dakota,Steyer,1.2,0,0.0,257,167,SD
 Tennessee,Steyer,1.8,0,0.0,379,284,TN
-Texas,Steyer,2.0,0,0.0,271,355,TX
-Utah,Steyer,2.1,0,0.0,204,218,UT
+Texas,Steyer,1.9,0,0.0,271,355,TX
+Utah,Steyer,2.0,0,0.0,204,218,UT
 Vermont,Steyer,1.9,0,0.0,585,47,VT
 Virginia,Steyer,1.6,0,0.0,508,229,VA
 Washington,Steyer,2.4,0,0.0,154,131,WA
@@ -356,105 +356,105 @@ West Virginia,Steyer,1.9,0,0.0,451,242,WV
 Wisconsin,Steyer,1.3,0,0.0,359,146,WI
 Wyoming,Steyer,2.5,0,0.0,214,177,WY
 District of Columbia,Steyer,2.3,0,0.0,536,193,DC
-Alabama,Warren,10.1,1,2.1379733313582827,413,332,AL
-Alaska,Warren,16.2,4,4.275946662716565,41,19,AK
-Arizona,Warren,14.4,6,5.236943745506094,172,282,AZ
-Arkansas,Warren,10.8,0,0.0,325,290,AR
-California,Warren,17.6,107,22.115368102727075,103,237,CA
-Colorado,Warren,16.3,16,8.55189332543313,224,249,CO
-Connecticut,Warren,18.1,17,8.815089869943867,586,128,CT
-Delaware,Warren,14.2,2,3.023550881198871,557,183,DE
-Florida,Warren,14.6,21,9.797424624746235,483,380,FL
-Georgia,Warren,10.2,2,3.023550881198871,443,298,GA
-Hawaii,Warren,17.9,6,5.236943745506094,88,372,HI
-Idaho,Warren,13.2,1,2.1379733313582827,188,173,ID
-Illinois,Warren,14.4,15,8.280335106986222,359,207,IL
-Indiana,Warren,14.6,8,6.047101762397742,413,207,IN
+Alabama,Warren,10.0,0,0.0,413,332,AL
+Alaska,Warren,16.1,3,3.7030784351398367,41,19,AK
+Arizona,Warren,14.2,6,5.236943745506094,172,282,AZ
+Arkansas,Warren,10.6,0,0.0,325,290,AR
+California,Warren,17.4,106,22.011782670958723,103,237,CA
+Colorado,Warren,16.2,16,8.55189332543313,224,249,CO
+Connecticut,Warren,17.9,17,8.815089869943867,586,128,CT
+Delaware,Warren,14.1,2,3.023550881198871,557,183,DE
+Florida,Warren,14.5,21,9.797424624746235,483,380,FL
+Georgia,Warren,10.0,2,3.023550881198871,443,298,GA
+Hawaii,Warren,17.7,6,5.236943745506094,88,372,HI
+Idaho,Warren,13.0,1,2.1379733313582827,188,173,ID
+Illinois,Warren,14.3,15,8.280335106986222,359,207,IL
+Indiana,Warren,14.5,8,6.047101762397742,413,207,IN
 Iowa,Warren,14.8,4,4.275946662716565,306,195,IA
-Kansas,Warren,14.9,3,3.7030784351398367,266,248,KS
-Kentucky,Warren,11.4,1,2.1379733313582827,411,251,KY
-Louisiana,Warren,9.7,0,0.0,326,335,LA
-Maine,Warren,19.5,7,5.656545744462307,628,26,ME
-Maryland,Warren,15.8,22,10.02798380748509,505,185,MD
-Massachusetts,Warren,21.2,29,11.513338742622741,607,89,MA
-Michigan,Warren,14.0,12,7.406156870279673,418,149,MI
-Minnesota,Warren,13.9,5,4.780653702998803,304,142,MN
-Mississippi,Warren,9.3,0,0.0,373,324,MS
-Missouri,Warren,10.7,1,2.1379733313582827,329,251,MO
-Montana,Warren,15.8,4,4.275946662716565,206,131,MT
-Nebraska,Warren,14.5,2,3.023550881198871,258,209,NE
-Nevada,Warren,14.7,3,3.7030784351398367,167,220,NV
+Kansas,Warren,14.8,3,3.7030784351398367,266,248,KS
+Kentucky,Warren,11.3,1,2.1379733313582827,411,251,KY
+Louisiana,Warren,9.6,0,0.0,326,335,LA
+Maine,Warren,19.4,7,5.656545744462307,628,26,ME
+Maryland,Warren,15.7,22,10.02798380748509,505,185,MD
+Massachusetts,Warren,21.1,29,11.513338742622741,607,89,MA
+Michigan,Warren,13.9,8,6.047101762397742,418,149,MI
+Minnesota,Warren,13.8,5,4.780653702998803,304,142,MN
+Mississippi,Warren,9.1,0,0.0,373,324,MS
+Missouri,Warren,10.6,1,2.1379733313582827,329,251,MO
+Montana,Warren,15.7,4,4.275946662716565,206,131,MT
+Nebraska,Warren,14.4,2,3.023550881198871,258,209,NE
+Nevada,Warren,14.5,3,3.7030784351398367,167,220,NV
 New Hampshire,Warren,14.8,2,3.023550881198871,612,54,NH
-New Jersey,Warren,15.8,29,11.513338742622741,551,147,NJ
-New Mexico,Warren,14.6,3,3.7030784351398367,215,303,NM
-New York,Warren,13.8,19,9.319209695375754,548,81,NY
-North Carolina,Warren,11.4,2,3.023550881198871,499,278,NC
-North Dakota,Warren,14.6,1,2.1379733313582827,257,136,ND
-Ohio,Warren,13.7,9,6.413919994074849,459,191,OH
-Oklahoma,Warren,10.2,0,0.0,270,294,OK
-Oregon,Warren,17.3,16,8.55189332543313,124,176,OR
-Pennsylvania,Warren,13.1,13,7.708572471786852,498,132,PA
-Rhode Island,Warren,17.9,7,5.656545744462307,619,126,RI
-South Carolina,Warren,9.5,0,0.0,487,322,SC
-South Dakota,Warren,15.0,1,2.1379733313582827,257,167,SD
-Tennessee,Warren,10.8,1,2.1379733313582827,379,284,TN
-Texas,Warren,14.9,22,10.02798380748509,271,355,TX
-Utah,Warren,16.9,7,5.656545744462307,204,218,UT
-Vermont,Warren,14.5,1,2.1379733313582827,585,47,VT
-Virginia,Warren,12.0,1,2.1379733313582827,508,229,VA
-Washington,Warren,18.2,25,10.689866656791414,154,131,WA
-West Virginia,Warren,7.5,0,0.0,451,242,WV
-Wisconsin,Warren,15.3,20,9.561307405997606,359,146,WI
-Wyoming,Warren,14.9,1,2.1379733313582827,214,177,WY
-District of Columbia,Warren,9.5,0,0.0,536,193,DC
-Alabama,Yang,4.1,0,0.0,413,332,AL
+New Jersey,Warren,15.7,29,11.513338742622741,551,147,NJ
+New Mexico,Warren,14.5,3,3.7030784351398367,215,303,NM
+New York,Warren,13.7,19,9.319209695375754,548,81,NY
+North Carolina,Warren,11.2,2,3.023550881198871,499,278,NC
+North Dakota,Warren,14.5,1,2.1379733313582827,257,136,ND
+Ohio,Warren,13.6,9,6.413919994074849,459,191,OH
+Oklahoma,Warren,10.1,0,0.0,270,294,OK
+Oregon,Warren,17.2,16,8.55189332543313,124,176,OR
+Pennsylvania,Warren,13.0,3,3.7030784351398367,498,132,PA
+Rhode Island,Warren,17.8,7,5.656545744462307,619,126,RI
+South Carolina,Warren,9.4,0,0.0,487,322,SC
+South Dakota,Warren,14.9,1,2.1379733313582827,257,167,SD
+Tennessee,Warren,10.7,1,2.1379733313582827,379,284,TN
+Texas,Warren,14.7,22,10.02798380748509,271,355,TX
+Utah,Warren,16.8,7,5.656545744462307,204,218,UT
+Vermont,Warren,14.4,1,2.1379733313582827,585,47,VT
+Virginia,Warren,11.9,1,2.1379733313582827,508,229,VA
+Washington,Warren,18.1,24,10.473887491012189,154,131,WA
+West Virginia,Warren,7.4,0,0.0,451,242,WV
+Wisconsin,Warren,15.2,20,9.561307405997606,359,146,WI
+Wyoming,Warren,14.8,1,2.1379733313582827,214,177,WY
+District of Columbia,Warren,9.4,0,0.0,536,193,DC
+Alabama,Yang,4.0,0,0.0,413,332,AL
 Alaska,Yang,4.8,0,0.0,41,19,AK
-Arizona,Yang,5.2,0,0.0,172,282,AZ
+Arizona,Yang,5.1,0,0.0,172,282,AZ
 Arkansas,Yang,4.1,0,0.0,325,290,AR
-California,Yang,5.6,0,0.0,103,237,CA
-Colorado,Yang,5.4,0,0.0,224,249,CO
-Connecticut,Yang,4.3,0,0.0,586,128,CT
+California,Yang,5.4,0,0.0,103,237,CA
+Colorado,Yang,5.3,0,0.0,224,249,CO
+Connecticut,Yang,4.2,0,0.0,586,128,CT
 Delaware,Yang,3.6,0,0.0,557,183,DE
-Florida,Yang,4.4,0,0.0,483,380,FL
+Florida,Yang,4.3,0,0.0,483,380,FL
 Georgia,Yang,4.2,0,0.0,443,298,GA
-Hawaii,Yang,6.2,0,0.0,88,372,HI
-Idaho,Yang,5.3,0,0.0,188,173,ID
-Illinois,Yang,4.1,0,0.0,359,207,IL
+Hawaii,Yang,6.1,0,0.0,88,372,HI
+Idaho,Yang,5.2,0,0.0,188,173,ID
+Illinois,Yang,4.0,0,0.0,359,207,IL
 Indiana,Yang,4.1,0,0.0,413,207,IN
 Iowa,Yang,4.0,0,0.0,306,195,IA
 Kansas,Yang,4.4,0,0.0,266,248,KS
 Kentucky,Yang,4.1,0,0.0,411,251,KY
-Louisiana,Yang,4.2,0,0.0,326,335,LA
+Louisiana,Yang,4.1,0,0.0,326,335,LA
 Maine,Yang,4.3,0,0.0,628,26,ME
 Maryland,Yang,4.0,0,0.0,505,185,MD
 Massachusetts,Yang,4.3,0,0.0,607,89,MA
 Michigan,Yang,4.1,0,0.0,418,149,MI
-Minnesota,Yang,3.7,0,0.0,304,142,MN
+Minnesota,Yang,3.6,0,0.0,304,142,MN
 Mississippi,Yang,4.0,0,0.0,373,324,MS
-Missouri,Yang,3.8,0,0.0,329,251,MO
+Missouri,Yang,3.7,0,0.0,329,251,MO
 Montana,Yang,5.2,0,0.0,206,131,MT
 Nebraska,Yang,4.3,0,0.0,258,209,NE
-Nevada,Yang,5.9,0,0.0,167,220,NV
-New Hampshire,Yang,5.6,0,0.0,612,54,NH
-New Jersey,Yang,4.9,0,0.0,551,147,NJ
-New Mexico,Yang,7.5,0,0.0,215,303,NM
+Nevada,Yang,5.8,0,0.0,167,220,NV
+New Hampshire,Yang,5.2,0,0.0,612,54,NH
+New Jersey,Yang,4.8,0,0.0,551,147,NJ
+New Mexico,Yang,7.4,0,0.0,215,303,NM
 New York,Yang,3.9,0,0.0,548,81,NY
-North Carolina,Yang,4.5,0,0.0,499,278,NC
-North Dakota,Yang,4.1,0,0.0,257,136,ND
-Ohio,Yang,4.2,0,0.0,459,191,OH
-Oklahoma,Yang,4.1,0,0.0,270,294,OK
+North Carolina,Yang,4.4,0,0.0,499,278,NC
+North Dakota,Yang,4.0,0,0.0,257,136,ND
+Ohio,Yang,4.1,0,0.0,459,191,OH
+Oklahoma,Yang,4.0,0,0.0,270,294,OK
 Oregon,Yang,5.3,0,0.0,124,176,OR
-Pennsylvania,Yang,4.2,0,0.0,498,132,PA
-Rhode Island,Yang,4.4,0,0.0,619,126,RI
-South Carolina,Yang,4.2,0,0.0,487,322,SC
+Pennsylvania,Yang,4.1,0,0.0,498,132,PA
+Rhode Island,Yang,4.3,0,0.0,619,126,RI
+South Carolina,Yang,4.1,0,0.0,487,322,SC
 South Dakota,Yang,4.5,0,0.0,257,167,SD
-Tennessee,Yang,4.2,0,0.0,379,284,TN
-Texas,Yang,5.0,0,0.0,271,355,TX
+Tennessee,Yang,4.1,0,0.0,379,284,TN
+Texas,Yang,4.9,0,0.0,271,355,TX
 Utah,Yang,5.7,0,0.0,204,218,UT
-Vermont,Yang,3.4,0,0.0,585,47,VT
-Virginia,Yang,4.6,0,0.0,508,229,VA
+Vermont,Yang,3.3,0,0.0,585,47,VT
+Virginia,Yang,4.5,0,0.0,508,229,VA
 Washington,Yang,5.6,0,0.0,154,131,WA
-West Virginia,Yang,4.1,0,0.0,451,242,WV
-Wisconsin,Yang,4.8,0,0.0,359,146,WI
-Wyoming,Yang,4.8,0,0.0,214,177,WY
+West Virginia,Yang,4.0,0,0.0,451,242,WV
+Wisconsin,Yang,4.7,0,0.0,359,146,WI
+Wyoming,Yang,4.7,0,0.0,214,177,WY
 District of Columbia,Yang,4.2,0,0.0,536,193,DC

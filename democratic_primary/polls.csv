@@ -1,6 +1,11 @@
 State,Pollster,Grade,Sample,Date,weight,Biden,Bloomberg,Booker,Buttigieg,Klobuchar,Sanders,Steyer,Warren,Yang
+New Hampshire,RKM Research and Communications Inc.,A/B,407  lv,1/26,30.6,22.0,3.0,0.0,10.0,5.0,29.0,0.0,16.0,1.0
 Iowa,Emerson College,A-,450  lv,1/26,35.1,21.0,0.0,0.0,10.0,13.0,30.0,5.0,11.0,5.0
 Iowa,Suffolk University,A-,500  lv,1/26,37.1,25.0,0.0,0.0,18.0,6.0,19.0,2.0,13.0,3.0
+US,Echelon Insights,-,474  lv,1/23,0.0,56.0,0.0,0.0,32.0,0.0,0.0,0.0,0.0,0.0
+US,Echelon Insights,-,474  lv,1/23,0.0,54.0,0.0,0.0,0.0,0.0,38.0,0.0,0.0,0.0
+US,Echelon Insights,-,474  lv,1/23,0.0,48.0,0.0,0.0,0.0,0.0,0.0,0.0,43.0,0.0
+US,Echelon Insights,-,474  lv,1/23,8.4,26.0,13.0,0.0,7.0,3.0,23.0,2.0,10.0,3.0
 Iowa,YouGov,B-,1356  lv,1/23,19.1,25.0,0.0,0.0,22.0,7.0,26.0,1.0,15.0,1.0
 New Hampshire,Marist College,A+,1077  rv,1/23,0.0,14.0,0.0,0.0,17.0,10.0,22.0,3.0,12.0,5.0
 New Hampshire,Marist College,A+,697  lv,1/23,68.5,15.0,0.0,0.0,17.0,10.0,22.0,3.0,13.0,5.0
@@ -41,7 +46,7 @@ Florida,Florida Atlantic University,B/C,494  lv,1/12,9.3,42.0,7.0,3.0,3.0,6.0,16
 North Carolina,Public Policy Polling,B,509  lv,1/12,14.4,31.0,8.0,1.0,6.0,3.0,18.0,3.0,15.0,5.0
 US,Morning Consult,B/C,17096  lv,1/12,0.0,29.0,8.0,2.0,8.0,3.0,23.0,4.0,14.0,5.0
 California,Public Policy Institute of California,A/B,530  lv,1/12,18.2,24.0,1.0,0.0,6.0,4.0,27.0,0.0,23.0,3.0
-New Hampshire,RKM Research and Communications Inc.,A/B,434  lv,1/12,19.6,26.0,4.0,1.0,7.0,2.0,22.0,2.0,18.0,2.0
+New Hampshire,RKM Research and Communications Inc.,A/B,434  lv,1/12,0.0,26.0,4.0,1.0,7.0,2.0,22.0,2.0,18.0,2.0
 US,Quinnipiac University,B+,651  rv,1/12,18.8,25.0,6.0,1.0,8.0,4.0,19.0,1.0,16.0,5.0
 Iowa,Monmouth University,A+,405  lv,1/12,0.0,28.0,0.0,0.0,25.0,0.0,24.0,0.0,16.0,0.0
 Iowa,Monmouth University,A+,405  lv,1/12,35.5,24.0,0.0,4.0,17.0,8.0,18.0,4.0,15.0,3.0
@@ -87,7 +92,7 @@ US,Quinnipiac University,B+,567  rv,12/15,0.0,30.0,7.0,2.0,9.0,3.0,16.0,1.0,17.0
 US,Echelon Insights,-,447  lv,12/14,0.0,65.0,0.0,0.0,20.0,0.0,0.0,0.0,0.0,0.0
 US,Echelon Insights,-,447  lv,12/14,0.0,59.0,0.0,0.0,0.0,0.0,0.0,0.0,29.0,0.0
 US,Echelon Insights,-,447  lv,12/14,0.0,58.0,0.0,0.0,0.0,0.0,32.0,0.0,0.0,0.0
-US,Echelon Insights,-,447  lv,12/14,3.2,37.0,6.0,1.0,6.0,2.0,14.0,1.0,14.0,2.0
+US,Echelon Insights,-,447  lv,12/14,0.0,37.0,6.0,1.0,6.0,2.0,14.0,1.0,14.0,2.0
 US,Harris Insights & Analytics,C+,456  rv,12/14,0.0,29.0,5.0,2.0,5.0,3.0,13.0,3.0,13.0,3.0
 US,Suffolk University,A-,384  lv,12/14,11.6,23.0,6.0,3.0,8.0,3.0,14.0,1.0,13.0,2.0
 US,IBD/TIPP,A/B,312  rv,12/14,0.0,26.0,5.0,3.0,9.0,2.0,18.0,2.0,14.0,2.0
@@ -904,11 +909,6 @@ US,Harris Insights & Analytics,C+,459  rv,11/28,0.0,25.0,2.0,3.0,0.0,0.0,15.0,0.
 Massachusetts,YouGov,B-,655  rv,11/14,0.7,19.0,0.0,3.0,0.0,3.0,14.0,0.0,11.0,0.0
 US,Morning Consult,B/C,733  rv,11/9,0.0,26.0,2.0,3.0,0.0,1.0,19.0,0.0,5.0,0.0
 US,Harris Insights & Analytics,C+,370  rv,11/6,0.0,30.0,5.0,5.0,0.0,0.0,20.0,0.0,5.0,0.0
-,,,  ,,,,,,,,,,,
-,,,  ,,,,,,,,,,,
-,,,  ,,,,,,,,,,,
-,,,  ,,,,,,,,,,,
-,,,  ,,,,,,,,,,,
 ,,,  ,,,,,,,,,,,
 ,,,  ,,,,,,,,,,,
 ,,,  ,,,,,,,,,,,
