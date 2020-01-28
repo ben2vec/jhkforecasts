@@ -1,5 +1,8 @@
 State,Pollster,Grade,Sample,Date,weight,Biden,Bloomberg,Booker,Buttigieg,Klobuchar,Sanders,Steyer,Warren,Yang
+US,Quinnipiac University,B+,827  rv,1/27,32.4,26.0,8.0,0.0,6.0,7.0,21.0,2.0,15.0,3.0
 New Hampshire,American Research Group,B,600  lv,1/27,24.2,13.0,2.0,0.0,12.0,7.0,28.0,2.0,11.0,5.0
+Iowa,Change Research,C,704  lv,1/26,0.0,22.0,0.0,0.0,23.0,0.0,30.0,0.0,20.0,0.0
+Iowa,Change Research,C,704  lv,1/26,9.6,18.0,0.0,0.0,19.0,10.0,27.0,4.0,15.0,4.0
 US,Morning Consult,B/C,17836  lv,1/26,47.9,29.0,12.0,0.0,7.0,3.0,23.0,3.0,14.0,5.0
 New Hampshire,RKM Research and Communications Inc.,A/B,407  lv,1/26,29.2,22.0,3.0,0.0,10.0,5.0,29.0,0.0,16.0,1.0
 Iowa,Emerson College,A-,450  lv,1/26,33.5,21.0,0.0,0.0,10.0,13.0,30.0,5.0,11.0,5.0
@@ -51,7 +54,7 @@ North Carolina,Public Policy Polling,B,509  lv,1/12,14.0,31.0,8.0,1.0,6.0,3.0,18
 US,Morning Consult,B/C,17096  lv,1/12,1.1,29.0,8.0,2.0,8.0,3.0,23.0,4.0,14.0,5.0
 California,Public Policy Institute of California,A/B,530  lv,1/12,17.8,24.0,1.0,0.0,6.0,4.0,27.0,0.0,23.0,3.0
 New Hampshire,RKM Research and Communications Inc.,A/B,434  lv,1/12,2.4,26.0,4.0,1.0,7.0,2.0,22.0,2.0,18.0,2.0
-US,Quinnipiac University,B+,651  rv,1/12,18.2,25.0,6.0,1.0,8.0,4.0,19.0,1.0,16.0,5.0
+US,Quinnipiac University,B+,651  rv,1/12,2.3,25.0,6.0,1.0,8.0,4.0,19.0,1.0,16.0,5.0
 Iowa,Monmouth University,A+,405  lv,1/12,0.0,28.0,0.0,0.0,25.0,0.0,24.0,0.0,16.0,0.0
 Iowa,Monmouth University,A+,405  lv,1/12,34.5,24.0,0.0,4.0,17.0,8.0,18.0,4.0,15.0,3.0
 Nevada,Suffolk University,A-,500  lv,1/11,22.1,19.0,0.0,2.0,8.0,4.0,18.0,8.0,11.0,4.0
@@ -92,7 +95,7 @@ US,Emerson College,A-,525  lv,12/17,1.8,32.0,3.0,2.0,8.0,2.0,25.0,2.0,12.0,6.0
 Iowa,Civiqs,-,632  lv,12/16,3.6,15.0,0.0,3.0,24.0,4.0,21.0,2.0,18.0,3.0
 US,SSRS,A/B,408  rv,12/15,1.2,26.0,5.0,3.0,8.0,3.0,20.0,1.0,16.0,3.0
 US,Morning Consult,B/C,13384  lv,12/15,0.0,31.0,7.0,3.0,8.0,2.0,22.0,3.0,15.0,4.0
-US,Quinnipiac University,B+,567  rv,12/15,1.2,30.0,7.0,2.0,9.0,3.0,16.0,1.0,17.0,3.0
+US,Quinnipiac University,B+,567  rv,12/15,0.4,30.0,7.0,2.0,9.0,3.0,16.0,1.0,17.0,3.0
 US,Echelon Insights,-,447  lv,12/14,0.0,65.0,0.0,0.0,20.0,0.0,0.0,0.0,0.0,0.0
 US,Echelon Insights,-,447  lv,12/14,0.0,59.0,0.0,0.0,0.0,0.0,0.0,0.0,29.0,0.0
 US,Echelon Insights,-,447  lv,12/14,0.0,58.0,0.0,0.0,0.0,0.0,32.0,0.0,0.0,0.0
@@ -108,7 +111,7 @@ California,Change Research,C,862  lv,12/10,3.6,19.0,3.0,3.0,12.0,1.0,26.0,2.0,23
 US,YouGov,B-,497  lv,12/10,0.0,26.0,4.0,3.0,11.0,2.0,16.0,1.0,21.0,3.0
 Iowa,Emerson College,A-,325  lv,12/10,1.2,23.0,2.0,4.0,18.0,10.0,22.0,3.0,12.0,2.0
 Texas,SSRS,A/B,327  lv,12/9,8.5,35.0,5.0,2.0,9.0,1.0,15.0,2.0,13.0,3.0
-US,Quinnipiac University,B+,665  rv,12/9,0.3,29.0,5.0,1.0,9.0,3.0,17.0,1.0,15.0,4.0
+US,Quinnipiac University,B+,665  rv,12/9,0.1,29.0,5.0,1.0,9.0,3.0,17.0,1.0,15.0,4.0
 US,Zogby Interactive/JZ Analytics,C,443  lv,12/8,0.0,28.0,9.0,0.0,8.0,2.0,20.0,3.0,12.0,3.0
 US,Zogby Interactive/JZ Analytics,C,443  lv,12/8,2.8,30.0,8.0,0.0,7.0,2.0,20.0,3.0,16.0,4.0
 Wisconsin,Marquette University Law School,A/B,358  lv,12/8,1.1,23.0,3.0,4.0,15.0,3.0,19.0,0.0,16.0,3.0
@@ -537,7 +540,7 @@ US,YouGov,B-,592  lv,8/13,0.0,21.0,0.0,2.0,5.0,1.0,16.0,1.0,20.0,1.0
 US,Harris Insights & Analytics,C+,1350  rv,8/13,0.0,28.0,0.0,2.0,3.0,1.0,15.0,1.0,10.0,2.0
 South Carolina,Change Research,C,521  lv,8/12,0.0,36.0,0.0,4.0,5.0,1.0,16.0,1.0,17.0,1.0
 US,Harris Insights & Analytics,C+,1346  rv,8/12,0.0,30.0,0.0,2.0,5.0,1.0,16.0,1.0,10.0,2.0
-Iowa,Change Research,C,621  lv,8/11,1.1,17.0,0.0,3.0,13.0,2.0,17.0,2.0,28.0,1.0
+Iowa,Change Research,C,621  lv,8/11,0.0,17.0,0.0,3.0,13.0,2.0,17.0,2.0,28.0,1.0
 Wisconsin,Change Research,C,626  lv,8/11,0.1,20.0,0.0,1.0,9.0,2.0,24.0,1.0,29.0,2.0
 US,Morning Consult,B/C,17117  lv,8/11,0.0,33.0,0.0,3.0,5.0,1.0,20.0,1.0,14.0,2.0
 US,Harris Insights & Analytics,C+,1350  rv,8/11,0.0,30.0,0.0,2.0,5.0,1.0,17.0,1.0,9.0,2.0
@@ -637,7 +640,7 @@ US,Emerson College,A-,481  lv,7/8,0.0,30.0,0.0,2.0,5.0,1.0,15.0,0.0,15.0,3.0
 US,Morning Consult,B/C,16599  lv,7/7,0.0,31.0,0.0,2.0,6.0,1.0,19.0,0.0,13.0,1.0
 South Carolina,Change Research,C,421  lv,7/4,0.0,27.0,0.0,6.0,6.0,0.0,16.0,0.0,15.0,1.0
 New Hampshire,Change Research,C,420  lv,7/4,0.1,13.0,0.0,2.0,14.0,1.0,26.0,0.0,24.0,2.0
-Iowa,Change Research,C,420  lv,7/4,0.1,16.0,0.0,1.0,25.0,1.0,16.0,0.0,18.0,1.0
+Iowa,Change Research,C,420  lv,7/4,0.0,16.0,0.0,1.0,25.0,1.0,16.0,0.0,18.0,1.0
 US,Ipsos,B-,1173  rv,7/2,0.0,24.0,0.0,1.0,4.0,1.0,17.0,0.0,11.0,3.0
 US,YouGov,B-,631  lv,7/2,0.0,21.0,0.0,2.0,9.0,1.0,10.0,0.0,18.0,0.0
 US,Ipsos,B-,1367  a,7/2,0.0,22.0,0.0,1.0,3.0,0.0,16.0,0.0,9.0,2.0
@@ -913,9 +916,6 @@ US,Harris Insights & Analytics,C+,459  rv,11/28,0.0,25.0,2.0,3.0,0.0,0.0,15.0,0.
 Massachusetts,YouGov,B-,655  rv,11/14,0.7,19.0,0.0,3.0,0.0,3.0,14.0,0.0,11.0,0.0
 US,Morning Consult,B/C,733  rv,11/9,0.0,26.0,2.0,3.0,0.0,1.0,19.0,0.0,5.0,0.0
 US,Harris Insights & Analytics,C+,370  rv,11/6,0.0,30.0,5.0,5.0,0.0,0.0,20.0,0.0,5.0,0.0
-,,,  ,,,,,,,,,,,
-,,,  ,,,,,,,,,,,
-,,,  ,,,,,,,,,,,
 ,,,  ,,,,,,,,,,,
 ,,,  ,,,,,,,,,,,
 ,,,  ,,,,,,,,,,,

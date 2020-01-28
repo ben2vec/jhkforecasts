@@ -142,7 +142,7 @@ d3.csv("time.csv", function (error, data) {
         ;
 
     var line = d3.line()
-        .curve(d3.curveStep)
+        .curve(d3.curveCatmullRom)
         .x(d => x(d.date))
         .y(d => y(d.degrees));
 
