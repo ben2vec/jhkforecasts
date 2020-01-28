@@ -1,28 +1,3 @@
-<!DOCTYPE html>
-<head>
-<meta charset="utf-8">
-<script src="https://d3js.org/d3.v4.min.js"></script>
-<link rel="icon" href="https://jkstats76.files.wordpress.com/2019/02/cropped-site-icon.png?w=32" sizes="32x32">
-  <link rel="icon" href="https://jkstats76.files.wordpress.com/2019/02/cropped-site-icon.png?w=192" sizes="192x192">
-
-  <script src="https://d3js.org/d3.v4.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
-  <link rel="stylesheet" href="https://use.typekit.net/htk2wjy.css">
-  <link rel="stylesheet" href="index.css">
-</head>
-
-<body>
-<div style="text-align: center;">
-<h3 >Projected Delegates or Average Delegates </h3>
-
-<select style="font-family: brandon-grotesque;font-size: 15px;"id="selectboxrace">
-	<option value="-">Projected</option>
-	<option value=":">Average</option>
-</select>
-</div>
-<div id="race"></div>
-
-<script>
 var margin = { top: 20, right: 20, bottom: 100, left: 30 }
 var width = 1000 - margin.left - margin.right
 var height = 550 - margin.top - margin.bottom
@@ -299,7 +274,3 @@ d3.csv("delegatetime.csv", function (error, data) {
 
 })
 
-
-
-</script>
-</body>
