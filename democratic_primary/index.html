@@ -1,301 +1,226 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<style>
 
-<html>
-  <head>
-    <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@jhkforecast">
-  <meta name="twitter:creator" content="@jhkersting">
-  <meta name="twitter:title" content="Democratic Primary Forecast">
-  <meta name="twitter:description" content="Who is leading the race for the Democratic Primary">
-  <meta name="twitter:image"
-    content="https://raw.githubusercontent.com/jhkersting/jhkforecasts/master/2020_dem_prim_img-01.jpg">
-  <title>Democratic Primary</title>
-  </head>
-  <head><!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140782021-2"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-	
-	  gtag('config', 'UA-140782021-2');
-	</script>
-	
-	<script data-ad-client="ca-pub-8025120308040073" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<link rel="icon" href="https://jkstats76.files.wordpress.com/2019/02/cropped-site-icon.png?w=32" sizes="32x32">
-	<link rel="icon" href="https://jkstats76.files.wordpress.com/2019/02/cropped-site-icon.png?w=192" sizes="192x192">
-  
-	<script src="https://d3js.org/d3.v4.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
-	<link rel="stylesheet" href="https://use.typekit.net/htk2wjy.css">
-	<link rel="stylesheet" href="index.css">
-	
+body {
+	margin:auto;	
+	width: 885px;
+	font: 10px arial;
+	padding: 25px;
+}
+.y-axis line {
+	opacity:.2;
+}
+.y-axis path {
+	display:none;
+}
+.line {
+	fill: none;
+	stroke-width: 1.5px;
+	opacity:.75;
+}
+.overlay {
+	fill: none;
+	pointer-events: all;
+}
+.lineHoverText {
+	text-shadow:
+	-2px -2px 0 #fff,
+	2px -2px 0 #fff,
+	-2px 2px 0 #fff,
+	2px 2px 0 #fff;
+}
+.hoverCircle {
+	opacity: .75;
+}
 
+</style>
+</head>
 
+<body>
 
-      
-      
-    </style>
-  </head>
-  <body>
-
-
-  
-	<header class="header"><h1 style=" text-align: center; font-weight: 300;  "> <a href="https://jhkforecasts.com"><span >JHK Forecasts</span></a></h1></header>
- <hr>
-   
-  <div id="bigmenu">
-    <table style="border-collapse: collapse; border: none;" cellspacing="0" cellpadding="0" width="100%">
-       <tbody>
-         <tr>
-           <td style="width: 33%; border-right: solid grey 1.0pt; " valign="middle" width="33%">
-             <a href="https://projects.jhkforecasts.com/democratic_primary/">
-               <img style="text-align: center;" src="demprimarymenu-01.svg">
-             </a>
-           </td>
-           <td style="width: 33%; border-right: solid grey 1.0pt; border-left: none; " valign="middle"
-             width="33%">
-             <a href="https://projects.jhkforecasts.com/presidential_forecast/">
-               <img style="text-align: center;" src="presforecastmenu-01.svg">
-           </td>
-           <td style="width: 33%; ; " valign="middle" width="33%">
-             <a href="https://projects.jhkforecasts.com/senate_forecast/">
-               <img style="text-align: center;" src="senateforecastmenu-01.svg">
-           </td>
-         </tr>
-       </tbody>
-     </table>
- 
- 
-   </div>
- 
- 
-   <div id="smallmenu">
-     <table style="border-collapse: collapse; border: none;" cellspacing="0" cellpadding="0" width="100%">
-       <tbody>
-         <tr>
-           <td style="width: 35%; border-right: solid grey 1.0pt; " valign="top" width="35%">
-             <p style="text-align: center;font-weight: 700;font-size: 13px;"><span style="color: black;"><a
-                   href="https://projects.jhkforecasts.com/democratic_primary/"><span style="color: black;">Democratic
-                     Primary</span></a><span></p>
-           </td>
-           <td style="width: 30%; border-right: solid grey 1.0pt; border-left: none; " valign="top" width="30%">
-             <p style="text-align: center;font-weight: 700;font-size: 13px;"><span style="color: black;"><a
-                   href="https://projects.jhkforecasts.com/presidential_forecast/"><span
-                     style="color: black;">Presidential</span></a></span></p>
-           </td>
-           <td style="width: 35%; ; " valign="top" width="35%">
-             <p style="text-align: center;font-weight: 700;font-size: 13px;"><span style="color: black;"><a
-                   href="https://projects.jhkforecasts.com/senate_forecast/"><span
-                     style="color: black;">Senate</span></a></span></p>
-           </td>
-         </tr>
-       </tbody>
-     </table>
-   </div>
-  
-<div id="bubblemap"></div>
-<hr>
-<h2 style="font-weight: 700;">Overview</h2>
-<div id="topline"></div>
-
-<h2 style="font-weight: 700;">Candidate Forecasts</h2>
-<div class="computer">
-<table  style="border-collapse: collapse; border: none;"  cellspacing="0" cellpadding="0" width="100%">
-  <tbody>
-  <tr>
-  <td style="width: 11%; border-right: solid grey 1.0pt; " valign="top" width="11%">
-  <a href="Biden"><p style="text-align: center;font-weight: 700;font-size: 16px;color: #00FF90;" >Biden</p></a>
-  </td>
-  <td style="width: 11%; border-right: solid grey 1.0pt; " valign="top" width="11%">
-    <a href="Bloomberg"><p style="text-align: center;font-weight: 700;font-size: 16px;color: #00B050" >Bloomberg</p></a>
-    </td>
-    <td style="width: 11%; border-right: solid grey 1.0pt; " valign="top" width="11%">
-      <a href="Booker"><p style="text-align: center;font-weight: 700;font-size: 16px;color:#006541;text-decoration:line-through black ;" >Booker</p></a>
-      </td>
-      <td style="width: 11%; border-right: solid grey 1.0pt; " valign="top" width="11%">
-        <a href="Buttigieg"><p style="text-align: center;font-weight: 700;font-size: 16px;color:#98d2f8" >Buttigieg</p></a>
-      </td>
-        <td style="width: 11%; border-right: solid grey 1.0pt; " valign="top" width="11%">
-          <a href="Klobuchar"><p style="text-align: center;font-weight: 700;font-size: 16px;color:#0077FF" >Klobuchar</p></a>
-        </td>
-          <td style="width: 11%; border-right: solid grey 1.0pt; " valign="top" width="11%">
-            <a href="Sanders"><p style="text-align: center;font-weight: 700;font-size: 16px;color:#002E66" >Sanders</p></a>
-          </td>
-          <td style="width: 11%; border-right: solid grey 1.0pt; " valign="top" width="11%">
-            <a href="Steyer"><p style="text-align: center;font-weight: 700;font-size: 16px;color:#E7B5FF" >Steyer</p></a>
-          </td>
-          <td style="width: 11%; border-right: solid grey 1.0pt; " valign="top" width="11%">
-            <a href="Warren"><p style="text-align: center;font-weight: 700;font-size: 16px;color:#B722FF" >Warren</p></a>
-          </td>
-          <td style="width: 11%; border-right: solid grey 1.0pt; " valign="top" width="11%">
-            <a href="Yang"><p style="text-align: center;font-weight: 700;font-size: 16px;color:purple" >Yang</p></a>
-          </td>
-  </tr>
-  </tbody>
-  </table>
-</div>
-
-<div class="phone">
-<table  style="border-collapse: collapse; border: none;"  cellspacing="0" cellpadding="0" width="100%">
-  <tbody>
-  <tr>
-  <td style="width: 11%; border-right: solid grey 1.0pt; " valign="top" width="11%">
-  <a href="Biden"><p style="text-align: center;font-weight: 700;font-size: 16px;color: #00FF90;" >Biden</p></a>
-  </td>
-  <td style="width: 11%; border-right: solid grey 1.0pt; " valign="top" width="11%">
-    <a href="Bloomberg"><p style="text-align: center;font-weight: 700;font-size: 16px;color: #00B050" >Bloomberg</p></a>
-    </td>
-    <td style="width: 11%; border-right: solid grey 1.0pt; " valign="top" width="11%">
-      <a href="Booker"><p style="text-align: center;font-weight: 700;font-size: 16px;color:#006541;text-decoration:line-through black ;"" >Booker</p></a>
-      </td>
-      <td style="width: 11%; border-right: solid grey 1.0pt; " valign="top" width="11%">
-        <a href="Buttigieg"><p style="text-align: center;font-weight: 700;font-size: 16px;color:#98d2f8" >Buttigieg</p></a>
-      </td>
-  </tr>
-</tbody>
-</table>
-<table  style="border-collapse: collapse; border: none;"  cellspacing="0" cellpadding="0" width="100%">
-  <tbody>
-  <tr>
-        <td style="width: 11%; border-right: solid grey 1.0pt; " valign="top" width="11%">
-          <a href="Klobuchar"><p style="text-align: center;font-weight: 700;font-size: 16px;color:#0077FF" >Klobuchar</p></a>
-        </td>
-          <td style="width: 11%; border-right: solid grey 1.0pt; " valign="top" width="11%">
-            <a href="Sanders"><p style="text-align: center;font-weight: 700;font-size: 16px;color:#002E66" >Sanders</p></a>
-          </td>
-          <td style="width: 11%; border-right: solid grey 1.0pt; " valign="top" width="11%">
-            <a href="Steyer"><p style="text-align: center;font-weight: 700;font-size: 16px;color:#E7B5FF" >Steyer</p></a>
-          </td>
-          <td style="width: 11%; border-right: solid grey 1.0pt; " valign="top" width="11%">
-            <a href="Warren"><p style="text-align: center;font-weight: 700;font-size: 16px;color:#B722FF" >Warren</p></a>
-          </td>
-          <td style="width: 11%; border-right: solid grey 1.0pt; " valign="top" width="11%">
-            <a href="Yang"><p style="text-align: center;font-weight: 700;font-size: 16px;color:purple" >Yang</p></a>
-          </td>
-  </tr>
-  </tbody>
-  </table>
-</div>
-<hr>
-<h2 style="font-weight: 700;">Changes Over Time</h2>
-
-  <select id="selectboxvote" class="custom-select" style="width:200px;">
-    <option value="vote">Projected Vote Share</option>
+Change metric:
+<select id="selectbox">
+	<option value="_1">Fahrenheit</option>
+	<option value="_2">Celsius</option>
 </select>
-<div id="vote"></div>
-<select id="selectboxwin" class="custom-select" style="width:200px;">
-  <option value="Win">Win Nomination</option>
-</select>
-<div id="win"></div>
-<select id="selectboxdelegates" class="custom-select" style="width:200px;">
-  <option value="Delegates">Projected Delegates</option>
-</select>
-<div id="delegates"></div>
-<div style="text-align:center ;">
-  <button class="btn default" onclick="votefunc()" id="votebutton">Projected Vote Share</button>
-  <button class="btn default" onclick="winfunc()" id="winbutton">Win Nomination</button>
-  <button class="btn default" onclick="delegatesfunc()" id="winbutton">Projected Delegates</button>
-</div>
 
-	<script>
-		keyState = "US"
-		function votefunc() {
-			var vote = document.getElementById("vote");
-			var win = document.getElementById("win");
-			var delegates = document.getElementById("delegates");
-			
-
-			vote.style.display = "inline";
-				win.style.display = "none";
-				delegates.style.display = "none";
-    }
-  </script>
+<svg id="chart" width="850" height="410"></svg>
 
 <script>
+
+d3.csv("data.csv").then(d => chart(d))
+
+function chart(data) {
+
+	var keys = data.columns.slice(1);
+
+	var parseTime = d3.timeParse("%Y%m%d"),
+		formatDate = d3.timeFormat("%Y-%m-%d"),
+		bisectDate = d3.bisector(d => d.date).left,
+		formatValue = d3.format(",.0f");
+
+	data.forEach(function(d) {
+		d.date = parseTime(d.date);
+		return d;
+	})
+
+	var svg = d3.select("#chart"),
+		margin = {top: 15, right: 35, bottom: 15, left: 35},
+		width = +svg.attr("width") - margin.left - margin.right,
+		height = +svg.attr("height") - margin.top - margin.bottom;
+
+	var x = d3.scaleTime()
+		.rangeRound([margin.left, width - margin.right])
+		.domain(d3.extent(data, d => d.date))
+
+	var y = d3.scaleLinear()
+		.rangeRound([height - margin.bottom, margin.top]);
+
+	var z = d3.scaleOrdinal(d3.schemeCategory10);
+
+	var line = d3.line()
+		.curve(d3.curveCardinal)
+		.x(d => x(d.date))
+		.y(d => y(d.degrees));
+
+	svg.append("g")
+		.attr("class","x-axis")
+		.attr("transform", "translate(0," + (height - margin.bottom) + ")")
+		.call(d3.axisBottom(x).tickFormat(d3.timeFormat("%b")));
+
+	svg.append("g")
+		.attr("class", "y-axis")
+		.attr("transform", "translate(" + margin.left + ",0)");
+
+	var focus = svg.append("g")
+		.attr("class", "focus")
+		.style("display", "none");
+
+	focus.append("line").attr("class", "lineHover")
+		.style("stroke", "#999")
+		.attr("stroke-width", 1)
+		.style("shape-rendering", "crispEdges")
+		.style("opacity", 0.5)
+		.attr("y1", -height)
+		.attr("y2",0);
+
+	focus.append("text").attr("class", "lineHoverDate")
+		.attr("text-anchor", "middle")
+		.attr("font-size", 12);
+
+	var overlay = svg.append("rect")
+		.attr("class", "overlay")
+		.attr("x", margin.left)
+		.attr("width", width - margin.right - margin.left)
+		.attr("height", height)
+
+	update(d3.select('#selectbox').property('value'), 0);
+
+	function update(input, speed) {
+
+		var copy = keys.filter(f => f.includes(input))
+
+		var cities = copy.map(function(id) {
+			return {
+				id: id,
+				values: data.map(d => {return {date: d.date, degrees: +d[id]}})
+			};
+		});
+
+		y.domain([
+			d3.min(cities, d => d3.min(d.values, c => c.degrees)),
+			d3.max(cities, d => d3.max(d.values, c => c.degrees))
+		]).nice();
+
+		svg.selectAll(".y-axis").transition()
+			.duration(speed)
+			.call(d3.axisLeft(y).tickSize(-width + margin.right + margin.left))
+
+		var city = svg.selectAll(".cities")
+			.data(cities);
+
+		city.exit().remove();
+
+		city.enter().insert("g", ".focus").append("path")
+			.attr("class", "line cities")
+			.style("stroke", d => z(d.id))
+			.merge(city)
+		.transition().duration(speed)
+			.attr("d", d => line(d.values))
+
+		tooltip(copy);
+	}
+
+	function tooltip(copy) {
 		
-  function winfunc() {
-    var vote = document.getElementById("vote");
-    var win = document.getElementById("win");
-    var delegates = document.getElementById("delegates");
-    
+		var labels = focus.selectAll(".lineHoverText")
+			.data(copy)
 
-    vote.style.display = "none";
-      win.style.display = "inline";
-      delegates.style.display = "none";
-  }
+		labels.enter().append("text")
+			.attr("class", "lineHoverText")
+			.style("fill", d => z(d))
+			.attr("text-anchor", "start")
+			.attr("font-size",12)
+			.attr("dy", (_, i) => 1 + i * 2 + "em")
+			.merge(labels);
+
+		var circles = focus.selectAll(".hoverCircle")
+			.data(copy)
+
+		circles.enter().append("circle")
+			.attr("class", "hoverCircle")
+			.style("fill", d => z(d))
+			.attr("r", 2.5)
+			.merge(circles);
+
+		svg.selectAll(".overlay")
+			.on("mouseover", function() { focus.style("display", null); })
+			.on("mouseout", function() { focus.style("display", "none"); })
+			.on("mousemove", mousemove);
+
+		function mousemove() {
+
+			var x0 = x.invert(d3.mouse(this)[0]),
+				i = bisectDate(data, x0, 1),
+				d0 = data[i - 1],
+				d1 = data[i],
+				d = x0 - d0.date > d1.date - x0 ? d1 : d0;
+
+			focus.select(".lineHover")
+				.attr("transform", "translate(" + x(d.date) + "," + height + ")");
+
+			focus.select(".lineHoverDate")
+				.attr("transform", 
+					"translate(" + x(d.date) + "," + (height + margin.bottom) + ")")
+				.text(formatDate(d.date));
+
+			focus.selectAll(".hoverCircle")
+				.attr("cy", e => y(d[e]))
+				.attr("cx", x(d.date));
+
+			focus.selectAll(".lineHoverText")
+				.attr("transform", 
+					"translate(" + (x(d.date)) + "," + height / 2.5 + ")")
+				.text(e => e + " " + "º" + formatValue(d[e]));
+
+			x(d.date) > (width - width / 4) 
+				? focus.selectAll("text.lineHoverText")
+					.attr("text-anchor", "end")
+					.attr("dx", -10)
+				: focus.selectAll("text.lineHoverText")
+					.attr("text-anchor", "start")
+					.attr("dx", 10)
+		}
+	}
+
+	var selectbox = d3.select("#selectbox")
+		.on("change", function() {
+			update(this.value, 750);
+		})
+}
+
 </script>
-
-<script>
-		
-  function delegatesfunc() {
-    var vote = document.getElementById("vote");
-    var win = document.getElementById("win");
-    var delegates = document.getElementById("delegates");
-    
-
-    vote.style.display = "none";
-      win.style.display = "none";
-      delegates.style.display = "inline";
-  }
-</script>
-<script src="wintime.js"></script>
-<script src="delegatestime.js"></script> 
-<script src="votetime.js"></script> 
-      <hr>
-      <h2 style="font-weight: 700;">National Polling Average</h2>
-      <select id="selectboxpoll" class="custom-select" style="width:200px;">
-        <option value="avg">Projected Vote Share</option>
-    </select>
-    <div id="pollavg"></div>
-
-
-
-    <script src="pollavg.js"></script>
-      <h2 style="font-weight: 700;">Delegate Breakdown</h2>
-     
-      
-      <div id="delegatesover"></div>
-      <a href="time.csv"><p style="color: #0077FF;text-decoration: underline;">Download The Data</p></a>
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-format="fluid"
-     data-ad-layout-key="-h2+d+5c-9-3e"
-     data-ad-client="ca-pub-8025120308040073"
-     data-ad-slot="8603820464"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-format="fluid"
-     data-ad-layout-key="-h2+d+5c-9-3e"
-     data-ad-client="ca-pub-8025120308040073"
-     data-ad-slot="8603820464"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-format="fluid"
-     data-ad-layout-key="-h2+d+5c-9-3e"
-     data-ad-client="ca-pub-8025120308040073"
-     data-ad-slot="8603820464"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-  <script src="pollingavg.js"></script>
-	
-	<script src="us2.js"></script>
-  <script src="bubblemap.js"></script>
-  <script src="delegates.js"></script>
-  
-  <script src="topline copy.js"></script>
-</div>
-  </body>
-</html>
+</body>

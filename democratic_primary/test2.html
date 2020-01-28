@@ -1,27 +1,208 @@
 <!DOCTYPE html>
-
 <head>
-    <meta charset="utf-8">
-    <script src="https://d3js.org/d3.v4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
-    <link rel="stylesheet" href="https://use.typekit.net/htk2wjy.css">
-    <link rel="stylesheet" href="index.css">
-    
-    
+<meta charset="utf-8">
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<link rel="icon" href="https://jkstats76.files.wordpress.com/2019/02/cropped-site-icon.png?w=32" sizes="32x32">
+  <link rel="icon" href="https://jkstats76.files.wordpress.com/2019/02/cropped-site-icon.png?w=192" sizes="192x192">
+
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+  <link rel="stylesheet" href="https://use.typekit.net/htk2wjy.css">
+  <link rel="stylesheet" href="index.css">
+</style>
 </head>
 
 <body>
-    <script>
-        var keyState = "Iowa"
-    </script>
 
+
+<select id="selectbox">
+	<option value="proj">Fahrenheit</option>
+	<option value="avg">Celsius</option>
+</select>
+
+<div id="race"></div>
+
+<script>
+var margin = { top: 20, right: 20, bottom: 100, left: 30 }
+var width = 550 - margin.left - margin.right
+var height = 1000- margin.top - margin.bottom
+d3.csv("delegatetime.csv", function (error, data) {
+
+
+
+	var keys = data.columns.slice(1);
+
+	var parseTime = d3.timeParse("%Y-%m-%d"),
+		formatDate = d3.timeFormat("%Y-%m-%d"),
+		bisectDate = d3.bisector(d => d.date).right,
+		formatValue = d3.format(",.0f");
+
+	data.forEach(function(d) {
+		d.date = parseTime(d.date);
+		return d;
+    })
     
-    <select id="selectboxpoll" class="custom-select" style="width:200px;">
-        <option value="avg">Projected Vote Share</option>
-    </select>
-    <div id="pollavg"></div>
+   console.log(data) 
+
+   var svg = d3.select("#race").append("svg")
+        .attr("viewBox", "0 0 550 1000")
+        .append('g')
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+	var y = d3.scaleTime()
+		.range([margin.top, height - margin.bottom])
+		.domain(d3.extent(data, d => d.date))
+
+	var x = d3.scaleLinear()
+		.rangeRound([width - margin.right, margin.left])
+        .domain([2000,0])
+        var z = d3.scaleOrdinal()
+        .range(["#00FF90", "#00B050", "#006541", "#98d2f8", "#0077FF", "#002E66", "#E7B5FF", "#B722FF", "purple"])
+        ;
+
+	var line = d3.line()
+		.curve(d3.curveStepBefore)
+		.y(d => y(d.date))
+		.x(d => x(d.degrees));
+
+	svg.append("g")
+		.attr("class","x-axis")
+		.attr("transform", "translate(0," + (height - margin.bottom) + ")")
+		.call(d3.axisBottom(x).ticks(8));
+
+	svg.append("g")
+		.attr("class", "y-axis")
+		.attr("transform", "translate(" + margin.left + ",0)");
+
+	var focus = svg.append("g")
+		.attr("class", "focus")
+		.style("display", "none");
+
+	focus.append("line").attr("class", "lineHover")
+		.style("stroke", "#999")
+		.attr("stroke-width", 1)
+		.style("shape-rendering", "crispEdges")
+		.style("opacity", 0.5)
+		.attr("y1", -height)
+		.attr("y2",0);
+
+	focus.append("text").attr("class", "lineHoverDate")
+		.attr("text-anchor", "middle")
+		.attr("font-size", 12);
+
+	var overlay = svg.append("rect")
+		.attr("class", "overlay")
+		.attr("x", margin.left)
+		.attr("width", width - margin.right - margin.left)
+		.attr("height", height)
+
+	update(d3.select('#selectbox').property('value'), 0);
+
+	function update(input, speed) {
+
+        var copy = keys.filter(f => f.includes(input))
+        
+        
+
+		var cities = copy.map(function(id) {
+			return {
+				id: id.slice(0,-4),
+				values: data.map(d => {return { date: d.date,degrees: +d[id]}})
+			};
+		});
+
+		y.domain([
+			d3.min(cities, d => d3.min(d.values, c => c.date)),
+			d3.max(cities, d => d3.max(d.values, c => c.date))
+		]).nice();
+console.log(cities)
+		svg.selectAll(".y-axis").transition()
+			.duration(speed)
+			.call(d3.axisLeft(y).tickSize(-width + margin.right + margin.left))
+
+		var city = svg.selectAll(".cities")
+			.data(cities);
+
+		city.exit().remove();
+
+		city.enter().insert("g", ".focus").append("path")
+			.attr("class", "line cities")
+			.style("stroke", d => z(d.id))
+			.merge(city)
+		.transition().duration(speed)
+			.attr("d", d => line(d.values))
+
+		tooltip(copy);
+	}
+
+	function tooltip(copy) {
+        var rect = focus.selectAll(".lineHoverRect")
+            .data(copy)
+
+       
+
+        var labels = focus.selectAll(".lineHoverText")
+            .data(copy)
+
+        labels.enter().append("text")
+            .attr("class", "lineHoverText")
+            .attr("text-anchor", "middle")
+            .attr("font-size", 14)
+           
+            .merge(labels);
 
 
 
-    <script src="pollavg.js"></script>
+
+
+
+
+        var circles = focus.selectAll(".hoverCircle")
+            .data(copy)
+
+        circles.enter().append("circle")
+            .attr("class", "hoverCircle")
+            .style("stroke", d => z(d))
+            .style("stroke-width", 2)
+            .style("fill", "white")
+            .attr("r", 3)
+            .merge(circles);
+
+        svg.selectAll(".overlay")
+            .on("mouseover", function () { focus.style("display", null); })
+            .on("mouseout", function () { focus.style("display", "display"); })
+            .on("mousemove", mousemove);
+            var delScale = d3.scaleLinear()
+    .domain([0, 1990])
+    .range(["white", "#0091FF"]);
+        function mousemove() {
+            
+            var y0 = y.invert(d3.mouse(this)[0]),
+                i = bisectDate(data, y0, 1),
+                d0 = data[i - 1],
+                d1 = data[i],
+                d = y0 - d0.date > d1.date - y0 ? d1 : d0;
+
+                
+
+			focus.selectAll(".hoverCircle")
+				.attr("cx", e => x(d[e]))
+				.attr("cy", y(d.date));
+
+			focus.selectAll(".lineHoverText")
+                .attr("x", e => x(d[e]))
+				.attr("y", y(d.date))
+				.text(e => e + " " + "º" + formatValue(d[e]));
+
+			
+		}
+	}
+
+	var selectbox = d3.select("#selectbox")
+		.on("change", function() {
+			update(this.value, 750);
+		})})
+
+
+</script>
 </body>

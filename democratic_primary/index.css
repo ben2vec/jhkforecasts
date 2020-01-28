@@ -340,7 +340,9 @@ div.tooltip {
 #delegates {
   display: none;
 }
-
+.legend{
+  position: static;
+}
 
 .btn {
   border: none;
