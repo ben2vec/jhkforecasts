@@ -94,7 +94,7 @@
       var gopmaxdensity = d3.max(data, d => d.gopdensity)
       var demprojvote = d3.max(data, d => d.demvote)
       var demmaxdensity = d3.max(data, d => d.demdensity)
-      var gopmindensity = gopprojvote > demprojvote ?.4:.2
+      var gopmindensity = gopprojvote >= demprojvote ?.4:.2
       var demmindensity = gopprojvote < demprojvote ? .4:.2
       var thirdprojvote = d3.max(data, d => d.thirdvote)
       
