@@ -1,6 +1,11 @@
 var margin = { top: 20, right: 20, bottom: 100, left: 30 }
 var width = 1000 - margin.left - margin.right
 var height = 550 - margin.top - margin.bottom
+var category = ["Biden", "Bloomberg", "Booker", "Buttigieg", "Klobuchar", "Sanders", "Steyer", "Warren", "Yang"]
+// since Category B and E are really close to each other, assign them diverging colors
+var candcolor = d3.scaleOrdinal()
+  .domain(category)
+  .range(["#00FF90", "#00B050", "#006541", "#98d2f8", "#0077FF", "#002E66", "#E7B5FF", "#B722FF", "purple"])
 
 var demScale = d3.scaleLinear()
     .domain([0, 50])
@@ -268,7 +273,7 @@ d3.csv("time.csv", function (error, data) {
 
         city.enter().insert("g", ".focus").append("path")
             .attr("class", "line cities")
-            .style("stroke", d => z(d.id))
+            .style("stroke", candcolor(keycand))
             .merge(city)
             .transition().duration(speed)
             .attr("d", d => line(d.values))
@@ -311,7 +316,7 @@ d3.csv("time.csv", function (error, data) {
 
         circles.enter().append("circle")
             .attr("class", "hoverCircle")
-            .style("stroke", d => z(d))
+            .style("stroke", candcolor(keycand))
             .style("stroke-width", 2)
             .style("fill", "white")
             .attr("r", 3)
@@ -360,17 +365,6 @@ d3.csv("time.csv", function (error, data) {
         }
     }
 
-    var cands = ["Biden", "Bloomberg", "Booker", "Buttigieg", "Klobuchar", "Sanders", "Steyer", "Warren", "Yang"]
-
-    var svgLegend = svg.append('g')
-        .attr('class', 'gLegend')
-        .attr("transform", "translate(100,390)")
-
-    var legend = svgLegend.selectAll('.legend')
-        .data(cands)
-        .enter().append('g')
-        .attr("class", "legend")
-        .attr("transform", function (d, i) { return "translate(" + i * 100 + ",0)" })
 
     svg.append("text")
         .attr("x", 0)
@@ -388,13 +382,7 @@ d3.csv("time.csv", function (error, data) {
         .style("font-weight", 700)
         .text("Month Ago")
 
-    legend.append("text")
-        .attr("class", "legend-text")
-        .style("fill", d => z(d))
-        .attr("text-anchor", "middle")
-        .style("font-size", 14)
-        .style("font-weight", 700)
-        .text(d => d)
+    
         svg.append("text")
         .attr("x", 500)
         .attr("y", 520)

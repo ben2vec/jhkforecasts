@@ -266,7 +266,7 @@ d3.csv("time.csv", function (error, data) {
 
         city.enter().insert("g", ".focus").append("path")
             .attr("class", "line cities")
-            .style("stroke", d => z(d.id))
+            .style("stroke", candcolor(keycand))
             .merge(city)
             .transition().duration(speed)
             .attr("d", d => line(d.values))
@@ -309,7 +309,7 @@ d3.csv("time.csv", function (error, data) {
 
         circles.enter().append("circle")
             .attr("class", "hoverCircle")
-            .style("stroke", d => z(d))
+            .style("stroke", candcolor(keycand))
             .style("stroke-width", 2)
             .style("fill", "white")
             .attr("r", 3)
@@ -358,17 +358,7 @@ d3.csv("time.csv", function (error, data) {
         }
     }
 
-    var cands = ["Biden", "Bloomberg", "Booker", "Buttigieg", "Klobuchar", "Sanders", "Steyer", "Warren", "Yang"]
-
-    var svgLegend = svg.append('g')
-        .attr('class', 'gLegend')
-        .attr("transform", "translate(100,390)")
-
-    var legend = svgLegend.selectAll('.legend')
-        .data(cands)
-        .enter().append('g')
-        .attr("class", "legend")
-        .attr("transform", function (d, i) { return "translate(" + i * 100 + ",0)" })
+    
 
     svg.append("text")
         .attr("x", 0)
@@ -386,13 +376,7 @@ d3.csv("time.csv", function (error, data) {
         .style("font-weight", 700)
         .text("Month Ago")
 
-    legend.append("text")
-        .attr("class", "legend-text")
-        .style("fill", d => z(d))
-        .attr("text-anchor", "middle")
-        .style("font-size", 14)
-        .style("font-weight", 700)
-        .text(d => d)
+    
 
         svg.append("text")
         .attr("x", 500)
