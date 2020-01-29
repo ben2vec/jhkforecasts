@@ -6,13 +6,16 @@ var demScale = d3.scaleLinear()
     .domain([0, 50])
     .range(["white", "#0091FF"]);
 
+var delScale = d3.scaleLinear()
+    .domain([0, 1990])
+    .range(["white", "#0091FF"]);
+
 d3.csv("time.csv", function (error, data) {
     var keys = data.columns.slice(1);
     var keys = keys.filter(f => f.includes(keyCand))
-
     var data = data.filter(function (d) { return d.state == keyState; });
 
-    var datatype = "win"
+    var datatype = "del"
 
     var parseTime = d3.timeParse("%Y-%m-%d"),
         formatDate = d3.timeFormat("%b - %d"),
@@ -48,7 +51,7 @@ d3.csv("time.csv", function (error, data) {
 
     console.log(data)
 
-    var svg = d3.select("#win").append("svg")
+    var svg = d3.select("#delegates").append("svg")
         .attr("viewBox", "0 0 1000 550")
         .append('g')
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
@@ -69,7 +72,7 @@ d3.csv("time.csv", function (error, data) {
         .attr("width", 75)
         .attr("height", 25)
         .attr("rx", 10)
-        .attr("fill", d => demScale(d.values))
+        .attr("fill", d =>keyState =="US"? delScale(d.values):demScale(d.values))
 
     nowv.append("text")
         .attr("class", "now-text")
@@ -77,7 +80,7 @@ d3.csv("time.csv", function (error, data) {
         .attr("text-anchor", "middle")
         .style("font-size", 14)
         .style("font-weight", 700)
-        .text(d => d.values + "%")
+        .text(d => d.values )
     //one month ago
     now = parseTime(now)
 
@@ -115,7 +118,7 @@ d3.csv("time.csv", function (error, data) {
         .attr("width", 75)
         .attr("height", 25)
         .attr("rx", 10)
-        .attr("fill", d => demScale(d.values))
+        .attr("fill",d =>keyState =="US"? delScale(d.values):demScale(d.values))
 
     monthv.append("text")
         .attr("class", "now-text")
@@ -123,7 +126,7 @@ d3.csv("time.csv", function (error, data) {
         .attr("text-anchor", "middle")
         .style("font-size", 14)
         .style("font-weight", 700)
-        .text(d => d.values + "%")
+        .text(d => d.values )
 
 
 
@@ -143,7 +146,7 @@ d3.csv("time.csv", function (error, data) {
         ;
 
     var line = d3.line()
-        .curve(d3.curveCatmullRom)
+        .curve(d3.curveStep)
         .x(d => x(d.date))
         .y(d => y(d.degrees));
 
@@ -185,6 +188,7 @@ d3.csv("time.csv", function (error, data) {
         .attr("y2", -height)
         .attr("stroke", "grey")
 
+    
 
 
     svg.append("text")
@@ -223,12 +227,11 @@ d3.csv("time.csv", function (error, data) {
         .attr("width", width - margin.right - margin.left)
         .attr("height", height)
 
-    update(d3.select('#selectboxwin').property('value'), 0);
+    update(d3.select('#selectboxdelegates').property('value'), 0);
 
     function update(input, speed) {
 
-        var copy = keys.filter(f => f.includes("win"))
-        
+        var copy = keys.filter(f => f.includes("del"))
 
         var cities = copy.map(function (id) {
             return {
@@ -269,6 +272,8 @@ d3.csv("time.csv", function (error, data) {
         city.enter().insert("g", ".focus").append("path")
             .attr("class", "line cities")
             .style("stroke", d => z(d.id))
+            .style("stroke-width",4)
+            .style("line-cap","square")
             .merge(city)
             .transition().duration(speed)
             .attr("d", d => line(d.values))
@@ -346,13 +351,13 @@ d3.csv("time.csv", function (error, data) {
                 .attr("cx", x(d.date));
 
             focus.selectAll(".lineHoverRect")
-                .style("fill", e => demScale(d[e]))
+                .style("fill", e =>keyState =="US"? delScale(d[e]):demScale(d[e]))
                 ;
 
             focus.selectAll(".lineHoverText")
                 .attr("transform",
                     "translate(" + 100 + "," + 420 + ")").style("font-weight", 700)
-                .text(e => d[e] + "%");
+                .text(e => d[e] );
 
 
 
@@ -401,7 +406,7 @@ d3.csv("time.csv", function (error, data) {
         .attr("text-anchor", "middle")
         .style("font-size", 25)
         .style("font-weight", 700)
-        .text(keyState=="US"?"Win Nomination":"Win "+keyState)
+        .text(keyState=="US"?"Projected Delegates":"Projected Delegates in "+keyState)
 
 
 })

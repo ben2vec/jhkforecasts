@@ -9,10 +9,9 @@ var demScale = d3.scaleLinear()
 d3.csv("time.csv", function (error, data) {
     var keys = data.columns.slice(1);
     var keys = keys.filter(f => f.includes(keyCand))
-
     var data = data.filter(function (d) { return d.state == keyState; });
 
-    var datatype = "win"
+    var datatype = "vote"
 
     var parseTime = d3.timeParse("%Y-%m-%d"),
         formatDate = d3.timeFormat("%b - %d"),
@@ -48,7 +47,7 @@ d3.csv("time.csv", function (error, data) {
 
     console.log(data)
 
-    var svg = d3.select("#win").append("svg")
+    var svg = d3.select("#vote").append("svg")
         .attr("viewBox", "0 0 1000 550")
         .append('g')
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
@@ -97,8 +96,7 @@ d3.csv("time.csv", function (error, data) {
     console.log(montharray)
     console.log(onemonthago)
 
-
-
+    
     var svgmonth = svg.append('g')
         .attr('class', 'gmonth')
         .attr("transform", "translate(100,480)")
@@ -185,6 +183,7 @@ d3.csv("time.csv", function (error, data) {
         .attr("y2", -height)
         .attr("stroke", "grey")
 
+    
 
 
     svg.append("text")
@@ -223,12 +222,11 @@ d3.csv("time.csv", function (error, data) {
         .attr("width", width - margin.right - margin.left)
         .attr("height", height)
 
-    update(d3.select('#selectboxwin').property('value'), 0);
+    update(d3.select('#selectboxvote').property('value'), 0);
 
     function update(input, speed) {
 
-        var copy = keys.filter(f => f.includes("win"))
-        
+        var copy = keys.filter(f => f.includes(input))
 
         var cities = copy.map(function (id) {
             return {
@@ -395,13 +393,15 @@ d3.csv("time.csv", function (error, data) {
         .style("font-size", 14)
         .style("font-weight", 700)
         .text(d => d)
+
         svg.append("text")
         .attr("x", 500)
         .attr("y", 520)
         .attr("text-anchor", "middle")
         .style("font-size", 25)
         .style("font-weight", 700)
-        .text(keyState=="US"?"Win Nomination":"Win "+keyState)
+        .text(keyState=="US"?"Projected Vote Share":"Projected Vote in "+keyState)
 
+  
 
 })

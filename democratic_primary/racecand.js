@@ -2,17 +2,15 @@ var margin = { top: 20, right: 20, bottom: 100, left: 30 }
 var width = 1000 - margin.left - margin.right
 var height = 550 - margin.top - margin.bottom
 
-var demScale = d3.scaleLinear()
-    .domain([0, 50])
+var delScale = d3.scaleLinear()
+    .domain([0, 1990])
     .range(["white", "#0091FF"]);
 
-d3.csv("time.csv", function (error, data) {
+d3.csv("delegatetime.csv", function (error, data) {
     var keys = data.columns.slice(1);
-    var keys = keys.filter(f => f.includes(keyCand))
-
-    var data = data.filter(function (d) { return d.state == keyState; });
-
-    var datatype = "win"
+    var keys = keys.filter(f => f.includes(keycand))
+   
+    var axisPad =7
 
     var parseTime = d3.timeParse("%Y-%m-%d"),
         formatDate = d3.timeFormat("%b - %d"),
@@ -21,114 +19,26 @@ d3.csv("time.csv", function (error, data) {
         formatValue = d3.format("0.0%");
 
     data.forEach(function (d) {
-        d.date = parseTime(d.forecastdate);
-        d.primarydate = parseTime(d.primarydate);
+        d.date = parseTime(d.date);
+     
         return d;
     })
 
 
 
-    //today
-    var now = d3.max(data, d => d.forecastdate)
+    
 
-    var nowarray = data.filter(function (d) { return d.forecastdate == now; });
-
-    var copytwo = keys.filter(f => f.includes(datatype))
-
-    var asoftoday = copytwo.map(function (id) {
-        return {
-            values: nowarray.map(d => { return +d[id] })
-        };
-    });
-
-
-    console.log(now)
-    console.log(nowarray)
-    console.log(asoftoday)
-
-    console.log(data)
-
-    var svg = d3.select("#win").append("svg")
+    var svg = d3.select("#race").append("svg")
         .attr("viewBox", "0 0 1000 550")
         .append('g')
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    var svgnow = svg.append('g')
-        .attr('class', 'gnow')
-        .attr("transform", "translate(100,450)")
-
-    var nowv = svgnow.selectAll('.now')
-        .data(asoftoday)
-        .enter().append('g')
-        .attr("class", "now")
-        .attr("transform", function (d, i) { return "translate(" + i * 100 + ",0)" })
-
-    nowv.append("rect")
-        .attr("y", -17.5)
-        .attr("x", -37.5)
-        .attr("width", 75)
-        .attr("height", 25)
-        .attr("rx", 10)
-        .attr("fill", d => demScale(d.values))
-
-    nowv.append("text")
-        .attr("class", "now-text")
-        .style("fill", "Black")
-        .attr("text-anchor", "middle")
-        .style("font-size", 14)
-        .style("font-weight", 700)
-        .text(d => d.values + "%")
-    //one month ago
-    now = parseTime(now)
-
-    var monthago = formatMonth(d3.utcMonth.offset(now, -1))
-
-    var montharray = data.filter(function (d) { return d.forecastdate == monthago; });
-
-    var copythree = keys.filter(f => f.includes(datatype))
-
-    var onemonthago = copythree.map(function (id) {
-        return {
-            values: montharray.map(d => { return +d[id] })
-        };
-    });
-
-    console.log(monthago)
-    console.log(montharray)
-    console.log(onemonthago)
+    
 
 
 
-    var svgmonth = svg.append('g')
-        .attr('class', 'gmonth')
-        .attr("transform", "translate(100,480)")
-
-    var monthv = svgmonth.selectAll('.now')
-        .data(onemonthago)
-        .enter().append('g')
-        .attr("class", "month")
-        .attr("transform", function (d, i) { return "translate(" + i * 100 + ",0)" })
-
-    monthv.append("rect")
-        .attr("y", -17.5)
-        .attr("x", -37.5)
-        .attr("width", 75)
-        .attr("height", 25)
-        .attr("rx", 10)
-        .attr("fill", d => demScale(d.values))
-
-    monthv.append("text")
-        .attr("class", "now-text")
-        .style("fill", "Black")
-        .attr("text-anchor", "middle")
-        .style("font-size", 14)
-        .style("font-weight", 700)
-        .text(d => d.values + "%")
-
-
-
-    var mindate = new Date(2019, 5, 1),
-        maxdate = d3.max(data, d => d.primarydate)
+    var mindate = new Date(2020, 1, 1),
+        maxdate = new Date(2020, 6, 1)
     demadjust = new Date(2020, 0, 4);
 
     var x = d3.scaleTime()
@@ -143,7 +53,7 @@ d3.csv("time.csv", function (error, data) {
         ;
 
     var line = d3.line()
-        .curve(d3.curveCatmullRom)
+        .curve(d3.curveStepAfter)
         .x(d => x(d.date))
         .y(d => y(d.degrees));
 
@@ -169,33 +79,7 @@ d3.csv("time.csv", function (error, data) {
 
         })
 
-    demadjust = new Date(2020, 0, 4);
-
-    svg.append("line")
-        .attr("x1", x(demadjust))
-        .attr("x2", x(demadjust))
-        .attr("y1", y(0))
-        .attr("y2", -height)
-        .attr("stroke", "grey")
-
-    svg.append("line")
-        .attr("x1", x(maxdate))
-        .attr("x2", x(maxdate))
-        .attr("y1", y(0))
-        .attr("y2", -height)
-        .attr("stroke", "grey")
-
-
-
-    svg.append("text")
-        .attr("x", x(demadjust) - 5)
-        .attr("y", "20")
-        .attr('fill', 'grey')
-        .attr('font-size', '15')
-        .attr('font-weight', 500)
-        .attr("text-anchor", "end")
-        .text("Demographic Calculation Adjusted >")
-
+       
 
     svg.append("g")
         .attr("class", "y-axis")
@@ -223,12 +107,11 @@ d3.csv("time.csv", function (error, data) {
         .attr("width", width - margin.right - margin.left)
         .attr("height", height)
 
-    update(d3.select('#selectboxwin').property('value'), 0);
+    update(d3.select('#selectboxrace').property('value'), 0);
 
     function update(input, speed) {
 
-        var copy = keys.filter(f => f.includes("win"))
-        
+        var copy = keys.filter(f => f.includes(input))
 
         var cities = copy.map(function (id) {
             return {
@@ -238,7 +121,7 @@ d3.csv("time.csv", function (error, data) {
         });
 
         y.domain([
-            0,
+            d3.min(cities, d => d3.min(d.values, c => c.degrees)),
             d3.max(cities, d => d3.max(d.values, c => c.degrees))
         ]).nice();
 
@@ -346,13 +229,13 @@ d3.csv("time.csv", function (error, data) {
                 .attr("cx", x(d.date));
 
             focus.selectAll(".lineHoverRect")
-                .style("fill", e => demScale(d[e]))
+                .style("fill", e => delScale(d[e]))
                 ;
 
             focus.selectAll(".lineHoverText")
                 .attr("transform",
                     "translate(" + 100 + "," + 420 + ")").style("font-weight", 700)
-                .text(e => d[e] + "%");
+                .text(e => d[e]);
 
 
 
@@ -371,22 +254,9 @@ d3.csv("time.csv", function (error, data) {
         .enter().append('g')
         .attr("class", "legend")
         .attr("transform", function (d, i) { return "translate(" + i * 100 + ",0)" })
-
-    svg.append("text")
-        .attr("x", 0)
-        .attr("y", 450)
-        .attr("text-anchor", "start")
-        .style("font-size", 12)
-        .style("font-weight", 700)
-        .text("Today")
-
-    svg.append("text")
-        .attr("x", 0)
-        .attr("y", 480)
-        .attr("text-anchor", "start")
-        .style("font-size", 12)
-        .style("font-weight", 700)
-        .text("Month Ago")
+        
+        
+    
 
     legend.append("text")
         .attr("class", "legend-text")
@@ -395,13 +265,12 @@ d3.csv("time.csv", function (error, data) {
         .style("font-size", 14)
         .style("font-weight", 700)
         .text(d => d)
-        svg.append("text")
-        .attr("x", 500)
-        .attr("y", 520)
-        .attr("text-anchor", "middle")
-        .style("font-size", 25)
-        .style("font-weight", 700)
-        .text(keyState=="US"?"Win Nomination":"Win "+keyState)
 
+        var selectbox = d3.select("#selectboxrace")
+		.on("change", function() {
+			update(this.value, 750);
+        })
+  
 
 })
+
