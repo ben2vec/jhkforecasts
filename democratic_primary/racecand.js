@@ -59,7 +59,7 @@ d3.csv("delegatetime.csv", function (error, data) {
 
     svg.append("g")
         .attr("class", "x-axis")
-        .attr("transform", "translate(0," + (height - margin.bottom) + ")")
+        
         .call(d3.axisBottom(x).ticks(6)
             .tickFormat(d3.timeFormat("%b")))
         .call(g => {
