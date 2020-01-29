@@ -36,7 +36,11 @@
     </style>
   </head>
   <body>
-
+<script>var keyState = "US"
+    var keycand = "Biden"
+    
+    
+    </script>
 
 
 	<h1 style=" text-align: center; font-weight: 300;  "> <a href="https://jhkforecasts.com"><span >JHK Forecasts</span></a></h1>
@@ -113,9 +117,8 @@
   <button class="btn default" onclick="delegatesfunc()" id="winbutton">Projected Delegates</button>
 </div>
 	<script>
-        keyState = "US"
-        keyCand = "biden"
-        var keycand = "Biden";
+        
+        var keyCand = keycand.toLowerCase()
 document.getElementById("p1").innerHTML = keycand;
 		function votefunc() {
 			var vote = document.getElementById("vote");
