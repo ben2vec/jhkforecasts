@@ -130,7 +130,7 @@ d3.csv("time.csv", function (error, data) {
     // line generator
 
     var line = d3.line()
-        .curve(d3.curveBundle)
+        .curve(d3.curveCatmullRom)
         .x(d => xScale(d.date))
         .y(d => yScale(d.percentage))
 

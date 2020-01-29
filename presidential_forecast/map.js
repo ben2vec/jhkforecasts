@@ -112,7 +112,7 @@
     .attr("text-anchor","middle").on('mouseover', function(d) {
 
       d3.select(this)
-      .style("opacity", .3)
+      .style("fill",d=> d.properties.gopWin>50?"#FF6060":"#0091FF")
       
   
         tool_tip.show();
@@ -185,7 +185,7 @@
       function(d) {
 
         d3.select(this)
-        .style("opacity",1)
+        .style("fill", function(d) {return color(d.properties.gopWin);})
         
     tool_tip.hide()});
   

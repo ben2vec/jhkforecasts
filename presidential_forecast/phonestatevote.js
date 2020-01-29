@@ -40,21 +40,21 @@ var otherScale = d3.scaleLinear()
         .attr("y",50)
         .attr("width",100)
         .attr("height",33.33)
-        .attr("fill",goplo>demlo?gopScale(goplo):demScale(demlo))
+        .attr("fill",goplo>=demlo?gopScale(goplo):demScale(demlo))
 
         svg.append("rect")
         .attr("x",400)
         .attr("y",83.3)
         .attr("width",100)
         .attr("height",33.33)
-        .attr("fill",gop>dem?gopScale(gop):demScale(dem))
+        .attr("fill",gop>=dem?gopScale(gop):demScale(dem))
 
         svg.append("rect")
         .attr("x",400)
         .attr("y",117)
         .attr("width",100)
         .attr("height",33.33)
-        .attr("fill",gop>dem?gopScale(gophi):demScale(demhi))
+        .attr("fill",gop>=dem?gopScale(gophi):demScale(demhi))
 
         svg.append("rect")
         .attr("x",400)
@@ -118,7 +118,7 @@ var otherScale = d3.scaleLinear()
         .attr("fill","#black");
 
         svg.append("text")
-        .text(gop>dem?"Trump":"Democrats")
+        .text(gop>=dem?"Trump":"Democrats")
         .attr("y",100)
         .attr("x",100)
         .attr("text-anchor","middle")
@@ -404,13 +404,13 @@ var otherScale = d3.scaleLinear()
         .attr("alignment-baseline", "middle");
 
         svg.append("text")
-        .text(gop>dem?"R+ "+Math.round(Math.abs(gop-dem)*10)/10+"%":"D+ "+Math.round(Math.abs(gop-dem)*10)/10+"%")
+        .text(gop>=dem?"R+ "+Math.round(Math.abs(gop-dem)*10)/10+"%":"D+ "+Math.round(Math.abs(gop-dem)*10)/10+"%")
         .attr("y",100)
         .attr("x",250)
         .attr("text-anchor","middle")
         .attr("font-weight",700)
         .attr("font-size",12)
-        .attr("fill",gop>dem?"#FF6060":"#0091FF")
+        .attr("fill",gop>=dem?"#FF6060":"#0091FF")
         .attr("alignment-baseline", "middle");
 
        
