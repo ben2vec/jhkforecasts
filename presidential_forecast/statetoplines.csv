@@ -1,90 +1,90 @@
 state,cand,win,xlabel,xValue,width
 Alabama,Democrats,0.1,90,50.0,0.9
 Alabama,Trump,99.9,910,50.9,899.1
-Alaska,Democrats,10.0,90,50.0,90.0
-Alaska,Trump,90.0,910,140.0,810.0
-Arizona,Democrats,39.3,90,50.0,353.7
-Arizona,Trump,60.7,910,403.7,546.3000000000001
+Alaska,Democrats,10.4,90,50.0,93.60000000000001
+Alaska,Trump,89.6,910,143.60000000000002,806.4
+Arizona,Democrats,39.5,90,50.0,355.5
+Arizona,Trump,60.5,910,405.5,544.5
 Arkansas,Democrats,0.1,90,50.0,0.9
 Arkansas,Trump,99.9,910,50.9,899.1
 California,Democrats,99.9,90,50.0,899.1
 California,Trump,0.1,910,949.1,0.9
-Colorado,Democrats,75.4,90,50.0,678.6
-Colorado,Trump,24.6,910,728.6,221.4
+Colorado,Democrats,75.5,90,50.0,679.5
+Colorado,Trump,24.5,910,729.5,220.5
 Connecticut,Democrats,93.5,90,50.0,841.5
 Connecticut,Trump,6.5,910,891.5,58.5
-Delaware,Democrats,92.9,90,50.0,836.1
-Delaware,Trump,7.1,910,886.1,63.9
+Delaware,Democrats,92.3,90,50.0,830.6999999999999
+Delaware,Trump,7.7,910,880.6999999999999,69.3
 District of Columbia,Democrats,100.0,90,50.0,900.0
 District of Columbia,Trump,0.0,910,950.0,0.0
-Florida,Democrats,45.5,90,50.0,409.5
-Florida,Trump,54.5,910,459.5,490.5
-Georgia,Democrats,30.6,90,50.0,275.40000000000003
-Georgia,Trump,69.4,910,325.40000000000003,624.6
+Florida,Democrats,45.7,90,50.0,411.3
+Florida,Trump,54.3,910,461.3,488.7
+Georgia,Democrats,30.7,90,50.0,276.3
+Georgia,Trump,69.3,910,326.3,623.6999999999999
 Hawaii,Democrats,100.0,90,50.0,900.0
 Hawaii,Trump,0.0,910,950.0,0.0
 Idaho,Democrats,0.0,90,50.0,0.0
 Idaho,Trump,100.0,910,50.0,900.0
 Illinois,Democrats,94.4,90,50.0,849.6
 Illinois,Trump,5.6,910,899.6,50.4
-Indiana,Democrats,5.8,90,50.0,52.199999999999996
-Indiana,Trump,94.2,910,102.19999999999999,847.8000000000001
-Iowa,Democrats,34.0,90,50.0,306.0
-Iowa,Trump,66.0,910,356.0,594.0
-Kansas,Democrats,3.6,90,50.0,32.4
-Kansas,Trump,96.4,910,82.4,867.6
+Indiana,Democrats,6.0,90,50.0,54.0
+Indiana,Trump,94.0,910,104.0,846.0
+Iowa,Democrats,34.4,90,50.0,309.59999999999997
+Iowa,Trump,65.6,910,359.59999999999997,590.4
+Kansas,Democrats,3.8,90,50.0,34.199999999999996
+Kansas,Trump,96.2,910,84.19999999999999,865.8000000000001
 Kentucky,Democrats,0.1,90,50.0,0.9
 Kentucky,Trump,99.9,910,50.9,899.1
-Louisiana,Democrats,1.6,90,50.0,14.4
-Louisiana,Trump,98.4,910,64.4,885.6
-Maine,Democrats,71.3,90,50.0,641.6999999999999
-Maine,Trump,28.7,910,691.6999999999999,258.3
+Louisiana,Democrats,1.7,90,50.0,15.299999999999999
+Louisiana,Trump,98.3,910,65.3,884.6999999999999
+Maine,Democrats,71.4,90,50.0,642.6
+Maine,Trump,28.6,910,692.6,257.40000000000003
 Maine-1,Democrats,91.6,90,50.0,824.4
 Maine-1,Trump,8.4,910,874.4,75.60000000000001
-Maine-2,Democrats,40.4,90,50.0,363.59999999999997
-Maine-2,Trump,59.6,910,413.59999999999997,536.4
+Maine-2,Democrats,40.6,90,50.0,365.40000000000003
+Maine-2,Trump,59.4,910,415.40000000000003,534.6
 Maryland,Democrats,99.9,90,50.0,899.1
 Maryland,Trump,0.1,910,949.1,0.9
 Massachusetts,Democrats,99.9,90,50.0,899.1
 Massachusetts,Trump,0.1,910,949.1,0.9
-Michigan,Democrats,59.0,90,50.0,531.0
-Michigan,Trump,41.0,910,581.0,369.0
-Minnesota,Democrats,67.6,90,50.0,608.4
-Minnesota,Trump,32.4,910,658.4,291.59999999999997
-Mississippi,Democrats,5.6,90,50.0,50.4
-Mississippi,Trump,94.4,910,100.4,849.6
-Missouri,Democrats,6.1,90,50.0,54.9
-Missouri,Trump,93.9,910,104.9,845.1
-Montana,Democrats,7.2,90,50.0,64.8
-Montana,Trump,92.8,910,114.8,835.1999999999999
+Michigan,Democrats,59.2,90,50.0,532.8000000000001
+Michigan,Trump,40.8,910,582.8000000000001,367.2
+Minnesota,Democrats,67.7,90,50.0,609.3000000000001
+Minnesota,Trump,32.3,910,659.3000000000001,290.7
+Mississippi,Democrats,5.8,90,50.0,52.199999999999996
+Mississippi,Trump,94.2,910,102.19999999999999,847.8000000000001
+Missouri,Democrats,7.1,90,50.0,63.9
+Missouri,Trump,92.9,910,113.9,836.1
+Montana,Democrats,7.5,90,50.0,67.5
+Montana,Trump,92.5,910,117.5,832.5
 Nebraska,Democrats,0.3,90,50.0,2.6999999999999997
 Nebraska,Trump,99.7,910,52.7,897.3000000000001
-Nebraska-1,Democrats,4.0,90,50.0,36.0
-Nebraska-1,Trump,96.0,910,86.0,864.0
-Nebraska-2,Democrats,41.8,90,50.0,376.2
-Nebraska-2,Trump,58.2,910,426.2,523.8000000000001
+Nebraska-1,Democrats,4.1,90,50.0,36.9
+Nebraska-1,Trump,95.9,910,86.9,863.1
+Nebraska-2,Democrats,42.0,90,50.0,378.0
+Nebraska-2,Trump,58.0,910,428.0,522.0
 Nebraska-3,Democrats,0.0,90,50.0,0.0
 Nebraska-3,Trump,100.0,910,50.0,900.0
-Nevada,Democrats,59.3,90,50.0,533.6999999999999
-Nevada,Trump,40.7,910,583.6999999999999,366.3
-New Hampshire,Democrats,64.7,90,50.0,582.3000000000001
-New Hampshire,Trump,35.3,910,632.3000000000001,317.7
-New Jersey,Democrats,90.6,90,50.0,815.4
-New Jersey,Trump,9.4,910,865.4,84.60000000000001
-New Mexico,Democrats,82.1,90,50.0,738.9
-New Mexico,Trump,17.9,910,788.9,161.1
+Nevada,Democrats,59.4,90,50.0,534.6
+Nevada,Trump,40.6,910,584.6,365.40000000000003
+New Hampshire,Democrats,64.6,90,50.0,581.4
+New Hampshire,Trump,35.4,910,631.4,318.59999999999997
+New Jersey,Democrats,90.7,90,50.0,816.3000000000001
+New Jersey,Trump,9.3,910,866.3000000000001,83.7
+New Mexico,Democrats,82.2,90,50.0,739.8000000000001
+New Mexico,Trump,17.8,910,789.8000000000001,160.20000000000002
 New York,Democrats,98.6,90,50.0,887.4
 New York,Trump,1.4,910,937.4,12.6
-North Carolina,Democrats,42.8,90,50.0,385.2
-North Carolina,Trump,57.2,910,435.2,514.8000000000001
+North Carolina,Democrats,42.9,90,50.0,386.09999999999997
+North Carolina,Trump,57.1,910,436.09999999999997,513.9
 North Dakota,Democrats,0.0,90,50.0,0.0
 North Dakota,Trump,100.0,910,50.0,900.0
-Ohio,Democrats,30.8,90,50.0,277.2
-Ohio,Trump,69.2,910,327.2,622.8000000000001
+Ohio,Democrats,31.2,90,50.0,280.8
+Ohio,Trump,68.8,910,330.8,619.1999999999999
 Oklahoma,Democrats,0.1,90,50.0,0.9
 Oklahoma,Trump,99.9,910,50.9,899.1
-Oregon,Democrats,86.1,90,50.0,774.9
-Oregon,Trump,13.9,910,824.9,125.10000000000001
+Oregon,Democrats,86.2,90,50.0,775.8000000000001
+Oregon,Trump,13.8,910,825.8000000000001,124.2
 Pennsylvania,Democrats,53.7,90,50.0,483.3
 Pennsylvania,Trump,46.3,910,533.3,416.7
 Rhode Island,Democrats,96.1,90,50.0,864.9
@@ -93,23 +93,23 @@ South Carolina,Democrats,12.0,90,50.0,108.0
 South Carolina,Trump,88.0,910,158.0,792.0
 South Dakota,Democrats,0.2,90,50.0,1.8
 South Dakota,Trump,99.8,910,51.8,898.1999999999999
-Tennessee,Democrats,0.8,90,50.0,7.2
-Tennessee,Trump,99.2,910,57.2,892.8000000000001
-Texas,Democrats,21.9,90,50.0,197.1
-Texas,Trump,78.1,910,247.1,702.9
-US,Democrats,53.6,90,50.0,482.40000000000003
-US,Trump,46.5,910,532.4000000000001,418.5
-Utah,Democrats,0.3,90,50.0,2.6999999999999997
-Utah,Trump,99.7,910,52.7,897.3000000000001
+Tennessee,Democrats,0.9,90,50.0,8.1
+Tennessee,Trump,99.1,910,58.1,891.9
+Texas,Democrats,22.1,90,50.0,198.9
+Texas,Trump,77.9,910,248.9,701.1
+US,Democrats,53.9,90,50.0,485.09999999999997
+US,Trump,46.1,910,535.0999999999999,414.90000000000003
+Utah,Democrats,0.4,90,50.0,3.6
+Utah,Trump,99.6,910,53.6,896.4
 Vermont,Democrats,100.0,90,50.0,900.0
 Vermont,Trump,0.0,910,950.0,0.0
 Virginia,Democrats,70.6,90,50.0,635.4
 Virginia,Trump,29.4,910,685.4,264.59999999999997
-Washington,Democrats,90.7,90,50.0,816.3000000000001
-Washington,Trump,9.3,910,866.3000000000001,83.7
+Washington,Democrats,90.8,90,50.0,817.1999999999999
+Washington,Trump,9.2,910,867.1999999999999,82.8
 West Virginia,Democrats,0.0,90,50.0,0.0
 West Virginia,Trump,100.0,910,50.0,900.0
-Wisconsin,Democrats,49.6,90,50.0,446.40000000000003
-Wisconsin,Trump,50.4,910,496.40000000000003,453.59999999999997
+Wisconsin,Democrats,49.9,90,50.0,449.09999999999997
+Wisconsin,Trump,50.1,910,499.09999999999997,450.90000000000003
 Wyoming,Democrats,0.0,90,50.0,0.0
 Wyoming,Trump,100.0,910,50.0,900.0
