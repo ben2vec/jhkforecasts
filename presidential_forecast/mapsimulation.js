@@ -63,6 +63,7 @@ d3.csv("simulation.csv", function (data) {
       stdev: +d.stdev,
       voteperc: +d.voteperc,
       margin: +d.margin,
+      pollclose: +d.pollclose,
     }
   })
   data.forEach(function (d) {
@@ -119,7 +120,7 @@ d3.csv("simulation.csv", function (data) {
       var thirdvote = data[i].thirdvote;
       var tippingpoint = data[i].tippingpoint;
       var absmargin = data[i].absmargin;
-
+      var pollclose = data[i].pollclose;
       for (var j = 0; j < json.features.length; j++) {
         var jsonState = json.features[j].properties.name;
 
@@ -129,7 +130,7 @@ d3.csv("simulation.csv", function (data) {
           json.features[j].properties.demvote = demvote
           json.features[j].properties.thirdvote = thirdvote
           json.features[j].properties.tippingpoint = tippingpoint
-          json.features[j].properties.absmargin = absmargin
+          json.features[j].properties.pollclose = pollclose
             ;
 
 
@@ -139,7 +140,7 @@ d3.csv("simulation.csv", function (data) {
         }
       }
     }
-    json.features.sort((a, b) => b.properties.absmargin - a.properties.absmargin)
+    json.features.sort((a, b) => a.properties.pollclose - b.properties.pollclose)
     console.log(data)
     console.log(dataabs)
     console.log(gopev)
@@ -386,9 +387,33 @@ d3.csv("simulation.csv", function (data) {
         .style("fill", d => d.properties.margin >= 0 ? gopwincol : demwincol)
       
       ;
+      svg.selectAll("path2")
+      .data(json.features)
+        .enter()
+        .append("path")
+        .attr("class","states")
+      .attr("d", path)
+      .style("stroke", d => d.properties.tippingpoint ==1 ? "black": "none")
+      .style("stroke-width", "2")
+      .style("fill", "none")
 
+      svg.append("rect")
+      .attr("x", 850)
+      .attr("y", 350)
+      .attr("width", 20)
+      .attr("height", 20)
+      .style("stroke", "black")
+.style("stroke-width", 2)
+.attr("ry","6")
+.style("fill", "none");
 
-
+svg.append("text")
+  .text("Tipping Point")
+  .attr("x", 760)
+.attr("y", 365)
+.attr("fill","black")
+.style("font-weight","500")
+.style("font-size","15");
 
     var x = d3.scaleLinear()
       .domain([0, 538])
@@ -410,7 +435,7 @@ d3.csv("simulation.csv", function (data) {
         tool_tip1.show();
         var tipSVG = d3.select("#tipDiv1")
           .append("svg")
-          .attr("width", 150)
+          .attr("width", 200)
           .attr("height", 50);
 
 
@@ -481,6 +506,12 @@ d3.csv("simulation.csv", function (data) {
       .attr("transform", function (d, i) { return "translate(0," + i * 25 + ")" })
 
 
+    legend.append("rect")
+      .attr("x",d=>d.margin>=0? 530:470)
+      .attr("y", -27)
+      .attr("width", 60)
+      .attr("height", 24)
+      .style("fill", d=>d.margin>=0? gopwincol:demwincol)
 
     legend.append("text")
       .attr("class", "legend-text")
@@ -504,22 +535,32 @@ d3.csv("simulation.csv", function (data) {
 
     legend.append("text")
       .attr("class", "legend-text")
-      .attr("x", 530)
+      .attr("x", 500)
       .attr("y", -10)
       .style("fill", "Black")
-      .style("font-size", 15)
+      .style("font-size", 12)
       .attr("font-weight", 500)
       .text(d => formatvalue(d.demvote) + "%")
       .attr("text-anchor", "middle")
 
     legend.append("text")
       .attr("class", "legend-text")
-      .attr("x", 600)
+      .attr("x", 560)
       .attr("y", -10)
       .style("fill", "Black")
-      .style("font-size", 15)
+      .style("font-size", 12)
       .attr("font-weight", 500)
       .text(d => formatvalue(d.demvote) + "%")
+      .attr("text-anchor", "middle")
+
+      legend.append("text")
+      .attr("class", "legend-text")
+      .attr("x", 620)
+      .attr("y", -10)
+      .style("fill", "Black")
+      .style("font-size", 12)
+      .attr("font-weight", 500)
+      .text(d => formatValue(d.thirdvote) + "%")
       .attr("text-anchor", "middle")
 
 
@@ -528,7 +569,7 @@ d3.csv("simulation.csv", function (data) {
       .attr("x", 750)
       .attr("y", -10)
       .style("fill", d => d.margin>=0?gopwincol:demwincol)
-      .style("font-size", 15)
+      .style("font-size", 12)
       .attr("font-weight", 500)
       .text(d => d.margin>=0?"Trump +"+formatValue(d.margin) + "%":"Democrat +"+formatValue(Math.abs(d.margin)) + "%")
       .attr("text-anchor", "middle")
@@ -553,6 +594,76 @@ d3.csv("simulation.csv", function (data) {
       .attr("y2", -2.5)
       .attr("stroke-width", 1)
       .attr("stroke", "#E2E2E2")
+
+      svg.append("text")
+      .attr("class", "legend-text")
+      .attr("x", 130)
+      .attr("y", 1060)
+      .style("fill", "Black")
+      .style("font-size", 20)
+      .attr("font-weight", 700)
+      .text("State")
+      .attr("text-anchor", "start")
+
+      svg.append("text")
+      .attr("class", "legend-text")
+      .attr("x", 330)
+      .attr("y", 1060)
+      .style("fill", "Black")
+      .style("font-size", 15)
+      .attr("font-weight", 700)
+      .text("Electoral Votes")
+      .attr("text-anchor", "middle")
+
+      svg.append("text")
+      .attr("class", "legend-text")
+      .attr("x", 450)
+      .attr("y", 1060)
+      .style("fill", "Black")
+      .style("font-size", 12)
+      .attr("font-weight", 700)
+      .text("Democrat ranked EVs")
+      .attr("text-anchor", "middle")
+
+      svg.append("text")
+      .attr("class", "legend-text")
+      .attr("x", 600)
+      .attr("y", 1060)
+      .style("fill", "Black")
+      .style("font-size", 12)
+      .attr("font-weight", 700)
+      .text("Democrat")
+      .attr("text-anchor", "middle")
+
+      svg.append("text")
+      .attr("class", "legend-text")
+      .attr("x", 660)
+      .attr("y", 1060)
+      .style("fill", "Black")
+      .style("font-size", 12)
+      .attr("font-weight", 700)
+      .text("Trump")
+      .attr("text-anchor", "middle")
+
+      svg.append("text")
+      .attr("class", "legend-text")
+      .attr("x", 720)
+      .attr("y", 1060)
+      .style("fill", "Black")
+      .style("font-size", 12)
+      .attr("font-weight", 700)
+      .text("3rd Party")
+      .attr("text-anchor", "middle")
+
+      svg.append("text")
+      .attr("class", "legend-text")
+      .attr("x", 850)
+      .attr("y", 1060)
+      .style("fill", "Black")
+      .style("font-size", 20)
+      .attr("font-weight", 700)
+      .text("Margin")
+      .attr("text-anchor", "middle")
 
     svg.append("line")
       .attr("x1", 0)
