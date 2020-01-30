@@ -27,30 +27,31 @@
       
   // Define linear scale for output
   var color = d3.scaleLinear()
-              .domain([0,50,100])
+              .domain([-30,0,30])
               .range(["#0091FF","white" ,"#FF6060"]);
   
-  
-  
+  var gopwincol = "#FF6060"
+  var demwincol ="#0091FF"
   //Create SVG element and append map to the SVG
   var svg = d3.select("#usmap")
         .append("svg")
-        .attr("viewBox",'100 50 820 450');
-  
+        .attr("viewBox",'100 50 820 950');
+
+  var formatValue = d3.format(".3");
   
   simulation = Math.random()*100
       
-  
-  
+  norminv = jStat.normal.inv( .9, 0, 1 )
+  console.log(formatValue(norminv))
   // Load in my states data!
-  d3.csv("US Map.csv", function(data) {
+  d3.csv("simulation.csv", function(data) {
     
-    data.forEach(function (d) {
-      d.winner = d.gopWin>((Math.random()*100)+simulation)/2?"GOP":"DEM";
-      return d;
-  })
+    data.forEach(d=>
+      d.gopvote = jStat.normal.inv(.9,d.gopproj, 8)
+      
+  )
 
-  
+  console.log(data)
   // Load GeoJSON data and merge with states data
   d3.json("us-states.json", function(json) {
   
@@ -61,20 +62,7 @@
     var dataState = data[i].state;
   
     // Grab data value 
-    var gopwin = data[i].gopWin
-  
-    var demwin = data[i].demWin
-  
-    var label = data[i].label
-  
-    var xvalue = data[i].xValue
-  
-    var yvalue = data[i].yValue
-  
-    var tippingpoint = data[i].tippingPoint;
-
-    var winner = data[i].winner;
-  
+    var margin = data[i].margin;
     // Find the corresponding state inside the GeoJSON
     for (var j = 0; j < json.features.length; j++)  {
       var jsonState = json.features[j].properties.name;
@@ -82,13 +70,8 @@
       if (dataState == jsonState) {
   
       // Copy the data value into the JSON
-      json.features[j].properties.gopWin = gopwin
-      json.features[j].properties.tippingPoint = tippingpoint
-      json.features[j].properties.demWin = demwin
-      json.features[j].properties.xValue = xvalue
-      json.features[j].properties.yValue = yvalue
-      json.features[j].properties.label = label
-      json.features[j].properties.winner = winner
+      json.features[j].properties.margin = margin
+     
       ;
       
       
@@ -107,11 +90,27 @@
     .append("a")
     .attr("xlink:href", function(d) {return  d.properties.name})
     .append("path")
-    .attr("class","states")
+    .attr("class","margins")
     .attr("d", path)
-    .style("stroke", "#fff")
+    .style("stroke", "BLACK")
     .style("stroke-width", "1")
-    .style("fill",d=>d.properties.winner=="GOP"?"#FF6060":"#0091FF")
+    .style("fill",d=>color(d.properties.margin))
+    .attr("text-anchor","middle")
+    .attr("transform","translate(0,500)")
+  
+
+    svg.selectAll("path2")
+    .data(json.features)
+    .enter()
+    .append("a")
+    .attr("xlink:href", function(d) {return  d.properties.name})
+    .append("path")
+    .attr("class","winner")
+    .attr("d", path)
+    
+    .style("stroke", "BLACK")
+    .style("stroke-width", "1")
+    .style("fill",d=>d.properties.margin>0?gopwincol:demwincol)
     .attr("text-anchor","middle")
   
 
@@ -133,6 +132,20 @@
 .attr("font-size","10")
 .attr("fill","black")
 .attr("text-anchor","middle")
+
+svg.selectAll("labels2")
+      .data(data)
+      .enter()
+      .append("text")
+.text(d => d.label)
+.attr("x",d=> d.xValue)
+.attr("y",d=> d.yValue)
+.attr("font-family","brandon-grotesque")
+.attr("font-weight","700")
+.attr("font-size","10")
+.attr("fill","black")
+.attr("text-anchor","middle")
+.attr("transform","translate(0,500)")
 
 
     });	
