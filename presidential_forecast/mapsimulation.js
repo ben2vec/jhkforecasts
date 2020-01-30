@@ -17,8 +17,8 @@ var path = d3.geoPath()
 
 
 var color = d3.scaleLinear()
-  .domain([-30, 0, 30])
-  .range(["#0091FF", "white", "#FF6060"]);
+  .domain([-100,-10, 0, 10,100])
+  .range(["#0091FF","#0091FF", "white", "#FF6060","#FF6060"]);
 
 var gopwincol = "#FF6060"
 var demwincol = "#0091FF"
@@ -26,6 +26,13 @@ var demwincol = "#0091FF"
 var svg = d3.select("#usmap")
   .append("svg")
   .attr("viewBox", '100 -50 820 950');
+
+var tool_tip1 = d3.tip()
+  .attr("class", "d3-tip")
+  .offset([-75, -75])
+  .html("<div id='tipDiv1'></div>");
+
+svg.call(tool_tip1)
 
 var formatValue = d3.format(".3");
 
@@ -59,6 +66,7 @@ d3.csv("simulation.csv", function (data) {
     d.margin = d.gopvote - d.demvote;
     d.gopev = d.margin >= 0 ? d.electoralvotes : 0;
     d.absmargin = Math.abs(d.margin);
+    d.height = d.absmargin>50?300:d.absmargin*6
     return d;
   })
   
@@ -142,19 +150,77 @@ d3.csv("simulation.csv", function (data) {
 
 
       var x = d3.scaleLinear()
-        .range([0,538])
-        .domain([120,880])
+        .domain([0,538])
+        .range([0,750])
 
       svg.selectAll("rect")
       .data(data)
       .enter()
       .append("rect")
-      .attr("y",900)
-      .attr("x",)
+      .attr("stroke","white")
+      .attr("transform","translate(135,0)")
+      .attr("y",d=>800-d.height)
+      .attr("x",d=>x(d.indexev))
+      .attr("rx",3)
+      .attr("height",d=>d.height)
+      .attr("width",d=>x(d.electoralvotes))
+      .attr("fill",d=>color(d.margin))
+      .on('mouseover', function (d) {
+        tool_tip1.show();
+        var tipSVG = d3.select("#tipDiv1")
+          .append("svg")
+          .attr("width", 150)
+          .attr("height", 50);
+  
+  
+  
+        tipSVG.append("text")
+          .text(d.state)
+          .attr("y", 20)
+          .attr("x", 75)
+          .attr("fill", "#black")
+          .attr("text-anchor", "middle")
+          .style("font-weight", "600")
+          .style("font-size", "20");
+  
+        tipSVG.append("text")
+          .text(d.margin > 0?"R+"+formatValue(d.absmargin)+"%":"D+"+formatValue(d.absmargin)+"%")
+          .attr("y", 40)
+          .attr("x", 75)
+          .attr("fill", "#black")
+          .attr("text-anchor", "middle")
+          .style("font-weight", "600")
+          .style("font-size", "20");
+  
+  
+  
+  
+      })
+      .on('mouseout', tool_tip1.hide);
       
+      svg.append("line")
+      .attr("x1", 510)
+      .attr("y1", 800)
+      .attr("x2", 510)
+      .attr("y2", 510)
+      .attr("stroke", "black")
+      .attr("stroke-width", "1");
+  
+    svg.append("text")
+      .html("270")
+      .attr("x", 510)
+      .attr("y", 820)
+      .attr("text-anchor", "middle")
+      .style("font-weight", "600")
+      .style("font-family", "brandon-grotesque");
 
-
-      
+    svg.append("text")
+      .text("Which State tipped this election?")
+      .attr("x", 510)
+      .attr("y", 500)
+      .attr("text-anchor", "middle")
+      .style("font-weight", "600")
+      .style("font-family", "brandon-grotesque");
 
     
 
