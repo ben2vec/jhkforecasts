@@ -14,7 +14,9 @@ var projection = d3.geoAlbersUsa()
 var path = d3.geoPath()             
   .projection(projection);  
 
-
+  var colormargin = d3.scaleLinear()
+  .domain([100,-30, 0, 30,100])
+  .range(["#0091FF","#0091FF", "white", "#FF6060","#FF6060"]);
 
 var color = d3.scaleLinear()
   .domain([-100,-10, 0, 10,100])
@@ -133,7 +135,7 @@ d3.csv("simulation.csv", function (data) {
       .attr("d", path)
       .style("stroke", "BLACK")
       .style("stroke-width", "1")
-      .style("fill", d=> color(d.properties.margin))
+      .style("fill", d=> colormargin(d.properties.margin))
       .attr("text-anchor", "middle")
 
     svg.append("g")
