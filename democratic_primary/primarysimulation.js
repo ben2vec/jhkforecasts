@@ -2,303 +2,106 @@
 
 
 
-var width3 = 1020;
-var height3 = 500;
 
 
-var projection = d3.geoAlbersUsa()
-  .translate([width3 / 2, height3 / 2])   
-  .scale([900]);         
 
 
-var path = d3.geoPath()             
-  .projection(projection);  
 
-  var colormargin = d3.scaleLinear()
-  .domain([100,-30, 0, 30,100])
-  .range(["#0091FF","#0091FF", "white", "#FF6060","#FF6060"]);
 
-var color = d3.scaleLinear()
-  .domain([-100,-10, 0, 10,100])
-  .range(["#0091FF","#0091FF", "white", "#FF6060","#FF6060"]);
-
-var gopwincol = "#FF6060"
-var demwincol = "#0091FF"
-
-var svg = d3.select("#usmap")
-  .append("svg")
-  .attr("viewBox", '100 -50 820 950');
-
-var tool_tip1 = d3.tip()
-  .attr("class", "d3-tip")
-  .offset([-75, -75])
-  .html("<div id='tipDiv1'></div>");
-
-svg.call(tool_tip1)
 
 var formatValue = d3.format(".2");
 
-simulation = Math.random()
+Bidensimulation = Math.random()
+Bloombergsimulation = Math.random()
+Buttigiegsimulation = Math.random()
+Klobucharsimulation = Math.random()
+Sanderssimulation = Math.random()
+Steyersimulation = Math.random()
+Warrensimulation = Math.random()
+Yangsimulation = Math.random()
 
-norminv = jStat.normal.inv(.9, 0, 1)
-console.log(formatValue(norminv))
+
+var parseTime = d3.timeParse("%Y-%m-%d")
+formatDate = d3.timeFormat("%b - %d");
 
 d3.csv("simulator.csv", function (data) {
 
   var data = data.map((d, i) => {
     return {
       state: d.state,
-      electoralvotes: +d.electoralvotes,
-      gopproj: +d.gopproj,
-      demproj: +d.demproj,
-      thirdproj: +d.thirdproj,
-      stdev: +d.stdev,
-      voteperc: +d.voteperc,
-      margin: +d.margin,
+      date: parseTime(d.date),
+      delegates: +d.delegates,
+      Bidenproj: +d.Bidenproj,
+      Bloombergproj: +d.Bloombergproj,
+      Buttigiegproj: +d.Buttigiegproj,
+      Klobucharproj: +d.Klobucharproj,
+      Sandersproj: +d.Sandersproj,
+      Steyerproj: +d.Steyerproj,
+      Warrenproj: +d.Warrenproj,
+      Yangproj: +d.Yangproj,
     }
   })
+
+
   data.forEach(function (d) {
-    d.gopvoteraw = jStat.normal.inv((simulation + Math.random()) / 2, d.gopproj, d.stdev);
-    d.demvoteraw = jStat.normal.inv(((1 - simulation) + Math.random()) / 2, d.demproj, d.stdev);
-    d.thirdvoteraw = jStat.normal.inv((Math.random()), d.thirdproj, d.thirdproj / 4);
-    d.totalraw = d.gopvoteraw + d.demvoteraw + d.thirdvoteraw
-    d.gopvote = d.gopvoteraw / ((d.totalraw / 100));
-    d.demvote = d.demvoteraw / ((d.totalraw / 100));
-    d.thirdvote = d.thirdvoteraw / ((d.totalraw / 100));
-    d.margin = d.gopvote - d.demvote;
-    d.gopev = d.margin >= 0 ? d.electoralvotes : 0;
-    d.absmargin = Math.abs(d.margin);
-    d.height = d.absmargin>50?300:d.absmargin*6
+    d.Bidenstd = d.Bidenproj > 25 ? 15 : Math.sqrt(d.Bidenproj + .01) * 3;
+    d.Bloombergstd = d.Bloombergproj > 25 ? 15 : Math.sqrt(d.Bloombergproj + .01) * 3;
+    d.Buttigiegstd = d.Buttigiegproj > 25 ? 15 : Math.sqrt(d.Buttigiegproj + .01) * 3;
+    d.Klobucharstd = d.Klobucharproj > 25 ? 15 : Math.sqrt(d.Klobucharproj + .01) * 3;
+    d.Sandersstd = d.Sandersproj > 25 ? 15 : Math.sqrt(d.Sandersproj + .01) * 3;
+    d.Steyerstd = d.Steyerproj > 25 ? 15 : Math.sqrt(d.Steyerproj + .01) * 3;
+    d.Warrenstd = d.Warrenproj > 25 ? 15 : Math.sqrt(d.Warrenproj + .01) * 3;
+    d.Yangstd = d.Yangproj > 25 ? 15 : Math.sqrt(d.Yangproj + .01) * 3;
+    d.Bidenvoteraw = jStat.normal.inv((Bidensimulation * 3 + Math.random()) / 4, d.Bidenproj, d.Bidenstd);
+    d.Bloombergvoteraw = jStat.normal.inv((Bloombergsimulation * 3 + Math.random()) / 4, d.Bloombergproj, d.Bloombergstd);
+    d.Buttigiegvoteraw = jStat.normal.inv((Buttigiegsimulation * 3 + Math.random()) / 4, d.Buttigiegproj, d.Buttigiegstd);
+    d.Klobucharvoteraw = jStat.normal.inv((Klobucharsimulation * 3 + Math.random()) / 4, d.Klobucharproj, d.Klobucharstd);
+    d.Sandersvoteraw = jStat.normal.inv((Sanderssimulation * 3 + Math.random()) / 4, d.Sandersproj, d.Sandersstd);
+    d.Steyervoteraw = jStat.normal.inv((Steyersimulation * 3 + Math.random()) / 4, d.Steyerproj, d.Steyerstd);
+    d.Warrenvoteraw = jStat.normal.inv((Warrensimulation * 3 + Math.random()) / 4, d.Warrenproj, d.Warrenstd);
+    d.Yangvoteraw = jStat.normal.inv((Yangsimulation * 3 + Math.random()) / 4, d.Yangproj, d.Yangstd);
+    d.Bidenvoteraw = d.Bidenvoteraw > 0 ? d.Bidenvoteraw : 0;
+    d.Bloombergvoteraw = d.Bloombergvoteraw > 0 ? d.Bloombergvoteraw : 0;
+    d.Buttigiegvoteraw = d.Buttigiegvoteraw > 0 ? d.Buttigiegvoteraw : 0;
+    d.Klobucharvoteraw = d.Klobucharvoteraw > 0 ? d.Klobucharvoteraw : 0;
+    d.Sandersvoteraw = d.Sandersvoteraw > 0 ? d.Sandersvoteraw : 0;
+    d.Steyervoteraw = d.Steyervoteraw > 0 ? d.Steyervoteraw : 0;
+    d.Warrenvoteraw = d.Warrenvoteraw > 0 ? d.Warrenvoteraw : 0;
+    d.Yangvoteraw = d.Yangvoteraw > 0 ? d.Yangvoteraw : 0;
+    d.sumvoteraw = d.Bidenvoteraw + d.Bloombergvoteraw + d.Buttigiegvoteraw + d.Klobucharvoteraw + d.Sandersvoteraw + d.Steyervoteraw + d.Warrenvoteraw + d.Yangvoteraw
+    d.Bidenvote = d.Bidenvoteraw / ((d.sumvoteraw / 95))
+    d.Bloombergvote = d.Bloombergvoteraw / ((d.sumvoteraw / 95))
+    d.Buttigiegvote = d.Buttigiegvoteraw / ((d.sumvoteraw / 95))
+    d.Klobucharvote = d.Klobucharvoteraw / ((d.sumvoteraw / 95))
+    d.Sandersvote = d.Sandersvoteraw / ((d.sumvoteraw / 95))
+    d.Steyervote = d.Steyervoteraw / ((d.sumvoteraw / 95))
+    d.Warrenvote = d.Warrenvoteraw / ((d.sumvoteraw / 95))
+    d.Yangvote = d.Yangvoteraw / ((d.sumvoteraw / 95))
+    d.Bidenov15 = d.Bidenvote > 15 ? d.Bidenvote : 0
+    d.Bloombergov15 = d.Bloombergvote > 15 ? d.Bloombergvote : 0
+    d.Buttigiegov15 = d.Buttigiegvote > 15 ? d.Buttigiegvote : 0
+    d.Klobucharov15 = d.Klobucharvote > 15 ? d.Klobucharvote : 0
+    d.Sandersov15 = d.Sandersvote > 15 ? d.Sandersvote : 0
+    d.Steyerov15 = d.Steyervote > 15 ? d.Steyervote : 0
+    d.Warrenov15 = d.Warrenvote > 15 ? d.Warrenvote : 0
+    d.Yangov15 = d.Yangvote > 15 ? d.Yangvote : 0
+    d.sumover15 = d.Bidenov15 + d.Bloombergov15 + d.Buttigiegov15 + d.Klobucharov15 + d.Sandersov15 + d.Steyerov15 + d.Warrenov15 + d.Yangov15
+    d.Bidendelegateun15 = d.Bidenov15 == 0 ? Math.round((300 * Math.pow(d.Bidenvote / 100, 4) - 0.0006) * d.delegates) : 0;
+    d.Bloombergdelegateun15 = d.Bloombergov15 == 0 ? Math.round((300 * Math.pow(d.Bloombergvote / 100, 4) - 0.0006) * d.delegates) : 0;
+    d.Buttigiegdelegateun15 = d.Buttigiegov15 == 0 ? Math.round((300 * Math.pow(d.Buttigiegvote / 100, 4) - 0.0006) * d.delegates) : 0;
+    d.Klobuchardelegateun15 = d.Klobcharov15 == 0 ? Math.round((300 * Math.pow(d.Klobucharvote / 100, 4) - 0.0006) * d.delegates) : 0;
+    d.Sandersdelegateun15 = d.Sandersov15 == 0 ? Math.round((300 * Math.pow(d.Sandersvote / 100, 4) - 0.0006) * d.delegates) : 0;
+    d.Steyerdelegateun15 = d.Steyerov15 == 0 ? Math.round((300 * Math.pow(d.Steyervote / 100, 4) - 0.0006) * d.delegates) : 0;
+    d.Warrendelegateun15 = d.Warrenov15 == 0 ? Math.round((300 * Math.pow(d.Warrenvote / 100, 4) - 0.0006) * d.delegates) : 0;
+    d.Yangdelegateun15 = d.Yangov15 == 0 ? Math.round((300 * Math.pow(d.Yangvote / 100, 4) - 0.0006) * d.delegates) : 0;
+    d.over15delegates = d.delegates - d.Bidendelegateun15 - d.Bloombergdelegateun15 - d.Buttigiegdelegateun15 - d.Klobuchardelegateun15 - d.Sandersdelegateun15 - d.Steyerdelegateun15 - d.Warrendelegateun15 - d.Yangdelegateun15
+    d.Bidendelegateover15 = Math.round((d.Bidenov15/d.sumover15) * d.over15delegates)
+    d.Bloombergdelegateover15 = Math.round((d.Bloombergov15/d.sumover15) * d.over15delegates)
     return d;
   })
-  
-  var data = data.sort((a, b) => a.margin-b.margin)
-  
-  
-
-  data.forEach(function (d,i) {
-    d.index = i+1;
-    d.indexev = d.index==1?0:data[i-1].indexev+data[i-1].electoralvotes;
-    return d;
-  })
-
-  
-  console.log(data)
-  
-  var gopev = d3.sum(data, d => d.gopev)
-  var demev = 538 - gopev
-    
-  console.log(gopev)
-  console.log(data)
-  console.log(data[0].gopvote)
-  console.log(data[0].demvote)
-  console.log(data[0].thirdvote)
-  console.log(data[0].margin)
- 
-  d3.json("us-states.json", function (json) {
-
-    
-    for (var i = 0; i < data.length; i++) {
-
-      
-      var dataState = data[i].state;
-
-       
-      var margin = data[i].margin;
-      
-      for (var j = 0; j < json.features.length; j++) {
-        var jsonState = json.features[j].properties.name;
-
-        if (dataState == jsonState) {
-
-          
-          json.features[j].properties.margin = margin
-
-            ;
-
-
-         
-
-          break;
-        }
-      }
-    }
-    console.log(json.features)
-    console.log(data)
-    
-    svg.append("g")
-      .attr("id", "margin")
-      .selectAll("path2")
-      .data(json.features)
-      .enter()
-      .append("path")
-      .attr("d", path)
-      .style("stroke", "BLACK")
-      .style("stroke-width", "1")
-      .style("fill", d=> colormargin(d.properties.margin))
-      .attr("text-anchor", "middle")
-
-    svg.append("g")
-      .attr("id", "winner")
-      .selectAll("path")
-      .data(json.features)
-      .enter()
-      .append("path")
-      .attr("d", path)
-      .style("stroke", "BLACK")
-      .style("stroke-width", "1")
-      .style("fill","white")
-      .transition()
-      .delay(300)
-      .style("fill", d=>d.properties.margin>=0?gopwincol:demwincol);
-      
-      
-
-
-      var x = d3.scaleLinear()
-        .domain([0,538])
-        .range([0,750])
-
-      svg.selectAll("rect")
-      .data(data)
-      .enter()
-      .append("rect")
-      .attr("stroke","white")
-      .attr("transform","translate(135,0)")
-      .attr("y",d=>800-d.height)
-      .attr("x",d=>x(d.indexev))
-      .attr("rx",3)
-      .attr("height",d=>d.height)
-      .attr("width",d=>x(d.electoralvotes))
-      .attr("fill",d=>color(d.margin))
-      .on('mouseover', function (d) {
-        tool_tip1.show();
-        var tipSVG = d3.select("#tipDiv1")
-          .append("svg")
-          .attr("width", 150)
-          .attr("height", 50);
-  
-  
-  
-        tipSVG.append("text")
-          .text(d.state)
-          .attr("y", 20)
-          .attr("x", 75)
-          .attr("fill", "#black")
-          .attr("text-anchor", "middle")
-          .style("font-weight", "600")
-          .style("font-size", "20");
-  
-        tipSVG.append("text")
-          .text(d.margin > 0?"R+"+formatValue(d.absmargin)+"%":"D+"+formatValue(d.absmargin)+"%")
-          .attr("y", 40)
-          .attr("x", 75)
-          .attr("fill", "#black")
-          .attr("text-anchor", "middle")
-          .style("font-weight", "600")
-          .style("font-size", "20");
-  
-  
-  
-  
-      })
-      .on('mouseout', tool_tip1.hide);
-      
-      svg.append("line")
-      .attr("x1", 510)
-      .attr("y1", 800)
-      .attr("x2", 510)
-      .attr("y2", 510)
-      .attr("stroke", "black")
-      .attr("stroke-width", "1");
-  
-    svg.append("text")
-      .html("270")
-      .attr("x", 510)
-      .attr("y", 820)
-      .attr("text-anchor", "middle")
-      .style("font-weight", "600")
-      .style("font-family", "brandon-grotesque");
-
-    svg.append("text")
-      .text("Which State tipped this election?")
-      .attr("x", 510)
-      .attr("y", 500)
-      .attr("text-anchor", "middle")
-      .style("font-weight", "600")
-      .style("font-family", "brandon-grotesque");
-
-    
+  console.log(data[0])
+  console.log(data[0].Bidendelegateun15)
 
 
 
-    d3.csv("US Map.csv", function (error, data) {
-
-
-
-
-      svg.selectAll("labels")
-        .data(data)
-        .enter()
-        .append("text")
-        .attr("class", "winner")
-        .text(d => d.label)
-        .attr("x", d => d.xValue)
-        .attr("y", d => d.yValue)
-        .attr("font-family", "brandon-grotesque")
-        .attr("font-weight", "700")
-        .attr("font-size", "10")
-        .attr("fill", "black")
-        .attr("text-anchor", "middle")
-
-        svg.append("text")
-        .attr("x", 780)
-        .attr("y", 30)
-        .style("fill", gopwincol)
-        .style("font-size", 30)
-        .attr("font-weight", 700)
-        .text(gopev)
-        .attr("text-anchor", "end")
-
-        svg.append("text")
-        .attr("x", 780)
-        .attr("y", -10)
-        .style("fill", gopwincol)
-        .style("font-size", 30)
-        .attr("font-weight", 700)
-        .text("Trump")
-        .attr("text-anchor", "end")
-
-        svg.append("text")
-        .attr("x", 140)
-        .attr("y", 30)
-        .style("fill", demwincol)
-        .style("font-size", 30)
-        .attr("font-weight", 700)
-        .text(demev)
-        .attr("text-anchor", "start")
-
-        svg.append("text")
-        .attr("x", 140)
-        .attr("y", -10)
-        .style("fill", demwincol)
-        .style("font-size", 30)
-        .attr("font-weight", 700)
-        .text("Democrats")
-        .attr("text-anchor", "start")
-
-        svg.append("text")
-        .attr("x", 500)
-        .attr("y", -10)
-        .style("fill", "black")
-        .style("font-size", 15)
-        .attr("font-weight", 700)
-        .text("Reload Page to run new simulation.")
-        .attr("text-anchor", "middle")
-        
-
-
-
-    });
-  });
 });

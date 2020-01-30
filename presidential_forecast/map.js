@@ -112,17 +112,23 @@
     .style("fill", d=>color(d.properties.gopWin))
     .attr("text-anchor","middle").on('mouseover', function(d) {
 
-      d3.select(this)
-      .style("fill",d=> d.properties.gopWin>50?"#FF6060":"#0091FF")
       
-  
         tool_tip.show();
         var tipSVG = d3.select("#tipDiv")
           .append("svg")
           .attr("width", 175)
       .attr("height", 120)
       ;
-      
+      tipSVG.append("rect")
+          .attr("y1", 0)
+          .attr("x1", 0)
+          .attr("width",175)
+          .attr("height", 120)
+          .attr("rx",8)
+          .attr("fill","white")
+          .attr("stroke", "black")
+          .attr("stroke-width", 2)
+
     
         tipSVG.append("rect")
           .attr("fill", "#FF6060")
