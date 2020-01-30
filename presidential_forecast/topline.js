@@ -11,7 +11,7 @@ d3.csv("statetoplines.csv", function (error, data) {
     console.log(data)
 
     var svg = d3.select("#topline").append("svg")
-        .attr("viewBox", '0 -50 1000 200')
+        .attr("viewBox", '0 0 1000 200')
 
 
     svg.append("text")

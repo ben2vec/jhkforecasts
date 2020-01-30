@@ -6,8 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<style>
-		#more {
-			display: none;
+		
+		.margin{
+			display:none;
 		}
 
 		.btn {
@@ -38,15 +39,15 @@
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script data-ad-client="ca-pub-8025120308040073" async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140782021-2"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            gtag('js', new Date());
+		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140782021-2"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
 
-            gtag('config', 'UA-140782021-2');
-        </script>
+		gtag('config', 'UA-140782021-2');
+	</script>
 	<link rel="icon" href="https://jkstats76.files.wordpress.com/2019/02/cropped-site-icon.png?w=32" sizes="32x32">
 	<link rel="icon" href="https://jkstats76.files.wordpress.com/2019/02/cropped-site-icon.png?w=192" sizes="192x192">
 
@@ -116,12 +117,36 @@
 		</table>
 	</div>
 
-	
+	<div style="text-align:center ;margin-top: 20px;">
+		<button class="btn default" onclick="winnerfunc()" id="winnerbutton">Winner of State</button>
+		<button class="btn default" onclick="marginfunc()" id="marginbutton">Margin</button>
 
-	<div style="margin-top: 100px;" id="usmap"></div>
+	</div>
+	<script>
+
+		function winnerfunc() {
+			var winner = document.getElementById("winner");
+			var margin = document.getElementById("margin");
+
+
+			winner.style.display = "inline";
+			margin.style.display = "none";
+
+		}
+		function marginfunc() {
+			var winner = document.getElementById("winner");
+			var margin = document.getElementById("margin");
+
+			winner.style.display = "none";
+			margin.style.display = "inline";
+
+		}
+	</script>
+
+	<div style="margin-top: 10px;" id="usmap"></div>
 
 	<script src="mapsimulation.js"></script>
-	
+
 
 
 </body>
