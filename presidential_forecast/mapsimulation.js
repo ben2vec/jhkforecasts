@@ -38,20 +38,18 @@
         .attr("viewBox",'100 50 820 450');
   
   
-  
-  var tool_tip = d3.tip()
-      .attr("class", "d3-tip")
-      .offset([-120,-30])
-      .html("<div id='tipDiv'></div>");
-    
-    svg.call(tool_tip);       
+  simulation = Math.random()*100
+      
   
   
   // Load in my states data!
   d3.csv("US Map.csv", function(data) {
-    var res = data.map((d,i) => {
-              
-          })// setting the range of the input data
+    
+    data.forEach(function (d) {
+      d.winner = d.gopWin>((Math.random()*100)+simulation)/2?"GOP":"DEM";
+      return d;
+  })
+
   
   // Load GeoJSON data and merge with states data
   d3.json("us-states.json", function(json) {
@@ -74,6 +72,8 @@
     var yvalue = data[i].yValue
   
     var tippingpoint = data[i].tippingPoint;
+
+    var winner = data[i].winner;
   
     // Find the corresponding state inside the GeoJSON
     for (var j = 0; j < json.features.length; j++)  {
@@ -88,7 +88,9 @@
       json.features[j].properties.xValue = xvalue
       json.features[j].properties.yValue = yvalue
       json.features[j].properties.label = label
+      json.features[j].properties.winner = winner
       ;
+      
       
       // Stop looking through the JSON
   
@@ -109,115 +111,9 @@
     .attr("d", path)
     .style("stroke", "#fff")
     .style("stroke-width", "1")
-    .style("fill", d=>color(d.properties.gopWin))
-    .attr("text-anchor","middle").on('mouseover', function(d) {
-
-      d3.select(this)
-      .style("fill",d=> d.properties.gopWin>50?"#FF6060":"#0091FF")
-      
+    .style("fill",d=>d.properties.winner=="GOP"?"#FF6060":"#0091FF")
+    .attr("text-anchor","middle")
   
-        tool_tip.show();
-        var tipSVG = d3.select("#tipDiv")
-          .append("svg")
-          .attr("width", 175)
-      .attr("height", 120)
-      ;
-      
-    
-        tipSVG.append("rect")
-          .attr("fill", "#FF6060")
-          .attr("y", 50)
-          .attr("x",5)
-          .attr("width", 0)
-          .attr("height", 20)
-          .transition()
-          .duration(300)
-          .attr("width", d.properties.gopWin);
-      
-    tipSVG.append("text")
-          .text("Gop Win" +"%")
-      .attr("y", 45)
-      .attr("x",5),
-    
-    tipSVG.append("text")
-      .text(d.properties.name)
-      .attr("y", 20)
-      .attr("x",10)
-      .attr("fill","#black")
-      .style("font-weight","600")
-      .style("font-size","20");
-    
-      tipSVG.append("text")
-          .text("Dem Win" +"%")
-          .attr("y", 105)
-          .attr("x",5);
-          
-    
-        tipSVG.append("text")
-          .text(d.properties.gopWin +"%")
-          .attr("y", 65)
-          .attr("x",5)
-          
-      .attr("x", 110)
-      .attr("fill","#FF6060")
-      .style("font-weight","600")
-      .style("font-size","15");
-    
-    tipSVG.append("rect")
-          .attr("fill", "#0091FF")
-          .attr("y", 70)
-          .attr("x",5)
-          .attr("width", 0)
-          .attr("height", 20)
-          .transition()
-          .duration(300)
-          .attr("width", d.properties.demWin);
-    
-        tipSVG.append("text")
-          .text(d.properties.demWin +"%")
-          .attr("y", 85)
-          .attr("x",5)
-      .attr("x", 110)
-      .attr("fill","#0091FF")
-      .style("font-weight","600")
-      .style("font-size","15");
-      })
-      .on('mouseout', 
-      function(d) {
-
-        d3.select(this)
-        .style("fill", function(d) {return color(d.properties.gopWin);})
-        
-    tool_tip.hide()});
-  
-    	
-              svg.selectAll("path2")
-    .data(json.features)
-      .enter()
-      .append("path")
-      .attr("class","states")
-    .attr("d", path)
-    .style("stroke", d => d.properties.tippingPoint >= 3 ? "black": "none")
-    .style("stroke-width", "1.5")
-    .style("fill", "none")
-    
-    svg.append("rect")
-              .attr("x", 850)
-              .attr("y", 350)
-              .attr("width", 20)
-              .attr("height", 20)
-              .style("stroke", "black")
-        .style("stroke-width", 2)
-        .attr("ry","6")
-        .style("fill", "none");
-  
-    svg.append("text")
-          .text("Tipping Points")
-          .attr("x", 760)
-      .attr("y", 365)
-      .attr("fill","black")
-      .style("font-weight","500")
-      .style("font-size","15");
 
       
     d3.csv("US Map.csv", function(error, data){
