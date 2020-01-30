@@ -229,7 +229,7 @@ d3.csv("Sheet2.csv", function (error, data) {
     .attr("y", -17.5)
     .attr("width", d => d.width)
     .attr("height", 25)
-    .attr("fill", d => d.actmargin > 0 ? "#FF6060" : "#0091FF")
+    .attr("fill", d => d.actmargin >= 0 ? "#FF6060" : "#0091FF")
     .attr("opacity", .5)
 
 
@@ -288,6 +288,6 @@ d3.csv("Sheet2.csv", function (error, data) {
     .attr("r", 5)
     .attr("stroke", "Black")
     .attr("stroke-width", 2)
-    .attr("fill", d => d.actmargin > 0 ? "#FF6060" : "#0091FF")
+    .attr("fill", d => d.actmargin >= 0 ? "#FF6060" : "#0091FF")
     .attr("opacity", 1)
 });
