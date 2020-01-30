@@ -11,7 +11,7 @@ Florida,Biden,37.2,124,FL,714.0,397.8154
 Georgia,Biden,38.1,62,GA,680.0117,335.2354
 Hawaii,Biden,25.2,9,HI,380.0,465.0
 Idaho,Biden,25.9,9,ID,310.1851,155.0
-Illinois,Biden,29.1,72,IL,596.6602,231.2954
+Illinois,Biden,29.2,72,IL,596.6602,231.2954
 Indiana,Biden,27.6,34,IN,633.4111,228.4214
 Iowa,Biden,21.1,11,IA,545.8457,202.6782
 Kansas,Biden,23.3,13,KS,487.0,259.1592
@@ -41,7 +41,7 @@ Rhode Island,Biden,26.0,10,RI,-1000.0,-1000.0
 South Carolina,Biden,41.1,36,SC,712.4395,315.6387
 South Dakota,Biden,23.6,6,SD,468.0742,163.5166
 Tennessee,Biden,35.4,36,TN,640.8594,294.8193
-Texas,Biden,29.9,95,TX,480.9902,374.2861
+Texas,Biden,29.9,96,TX,480.9902,374.2861
 Utah,Biden,21.9,9,UT,330.1084,234.978
 Vermont,Biden,18.4,5,VT,-1000.0,-1000.0
 Virginia,Biden,31.2,50,VA,731.0264,252.7842
@@ -52,7 +52,7 @@ Wyoming,Biden,30.1,7,WY,385.9287,179.6255
 District of Columbia,Biden,39.7,12,DC,-1000.0,-1000.0
 Alabama,Bloomberg,11.6,3,AL,637.0,338.6934
 Alaska,Bloomberg,7.5,0,AK,245.0,400.0
-Arizona,Bloomberg,8.0,1,AZ,315.0,306.5801
+Arizona,Bloomberg,7.9,1,AZ,315.0,306.5801
 Arkansas,Bloomberg,11.7,2,AR,560.0,315.6387
 California,Bloomberg,7.1,3,CA,223.0,253.9219
 Colorado,Bloomberg,8.0,1,CO,400.0,245.5645
@@ -60,7 +60,7 @@ Connecticut,Bloomberg,9.8,2,CT,-1000.0,-1000.0
 Delaware,Bloomberg,8.9,0,DE,-1000.0,-1000.0
 Florida,Bloomberg,13.9,24,FL,714.0,397.8154
 Georgia,Bloomberg,11.8,6,GA,680.0117,335.2354
-Hawaii,Bloomberg,8.4,0,HI,380.0,465.0
+Hawaii,Bloomberg,8.3,0,HI,380.0,465.0
 Idaho,Bloomberg,8.3,0,ID,310.1851,155.0
 Illinois,Bloomberg,8.6,2,IL,596.6602,231.2954
 Indiana,Bloomberg,6.0,0,IN,633.4111,228.4214
@@ -92,7 +92,7 @@ Rhode Island,Bloomberg,8.7,0,RI,-1000.0,-1000.0
 South Carolina,Bloomberg,0.0,0,SC,712.4395,315.6387
 South Dakota,Bloomberg,7.3,0,SD,468.0742,163.5166
 Tennessee,Bloomberg,11.6,3,TN,640.8594,294.8193
-Texas,Bloomberg,10.4,8,TX,480.9902,374.2861
+Texas,Bloomberg,9.8,6,TX,480.9902,374.2861
 Utah,Bloomberg,8.0,0,UT,330.1084,234.978
 Vermont,Bloomberg,6.4,0,VT,-1000.0,-1000.0
 Virginia,Bloomberg,10.5,3,VA,731.0264,252.7842
@@ -194,7 +194,7 @@ Rhode Island,Buttigieg,9.9,1,RI,-1000.0,-1000.0
 South Carolina,Buttigieg,5.0,0,SC,712.4395,315.6387
 South Dakota,Buttigieg,11.5,1,SD,468.0742,163.5166
 Tennessee,Buttigieg,6.4,0,TN,640.8594,294.8193
-Texas,Buttigieg,6.3,1,TX,480.9902,374.2861
+Texas,Buttigieg,6.9,1,TX,480.9902,374.2861
 Utah,Buttigieg,7.7,0,UT,330.1084,234.978
 Vermont,Buttigieg,8.4,0,VT,-1000.0,-1000.0
 Virginia,Buttigieg,6.3,0,VA,731.0264,252.7842
@@ -213,7 +213,7 @@ Connecticut,Klobuchar,3.4,0,CT,-1000.0,-1000.0
 Delaware,Klobuchar,2.6,0,DE,-1000.0,-1000.0
 Florida,Klobuchar,4.5,0,FL,714.0,397.8154
 Georgia,Klobuchar,3.1,0,GA,680.0117,335.2354
-Hawaii,Klobuchar,3.0,0,HI,380.0,465.0
+Hawaii,Klobuchar,3.1,0,HI,380.0,465.0
 Idaho,Klobuchar,2.9,0,ID,310.1851,155.0
 Illinois,Klobuchar,4.8,0,IL,596.6602,231.2954
 Indiana,Klobuchar,5.4,0,IN,633.4111,228.4214
@@ -245,7 +245,7 @@ Rhode Island,Klobuchar,3.0,0,RI,-1000.0,-1000.0
 South Carolina,Klobuchar,2.8,0,SC,712.4395,315.6387
 South Dakota,Klobuchar,6.6,0,SD,468.0742,163.5166
 Tennessee,Klobuchar,3.6,0,TN,640.8594,294.8193
-Texas,Klobuchar,3.4,0,TX,480.9902,374.2861
+Texas,Klobuchar,3.6,0,TX,480.9902,374.2861
 Utah,Klobuchar,4.6,0,UT,330.1084,234.978
 Vermont,Klobuchar,3.5,0,VT,-1000.0,-1000.0
 Virginia,Klobuchar,4.9,0,VA,731.0264,252.7842
@@ -264,7 +264,7 @@ Connecticut,Sanders,22.5,20,CT,-1000.0,-1000.0
 Delaware,Sanders,19.5,7,DE,-1000.0,-1000.0
 Florida,Sanders,15.5,52,FL,714.0,397.8154
 Georgia,Sanders,18.1,30,GA,680.0117,335.2354
-Hawaii,Sanders,25.9,9,HI,380.0,465.0
+Hawaii,Sanders,26.0,9,HI,380.0,465.0
 Idaho,Sanders,30.6,10,ID,310.1851,155.0
 Illinois,Sanders,21.6,53,IL,596.6602,231.2954
 Indiana,Sanders,22.3,27,IN,633.4111,228.4214
@@ -296,7 +296,7 @@ Rhode Island,Sanders,23.2,9,RI,-1000.0,-1000.0
 South Carolina,Sanders,17.7,15,SC,712.4395,315.6387
 South Dakota,Sanders,24.9,6,SD,468.0742,163.5166
 Tennessee,Sanders,18.9,19,TN,640.8594,294.8193
-Texas,Sanders,22.8,73,TX,480.9902,374.2861
+Texas,Sanders,22.9,74,TX,480.9902,374.2861
 Utah,Sanders,28.8,12,UT,330.1084,234.978
 Vermont,Sanders,38.7,9,VT,-1000.0,-1000.0
 Virginia,Sanders,22.1,35,VA,731.0264,252.7842
@@ -305,7 +305,7 @@ West Virginia,Sanders,27.1,13,WV,701.0,243.0
 Wisconsin,Sanders,24.3,30,WI,585.2529,163.2588
 Wyoming,Sanders,24.6,5,WY,385.9287,179.6255
 District of Columbia,Sanders,18.5,6,DC,-1000.0,-1000.0
-Alabama,Steyer,2.4,0,AL,637.0,338.6934
+Alabama,Steyer,2.3,0,AL,637.0,338.6934
 Alaska,Steyer,2.6,0,AK,245.0,400.0
 Arizona,Steyer,2.2,0,AZ,315.0,306.5801
 Arkansas,Steyer,1.9,0,AR,560.0,315.6387
@@ -398,7 +398,7 @@ Rhode Island,Warren,17.3,7,RI,-1000.0,-1000.0
 South Carolina,Warren,10.8,2,SC,712.4395,315.6387
 South Dakota,Warren,15.2,4,SD,468.0742,163.5166
 Tennessee,Warren,13.2,6,TN,640.8594,294.8193
-Texas,Warren,15.9,51,TX,480.9902,374.2861
+Texas,Warren,15.8,51,TX,480.9902,374.2861
 Utah,Warren,16.4,7,UT,330.1084,234.978
 Vermont,Warren,14.3,2,VT,-1000.0,-1000.0
 Virginia,Warren,14.0,11,VA,731.0264,252.7842
