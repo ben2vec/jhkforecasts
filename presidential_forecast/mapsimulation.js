@@ -118,6 +118,7 @@ d3.csv("simulation.csv", function (data) {
       var demvote = data[i].demvote;
       var thirdvote = data[i].thirdvote;
       var tippingpoint = data[i].tippingpoint;
+      var absmargin = data[i].absmargin;
 
       for (var j = 0; j < json.features.length; j++) {
         var jsonState = json.features[j].properties.name;
@@ -128,6 +129,7 @@ d3.csv("simulation.csv", function (data) {
           json.features[j].properties.demvote = demvote
           json.features[j].properties.thirdvote = thirdvote
           json.features[j].properties.tippingpoint = tippingpoint
+          json.features[j].properties.absmargin = absmargin
             ;
 
 
@@ -137,6 +139,7 @@ d3.csv("simulation.csv", function (data) {
         }
       }
     }
+    json.features.sort((a, b) => b.properties.absmargin - a.properties.absmargin)
     console.log(data)
     console.log(dataabs)
     console.log(gopev)
