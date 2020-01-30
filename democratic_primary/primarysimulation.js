@@ -43,7 +43,7 @@ simulation = Math.random()
 norminv = jStat.normal.inv(.9, 0, 1)
 console.log(formatValue(norminv))
 
-d3.csv("simulation.csv", function (data) {
+d3.csv("simulator.csv", function (data) {
 
   var data = data.map((d, i) => {
     return {
