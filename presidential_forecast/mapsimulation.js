@@ -383,7 +383,7 @@ d3.csv("simulation.csv", function (data) {
           tool_tip.hide()
         })
       .transition()
-        .delay( function(d,i){return 100*i})
+        .delay( function(d,i){return 20*i})
         .style("fill", d => d.properties.margin >= 0 ? gopwincol : demwincol)
       
       ;
