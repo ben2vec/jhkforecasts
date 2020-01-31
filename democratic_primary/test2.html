@@ -1,37 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
 </head>
+
 <body>
   <script>
-    var data = [
-       ['Foo', 'programmer'],
-       ['Bar', 'bus driver'],
-       ['Moo', 'Reindeer Hunter']
-    ];
-     
-     
-    function download_csv() {
-        var csv = 'Name,Title\n';
-        data.forEach(function(row) {
-                csv += row.join(',');
-                csv += "\n";
-        });
-     
-        console.log(csv);
-        var hiddenElement = document.createElement('a');
-        hiddenElement.href = 'data:text/csv;charset=utf-8,' + encodeURI(csv);
-        hiddenElement.target = '_blank';
-        hiddenElement.download = 'people.csv';
-        hiddenElement.click();
-    }
-    </script>
-     
-    <button onclick="download_csv()">Download CSV</button> 
-    
+var data = Math.random()
+
+var array = []
+
+for (let i = 0; i < 50000; i++) {
+
+  var newdata = Math.random()*300
+
+  array.push(newdata)
+
+}
+console.log(array)
+  </script>
+
+
+
 </body>
+
 </html>

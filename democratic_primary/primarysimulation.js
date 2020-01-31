@@ -1,14 +1,14 @@
 
+var trialruns = 100
 
 
 
 
-
-d3.csv("simulator.csv", function (data) {
+d3.csv("https://raw.githubusercontent.com/jhkersting/jhkforecasts/master/democratic_primary/simulator.csv", function (data) {
 
   var parseTime = d3.timeParse("%Y-%m-%d")
-      formatTime = d3.timeFormat("%Y-%m-%d") 
-  var rawvote = data.map((d, i) => {
+  formatTime = d3.timeFormat("%Y-%m-%d")
+  var rawvote = data.map((d, k) => {
     return {
       state: d.state,
       date: d.date,
@@ -21,11 +21,20 @@ d3.csv("simulator.csv", function (data) {
       Steyervote: +d.Steyerproj,
       Warrenvote: +d.Warrenproj,
       Yangvote: +d.Yangproj,
-      votevote: +d.voteperc
+      bi: +d.bi,
+      bl: +d.bl,
+      bu: +d.bu,
+      kl: +d.kl,
+      sa: +d.sa,
+      st: +d.st,
+      wa: +d.wa,
+      ya: +d.ya,
+      voteperc: +d.voteperc,
+      dateindex: d.dateindex,
     }
   })
 
-  var data = data.map((d, i) => {
+  var data = data.map((d, k) => {
     return {
       state: d.state,
       date: parseTime(d.date),
@@ -41,7 +50,9 @@ d3.csv("simulator.csv", function (data) {
       voteperc: +d.voteperc
     }
   })
-
+  
+  var dataoutput = []
+  for (let i = 0; i < trialruns; i++) {
   var Bidensimulation = Math.random()
   Bloombergsimulation = Math.random()
   Buttigiegsimulation = Math.random()
@@ -52,19 +63,26 @@ d3.csv("simulator.csv", function (data) {
   Yangsimulation = Math.random()
   BidenUS = data[57].Bidenproj
   BloombergUS = data[57].Bloombergproj
-  ButtigiegUS = data[57].Buttigeigproj
+  ButtigiegUS =  data[57].Buttigeigproj
   KlobucharUS = data[57].Klobucharproj
   SandersUS = data[57].Sandersproj
   SteyerUS = data[57].Steyerproj
   WarrenUS = data[57].Warrenproj
   YangUS = data[57].Yangproj
-
-
+  firstSectionResults =0
+  secondSectionResults =0
+  thirdSectionResults =0
+  fourthSectionResults =0
   
+
+
+
+
+
   //IA & NH
   var firstSection = data.slice(0, 2)
-
-  var firstSection = firstSection.map((d, i) => {
+    
+  var firstSection = firstSection.map((d, k) => {
     d.Bidenstd = 15
     d.Bloombergstd = 15
     d.Buttigiegstd = 15
@@ -164,17 +182,26 @@ d3.csv("simulator.csv", function (data) {
     d.dropOut = d.Delegates == 0 ? Math.random() < .4 ? 1 : 0 : 0;
     return d;
   })
-  Bidenbump = firstSection[1].Bidenwin * 3 + firstSection[1].Bidenwin * 3
-  Bloombergbump = 4
-  Buttigiegbump = firstSection[1].Buttigiegwin * 3 + firstSection[1].Buttigiegwin * 1
-  Klobucharbump = firstSection[1].Klobucharwin * 5 + firstSection[1].Klobucharwin * 5
-  Sandersbump = firstSection[1].Sanderswin * 4 + firstSection[1].Bidenwin * 4
-  Steyerbump = firstSection[1].Steyerwin * 4 + firstSection[1].Bidenwin * 2
-  Warrenbump = firstSection[1].Warrenwin * 1 + firstSection[1].Bidenwin * 1
-  Yangbump = firstSection[1].Yangwin * 3 + firstSection[1].Bidenwin * 3
+  Bidenbump =0
+  Bloombergbump =0
+  Buttigiegbump =0
+  Klobucharbump =0
+  Sandersbump =0
+  Steyerbump =0
+  Warrenbump =0
+  Yangbump =0
+
+  //Bidenbump = firstSection[1].Bidenwin * 3 + firstSection[1].Bidenwin * 3
+  //Bloombergbump = 2
+  //Buttigiegbump = firstSection[1].Buttigiegwin * 3 + firstSection[1].Buttigiegwin * 1
+  //Klobucharbump = firstSection[1].Klobucharwin * 5 + firstSection[1].Klobucharwin * 5
+  //Sandersbump = firstSection[1].Sanderswin * 4 + firstSection[1].Sanderswin * 4
+  //Steyerbump = firstSection[1].Steyerwin * 4 + firstSection[1].Steyerwin * 2
+  //Warrenbump = firstSection[1].Warrenwin * 3 + firstSection[1].Warrenwin * 2
+  //Yangbump = firstSection[1].Yangwin * 3 + firstSection[1].Yangwin * 3
 
 
-  
+
 
   firstSectionResults[1].dropOut = 0
   //NV-Super Tuesday
@@ -182,24 +209,24 @@ d3.csv("simulator.csv", function (data) {
 
 
   var dataadj = data.map((d, i) => {
-    d.Bidenproj = d.Bidenproj + Bidenbump
-    d.Bloombergproj = d.Bloombergproj + Bloombergbump
-    d.Buttigiegproj = d.Buttigiegproj + Buttigiegbump
-    d.Klobucharproj = d.Klobucharproj + Klobucharbump
-    d.Sandersproj = d.Sandersproj + Sandersbump
-    d.Steyerproj = d.Steyerproj + Steyerbump
-    d.Warrenproj = d.Warrenproj + Warrenbump
-    d.Yangproj = d.Yangproj + Yangbump
+    d.Bidenproj = d.Bidenproj 
+    d.Bloombergproj = d.Bloombergproj 
+    d.Buttigiegproj = d.Buttigiegproj 
+    d.Klobucharproj = d.Klobucharproj 
+    d.Sandersproj = d.Sandersproj 
+    d.Steyerproj = d.Steyerproj
+    d.Warrenproj = d.Warrenproj
+    d.Yangproj =d.Yangproj
     return d;
   })
 
-  
+
 
 
   var secondSection = dataadj.slice(2, 20)
 
 
-  var secondSection = secondSection.map((d, i) => {
+  var secondSection = secondSection.map((d, k) => {
     d.Bidenstd = 17
     d.Bloombergstd = 17
     d.Buttigiegstd = 17
@@ -294,7 +321,7 @@ d3.csv("simulator.csv", function (data) {
   var thirdSection = dataadj.slice(20, 30)
 
 
-  var thirdSection = thirdSection.map((d, i) => {
+  var thirdSection = thirdSection.map((d, k) => {
     d.Bidenstd = 20
     d.Bloombergstd = 20
     d.Buttigiegstd = 20
@@ -390,7 +417,7 @@ d3.csv("simulator.csv", function (data) {
   var fourthSection = dataadj.slice(30, 44)
 
 
-  var fourthSection = fourthSection.map((d, i) => {
+  var fourthSection = fourthSection.map((d, k) => {
     d.Bidenstd = 22
     d.Bloombergstd = 22
     d.Buttigiegstd = 22
@@ -485,7 +512,7 @@ d3.csv("simulator.csv", function (data) {
   var finalSection = dataadj.slice(44, 57)
 
 
-  var finalSection = finalSection.map((d, i) => {
+  var finalSection = finalSection.map((d, k) => {
     d.Bidenstd = 23
     d.Bloombergstd = 23
     d.Buttigiegstd = 23
@@ -577,7 +604,7 @@ d3.csv("simulator.csv", function (data) {
 
 
 
-  
+
 
 
   var rawsimulation = firstSection.concat(secondSection)
@@ -596,7 +623,7 @@ d3.csv("simulator.csv", function (data) {
     return d;
   })
 
-  var rawsimulation = rawsimulation.map((d, i) => {
+  var rawsimulation = rawsimulation.map((d, k) => {
     d.winner = Math.max(d.Bidenvote, d.Bloombergvote, d.Buttigiegvote, d.Klobucharvote, d.Sandersvote, d.Steyervote, d.Warrenvote, d.Yangvote)
     d.Bidenwin = d.winner == d.Bidenvote ? 1 : 0
     d.Bloombergwin = d.winner == d.Bloombergvote ? 1 : 0
@@ -611,7 +638,7 @@ d3.csv("simulator.csv", function (data) {
   })
 
 
-  var simulation = rawsimulation.map((d, i) => {
+  var simulation = rawsimulation.map((d, k) => {
     return {
       state: d.state,
       date: d.date,
@@ -683,88 +710,137 @@ d3.csv("simulator.csv", function (data) {
   Steyerwin = Steyerdelegates == nomwinner ? 1 : 0
   Warrenwin = Warrendelegates == nomwinner ? 1 : 0
   Yangwin = Yangdelegates == nomwinner ? 1 : 0
-  var nomwinnername = Bidenwin == 1 ? "Biden" : Bloombergwin == 1 ? "Bloomberg" : Buttigiegwin == 1 ? "Buttigeig" : Klobucharwin == 1 ? "Klobuchar" : Sanderswin == 1 ? "Sanders" : Steyerwin == 1 ? "Steyer" : Warrenwin == 1 ? "Warren" : "Yang"
-
- 
-  
-  var us = [{ state: "US", date: new Date(2020, 6, 1), delegates: 3879, winner: nomwinner, Bidenvote: Bidenpop, Bloombergvote: Bloombergpop, Buttigiegvote: Buttigiegpop, Klobucharvote: Klobucharpop, Sandersvote: Sanderspop, Steyervote:Steyerpop,Warrenvote:Warrenpop,Yangvote:Yangpop,Bidendelegates: Bidendelegates,
-  Bloombergdelegates: Bloombergdelegates,
-  Buttigiegdelegates: Buttigiegdelegates,
-  Klobuchardelegates: Klobuchardelegates,
-  Sandersdelegates: Sandersdelegates,
-  Steyerdelegates: Steyerdelegates,
-  Warrendelegates: Warrendelegates,
-  Yangdelegates: Yangdelegates,
-  Bidenwin: Bidenwin,
-  Bloombergwin: Bloombergwin,
-Buttigiegwin: Buttigiegwin,
-Klobucharwin: Klobucharwin,
-Sanderswin: Sanderswin,
-Steyerwin: Steyerwin,
-Warrenwin:Warrenwin,
-Yangwin:Yangwin }]
-
-var simulation = simulation.concat(us)
-  
-console.log(simulation)
+  nomwinner = Bidenwin == 1? "Biden":Bloombergwin == 1? "Bloomberg":Buttigiegwin == 1? "Buttigieg":Klobucharwin == 1? "Klobuchar":Sanderswin == 1? "Sanders":Steyerwin == 1? "Steyer":Warrenwin == 1? "Warren":"Yang"
 
 
-  
-var states = ['Alabama','Alaska','American Samoa','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','District of Columbia','Florida','Georgia','Guam','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Northern Mariana','Ohio','Oklahoma','Oregon','Pennsylvania','Puerto Rico','Rhode Island','South Carolina','South Dakota','Tennessee','Texas','Utah','Vermont','Virgin Island','Virginia','Washington','West Virginia','Wisconsin','Wyoming']
 
-var dataoutput = []
-  for (let i =0; i < 50000;i++){
-      
-      
-      for (let j =0; j < 57;j++){
-      var state = {today :formatTime(new Date()), state : simulation[j].state,
-      date : simulation[j].date,
-      delegates : simulation[j].delegates,
-      winner : simulation[j].winner,
-      Bidenvote : rawvote[j].Bidenvote,
-      Bookervote : 0,
-      Bloombergvote : rawvote[j].Bloombergvote,
-      Buttigeigvote : rawvote[j].Buttigiegvote,
-      Klobucharvote : rawvote[j].Klobucharvote,
-      Sandersvote : rawvote[j].Sandersvote,
-      Steyervote : rawvote[j].Steyervote,
-      Warrenvote : rawvote[j].Warrenvote,
-      Yangvote : rawvote[j].Yangvote,
-      Bidenwin : simulation[j].Bidenwin,
-      Bookerwin : 0,
-      Bloombergwin : simulation[j].Bloombergwin,
-      Buttigeigwin : simulation[j].Buttigiegwin,
-      Klobucharwin : simulation[j].Klobucharwin,
-      Sanderswin : simulation[j].Sanderswin,
-      Steyerwin : simulation[j].Steyerwin,
-      Warrenwin : simulation[j].Warrenwin,
-      Yangwin : simulation[j].Yangwin,
-      Bidendelegates : simulation[j].Bidendelegates,
-      Bookerdelegates : 0,
-      Bloombergdelegates : simulation[j].Bloombergdelegates,
-      Buttigeigdelegates : simulation[j].Buttigiegdelegates,
-      Klobuchardelegates : simulation[j].Klobuchardelegates,
-      Sandersdelegates : simulation[j].Sandersdelegates,
-      Steyerdelegates : simulation[j].Steyerdelegates,
-      Warrendelegates : simulation[j].Warrendelegates,
-      Yangdelegates : simulation[j].Yangdelegates,
-      Bidenavgvote : simulation[j].Bidenvote,
-      Bookeravgvote : 0,
-      Bloombergavgvote : simulation[j].Bloombergvote,
-      Buttigeigavgvote : simulation[j].Buttigiegvote,
-      Klobucharavgvote : simulation[j].Klobucharvote,
-      Sandersavgvote : simulation[j].Sandersvote,
-      Steyeravgvote : simulation[j].Steyervote,
-      Warrenavgvote : simulation[j].Warrenvote,
-      Yangavgvote : simulation[j].Yangdelegates,}
-
-      dataoutput.push(state)
-       
-      }
-
+  var usa = {
+    state:"US",
+    date: new Date(2020, 6, 1),
+    delegates: 3879, 
+    winner: nomwinner, 
+    Bidenvote: Bidenpop, 
+    Bloombergvote: Bloombergpop, 
+    Buttigiegvote: Buttigiegpop, 
+    Klobucharvote: Klobucharpop, 
+    Sandersvote: Sanderspop, 
+    Steyervote: Steyerpop, 
+    Warrenvote: Warrenpop, 
+    Yangvote: Yangpop, 
+    Bidendelegates: Bidendelegates,
+    Bloombergdelegates: Bloombergdelegates,
+    Buttigiegdelegates: Buttigiegdelegates,
+    Klobuchardelegates: Klobuchardelegates,
+    Sandersdelegates: Sandersdelegates,
+    Steyerdelegates: Steyerdelegates,
+    Warrendelegates: Warrendelegates,
+    Yangdelegates: Yangdelegates,
+    Bidenwin: Bidenwin,
+    Bloombergwin: Bloombergwin,
+    Buttigiegwin: Buttigiegwin,
+    Klobucharwin: Klobucharwin,
+    Sanderswin: Sanderswin,
+    Steyerwin: Steyerwin,
+    Warrenwin: Warrenwin,
+    Yangwin: Yangwin,
+    Bidenpop: Bidenpop, 
+    Bloombergpop: Bloombergpop, 
+    Buttigiegpop: Buttigiegpop, 
+    Klobucharpop: Klobucharpop, 
+    Sanderspop: Sanderspop, 
+    Steyerpop: Steyerpop, 
+    Warrenpop: Warrenpop, 
+    Yangpop: Yangpop,
   }
-console.log(dataoutput.slice(0,1000))
+
+  var simulationnew = simulation.concat(usa)
+  
+  
+ 
 
 
+  var states = ['Alabama', 'Alaska', 'American Samoa', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'District of Columbia', 'Florida', 'Georgia', 'Guam', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Northern Marianas', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Puerto Rico', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virgin Islands', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming', "US",'Democrats Abroad']
 
-});
+  console.log(states.length)
+
+  
+ 
+
+    
+
+    for (let j = 0; j < 58; j++) {
+      
+      var state = {
+        trial: i,
+        today: formatTime(new Date()), state: simulationnew[j].state,
+        date: simulationnew[j].date,
+        delegates: simulationnew[j].delegates,
+        Bidenvote: rawvote[j].Bidenvote,
+        Bookervote: 0,
+        Bloombergvote: rawvote[j].Bloombergvote,
+        Buttigeigvote: rawvote[j].Buttigiegvote,
+        Klobucharvote: rawvote[j].Klobucharvote,
+        Sandersvote: rawvote[j].Sandersvote,
+        Steyervote: rawvote[j].Steyervote,
+        Warrenvote: rawvote[j].Warrenvote,
+        Yangvote: rawvote[j].Yangvote,
+        Bidenwin: simulationnew[j].Bidenwin,
+        Bookerwin: 0,
+        Bloombergwin: simulationnew[j].Bloombergwin,
+        Buttigeigwin: simulationnew[j].Buttigiegwin,
+        Klobucharwin: simulationnew[j].Klobucharwin,
+        Sanderswin: simulationnew[j].Sanderswin,
+        Steyerwin: simulationnew[j].Steyerwin,
+        Warrenwin: simulationnew[j].Warrenwin,
+        Yangwin: simulationnew[j].Yangwin,
+        Bidendelegates: rawvote[j].bi,
+        Bookerdelegates: 0,
+        Bloombergdelegates: rawvote[j].bl,
+        Buttigeigdelegates: rawvote[j].bu,
+        Klobuchardelegates: rawvote[j].kl,
+        Sandersdelegates: rawvote[j].sa,
+        Steyerdelegates: rawvote[j].st,
+        Warrendelegates: rawvote[j].wa,
+        Yangdelegates: rawvote[j].ya,
+        dateindex: rawvote[j].dateindex,
+        Bidenavgvote: simulationnew[j].Bidenvote,
+        Bookeravgvote: 0,
+        Bloombergavgvote: simulationnew[j].Bloombergvote,
+        Buttigeigavgvote: simulationnew[j].Buttigiegvote,
+        Klobucharavgvote: simulationnew[j].Klobucharvote,
+        Sandersavgvote: simulationnew[j].Sandersvote,
+        Steyeravgvote: simulationnew[j].Steyervote,
+        Warrenavgvote: simulationnew[j].Warrenvote,
+        Yangavgvote: simulationnew[j].Yangdelegates,
+        Bidenavgdelegates: simulationnew[j].Bidendelegates,
+        Bookeravgdelegates: 0,
+        Bloomberavggdelegates: simulationnew[j].Bloombergdelegates,
+        Buttigeigavgdelegates: simulationnew[j].Buttigiegdelegates,
+        Klobucharavgdelegates: simulationnew[j].Klobuchardelegates,
+        Sandersavgdelegates: simulationnew[j].Sandersdelegates,
+        Steyeravgdelegates: simulationnew[j].Steyerdelegates,
+        Warrenavgdelegates: simulationnew[j].Warrendelegates,
+        Yangavgdelegates: simulationnew[j].Yangdelegates}
+        dataoutput.push(state)
+      }
+      
+    }
+      var finaldata = []
+      for (let j = 0; j < 58; j++) {
+    var keystate = states[j]
+
+    var dataraw = dataoutput.filter(function (d) { return d.state == keystate; })
+    
+    
+    var final ={ State: keystate, bidenwin: d3.mean(dataraw,d=>d.Bidenwin),Bloombergwin: d3.mean(dataraw,d=>d.Bloombergwin),sanderswin: d3.mean(dataraw,d=>d.Sanderswin)}
+    var final =[ keystate, d3.mean(dataraw,d=>d.Bidenwin),d3.mean(dataraw,d=>d.Bloombergwin),d3.mean(dataraw,d=>d.Sanderswin)]
+    
+    console.log(final)
+    finaldata.push(final)
+  }
+  document.getElementById("demo").innerHTML = finaldata.join("<br>")
+  console.log(finaldata)
+  
+})
+
+;
