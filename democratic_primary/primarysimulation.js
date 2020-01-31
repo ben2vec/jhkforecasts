@@ -15,22 +15,7 @@ formatDate = d3.timeFormat("%b - %d");
 
 d3.csv("simulator.csv", function (data) {
 
-  var Bidensimulation = Math.random()
-  Bloombergsimulation = Math.random()
-  Buttigiegsimulation = Math.random()
-  Klobucharsimulation = Math.random()
-  Sanderssimulation = Math.random()
-  Steyersimulation = Math.random()
-  Warrensimulation = Math.random()
-  Yangsimulation = Math.random()
-  Bidenbump = 0
-  Bloombergbump = 0
-  Buttigiegbump = 0
-  Klobucharbump = 0
-  Sandersbump = 0
-  Steyerbump = 0
-  Warrenbump = 0
-  Yangbump = 0
+  
 
   var data = data.map((d, i) => {
     return {
@@ -48,6 +33,34 @@ d3.csv("simulator.csv", function (data) {
     }
   })
 
+  var Bidensimulation = Math.random()
+  Bloombergsimulation = Math.random()
+  Buttigiegsimulation = Math.random()
+  Klobucharsimulation = Math.random()
+  Sanderssimulation = Math.random()
+  Steyersimulation = Math.random()
+  Warrensimulation = Math.random()
+  Yangsimulation = Math.random()
+  BidenUS = data[57].Bidenproj
+  BloombergUS = data[57].Bloombergproj
+  ButtigiegUS = data[57].Buttigeigproj
+  KlobucharUS = data[57].Klobucharproj
+  SandersUS = data[57].Sandersproj
+  SteyerUS = data[57].Steyerproj
+  WarrenUS = data[57].Warrenproj
+  YangUS = data[57].Yangproj
+  Bidenbump = 0
+  Bloombergbump = 0
+  Buttigiegbump = 0
+  Klobucharbump = 0
+  Sandersbump = 0
+  Steyerbump = 0
+  Warrenbump = 0
+  Yangbump = 0
+
+  console.log(BidenUS)
+  console.log(Bidenbump)
+  console.log(Bloombergbump)
   var data = data.map((d, i) => {
 
     d.state = d.state
@@ -68,14 +81,14 @@ d3.csv("simulator.csv", function (data) {
   var firstSection = data.slice(0, 2)
 
   var firstSection = firstSection.map((d, i) => {
-    d.Bidenstd = d.Bidenproj > 25 ? 15 : Math.sqrt(Math.abs(d.Bidenproj) + .01) * 3;
-    d.Bloombergstd = d.Bloombergproj > 25 ? 15 : Math.sqrt(d.Bloombergproj + .01) * 3;
-    d.Buttigiegstd = d.Buttigiegproj > 25 ? 15 : Math.sqrt(d.Buttigiegproj + .01) * 3;
-    d.Klobucharstd = d.Klobucharproj > 25 ? 15 : Math.sqrt(d.Klobucharproj + .01) * 3;
-    d.Sandersstd = d.Sandersproj > 25 ? 15 : Math.sqrt(d.Sandersproj + .01) * 3;
-    d.Steyerstd = d.Steyerproj > 25 ? 15 : Math.sqrt(d.Steyerproj + .01) * 3;
-    d.Warrenstd = d.Warrenproj > 25 ? 15 : Math.sqrt(d.Warrenproj + .01) * 3;
-    d.Yangstd = d.Yangproj > 25 ? 15 : Math.sqrt(d.Yangproj + .01) * 3;
+    d.Bidenstd = Math.pow(d.Bidenproj,.8)
+    d.Bloombergstd = Math.pow(d.Bloombergproj,.8)
+    d.Buttigiegstd = Math.pow(d.Buttigiegproj,.8)
+    d.Klobucharstd = Math.pow(d.Klobucharproj,.8)
+    d.Sandersstd = Math.pow(d.Sandersproj,.8)
+    d.Steyerstd = Math.pow(d.Steyerproj,.8)
+    d.Warrenstd = Math.pow(d.Warrenproj,.8)
+    d.Yangstd = Math.pow(d.Yangproj,.8)
     d.Bidenvoteraw = jStat.normal.inv((Bidensimulation * 3 + Math.random()) / 4, d.Bidenproj, d.Bidenstd);
     d.Bloombergvoteraw = jStat.normal.inv((Bloombergsimulation * 3 + Math.random()) / 4, d.Bloombergproj, d.Bloombergstd);
     d.Buttigiegvoteraw = jStat.normal.inv((Buttigiegsimulation * 3 + Math.random()) / 4, d.Buttigiegproj, d.Buttigiegstd);
@@ -163,14 +176,14 @@ d3.csv("simulator.csv", function (data) {
 
 
   var secondSection = secondSection.map((d, i) => {
-    d.Bidenstd = d.Bidenproj > 25 ? 15 : Math.sqrt(Math.abs(d.Bidenproj) + .01) * 3;
-    d.Bloombergstd = d.Bloombergproj > 25 ? 15 : Math.sqrt(d.Bloombergproj + .01) * 3;
-    d.Buttigiegstd = d.Buttigiegproj > 25 ? 15 : Math.sqrt(d.Buttigiegproj + .01) * 3;
-    d.Klobucharstd = d.Klobucharproj > 25 ? 15 : Math.sqrt(d.Klobucharproj + .01) * 3;
-    d.Sandersstd = d.Sandersproj > 25 ? 15 : Math.sqrt(d.Sandersproj + .01) * 3;
-    d.Steyerstd = d.Steyerproj > 25 ? 15 : Math.sqrt(d.Steyerproj + .01) * 3;
-    d.Warrenstd = d.Warrenproj > 25 ? 15 : Math.sqrt(d.Warrenproj + .01) * 3;
-    d.Yangstd = d.Yangproj > 25 ? 15 : Math.sqrt(d.Yangproj + .01) * 3;
+    d.Bidenstd = Math.pow(d.Bidenproj,.8)
+    d.Bloombergstd = Math.pow(d.Bloombergproj,.8)
+    d.Buttigiegstd = Math.pow(d.Buttigiegproj,.8)
+    d.Klobucharstd = Math.pow(d.Klobucharproj,.8)
+    d.Sandersstd = Math.pow(d.Sandersproj,.8)
+    d.Steyerstd = Math.pow(d.Steyerproj,.8)
+    d.Warrenstd = Math.pow(d.Warrenproj,.8)
+    d.Yangstd = Math.pow(d.Yangproj,.8)
     d.Bidenvoteraw = firstSectionResults[0].dropOut == 1 ? 0 : jStat.normal.inv((Bidensimulation * 3 + Math.random()) / 4, d.Bidenproj, d.Bidenstd);
     d.Bloombergvoteraw = jStat.normal.inv((Bloombergsimulation * 3 + Math.random()) / 4, d.Bloombergproj, d.Bloombergstd);
     d.Buttigiegvoteraw = firstSectionResults[2].dropOut == 1 ? 0 : jStat.normal.inv((Buttigiegsimulation * 3 + Math.random()) / 4, d.Buttigiegproj, d.Buttigiegstd);
@@ -248,7 +261,7 @@ d3.csv("simulator.csv", function (data) {
   ]
 
   secondSectionResults.forEach(function (d) {
-    d.dropOut = d.dropOut == 1 ? 1 : d.Delegates == 0 ? 1 : d.Delegates < 50 ? Math.random() < .50 ? 1 : 0 : 0;
+    d.dropOut = d.dropOut == 1 ? 1 : d.Delegates == 0 ? 1 : d.Delegates < 100 ? Math.random() < .50 ? 1 : 0 : 0;
     return d;
   })
   secondSectionResults[1].dropOut = 0
@@ -258,16 +271,16 @@ d3.csv("simulator.csv", function (data) {
 
 
   var thirdSection = thirdSection.map((d, i) => {
-    d.Bidenstd = d.Bidenproj > 25 ? 15 : Math.sqrt(Math.abs(d.Bidenproj) + .01) * 3;
-    d.Bloombergstd = d.Bloombergproj > 25 ? 15 : Math.sqrt(d.Bloombergproj + .01) * 3;
-    d.Buttigiegstd = d.Buttigiegproj > 25 ? 15 : Math.sqrt(d.Buttigiegproj + .01) * 3;
-    d.Klobucharstd = d.Klobucharproj > 25 ? 15 : Math.sqrt(d.Klobucharproj + .01) * 3;
-    d.Sandersstd = d.Sandersproj > 25 ? 15 : Math.sqrt(d.Sandersproj + .01) * 3;
-    d.Steyerstd = d.Steyerproj > 25 ? 15 : Math.sqrt(d.Steyerproj + .01) * 3;
-    d.Warrenstd = d.Warrenproj > 25 ? 15 : Math.sqrt(d.Warrenproj + .01) * 3;
-    d.Yangstd = d.Yangproj > 25 ? 15 : Math.sqrt(d.Yangproj + .01) * 3;
+    d.Bidenstd = Math.pow(d.Bidenproj,.8)
+    d.Bloombergstd = Math.pow(d.Bloombergproj,.8)
+    d.Buttigiegstd = Math.pow(d.Buttigiegproj,.8)
+    d.Klobucharstd = Math.pow(d.Klobucharproj,.8)
+    d.Sandersstd = Math.pow(d.Sandersproj,.8)
+    d.Steyerstd = Math.pow(d.Steyerproj,.8)
+    d.Warrenstd = Math.pow(d.Warrenproj,.8)
+    d.Yangstd = Math.pow(d.Yangproj,.8)
     d.Bidenvoteraw = secondSectionResults[0].dropOut == 1 ? 0 : jStat.normal.inv((Bidensimulation * 3 + Math.random()) / 4, d.Bidenproj, d.Bidenstd);
-    d.Bloombergvoteraw = jStat.normal.inv((Bloombergsimulation * 3 + Math.random()) / 4, d.Bloombergproj, d.Bloombergstd);
+    d.Bloombergvoteraw = secondSectionResults[1].dropOut == 1 ? 0 :jStat.normal.inv((Bloombergsimulation * 3 + Math.random()) / 4, d.Bloombergproj, d.Bloombergstd);
     d.Buttigiegvoteraw = secondSectionResults[2].dropOut == 1 ? 0 : jStat.normal.inv((Buttigiegsimulation * 3 + Math.random()) / 4, d.Buttigiegproj, d.Buttigiegstd);
     d.Klobucharvoteraw = secondSectionResults[3].dropOut == 1 ? 0 : jStat.normal.inv((Klobucharsimulation * 3 + Math.random()) / 4, d.Klobucharproj, d.Klobucharstd);
     d.Sandersvoteraw = secondSectionResults[4].dropOut == 1 ? 0 : jStat.normal.inv((Sanderssimulation * 3 + Math.random()) / 4, d.Sandersproj, d.Sandersstd);
@@ -343,7 +356,7 @@ d3.csv("simulator.csv", function (data) {
   ]
 
   thirdSectionResults.forEach(function (d) {
-    d.dropOut = d.dropOut == 1 ? 1 : d.Delegates == 0 ? 1 : d.Delegates < 0 ? Math.random() < 100 ? 1 : 0 : 0;
+    d.dropOut = d.dropOut == 1 ? 1 : d.Delegates == 0 ? 1 : d.Delegates < 300 ? Math.random() < 100 ? 1 : 0 : 0;
     return d;
   })
   thirdSectionResults[1].dropOut = 0
@@ -353,14 +366,14 @@ d3.csv("simulator.csv", function (data) {
 
 
   var fourthSection = fourthSection.map((d, i) => {
-    d.Bidenstd = d.Bidenproj > 25 ? 15 : Math.sqrt(Math.abs(d.Bidenproj) + .01) * 3;
-    d.Bloombergstd = d.Bloombergproj > 25 ? 15 : Math.sqrt(d.Bloombergproj + .01) * 3;
-    d.Buttigiegstd = d.Buttigiegproj > 25 ? 15 : Math.sqrt(d.Buttigiegproj + .01) * 3;
-    d.Klobucharstd = d.Klobucharproj > 25 ? 15 : Math.sqrt(d.Klobucharproj + .01) * 3;
-    d.Sandersstd = d.Sandersproj > 25 ? 15 : Math.sqrt(d.Sandersproj + .01) * 3;
-    d.Steyerstd = d.Steyerproj > 25 ? 15 : Math.sqrt(d.Steyerproj + .01) * 3;
-    d.Warrenstd = d.Warrenproj > 25 ? 15 : Math.sqrt(d.Warrenproj + .01) * 3;
-    d.Yangstd = d.Yangproj > 25 ? 15 : Math.sqrt(d.Yangproj + .01) * 3;
+    d.Bidenstd = Math.pow(d.Bidenproj,.8)
+    d.Bloombergstd = Math.pow(d.Bloombergproj,.8)
+    d.Buttigiegstd = Math.pow(d.Buttigiegproj,.8)
+    d.Klobucharstd = Math.pow(d.Klobucharproj,.8)
+    d.Sandersstd = Math.pow(d.Sandersproj,.8)
+    d.Steyerstd = Math.pow(d.Steyerproj,.8)
+    d.Warrenstd = Math.pow(d.Warrenproj,.8)
+    d.Yangstd = Math.pow(d.Yangproj,.8)
     d.Bidenvoteraw = thirdSectionResults[0].dropOut == 1 ? 0 : jStat.normal.inv((Bidensimulation * 3 + Math.random()) / 4, d.Bidenproj, d.Bidenstd);
     d.Bloombergvoteraw = thirdSectionResults[1].dropOut == 1 ? 0 : jStat.normal.inv((Bloombergsimulation * 3 + Math.random()) / 4, d.Bloombergproj, d.Bloombergstd);
     d.Buttigiegvoteraw = thirdSectionResults[2].dropOut == 1 ? 0 : jStat.normal.inv((Buttigiegsimulation * 3 + Math.random()) / 4, d.Buttigiegproj, d.Buttigiegstd);
@@ -438,7 +451,7 @@ d3.csv("simulator.csv", function (data) {
   ]
 
   fourthSectionResults.forEach(function (d) {
-    d.dropOut = d.dropOut == 1 ? 1 : d.Delegates == 0 ? 1 : d.Delegates < 100 ? Math.random() < 1 ? 1 : 0 : 0;
+    d.dropOut = d.dropOut == 1 ? 1 : d.Delegates == 0 ? 1 : d.Delegates < 500 ? Math.random() < 1 ? 1 : 0 : 0;
     return d;
   })
 
@@ -448,14 +461,14 @@ d3.csv("simulator.csv", function (data) {
 
 
   var finalSection = finalSection.map((d, i) => {
-    d.Bidenstd = d.Bidenproj > 25 ? 15 : Math.sqrt(Math.abs(d.Bidenproj) + .01) * 3;
-    d.Bloombergstd = d.Bloombergproj > 25 ? 15 : Math.sqrt(d.Bloombergproj + .01) * 3;
-    d.Buttigiegstd = d.Buttigiegproj > 25 ? 15 : Math.sqrt(d.Buttigiegproj + .01) * 3;
-    d.Klobucharstd = d.Klobucharproj > 25 ? 15 : Math.sqrt(d.Klobucharproj + .01) * 3;
-    d.Sandersstd = d.Sandersproj > 25 ? 15 : Math.sqrt(d.Sandersproj + .01) * 3;
-    d.Steyerstd = d.Steyerproj > 25 ? 15 : Math.sqrt(d.Steyerproj + .01) * 3;
-    d.Warrenstd = d.Warrenproj > 25 ? 15 : Math.sqrt(d.Warrenproj + .01) * 3;
-    d.Yangstd = d.Yangproj > 25 ? 15 : Math.sqrt(d.Yangproj + .01) * 3;
+    d.Bidenstd = Math.pow(d.Bidenproj,.8)
+    d.Bloombergstd = Math.pow(d.Bloombergproj,.8)
+    d.Buttigiegstd = Math.pow(d.Buttigiegproj,.8)
+    d.Klobucharstd = Math.pow(d.Klobucharproj,.8)
+    d.Sandersstd = Math.pow(d.Sandersproj,.8)
+    d.Steyerstd = Math.pow(d.Steyerproj,.8)
+    d.Warrenstd = Math.pow(d.Warrenproj,.8)
+    d.Yangstd = Math.pow(d.Yangproj,.8)
     d.Bidenvoteraw = fourthSectionResults[0].dropOut == 1 ? 0 : jStat.normal.inv((Bidensimulation * 3 + Math.random()) / 4, d.Bidenproj, d.Bidenstd);
     d.Bloombergvoteraw = fourthSectionResults[1].dropOut == 1 ? 0 : jStat.normal.inv((Bloombergsimulation * 3 + Math.random()) / 4, d.Bloombergproj, d.Bloombergstd);
     d.Buttigiegvoteraw = fourthSectionResults[2].dropOut == 1 ? 0 : jStat.normal.inv((Buttigiegsimulation * 3 + Math.random()) / 4, d.Buttigiegproj, d.Buttigiegstd);
