@@ -15,7 +15,7 @@ d3.csv("time.csv", function (error, data) {
 
     var parseTime = d3.timeParse("%Y-%m-%d"),
         formatDate = d3.timeFormat("%b - %d"),
-        formatMonth = d3.timeFormat("%Y-%m-%d"),
+        formateTime = d3.timeFormat("%Y-%m-%d"),
         bisectDate = d3.bisector(d => d.date).left,
         formatValue = d3.format("0.0%");
 
@@ -80,7 +80,7 @@ d3.csv("time.csv", function (error, data) {
     //one month ago
     now = parseTime(now)
 
-    var monthago = formatMonth(d3.utcMonth.offset(now, -1))
+    var monthago = formateTime(d3.utcMonth.offset(now, -1))
 
     var montharray = data.filter(function (d) { return d.forecastdate == monthago; });
 
