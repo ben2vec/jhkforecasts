@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ 
+  <script src="https:////cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script>
+
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	
+	
+	
+      
+      
+    </style>
+  </head>
+  <body>
+    <p id="demo"></p>
+  <script >
+  d3.csv("https://projects.fivethirtyeight.com/polls-page/president_primary_polls.csv", function (data) {
+
+    polls = []
+    for (let i = 0; i < data.length; i++) {
+      
+      
+        var question_id = data[i].question_id
+        var state = data[i].state
+        var row =[question_id,state]
+    
+      polls.push(row)
+}
+
+
+    console.log(data)
+    console.log(polls)
+    document.getElementById("demo").innerHTML = polls.join("<br>")
+
+  })
+  </script>
+  </body>
+</html>
