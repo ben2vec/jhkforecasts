@@ -2,7 +2,8 @@
 var trialruns = 25000
 var parseTime = d3.timeParse("%Y-%m-%d")
 formatTime = d3.timeFormat("%Y-%m-%d")
-
+formatValue = d3.format(".2")
+formatvalue = d3.format(".3");
 
 
 d3.csv("simulator.csv", function (data) {
@@ -834,7 +835,7 @@ d3.csv("simulator.csv", function (data) {
     
     
     var final ={ State: keystate, bidenwin: d3.mean(dataraw,d=>d.Bidenwin),Bloombergwin: d3.mean(dataraw,d=>d.Bloombergwin),sanderswin: d3.mean(dataraw,d=>d.Sanderswin)}
-    var final =[ dataraw[0].today , keystate,formatTime(dataraw[0].date),dataraw[0].delegates,dataraw[0].Bidenvote,dataraw[0].Bloombergvote,0,dataraw[0].Buttigiegvote,dataraw[0].Klobucharvote,dataraw[0].Sandersvote,dataraw[0].Steyervote,dataraw[0].Warrenvote,dataraw[0].Yangvote,Math.round( d3.mean(dataraw,d=>d.Bidenwin)*1000)/10,Math.round( d3.mean(dataraw,d=>d.Bloombergwin)*1000)/10,0,Math.round( d3.mean(dataraw,d=>d.Buttigiegwin)*1000)/10,Math.round( d3.mean(dataraw,d=>d.Klobucharwin)*1000)/10,Math.round( d3.mean(dataraw,d=>d.Sanderswin)*1000)/10,Math.round( d3.mean(dataraw,d=>d.Steyerwin)*1000)/10,Math.round( d3.mean(dataraw,d=>d.Warrenwin)*1000)/10,Math.round( d3.mean(dataraw,d=>d.Yangwin)*1000)/10,dataraw[0].Bidendelegates,dataraw[0].Bloombergdelegates,0,dataraw[0].Buttigiegdelegates,dataraw[0].Klobuchardelegates,dataraw[0].Sandersdelegates,dataraw[0].Steyerdelegates,dataraw[0].Warrendelegates,dataraw[0].Yangdelegates]
+    var final =[ dataraw[0].today , keystate,formatTime(dataraw[0].date),dataraw[0].delegates,formatvalue(dataraw[0].Bidenvote),formatvalue(dataraw[0].Bloombergvote),0,formatvalue(dataraw[0].Buttigiegvote),formatvalue(dataraw[0].Klobucharvote),formatvalue(dataraw[0].Sandersvote),formatvalue(dataraw[0].Steyervote),formatvalue(dataraw[0].Warrenvote),formatvalue(dataraw[0].Yangvote),Math.round( d3.mean(dataraw,d=>d.Bidenwin)*1000)/10,Math.round( d3.mean(dataraw,d=>d.Bloombergwin)*1000)/10,0,Math.round( d3.mean(dataraw,d=>d.Buttigiegwin)*1000)/10,Math.round( d3.mean(dataraw,d=>d.Klobucharwin)*1000)/10,Math.round( d3.mean(dataraw,d=>d.Sanderswin)*1000)/10,Math.round( d3.mean(dataraw,d=>d.Steyerwin)*1000)/10,Math.round( d3.mean(dataraw,d=>d.Warrenwin)*1000)/10,Math.round( d3.mean(dataraw,d=>d.Yangwin)*1000)/10,dataraw[0].Bidendelegates,dataraw[0].Bloombergdelegates,0,dataraw[0].Buttigiegdelegates,dataraw[0].Klobuchardelegates,dataraw[0].Sandersdelegates,dataraw[0].Steyerdelegates,dataraw[0].Warrendelegates,dataraw[0].Yangdelegates]
     
     console.log(final)
     finaldata.push(final)
