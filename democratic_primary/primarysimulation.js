@@ -1,15 +1,16 @@
 
-var trialruns = 100
+var trialruns = 25000
+var parseTime = d3.timeParse("%Y-%m-%d")
+formatTime = d3.timeFormat("%Y-%m-%d")
 
 
 
+d3.csv("simulator.csv", function (data) {
 
-d3.csv("https://raw.githubusercontent.com/jhkersting/jhkforecasts/master/democratic_primary/simulator.csv", function (data) {
-
-  var parseTime = d3.timeParse("%Y-%m-%d")
-  formatTime = d3.timeFormat("%Y-%m-%d")
+ 
   var rawvote = data.map((d, k) => {
     return {
+      today: d.today,
       state: d.state,
       date: d.date,
       delegates: +d.delegates,
@@ -766,19 +767,18 @@ d3.csv("https://raw.githubusercontent.com/jhkersting/jhkforecasts/master/democra
   
  
 
-    
 
     for (let j = 0; j < 58; j++) {
       
       var state = {
         trial: i,
-        today: formatTime(new Date()), state: simulationnew[j].state,
+        today: rawvote[j].today, state: simulationnew[j].state,
         date: simulationnew[j].date,
         delegates: simulationnew[j].delegates,
         Bidenvote: rawvote[j].Bidenvote,
         Bookervote: 0,
         Bloombergvote: rawvote[j].Bloombergvote,
-        Buttigeigvote: rawvote[j].Buttigiegvote,
+        Buttigiegvote: rawvote[j].Buttigiegvote,
         Klobucharvote: rawvote[j].Klobucharvote,
         Sandersvote: rawvote[j].Sandersvote,
         Steyervote: rawvote[j].Steyervote,
@@ -787,7 +787,7 @@ d3.csv("https://raw.githubusercontent.com/jhkersting/jhkforecasts/master/democra
         Bidenwin: simulationnew[j].Bidenwin,
         Bookerwin: 0,
         Bloombergwin: simulationnew[j].Bloombergwin,
-        Buttigeigwin: simulationnew[j].Buttigiegwin,
+        Buttigiegwin: simulationnew[j].Buttigiegwin,
         Klobucharwin: simulationnew[j].Klobucharwin,
         Sanderswin: simulationnew[j].Sanderswin,
         Steyerwin: simulationnew[j].Steyerwin,
@@ -796,7 +796,7 @@ d3.csv("https://raw.githubusercontent.com/jhkersting/jhkforecasts/master/democra
         Bidendelegates: rawvote[j].bi,
         Bookerdelegates: 0,
         Bloombergdelegates: rawvote[j].bl,
-        Buttigeigdelegates: rawvote[j].bu,
+        Buttigieggdelegates: rawvote[j].bu,
         Klobuchardelegates: rawvote[j].kl,
         Sandersdelegates: rawvote[j].sa,
         Steyerdelegates: rawvote[j].st,
@@ -806,7 +806,7 @@ d3.csv("https://raw.githubusercontent.com/jhkersting/jhkforecasts/master/democra
         Bidenavgvote: simulationnew[j].Bidenvote,
         Bookeravgvote: 0,
         Bloombergavgvote: simulationnew[j].Bloombergvote,
-        Buttigeigavgvote: simulationnew[j].Buttigiegvote,
+        Buttigiegavgvote: simulationnew[j].Buttigiegvote,
         Klobucharavgvote: simulationnew[j].Klobucharvote,
         Sandersavgvote: simulationnew[j].Sandersvote,
         Steyeravgvote: simulationnew[j].Steyervote,
@@ -815,7 +815,7 @@ d3.csv("https://raw.githubusercontent.com/jhkersting/jhkforecasts/master/democra
         Bidenavgdelegates: simulationnew[j].Bidendelegates,
         Bookeravgdelegates: 0,
         Bloomberavggdelegates: simulationnew[j].Bloombergdelegates,
-        Buttigeigavgdelegates: simulationnew[j].Buttigiegdelegates,
+        Buttigiegavgdelegates: simulationnew[j].Buttigiegdelegates,
         Klobucharavgdelegates: simulationnew[j].Klobuchardelegates,
         Sandersavgdelegates: simulationnew[j].Sandersdelegates,
         Steyeravgdelegates: simulationnew[j].Steyerdelegates,
@@ -832,8 +832,9 @@ d3.csv("https://raw.githubusercontent.com/jhkersting/jhkforecasts/master/democra
     var dataraw = dataoutput.filter(function (d) { return d.state == keystate; })
     
     
+    
     var final ={ State: keystate, bidenwin: d3.mean(dataraw,d=>d.Bidenwin),Bloombergwin: d3.mean(dataraw,d=>d.Bloombergwin),sanderswin: d3.mean(dataraw,d=>d.Sanderswin)}
-    var final =[ keystate, d3.mean(dataraw,d=>d.Bidenwin),d3.mean(dataraw,d=>d.Bloombergwin),d3.mean(dataraw,d=>d.Sanderswin)]
+    var final =[ dataraw[0].today , keystate,formatTime(dataraw[0].date),dataraw[0].delegates,dataraw[0].Bidenvote,dataraw[0].Bloombergvote,0,dataraw[0].Buttigiegvote,dataraw[0].Klobucharvote,dataraw[0].Sandersvote,dataraw[0].Steyervote,dataraw[0].Warrenvote,dataraw[0].Yangvote,Math.round( d3.mean(dataraw,d=>d.Bidenwin)*1000)/10,Math.round( d3.mean(dataraw,d=>d.Bloombergwin)*1000)/10,0,Math.round( d3.mean(dataraw,d=>d.Buttigiegwin)*1000)/10,Math.round( d3.mean(dataraw,d=>d.Klobucharwin)*1000)/10,Math.round( d3.mean(dataraw,d=>d.Sanderswin)*1000)/10,Math.round( d3.mean(dataraw,d=>d.Steyerwin)*1000)/10,Math.round( d3.mean(dataraw,d=>d.Warrenwin)*1000)/10,Math.round( d3.mean(dataraw,d=>d.Yangwin)*1000)/10,dataraw[0].Bidendelegates,dataraw[0].Bloombergdelegates,0,dataraw[0].Buttigiegdelegates,dataraw[0].Klobuchardelegates,dataraw[0].Sandersdelegates,dataraw[0].Steyerdelegates,dataraw[0].Warrendelegates,dataraw[0].Yangdelegates]
     
     console.log(final)
     finaldata.push(final)
