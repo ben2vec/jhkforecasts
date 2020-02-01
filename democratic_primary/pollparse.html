@@ -58,7 +58,7 @@
                     question_id: +data_nested[i].values[0].question_id,
                     poll_id: +data_nested[i].values[0].poll_id,
                     state: data_nested[i].values[0].state == "" ? "US" : data_nested[i].values[0].state,
-                    pollster_id: +data_nested[i].values[0].pollster_id.replace(",","."),
+                    pollster_id: +data_nested[i].values[0].pollster_id.replace(","),
                     pollster: data_nested[i].values[0].pollster,
                     sponsor_ids: +data_nested[i].values[0].sponsor_ids,
                     sponsors: data_nested[i].values[0].sponsors,
@@ -95,46 +95,22 @@
             })
             console.log(polls_raw)
 
-            var objectToCSVRow = function (dataObject) {
-                var dataArray = new Array;
-                for (var o in dataObject) {
-                    var innerValue = dataObject[o] === null ? '' : dataObject[o].toString();
-                    var result = innerValue;
-                    result =  result ;
-                    dataArray.push(result);
-                }
-                return dataArray.join(',') + '\r\n';
-            }
-            
-            var exportToCSV = function (arrayOfObjects) {
+            const ObjectsToCsv = require('objects-to-csv');
+            (async () => {
+                const csv = new ObjectsToCsv(polls_raw);
 
-                if (!arrayOfObjects.length) {
-                    return;
-                }
+                // Save to file:
+                await csv.toDisk('/polldownload.csv');
 
-                var csvContent = "data:text/csv;charset=utf-8,";
+                // Return the CSV file as string:
+                console.log(await csv.toString());
+            })();
 
-                // headers
-                csvContent += objectToCSVRow(Object.keys(arrayOfObjects[0]));
 
-                arrayOfObjects.forEach(function (item) {
-                    csvContent += objectToCSVRow(item);
-                });
 
-                var encodedUri = encodeURI(csvContent);
-                var link = document.createElement("a");
-                link.setAttribute("href", encodedUri);
-                link.setAttribute("download", "polls.csv");
-                document.body.appendChild(link); // Required for FF
-                link.click();
-                document.body.removeChild(link);
-                console.log(encodeURI(csvContent))
-                
-            }
 
-            exportToCSV(polls_raw)
-            
-            
+
+
             //dontgopasthere
         })
 
