@@ -84,7 +84,8 @@
                     Steyer: +poll_response[9],
                     Warren: +poll_response[10],
                     Yang: +poll_response[11],
-                    total: d3.sum(data_nested[i].values, d => d.pct)}
+                    total: d3.sum(data_nested[i].values, d => d.pct)
+                }
                 polls_raw.push(new_poll)
             }
 
@@ -94,39 +95,45 @@
             })
             console.log(polls_raw)
 
-            var objectToCSVRow = function(dataObject) {
-    var dataArray = new Array;
-    for (var o in dataObject) {
-        var innerValue = dataObject[o]===null?'':dataObject[o].toString();
-        var result = innerValue.replace(/"/g, '""');
-        result = '"' + result + '"';
-        dataArray.push(result);
-    }
-    return dataArray.join(' ') + '\r\n';
-}
+            var objectToCSVRow = function (dataObject) {
+                var dataArray = new Array;
+                for (var o in dataObject) {
+                    var innerValue = dataObject[o] === null ? '' : dataObject[o].toString();
+                    var result = innerValue.replace(/"/g, '""');
+                    result = '"' + result + '"';
+                    dataArray.push(result);
+                }
+                return dataArray.join(' ') + '\r\n';
+            }
+            
+            var exportToCSV = function (arrayOfObjects) {
 
-var exportToCSV = function(arrayOfObjects) {
+                if (!arrayOfObjects.length) {
+                    return;
+                }
 
-    if (!arrayOfObjects.length) {
-        return;
-    }
+                var csvContent = "data:text/csv;charset=utf-8,";
 
-    var csvContent = "data:text/csv;charset=utf-8,";
+                // headers
+                csvContent += objectToCSVRow(Object.keys(arrayOfObjects[0]));
 
-    // headers
-    csvContent += objectToCSVRow(Object.keys(arrayOfObjects[0]));
+                arrayOfObjects.forEach(function (item) {
+                    csvContent += objectToCSVRow(item);
+                });
 
-    arrayOfObjects.forEach(function(item){
-        csvContent += objectToCSVRow(item);
-    }); 
+                var encodedUri = encodeURI(csvContent);
+                var link = document.createElement("a");
+                link.setAttribute("href", encodedUri);
+                link.setAttribute("download", "polls.csv");
+                document.body.appendChild(link); // Required for FF
+                link.click();
+                document.body.removeChild(link);
+                
+                console.log(encodedUri)
+            }
 
-    var encodedUri = encodeURI(csvContent);
-    var link = document.createElement("a");
-    link.setAttribute("href", encodedUri);
-    link.setAttribute("download", "customers.csv");
-    document.body.appendChild(link); // Required for FF
-    link.click();
-    document.body.removeChild(link); }
+
+            
             //dontgopasthere
         })
 
@@ -134,10 +141,6 @@ var exportToCSV = function(arrayOfObjects) {
 
     </script>
 
-<script>
-
-
-</script>
 
 </body>
 
