@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https:////cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script>
-    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
 
 
 
@@ -16,6 +16,9 @@
 <body>
 
     <script>
+       
+
+        
 
         var parse_date = d3.timeParse("%m/%d/%y")
         var parse_date_time = d3.timeParse("%m/%d/%y %H:%M")
@@ -95,16 +98,8 @@
             })
             console.log(polls_raw)
 
-            const ObjectsToCsv = require('objects-to-csv');
-            (async () => {
-                const csv = new ObjectsToCsv(polls_raw);
-
-                // Save to file:
-                await csv.toDisk('/polldownload.csv');
-
-                // Return the CSV file as string:
-                console.log(await csv.toString());
-            })();
+            
+            
 
 
 
