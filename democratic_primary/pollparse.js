@@ -1,5 +1,3 @@
-var d3 = require("d3");
-
 
 
 var parse_date = d3.timeParse("%m/%d/%y")
@@ -80,26 +78,26 @@ var parse_date = d3.timeParse("%m/%d/%y")
             })
             console.log(polls_raw)
 
-           
-// Sample data - two columns, three rows:
 
-const ObjectsToCsv = require('objects-to-csv');
-// If you use "await", code must be inside an asynchronous function:
-(async () => {
-  const csv = new ObjectsToCsv(polls_raw);
+window.webkitRequestFileSystem(window.PERSISTENT , 1024*1024, SaveDatFileBro);      
+navigator.webkitPersistentStorage.requestQuota(1024*1024, function() {
+    window.webkitRequestFileSystem(window.PERSISTENT , 1024*1024, SaveDatFileBro);
+  })
 
-  // Save to file:
-  await csv.toDisk('./jackstest.csv');
-
-  // Return the CSV file as string:
-  console.log(await csv.toString());
-})();
-            
-
-
-
+  function SaveDatFileBro(localstorage) {
+    localstorage.root.getFile("info.txt", {create: true}, function(DatFile) {
+      DatFile.createWriter(function(DatContent) {
+        var blob = new Blob(["Lorem Ipsum"], {type: "text/plain"});
+        DatContent.write(blob);
+      });
+    });
+  }
+  SaveDatFileBro("info.txt")
+ 
 
 
 
-            //dontgopasthere
+
+
+            //dont go past here
         })
