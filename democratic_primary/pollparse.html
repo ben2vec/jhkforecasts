@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https:////cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script>
     <script src="https://d3js.org/d3.v4.min.js"></script>
-    <script src="https://d3js.org/d3-dsv.v1.min.js"></script>
-    <script src="https://d3js.org/d3-fetch.v1.min.js"></script>
+
+
+
 
 
 </head>
@@ -15,40 +16,42 @@
 <body>
 
     <script>
-        var parse_date = d3.timeParse("%Y-%m-%d")
-        var parse_date_time
-        var candidates = ["Biden", "Bloomberg", "Booker", "Buttigieg", "Harris", "Klobuchar", "O'Rourke", "Sanders", "Steyer", "Warren", "Yang"]
+
+        var parse_date = d3.timeParse("%m/%d/%y")
+        var parse_date_time = d3.timeParse("%m/%d/%y %H:%M")
+        var candidates = ["Biden", "Bloomberg", "Booker", "Buttigieg", "Gabbard", "Harris", "Klobuchar", "O_Rourke", "Sanders", "Steyer", "Warren", "Yang"]
         var drop_out = ["", "", new Date(2020, 0, 13), "", new Date(2019, 11, 3), "", new Date(2019, 10, 1), "", "", "", ""]
-        var candidate_drop_out = candidates.map(function (d, i) {
+        var entrance = [new Date(2019, 0, 11), new Date(2020, 10, 0), new Date(2019, 0, 11), new Date(2019, 0, 11), new Date(2019, 0, 11), new Date(2019, 0, 11), new Date(2019, 0, 11), new Date(2019, 0, 11), new Date(2019, 0, 11), new Date(2019, 0, 11), new Date(2019, 0, 11),]
+
+        var candidate_campaign_dates = candidates.map(function (d, i) {
             return {
                 candidate: d,
                 date: drop_out[i],
+                entrance: entrance[i]
             };
         });
 
-        d3.csv("pollingtest.csv", function (data) {
+        candidate_campaign_dates.join()
+
+        d3.csv("pollingtest.csv", function pollingdata(data) {
 
             var data_nested = d3.nest()
                 .key(d => d.question_id)
                 .entries(data)
 
-            console.log(candidate_drop_out)
-            console.log(data_nested[0].values)
-
             var polls_raw = []
 
             for (let i = 0; i < data_nested.length; i++) {
-                var poll = []
+                var poll_response = []
                 for (let j = 0; j < candidates.length; j++) {
 
                     var poll_candidate = data_nested[i].values.filter(d => d.answer == candidates[j])
 
                     var poll_answer = poll_candidate.map((d) => {
-                        return d.pct
-
+                        return +d.pct
                     })
 
-                    poll.push(poll_answer)
+                    poll_response.push(poll_answer)
                 }
 
                 var new_poll = {
@@ -62,38 +65,79 @@
                     display_name: data_nested[i].values[0].display_name,
                     pollster_rating_id: +data_nested[i].values[0].pollster_rating_id,
                     pollster_rating_name: data_nested[i].values[0].pollster_rating_name,
-                    fte_grade: data_nested[i].values[0].fte_grade,
-                    sample_size: +data_nested[i].values[0].sample_size,
+                    grade: data_nested[i].values[0].fte_grade,
+                    n: +data_nested[i].values[0].sample_size,
                     population: data_nested[i].values[0].population,
-                    start_date: data_nested[i].values[0].start_date,
-                    end_date: "1/30/20",
-                    created_at: "1/30/20 17:04",
-                    url: "https://graphics.reuters.com/USA-ELECTION-POLL/0100B05G09P/index.html",
-                }
-
+                    start_date: parse_date(data_nested[i].values[0].start_date),
+                    end_date: parse_date(data_nested[i].values[0].start_date),
+                    created_at: parse_date_time(data_nested[i].values[0].created_at),
+                    url: data_nested[i].values[0].url,
+                    Biden: +poll_response[0],
+                    Bloomberg: +poll_response[1],
+                    Booker: +poll_response[2],
+                    Buttigieg: +poll_response[3],
+                    Gabbard: +poll_response[4],
+                    Harris: +poll_response[5],
+                    Klobuchar: +poll_response[6],
+                    O_Rourke: +poll_response[7],
+                    Sanders: +poll_response[8],
+                    Steyer: +poll_response[9],
+                    Warren: +poll_response[10],
+                    Yang: +poll_response[11],
+                    total: d3.sum(data_nested[i].values, d => d.pct)}
                 polls_raw.push(new_poll)
             }
 
-            var question_id = []
-
-            for (let i = 0; i < data.length; i++) {
-                var q_id = +data[i].question_id
-                question_id.push(q_id)
-            }
-
-            var unique_ids = question_id.filter(function (item, index) {
-                return question_id.indexOf(item) >= index;
-            });
-
+            polls_raw.forEach(function (d) {
+                d.n_adjusted = d.n > 4000 ? Math.pow((d.n - 4000), .2) + 27 : Math.pow(d.n, .4);
+                return d;
+            })
             console.log(polls_raw)
 
-            
+            var objectToCSVRow = function(dataObject) {
+    var dataArray = new Array;
+    for (var o in dataObject) {
+        var innerValue = dataObject[o]===null?'':dataObject[o].toString();
+        var result = innerValue.replace(/"/g, '""');
+        result = '"' + result + '"';
+        dataArray.push(result);
+    }
+    return dataArray.join(' ') + '\r\n';
+}
+
+var exportToCSV = function(arrayOfObjects) {
+
+    if (!arrayOfObjects.length) {
+        return;
+    }
+
+    var csvContent = "data:text/csv;charset=utf-8,";
+
+    // headers
+    csvContent += objectToCSVRow(Object.keys(arrayOfObjects[0]));
+
+    arrayOfObjects.forEach(function(item){
+        csvContent += objectToCSVRow(item);
+    }); 
+
+    var encodedUri = encodeURI(csvContent);
+    var link = document.createElement("a");
+    link.setAttribute("href", encodedUri);
+    link.setAttribute("download", "customers.csv");
+    document.body.appendChild(link); // Required for FF
+    link.click();
+    document.body.removeChild(link); }
+            //dontgopasthere
         })
 
-        d3.html("/jack.html").then(function(text) {
-        console.log(text); // Hello, world!
-    });
+
+
     </script>
+
+<script>
+
+
+</script>
 
 </body>
 
