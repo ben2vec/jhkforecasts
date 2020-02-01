@@ -33,7 +33,7 @@
 
         candidate_campaign_dates.join()
 
-        d3.csv("pollingtest.csv", function pollingdata(data) {
+        d3.csv("pollingtest.csv", function (data) {
 
             var data_nested = d3.nest()
                 .key(d => d.question_id)
@@ -58,9 +58,9 @@
                     question_id: +data_nested[i].values[0].question_id,
                     poll_id: +data_nested[i].values[0].poll_id,
                     state: data_nested[i].values[0].state == "" ? "US" : data_nested[i].values[0].state,
-                    pollster_id: data_nested[i].values[0].pollster_id,
+                    pollster_id: +data_nested[i].values[0].pollster_id.replace(",","."),
                     pollster: data_nested[i].values[0].pollster,
-                    sponsor_ids: data_nested[i].values[0].sponsor_ids,
+                    sponsor_ids: +data_nested[i].values[0].sponsor_ids,
                     sponsors: data_nested[i].values[0].sponsors,
                     display_name: data_nested[i].values[0].display_name,
                     pollster_rating_id: +data_nested[i].values[0].pollster_rating_id,
@@ -99,11 +99,11 @@
                 var dataArray = new Array;
                 for (var o in dataObject) {
                     var innerValue = dataObject[o] === null ? '' : dataObject[o].toString();
-                    var result = innerValue.replace(/"/g, '""');
-                    result = '"' + result + '"';
+                    var result = innerValue;
+                    result =  result ;
                     dataArray.push(result);
                 }
-                return dataArray.join(' ') + '\r\n';
+                return dataArray.join(',') + '\r\n';
             }
             
             var exportToCSV = function (arrayOfObjects) {
@@ -128,11 +128,12 @@
                 document.body.appendChild(link); // Required for FF
                 link.click();
                 document.body.removeChild(link);
+                console.log(encodeURI(csvContent))
                 
-                console.log(encodedUri)
             }
 
-
+            exportToCSV(polls_raw)
+            
             
             //dontgopasthere
         })
