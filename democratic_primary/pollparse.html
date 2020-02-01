@@ -1,0 +1,100 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https:////cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3-dsv.v1.min.js"></script>
+    <script src="https://d3js.org/d3-fetch.v1.min.js"></script>
+
+
+</head>
+
+<body>
+
+    <script>
+        var parse_date = d3.timeParse("%Y-%m-%d")
+        var parse_date_time
+        var candidates = ["Biden", "Bloomberg", "Booker", "Buttigieg", "Harris", "Klobuchar", "O'Rourke", "Sanders", "Steyer", "Warren", "Yang"]
+        var drop_out = ["", "", new Date(2020, 0, 13), "", new Date(2019, 11, 3), "", new Date(2019, 10, 1), "", "", "", ""]
+        var candidate_drop_out = candidates.map(function (d, i) {
+            return {
+                candidate: d,
+                date: drop_out[i],
+            };
+        });
+
+        d3.csv("pollingtest.csv", function (data) {
+
+            var data_nested = d3.nest()
+                .key(d => d.question_id)
+                .entries(data)
+
+            console.log(candidate_drop_out)
+            console.log(data_nested[0].values)
+
+            var polls_raw = []
+
+            for (let i = 0; i < data_nested.length; i++) {
+                var poll = []
+                for (let j = 0; j < candidates.length; j++) {
+
+                    var poll_candidate = data_nested[i].values.filter(d => d.answer == candidates[j])
+
+                    var poll_answer = poll_candidate.map((d) => {
+                        return d.pct
+
+                    })
+
+                    poll.push(poll_answer)
+                }
+
+                var new_poll = {
+                    question_id: +data_nested[i].values[0].question_id,
+                    poll_id: +data_nested[i].values[0].poll_id,
+                    state: data_nested[i].values[0].state == "" ? "US" : data_nested[i].values[0].state,
+                    pollster_id: data_nested[i].values[0].pollster_id,
+                    pollster: data_nested[i].values[0].pollster,
+                    sponsor_ids: data_nested[i].values[0].sponsor_ids,
+                    sponsors: data_nested[i].values[0].sponsors,
+                    display_name: data_nested[i].values[0].display_name,
+                    pollster_rating_id: +data_nested[i].values[0].pollster_rating_id,
+                    pollster_rating_name: data_nested[i].values[0].pollster_rating_name,
+                    fte_grade: data_nested[i].values[0].fte_grade,
+                    sample_size: +data_nested[i].values[0].sample_size,
+                    population: data_nested[i].values[0].population,
+                    start_date: data_nested[i].values[0].start_date,
+                    end_date: "1/30/20",
+                    created_at: "1/30/20 17:04",
+                    url: "https://graphics.reuters.com/USA-ELECTION-POLL/0100B05G09P/index.html",
+                }
+
+                polls_raw.push(new_poll)
+            }
+
+            var question_id = []
+
+            for (let i = 0; i < data.length; i++) {
+                var q_id = +data[i].question_id
+                question_id.push(q_id)
+            }
+
+            var unique_ids = question_id.filter(function (item, index) {
+                return question_id.indexOf(item) >= index;
+            });
+
+            console.log(polls_raw)
+
+            
+        })
+
+        d3.html("/jack.html").then(function(text) {
+        console.log(text); // Hello, world!
+    });
+    </script>
+
+</body>
+
+</html>
