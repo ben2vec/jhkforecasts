@@ -30,7 +30,6 @@ d3.csv("simulator.csv", function (data) {
  
   var rawvote = data.map((d, k) => {
     return {
-      today: d.today,
       state: d.state,
       date: d.date,
       delegates: +d.delegates,
@@ -51,7 +50,6 @@ d3.csv("simulator.csv", function (data) {
       wa: +d.wa,
       ya: +d.ya,
       voteperc: +d.voteperc,
-      dateindex: d.dateindex,
     }
   })
 
@@ -414,7 +412,6 @@ d3.csv("simulator.csv", function (data) {
     d.Warrendelegates = d.Warrendelegateover15 + d.Warrendelegateun15
     d.Yangdelegates = d.Yangdelegateover15 + d.Yangdelegateun15
 
-
     return d;
   })
 
@@ -711,7 +708,7 @@ d3.csv("simulator.csv", function (data) {
   Sandersdelegates = d3.sum(simulation, d => d.Sandersdelegates)
   Steyerdelegates = d3.sum(simulation, d => d.Steyerdelegates)
   Warrendelegates = d3.sum(simulation, d => d.Warrendelegates)
-  Yangdelegates = d3.sum(rawsimulation, d => d.Yangdelegates)
+  Yangdelegates = d3.sum(simulation, d => d.Yangdelegates)
 
   Bidenpop = d3.sum(simulation, d => d.Bidenpop)
   Bloombergpop = d3.sum(simulation, d => d.Bloombergpop)
@@ -822,7 +819,6 @@ d3.csv("simulator.csv", function (data) {
         Steyerdelegates: rawvote[j].st,
         Warrendelegates: rawvote[j].wa,
         Yangdelegates: rawvote[j].ya,
-        dateindex: rawvote[j].dateindex,
         Bidenavgvote: simulationnew[j].Bidenvote,
         Bookeravgvote: 0,
         Bloombergavgvote: simulationnew[j].Bloombergvote,
