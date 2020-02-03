@@ -6,7 +6,7 @@ var demScale = d3.scaleLinear()
     .domain([0, 50])
     .range(["white", "#0091FF"]);
 
-d3.csv("time.csv", function (error, data) {
+d3.csv("https://raw.githubusercontent.com/jhkersting/jhkforecasts/master/democratic_primary/time.csv", function (error, data) {
     var keys = data.columns.slice(1);
     var keys = keys.filter(f => f.includes(keyCand))
     var data = data.filter(function (d) { return d.state == keyState; });

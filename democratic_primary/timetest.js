@@ -20,7 +20,7 @@ var color = d3.scaleOrdinal()
   .domain(category)
   .range(["#00FF90", "#00B050", "#006541", "#98d2f8", "#0077FF", "#002E66", "#E7B5FF", "#B722FF", "purple"])
 
-d3.csv("time.csv", function (error, data) {
+d3.csv("https://raw.githubusercontent.com/jhkersting/jhkforecasts/master/democratic_primary/time.csv", function (error, data) {
 
   var res = data.filter(function (d) { return d.state == keyState; })
 
