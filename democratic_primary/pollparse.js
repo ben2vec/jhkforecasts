@@ -1,6 +1,6 @@
-var month = 6
-var day = 7
-var year = 2019
+var month = 2
+var day = 3
+var year = 2020
 
 var simulation_date = new Date(year, month-1, day)
 
@@ -1463,7 +1463,7 @@ d3.csv("https://projects.fivethirtyeight.com/polls-page/president_primary_polls.
             Yangvote: rawvote[j].Yangvote,
             Bidenwin: simulationnew[j].Bidenwin,
             Bookerwin: 0,
-            Bloombergwin: 0,
+            Bloombergwin:  simulationnew[j].Bloombergwin,
             Buttigiegwin: simulationnew[j].Buttigiegwin,
             Klobucharwin: simulationnew[j].Klobucharwin,
             Sanderswin: simulationnew[j].Sanderswin,
@@ -1472,7 +1472,7 @@ d3.csv("https://projects.fivethirtyeight.com/polls-page/president_primary_polls.
             Yangwin: simulationnew[j].Yangwin,
             Bidendelegates: rawvote[j].bi,
             Bookerdelegates: 0,
-            Bloombergdelegates: 0,
+            Bloombergdelegates: rawvote[j].bl,
             Buttigiegdelegates: rawvote[j].bu,
             Klobuchardelegates: rawvote[j].kl,
             Sandersdelegates: rawvote[j].sa,
@@ -1481,7 +1481,7 @@ d3.csv("https://projects.fivethirtyeight.com/polls-page/president_primary_polls.
             Yangdelegates: rawvote[j].ya,
             Bidenavgvote: simulationnew[j].Bidenvote,
             Bookeravgvote: 0,
-            Bloombergavgvote: 0,
+            Bloombergavgvote: simulationnew[j].Bloombergavgvote,
             Buttigiegavgvote: simulationnew[j].Buttigiegvote,
             Klobucharavgvote: simulationnew[j].Klobucharvote,
             Sandersavgvote: simulationnew[j].Sandersvote,
@@ -1490,7 +1490,7 @@ d3.csv("https://projects.fivethirtyeight.com/polls-page/president_primary_polls.
             Yangavgvote: simulationnew[j].Yangdelegates,
             Bidenavgdelegates: simulationnew[j].Bidendelegates,
             Bookeravgdelegates: 0,
-            Bloomberavggdelegates: 0,
+            Bloomberavggdelegates: simulationnew[j].Bloombergdelegates,
             Buttigiegavgdelegates: simulationnew[j].Buttigiegdelegates,
             Klobucharavgdelegates: simulationnew[j].Klobuchardelegates,
             Sandersavgdelegates: simulationnew[j].Sandersdelegates,
@@ -1510,7 +1510,7 @@ d3.csv("https://projects.fivethirtyeight.com/polls-page/president_primary_polls.
         
         
         var final ={ State: keystate, bidenwin: d3.mean(dataraw,d=>d.Bidenwin),Bloombergwin: d3.mean(dataraw,d=>d.Bloombergwin),sanderswin: d3.mean(dataraw,d=>d.Sanderswin)}
-        var final =[formatFinal(dataraw[0].today) , keystate,formatFinal(dataraw[0].date),dataraw[0].delegates,+formatvalue(dataraw[0].Bidenvote),+formatvalue(dataraw[0].Bloombergvote),0,+formatvalue(dataraw[0].Buttigiegvote),+formatvalue(dataraw[0].Klobucharvote),+formatvalue(dataraw[0].Sandersvote),+formatvalue(dataraw[0].Steyervote),+formatvalue(dataraw[0].Warrenvote),+formatvalue(dataraw[0].Yangvote),Math.round( d3.mean(dataraw,d=>d.Bidenwin)*1000)/10,Math.round( d3.mean(dataraw,d=>d.Bloombergwin)*1000)/10,0,Math.round( d3.mean(dataraw,d=>d.Buttigiegwin)*1000)/10,Math.round( d3.mean(dataraw,d=>d.Klobucharwin)*1000)/10,Math.round( d3.mean(dataraw,d=>d.Sanderswin)*1000)/10,Math.round( d3.mean(dataraw,d=>d.Steyerwin)*1000)/10,Math.round( d3.mean(dataraw,d=>d.Warrenwin)*1000)/10,Math.round( d3.mean(dataraw,d=>d.Yangwin)*1000)/10,dataraw[0].Bidendelegates,dataraw[0].Bloombergdelegates,0,dataraw[0].Buttigiegdelegates,dataraw[0].Klobuchardelegates,dataraw[0].Sandersdelegates,dataraw[0].Steyerdelegates,dataraw[0].Warrendelegates,dataraw[0].Yangdelegates]
+        var final =[formatFinal(dataraw[0].today) , keystate,formatFinal(dataraw[0].date),dataraw[0].delegates,+formatvalue(dataraw[0].Bidenvote),+formatvalue(dataraw[0].Bloombergvote),+formatvalue(dataraw[0].Buttigiegvote),+formatvalue(dataraw[0].Klobucharvote),+formatvalue(dataraw[0].Sandersvote),+formatvalue(dataraw[0].Steyervote),+formatvalue(dataraw[0].Warrenvote),+formatvalue(dataraw[0].Yangvote),Math.round( d3.mean(dataraw,d=>d.Bidenwin)*1000)/10,Math.round( d3.mean(dataraw,d=>d.Bloombergwin)*1000)/10,Math.round( d3.mean(dataraw,d=>d.Buttigiegwin)*1000)/10,Math.round( d3.mean(dataraw,d=>d.Klobucharwin)*1000)/10,Math.round( d3.mean(dataraw,d=>d.Sanderswin)*1000)/10,Math.round( d3.mean(dataraw,d=>d.Steyerwin)*1000)/10,Math.round( d3.mean(dataraw,d=>d.Warrenwin)*1000)/10,Math.round( d3.mean(dataraw,d=>d.Yangwin)*1000)/10,dataraw[0].Bidendelegates,dataraw[0].Bloombergdelegates,dataraw[0].Buttigiegdelegates,dataraw[0].Klobuchardelegates,dataraw[0].Sandersdelegates,dataraw[0].Steyerdelegates,dataraw[0].Warrendelegates,dataraw[0].Yangdelegates,+formatvalue(dataraw[0].Bidenavgdelegates),+formatvalue(dataraw[0].Bloombergdelegates),+formatvalue(dataraw[0].Buttigiegavgdelegates),+formatvalue(dataraw[0].Klobucharavgdelegates),+formatvalue(dataraw[0].Sandersavgdelegates),+formatvalue(dataraw[0].Steyeravgdelegates),+formatvalue(dataraw[0].Warrenavgdelegates),+formatvalue(dataraw[0].Yangavgdelegates)]
         
         finaldata.push(final)
       }
