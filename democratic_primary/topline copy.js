@@ -152,14 +152,7 @@ svg.append("rect")
     .text(d => d.vote+"%")
     .attr("text-anchor", "middle")
     
-    svg.append("text")
-    .attr("x",150)
-    .attr("y",210)
-    .style("fill", "Black")
-    .style("font-size", 12)
-    .attr("font-weight",500)
-    .attr("text-anchor","end")
-    .text("Week Change")
+  
 
     svg.append("text")
     .attr("x",140)
