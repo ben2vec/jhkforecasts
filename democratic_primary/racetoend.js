@@ -10,7 +10,7 @@ var delScale = d3.scaleLinear()
     .domain([0, 1990])
     .range(["white", "#0091FF"]);
 
-d3.csv("delegatehttps://raw.githubusercontent.com/jhkersting/jhkforecasts/master/democratic_primary/time.csv", function (error, data) {
+d3.csv("delegatetime.csv", function (error, data) {
     var keys = data.columns.slice(1);
 
     
