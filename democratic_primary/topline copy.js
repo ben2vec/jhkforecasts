@@ -12,7 +12,7 @@ d3.csv("candsoverview.csv", function (error, data) {
   formatValue = d3.format(".3");
   formatvalue = d3.format(".2");
 
-  
+  data.sort((a,b)=> b.win - a.win)
 
   var svg = d3.select("#topline").append("svg")
     .attr("viewBox", "0 0 1000 450")
@@ -101,35 +101,7 @@ svg.append("rect")
     .attr("text-anchor", "middle")
 
 
-    repeat.append("text")
-    .attr("class", "repeat-text")
-    .attr("x", 150)
-    .attr("y", 60)
-    .style("fill", d => d.winchange > 0? "#00B050":"#FF6060")
-    .style("font-size",12)
-    .attr("font-weight", 700)
-    .text(d =>d.winchange==0?"":d.winchange>0?"+"+formatvalue(d.winchange)+"%":formatvalue(d.winchange)+"%")
-    .attr("text-anchor", "middle")
-
-    repeat.append("text")
-    .attr("class", "repeat-text")
-    .attr("x", 150)
-    .attr("y", 160)
-    .style("fill", d => d.delegateschange > 0? "#00B050":"#FF6060")
-    .style("font-size",12)
-    .attr("font-weight", 700)
-    .text(d =>d.delegateschange==0?"":d.delegateschange>0?"+"+d.delegateschange:d.delegateschange)
-    .attr("text-anchor", "middle")
-
-    repeat.append("text")
-    .attr("class", "repeat-text")
-    .attr("x", 150)
-    .attr("y", 260)
-    .style("fill", d => d.votechange > 0? "#00B050":"#FF6060")
-    .style("font-size",12)
-    .attr("font-weight", 700)
-    .text(d =>d.votechange==0?"":d.votechange>0?"+"+formatvalue(d.votechange)+"%":formatvalue(d.votechange)+"%")
-    .attr("text-anchor", "middle")
+    
 
     repeat.append("text")
     .attr("class", "repeat-text")

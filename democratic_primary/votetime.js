@@ -402,6 +402,7 @@ d3.csv("https://raw.githubusercontent.com/jhkersting/jhkforecasts/master/democra
         .style("font-weight", 700)
         .text(keyState=="US"?"Projected Vote Share":"Projected Vote in "+keyState)
 
-  
+      
 
 })
+

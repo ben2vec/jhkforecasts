@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+
+    .bar {
+      fill: steelblue;
+    }
+    
+    .bar:hover {
+      fill: brown;
+    }
+    
+    .axis {
+      font: 10px sans-serif;
+    }
+    
+    .axis path,
+    .axis line {
+      fill: none;
+      stroke: #000;
+      shape-rendering: crispEdges;
+    }
+    
+    .x.axis path {
+      display: none;
+    }
+    
+    </style>
+<body>
+    <script src="//d3js.org/d3.v3.min.js"></script>
+    <script>
+    
+    
+    
+    d3.xml("https://www.predictit.org/api/marketdata/markets/5241", function(error, data) {
+      if (error) throw error;
+    
+    console.log(data)
+    })
+    </script>
+    
+</body>
+</html>
