@@ -3,6 +3,7 @@ var width = 1000 - margin.left - margin.right
 var height = 550 - margin.top - margin.bottom
 var category = ["Biden", "Bloomberg", "Booker", "Buttigieg", "Klobuchar", "Sanders", "Steyer", "Warren", "Yang"]
 // since Category B and E are really close to each other, assign them diverging colors
+var axisPad = 12
 var candcolor = d3.scaleOrdinal()
   .domain(category)
   .range(["#00FF90", "#00B050", "#006541", "#98d2f8", "#0077FF", "#002E66", "#E7B5FF", "#B722FF", "purple"])

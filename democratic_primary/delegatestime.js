@@ -1,7 +1,7 @@
 var margin = { top: 20, right: 20, bottom: 100, left: 30 }
 var width = 1000 - margin.left - margin.right
 var height = 550 - margin.top - margin.bottom
-
+var axisPad = 12
 var demScale = d3.scaleLinear()
     .domain([0, 50])
     .range(["white", "#0091FF"]);
