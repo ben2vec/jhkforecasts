@@ -142,7 +142,7 @@ d3.csv("time.csv", function (error, data) {
         .rangeRound([height - margin.bottom, margin.top]);
 
     var z = d3.scaleOrdinal()
-        .range(["#00FF90", "#00B050", "#006541", "#98d2f8", "#0077FF", "#002E66", "#E7B5FF", "#B722FF", "purple"])
+        .range(["#00FF90", "#00B050", "#a4b1b5", "#98d2f8", "#0077FF", "#002E66", "#E7B5FF", "#B722FF", "purple"])
         ;
 
     var line = d3.line()
@@ -407,6 +407,15 @@ d3.csv("time.csv", function (error, data) {
         .style("font-size", 25)
         .style("font-weight", 700)
         .text(keyState=="US"?"Projected Delegates":"Projected Delegates in "+keyState)
+
+
+        svg.append("rect")
+        .attr("y",-50)
+        .attr("x", 930)
+        .attr("width", 75)
+        .attr("height", 390)
+        .attr("rx", 0)
+        .attr("fill", "white")
 
 
 })

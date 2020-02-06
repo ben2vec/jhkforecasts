@@ -1,44 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
-<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:site" content="@jhkforecast">
-	<meta name="twitter:creator" content="@jhkersting">
-	<meta name="twitter:title" content="Texas Primary">
-	<meta name="twitter:description" content="Who is leading the race for the Texas Primary">
-	<meta name="twitter:image"
-		content="https://raw.githubusercontent.com/jhkersting/jhkforecasts/master/2020_dem_prim_img-01.jpg">
-	<title>Texas Primary</title>
-	<script data-ad-client="ca-pub-8025120308040073" async
-		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140782021-2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-140782021-2');
-  </script>
-  <script data-ad-client="ca-pub-8025120308040073" async
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <link rel="icon" href="https://jkstats76.files.wordpress.com/2019/02/cropped-site-icon.png?w=32" sizes="32x32">
-  <link rel="icon" href="https://jkstats76.files.wordpress.com/2019/02/cropped-site-icon.png?w=192" sizes="192x192">
-
-  <script src="https://d3js.org/d3.v4.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
-  <link rel="stylesheet" href="https://use.typekit.net/htk2wjy.css">
-  <link rel="stylesheet" href="index.css">
-
-<body>
-    <div id="topline"></div>
-    <script>
-    
-    var category = ["Biden", "Bloomberg", "Booker", "Buttigieg", "Klobuchar", "Sanders", "Steyer", "Warren", "Yang"]
+var category = ["Biden", "Bloomberg", "Booker", "Buttigieg", "Klobuchar", "Sanders", "Steyer", "Warren", "Yang"]
 // since Category B and E are really close to each other, assign them diverging colors
 var color = d3.scaleOrdinal()
   .domain(category)
@@ -65,7 +25,7 @@ var errorscale = d3.scaleLinear()
   data.sort((a,b)=> b.vote - a.vote)
 
   var svg = d3.select("#topline").append("svg")
-    .attr("viewBox", "0 0 1200 550")
+    .attr("viewBox", "0 40 1200 550")
     .append('g')
 
   
@@ -151,7 +111,7 @@ svg.append("rect")
     .attr("class", "repeat-text")
     .attr("x", 700)
     .attr("y", -70)
-    .style("fill", d=>d.proj_votes>20?"white":"black")
+    .style("fill", "black")
     .style("font-size",20)
     .attr("font-weight", 700)
     .text(d => d.proj_votes+"%")
@@ -294,6 +254,3 @@ svg.append("rect")
 
     
 })
-        </script>
-</body>
-</html>

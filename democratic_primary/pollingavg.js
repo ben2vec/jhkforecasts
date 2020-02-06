@@ -303,7 +303,7 @@ ssci.smooth.kernel2 = function(){
     // since Category B and E are really close to each other, assign them diverging colors
     var color = d3.scaleOrdinal()
       .domain(category)
-      .range(["#00FF90", "#00B050", "#006541", "#98d2f8", "#0077FF", "#002E66", "#E7B5FF", "#B722FF", "purple"])
+      .range(["#00FF90", "#00B050", "#a4b1b5", "#98d2f8", "#0077FF", "#002E66", "#E7B5FF", "#B722FF", "purple"])
 
 
     d3.csv("Sheet2.csv", function (data) {
@@ -559,7 +559,7 @@ ssci.smooth.kernel2 = function(){
         .data(sm_temp3.output())
         .attr("d", slines(sm_temp3.output()))
         .attr("class", "pollline")
-        .attr("stroke", "#006541")
+        .attr("stroke", "#a4b1b5")
         .attr("fill", "none")
 
       slines4 = d3.line()

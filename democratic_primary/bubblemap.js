@@ -12,7 +12,7 @@ var category = ["Biden", "Bloomberg", "Booker", "Buttigieg", "Klobuchar", "Sande
 // since Category B and E are really close to each other, assign them diverging colors
 var color = d3.scaleOrdinal()
   .domain(category)
-  .range(["#00FF90", "#00B050", "#006541", "#98d2f8", "#0077FF", "#002E66", "#E7B5FF", "#B722FF", "purple"])
+  .range(["#00FF90", "#00B050", "#a4b1b5", "#98d2f8", "#0077FF", "#002E66", "#E7B5FF", "#B722FF", "purple"])
 var colortwo = d3.scaleOrdinal()
   .domain(category)
   .range(["black", "white", "white", "black", "white", "white", "black", "white", "white"])
@@ -90,7 +90,9 @@ d3.csv("bubblemap.csv", function (error, data) {
     .attr("cx", d => x(d.xValue))
     .attr("cy", d => y(d.yValue))
     .attr("r", d => d.radius)
-    .style("fill", d => color(d.first))
+    .attr("stroke-width",2)
+    .style("stroke", d => d.completed == 0 ? color(d.first):"white")
+    .style("fill", d => d.completed == 1 ? color(d.first):"white")
     .on('mouseover', function (d) {
       tool_tip.show();
       var tipSVG = d3.select("#tipDiv")
@@ -216,9 +218,9 @@ d3.csv("bubblemap.csv", function (error, data) {
     .attr("y", d => y(d.yValue) + 3)
     .attr("text-anchor", "middle")
     .attr("font-family", "brandon-grotesque")
-    .attr("font-weight", "500")
+    .attr("font-weight", 700)
     .attr("font-size", "8")
-    .attr("fill", d => colortwo(d.first))
+    .attr("fill",d => d.completed == 1 ? colortwo(d.first):"black")
 
   svg.append("text")
     .text("Press on State For Forecast")
@@ -238,7 +240,41 @@ d3.csv("bubblemap.csv", function (error, data) {
     .attr("font-weight", "700")
     .attr("font-size", "20")
     .attr("fill", "black")
-  d3.csv("update.csv", function (error, data) {
+
+
+
+
+    svg.append("circle")
+    .attr("cx", 600)
+    .attr("cy", 250)
+    .attr("r", 10)
+    .attr("stroke-width",2)
+    .style("stroke", "black")
+    .style("fill", "white")
+  
+
+    svg.append("circle")
+    .attr("cx", 600)
+    .attr("cy", 275)
+    .attr("r", 10)
+    .attr("stroke-width",2)
+    .style("stroke", "black")
+    .style("fill", "black")
+
+
+    svg.append("text")
+    .attr("x", 615)
+    .attr("y", 280)
+    .style("fill", "black")
+    .text("Completed Primary/Caucus")
+
+    svg.append("text")
+    .attr("x", 615)
+    .attr("y", 255)
+    .style("fill", "black")
+    .text("Upcoming Primary/Caucus")
+  
+    d3.csv("update.csv", function (error, data) {
 
     svg.selectAll("updated")
       .data(data)
