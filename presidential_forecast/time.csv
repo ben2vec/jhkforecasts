@@ -31049,3 +31049,2418 @@ date,state,index,dataPoint,candidate,percentage
 2020.1.29,US,win,3,Trump,251.6
 2020.1.29,US,win,3,Democrats,286.4
 2020.1.29,US,win,3,3rd Party,0.0
+2020.1.30,Alabama,win,1,Trump,99.9
+2020.1.30,Alaska,win,1,Trump,89.9
+2020.1.30,Arizona,win,1,Trump,61.0
+2020.1.30,Arkansas,win,1,Trump,99.9
+2020.1.30,California,win,1,Trump,0.1
+2020.1.30,Colorado,win,1,Trump,24.8
+2020.1.30,Connecticut,win,1,Trump,6.8
+2020.1.30,Delaware,win,1,Trump,7.9
+2020.1.30,Florida,win,1,Trump,55.0
+2020.1.30,Georgia,win,1,Trump,69.8
+2020.1.30,Hawaii,win,1,Trump,0.0
+2020.1.30,Idaho,win,1,Trump,100.0
+2020.1.30,Illinois,win,1,Trump,5.8
+2020.1.30,Indiana,win,1,Trump,94.2
+2020.1.30,Iowa,win,1,Trump,66.3
+2020.1.30,Kansas,win,1,Trump,96.3
+2020.1.30,Kentucky,win,1,Trump,99.9
+2020.1.30,Louisiana,win,1,Trump,98.4
+2020.1.30,Maine,win,1,Trump,29.2
+2020.1.30,Maryland,win,1,Trump,0.2
+2020.1.30,Massachusetts,win,1,Trump,0.1
+2020.1.30,Michigan,win,1,Trump,41.3
+2020.1.30,Minnesota,win,1,Trump,32.8
+2020.1.30,Mississippi,win,1,Trump,94.4
+2020.1.30,Missouri,win,1,Trump,93.1
+2020.1.30,Montana,win,1,Trump,92.7
+2020.1.30,Nebraska,win,1,Trump,99.7
+2020.1.30,Nevada,win,1,Trump,41.0
+2020.1.30,New Hampshire,win,1,Trump,36.3
+2020.1.30,New Jersey,win,1,Trump,9.7
+2020.1.30,New Mexico,win,1,Trump,18.0
+2020.1.30,New York,win,1,Trump,1.5
+2020.1.30,North Carolina,win,1,Trump,57.8
+2020.1.30,North Dakota,win,1,Trump,100.0
+2020.1.30,Ohio,win,1,Trump,69.3
+2020.1.30,Oklahoma,win,1,Trump,100.0
+2020.1.30,Oregon,win,1,Trump,14.0
+2020.1.30,Pennsylvania,win,1,Trump,46.9
+2020.1.30,Rhode Island,win,1,Trump,4.1
+2020.1.30,South Carolina,win,1,Trump,88.2
+2020.1.30,South Dakota,win,1,Trump,99.8
+2020.1.30,Tennessee,win,1,Trump,99.1
+2020.1.30,Texas,win,1,Trump,79.0
+2020.1.30,Utah,win,1,Trump,99.6
+2020.1.30,Vermont,win,1,Trump,0.0
+2020.1.30,Virginia,win,1,Trump,29.8
+2020.1.30,Washington,win,1,Trump,9.4
+2020.1.30,West Virginia,win,1,Trump,100.0
+2020.1.30,Wisconsin,win,1,Trump,50.8
+2020.1.30,Wyoming,win,1,Trump,100.0
+2020.1.30,District of Columbia,win,1,Trump,0.0
+2020.1.30,Maine-1,win,1,Trump,8.6
+2020.1.30,Maine-2,win,1,Trump,59.8
+2020.1.30,Nebraska-1,win,1,Trump,96.1
+2020.1.30,Nebraska-2,win,1,Trump,58.3
+2020.1.30,Nebraska-3,win,1,Trump,100.0
+2020.1.30,US,win,1,Trump,47.4
+2020.1.30,Alabama,win,1,Democrats,0.1
+2020.1.30,Alaska,win,1,Democrats,10.1
+2020.1.30,Arizona,win,1,Democrats,39.0
+2020.1.30,Arkansas,win,1,Democrats,0.1
+2020.1.30,California,win,1,Democrats,99.9
+2020.1.30,Colorado,win,1,Democrats,75.2
+2020.1.30,Connecticut,win,1,Democrats,93.2
+2020.1.30,Delaware,win,1,Democrats,92.1
+2020.1.30,Florida,win,1,Democrats,45.0
+2020.1.30,Georgia,win,1,Democrats,30.2
+2020.1.30,Hawaii,win,1,Democrats,100.0
+2020.1.30,Idaho,win,1,Democrats,0.0
+2020.1.30,Illinois,win,1,Democrats,94.2
+2020.1.30,Indiana,win,1,Democrats,5.8
+2020.1.30,Iowa,win,1,Democrats,33.7
+2020.1.30,Kansas,win,1,Democrats,3.7
+2020.1.30,Kentucky,win,1,Democrats,0.1
+2020.1.30,Louisiana,win,1,Democrats,1.6
+2020.1.30,Maine,win,1,Democrats,70.8
+2020.1.30,Maryland,win,1,Democrats,99.8
+2020.1.30,Massachusetts,win,1,Democrats,99.9
+2020.1.30,Michigan,win,1,Democrats,58.7
+2020.1.30,Minnesota,win,1,Democrats,67.2
+2020.1.30,Mississippi,win,1,Democrats,5.6
+2020.1.30,Missouri,win,1,Democrats,6.9
+2020.1.30,Montana,win,1,Democrats,7.3
+2020.1.30,Nebraska,win,1,Democrats,0.3
+2020.1.30,Nevada,win,1,Democrats,59.0
+2020.1.30,New Hampshire,win,1,Democrats,63.7
+2020.1.30,New Jersey,win,1,Democrats,90.3
+2020.1.30,New Mexico,win,1,Democrats,82.0
+2020.1.30,New York,win,1,Democrats,98.5
+2020.1.30,North Carolina,win,1,Democrats,42.2
+2020.1.30,North Dakota,win,1,Democrats,0.0
+2020.1.30,Ohio,win,1,Democrats,30.7
+2020.1.30,Oklahoma,win,1,Democrats,0.0
+2020.1.30,Oregon,win,1,Democrats,86.0
+2020.1.30,Pennsylvania,win,1,Democrats,53.1
+2020.1.30,Rhode Island,win,1,Democrats,95.9
+2020.1.30,South Carolina,win,1,Democrats,11.8
+2020.1.30,South Dakota,win,1,Democrats,0.2
+2020.1.30,Tennessee,win,1,Democrats,0.9
+2020.1.30,Texas,win,1,Democrats,21.0
+2020.1.30,Utah,win,1,Democrats,0.4
+2020.1.30,Vermont,win,1,Democrats,100.0
+2020.1.30,Virginia,win,1,Democrats,70.2
+2020.1.30,Washington,win,1,Democrats,90.6
+2020.1.30,West Virginia,win,1,Democrats,0.0
+2020.1.30,Wisconsin,win,1,Democrats,49.2
+2020.1.30,Wyoming,win,1,Democrats,0.0
+2020.1.30,District of Columbia,win,1,Democrats,100.0
+2020.1.30,Maine-1,win,1,Democrats,91.4
+2020.1.30,Maine-2,win,1,Democrats,40.2
+2020.1.30,Nebraska-1,win,1,Democrats,3.9
+2020.1.30,Nebraska-2,win,1,Democrats,41.7
+2020.1.30,Nebraska-3,win,1,Democrats,0.0
+2020.1.30,US,win,1,Democrats,52.6
+2020.1.30,Alabama,win,1,3rd Party,0.0
+2020.1.30,Alaska,win,1,3rd Party,0.0
+2020.1.30,Arizona,win,1,3rd Party,0.0
+2020.1.30,Arkansas,win,1,3rd Party,0.0
+2020.1.30,California,win,1,3rd Party,0.0
+2020.1.30,Colorado,win,1,3rd Party,0.0
+2020.1.30,Connecticut,win,1,3rd Party,0.0
+2020.1.30,Delaware,win,1,3rd Party,0.0
+2020.1.30,Florida,win,1,3rd Party,0.0
+2020.1.30,Georgia,win,1,3rd Party,0.0
+2020.1.30,Hawaii,win,1,3rd Party,0.0
+2020.1.30,Idaho,win,1,3rd Party,0.0
+2020.1.30,Illinois,win,1,3rd Party,0.0
+2020.1.30,Indiana,win,1,3rd Party,0.0
+2020.1.30,Iowa,win,1,3rd Party,0.0
+2020.1.30,Kansas,win,1,3rd Party,0.0
+2020.1.30,Kentucky,win,1,3rd Party,0.0
+2020.1.30,Louisiana,win,1,3rd Party,0.0
+2020.1.30,Maine,win,1,3rd Party,0.0
+2020.1.30,Maryland,win,1,3rd Party,0.0
+2020.1.30,Massachusetts,win,1,3rd Party,0.0
+2020.1.30,Michigan,win,1,3rd Party,0.0
+2020.1.30,Minnesota,win,1,3rd Party,0.0
+2020.1.30,Mississippi,win,1,3rd Party,0.0
+2020.1.30,Missouri,win,1,3rd Party,0.0
+2020.1.30,Montana,win,1,3rd Party,0.0
+2020.1.30,Nebraska,win,1,3rd Party,0.0
+2020.1.30,Nevada,win,1,3rd Party,0.0
+2020.1.30,New Hampshire,win,1,3rd Party,0.0
+2020.1.30,New Jersey,win,1,3rd Party,0.0
+2020.1.30,New Mexico,win,1,3rd Party,0.0
+2020.1.30,New York,win,1,3rd Party,0.0
+2020.1.30,North Carolina,win,1,3rd Party,0.0
+2020.1.30,North Dakota,win,1,3rd Party,0.0
+2020.1.30,Ohio,win,1,3rd Party,0.0
+2020.1.30,Oklahoma,win,1,3rd Party,0.0
+2020.1.30,Oregon,win,1,3rd Party,0.0
+2020.1.30,Pennsylvania,win,1,3rd Party,0.0
+2020.1.30,Rhode Island,win,1,3rd Party,0.0
+2020.1.30,South Carolina,win,1,3rd Party,0.0
+2020.1.30,South Dakota,win,1,3rd Party,0.0
+2020.1.30,Tennessee,win,1,3rd Party,0.0
+2020.1.30,Texas,win,1,3rd Party,0.0
+2020.1.30,Utah,win,1,3rd Party,0.0
+2020.1.30,Vermont,win,1,3rd Party,0.0
+2020.1.30,Virginia,win,1,3rd Party,0.0
+2020.1.30,Washington,win,1,3rd Party,0.0
+2020.1.30,West Virginia,win,1,3rd Party,0.0
+2020.1.30,Wisconsin,win,1,3rd Party,0.0
+2020.1.30,Wyoming,win,1,3rd Party,0.0
+2020.1.30,District of Columbia,win,1,3rd Party,0.0
+2020.1.30,Maine-1,win,1,3rd Party,0.0
+2020.1.30,Maine-2,win,1,3rd Party,0.0
+2020.1.30,Nebraska-1,win,1,3rd Party,0.0
+2020.1.30,Nebraska-2,win,1,3rd Party,0.0
+2020.1.30,Nebraska-3,win,1,3rd Party,0.0
+2020.1.30,US,win,1,3rd Party,0.0
+2020.1.30,Alabama,vote,1,Trump,62.5
+2020.1.30,Alaska,vote,1,Trump,52.1
+2020.1.30,Arizona,vote,1,Trump,49.4
+2020.1.30,Arkansas,vote,1,Trump,62.4
+2020.1.30,California,vote,1,Trump,34.1
+2020.1.30,Colorado,vote,1,Trump,42.5
+2020.1.30,Connecticut,vote,1,Trump,38.9
+2020.1.30,Delaware,vote,1,Trump,39.6
+2020.1.30,Florida,vote,1,Trump,49.5
+2020.1.30,Georgia,vote,1,Trump,52.2
+2020.1.30,Hawaii,vote,1,Trump,28.1
+2020.1.30,Idaho,vote,1,Trump,64.1
+2020.1.30,Illinois,vote,1,Trump,39.1
+2020.1.30,Indiana,vote,1,Trump,57.2
+2020.1.30,Iowa,vote,1,Trump,50.1
+2020.1.30,Kansas,vote,1,Trump,57.3
+2020.1.30,Kentucky,vote,1,Trump,62.8
+2020.1.30,Louisiana,vote,1,Trump,59.4
+2020.1.30,Maine,vote,1,Trump,43.3
+2020.1.30,Maryland,vote,1,Trump,34.7
+2020.1.30,Massachusetts,vote,1,Trump,32.3
+2020.1.30,Michigan,vote,1,Trump,46.8
+2020.1.30,Minnesota,vote,1,Trump,44.3
+2020.1.30,Mississippi,vote,1,Trump,57.9
+2020.1.30,Missouri,vote,1,Trump,57.3
+2020.1.30,Montana,vote,1,Trump,55.1
+2020.1.30,Nebraska,vote,1,Trump,61.2
+2020.1.30,Nevada,vote,1,Trump,45.7
+2020.1.30,New Hampshire,vote,1,Trump,45.7
+2020.1.30,New Jersey,vote,1,Trump,39.7
+2020.1.30,New Mexico,vote,1,Trump,41.1
+2020.1.30,New York,vote,1,Trump,35.2
+2020.1.30,North Carolina,vote,1,Trump,50.2
+2020.1.30,North Dakota,vote,1,Trump,63.6
+2020.1.30,Ohio,vote,1,Trump,51.4
+2020.1.30,Oklahoma,vote,1,Trump,66.3
+2020.1.30,Oregon,vote,1,Trump,39.3
+2020.1.30,Pennsylvania,vote,1,Trump,47.7
+2020.1.30,Rhode Island,vote,1,Trump,37.0
+2020.1.30,South Carolina,vote,1,Trump,56.3
+2020.1.30,South Dakota,vote,1,Trump,62.4
+2020.1.30,Tennessee,vote,1,Trump,61.4
+2020.1.30,Texas,vote,1,Trump,53.8
+2020.1.30,Utah,vote,1,Trump,60.2
+2020.1.30,Vermont,vote,1,Trump,29.6
+2020.1.30,Virginia,vote,1,Trump,44.4
+2020.1.30,Washington,vote,1,Trump,38.1
+2020.1.30,West Virginia,vote,1,Trump,65.8
+2020.1.30,Wisconsin,vote,1,Trump,48.0
+2020.1.30,Wyoming,vote,1,Trump,69.6
+2020.1.30,District of Columbia,vote,1,Trump,10.7
+2020.1.30,Maine-1,vote,1,Trump,37.6
+2020.1.30,Maine-2,vote,1,Trump,49.0
+2020.1.30,Nebraska-1,vote,1,Trump,59.2
+2020.1.30,Nebraska-2,vote,1,Trump,49.4
+2020.1.30,Nebraska-3,vote,1,Trump,75.5
+2020.1.30,US,win,2,Trump,46.6
+2020.1.30,Alabama,vote,1,Democrats,34.4
+2020.1.30,Alaska,vote,1,Democrats,36.3
+2020.1.30,Arizona,vote,1,Democrats,45.9
+2020.1.30,Arkansas,vote,1,Democrats,33.1
+2020.1.30,California,vote,1,Democrats,60.4
+2020.1.30,Colorado,vote,1,Democrats,51.5
+2020.1.30,Connecticut,vote,1,Democrats,56.6
+2020.1.30,Delaware,vote,1,Democrats,57.0
+2020.1.30,Florida,vote,1,Democrats,47.9
+2020.1.30,Georgia,vote,1,Democrats,45.5
+2020.1.30,Hawaii,vote,1,Democrats,66.7
+2020.1.30,Idaho,vote,1,Democrats,29.3
+2020.1.30,Illinois,vote,1,Democrats,57.4
+2020.1.30,Indiana,vote,1,Democrats,39.3
+2020.1.30,Iowa,vote,1,Democrats,45.3
+2020.1.30,Kansas,vote,1,Democrats,37.3
+2020.1.30,Kentucky,vote,1,Democrats,34.0
+2020.1.30,Louisiana,vote,1,Democrats,36.6
+2020.1.30,Maine,vote,1,Democrats,50.2
+2020.1.30,Maryland,vote,1,Democrats,61.6
+2020.1.30,Massachusetts,vote,1,Democrats,61.3
+2020.1.30,Michigan,vote,1,Democrats,49.5
+2020.1.30,Minnesota,vote,1,Democrats,50.0
+2020.1.30,Mississippi,vote,1,Democrats,39.3
+2020.1.30,Missouri,vote,1,Democrats,39.7
+2020.1.30,Montana,vote,1,Democrats,37.7
+2020.1.30,Nebraska,vote,1,Democrats,34.0
+2020.1.30,Nevada,vote,1,Democrats,48.8
+2020.1.30,New Hampshire,vote,1,Democrats,49.9
+2020.1.30,New Jersey,vote,1,Democrats,56.7
+2020.1.30,New Mexico,vote,1,Democrats,53.5
+2020.1.30,New York,vote,1,Democrats,59.5
+2020.1.30,North Carolina,vote,1,Democrats,47.6
+2020.1.30,North Dakota,vote,1,Democrats,30.2
+2020.1.30,Ohio,vote,1,Democrats,44.4
+2020.1.30,Oklahoma,vote,1,Democrats,31.4
+2020.1.30,Oregon,vote,1,Democrats,53.8
+2020.1.30,Pennsylvania,vote,1,Democrats,48.8
+2020.1.30,Rhode Island,vote,1,Democrats,57.9
+2020.1.30,South Carolina,vote,1,Democrats,40.5
+2020.1.30,South Dakota,vote,1,Democrats,33.3
+2020.1.30,Tennessee,vote,1,Democrats,35.8
+2020.1.30,Texas,vote,1,Democrats,43.3
+2020.1.30,Utah,vote,1,Democrats,31.5
+2020.1.30,Vermont,vote,1,Democrats,63.0
+2020.1.30,Virginia,vote,1,Democrats,51.9
+2020.1.30,Washington,vote,1,Democrats,55.6
+2020.1.30,West Virginia,vote,1,Democrats,31.0
+2020.1.30,Wisconsin,vote,1,Democrats,47.7
+2020.1.30,Wyoming,vote,1,Democrats,23.9
+2020.1.30,District of Columbia,vote,1,Democrats,84.3
+2020.1.30,Maine-1,vote,1,Democrats,57.3
+2020.1.30,Maine-2,vote,1,Democrats,45.1
+2020.1.30,Nebraska-1,vote,1,Democrats,35.7
+2020.1.30,Nebraska-2,vote,1,Democrats,46.0
+2020.1.30,Nebraska-3,vote,1,Democrats,20.0
+2020.1.30,US,win,2,Democrats,49.2
+2020.1.30,Alabama,vote,1,3rd Party,3.0
+2020.1.30,Alaska,vote,1,3rd Party,11.4
+2020.1.30,Arizona,vote,1,3rd Party,4.6
+2020.1.30,Arkansas,vote,1,3rd Party,4.4
+2020.1.30,California,vote,1,3rd Party,5.3
+2020.1.30,Colorado,vote,1,3rd Party,5.9
+2020.1.30,Connecticut,vote,1,3rd Party,4.4
+2020.1.30,Delaware,vote,1,3rd Party,3.3
+2020.1.30,Florida,vote,1,3rd Party,2.5
+2020.1.30,Georgia,vote,1,3rd Party,2.2
+2020.1.30,Hawaii,vote,1,3rd Party,5.1
+2020.1.30,Idaho,vote,1,3rd Party,6.5
+2020.1.30,Illinois,vote,1,3rd Party,3.4
+2020.1.30,Indiana,vote,1,3rd Party,3.4
+2020.1.30,Iowa,vote,1,3rd Party,4.5
+2020.1.30,Kansas,vote,1,3rd Party,5.3
+2020.1.30,Kentucky,vote,1,3rd Party,3.2
+2020.1.30,Louisiana,vote,1,3rd Party,3.8
+2020.1.30,Maine,vote,1,3rd Party,6.4
+2020.1.30,Maryland,vote,1,3rd Party,3.6
+2020.1.30,Massachusetts,vote,1,3rd Party,6.3
+2020.1.30,Michigan,vote,1,3rd Party,3.5
+2020.1.30,Minnesota,vote,1,3rd Party,5.6
+2020.1.30,Mississippi,vote,1,3rd Party,2.6
+2020.1.30,Missouri,vote,1,3rd Party,3.0
+2020.1.30,Montana,vote,1,3rd Party,7.0
+2020.1.30,Nebraska,vote,1,3rd Party,4.7
+2020.1.30,Nevada,vote,1,3rd Party,5.4
+2020.1.30,New Hampshire,vote,1,3rd Party,4.3
+2020.1.30,New Jersey,vote,1,3rd Party,3.5
+2020.1.30,New Mexico,vote,1,3rd Party,5.3
+2020.1.30,New York,vote,1,3rd Party,5.2
+2020.1.30,North Carolina,vote,1,3rd Party,2.0
+2020.1.30,North Dakota,vote,1,3rd Party,6.1
+2020.1.30,Ohio,vote,1,3rd Party,4.1
+2020.1.30,Oklahoma,vote,1,3rd Party,2.2
+2020.1.30,Oregon,vote,1,3rd Party,6.8
+2020.1.30,Pennsylvania,vote,1,3rd Party,3.4
+2020.1.30,Rhode Island,vote,1,3rd Party,5.0
+2020.1.30,South Carolina,vote,1,3rd Party,3.1
+2020.1.30,South Dakota,vote,1,3rd Party,4.2
+2020.1.30,Tennessee,vote,1,3rd Party,2.7
+2020.1.30,Texas,vote,1,3rd Party,2.8
+2020.1.30,Utah,vote,1,3rd Party,8.2
+2020.1.30,Vermont,vote,1,3rd Party,7.3
+2020.1.30,Virginia,vote,1,3rd Party,3.5
+2020.1.30,Washington,vote,1,3rd Party,6.2
+2020.1.30,West Virginia,vote,1,3rd Party,3.1
+2020.1.30,Wisconsin,vote,1,3rd Party,4.3
+2020.1.30,Wyoming,vote,1,3rd Party,6.4
+2020.1.30,District of Columbia,vote,1,3rd Party,4.8
+2020.1.30,Maine-1,vote,1,3rd Party,5.0
+2020.1.30,Maine-2,vote,1,3rd Party,5.8
+2020.1.30,Nebraska-1,vote,1,3rd Party,4.9
+2020.1.30,Nebraska-2,vote,1,3rd Party,4.5
+2020.1.30,Nebraska-3,vote,1,3rd Party,4.5
+2020.1.30,US,win,2,3rd Party,4.1
+2020.1.30,US,win,3,Trump,254.0
+2020.1.30,US,win,3,Democrats,284.0
+2020.1.30,US,win,3,3rd Party,0.0
+2020.2.1,Alabama,win,1,Trump,99.9
+2020.2.1,Alaska,win,1,Trump,89.9
+2020.2.1,Arizona,win,1,Trump,61.0
+2020.2.1,Arkansas,win,1,Trump,99.9
+2020.2.1,California,win,1,Trump,0.1
+2020.2.1,Colorado,win,1,Trump,24.8
+2020.2.1,Connecticut,win,1,Trump,6.8
+2020.2.1,Delaware,win,1,Trump,7.9
+2020.2.1,Florida,win,1,Trump,55.0
+2020.2.1,Georgia,win,1,Trump,69.8
+2020.2.1,Hawaii,win,1,Trump,0.0
+2020.2.1,Idaho,win,1,Trump,100.0
+2020.2.1,Illinois,win,1,Trump,5.8
+2020.2.1,Indiana,win,1,Trump,94.2
+2020.2.1,Iowa,win,1,Trump,66.2
+2020.2.1,Kansas,win,1,Trump,96.3
+2020.2.1,Kentucky,win,1,Trump,99.9
+2020.2.1,Louisiana,win,1,Trump,98.4
+2020.2.1,Maine,win,1,Trump,29.3
+2020.2.1,Maryland,win,1,Trump,0.2
+2020.2.1,Massachusetts,win,1,Trump,0.1
+2020.2.1,Michigan,win,1,Trump,41.4
+2020.2.1,Minnesota,win,1,Trump,32.9
+2020.2.1,Mississippi,win,1,Trump,94.4
+2020.2.1,Missouri,win,1,Trump,93.1
+2020.2.1,Montana,win,1,Trump,92.7
+2020.2.1,Nebraska,win,1,Trump,99.7
+2020.2.1,Nevada,win,1,Trump,41.0
+2020.2.1,New Hampshire,win,1,Trump,36.5
+2020.2.1,New Jersey,win,1,Trump,9.7
+2020.2.1,New Mexico,win,1,Trump,18.1
+2020.2.1,New York,win,1,Trump,1.5
+2020.2.1,North Carolina,win,1,Trump,57.8
+2020.2.1,North Dakota,win,1,Trump,100.0
+2020.2.1,Ohio,win,1,Trump,69.3
+2020.2.1,Oklahoma,win,1,Trump,100.0
+2020.2.1,Oregon,win,1,Trump,14.0
+2020.2.1,Pennsylvania,win,1,Trump,46.9
+2020.2.1,Rhode Island,win,1,Trump,4.2
+2020.2.1,South Carolina,win,1,Trump,88.2
+2020.2.1,South Dakota,win,1,Trump,99.8
+2020.2.1,Tennessee,win,1,Trump,99.1
+2020.2.1,Texas,win,1,Trump,78.9
+2020.2.1,Utah,win,1,Trump,99.6
+2020.2.1,Vermont,win,1,Trump,0.0
+2020.2.1,Virginia,win,1,Trump,29.8
+2020.2.1,Washington,win,1,Trump,9.4
+2020.2.1,West Virginia,win,1,Trump,100.0
+2020.2.1,Wisconsin,win,1,Trump,50.8
+2020.2.1,Wyoming,win,1,Trump,100.0
+2020.2.1,District of Columbia,win,1,Trump,0.0
+2020.2.1,Maine-1,win,1,Trump,8.6
+2020.2.1,Maine-2,win,1,Trump,59.8
+2020.2.1,Nebraska-1,win,1,Trump,96.1
+2020.2.1,Nebraska-2,win,1,Trump,58.3
+2020.2.1,Nebraska-3,win,1,Trump,100.0
+2020.2.1,US,win,1,Trump,47.4
+2020.2.1,Alabama,win,1,Democrats,0.1
+2020.2.1,Alaska,win,1,Democrats,10.1
+2020.2.1,Arizona,win,1,Democrats,39.0
+2020.2.1,Arkansas,win,1,Democrats,0.1
+2020.2.1,California,win,1,Democrats,99.9
+2020.2.1,Colorado,win,1,Democrats,75.2
+2020.2.1,Connecticut,win,1,Democrats,93.2
+2020.2.1,Delaware,win,1,Democrats,92.1
+2020.2.1,Florida,win,1,Democrats,45.0
+2020.2.1,Georgia,win,1,Democrats,30.2
+2020.2.1,Hawaii,win,1,Democrats,100.0
+2020.2.1,Idaho,win,1,Democrats,0.0
+2020.2.1,Illinois,win,1,Democrats,94.2
+2020.2.1,Indiana,win,1,Democrats,5.8
+2020.2.1,Iowa,win,1,Democrats,33.8
+2020.2.1,Kansas,win,1,Democrats,3.7
+2020.2.1,Kentucky,win,1,Democrats,0.1
+2020.2.1,Louisiana,win,1,Democrats,1.6
+2020.2.1,Maine,win,1,Democrats,70.7
+2020.2.1,Maryland,win,1,Democrats,99.8
+2020.2.1,Massachusetts,win,1,Democrats,99.9
+2020.2.1,Michigan,win,1,Democrats,58.6
+2020.2.1,Minnesota,win,1,Democrats,67.1
+2020.2.1,Mississippi,win,1,Democrats,5.6
+2020.2.1,Missouri,win,1,Democrats,6.9
+2020.2.1,Montana,win,1,Democrats,7.3
+2020.2.1,Nebraska,win,1,Democrats,0.3
+2020.2.1,Nevada,win,1,Democrats,59.0
+2020.2.1,New Hampshire,win,1,Democrats,63.5
+2020.2.1,New Jersey,win,1,Democrats,90.3
+2020.2.1,New Mexico,win,1,Democrats,81.9
+2020.2.1,New York,win,1,Democrats,98.5
+2020.2.1,North Carolina,win,1,Democrats,42.2
+2020.2.1,North Dakota,win,1,Democrats,0.0
+2020.2.1,Ohio,win,1,Democrats,30.7
+2020.2.1,Oklahoma,win,1,Democrats,0.0
+2020.2.1,Oregon,win,1,Democrats,86.0
+2020.2.1,Pennsylvania,win,1,Democrats,53.1
+2020.2.1,Rhode Island,win,1,Democrats,95.8
+2020.2.1,South Carolina,win,1,Democrats,11.8
+2020.2.1,South Dakota,win,1,Democrats,0.2
+2020.2.1,Tennessee,win,1,Democrats,0.9
+2020.2.1,Texas,win,1,Democrats,21.1
+2020.2.1,Utah,win,1,Democrats,0.4
+2020.2.1,Vermont,win,1,Democrats,100.0
+2020.2.1,Virginia,win,1,Democrats,70.2
+2020.2.1,Washington,win,1,Democrats,90.6
+2020.2.1,West Virginia,win,1,Democrats,0.0
+2020.2.1,Wisconsin,win,1,Democrats,49.2
+2020.2.1,Wyoming,win,1,Democrats,0.0
+2020.2.1,District of Columbia,win,1,Democrats,100.0
+2020.2.1,Maine-1,win,1,Democrats,91.4
+2020.2.1,Maine-2,win,1,Democrats,40.2
+2020.2.1,Nebraska-1,win,1,Democrats,3.9
+2020.2.1,Nebraska-2,win,1,Democrats,41.7
+2020.2.1,Nebraska-3,win,1,Democrats,0.0
+2020.2.1,US,win,1,Democrats,52.7
+2020.2.1,Alabama,win,1,3rd Party,0.0
+2020.2.1,Alaska,win,1,3rd Party,0.0
+2020.2.1,Arizona,win,1,3rd Party,0.0
+2020.2.1,Arkansas,win,1,3rd Party,0.0
+2020.2.1,California,win,1,3rd Party,0.0
+2020.2.1,Colorado,win,1,3rd Party,0.0
+2020.2.1,Connecticut,win,1,3rd Party,0.0
+2020.2.1,Delaware,win,1,3rd Party,0.0
+2020.2.1,Florida,win,1,3rd Party,0.0
+2020.2.1,Georgia,win,1,3rd Party,0.0
+2020.2.1,Hawaii,win,1,3rd Party,0.0
+2020.2.1,Idaho,win,1,3rd Party,0.0
+2020.2.1,Illinois,win,1,3rd Party,0.0
+2020.2.1,Indiana,win,1,3rd Party,0.0
+2020.2.1,Iowa,win,1,3rd Party,0.0
+2020.2.1,Kansas,win,1,3rd Party,0.0
+2020.2.1,Kentucky,win,1,3rd Party,0.0
+2020.2.1,Louisiana,win,1,3rd Party,0.0
+2020.2.1,Maine,win,1,3rd Party,0.0
+2020.2.1,Maryland,win,1,3rd Party,0.0
+2020.2.1,Massachusetts,win,1,3rd Party,0.0
+2020.2.1,Michigan,win,1,3rd Party,0.0
+2020.2.1,Minnesota,win,1,3rd Party,0.0
+2020.2.1,Mississippi,win,1,3rd Party,0.0
+2020.2.1,Missouri,win,1,3rd Party,0.0
+2020.2.1,Montana,win,1,3rd Party,0.0
+2020.2.1,Nebraska,win,1,3rd Party,0.0
+2020.2.1,Nevada,win,1,3rd Party,0.0
+2020.2.1,New Hampshire,win,1,3rd Party,0.0
+2020.2.1,New Jersey,win,1,3rd Party,0.0
+2020.2.1,New Mexico,win,1,3rd Party,0.0
+2020.2.1,New York,win,1,3rd Party,0.0
+2020.2.1,North Carolina,win,1,3rd Party,0.0
+2020.2.1,North Dakota,win,1,3rd Party,0.0
+2020.2.1,Ohio,win,1,3rd Party,0.0
+2020.2.1,Oklahoma,win,1,3rd Party,0.0
+2020.2.1,Oregon,win,1,3rd Party,0.0
+2020.2.1,Pennsylvania,win,1,3rd Party,0.0
+2020.2.1,Rhode Island,win,1,3rd Party,0.0
+2020.2.1,South Carolina,win,1,3rd Party,0.0
+2020.2.1,South Dakota,win,1,3rd Party,0.0
+2020.2.1,Tennessee,win,1,3rd Party,0.0
+2020.2.1,Texas,win,1,3rd Party,0.0
+2020.2.1,Utah,win,1,3rd Party,0.0
+2020.2.1,Vermont,win,1,3rd Party,0.0
+2020.2.1,Virginia,win,1,3rd Party,0.0
+2020.2.1,Washington,win,1,3rd Party,0.0
+2020.2.1,West Virginia,win,1,3rd Party,0.0
+2020.2.1,Wisconsin,win,1,3rd Party,0.0
+2020.2.1,Wyoming,win,1,3rd Party,0.0
+2020.2.1,District of Columbia,win,1,3rd Party,0.0
+2020.2.1,Maine-1,win,1,3rd Party,0.0
+2020.2.1,Maine-2,win,1,3rd Party,0.0
+2020.2.1,Nebraska-1,win,1,3rd Party,0.0
+2020.2.1,Nebraska-2,win,1,3rd Party,0.0
+2020.2.1,Nebraska-3,win,1,3rd Party,0.0
+2020.2.1,US,win,1,3rd Party,0.0
+2020.2.1,Alabama,vote,1,Trump,62.5
+2020.2.1,Alaska,vote,1,Trump,52.1
+2020.2.1,Arizona,vote,1,Trump,49.4
+2020.2.1,Arkansas,vote,1,Trump,62.4
+2020.2.1,California,vote,1,Trump,34.1
+2020.2.1,Colorado,vote,1,Trump,42.5
+2020.2.1,Connecticut,vote,1,Trump,39.0
+2020.2.1,Delaware,vote,1,Trump,39.6
+2020.2.1,Florida,vote,1,Trump,49.5
+2020.2.1,Georgia,vote,1,Trump,52.2
+2020.2.1,Hawaii,vote,1,Trump,28.1
+2020.2.1,Idaho,vote,1,Trump,64.1
+2020.2.1,Illinois,vote,1,Trump,39.1
+2020.2.1,Indiana,vote,1,Trump,57.2
+2020.2.1,Iowa,vote,1,Trump,50.1
+2020.2.1,Kansas,vote,1,Trump,57.3
+2020.2.1,Kentucky,vote,1,Trump,62.8
+2020.2.1,Louisiana,vote,1,Trump,59.4
+2020.2.1,Maine,vote,1,Trump,43.3
+2020.2.1,Maryland,vote,1,Trump,34.7
+2020.2.1,Massachusetts,vote,1,Trump,32.3
+2020.2.1,Michigan,vote,1,Trump,46.8
+2020.2.1,Minnesota,vote,1,Trump,44.3
+2020.2.1,Mississippi,vote,1,Trump,57.9
+2020.2.1,Missouri,vote,1,Trump,57.3
+2020.2.1,Montana,vote,1,Trump,55.1
+2020.2.1,Nebraska,vote,1,Trump,61.2
+2020.2.1,Nevada,vote,1,Trump,45.7
+2020.2.1,New Hampshire,vote,1,Trump,45.7
+2020.2.1,New Jersey,vote,1,Trump,39.7
+2020.2.1,New Mexico,vote,1,Trump,41.1
+2020.2.1,New York,vote,1,Trump,35.2
+2020.2.1,North Carolina,vote,1,Trump,50.2
+2020.2.1,North Dakota,vote,1,Trump,63.6
+2020.2.1,Ohio,vote,1,Trump,51.4
+2020.2.1,Oklahoma,vote,1,Trump,66.3
+2020.2.1,Oregon,vote,1,Trump,39.3
+2020.2.1,Pennsylvania,vote,1,Trump,47.7
+2020.2.1,Rhode Island,vote,1,Trump,37.0
+2020.2.1,South Carolina,vote,1,Trump,56.3
+2020.2.1,South Dakota,vote,1,Trump,62.4
+2020.2.1,Tennessee,vote,1,Trump,61.5
+2020.2.1,Texas,vote,1,Trump,53.8
+2020.2.1,Utah,vote,1,Trump,60.2
+2020.2.1,Vermont,vote,1,Trump,29.6
+2020.2.1,Virginia,vote,1,Trump,44.4
+2020.2.1,Washington,vote,1,Trump,38.1
+2020.2.1,West Virginia,vote,1,Trump,65.8
+2020.2.1,Wisconsin,vote,1,Trump,48.0
+2020.2.1,Wyoming,vote,1,Trump,69.6
+2020.2.1,District of Columbia,vote,1,Trump,10.7
+2020.2.1,Maine-1,vote,1,Trump,37.6
+2020.2.1,Maine-2,vote,1,Trump,49.0
+2020.2.1,Nebraska-1,vote,1,Trump,59.2
+2020.2.1,Nebraska-2,vote,1,Trump,49.4
+2020.2.1,Nebraska-3,vote,1,Trump,75.5
+2020.2.1,US,win,2,Trump,46.6
+2020.2.1,Alabama,vote,1,Democrats,34.4
+2020.2.1,Alaska,vote,1,Democrats,36.3
+2020.2.1,Arizona,vote,1,Democrats,45.9
+2020.2.1,Arkansas,vote,1,Democrats,33.1
+2020.2.1,California,vote,1,Democrats,60.5
+2020.2.1,Colorado,vote,1,Democrats,51.5
+2020.2.1,Connecticut,vote,1,Democrats,56.6
+2020.2.1,Delaware,vote,1,Democrats,57.0
+2020.2.1,Florida,vote,1,Democrats,47.9
+2020.2.1,Georgia,vote,1,Democrats,45.5
+2020.2.1,Hawaii,vote,1,Democrats,66.7
+2020.2.1,Idaho,vote,1,Democrats,29.3
+2020.2.1,Illinois,vote,1,Democrats,57.4
+2020.2.1,Indiana,vote,1,Democrats,39.3
+2020.2.1,Iowa,vote,1,Democrats,45.3
+2020.2.1,Kansas,vote,1,Democrats,37.3
+2020.2.1,Kentucky,vote,1,Democrats,34.0
+2020.2.1,Louisiana,vote,1,Democrats,36.6
+2020.2.1,Maine,vote,1,Democrats,50.2
+2020.2.1,Maryland,vote,1,Democrats,61.6
+2020.2.1,Massachusetts,vote,1,Democrats,61.3
+2020.2.1,Michigan,vote,1,Democrats,49.5
+2020.2.1,Minnesota,vote,1,Democrats,50.0
+2020.2.1,Mississippi,vote,1,Democrats,39.3
+2020.2.1,Missouri,vote,1,Democrats,39.6
+2020.2.1,Montana,vote,1,Democrats,37.7
+2020.2.1,Nebraska,vote,1,Democrats,34.0
+2020.2.1,Nevada,vote,1,Democrats,48.8
+2020.2.1,New Hampshire,vote,1,Democrats,49.9
+2020.2.1,New Jersey,vote,1,Democrats,56.7
+2020.2.1,New Mexico,vote,1,Democrats,53.5
+2020.2.1,New York,vote,1,Democrats,59.5
+2020.2.1,North Carolina,vote,1,Democrats,47.6
+2020.2.1,North Dakota,vote,1,Democrats,30.2
+2020.2.1,Ohio,vote,1,Democrats,44.4
+2020.2.1,Oklahoma,vote,1,Democrats,31.3
+2020.2.1,Oregon,vote,1,Democrats,53.8
+2020.2.1,Pennsylvania,vote,1,Democrats,48.8
+2020.2.1,Rhode Island,vote,1,Democrats,57.9
+2020.2.1,South Carolina,vote,1,Democrats,40.5
+2020.2.1,South Dakota,vote,1,Democrats,33.3
+2020.2.1,Tennessee,vote,1,Democrats,35.8
+2020.2.1,Texas,vote,1,Democrats,43.3
+2020.2.1,Utah,vote,1,Democrats,31.5
+2020.2.1,Vermont,vote,1,Democrats,63.0
+2020.2.1,Virginia,vote,1,Democrats,51.9
+2020.2.1,Washington,vote,1,Democrats,55.6
+2020.2.1,West Virginia,vote,1,Democrats,31.0
+2020.2.1,Wisconsin,vote,1,Democrats,47.7
+2020.2.1,Wyoming,vote,1,Democrats,23.9
+2020.2.1,District of Columbia,vote,1,Democrats,84.3
+2020.2.1,Maine-1,vote,1,Democrats,57.3
+2020.2.1,Maine-2,vote,1,Democrats,45.1
+2020.2.1,Nebraska-1,vote,1,Democrats,35.7
+2020.2.1,Nebraska-2,vote,1,Democrats,46.0
+2020.2.1,Nebraska-3,vote,1,Democrats,20.0
+2020.2.1,US,win,2,Democrats,49.2
+2020.2.1,Alabama,vote,1,3rd Party,3.0
+2020.2.1,Alaska,vote,1,3rd Party,11.4
+2020.2.1,Arizona,vote,1,3rd Party,4.6
+2020.2.1,Arkansas,vote,1,3rd Party,4.4
+2020.2.1,California,vote,1,3rd Party,5.3
+2020.2.1,Colorado,vote,1,3rd Party,5.9
+2020.2.1,Connecticut,vote,1,3rd Party,4.4
+2020.2.1,Delaware,vote,1,3rd Party,3.3
+2020.2.1,Florida,vote,1,3rd Party,2.5
+2020.2.1,Georgia,vote,1,3rd Party,2.2
+2020.2.1,Hawaii,vote,1,3rd Party,5.1
+2020.2.1,Idaho,vote,1,3rd Party,6.5
+2020.2.1,Illinois,vote,1,3rd Party,3.4
+2020.2.1,Indiana,vote,1,3rd Party,3.4
+2020.2.1,Iowa,vote,1,3rd Party,4.5
+2020.2.1,Kansas,vote,1,3rd Party,5.3
+2020.2.1,Kentucky,vote,1,3rd Party,3.2
+2020.2.1,Louisiana,vote,1,3rd Party,3.8
+2020.2.1,Maine,vote,1,3rd Party,6.4
+2020.2.1,Maryland,vote,1,3rd Party,3.6
+2020.2.1,Massachusetts,vote,1,3rd Party,6.3
+2020.2.1,Michigan,vote,1,3rd Party,3.5
+2020.2.1,Minnesota,vote,1,3rd Party,5.6
+2020.2.1,Mississippi,vote,1,3rd Party,2.6
+2020.2.1,Missouri,vote,1,3rd Party,3.0
+2020.2.1,Montana,vote,1,3rd Party,7.0
+2020.2.1,Nebraska,vote,1,3rd Party,4.7
+2020.2.1,Nevada,vote,1,3rd Party,5.4
+2020.2.1,New Hampshire,vote,1,3rd Party,4.3
+2020.2.1,New Jersey,vote,1,3rd Party,3.5
+2020.2.1,New Mexico,vote,1,3rd Party,5.3
+2020.2.1,New York,vote,1,3rd Party,5.2
+2020.2.1,North Carolina,vote,1,3rd Party,2.0
+2020.2.1,North Dakota,vote,1,3rd Party,6.1
+2020.2.1,Ohio,vote,1,3rd Party,4.1
+2020.2.1,Oklahoma,vote,1,3rd Party,2.2
+2020.2.1,Oregon,vote,1,3rd Party,6.8
+2020.2.1,Pennsylvania,vote,1,3rd Party,3.4
+2020.2.1,Rhode Island,vote,1,3rd Party,5.0
+2020.2.1,South Carolina,vote,1,3rd Party,3.1
+2020.2.1,South Dakota,vote,1,3rd Party,4.2
+2020.2.1,Tennessee,vote,1,3rd Party,2.7
+2020.2.1,Texas,vote,1,3rd Party,2.8
+2020.2.1,Utah,vote,1,3rd Party,8.2
+2020.2.1,Vermont,vote,1,3rd Party,7.3
+2020.2.1,Virginia,vote,1,3rd Party,3.5
+2020.2.1,Washington,vote,1,3rd Party,6.2
+2020.2.1,West Virginia,vote,1,3rd Party,3.1
+2020.2.1,Wisconsin,vote,1,3rd Party,4.3
+2020.2.1,Wyoming,vote,1,3rd Party,6.4
+2020.2.1,District of Columbia,vote,1,3rd Party,4.8
+2020.2.1,Maine-1,vote,1,3rd Party,5.0
+2020.2.1,Maine-2,vote,1,3rd Party,5.8
+2020.2.1,Nebraska-1,vote,1,3rd Party,4.9
+2020.2.1,Nebraska-2,vote,1,3rd Party,4.5
+2020.2.1,Nebraska-3,vote,1,3rd Party,4.5
+2020.2.1,US,win,2,3rd Party,4.1
+2020.2.1,US,win,3,Trump,254.0
+2020.2.1,US,win,3,Democrats,284.0
+2020.2.1,US,win,3,3rd Party,0.0
+2020.2.2,Alabama,win,1,Trump,99.9
+2020.2.2,Alaska,win,1,Trump,90.0
+2020.2.2,Arizona,win,1,Trump,61.1
+2020.2.2,Arkansas,win,1,Trump,99.9
+2020.2.2,California,win,1,Trump,0.1
+2020.2.2,Colorado,win,1,Trump,24.8
+2020.2.2,Connecticut,win,1,Trump,6.9
+2020.2.2,Delaware,win,1,Trump,7.9
+2020.2.2,Florida,win,1,Trump,55.0
+2020.2.2,Georgia,win,1,Trump,69.9
+2020.2.2,Hawaii,win,1,Trump,0.0
+2020.2.2,Idaho,win,1,Trump,100.0
+2020.2.2,Illinois,win,1,Trump,5.9
+2020.2.2,Indiana,win,1,Trump,94.2
+2020.2.2,Iowa,win,1,Trump,66.2
+2020.2.2,Kansas,win,1,Trump,96.3
+2020.2.2,Kentucky,win,1,Trump,99.9
+2020.2.2,Louisiana,win,1,Trump,98.4
+2020.2.2,Maine,win,1,Trump,29.4
+2020.2.2,Maryland,win,1,Trump,0.2
+2020.2.2,Massachusetts,win,1,Trump,0.1
+2020.2.2,Michigan,win,1,Trump,41.5
+2020.2.2,Minnesota,win,1,Trump,32.9
+2020.2.2,Mississippi,win,1,Trump,94.4
+2020.2.2,Missouri,win,1,Trump,93.1
+2020.2.2,Montana,win,1,Trump,92.7
+2020.2.2,Nebraska,win,1,Trump,99.7
+2020.2.2,Nevada,win,1,Trump,41.1
+2020.2.2,New Hampshire,win,1,Trump,36.7
+2020.2.2,New Jersey,win,1,Trump,9.7
+2020.2.2,New Mexico,win,1,Trump,18.1
+2020.2.2,New York,win,1,Trump,1.5
+2020.2.2,North Carolina,win,1,Trump,57.9
+2020.2.2,North Dakota,win,1,Trump,100.0
+2020.2.2,Ohio,win,1,Trump,69.5
+2020.2.2,Oklahoma,win,1,Trump,100.0
+2020.2.2,Oregon,win,1,Trump,14.1
+2020.2.2,Pennsylvania,win,1,Trump,47.0
+2020.2.2,Rhode Island,win,1,Trump,4.2
+2020.2.2,South Carolina,win,1,Trump,88.2
+2020.2.2,South Dakota,win,1,Trump,99.8
+2020.2.2,Tennessee,win,1,Trump,99.1
+2020.2.2,Texas,win,1,Trump,79.0
+2020.2.2,Utah,win,1,Trump,99.6
+2020.2.2,Vermont,win,1,Trump,0.0
+2020.2.2,Virginia,win,1,Trump,29.9
+2020.2.2,Washington,win,1,Trump,9.4
+2020.2.2,West Virginia,win,1,Trump,100.0
+2020.2.2,Wisconsin,win,1,Trump,51.0
+2020.2.2,Wyoming,win,1,Trump,100.0
+2020.2.2,District of Columbia,win,1,Trump,0.0
+2020.2.2,Maine-1,win,1,Trump,8.6
+2020.2.2,Maine-2,win,1,Trump,59.8
+2020.2.2,Nebraska-1,win,1,Trump,96.1
+2020.2.2,Nebraska-2,win,1,Trump,58.3
+2020.2.2,Nebraska-3,win,1,Trump,100.0
+2020.2.2,US,win,1,Trump,47.5
+2020.2.2,Alabama,win,1,Democrats,0.1
+2020.2.2,Alaska,win,1,Democrats,10.0
+2020.2.2,Arizona,win,1,Democrats,38.9
+2020.2.2,Arkansas,win,1,Democrats,0.1
+2020.2.2,California,win,1,Democrats,99.9
+2020.2.2,Colorado,win,1,Democrats,75.2
+2020.2.2,Connecticut,win,1,Democrats,93.1
+2020.2.2,Delaware,win,1,Democrats,92.1
+2020.2.2,Florida,win,1,Democrats,45.0
+2020.2.2,Georgia,win,1,Democrats,30.1
+2020.2.2,Hawaii,win,1,Democrats,100.0
+2020.2.2,Idaho,win,1,Democrats,0.0
+2020.2.2,Illinois,win,1,Democrats,94.1
+2020.2.2,Indiana,win,1,Democrats,5.8
+2020.2.2,Iowa,win,1,Democrats,33.8
+2020.2.2,Kansas,win,1,Democrats,3.7
+2020.2.2,Kentucky,win,1,Democrats,0.1
+2020.2.2,Louisiana,win,1,Democrats,1.6
+2020.2.2,Maine,win,1,Democrats,70.6
+2020.2.2,Maryland,win,1,Democrats,99.8
+2020.2.2,Massachusetts,win,1,Democrats,99.9
+2020.2.2,Michigan,win,1,Democrats,58.5
+2020.2.2,Minnesota,win,1,Democrats,67.1
+2020.2.2,Mississippi,win,1,Democrats,5.6
+2020.2.2,Missouri,win,1,Democrats,6.9
+2020.2.2,Montana,win,1,Democrats,7.3
+2020.2.2,Nebraska,win,1,Democrats,0.3
+2020.2.2,Nevada,win,1,Democrats,58.9
+2020.2.2,New Hampshire,win,1,Democrats,63.3
+2020.2.2,New Jersey,win,1,Democrats,90.3
+2020.2.2,New Mexico,win,1,Democrats,81.9
+2020.2.2,New York,win,1,Democrats,98.5
+2020.2.2,North Carolina,win,1,Democrats,42.1
+2020.2.2,North Dakota,win,1,Democrats,0.0
+2020.2.2,Ohio,win,1,Democrats,30.5
+2020.2.2,Oklahoma,win,1,Democrats,0.0
+2020.2.2,Oregon,win,1,Democrats,85.9
+2020.2.2,Pennsylvania,win,1,Democrats,53.0
+2020.2.2,Rhode Island,win,1,Democrats,95.8
+2020.2.2,South Carolina,win,1,Democrats,11.8
+2020.2.2,South Dakota,win,1,Democrats,0.2
+2020.2.2,Tennessee,win,1,Democrats,0.9
+2020.2.2,Texas,win,1,Democrats,21.0
+2020.2.2,Utah,win,1,Democrats,0.4
+2020.2.2,Vermont,win,1,Democrats,100.0
+2020.2.2,Virginia,win,1,Democrats,70.1
+2020.2.2,Washington,win,1,Democrats,90.6
+2020.2.2,West Virginia,win,1,Democrats,0.0
+2020.2.2,Wisconsin,win,1,Democrats,49.0
+2020.2.2,Wyoming,win,1,Democrats,0.0
+2020.2.2,District of Columbia,win,1,Democrats,100.0
+2020.2.2,Maine-1,win,1,Democrats,91.4
+2020.2.2,Maine-2,win,1,Democrats,40.2
+2020.2.2,Nebraska-1,win,1,Democrats,3.9
+2020.2.2,Nebraska-2,win,1,Democrats,41.7
+2020.2.2,Nebraska-3,win,1,Democrats,0.0
+2020.2.2,US,win,1,Democrats,52.5
+2020.2.2,Alabama,win,1,3rd Party,0.0
+2020.2.2,Alaska,win,1,3rd Party,0.0
+2020.2.2,Arizona,win,1,3rd Party,0.0
+2020.2.2,Arkansas,win,1,3rd Party,0.0
+2020.2.2,California,win,1,3rd Party,0.0
+2020.2.2,Colorado,win,1,3rd Party,0.0
+2020.2.2,Connecticut,win,1,3rd Party,0.0
+2020.2.2,Delaware,win,1,3rd Party,0.0
+2020.2.2,Florida,win,1,3rd Party,0.0
+2020.2.2,Georgia,win,1,3rd Party,0.0
+2020.2.2,Hawaii,win,1,3rd Party,0.0
+2020.2.2,Idaho,win,1,3rd Party,0.0
+2020.2.2,Illinois,win,1,3rd Party,0.0
+2020.2.2,Indiana,win,1,3rd Party,0.0
+2020.2.2,Iowa,win,1,3rd Party,0.0
+2020.2.2,Kansas,win,1,3rd Party,0.0
+2020.2.2,Kentucky,win,1,3rd Party,0.0
+2020.2.2,Louisiana,win,1,3rd Party,0.0
+2020.2.2,Maine,win,1,3rd Party,0.0
+2020.2.2,Maryland,win,1,3rd Party,0.0
+2020.2.2,Massachusetts,win,1,3rd Party,0.0
+2020.2.2,Michigan,win,1,3rd Party,0.0
+2020.2.2,Minnesota,win,1,3rd Party,0.0
+2020.2.2,Mississippi,win,1,3rd Party,0.0
+2020.2.2,Missouri,win,1,3rd Party,0.0
+2020.2.2,Montana,win,1,3rd Party,0.0
+2020.2.2,Nebraska,win,1,3rd Party,0.0
+2020.2.2,Nevada,win,1,3rd Party,0.0
+2020.2.2,New Hampshire,win,1,3rd Party,0.0
+2020.2.2,New Jersey,win,1,3rd Party,0.0
+2020.2.2,New Mexico,win,1,3rd Party,0.0
+2020.2.2,New York,win,1,3rd Party,0.0
+2020.2.2,North Carolina,win,1,3rd Party,0.0
+2020.2.2,North Dakota,win,1,3rd Party,0.0
+2020.2.2,Ohio,win,1,3rd Party,0.0
+2020.2.2,Oklahoma,win,1,3rd Party,0.0
+2020.2.2,Oregon,win,1,3rd Party,0.0
+2020.2.2,Pennsylvania,win,1,3rd Party,0.0
+2020.2.2,Rhode Island,win,1,3rd Party,0.0
+2020.2.2,South Carolina,win,1,3rd Party,0.0
+2020.2.2,South Dakota,win,1,3rd Party,0.0
+2020.2.2,Tennessee,win,1,3rd Party,0.0
+2020.2.2,Texas,win,1,3rd Party,0.0
+2020.2.2,Utah,win,1,3rd Party,0.0
+2020.2.2,Vermont,win,1,3rd Party,0.0
+2020.2.2,Virginia,win,1,3rd Party,0.0
+2020.2.2,Washington,win,1,3rd Party,0.0
+2020.2.2,West Virginia,win,1,3rd Party,0.0
+2020.2.2,Wisconsin,win,1,3rd Party,0.0
+2020.2.2,Wyoming,win,1,3rd Party,0.0
+2020.2.2,District of Columbia,win,1,3rd Party,0.0
+2020.2.2,Maine-1,win,1,3rd Party,0.0
+2020.2.2,Maine-2,win,1,3rd Party,0.0
+2020.2.2,Nebraska-1,win,1,3rd Party,0.0
+2020.2.2,Nebraska-2,win,1,3rd Party,0.0
+2020.2.2,Nebraska-3,win,1,3rd Party,0.0
+2020.2.2,US,win,1,3rd Party,0.0
+2020.2.2,Alabama,vote,1,Trump,62.5
+2020.2.2,Alaska,vote,1,Trump,52.1
+2020.2.2,Arizona,vote,1,Trump,49.5
+2020.2.2,Arkansas,vote,1,Trump,62.4
+2020.2.2,California,vote,1,Trump,34.1
+2020.2.2,Colorado,vote,1,Trump,42.5
+2020.2.2,Connecticut,vote,1,Trump,39.0
+2020.2.2,Delaware,vote,1,Trump,39.6
+2020.2.2,Florida,vote,1,Trump,49.5
+2020.2.2,Georgia,vote,1,Trump,52.2
+2020.2.2,Hawaii,vote,1,Trump,28.1
+2020.2.2,Idaho,vote,1,Trump,64.1
+2020.2.2,Illinois,vote,1,Trump,39.1
+2020.2.2,Indiana,vote,1,Trump,57.3
+2020.2.2,Iowa,vote,1,Trump,50.1
+2020.2.2,Kansas,vote,1,Trump,57.3
+2020.2.2,Kentucky,vote,1,Trump,62.8
+2020.2.2,Louisiana,vote,1,Trump,59.5
+2020.2.2,Maine,vote,1,Trump,43.3
+2020.2.2,Maryland,vote,1,Trump,34.7
+2020.2.2,Massachusetts,vote,1,Trump,32.3
+2020.2.2,Michigan,vote,1,Trump,46.8
+2020.2.2,Minnesota,vote,1,Trump,44.3
+2020.2.2,Mississippi,vote,1,Trump,58.0
+2020.2.2,Missouri,vote,1,Trump,57.3
+2020.2.2,Montana,vote,1,Trump,55.2
+2020.2.2,Nebraska,vote,1,Trump,61.2
+2020.2.2,Nevada,vote,1,Trump,45.7
+2020.2.2,New Hampshire,vote,1,Trump,45.7
+2020.2.2,New Jersey,vote,1,Trump,39.7
+2020.2.2,New Mexico,vote,1,Trump,41.1
+2020.2.2,New York,vote,1,Trump,35.2
+2020.2.2,North Carolina,vote,1,Trump,50.2
+2020.2.2,North Dakota,vote,1,Trump,63.6
+2020.2.2,Ohio,vote,1,Trump,51.4
+2020.2.2,Oklahoma,vote,1,Trump,66.3
+2020.2.2,Oregon,vote,1,Trump,39.4
+2020.2.2,Pennsylvania,vote,1,Trump,47.7
+2020.2.2,Rhode Island,vote,1,Trump,37.0
+2020.2.2,South Carolina,vote,1,Trump,56.3
+2020.2.2,South Dakota,vote,1,Trump,62.4
+2020.2.2,Tennessee,vote,1,Trump,61.5
+2020.2.2,Texas,vote,1,Trump,53.9
+2020.2.2,Utah,vote,1,Trump,60.2
+2020.2.2,Vermont,vote,1,Trump,29.6
+2020.2.2,Virginia,vote,1,Trump,44.4
+2020.2.2,Washington,vote,1,Trump,38.1
+2020.2.2,West Virginia,vote,1,Trump,65.8
+2020.2.2,Wisconsin,vote,1,Trump,48.0
+2020.2.2,Wyoming,vote,1,Trump,69.6
+2020.2.2,District of Columbia,vote,1,Trump,10.7
+2020.2.2,Maine-1,vote,1,Trump,37.6
+2020.2.2,Maine-2,vote,1,Trump,49.0
+2020.2.2,Nebraska-1,vote,1,Trump,59.3
+2020.2.2,Nebraska-2,vote,1,Trump,49.4
+2020.2.2,Nebraska-3,vote,1,Trump,75.5
+2020.2.2,US,win,2,Trump,46.6
+2020.2.2,Alabama,vote,1,Democrats,34.4
+2020.2.2,Alaska,vote,1,Democrats,36.3
+2020.2.2,Arizona,vote,1,Democrats,45.9
+2020.2.2,Arkansas,vote,1,Democrats,33.1
+2020.2.2,California,vote,1,Democrats,60.5
+2020.2.2,Colorado,vote,1,Democrats,51.5
+2020.2.2,Connecticut,vote,1,Democrats,56.6
+2020.2.2,Delaware,vote,1,Democrats,57.0
+2020.2.2,Florida,vote,1,Democrats,47.9
+2020.2.2,Georgia,vote,1,Democrats,45.5
+2020.2.2,Hawaii,vote,1,Democrats,66.7
+2020.2.2,Idaho,vote,1,Democrats,29.2
+2020.2.2,Illinois,vote,1,Democrats,57.4
+2020.2.2,Indiana,vote,1,Democrats,39.3
+2020.2.2,Iowa,vote,1,Democrats,45.3
+2020.2.2,Kansas,vote,1,Democrats,37.3
+2020.2.2,Kentucky,vote,1,Democrats,33.9
+2020.2.2,Louisiana,vote,1,Democrats,36.6
+2020.2.2,Maine,vote,1,Democrats,50.2
+2020.2.2,Maryland,vote,1,Democrats,61.6
+2020.2.2,Massachusetts,vote,1,Democrats,61.3
+2020.2.2,Michigan,vote,1,Democrats,49.5
+2020.2.2,Minnesota,vote,1,Democrats,50.0
+2020.2.2,Mississippi,vote,1,Democrats,39.3
+2020.2.2,Missouri,vote,1,Democrats,39.6
+2020.2.2,Montana,vote,1,Democrats,37.7
+2020.2.2,Nebraska,vote,1,Democrats,34.0
+2020.2.2,Nevada,vote,1,Democrats,48.8
+2020.2.2,New Hampshire,vote,1,Democrats,49.9
+2020.2.2,New Jersey,vote,1,Democrats,56.7
+2020.2.2,New Mexico,vote,1,Democrats,53.5
+2020.2.2,New York,vote,1,Democrats,59.5
+2020.2.2,North Carolina,vote,1,Democrats,47.6
+2020.2.2,North Dakota,vote,1,Democrats,30.2
+2020.2.2,Ohio,vote,1,Democrats,44.4
+2020.2.2,Oklahoma,vote,1,Democrats,31.3
+2020.2.2,Oregon,vote,1,Democrats,53.8
+2020.2.2,Pennsylvania,vote,1,Democrats,48.8
+2020.2.2,Rhode Island,vote,1,Democrats,57.9
+2020.2.2,South Carolina,vote,1,Democrats,40.5
+2020.2.2,South Dakota,vote,1,Democrats,33.3
+2020.2.2,Tennessee,vote,1,Democrats,35.7
+2020.2.2,Texas,vote,1,Democrats,43.2
+2020.2.2,Utah,vote,1,Democrats,31.5
+2020.2.2,Vermont,vote,1,Democrats,63.0
+2020.2.2,Virginia,vote,1,Democrats,51.9
+2020.2.2,Washington,vote,1,Democrats,55.6
+2020.2.2,West Virginia,vote,1,Democrats,30.9
+2020.2.2,Wisconsin,vote,1,Democrats,47.7
+2020.2.2,Wyoming,vote,1,Democrats,23.8
+2020.2.2,District of Columbia,vote,1,Democrats,84.3
+2020.2.2,Maine-1,vote,1,Democrats,57.3
+2020.2.2,Maine-2,vote,1,Democrats,45.1
+2020.2.2,Nebraska-1,vote,1,Democrats,35.7
+2020.2.2,Nebraska-2,vote,1,Democrats,46.0
+2020.2.2,Nebraska-3,vote,1,Democrats,20.0
+2020.2.2,US,win,2,Democrats,49.2
+2020.2.2,Alabama,vote,1,3rd Party,3.0
+2020.2.2,Alaska,vote,1,3rd Party,11.4
+2020.2.2,Arizona,vote,1,3rd Party,4.6
+2020.2.2,Arkansas,vote,1,3rd Party,4.4
+2020.2.2,California,vote,1,3rd Party,5.3
+2020.2.2,Colorado,vote,1,3rd Party,5.9
+2020.2.2,Connecticut,vote,1,3rd Party,4.4
+2020.2.2,Delaware,vote,1,3rd Party,3.3
+2020.2.2,Florida,vote,1,3rd Party,2.5
+2020.2.2,Georgia,vote,1,3rd Party,2.2
+2020.2.2,Hawaii,vote,1,3rd Party,5.1
+2020.2.2,Idaho,vote,1,3rd Party,6.5
+2020.2.2,Illinois,vote,1,3rd Party,3.4
+2020.2.2,Indiana,vote,1,3rd Party,3.4
+2020.2.2,Iowa,vote,1,3rd Party,4.5
+2020.2.2,Kansas,vote,1,3rd Party,5.3
+2020.2.2,Kentucky,vote,1,3rd Party,3.2
+2020.2.2,Louisiana,vote,1,3rd Party,3.8
+2020.2.2,Maine,vote,1,3rd Party,6.4
+2020.2.2,Maryland,vote,1,3rd Party,3.6
+2020.2.2,Massachusetts,vote,1,3rd Party,6.3
+2020.2.2,Michigan,vote,1,3rd Party,3.5
+2020.2.2,Minnesota,vote,1,3rd Party,5.6
+2020.2.2,Mississippi,vote,1,3rd Party,2.6
+2020.2.2,Missouri,vote,1,3rd Party,3.0
+2020.2.2,Montana,vote,1,3rd Party,7.0
+2020.2.2,Nebraska,vote,1,3rd Party,4.7
+2020.2.2,Nevada,vote,1,3rd Party,5.4
+2020.2.2,New Hampshire,vote,1,3rd Party,4.3
+2020.2.2,New Jersey,vote,1,3rd Party,3.5
+2020.2.2,New Mexico,vote,1,3rd Party,5.3
+2020.2.2,New York,vote,1,3rd Party,5.2
+2020.2.2,North Carolina,vote,1,3rd Party,2.0
+2020.2.2,North Dakota,vote,1,3rd Party,6.1
+2020.2.2,Ohio,vote,1,3rd Party,4.1
+2020.2.2,Oklahoma,vote,1,3rd Party,2.2
+2020.2.2,Oregon,vote,1,3rd Party,6.8
+2020.2.2,Pennsylvania,vote,1,3rd Party,3.4
+2020.2.2,Rhode Island,vote,1,3rd Party,5.0
+2020.2.2,South Carolina,vote,1,3rd Party,3.1
+2020.2.2,South Dakota,vote,1,3rd Party,4.2
+2020.2.2,Tennessee,vote,1,3rd Party,2.7
+2020.2.2,Texas,vote,1,3rd Party,2.8
+2020.2.2,Utah,vote,1,3rd Party,8.2
+2020.2.2,Vermont,vote,1,3rd Party,7.3
+2020.2.2,Virginia,vote,1,3rd Party,3.5
+2020.2.2,Washington,vote,1,3rd Party,6.2
+2020.2.2,West Virginia,vote,1,3rd Party,3.1
+2020.2.2,Wisconsin,vote,1,3rd Party,4.3
+2020.2.2,Wyoming,vote,1,3rd Party,6.4
+2020.2.2,District of Columbia,vote,1,3rd Party,4.8
+2020.2.2,Maine-1,vote,1,3rd Party,5.0
+2020.2.2,Maine-2,vote,1,3rd Party,5.8
+2020.2.2,Nebraska-1,vote,1,3rd Party,4.9
+2020.2.2,Nebraska-2,vote,1,3rd Party,4.5
+2020.2.2,Nebraska-3,vote,1,3rd Party,4.5
+2020.2.2,US,win,2,3rd Party,4.1
+2020.2.2,US,win,3,Trump,253.9
+2020.2.2,US,win,3,Democrats,284.1
+2020.2.2,US,win,3,3rd Party,0.0
+2020.2.3,Alabama,win,1,Trump,99.9
+2020.2.3,Alaska,win,1,Trump,90.0
+2020.2.3,Arizona,win,1,Trump,61.1
+2020.2.3,Arkansas,win,1,Trump,99.9
+2020.2.3,California,win,1,Trump,0.1
+2020.2.3,Colorado,win,1,Trump,24.9
+2020.2.3,Connecticut,win,1,Trump,6.9
+2020.2.3,Delaware,win,1,Trump,7.9
+2020.2.3,Florida,win,1,Trump,55.0
+2020.2.3,Georgia,win,1,Trump,69.8
+2020.2.3,Hawaii,win,1,Trump,0.0
+2020.2.3,Idaho,win,1,Trump,100.0
+2020.2.3,Illinois,win,1,Trump,5.9
+2020.2.3,Indiana,win,1,Trump,94.2
+2020.2.3,Iowa,win,1,Trump,66.2
+2020.2.3,Kansas,win,1,Trump,96.3
+2020.2.3,Kentucky,win,1,Trump,99.9
+2020.2.3,Louisiana,win,1,Trump,98.4
+2020.2.3,Maine,win,1,Trump,29.4
+2020.2.3,Maryland,win,1,Trump,0.2
+2020.2.3,Massachusetts,win,1,Trump,0.1
+2020.2.3,Michigan,win,1,Trump,41.5
+2020.2.3,Minnesota,win,1,Trump,33.0
+2020.2.3,Mississippi,win,1,Trump,94.4
+2020.2.3,Missouri,win,1,Trump,93.1
+2020.2.3,Montana,win,1,Trump,92.7
+2020.2.3,Nebraska,win,1,Trump,99.7
+2020.2.3,Nevada,win,1,Trump,41.1
+2020.2.3,New Hampshire,win,1,Trump,36.8
+2020.2.3,New Jersey,win,1,Trump,9.7
+2020.2.3,New Mexico,win,1,Trump,18.1
+2020.2.3,New York,win,1,Trump,1.5
+2020.2.3,North Carolina,win,1,Trump,57.8
+2020.2.3,North Dakota,win,1,Trump,100.0
+2020.2.3,Ohio,win,1,Trump,69.3
+2020.2.3,Oklahoma,win,1,Trump,100.0
+2020.2.3,Oregon,win,1,Trump,14.1
+2020.2.3,Pennsylvania,win,1,Trump,47.0
+2020.2.3,Rhode Island,win,1,Trump,4.2
+2020.2.3,South Carolina,win,1,Trump,88.2
+2020.2.3,South Dakota,win,1,Trump,99.8
+2020.2.3,Tennessee,win,1,Trump,99.1
+2020.2.3,Texas,win,1,Trump,78.9
+2020.2.3,Utah,win,1,Trump,99.6
+2020.2.3,Vermont,win,1,Trump,0.0
+2020.2.3,Virginia,win,1,Trump,29.9
+2020.2.3,Washington,win,1,Trump,9.4
+2020.2.3,West Virginia,win,1,Trump,100.0
+2020.2.3,Wisconsin,win,1,Trump,51.0
+2020.2.3,Wyoming,win,1,Trump,100.0
+2020.2.3,District of Columbia,win,1,Trump,0.0
+2020.2.3,Maine-1,win,1,Trump,8.6
+2020.2.3,Maine-2,win,1,Trump,59.8
+2020.2.3,Nebraska-1,win,1,Trump,96.1
+2020.2.3,Nebraska-2,win,1,Trump,58.3
+2020.2.3,Nebraska-3,win,1,Trump,100.0
+2020.2.3,US,win,1,Trump,46.8
+2020.2.3,Alabama,win,1,Democrats,0.1
+2020.2.3,Alaska,win,1,Democrats,10.0
+2020.2.3,Arizona,win,1,Democrats,38.9
+2020.2.3,Arkansas,win,1,Democrats,0.1
+2020.2.3,California,win,1,Democrats,99.9
+2020.2.3,Colorado,win,1,Democrats,75.1
+2020.2.3,Connecticut,win,1,Democrats,93.1
+2020.2.3,Delaware,win,1,Democrats,92.1
+2020.2.3,Florida,win,1,Democrats,45.0
+2020.2.3,Georgia,win,1,Democrats,30.2
+2020.2.3,Hawaii,win,1,Democrats,100.0
+2020.2.3,Idaho,win,1,Democrats,0.0
+2020.2.3,Illinois,win,1,Democrats,94.1
+2020.2.3,Indiana,win,1,Democrats,5.8
+2020.2.3,Iowa,win,1,Democrats,33.8
+2020.2.3,Kansas,win,1,Democrats,3.7
+2020.2.3,Kentucky,win,1,Democrats,0.1
+2020.2.3,Louisiana,win,1,Democrats,1.6
+2020.2.3,Maine,win,1,Democrats,70.6
+2020.2.3,Maryland,win,1,Democrats,99.8
+2020.2.3,Massachusetts,win,1,Democrats,99.9
+2020.2.3,Michigan,win,1,Democrats,58.5
+2020.2.3,Minnesota,win,1,Democrats,67.0
+2020.2.3,Mississippi,win,1,Democrats,5.6
+2020.2.3,Missouri,win,1,Democrats,6.9
+2020.2.3,Montana,win,1,Democrats,7.3
+2020.2.3,Nebraska,win,1,Democrats,0.3
+2020.2.3,Nevada,win,1,Democrats,58.9
+2020.2.3,New Hampshire,win,1,Democrats,63.2
+2020.2.3,New Jersey,win,1,Democrats,90.3
+2020.2.3,New Mexico,win,1,Democrats,81.9
+2020.2.3,New York,win,1,Democrats,98.5
+2020.2.3,North Carolina,win,1,Democrats,42.2
+2020.2.3,North Dakota,win,1,Democrats,0.0
+2020.2.3,Ohio,win,1,Democrats,30.7
+2020.2.3,Oklahoma,win,1,Democrats,0.0
+2020.2.3,Oregon,win,1,Democrats,85.9
+2020.2.3,Pennsylvania,win,1,Democrats,53.0
+2020.2.3,Rhode Island,win,1,Democrats,95.8
+2020.2.3,South Carolina,win,1,Democrats,11.8
+2020.2.3,South Dakota,win,1,Democrats,0.2
+2020.2.3,Tennessee,win,1,Democrats,0.9
+2020.2.3,Texas,win,1,Democrats,21.1
+2020.2.3,Utah,win,1,Democrats,0.4
+2020.2.3,Vermont,win,1,Democrats,100.0
+2020.2.3,Virginia,win,1,Democrats,70.1
+2020.2.3,Washington,win,1,Democrats,90.6
+2020.2.3,West Virginia,win,1,Democrats,0.0
+2020.2.3,Wisconsin,win,1,Democrats,49.0
+2020.2.3,Wyoming,win,1,Democrats,0.0
+2020.2.3,District of Columbia,win,1,Democrats,100.0
+2020.2.3,Maine-1,win,1,Democrats,91.4
+2020.2.3,Maine-2,win,1,Democrats,40.2
+2020.2.3,Nebraska-1,win,1,Democrats,3.9
+2020.2.3,Nebraska-2,win,1,Democrats,41.7
+2020.2.3,Nebraska-3,win,1,Democrats,0.0
+2020.2.3,US,win,1,Democrats,53.2
+2020.2.3,Alabama,win,1,3rd Party,0.0
+2020.2.3,Alaska,win,1,3rd Party,0.0
+2020.2.3,Arizona,win,1,3rd Party,0.0
+2020.2.3,Arkansas,win,1,3rd Party,0.0
+2020.2.3,California,win,1,3rd Party,0.0
+2020.2.3,Colorado,win,1,3rd Party,0.0
+2020.2.3,Connecticut,win,1,3rd Party,0.0
+2020.2.3,Delaware,win,1,3rd Party,0.0
+2020.2.3,Florida,win,1,3rd Party,0.0
+2020.2.3,Georgia,win,1,3rd Party,0.0
+2020.2.3,Hawaii,win,1,3rd Party,0.0
+2020.2.3,Idaho,win,1,3rd Party,0.0
+2020.2.3,Illinois,win,1,3rd Party,0.0
+2020.2.3,Indiana,win,1,3rd Party,0.0
+2020.2.3,Iowa,win,1,3rd Party,0.0
+2020.2.3,Kansas,win,1,3rd Party,0.0
+2020.2.3,Kentucky,win,1,3rd Party,0.0
+2020.2.3,Louisiana,win,1,3rd Party,0.0
+2020.2.3,Maine,win,1,3rd Party,0.0
+2020.2.3,Maryland,win,1,3rd Party,0.0
+2020.2.3,Massachusetts,win,1,3rd Party,0.0
+2020.2.3,Michigan,win,1,3rd Party,0.0
+2020.2.3,Minnesota,win,1,3rd Party,0.0
+2020.2.3,Mississippi,win,1,3rd Party,0.0
+2020.2.3,Missouri,win,1,3rd Party,0.0
+2020.2.3,Montana,win,1,3rd Party,0.0
+2020.2.3,Nebraska,win,1,3rd Party,0.0
+2020.2.3,Nevada,win,1,3rd Party,0.0
+2020.2.3,New Hampshire,win,1,3rd Party,0.0
+2020.2.3,New Jersey,win,1,3rd Party,0.0
+2020.2.3,New Mexico,win,1,3rd Party,0.0
+2020.2.3,New York,win,1,3rd Party,0.0
+2020.2.3,North Carolina,win,1,3rd Party,0.0
+2020.2.3,North Dakota,win,1,3rd Party,0.0
+2020.2.3,Ohio,win,1,3rd Party,0.0
+2020.2.3,Oklahoma,win,1,3rd Party,0.0
+2020.2.3,Oregon,win,1,3rd Party,0.0
+2020.2.3,Pennsylvania,win,1,3rd Party,0.0
+2020.2.3,Rhode Island,win,1,3rd Party,0.0
+2020.2.3,South Carolina,win,1,3rd Party,0.0
+2020.2.3,South Dakota,win,1,3rd Party,0.0
+2020.2.3,Tennessee,win,1,3rd Party,0.0
+2020.2.3,Texas,win,1,3rd Party,0.0
+2020.2.3,Utah,win,1,3rd Party,0.0
+2020.2.3,Vermont,win,1,3rd Party,0.0
+2020.2.3,Virginia,win,1,3rd Party,0.0
+2020.2.3,Washington,win,1,3rd Party,0.0
+2020.2.3,West Virginia,win,1,3rd Party,0.0
+2020.2.3,Wisconsin,win,1,3rd Party,0.0
+2020.2.3,Wyoming,win,1,3rd Party,0.0
+2020.2.3,District of Columbia,win,1,3rd Party,0.0
+2020.2.3,Maine-1,win,1,3rd Party,0.0
+2020.2.3,Maine-2,win,1,3rd Party,0.0
+2020.2.3,Nebraska-1,win,1,3rd Party,0.0
+2020.2.3,Nebraska-2,win,1,3rd Party,0.0
+2020.2.3,Nebraska-3,win,1,3rd Party,0.0
+2020.2.3,US,win,1,3rd Party,0.0
+2020.2.3,Alabama,vote,1,Trump,62.5
+2020.2.3,Alaska,vote,1,Trump,52.1
+2020.2.3,Arizona,vote,1,Trump,49.5
+2020.2.3,Arkansas,vote,1,Trump,62.4
+2020.2.3,California,vote,1,Trump,34.1
+2020.2.3,Colorado,vote,1,Trump,42.5
+2020.2.3,Connecticut,vote,1,Trump,39.0
+2020.2.3,Delaware,vote,1,Trump,39.6
+2020.2.3,Florida,vote,1,Trump,49.5
+2020.2.3,Georgia,vote,1,Trump,52.2
+2020.2.3,Hawaii,vote,1,Trump,28.1
+2020.2.3,Idaho,vote,1,Trump,64.1
+2020.2.3,Illinois,vote,1,Trump,39.1
+2020.2.3,Indiana,vote,1,Trump,57.3
+2020.2.3,Iowa,vote,1,Trump,50.1
+2020.2.3,Kansas,vote,1,Trump,57.3
+2020.2.3,Kentucky,vote,1,Trump,62.8
+2020.2.3,Louisiana,vote,1,Trump,59.5
+2020.2.3,Maine,vote,1,Trump,43.3
+2020.2.3,Maryland,vote,1,Trump,34.7
+2020.2.3,Massachusetts,vote,1,Trump,32.3
+2020.2.3,Michigan,vote,1,Trump,46.8
+2020.2.3,Minnesota,vote,1,Trump,44.3
+2020.2.3,Mississippi,vote,1,Trump,58.0
+2020.2.3,Missouri,vote,1,Trump,57.3
+2020.2.3,Montana,vote,1,Trump,55.2
+2020.2.3,Nebraska,vote,1,Trump,61.2
+2020.2.3,Nevada,vote,1,Trump,45.7
+2020.2.3,New Hampshire,vote,1,Trump,45.7
+2020.2.3,New Jersey,vote,1,Trump,39.7
+2020.2.3,New Mexico,vote,1,Trump,41.1
+2020.2.3,New York,vote,1,Trump,35.2
+2020.2.3,North Carolina,vote,1,Trump,50.2
+2020.2.3,North Dakota,vote,1,Trump,63.6
+2020.2.3,Ohio,vote,1,Trump,51.4
+2020.2.3,Oklahoma,vote,1,Trump,66.3
+2020.2.3,Oregon,vote,1,Trump,39.4
+2020.2.3,Pennsylvania,vote,1,Trump,47.7
+2020.2.3,Rhode Island,vote,1,Trump,37.0
+2020.2.3,South Carolina,vote,1,Trump,56.3
+2020.2.3,South Dakota,vote,1,Trump,62.4
+2020.2.3,Tennessee,vote,1,Trump,61.5
+2020.2.3,Texas,vote,1,Trump,53.9
+2020.2.3,Utah,vote,1,Trump,60.2
+2020.2.3,Vermont,vote,1,Trump,29.6
+2020.2.3,Virginia,vote,1,Trump,44.4
+2020.2.3,Washington,vote,1,Trump,38.1
+2020.2.3,West Virginia,vote,1,Trump,65.8
+2020.2.3,Wisconsin,vote,1,Trump,48.0
+2020.2.3,Wyoming,vote,1,Trump,69.6
+2020.2.3,District of Columbia,vote,1,Trump,10.7
+2020.2.3,Maine-1,vote,1,Trump,37.6
+2020.2.3,Maine-2,vote,1,Trump,49.0
+2020.2.3,Nebraska-1,vote,1,Trump,59.3
+2020.2.3,Nebraska-2,vote,1,Trump,49.4
+2020.2.3,Nebraska-3,vote,1,Trump,75.5
+2020.2.3,US,win,2,Trump,46.6
+2020.2.3,Alabama,vote,1,Democrats,34.4
+2020.2.3,Alaska,vote,1,Democrats,36.3
+2020.2.3,Arizona,vote,1,Democrats,45.9
+2020.2.3,Arkansas,vote,1,Democrats,33.1
+2020.2.3,California,vote,1,Democrats,60.5
+2020.2.3,Colorado,vote,1,Democrats,51.5
+2020.2.3,Connecticut,vote,1,Democrats,56.6
+2020.2.3,Delaware,vote,1,Democrats,57.0
+2020.2.3,Florida,vote,1,Democrats,47.9
+2020.2.3,Georgia,vote,1,Democrats,45.5
+2020.2.3,Hawaii,vote,1,Democrats,66.7
+2020.2.3,Idaho,vote,1,Democrats,29.2
+2020.2.3,Illinois,vote,1,Democrats,57.4
+2020.2.3,Indiana,vote,1,Democrats,39.3
+2020.2.3,Iowa,vote,1,Democrats,45.3
+2020.2.3,Kansas,vote,1,Democrats,37.3
+2020.2.3,Kentucky,vote,1,Democrats,33.9
+2020.2.3,Louisiana,vote,1,Democrats,36.6
+2020.2.3,Maine,vote,1,Democrats,50.2
+2020.2.3,Maryland,vote,1,Democrats,61.6
+2020.2.3,Massachusetts,vote,1,Democrats,61.3
+2020.2.3,Michigan,vote,1,Democrats,49.5
+2020.2.3,Minnesota,vote,1,Democrats,50.0
+2020.2.3,Mississippi,vote,1,Democrats,39.3
+2020.2.3,Missouri,vote,1,Democrats,39.6
+2020.2.3,Montana,vote,1,Democrats,37.7
+2020.2.3,Nebraska,vote,1,Democrats,34.0
+2020.2.3,Nevada,vote,1,Democrats,48.8
+2020.2.3,New Hampshire,vote,1,Democrats,49.9
+2020.2.3,New Jersey,vote,1,Democrats,56.7
+2020.2.3,New Mexico,vote,1,Democrats,53.5
+2020.2.3,New York,vote,1,Democrats,59.5
+2020.2.3,North Carolina,vote,1,Democrats,47.6
+2020.2.3,North Dakota,vote,1,Democrats,30.2
+2020.2.3,Ohio,vote,1,Democrats,44.4
+2020.2.3,Oklahoma,vote,1,Democrats,31.3
+2020.2.3,Oregon,vote,1,Democrats,53.8
+2020.2.3,Pennsylvania,vote,1,Democrats,48.8
+2020.2.3,Rhode Island,vote,1,Democrats,57.9
+2020.2.3,South Carolina,vote,1,Democrats,40.5
+2020.2.3,South Dakota,vote,1,Democrats,33.3
+2020.2.3,Tennessee,vote,1,Democrats,35.7
+2020.2.3,Texas,vote,1,Democrats,43.2
+2020.2.3,Utah,vote,1,Democrats,31.5
+2020.2.3,Vermont,vote,1,Democrats,63.0
+2020.2.3,Virginia,vote,1,Democrats,51.9
+2020.2.3,Washington,vote,1,Democrats,55.6
+2020.2.3,West Virginia,vote,1,Democrats,30.9
+2020.2.3,Wisconsin,vote,1,Democrats,47.7
+2020.2.3,Wyoming,vote,1,Democrats,23.8
+2020.2.3,District of Columbia,vote,1,Democrats,84.3
+2020.2.3,Maine-1,vote,1,Democrats,57.3
+2020.2.3,Maine-2,vote,1,Democrats,45.1
+2020.2.3,Nebraska-1,vote,1,Democrats,35.7
+2020.2.3,Nebraska-2,vote,1,Democrats,46.0
+2020.2.3,Nebraska-3,vote,1,Democrats,20.0
+2020.2.3,US,win,2,Democrats,49.2
+2020.2.3,Alabama,vote,1,3rd Party,3.0
+2020.2.3,Alaska,vote,1,3rd Party,11.4
+2020.2.3,Arizona,vote,1,3rd Party,4.6
+2020.2.3,Arkansas,vote,1,3rd Party,4.4
+2020.2.3,California,vote,1,3rd Party,5.3
+2020.2.3,Colorado,vote,1,3rd Party,5.9
+2020.2.3,Connecticut,vote,1,3rd Party,4.4
+2020.2.3,Delaware,vote,1,3rd Party,3.3
+2020.2.3,Florida,vote,1,3rd Party,2.5
+2020.2.3,Georgia,vote,1,3rd Party,2.2
+2020.2.3,Hawaii,vote,1,3rd Party,5.1
+2020.2.3,Idaho,vote,1,3rd Party,6.5
+2020.2.3,Illinois,vote,1,3rd Party,3.4
+2020.2.3,Indiana,vote,1,3rd Party,3.4
+2020.2.3,Iowa,vote,1,3rd Party,4.5
+2020.2.3,Kansas,vote,1,3rd Party,5.3
+2020.2.3,Kentucky,vote,1,3rd Party,3.2
+2020.2.3,Louisiana,vote,1,3rd Party,3.8
+2020.2.3,Maine,vote,1,3rd Party,6.4
+2020.2.3,Maryland,vote,1,3rd Party,3.6
+2020.2.3,Massachusetts,vote,1,3rd Party,6.3
+2020.2.3,Michigan,vote,1,3rd Party,3.5
+2020.2.3,Minnesota,vote,1,3rd Party,5.6
+2020.2.3,Mississippi,vote,1,3rd Party,2.6
+2020.2.3,Missouri,vote,1,3rd Party,3.0
+2020.2.3,Montana,vote,1,3rd Party,7.0
+2020.2.3,Nebraska,vote,1,3rd Party,4.7
+2020.2.3,Nevada,vote,1,3rd Party,5.4
+2020.2.3,New Hampshire,vote,1,3rd Party,4.3
+2020.2.3,New Jersey,vote,1,3rd Party,3.5
+2020.2.3,New Mexico,vote,1,3rd Party,5.3
+2020.2.3,New York,vote,1,3rd Party,5.2
+2020.2.3,North Carolina,vote,1,3rd Party,2.0
+2020.2.3,North Dakota,vote,1,3rd Party,6.1
+2020.2.3,Ohio,vote,1,3rd Party,4.1
+2020.2.3,Oklahoma,vote,1,3rd Party,2.2
+2020.2.3,Oregon,vote,1,3rd Party,6.8
+2020.2.3,Pennsylvania,vote,1,3rd Party,3.4
+2020.2.3,Rhode Island,vote,1,3rd Party,5.0
+2020.2.3,South Carolina,vote,1,3rd Party,3.1
+2020.2.3,South Dakota,vote,1,3rd Party,4.2
+2020.2.3,Tennessee,vote,1,3rd Party,2.7
+2020.2.3,Texas,vote,1,3rd Party,2.8
+2020.2.3,Utah,vote,1,3rd Party,8.2
+2020.2.3,Vermont,vote,1,3rd Party,7.3
+2020.2.3,Virginia,vote,1,3rd Party,3.5
+2020.2.3,Washington,vote,1,3rd Party,6.2
+2020.2.3,West Virginia,vote,1,3rd Party,3.1
+2020.2.3,Wisconsin,vote,1,3rd Party,4.3
+2020.2.3,Wyoming,vote,1,3rd Party,6.4
+2020.2.3,District of Columbia,vote,1,3rd Party,4.8
+2020.2.3,Maine-1,vote,1,3rd Party,5.0
+2020.2.3,Maine-2,vote,1,3rd Party,5.8
+2020.2.3,Nebraska-1,vote,1,3rd Party,4.9
+2020.2.3,Nebraska-2,vote,1,3rd Party,4.5
+2020.2.3,Nebraska-3,vote,1,3rd Party,4.5
+2020.2.3,US,win,2,3rd Party,4.1
+2020.2.3,US,win,3,Trump,252.7
+2020.2.3,US,win,3,Democrats,285.3
+2020.2.3,US,win,3,3rd Party,0.0
+2020.2.4,Alabama,win,1,Trump,99.9
+2020.2.4,Alaska,win,1,Trump,90.0
+2020.2.4,Arizona,win,1,Trump,61.1
+2020.2.4,Arkansas,win,1,Trump,99.9
+2020.2.4,California,win,1,Trump,0.1
+2020.2.4,Colorado,win,1,Trump,24.9
+2020.2.4,Connecticut,win,1,Trump,6.9
+2020.2.4,Delaware,win,1,Trump,7.9
+2020.2.4,Florida,win,1,Trump,55.0
+2020.2.4,Georgia,win,1,Trump,69.8
+2020.2.4,Hawaii,win,1,Trump,0.0
+2020.2.4,Idaho,win,1,Trump,100.0
+2020.2.4,Illinois,win,1,Trump,5.9
+2020.2.4,Indiana,win,1,Trump,94.2
+2020.2.4,Iowa,win,1,Trump,66.1
+2020.2.4,Kansas,win,1,Trump,96.3
+2020.2.4,Kentucky,win,1,Trump,99.9
+2020.2.4,Louisiana,win,1,Trump,98.4
+2020.2.4,Maine,win,1,Trump,29.4
+2020.2.4,Maryland,win,1,Trump,0.2
+2020.2.4,Massachusetts,win,1,Trump,0.1
+2020.2.4,Michigan,win,1,Trump,41.5
+2020.2.4,Minnesota,win,1,Trump,33.0
+2020.2.4,Mississippi,win,1,Trump,94.4
+2020.2.4,Missouri,win,1,Trump,93.1
+2020.2.4,Montana,win,1,Trump,92.7
+2020.2.4,Nebraska,win,1,Trump,99.7
+2020.2.4,Nevada,win,1,Trump,41.1
+2020.2.4,New Hampshire,win,1,Trump,36.9
+2020.2.4,New Jersey,win,1,Trump,9.7
+2020.2.4,New Mexico,win,1,Trump,18.1
+2020.2.4,New York,win,1,Trump,1.5
+2020.2.4,North Carolina,win,1,Trump,57.9
+2020.2.4,North Dakota,win,1,Trump,100.0
+2020.2.4,Ohio,win,1,Trump,69.4
+2020.2.4,Oklahoma,win,1,Trump,100.0
+2020.2.4,Oregon,win,1,Trump,14.1
+2020.2.4,Pennsylvania,win,1,Trump,47.0
+2020.2.4,Rhode Island,win,1,Trump,4.2
+2020.2.4,South Carolina,win,1,Trump,88.2
+2020.2.4,South Dakota,win,1,Trump,99.8
+2020.2.4,Tennessee,win,1,Trump,99.1
+2020.2.4,Texas,win,1,Trump,78.9
+2020.2.4,Utah,win,1,Trump,99.6
+2020.2.4,Vermont,win,1,Trump,0.0
+2020.2.4,Virginia,win,1,Trump,29.9
+2020.2.4,Washington,win,1,Trump,9.5
+2020.2.4,West Virginia,win,1,Trump,100.0
+2020.2.4,Wisconsin,win,1,Trump,51.0
+2020.2.4,Wyoming,win,1,Trump,100.0
+2020.2.4,District of Columbia,win,1,Trump,0.0
+2020.2.4,Maine-1,win,1,Trump,8.6
+2020.2.4,Maine-2,win,1,Trump,59.8
+2020.2.4,Nebraska-1,win,1,Trump,96.1
+2020.2.4,Nebraska-2,win,1,Trump,58.3
+2020.2.4,Nebraska-3,win,1,Trump,100.0
+2020.2.4,US,win,1,Trump,47.7
+2020.2.4,Alabama,win,1,Democrats,0.1
+2020.2.4,Alaska,win,1,Democrats,10.0
+2020.2.4,Arizona,win,1,Democrats,38.9
+2020.2.4,Arkansas,win,1,Democrats,0.1
+2020.2.4,California,win,1,Democrats,99.9
+2020.2.4,Colorado,win,1,Democrats,75.1
+2020.2.4,Connecticut,win,1,Democrats,93.1
+2020.2.4,Delaware,win,1,Democrats,92.1
+2020.2.4,Florida,win,1,Democrats,45.0
+2020.2.4,Georgia,win,1,Democrats,30.2
+2020.2.4,Hawaii,win,1,Democrats,100.0
+2020.2.4,Idaho,win,1,Democrats,0.0
+2020.2.4,Illinois,win,1,Democrats,94.1
+2020.2.4,Indiana,win,1,Democrats,5.8
+2020.2.4,Iowa,win,1,Democrats,33.9
+2020.2.4,Kansas,win,1,Democrats,3.7
+2020.2.4,Kentucky,win,1,Democrats,0.1
+2020.2.4,Louisiana,win,1,Democrats,1.6
+2020.2.4,Maine,win,1,Democrats,70.6
+2020.2.4,Maryland,win,1,Democrats,99.8
+2020.2.4,Massachusetts,win,1,Democrats,99.9
+2020.2.4,Michigan,win,1,Democrats,58.5
+2020.2.4,Minnesota,win,1,Democrats,67.0
+2020.2.4,Mississippi,win,1,Democrats,5.6
+2020.2.4,Missouri,win,1,Democrats,6.9
+2020.2.4,Montana,win,1,Democrats,7.3
+2020.2.4,Nebraska,win,1,Democrats,0.3
+2020.2.4,Nevada,win,1,Democrats,58.9
+2020.2.4,New Hampshire,win,1,Democrats,63.1
+2020.2.4,New Jersey,win,1,Democrats,90.3
+2020.2.4,New Mexico,win,1,Democrats,81.9
+2020.2.4,New York,win,1,Democrats,98.5
+2020.2.4,North Carolina,win,1,Democrats,42.1
+2020.2.4,North Dakota,win,1,Democrats,0.0
+2020.2.4,Ohio,win,1,Democrats,30.6
+2020.2.4,Oklahoma,win,1,Democrats,0.0
+2020.2.4,Oregon,win,1,Democrats,85.9
+2020.2.4,Pennsylvania,win,1,Democrats,53.0
+2020.2.4,Rhode Island,win,1,Democrats,95.8
+2020.2.4,South Carolina,win,1,Democrats,11.8
+2020.2.4,South Dakota,win,1,Democrats,0.2
+2020.2.4,Tennessee,win,1,Democrats,0.9
+2020.2.4,Texas,win,1,Democrats,21.1
+2020.2.4,Utah,win,1,Democrats,0.4
+2020.2.4,Vermont,win,1,Democrats,100.0
+2020.2.4,Virginia,win,1,Democrats,70.1
+2020.2.4,Washington,win,1,Democrats,90.5
+2020.2.4,West Virginia,win,1,Democrats,0.0
+2020.2.4,Wisconsin,win,1,Democrats,49.0
+2020.2.4,Wyoming,win,1,Democrats,0.0
+2020.2.4,District of Columbia,win,1,Democrats,100.0
+2020.2.4,Maine-1,win,1,Democrats,91.4
+2020.2.4,Maine-2,win,1,Democrats,40.2
+2020.2.4,Nebraska-1,win,1,Democrats,3.9
+2020.2.4,Nebraska-2,win,1,Democrats,41.7
+2020.2.4,Nebraska-3,win,1,Democrats,0.0
+2020.2.4,US,win,1,Democrats,52.3
+2020.2.4,Alabama,win,1,3rd Party,0.0
+2020.2.4,Alaska,win,1,3rd Party,0.0
+2020.2.4,Arizona,win,1,3rd Party,0.0
+2020.2.4,Arkansas,win,1,3rd Party,0.0
+2020.2.4,California,win,1,3rd Party,0.0
+2020.2.4,Colorado,win,1,3rd Party,0.0
+2020.2.4,Connecticut,win,1,3rd Party,0.0
+2020.2.4,Delaware,win,1,3rd Party,0.0
+2020.2.4,Florida,win,1,3rd Party,0.0
+2020.2.4,Georgia,win,1,3rd Party,0.0
+2020.2.4,Hawaii,win,1,3rd Party,0.0
+2020.2.4,Idaho,win,1,3rd Party,0.0
+2020.2.4,Illinois,win,1,3rd Party,0.0
+2020.2.4,Indiana,win,1,3rd Party,0.0
+2020.2.4,Iowa,win,1,3rd Party,0.0
+2020.2.4,Kansas,win,1,3rd Party,0.0
+2020.2.4,Kentucky,win,1,3rd Party,0.0
+2020.2.4,Louisiana,win,1,3rd Party,0.0
+2020.2.4,Maine,win,1,3rd Party,0.0
+2020.2.4,Maryland,win,1,3rd Party,0.0
+2020.2.4,Massachusetts,win,1,3rd Party,0.0
+2020.2.4,Michigan,win,1,3rd Party,0.0
+2020.2.4,Minnesota,win,1,3rd Party,0.0
+2020.2.4,Mississippi,win,1,3rd Party,0.0
+2020.2.4,Missouri,win,1,3rd Party,0.0
+2020.2.4,Montana,win,1,3rd Party,0.0
+2020.2.4,Nebraska,win,1,3rd Party,0.0
+2020.2.4,Nevada,win,1,3rd Party,0.0
+2020.2.4,New Hampshire,win,1,3rd Party,0.0
+2020.2.4,New Jersey,win,1,3rd Party,0.0
+2020.2.4,New Mexico,win,1,3rd Party,0.0
+2020.2.4,New York,win,1,3rd Party,0.0
+2020.2.4,North Carolina,win,1,3rd Party,0.0
+2020.2.4,North Dakota,win,1,3rd Party,0.0
+2020.2.4,Ohio,win,1,3rd Party,0.0
+2020.2.4,Oklahoma,win,1,3rd Party,0.0
+2020.2.4,Oregon,win,1,3rd Party,0.0
+2020.2.4,Pennsylvania,win,1,3rd Party,0.0
+2020.2.4,Rhode Island,win,1,3rd Party,0.0
+2020.2.4,South Carolina,win,1,3rd Party,0.0
+2020.2.4,South Dakota,win,1,3rd Party,0.0
+2020.2.4,Tennessee,win,1,3rd Party,0.0
+2020.2.4,Texas,win,1,3rd Party,0.0
+2020.2.4,Utah,win,1,3rd Party,0.0
+2020.2.4,Vermont,win,1,3rd Party,0.0
+2020.2.4,Virginia,win,1,3rd Party,0.0
+2020.2.4,Washington,win,1,3rd Party,0.0
+2020.2.4,West Virginia,win,1,3rd Party,0.0
+2020.2.4,Wisconsin,win,1,3rd Party,0.0
+2020.2.4,Wyoming,win,1,3rd Party,0.0
+2020.2.4,District of Columbia,win,1,3rd Party,0.0
+2020.2.4,Maine-1,win,1,3rd Party,0.0
+2020.2.4,Maine-2,win,1,3rd Party,0.0
+2020.2.4,Nebraska-1,win,1,3rd Party,0.0
+2020.2.4,Nebraska-2,win,1,3rd Party,0.0
+2020.2.4,Nebraska-3,win,1,3rd Party,0.0
+2020.2.4,US,win,1,3rd Party,0.0
+2020.2.4,Alabama,vote,1,Trump,62.5
+2020.2.4,Alaska,vote,1,Trump,52.1
+2020.2.4,Arizona,vote,1,Trump,49.5
+2020.2.4,Arkansas,vote,1,Trump,62.4
+2020.2.4,California,vote,1,Trump,34.1
+2020.2.4,Colorado,vote,1,Trump,42.5
+2020.2.4,Connecticut,vote,1,Trump,39.0
+2020.2.4,Delaware,vote,1,Trump,39.6
+2020.2.4,Florida,vote,1,Trump,49.5
+2020.2.4,Georgia,vote,1,Trump,52.2
+2020.2.4,Hawaii,vote,1,Trump,28.1
+2020.2.4,Idaho,vote,1,Trump,64.1
+2020.2.4,Illinois,vote,1,Trump,39.1
+2020.2.4,Indiana,vote,1,Trump,57.3
+2020.2.4,Iowa,vote,1,Trump,50.1
+2020.2.4,Kansas,vote,1,Trump,57.3
+2020.2.4,Kentucky,vote,1,Trump,62.8
+2020.2.4,Louisiana,vote,1,Trump,59.5
+2020.2.4,Maine,vote,1,Trump,43.3
+2020.2.4,Maryland,vote,1,Trump,34.7
+2020.2.4,Massachusetts,vote,1,Trump,32.3
+2020.2.4,Michigan,vote,1,Trump,46.9
+2020.2.4,Minnesota,vote,1,Trump,44.3
+2020.2.4,Mississippi,vote,1,Trump,58.0
+2020.2.4,Missouri,vote,1,Trump,57.3
+2020.2.4,Montana,vote,1,Trump,55.2
+2020.2.4,Nebraska,vote,1,Trump,61.2
+2020.2.4,Nevada,vote,1,Trump,45.7
+2020.2.4,New Hampshire,vote,1,Trump,45.7
+2020.2.4,New Jersey,vote,1,Trump,39.7
+2020.2.4,New Mexico,vote,1,Trump,41.1
+2020.2.4,New York,vote,1,Trump,35.2
+2020.2.4,North Carolina,vote,1,Trump,50.3
+2020.2.4,North Dakota,vote,1,Trump,63.6
+2020.2.4,Ohio,vote,1,Trump,51.4
+2020.2.4,Oklahoma,vote,1,Trump,66.3
+2020.2.4,Oregon,vote,1,Trump,39.4
+2020.2.4,Pennsylvania,vote,1,Trump,47.8
+2020.2.4,Rhode Island,vote,1,Trump,37.0
+2020.2.4,South Carolina,vote,1,Trump,56.3
+2020.2.4,South Dakota,vote,1,Trump,62.4
+2020.2.4,Tennessee,vote,1,Trump,61.5
+2020.2.4,Texas,vote,1,Trump,53.9
+2020.2.4,Utah,vote,1,Trump,60.2
+2020.2.4,Vermont,vote,1,Trump,29.6
+2020.2.4,Virginia,vote,1,Trump,44.4
+2020.2.4,Washington,vote,1,Trump,38.1
+2020.2.4,West Virginia,vote,1,Trump,65.8
+2020.2.4,Wisconsin,vote,1,Trump,48.0
+2020.2.4,Wyoming,vote,1,Trump,69.6
+2020.2.4,District of Columbia,vote,1,Trump,10.7
+2020.2.4,Maine-1,vote,1,Trump,37.6
+2020.2.4,Maine-2,vote,1,Trump,49.0
+2020.2.4,Nebraska-1,vote,1,Trump,59.3
+2020.2.4,Nebraska-2,vote,1,Trump,49.4
+2020.2.4,Nebraska-3,vote,1,Trump,75.5
+2020.2.4,US,win,2,Trump,46.6
+2020.2.4,Alabama,vote,1,Democrats,34.4
+2020.2.4,Alaska,vote,1,Democrats,36.3
+2020.2.4,Arizona,vote,1,Democrats,45.9
+2020.2.4,Arkansas,vote,1,Democrats,33.0
+2020.2.4,California,vote,1,Democrats,60.5
+2020.2.4,Colorado,vote,1,Democrats,51.5
+2020.2.4,Connecticut,vote,1,Democrats,56.6
+2020.2.4,Delaware,vote,1,Democrats,57.0
+2020.2.4,Florida,vote,1,Democrats,47.9
+2020.2.4,Georgia,vote,1,Democrats,45.5
+2020.2.4,Hawaii,vote,1,Democrats,66.7
+2020.2.4,Idaho,vote,1,Democrats,29.2
+2020.2.4,Illinois,vote,1,Democrats,57.4
+2020.2.4,Indiana,vote,1,Democrats,39.3
+2020.2.4,Iowa,vote,1,Democrats,45.3
+2020.2.4,Kansas,vote,1,Democrats,37.3
+2020.2.4,Kentucky,vote,1,Democrats,33.9
+2020.2.4,Louisiana,vote,1,Democrats,36.6
+2020.2.4,Maine,vote,1,Democrats,50.2
+2020.2.4,Maryland,vote,1,Democrats,61.6
+2020.2.4,Massachusetts,vote,1,Democrats,61.3
+2020.2.4,Michigan,vote,1,Democrats,49.5
+2020.2.4,Minnesota,vote,1,Democrats,50.0
+2020.2.4,Mississippi,vote,1,Democrats,39.3
+2020.2.4,Missouri,vote,1,Democrats,39.6
+2020.2.4,Montana,vote,1,Democrats,37.7
+2020.2.4,Nebraska,vote,1,Democrats,34.0
+2020.2.4,Nevada,vote,1,Democrats,48.8
+2020.2.4,New Hampshire,vote,1,Democrats,49.8
+2020.2.4,New Jersey,vote,1,Democrats,56.7
+2020.2.4,New Mexico,vote,1,Democrats,53.5
+2020.2.4,New York,vote,1,Democrats,59.5
+2020.2.4,North Carolina,vote,1,Democrats,47.6
+2020.2.4,North Dakota,vote,1,Democrats,30.2
+2020.2.4,Ohio,vote,1,Democrats,44.4
+2020.2.4,Oklahoma,vote,1,Democrats,31.3
+2020.2.4,Oregon,vote,1,Democrats,53.8
+2020.2.4,Pennsylvania,vote,1,Democrats,48.8
+2020.2.4,Rhode Island,vote,1,Democrats,57.9
+2020.2.4,South Carolina,vote,1,Democrats,40.5
+2020.2.4,South Dakota,vote,1,Democrats,33.3
+2020.2.4,Tennessee,vote,1,Democrats,35.7
+2020.2.4,Texas,vote,1,Democrats,43.2
+2020.2.4,Utah,vote,1,Democrats,31.5
+2020.2.4,Vermont,vote,1,Democrats,63.0
+2020.2.4,Virginia,vote,1,Democrats,51.9
+2020.2.4,Washington,vote,1,Democrats,55.6
+2020.2.4,West Virginia,vote,1,Democrats,30.9
+2020.2.4,Wisconsin,vote,1,Democrats,47.7
+2020.2.4,Wyoming,vote,1,Democrats,23.8
+2020.2.4,District of Columbia,vote,1,Democrats,84.3
+2020.2.4,Maine-1,vote,1,Democrats,57.3
+2020.2.4,Maine-2,vote,1,Democrats,45.1
+2020.2.4,Nebraska-1,vote,1,Democrats,35.7
+2020.2.4,Nebraska-2,vote,1,Democrats,46.0
+2020.2.4,Nebraska-3,vote,1,Democrats,20.0
+2020.2.4,US,win,2,Democrats,49.2
+2020.2.4,Alabama,vote,1,3rd Party,3.0
+2020.2.4,Alaska,vote,1,3rd Party,11.4
+2020.2.4,Arizona,vote,1,3rd Party,4.6
+2020.2.4,Arkansas,vote,1,3rd Party,4.4
+2020.2.4,California,vote,1,3rd Party,5.3
+2020.2.4,Colorado,vote,1,3rd Party,5.9
+2020.2.4,Connecticut,vote,1,3rd Party,4.4
+2020.2.4,Delaware,vote,1,3rd Party,3.3
+2020.2.4,Florida,vote,1,3rd Party,2.5
+2020.2.4,Georgia,vote,1,3rd Party,2.2
+2020.2.4,Hawaii,vote,1,3rd Party,5.1
+2020.2.4,Idaho,vote,1,3rd Party,6.5
+2020.2.4,Illinois,vote,1,3rd Party,3.4
+2020.2.4,Indiana,vote,1,3rd Party,3.4
+2020.2.4,Iowa,vote,1,3rd Party,4.5
+2020.2.4,Kansas,vote,1,3rd Party,5.3
+2020.2.4,Kentucky,vote,1,3rd Party,3.2
+2020.2.4,Louisiana,vote,1,3rd Party,3.8
+2020.2.4,Maine,vote,1,3rd Party,6.4
+2020.2.4,Maryland,vote,1,3rd Party,3.6
+2020.2.4,Massachusetts,vote,1,3rd Party,6.3
+2020.2.4,Michigan,vote,1,3rd Party,3.5
+2020.2.4,Minnesota,vote,1,3rd Party,5.6
+2020.2.4,Mississippi,vote,1,3rd Party,2.6
+2020.2.4,Missouri,vote,1,3rd Party,3.0
+2020.2.4,Montana,vote,1,3rd Party,7.0
+2020.2.4,Nebraska,vote,1,3rd Party,4.7
+2020.2.4,Nevada,vote,1,3rd Party,5.4
+2020.2.4,New Hampshire,vote,1,3rd Party,4.3
+2020.2.4,New Jersey,vote,1,3rd Party,3.5
+2020.2.4,New Mexico,vote,1,3rd Party,5.3
+2020.2.4,New York,vote,1,3rd Party,5.2
+2020.2.4,North Carolina,vote,1,3rd Party,2.0
+2020.2.4,North Dakota,vote,1,3rd Party,6.1
+2020.2.4,Ohio,vote,1,3rd Party,4.1
+2020.2.4,Oklahoma,vote,1,3rd Party,2.2
+2020.2.4,Oregon,vote,1,3rd Party,6.8
+2020.2.4,Pennsylvania,vote,1,3rd Party,3.4
+2020.2.4,Rhode Island,vote,1,3rd Party,5.0
+2020.2.4,South Carolina,vote,1,3rd Party,3.1
+2020.2.4,South Dakota,vote,1,3rd Party,4.2
+2020.2.4,Tennessee,vote,1,3rd Party,2.7
+2020.2.4,Texas,vote,1,3rd Party,2.8
+2020.2.4,Utah,vote,1,3rd Party,8.2
+2020.2.4,Vermont,vote,1,3rd Party,7.3
+2020.2.4,Virginia,vote,1,3rd Party,3.5
+2020.2.4,Washington,vote,1,3rd Party,6.2
+2020.2.4,West Virginia,vote,1,3rd Party,3.1
+2020.2.4,Wisconsin,vote,1,3rd Party,4.3
+2020.2.4,Wyoming,vote,1,3rd Party,6.4
+2020.2.4,District of Columbia,vote,1,3rd Party,4.8
+2020.2.4,Maine-1,vote,1,3rd Party,5.0
+2020.2.4,Maine-2,vote,1,3rd Party,5.8
+2020.2.4,Nebraska-1,vote,1,3rd Party,4.9
+2020.2.4,Nebraska-2,vote,1,3rd Party,4.5
+2020.2.4,Nebraska-3,vote,1,3rd Party,4.5
+2020.2.4,US,win,2,3rd Party,4.1
+2020.2.4,US,win,3,Trump,254.0
+2020.2.4,US,win,3,Democrats,284.0
+2020.2.4,US,win,3,3rd Party,0.0
+2020.2.5,Alabama,win,1,Trump,99.9
+2020.2.5,Alaska,win,1,Trump,90.0
+2020.2.5,Arizona,win,1,Trump,61.1
+2020.2.5,Arkansas,win,1,Trump,99.9
+2020.2.5,California,win,1,Trump,0.1
+2020.2.5,Colorado,win,1,Trump,24.9
+2020.2.5,Connecticut,win,1,Trump,6.9
+2020.2.5,Delaware,win,1,Trump,8.0
+2020.2.5,Florida,win,1,Trump,55.1
+2020.2.5,Georgia,win,1,Trump,69.9
+2020.2.5,Hawaii,win,1,Trump,0.0
+2020.2.5,Idaho,win,1,Trump,100.0
+2020.2.5,Illinois,win,1,Trump,5.9
+2020.2.5,Indiana,win,1,Trump,94.2
+2020.2.5,Iowa,win,1,Trump,66.2
+2020.2.5,Kansas,win,1,Trump,96.3
+2020.2.5,Kentucky,win,1,Trump,99.9
+2020.2.5,Louisiana,win,1,Trump,98.4
+2020.2.5,Maine,win,1,Trump,29.5
+2020.2.5,Maryland,win,1,Trump,0.2
+2020.2.5,Massachusetts,win,1,Trump,0.1
+2020.2.5,Michigan,win,1,Trump,41.6
+2020.2.5,Minnesota,win,1,Trump,33.0
+2020.2.5,Mississippi,win,1,Trump,94.4
+2020.2.5,Missouri,win,1,Trump,93.1
+2020.2.5,Montana,win,1,Trump,92.7
+2020.2.5,Nebraska,win,1,Trump,99.7
+2020.2.5,Nevada,win,1,Trump,41.2
+2020.2.5,New Hampshire,win,1,Trump,37.0
+2020.2.5,New Jersey,win,1,Trump,9.7
+2020.2.5,New Mexico,win,1,Trump,18.2
+2020.2.5,New York,win,1,Trump,1.5
+2020.2.5,North Carolina,win,1,Trump,57.9
+2020.2.5,North Dakota,win,1,Trump,100.0
+2020.2.5,Ohio,win,1,Trump,69.5
+2020.2.5,Oklahoma,win,1,Trump,100.0
+2020.2.5,Oregon,win,1,Trump,14.2
+2020.2.5,Pennsylvania,win,1,Trump,47.1
+2020.2.5,Rhode Island,win,1,Trump,4.3
+2020.2.5,South Carolina,win,1,Trump,88.3
+2020.2.5,South Dakota,win,1,Trump,99.8
+2020.2.5,Tennessee,win,1,Trump,99.1
+2020.2.5,Texas,win,1,Trump,78.9
+2020.2.5,Utah,win,1,Trump,99.6
+2020.2.5,Vermont,win,1,Trump,0.0
+2020.2.5,Virginia,win,1,Trump,29.9
+2020.2.5,Washington,win,1,Trump,9.5
+2020.2.5,West Virginia,win,1,Trump,100.0
+2020.2.5,Wisconsin,win,1,Trump,51.0
+2020.2.5,Wyoming,win,1,Trump,100.0
+2020.2.5,District of Columbia,win,1,Trump,0.0
+2020.2.5,Maine-1,win,1,Trump,8.6
+2020.2.5,Maine-2,win,1,Trump,59.9
+2020.2.5,Nebraska-1,win,1,Trump,96.1
+2020.2.5,Nebraska-2,win,1,Trump,58.4
+2020.2.5,Nebraska-3,win,1,Trump,100.0
+2020.2.5,US,win,1,Trump,46.9
+2020.2.5,Alabama,win,1,Democrats,0.1
+2020.2.5,Alaska,win,1,Democrats,10.0
+2020.2.5,Arizona,win,1,Democrats,38.9
+2020.2.5,Arkansas,win,1,Democrats,0.1
+2020.2.5,California,win,1,Democrats,99.9
+2020.2.5,Colorado,win,1,Democrats,75.1
+2020.2.5,Connecticut,win,1,Democrats,93.1
+2020.2.5,Delaware,win,1,Democrats,92.0
+2020.2.5,Florida,win,1,Democrats,44.9
+2020.2.5,Georgia,win,1,Democrats,30.1
+2020.2.5,Hawaii,win,1,Democrats,100.0
+2020.2.5,Idaho,win,1,Democrats,0.0
+2020.2.5,Illinois,win,1,Democrats,94.1
+2020.2.5,Indiana,win,1,Democrats,5.8
+2020.2.5,Iowa,win,1,Democrats,33.8
+2020.2.5,Kansas,win,1,Democrats,3.7
+2020.2.5,Kentucky,win,1,Democrats,0.1
+2020.2.5,Louisiana,win,1,Democrats,1.6
+2020.2.5,Maine,win,1,Democrats,70.5
+2020.2.5,Maryland,win,1,Democrats,99.8
+2020.2.5,Massachusetts,win,1,Democrats,99.9
+2020.2.5,Michigan,win,1,Democrats,58.4
+2020.2.5,Minnesota,win,1,Democrats,67.0
+2020.2.5,Mississippi,win,1,Democrats,5.6
+2020.2.5,Missouri,win,1,Democrats,6.9
+2020.2.5,Montana,win,1,Democrats,7.3
+2020.2.5,Nebraska,win,1,Democrats,0.3
+2020.2.5,Nevada,win,1,Democrats,58.8
+2020.2.5,New Hampshire,win,1,Democrats,63.0
+2020.2.5,New Jersey,win,1,Democrats,90.3
+2020.2.5,New Mexico,win,1,Democrats,81.8
+2020.2.5,New York,win,1,Democrats,98.5
+2020.2.5,North Carolina,win,1,Democrats,42.1
+2020.2.5,North Dakota,win,1,Democrats,0.0
+2020.2.5,Ohio,win,1,Democrats,30.5
+2020.2.5,Oklahoma,win,1,Democrats,0.0
+2020.2.5,Oregon,win,1,Democrats,85.8
+2020.2.5,Pennsylvania,win,1,Democrats,52.9
+2020.2.5,Rhode Island,win,1,Democrats,95.7
+2020.2.5,South Carolina,win,1,Democrats,11.7
+2020.2.5,South Dakota,win,1,Democrats,0.2
+2020.2.5,Tennessee,win,1,Democrats,0.9
+2020.2.5,Texas,win,1,Democrats,21.1
+2020.2.5,Utah,win,1,Democrats,0.4
+2020.2.5,Vermont,win,1,Democrats,100.0
+2020.2.5,Virginia,win,1,Democrats,70.1
+2020.2.5,Washington,win,1,Democrats,90.5
+2020.2.5,West Virginia,win,1,Democrats,0.0
+2020.2.5,Wisconsin,win,1,Democrats,49.0
+2020.2.5,Wyoming,win,1,Democrats,0.0
+2020.2.5,District of Columbia,win,1,Democrats,100.0
+2020.2.5,Maine-1,win,1,Democrats,91.4
+2020.2.5,Maine-2,win,1,Democrats,40.1
+2020.2.5,Nebraska-1,win,1,Democrats,3.9
+2020.2.5,Nebraska-2,win,1,Democrats,41.6
+2020.2.5,Nebraska-3,win,1,Democrats,0.0
+2020.2.5,US,win,1,Democrats,53.1
+2020.2.5,Alabama,win,1,3rd Party,0.0
+2020.2.5,Alaska,win,1,3rd Party,0.0
+2020.2.5,Arizona,win,1,3rd Party,0.0
+2020.2.5,Arkansas,win,1,3rd Party,0.0
+2020.2.5,California,win,1,3rd Party,0.0
+2020.2.5,Colorado,win,1,3rd Party,0.0
+2020.2.5,Connecticut,win,1,3rd Party,0.0
+2020.2.5,Delaware,win,1,3rd Party,0.0
+2020.2.5,Florida,win,1,3rd Party,0.0
+2020.2.5,Georgia,win,1,3rd Party,0.0
+2020.2.5,Hawaii,win,1,3rd Party,0.0
+2020.2.5,Idaho,win,1,3rd Party,0.0
+2020.2.5,Illinois,win,1,3rd Party,0.0
+2020.2.5,Indiana,win,1,3rd Party,0.0
+2020.2.5,Iowa,win,1,3rd Party,0.0
+2020.2.5,Kansas,win,1,3rd Party,0.0
+2020.2.5,Kentucky,win,1,3rd Party,0.0
+2020.2.5,Louisiana,win,1,3rd Party,0.0
+2020.2.5,Maine,win,1,3rd Party,0.0
+2020.2.5,Maryland,win,1,3rd Party,0.0
+2020.2.5,Massachusetts,win,1,3rd Party,0.0
+2020.2.5,Michigan,win,1,3rd Party,0.0
+2020.2.5,Minnesota,win,1,3rd Party,0.0
+2020.2.5,Mississippi,win,1,3rd Party,0.0
+2020.2.5,Missouri,win,1,3rd Party,0.0
+2020.2.5,Montana,win,1,3rd Party,0.0
+2020.2.5,Nebraska,win,1,3rd Party,0.0
+2020.2.5,Nevada,win,1,3rd Party,0.0
+2020.2.5,New Hampshire,win,1,3rd Party,0.0
+2020.2.5,New Jersey,win,1,3rd Party,0.0
+2020.2.5,New Mexico,win,1,3rd Party,0.0
+2020.2.5,New York,win,1,3rd Party,0.0
+2020.2.5,North Carolina,win,1,3rd Party,0.0
+2020.2.5,North Dakota,win,1,3rd Party,0.0
+2020.2.5,Ohio,win,1,3rd Party,0.0
+2020.2.5,Oklahoma,win,1,3rd Party,0.0
+2020.2.5,Oregon,win,1,3rd Party,0.0
+2020.2.5,Pennsylvania,win,1,3rd Party,0.0
+2020.2.5,Rhode Island,win,1,3rd Party,0.0
+2020.2.5,South Carolina,win,1,3rd Party,0.0
+2020.2.5,South Dakota,win,1,3rd Party,0.0
+2020.2.5,Tennessee,win,1,3rd Party,0.0
+2020.2.5,Texas,win,1,3rd Party,0.0
+2020.2.5,Utah,win,1,3rd Party,0.0
+2020.2.5,Vermont,win,1,3rd Party,0.0
+2020.2.5,Virginia,win,1,3rd Party,0.0
+2020.2.5,Washington,win,1,3rd Party,0.0
+2020.2.5,West Virginia,win,1,3rd Party,0.0
+2020.2.5,Wisconsin,win,1,3rd Party,0.0
+2020.2.5,Wyoming,win,1,3rd Party,0.0
+2020.2.5,District of Columbia,win,1,3rd Party,0.0
+2020.2.5,Maine-1,win,1,3rd Party,0.0
+2020.2.5,Maine-2,win,1,3rd Party,0.0
+2020.2.5,Nebraska-1,win,1,3rd Party,0.0
+2020.2.5,Nebraska-2,win,1,3rd Party,0.0
+2020.2.5,Nebraska-3,win,1,3rd Party,0.0
+2020.2.5,US,win,1,3rd Party,0.0
+2020.2.5,Alabama,vote,1,Trump,62.5
+2020.2.5,Alaska,vote,1,Trump,52.1
+2020.2.5,Arizona,vote,1,Trump,49.5
+2020.2.5,Arkansas,vote,1,Trump,62.4
+2020.2.5,California,vote,1,Trump,34.1
+2020.2.5,Colorado,vote,1,Trump,42.5
+2020.2.5,Connecticut,vote,1,Trump,39.0
+2020.2.5,Delaware,vote,1,Trump,39.6
+2020.2.5,Florida,vote,1,Trump,49.5
+2020.2.5,Georgia,vote,1,Trump,52.2
+2020.2.5,Hawaii,vote,1,Trump,28.1
+2020.2.5,Idaho,vote,1,Trump,64.1
+2020.2.5,Illinois,vote,1,Trump,39.1
+2020.2.5,Indiana,vote,1,Trump,57.3
+2020.2.5,Iowa,vote,1,Trump,50.1
+2020.2.5,Kansas,vote,1,Trump,57.4
+2020.2.5,Kentucky,vote,1,Trump,62.8
+2020.2.5,Louisiana,vote,1,Trump,59.5
+2020.2.5,Maine,vote,1,Trump,43.3
+2020.2.5,Maryland,vote,1,Trump,34.7
+2020.2.5,Massachusetts,vote,1,Trump,32.3
+2020.2.5,Michigan,vote,1,Trump,46.9
+2020.2.5,Minnesota,vote,1,Trump,44.3
+2020.2.5,Mississippi,vote,1,Trump,58.0
+2020.2.5,Missouri,vote,1,Trump,57.3
+2020.2.5,Montana,vote,1,Trump,55.2
+2020.2.5,Nebraska,vote,1,Trump,61.2
+2020.2.5,Nevada,vote,1,Trump,45.7
+2020.2.5,New Hampshire,vote,1,Trump,45.7
+2020.2.5,New Jersey,vote,1,Trump,39.7
+2020.2.5,New Mexico,vote,1,Trump,41.1
+2020.2.5,New York,vote,1,Trump,35.2
+2020.2.5,North Carolina,vote,1,Trump,50.3
+2020.2.5,North Dakota,vote,1,Trump,63.7
+2020.2.5,Ohio,vote,1,Trump,51.4
+2020.2.5,Oklahoma,vote,1,Trump,66.3
+2020.2.5,Oregon,vote,1,Trump,39.4
+2020.2.5,Pennsylvania,vote,1,Trump,47.8
+2020.2.5,Rhode Island,vote,1,Trump,37.0
+2020.2.5,South Carolina,vote,1,Trump,56.3
+2020.2.5,South Dakota,vote,1,Trump,62.4
+2020.2.5,Tennessee,vote,1,Trump,61.5
+2020.2.5,Texas,vote,1,Trump,53.9
+2020.2.5,Utah,vote,1,Trump,60.2
+2020.2.5,Vermont,vote,1,Trump,29.6
+2020.2.5,Virginia,vote,1,Trump,44.4
+2020.2.5,Washington,vote,1,Trump,38.1
+2020.2.5,West Virginia,vote,1,Trump,65.8
+2020.2.5,Wisconsin,vote,1,Trump,48.0
+2020.2.5,Wyoming,vote,1,Trump,69.6
+2020.2.5,District of Columbia,vote,1,Trump,10.7
+2020.2.5,Maine-1,vote,1,Trump,37.6
+2020.2.5,Maine-2,vote,1,Trump,49.0
+2020.2.5,Nebraska-1,vote,1,Trump,59.3
+2020.2.5,Nebraska-2,vote,1,Trump,49.4
+2020.2.5,Nebraska-3,vote,1,Trump,75.5
+2020.2.5,US,win,2,Trump,46.6
+2020.2.5,Alabama,vote,1,Democrats,34.4
+2020.2.5,Alaska,vote,1,Democrats,36.3
+2020.2.5,Arizona,vote,1,Democrats,45.9
+2020.2.5,Arkansas,vote,1,Democrats,33.0
+2020.2.5,California,vote,1,Democrats,60.5
+2020.2.5,Colorado,vote,1,Democrats,51.5
+2020.2.5,Connecticut,vote,1,Democrats,56.6
+2020.2.5,Delaware,vote,1,Democrats,57.0
+2020.2.5,Florida,vote,1,Democrats,47.9
+2020.2.5,Georgia,vote,1,Democrats,45.5
+2020.2.5,Hawaii,vote,1,Democrats,66.7
+2020.2.5,Idaho,vote,1,Democrats,29.2
+2020.2.5,Illinois,vote,1,Democrats,57.3
+2020.2.5,Indiana,vote,1,Democrats,39.2
+2020.2.5,Iowa,vote,1,Democrats,45.3
+2020.2.5,Kansas,vote,1,Democrats,37.2
+2020.2.5,Kentucky,vote,1,Democrats,33.9
+2020.2.5,Louisiana,vote,1,Democrats,36.6
+2020.2.5,Maine,vote,1,Democrats,50.2
+2020.2.5,Maryland,vote,1,Democrats,61.6
+2020.2.5,Massachusetts,vote,1,Democrats,61.3
+2020.2.5,Michigan,vote,1,Democrats,49.5
+2020.2.5,Minnesota,vote,1,Democrats,50.0
+2020.2.5,Mississippi,vote,1,Democrats,39.3
+2020.2.5,Missouri,vote,1,Democrats,39.6
+2020.2.5,Montana,vote,1,Democrats,37.7
+2020.2.5,Nebraska,vote,1,Democrats,34.0
+2020.2.5,Nevada,vote,1,Democrats,48.8
+2020.2.5,New Hampshire,vote,1,Democrats,49.8
+2020.2.5,New Jersey,vote,1,Democrats,56.7
+2020.2.5,New Mexico,vote,1,Democrats,53.5
+2020.2.5,New York,vote,1,Democrats,59.5
+2020.2.5,North Carolina,vote,1,Democrats,47.6
+2020.2.5,North Dakota,vote,1,Democrats,30.2
+2020.2.5,Ohio,vote,1,Democrats,44.4
+2020.2.5,Oklahoma,vote,1,Democrats,31.3
+2020.2.5,Oregon,vote,1,Democrats,53.8
+2020.2.5,Pennsylvania,vote,1,Democrats,48.8
+2020.2.5,Rhode Island,vote,1,Democrats,57.9
+2020.2.5,South Carolina,vote,1,Democrats,40.5
+2020.2.5,South Dakota,vote,1,Democrats,33.3
+2020.2.5,Tennessee,vote,1,Democrats,35.7
+2020.2.5,Texas,vote,1,Democrats,43.2
+2020.2.5,Utah,vote,1,Democrats,31.5
+2020.2.5,Vermont,vote,1,Democrats,63.0
+2020.2.5,Virginia,vote,1,Democrats,51.9
+2020.2.5,Washington,vote,1,Democrats,55.6
+2020.2.5,West Virginia,vote,1,Democrats,30.9
+2020.2.5,Wisconsin,vote,1,Democrats,47.7
+2020.2.5,Wyoming,vote,1,Democrats,23.8
+2020.2.5,District of Columbia,vote,1,Democrats,84.3
+2020.2.5,Maine-1,vote,1,Democrats,57.3
+2020.2.5,Maine-2,vote,1,Democrats,45.0
+2020.2.5,Nebraska-1,vote,1,Democrats,35.7
+2020.2.5,Nebraska-2,vote,1,Democrats,46.0
+2020.2.5,Nebraska-3,vote,1,Democrats,20.0
+2020.2.5,US,win,2,Democrats,49.2
+2020.2.5,Alabama,vote,1,3rd Party,3.0
+2020.2.5,Alaska,vote,1,3rd Party,11.4
+2020.2.5,Arizona,vote,1,3rd Party,4.6
+2020.2.5,Arkansas,vote,1,3rd Party,4.4
+2020.2.5,California,vote,1,3rd Party,5.3
+2020.2.5,Colorado,vote,1,3rd Party,5.9
+2020.2.5,Connecticut,vote,1,3rd Party,4.4
+2020.2.5,Delaware,vote,1,3rd Party,3.3
+2020.2.5,Florida,vote,1,3rd Party,2.5
+2020.2.5,Georgia,vote,1,3rd Party,2.2
+2020.2.5,Hawaii,vote,1,3rd Party,5.1
+2020.2.5,Idaho,vote,1,3rd Party,6.5
+2020.2.5,Illinois,vote,1,3rd Party,3.4
+2020.2.5,Indiana,vote,1,3rd Party,3.4
+2020.2.5,Iowa,vote,1,3rd Party,4.5
+2020.2.5,Kansas,vote,1,3rd Party,5.3
+2020.2.5,Kentucky,vote,1,3rd Party,3.2
+2020.2.5,Louisiana,vote,1,3rd Party,3.8
+2020.2.5,Maine,vote,1,3rd Party,6.4
+2020.2.5,Maryland,vote,1,3rd Party,3.6
+2020.2.5,Massachusetts,vote,1,3rd Party,6.3
+2020.2.5,Michigan,vote,1,3rd Party,3.5
+2020.2.5,Minnesota,vote,1,3rd Party,5.6
+2020.2.5,Mississippi,vote,1,3rd Party,2.6
+2020.2.5,Missouri,vote,1,3rd Party,3.0
+2020.2.5,Montana,vote,1,3rd Party,7.0
+2020.2.5,Nebraska,vote,1,3rd Party,4.7
+2020.2.5,Nevada,vote,1,3rd Party,5.4
+2020.2.5,New Hampshire,vote,1,3rd Party,4.3
+2020.2.5,New Jersey,vote,1,3rd Party,3.5
+2020.2.5,New Mexico,vote,1,3rd Party,5.3
+2020.2.5,New York,vote,1,3rd Party,5.2
+2020.2.5,North Carolina,vote,1,3rd Party,2.0
+2020.2.5,North Dakota,vote,1,3rd Party,6.1
+2020.2.5,Ohio,vote,1,3rd Party,4.1
+2020.2.5,Oklahoma,vote,1,3rd Party,2.2
+2020.2.5,Oregon,vote,1,3rd Party,6.8
+2020.2.5,Pennsylvania,vote,1,3rd Party,3.4
+2020.2.5,Rhode Island,vote,1,3rd Party,5.0
+2020.2.5,South Carolina,vote,1,3rd Party,3.1
+2020.2.5,South Dakota,vote,1,3rd Party,4.2
+2020.2.5,Tennessee,vote,1,3rd Party,2.7
+2020.2.5,Texas,vote,1,3rd Party,2.8
+2020.2.5,Utah,vote,1,3rd Party,8.2
+2020.2.5,Vermont,vote,1,3rd Party,7.3
+2020.2.5,Virginia,vote,1,3rd Party,3.5
+2020.2.5,Washington,vote,1,3rd Party,6.2
+2020.2.5,West Virginia,vote,1,3rd Party,3.1
+2020.2.5,Wisconsin,vote,1,3rd Party,4.3
+2020.2.5,Wyoming,vote,1,3rd Party,6.4
+2020.2.5,District of Columbia,vote,1,3rd Party,4.8
+2020.2.5,Maine-1,vote,1,3rd Party,5.0
+2020.2.5,Maine-2,vote,1,3rd Party,5.8
+2020.2.5,Nebraska-1,vote,1,3rd Party,4.9
+2020.2.5,Nebraska-2,vote,1,3rd Party,4.5
+2020.2.5,Nebraska-3,vote,1,3rd Party,4.5
+2020.2.5,US,win,2,3rd Party,4.1
+2020.2.5,US,win,3,Trump,252.9
+2020.2.5,US,win,3,Democrats,285.1
+2020.2.5,US,win,3,3rd Party,0.0
+2020.2.6,Alabama,win,1,Trump,99.9
+2020.2.6,Alaska,win,1,Trump,90.1
+2020.2.6,Arizona,win,1,Trump,61.3
+2020.2.6,Arkansas,win,1,Trump,99.9
+2020.2.6,California,win,1,Trump,0.1
+2020.2.6,Colorado,win,1,Trump,25.0
+2020.2.6,Connecticut,win,1,Trump,7.0
+2020.2.6,Delaware,win,1,Trump,8.1
+2020.2.6,Florida,win,1,Trump,55.2
+2020.2.6,Georgia,win,1,Trump,69.9
+2020.2.6,Hawaii,win,1,Trump,0.0
+2020.2.6,Idaho,win,1,Trump,100.0
+2020.2.6,Illinois,win,1,Trump,6.0
+2020.2.6,Indiana,win,1,Trump,94.2
+2020.2.6,Iowa,win,1,Trump,66.2
+2020.2.6,Kansas,win,1,Trump,96.3
+2020.2.6,Kentucky,win,1,Trump,99.9
+2020.2.6,Louisiana,win,1,Trump,98.4
+2020.2.6,Maine,win,1,Trump,29.6
+2020.2.6,Maryland,win,1,Trump,0.2
+2020.2.6,Massachusetts,win,1,Trump,0.1
+2020.2.6,Michigan,win,1,Trump,41.7
+2020.2.6,Minnesota,win,1,Trump,33.1
+2020.2.6,Mississippi,win,1,Trump,94.5
+2020.2.6,Missouri,win,1,Trump,93.2
+2020.2.6,Montana,win,1,Trump,92.7
+2020.2.6,Nebraska,win,1,Trump,99.7
+2020.2.6,Nevada,win,1,Trump,41.3
+2020.2.6,New Hampshire,win,1,Trump,37.2
+2020.2.6,New Jersey,win,1,Trump,9.9
+2020.2.6,New Mexico,win,1,Trump,18.2
+2020.2.6,New York,win,1,Trump,1.6
+2020.2.6,North Carolina,win,1,Trump,58.0
+2020.2.6,North Dakota,win,1,Trump,100.0
+2020.2.6,Ohio,win,1,Trump,69.6
+2020.2.6,Oklahoma,win,1,Trump,100.0
+2020.2.6,Oregon,win,1,Trump,14.3
+2020.2.6,Pennsylvania,win,1,Trump,47.2
+2020.2.6,Rhode Island,win,1,Trump,4.3
+2020.2.6,South Carolina,win,1,Trump,88.3
+2020.2.6,South Dakota,win,1,Trump,99.8
+2020.2.6,Tennessee,win,1,Trump,99.1
+2020.2.6,Texas,win,1,Trump,78.9
+2020.2.6,Utah,win,1,Trump,99.6
+2020.2.6,Vermont,win,1,Trump,0.0
+2020.2.6,Virginia,win,1,Trump,30.0
+2020.2.6,Washington,win,1,Trump,9.6
+2020.2.6,West Virginia,win,1,Trump,100.0
+2020.2.6,Wisconsin,win,1,Trump,51.2
+2020.2.6,Wyoming,win,1,Trump,100.0
+2020.2.6,District of Columbia,win,1,Trump,0.0
+2020.2.6,Maine-1,win,1,Trump,8.6
+2020.2.6,Maine-2,win,1,Trump,59.9
+2020.2.6,Nebraska-1,win,1,Trump,96.1
+2020.2.6,Nebraska-2,win,1,Trump,58.4
+2020.2.6,Nebraska-3,win,1,Trump,100.0
+2020.2.6,US,win,1,Trump,47.2
+2020.2.6,Alabama,win,1,Democrats,0.1
+2020.2.6,Alaska,win,1,Democrats,9.9
+2020.2.6,Arizona,win,1,Democrats,38.7
+2020.2.6,Arkansas,win,1,Democrats,0.1
+2020.2.6,California,win,1,Democrats,99.9
+2020.2.6,Colorado,win,1,Democrats,75.0
+2020.2.6,Connecticut,win,1,Democrats,93.0
+2020.2.6,Delaware,win,1,Democrats,91.9
+2020.2.6,Florida,win,1,Democrats,44.8
+2020.2.6,Georgia,win,1,Democrats,30.1
+2020.2.6,Hawaii,win,1,Democrats,100.0
+2020.2.6,Idaho,win,1,Democrats,0.0
+2020.2.6,Illinois,win,1,Democrats,94.0
+2020.2.6,Indiana,win,1,Democrats,5.8
+2020.2.6,Iowa,win,1,Democrats,33.8
+2020.2.6,Kansas,win,1,Democrats,3.7
+2020.2.6,Kentucky,win,1,Democrats,0.1
+2020.2.6,Louisiana,win,1,Democrats,1.6
+2020.2.6,Maine,win,1,Democrats,70.4
+2020.2.6,Maryland,win,1,Democrats,99.8
+2020.2.6,Massachusetts,win,1,Democrats,99.9
+2020.2.6,Michigan,win,1,Democrats,58.3
+2020.2.6,Minnesota,win,1,Democrats,66.9
+2020.2.6,Mississippi,win,1,Democrats,5.5
+2020.2.6,Missouri,win,1,Democrats,6.8
+2020.2.6,Montana,win,1,Democrats,7.3
+2020.2.6,Nebraska,win,1,Democrats,0.3
+2020.2.6,Nevada,win,1,Democrats,58.7
+2020.2.6,New Hampshire,win,1,Democrats,62.8
+2020.2.6,New Jersey,win,1,Democrats,90.1
+2020.2.6,New Mexico,win,1,Democrats,81.8
+2020.2.6,New York,win,1,Democrats,98.4
+2020.2.6,North Carolina,win,1,Democrats,42.0
+2020.2.6,North Dakota,win,1,Democrats,0.0
+2020.2.6,Ohio,win,1,Democrats,30.4
+2020.2.6,Oklahoma,win,1,Democrats,0.0
+2020.2.6,Oregon,win,1,Democrats,85.7
+2020.2.6,Pennsylvania,win,1,Democrats,52.8
+2020.2.6,Rhode Island,win,1,Democrats,95.7
+2020.2.6,South Carolina,win,1,Democrats,11.7
+2020.2.6,South Dakota,win,1,Democrats,0.2
+2020.2.6,Tennessee,win,1,Democrats,0.9
+2020.2.6,Texas,win,1,Democrats,21.1
+2020.2.6,Utah,win,1,Democrats,0.4
+2020.2.6,Vermont,win,1,Democrats,100.0
+2020.2.6,Virginia,win,1,Democrats,70.0
+2020.2.6,Washington,win,1,Democrats,90.4
+2020.2.6,West Virginia,win,1,Democrats,0.0
+2020.2.6,Wisconsin,win,1,Democrats,48.8
+2020.2.6,Wyoming,win,1,Democrats,0.0
+2020.2.6,District of Columbia,win,1,Democrats,100.0
+2020.2.6,Maine-1,win,1,Democrats,91.4
+2020.2.6,Maine-2,win,1,Democrats,40.1
+2020.2.6,Nebraska-1,win,1,Democrats,3.9
+2020.2.6,Nebraska-2,win,1,Democrats,41.6
+2020.2.6,Nebraska-3,win,1,Democrats,0.0
+2020.2.6,US,win,1,Democrats,52.8
+2020.2.6,Alabama,win,1,3rd Party,0.0
+2020.2.6,Alaska,win,1,3rd Party,0.0
+2020.2.6,Arizona,win,1,3rd Party,0.0
+2020.2.6,Arkansas,win,1,3rd Party,0.0
+2020.2.6,California,win,1,3rd Party,0.0
+2020.2.6,Colorado,win,1,3rd Party,0.0
+2020.2.6,Connecticut,win,1,3rd Party,0.0
+2020.2.6,Delaware,win,1,3rd Party,0.0
+2020.2.6,Florida,win,1,3rd Party,0.0
+2020.2.6,Georgia,win,1,3rd Party,0.0
+2020.2.6,Hawaii,win,1,3rd Party,0.0
+2020.2.6,Idaho,win,1,3rd Party,0.0
+2020.2.6,Illinois,win,1,3rd Party,0.0
+2020.2.6,Indiana,win,1,3rd Party,0.0
+2020.2.6,Iowa,win,1,3rd Party,0.0
+2020.2.6,Kansas,win,1,3rd Party,0.0
+2020.2.6,Kentucky,win,1,3rd Party,0.0
+2020.2.6,Louisiana,win,1,3rd Party,0.0
+2020.2.6,Maine,win,1,3rd Party,0.0
+2020.2.6,Maryland,win,1,3rd Party,0.0
+2020.2.6,Massachusetts,win,1,3rd Party,0.0
+2020.2.6,Michigan,win,1,3rd Party,0.0
+2020.2.6,Minnesota,win,1,3rd Party,0.0
+2020.2.6,Mississippi,win,1,3rd Party,0.0
+2020.2.6,Missouri,win,1,3rd Party,0.0
+2020.2.6,Montana,win,1,3rd Party,0.0
+2020.2.6,Nebraska,win,1,3rd Party,0.0
+2020.2.6,Nevada,win,1,3rd Party,0.0
+2020.2.6,New Hampshire,win,1,3rd Party,0.0
+2020.2.6,New Jersey,win,1,3rd Party,0.0
+2020.2.6,New Mexico,win,1,3rd Party,0.0
+2020.2.6,New York,win,1,3rd Party,0.0
+2020.2.6,North Carolina,win,1,3rd Party,0.0
+2020.2.6,North Dakota,win,1,3rd Party,0.0
+2020.2.6,Ohio,win,1,3rd Party,0.0
+2020.2.6,Oklahoma,win,1,3rd Party,0.0
+2020.2.6,Oregon,win,1,3rd Party,0.0
+2020.2.6,Pennsylvania,win,1,3rd Party,0.0
+2020.2.6,Rhode Island,win,1,3rd Party,0.0
+2020.2.6,South Carolina,win,1,3rd Party,0.0
+2020.2.6,South Dakota,win,1,3rd Party,0.0
+2020.2.6,Tennessee,win,1,3rd Party,0.0
+2020.2.6,Texas,win,1,3rd Party,0.0
+2020.2.6,Utah,win,1,3rd Party,0.0
+2020.2.6,Vermont,win,1,3rd Party,0.0
+2020.2.6,Virginia,win,1,3rd Party,0.0
+2020.2.6,Washington,win,1,3rd Party,0.0
+2020.2.6,West Virginia,win,1,3rd Party,0.0
+2020.2.6,Wisconsin,win,1,3rd Party,0.0
+2020.2.6,Wyoming,win,1,3rd Party,0.0
+2020.2.6,District of Columbia,win,1,3rd Party,0.0
+2020.2.6,Maine-1,win,1,3rd Party,0.0
+2020.2.6,Maine-2,win,1,3rd Party,0.0
+2020.2.6,Nebraska-1,win,1,3rd Party,0.0
+2020.2.6,Nebraska-2,win,1,3rd Party,0.0
+2020.2.6,Nebraska-3,win,1,3rd Party,0.0
+2020.2.6,US,win,1,3rd Party,0.0
+2020.2.6,Alabama,vote,1,Trump,62.5
+2020.2.6,Alaska,vote,1,Trump,52.2
+2020.2.6,Arizona,vote,1,Trump,49.5
+2020.2.6,Arkansas,vote,1,Trump,62.5
+2020.2.6,California,vote,1,Trump,34.1
+2020.2.6,Colorado,vote,1,Trump,42.5
+2020.2.6,Connecticut,vote,1,Trump,39.0
+2020.2.6,Delaware,vote,1,Trump,39.6
+2020.2.6,Florida,vote,1,Trump,49.5
+2020.2.6,Georgia,vote,1,Trump,52.2
+2020.2.6,Hawaii,vote,1,Trump,28.1
+2020.2.6,Idaho,vote,1,Trump,64.2
+2020.2.6,Illinois,vote,1,Trump,39.1
+2020.2.6,Indiana,vote,1,Trump,57.3
+2020.2.6,Iowa,vote,1,Trump,50.1
+2020.2.6,Kansas,vote,1,Trump,57.4
+2020.2.6,Kentucky,vote,1,Trump,62.8
+2020.2.6,Louisiana,vote,1,Trump,59.5
+2020.2.6,Maine,vote,1,Trump,43.3
+2020.2.6,Maryland,vote,1,Trump,34.7
+2020.2.6,Massachusetts,vote,1,Trump,32.4
+2020.2.6,Michigan,vote,1,Trump,46.9
+2020.2.6,Minnesota,vote,1,Trump,44.3
+2020.2.6,Mississippi,vote,1,Trump,58.0
+2020.2.6,Missouri,vote,1,Trump,57.4
+2020.2.6,Montana,vote,1,Trump,55.2
+2020.2.6,Nebraska,vote,1,Trump,61.2
+2020.2.6,Nevada,vote,1,Trump,45.7
+2020.2.6,New Hampshire,vote,1,Trump,45.7
+2020.2.6,New Jersey,vote,1,Trump,39.8
+2020.2.6,New Mexico,vote,1,Trump,41.1
+2020.2.6,New York,vote,1,Trump,35.2
+2020.2.6,North Carolina,vote,1,Trump,50.3
+2020.2.6,North Dakota,vote,1,Trump,63.7
+2020.2.6,Ohio,vote,1,Trump,51.5
+2020.2.6,Oklahoma,vote,1,Trump,66.4
+2020.2.6,Oregon,vote,1,Trump,39.4
+2020.2.6,Pennsylvania,vote,1,Trump,47.8
+2020.2.6,Rhode Island,vote,1,Trump,37.0
+2020.2.6,South Carolina,vote,1,Trump,56.3
+2020.2.6,South Dakota,vote,1,Trump,62.4
+2020.2.6,Tennessee,vote,1,Trump,61.5
+2020.2.6,Texas,vote,1,Trump,53.9
+2020.2.6,Utah,vote,1,Trump,60.2
+2020.2.6,Vermont,vote,1,Trump,29.6
+2020.2.6,Virginia,vote,1,Trump,44.5
+2020.2.6,Washington,vote,1,Trump,38.1
+2020.2.6,West Virginia,vote,1,Trump,65.9
+2020.2.6,Wisconsin,vote,1,Trump,48.0
+2020.2.6,Wyoming,vote,1,Trump,69.7
+2020.2.6,District of Columbia,vote,1,Trump,10.8
+2020.2.6,Maine-1,vote,1,Trump,37.6
+2020.2.6,Maine-2,vote,1,Trump,49.0
+2020.2.6,Nebraska-1,vote,1,Trump,59.3
+2020.2.6,Nebraska-2,vote,1,Trump,49.4
+2020.2.6,Nebraska-3,vote,1,Trump,75.5
+2020.2.6,US,win,2,Trump,46.7
+2020.2.6,Alabama,vote,1,Democrats,34.4
+2020.2.6,Alaska,vote,1,Democrats,36.3
+2020.2.6,Arizona,vote,1,Democrats,45.8
+2020.2.6,Arkansas,vote,1,Democrats,33.0
+2020.2.6,California,vote,1,Democrats,60.5
+2020.2.6,Colorado,vote,1,Democrats,51.5
+2020.2.6,Connecticut,vote,1,Democrats,56.5
+2020.2.6,Delaware,vote,1,Democrats,57.0
+2020.2.6,Florida,vote,1,Democrats,47.8
+2020.2.6,Georgia,vote,1,Democrats,45.5
+2020.2.6,Hawaii,vote,1,Democrats,66.7
+2020.2.6,Idaho,vote,1,Democrats,29.2
+2020.2.6,Illinois,vote,1,Democrats,57.3
+2020.2.6,Indiana,vote,1,Democrats,39.2
+2020.2.6,Iowa,vote,1,Democrats,45.3
+2020.2.6,Kansas,vote,1,Democrats,37.2
+2020.2.6,Kentucky,vote,1,Democrats,33.9
+2020.2.6,Louisiana,vote,1,Democrats,36.6
+2020.2.6,Maine,vote,1,Democrats,50.2
+2020.2.6,Maryland,vote,1,Democrats,61.6
+2020.2.6,Massachusetts,vote,1,Democrats,61.3
+2020.2.6,Michigan,vote,1,Democrats,49.5
+2020.2.6,Minnesota,vote,1,Democrats,50.0
+2020.2.6,Mississippi,vote,1,Democrats,39.2
+2020.2.6,Missouri,vote,1,Democrats,39.5
+2020.2.6,Montana,vote,1,Democrats,37.6
+2020.2.6,Nebraska,vote,1,Democrats,34.0
+2020.2.6,Nevada,vote,1,Democrats,48.8
+2020.2.6,New Hampshire,vote,1,Democrats,49.8
+2020.2.6,New Jersey,vote,1,Democrats,56.7
+2020.2.6,New Mexico,vote,1,Democrats,53.5
+2020.2.6,New York,vote,1,Democrats,59.5
+2020.2.6,North Carolina,vote,1,Democrats,47.6
+2020.2.6,North Dakota,vote,1,Democrats,30.2
+2020.2.6,Ohio,vote,1,Democrats,44.4
+2020.2.6,Oklahoma,vote,1,Democrats,31.3
+2020.2.6,Oregon,vote,1,Democrats,53.8
+2020.2.6,Pennsylvania,vote,1,Democrats,48.7
+2020.2.6,Rhode Island,vote,1,Democrats,57.8
+2020.2.6,South Carolina,vote,1,Democrats,40.5
+2020.2.6,South Dakota,vote,1,Democrats,33.3
+2020.2.6,Tennessee,vote,1,Democrats,35.7
+2020.2.6,Texas,vote,1,Democrats,43.2
+2020.2.6,Utah,vote,1,Democrats,31.5
+2020.2.6,Vermont,vote,1,Democrats,63.0
+2020.2.6,Virginia,vote,1,Democrats,51.9
+2020.2.6,Washington,vote,1,Democrats,55.6
+2020.2.6,West Virginia,vote,1,Democrats,30.9
+2020.2.6,Wisconsin,vote,1,Democrats,47.6
+2020.2.6,Wyoming,vote,1,Democrats,23.8
+2020.2.6,District of Columbia,vote,1,Democrats,84.3
+2020.2.6,Maine-1,vote,1,Democrats,57.3
+2020.2.6,Maine-2,vote,1,Democrats,45.0
+2020.2.6,Nebraska-1,vote,1,Democrats,35.7
+2020.2.6,Nebraska-2,vote,1,Democrats,46.0
+2020.2.6,Nebraska-3,vote,1,Democrats,20.0
+2020.2.6,US,win,2,Democrats,49.2
+2020.2.6,Alabama,vote,1,3rd Party,3.0
+2020.2.6,Alaska,vote,1,3rd Party,11.4
+2020.2.6,Arizona,vote,1,3rd Party,4.6
+2020.2.6,Arkansas,vote,1,3rd Party,4.4
+2020.2.6,California,vote,1,3rd Party,5.3
+2020.2.6,Colorado,vote,1,3rd Party,5.9
+2020.2.6,Connecticut,vote,1,3rd Party,4.4
+2020.2.6,Delaware,vote,1,3rd Party,3.3
+2020.2.6,Florida,vote,1,3rd Party,2.5
+2020.2.6,Georgia,vote,1,3rd Party,2.2
+2020.2.6,Hawaii,vote,1,3rd Party,5.1
+2020.2.6,Idaho,vote,1,3rd Party,6.5
+2020.2.6,Illinois,vote,1,3rd Party,3.4
+2020.2.6,Indiana,vote,1,3rd Party,3.4
+2020.2.6,Iowa,vote,1,3rd Party,4.5
+2020.2.6,Kansas,vote,1,3rd Party,5.3
+2020.2.6,Kentucky,vote,1,3rd Party,3.2
+2020.2.6,Louisiana,vote,1,3rd Party,3.8
+2020.2.6,Maine,vote,1,3rd Party,6.4
+2020.2.6,Maryland,vote,1,3rd Party,3.6
+2020.2.6,Massachusetts,vote,1,3rd Party,6.3
+2020.2.6,Michigan,vote,1,3rd Party,3.5
+2020.2.6,Minnesota,vote,1,3rd Party,5.6
+2020.2.6,Mississippi,vote,1,3rd Party,2.6
+2020.2.6,Missouri,vote,1,3rd Party,3.0
+2020.2.6,Montana,vote,1,3rd Party,7.0
+2020.2.6,Nebraska,vote,1,3rd Party,4.7
+2020.2.6,Nevada,vote,1,3rd Party,5.4
+2020.2.6,New Hampshire,vote,1,3rd Party,4.3
+2020.2.6,New Jersey,vote,1,3rd Party,3.5
+2020.2.6,New Mexico,vote,1,3rd Party,5.3
+2020.2.6,New York,vote,1,3rd Party,5.2
+2020.2.6,North Carolina,vote,1,3rd Party,2.0
+2020.2.6,North Dakota,vote,1,3rd Party,6.1
+2020.2.6,Ohio,vote,1,3rd Party,4.1
+2020.2.6,Oklahoma,vote,1,3rd Party,2.2
+2020.2.6,Oregon,vote,1,3rd Party,6.8
+2020.2.6,Pennsylvania,vote,1,3rd Party,3.4
+2020.2.6,Rhode Island,vote,1,3rd Party,5.0
+2020.2.6,South Carolina,vote,1,3rd Party,3.1
+2020.2.6,South Dakota,vote,1,3rd Party,4.2
+2020.2.6,Tennessee,vote,1,3rd Party,2.7
+2020.2.6,Texas,vote,1,3rd Party,2.8
+2020.2.6,Utah,vote,1,3rd Party,8.2
+2020.2.6,Vermont,vote,1,3rd Party,7.3
+2020.2.6,Virginia,vote,1,3rd Party,3.5
+2020.2.6,Washington,vote,1,3rd Party,6.2
+2020.2.6,West Virginia,vote,1,3rd Party,3.1
+2020.2.6,Wisconsin,vote,1,3rd Party,4.3
+2020.2.6,Wyoming,vote,1,3rd Party,6.4
+2020.2.6,District of Columbia,vote,1,3rd Party,4.8
+2020.2.6,Maine-1,vote,1,3rd Party,5.0
+2020.2.6,Maine-2,vote,1,3rd Party,5.8
+2020.2.6,Nebraska-1,vote,1,3rd Party,4.9
+2020.2.6,Nebraska-2,vote,1,3rd Party,4.5
+2020.2.6,Nebraska-3,vote,1,3rd Party,4.5
+2020.2.6,US,win,2,3rd Party,4.1
+2020.2.6,US,win,3,Trump,254.1
+2020.2.6,US,win,3,Democrats,283.9
+2020.2.6,US,win,3,3rd Party,0.0
