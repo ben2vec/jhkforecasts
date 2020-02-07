@@ -70,7 +70,7 @@ d3.csv("bubble map.csv", function (error, data) {
       
      
       d3.select(this).moveToFront()
-        .attr("r", d => d.radius * 1.5)
+        .attr("r", d => d.radius * 1.2)
         .style("stroke-width", "2")
         .style("stroke", "black")
         d3.select(".states").moveToBack()

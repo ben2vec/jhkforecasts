@@ -235,7 +235,7 @@ d3.csv("time.csv", function (error, data) {
 
     // CREATE HOVER TOOLTIP WITH VERTICAL LINE //
     tooltip = d3.select("#chart1").append("div")
-      .attr('id', 'tooltip')
+      .attr('id', 'tooltip1')
       .style('position', 'absolute')
       .style("background-color", "white")
       .style('fill', 'white')
