@@ -84,7 +84,7 @@
         }
       })
 
-      var data = data.map((d, k) => {
+      var data = data.map((d,i) => {
         return {
           state: d.state,
           date: parseTime(d.date),
@@ -97,7 +97,11 @@
           Steyerproj: +d.Steyerproj,
           Warrenproj: +d.Warrenproj,
           Yangproj: +d.Yangproj,
-          voteperc: +d.voteperc
+          voteperc: +d.voteperc,
+          radius: +d.radius,
+          xValue: +d.xValue,
+          yValue: +d.yValue,
+          abbrev: d.abbrev
         }
       })
 
@@ -716,7 +720,7 @@
       })
 
 
-      var simulation = rawsimulation.map((d, k) => {
+      var simulation = rawsimulation.map((d, i) => {
         return {
           state: d.state,
           date: d.date,
@@ -754,6 +758,9 @@
           Steyerpop: +d.Steyertotvote,
           Warrenpop: +d.Warrentotvote,
           Yangpop: +d.Yangtotvote,
+          radius: data[i].radius,
+          xValue: data[i].xValue,
+          yValue: data[i].yValue
         }
       })
 
@@ -831,7 +838,7 @@
         Yangpop: Yangpop,
       }
 
-      var simulationnew = simulation.concat(usa)
+      var simulationnew = simulation
 
 
       console.log(simulationnew)
@@ -862,7 +869,7 @@ var div = d3.select("#bubblemap").append("div")
 
 var data = simulationnew
 
-
+console.log(data)
 
 
 
@@ -917,15 +924,11 @@ var data = simulationnew
   svg.selectAll("states")
     .data(data)
     .enter()
-    .append("a")
-    .attr("xlink:href", d => d.state + ".html")
     .append("circle")
     .attr("cx", d => x(d.xValue))
     .attr("cy", d => y(d.yValue))
     .attr("r", d => d.radius)
-    .attr("stroke-width",2)
-    .style("stroke", d => d.completed == 0 ? color(d.first):"white")
-    .style("fill", d => d.completed == 1 ? color(d.first):"white")
+    .style("fill",d=> color(d.winner))
     
 
 
@@ -940,7 +943,7 @@ var data = simulationnew
     .attr("font-family", "brandon-grotesque")
     .attr("font-weight", 700)
     .attr("font-size", "8")
-    .attr("fill",d => d.completed == 1 ? colortwo(d.first):"black")
+    .attr("fill",d=>colortwo(d.winner))
 
   svg.append("text")
     .text("Press on State For Forecast")
