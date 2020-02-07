@@ -163,6 +163,18 @@
    font-size: 12px;
    stroke-width: 2px;
  }
+ .d3-tip2 {
+  line-height: 1;
+  font-family: brandon-grotesque, sans-serif;
+  padding: 0px;
+  background: none;
+  border-radius: 8px;
+  border-color: black;
+  border-width: 1px;
+  border: black;
+  font-size: 12px;
+  stroke-width: 2px;
+}
 
  @media only screen and (max-width:850px) {
    #tipDiv {
