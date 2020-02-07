@@ -383,7 +383,7 @@ d3.csv("simulation.csv", function (data) {
           tool_tip.hide()
         })
       .transition()
-        .delay( function(d,i){return 20*i})
+        .delay( function(d,i){return 30*i})
         .style("fill", d => d.properties.margin >= 0 ? gopwincol : demwincol)
       
       ;
@@ -550,7 +550,7 @@ svg.append("text")
       .style("fill", "Black")
       .style("font-size", 12)
       .attr("font-weight", 500)
-      .text(d => formatvalue(d.demvote) + "%")
+      .text(d => formatvalue(d.gopvote) + "%")
       .attr("text-anchor", "middle")
 
       legend.append("text")

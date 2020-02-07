@@ -10,6 +10,7 @@ d3.csv("polls.csv", function (error, data) {
 
   var data = data.filter(function (d) { return d.state == keyState; })
 
+  var formatvalue = d3.format(".2");
 
   var data = data.map((d, i) => {
     return {
@@ -142,7 +143,7 @@ d3.csv("polls.csv", function (error, data) {
     .style("fill", d => d.adjmargin > 0 ? "#FF6060" : "#0091FF")
     .style("font-size", 15)
     .attr("font-weight", 700)
-    .text(d => d.adjmargin > 0 ? "Gop " + Math.abs(d.adjmargin) + "%" : "Dem " + Math.abs(d.adjmargin) + "%")
+    .text(d => d.adjmargin > 0 ? "Gop " + formatvalue(Math.abs(d.adjmargin)) + "%" : "Dem " + formatvalue(Math.abs(d.adjmargin)) + "%")
     .attr("text-anchor", "middle")
 
 
