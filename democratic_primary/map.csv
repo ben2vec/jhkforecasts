@@ -38,7 +38,7 @@ Oklahoma,Biden,24.0,15,OK,500.1963,306.418
 Oregon,Biden,20.5,19,OR,240.2783,139.5654
 Pennsylvania,Biden,27.2,84,PA,730.3535,200.856
 Rhode Island,Biden,21.8,8,RI,-1000.0,-1000.0
-South Carolina,Biden,35.1,32,SC,712.4395,315.6387
+South Carolina,Biden,34.4,31,SC,712.4395,315.6387
 South Dakota,Biden,18.8,6,SD,468.0742,163.5166
 Tennessee,Biden,31.2,32,TN,640.8594,294.8193
 Texas,Biden,26.2,93,TX,480.9902,374.2861
@@ -191,7 +191,7 @@ Oklahoma,Buttigieg,7.8,0,OK,500.1963,306.418
 Oregon,Buttigieg,9.7,2,OR,240.2783,139.5654
 Pennsylvania,Buttigieg,11.1,8,PA,730.3535,200.856
 Rhode Island,Buttigieg,11.8,2,RI,-1000.0,-1000.0
-South Carolina,Buttigieg,7.0,0,SC,712.4395,315.6387
+South Carolina,Buttigieg,6.9,0,SC,712.4395,315.6387
 South Dakota,Buttigieg,13.2,1,SD,468.0742,163.5166
 Tennessee,Buttigieg,8.5,1,TN,640.8594,294.8193
 Texas,Buttigieg,7.9,2,TX,480.9902,374.2861
@@ -242,7 +242,7 @@ Oklahoma,Klobuchar,4.6,0,OK,500.1963,306.418
 Oregon,Klobuchar,5.0,0,OR,240.2783,139.5654
 Pennsylvania,Klobuchar,5.4,0,PA,730.3535,200.856
 Rhode Island,Klobuchar,4.1,0,RI,-1000.0,-1000.0
-South Carolina,Klobuchar,3.7,0,SC,712.4395,315.6387
+South Carolina,Klobuchar,3.6,0,SC,712.4395,315.6387
 South Dakota,Klobuchar,7.6,0,SD,468.0742,163.5166
 Tennessee,Klobuchar,4.5,0,TN,640.8594,294.8193
 Texas,Klobuchar,4.3,0,TX,480.9902,374.2861
@@ -293,7 +293,7 @@ Oklahoma,Sanders,25.6,16,OK,500.1963,306.418
 Oregon,Sanders,26.3,24,OR,240.2783,139.5654
 Pennsylvania,Sanders,22.5,70,PA,730.3535,200.856
 Rhode Island,Sanders,24.8,9,RI,-1000.0,-1000.0
-South Carolina,Sanders,20.0,19,SC,712.4395,315.6387
+South Carolina,Sanders,19.6,18,SC,712.4395,315.6387
 South Dakota,Sanders,25.6,7,SD,468.0742,163.5166
 Tennessee,Sanders,19.8,20,TN,640.8594,294.8193
 Texas,Sanders,23.4,83,TX,480.9902,374.2861
@@ -344,7 +344,7 @@ Oklahoma,Steyer,4.4,0,OK,500.1963,306.418
 Oregon,Steyer,2.3,0,OR,240.2783,139.5654
 Pennsylvania,Steyer,1.1,0,PA,730.3535,200.856
 Rhode Island,Steyer,2.5,0,RI,-1000.0,-1000.0
-South Carolina,Steyer,10.5,2,SC,712.4395,315.6387
+South Carolina,Steyer,12.2,4,SC,712.4395,315.6387
 South Dakota,Steyer,1.3,0,SD,468.0742,163.5166
 Tennessee,Steyer,1.8,0,TN,640.8594,294.8193
 Texas,Steyer,1.8,0,TX,480.9902,374.2861
@@ -395,7 +395,7 @@ Oklahoma,Warren,11.3,2,OK,500.1963,306.418
 Oregon,Warren,15.2,14,OR,240.2783,139.5654
 Pennsylvania,Warren,13.0,16,PA,730.3535,200.856
 Rhode Island,Warren,15.9,6,RI,-1000.0,-1000.0
-South Carolina,Warren,9.5,1,SC,712.4395,315.6387
+South Carolina,Warren,9.3,1,SC,712.4395,315.6387
 South Dakota,Warren,14.4,2,SD,468.0742,163.5166
 Tennessee,Warren,11.9,4,TN,640.8594,294.8193
 Texas,Warren,14.4,29,TX,480.9902,374.2861
@@ -446,7 +446,7 @@ Oklahoma,Yang,3.4,0,OK,500.1963,306.418
 Oregon,Yang,4.8,0,OR,240.2783,139.5654
 Pennsylvania,Yang,3.8,0,PA,730.3535,200.856
 Rhode Island,Yang,3.8,0,RI,-1000.0,-1000.0
-South Carolina,Yang,3.4,0,SC,712.4395,315.6387
+South Carolina,Yang,3.3,0,SC,712.4395,315.6387
 South Dakota,Yang,4.3,0,SD,468.0742,163.5166
 Tennessee,Yang,3.6,0,TN,640.8594,294.8193
 Texas,Yang,3.7,0,TX,480.9902,374.2861
