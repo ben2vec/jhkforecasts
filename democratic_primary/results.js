@@ -9,7 +9,7 @@ var color = d3.scaleOrdinal()
 
 
 d3.csv("finalresults.csv", function (error, data) {
-
+  var data = data.filter(function (d) { return d.state == keyState; });
   formatValue = d3.format(".3");
   formatvalue = d3.format(".2");
 
