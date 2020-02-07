@@ -79,7 +79,15 @@ d3.csv("bubble map.csv", function (error, data) {
         .append("svg")
         .attr("width", 175)
         .attr("height", 120);
-
+        tipSVG.append("rect")
+        .attr("y1", 0)
+        .attr("x1", 0)
+        .attr("width",175)
+        .attr("height", 120)
+        .attr("rx",8)
+        .attr("fill","white")
+        .attr("stroke", "black")
+        .attr("stroke-width", 2)
 
       tipSVG.append("rect")
         .attr("fill", "#FF6060")
