@@ -176,7 +176,7 @@
   stroke-width: 2px;
 }
 
- @media only screen and (max-width:850px) {
+ @media only screen and (max-width:600px) {
    #tipDiv {
      display: none;
    }
@@ -213,7 +213,7 @@
    }
  }
 
- @media only screen and (min-width:851px) {
+ @media only screen and (min-width:601px) {
    #tipDiv {
      display: inline;
    }
