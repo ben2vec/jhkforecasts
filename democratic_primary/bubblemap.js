@@ -85,7 +85,7 @@ d3.csv("bubblemap.csv", function (error, data) {
     .data(data)
     .enter()
     .append("a")
-    .attr("xlink:href", d => d.state + ".html")
+    .attr("xlink:href", d => d.state )
     .append("circle")
     .attr("cx", d => x(d.xValue))
     .attr("cy", d => y(d.yValue))
