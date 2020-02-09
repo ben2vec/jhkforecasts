@@ -59,7 +59,7 @@ d3.csv("time.csv", function (error, data) {
         .append('g')
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    var svgnow = svg.append('g')
+        var svgnow = svg.append('g')
         .attr('class', 'gnow')
         .attr("transform", "translate(100,450)")
 
@@ -70,8 +70,8 @@ d3.csv("time.csv", function (error, data) {
         .attr("transform", function (d, i) { return "translate(" + i * 100 + ",0)" })
 
     nowv.append("rect")
-        .attr("y", -17.5)
-        .attr("x", -37.5)
+        .attr("y", -50)
+        .attr("x", 350)
         .attr("width", 75)
         .attr("height", 25)
         .attr("rx", 10)
@@ -80,6 +80,8 @@ d3.csv("time.csv", function (error, data) {
     nowv.append("text")
         .attr("class", "now-text")
         .style("fill", "Black")
+        .attr("y", -32.5)
+        .attr("x", 387.5)
         .attr("text-anchor", "middle")
         .style("font-size", 14)
         .style("font-weight", 700)
@@ -103,8 +105,7 @@ d3.csv("time.csv", function (error, data) {
     console.log(montharray)
     console.log(onemonthago)
 
-
-
+    
     var svgmonth = svg.append('g')
         .attr('class', 'gmonth')
         .attr("transform", "translate(100,480)")
@@ -116,8 +117,8 @@ d3.csv("time.csv", function (error, data) {
         .attr("transform", function (d, i) { return "translate(" + i * 100 + ",0)" })
 
     monthv.append("rect")
-        .attr("y", -17.5)
-        .attr("x", -37.5)
+    .attr("y", -80)
+    .attr("x", 750)
         .attr("width", 75)
         .attr("height", 25)
         .attr("rx", 10)
@@ -127,6 +128,8 @@ d3.csv("time.csv", function (error, data) {
         .attr("class", "now-text")
         .style("fill", "Black")
         .attr("text-anchor", "middle")
+        .attr("y", -62.5)
+        .attr("x", 787.5)
         .style("font-size", 14)
         .style("font-weight", 700)
         .text(d => d.values + "%")
@@ -368,16 +371,16 @@ d3.csv("time.csv", function (error, data) {
 
 
     svg.append("text")
-        .attr("x", 0)
-        .attr("y", 450)
+        .attr("x",400)
+        .attr("y", 420)
         .attr("text-anchor", "start")
         .style("font-size", 12)
         .style("font-weight", 700)
         .text("Today")
 
     svg.append("text")
-        .attr("x", 0)
-        .attr("y", 480)
+        .attr("x", 780)
+        .attr("y", 420)
         .attr("text-anchor", "start")
         .style("font-size", 12)
         .style("font-weight", 700)
