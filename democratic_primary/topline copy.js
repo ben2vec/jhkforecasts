@@ -5,7 +5,12 @@ var delscale = d3.scaleLinear()
   .domain([0, 1990])
   .range(["white", "#002E66"]);  
 
-
+  var category = ["Biden", "Bloomberg", "Booker", "Buttigieg", "Klobuchar", "Sanders", "Steyer", "Warren", "Yang"]
+  // since Category B and E are really close to each other, assign them diverging colors
+  var color = d3.scaleOrdinal()
+    .domain(category)
+    .range(["#00FF90", "#FF6060", "#a4b1b5", "#FFC000", "#99D3FF", "#0091FF", "#EBBFFF", "#AF0BFF", "#00C181"])
+  
 
 d3.csv("candsoverview.csv", function (error, data) {
 
@@ -26,7 +31,7 @@ svg.append("rect")
 
   var svgrepeat = svg.append('g')
     .attr('class', 'grepeat')
-    .attr("transform", "translate(" + 50 + "," + 150 + ")")
+    .attr("transform", "translate(" + 50 + "," + 180 + ")")
 
 
 
@@ -39,7 +44,7 @@ svg.append("rect")
     repeat.append("a").attr("xlink:href",d=>d.candidate).append("image")
     .attr("xlink:href",  d=>d.candidate+".jpg")
     .attr("x", 120)
-    .attr("y", -130)
+    .attr("y", -180)
     .attr("height", 100)
     .attr("width", 60)
     .attr("anchor","middle").on('mouseover', function(d) {
@@ -60,6 +65,18 @@ svg.append("rect")
         
 
       });;
+
+    repeat.append("a")
+    .attr("xlink:href",d=>d.candidate)
+    .append("text")
+    .attr("class", "repeat-text")
+    .attr("x", 150)
+    .attr("y", -50)
+    .style("fill", d => color(d.candidate))
+    .style("font-size", 20)
+    .attr("font-weight", 700)
+    .text(d => d.candidate)
+    .attr("text-anchor", "middle")
     
     repeat.append("rect")
     .attr("x",110)
