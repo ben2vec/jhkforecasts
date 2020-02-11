@@ -7,19 +7,19 @@ function circleTransition() {
 
 
 
-    var margin2 = { top: 0, right: 70, bottom: 0, left: 50 }
+var margin2 = { top: 0, right: 70, bottom: 0, left: 50 }
 var width2 = 860 - margin2.left - margin2.right
 var height2 = 445
 var axisPad = 12
 var R =7
 
 
-var colors = ["#00FF90", "#00B050", "#98d2f8", "#0077FF", "#002E66", "#E7B5FF", "#B722FF", "purple"]
+var colors = ["#00C181", "#00B050", "#98d2f8", "#0077FF", "#002E66", "#E7B5FF", "#B722FF", "purple"]
 var category = ["Biden", "Bloomberg", "Booker", "Buttigieg", "Klobuchar", "Sanders", "Steyer", "Warren", "Yang"]
 // since Category B and E are really close to each other, assign them diverging colors
 var color = d3.scaleOrdinal()
   .domain(category)
-  .range(["#00FF90", "#FF6060", "#a4b1b5", "#FFC000", "#99D3FF", "#0091FF", "#EBBFFF", "#AF0BFF", "#00C181"])
+  .range(["#00C181", "#FF6060", "#a4b1b5", "#FFC000", "#FF8D32", "#0091FF", "#FF2EF0", "#CD64FF", "#0070C0"])
 var colortwo = d3.scaleOrdinal()
   .domain(category)
   .range(["black", "white", "white", "black", "white", "white", "black", "white", "white"])

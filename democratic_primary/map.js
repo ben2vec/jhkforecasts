@@ -1,38 +1,28 @@
 
-/*  This visualization was made possible by modifying code provided by:
- 
-Scott Murray, Choropleth example from "Interactive Data Visualization for the Web" 
-https://github.com/alignedleft/d3-book/blob/master/chapter_12/05_choropleth.html   
-    
-Malcolm Maclean, tooltips example tutorial
-http://www.d3noob.org/2013/01/adding-tooltips-to-d3js-graph.html
- 
-Mike Bostock, Pie Chart Legend
-http://bl.ocks.org/mbostock/3888852  */
+var category = ["Biden", "Bloomberg", "Booker", "Buttigieg", "Klobuchar", "Sanders", "Steyer", "Warren", "Yang"]
 
+var color = d3.scaleOrdinal()
+  .domain(category)
+  .range(["#00C181", "#FF6060", "#a4b1b5", "#FFC000", "#FF8D32", "#0091FF", "#FF2EF0", "#CD64FF", "#0070C0"])
 
-//Width and height of map
+var candidate_color = color(keycand)
+
 var width3 = 1020;
 var height3 = 500;
 
-// D3 Projection
+
 var projection = d3.geoAlbersUsa()
-  .translate([width3 / 2, height3 / 2])    // translate to center of screen
-  .scale([900]);          // scale things down so see entire US
+  .translate([width3 / 2, height3 / 2])  
+  .scale([900]);         
 
-// Define path generator
-var path = d3.geoPath()               // path generator that will convert GeoJSON to SVG paths
-  .projection(projection);  // tell path generator to use albersUsa projection
-
-
-// Define linear scale for output
-var color = d3.scaleLinear()
-  .domain([0, 15, 30, 45, 100])
-  .range(["white", "#73b5f0", "#0077FF", "#002E66", "#011026"])
+var path = d3.geoPath()            
+  .projection(projection);  
 
 
 
-//Create SVG element and append map to the SVG
+
+
+
 var svg = d3.select("#usmap")
   .append("svg")
   .attr("viewBox", '50 20 920 480');
@@ -47,20 +37,20 @@ var tool_tip = d3.tip()
 svg.call(tool_tip);
 
 
-// Load in my states data!
 d3.csv("map.csv", function (data) {
-  // setting the range of the input data
   var data = data.filter(function (d) { return d.cand == keycand; })
-  // Load GeoJSON data and merge with states data
+
+  var color = d3.scaleLinear()
+  .domain([0,30])
+  .range(["white", candidate_color ])
   d3.json("us-states.json", function (json) {
 
-    // Loop through each state data value in the .csv file
+
+
     for (var i = 0; i < data.length; i++) {
 
-      // Grab State Name
       var dataState = data[i].state;
 
-      // Grab data value 
       var vote = data[i].vote
 
       var delegate = data[i].delegates
@@ -73,13 +63,11 @@ d3.csv("map.csv", function (data) {
 
         ;
 
-      // Find the corresponding state inside the GeoJSON
       for (var j = 0; j < json.features.length; j++) {
         var jsonState = json.features[j].properties.name;
 
         if (dataState == jsonState) {
 
-          // Copy the data value into the JSON
           json.features[j].properties.vote = vote
 
           json.features[j].properties.delegate = delegate
@@ -88,14 +76,12 @@ d3.csv("map.csv", function (data) {
           json.features[j].properties.label = label
             ;
 
-          // Stop looking through the JSON
 
           break;
         }
       }
     }
     console.log(json.features)
-    // Bind the data to the SVG and create one path per GeoJSON feature
     svg.selectAll("path")
       .data(json.features)
       .enter()
