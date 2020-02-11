@@ -4,7 +4,7 @@ var margin2 = { top: 0, right: 70, bottom: 0, left: 50 }
 var width2 = 860 - margin2.left - margin2.right
 var height2 = 445
 var axisPad = 12
-var R =7
+var R = 7
 
 
 
@@ -85,20 +85,30 @@ d3.csv("bubblemap.csv", function (error, data) {
     .data(data)
     .enter()
     .append("a")
-    .attr("xlink:href", d => d.state )
+    .attr("xlink:href", d => d.state)
     .append("circle")
     .attr("cx", d => x(d.xValue))
     .attr("cy", d => y(d.yValue))
     .attr("r", d => d.radius)
-    .attr("stroke-width",2)
-    .style("stroke", d => d.completed == 0 ? color(d.first):"white")
-    .style("fill", d => d.completed == 1 ? color(d.first):"white")
+    .attr("stroke-width", 2)
+    .style("stroke", d => d.completed == 0 ? color(d.first) : "white")
+    .style("fill", d => d.completed == 1 ? color(d.first) : "white")
     .on('mouseover', function (d) {
       tool_tip.show();
       var tipSVG = d3.select("#tipDiv")
         .append("svg")
         .attr("width", 200)
         .attr("height", 140);
+
+      tipSVG.append("rect")
+      .attr("x",0)
+      .attr("y",0)
+      .attr("width", 200)
+      .attr("height", 140)
+      .attr("fill","white")
+      .attr("stroke","black")
+      .attr("stroke-width",3)
+      .attr("rx",10)
 
 
 
@@ -220,7 +230,7 @@ d3.csv("bubblemap.csv", function (error, data) {
     .attr("font-family", "brandon-grotesque")
     .attr("font-weight", 700)
     .attr("font-size", "8")
-    .attr("fill",d => d.completed == 1 ? colortwo(d.first):"black")
+    .attr("fill", d => d.completed == 1 ? colortwo(d.first) : "black")
 
   svg.append("text")
     .text("Press on State For Forecast")
@@ -244,37 +254,37 @@ d3.csv("bubblemap.csv", function (error, data) {
 
 
 
-    svg.append("circle")
+  svg.append("circle")
     .attr("cx", 600)
     .attr("cy", 250)
     .attr("r", 10)
-    .attr("stroke-width",2)
+    .attr("stroke-width", 2)
     .style("stroke", "black")
     .style("fill", "white")
-  
 
-    svg.append("circle")
+
+  svg.append("circle")
     .attr("cx", 600)
     .attr("cy", 275)
     .attr("r", 10)
-    .attr("stroke-width",2)
+    .attr("stroke-width", 2)
     .style("stroke", "black")
     .style("fill", "black")
 
 
-    svg.append("text")
+  svg.append("text")
     .attr("x", 615)
     .attr("y", 280)
     .style("fill", "black")
     .text("Completed Primary/Caucus")
 
-    svg.append("text")
+  svg.append("text")
     .attr("x", 615)
     .attr("y", 255)
     .style("fill", "black")
     .text("Upcoming Primary/Caucus")
-  
-    d3.csv("update.csv", function (error, data) {
+
+  d3.csv("update.csv", function (error, data) {
 
     svg.selectAll("updated")
       .data(data)
@@ -288,6 +298,6 @@ d3.csv("bubblemap.csv", function (error, data) {
       .attr("fill", "grey")
       .attr("text-anchor", "middle")
       .attr("font-weight", 900)
-      .attr("text-decoration","underline")
+      .attr("text-decoration", "underline")
   })
 })
