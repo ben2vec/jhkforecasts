@@ -9,10 +9,17 @@ var axisPad = 12
 
 
 var category = ["Biden", "Bloomberg", "Booker", "Buttigieg", "Klobuchar", "Sanders", "Steyer", "Warren", "Yang"]
+
+var color = d3.scaleOrdinal()
+  .domain(category)
+  .range(["#00C181", "#FF6060", "#a4b1b5", "#FFC000", "#FF8D32", "#0091FF", "#FF2EF0", "#CD64FF", "#0070C0"])
+
 // since Category B and E are really close to each other, assign them diverging colors
+var candidate_color = color(keycand)
+
 var color = d3.scaleLinear()
-.domain([0, 10, 20, 50,150,1000])
-.range(["white", "#73b5f0", "#0077FF", "#002E66", "#011026"]);
+  .domain([0,30])
+  .range(["white", candidate_color ])
 
 var div = d3.select("#bubblemap").append("div")
   .attr("class", "tooltip")

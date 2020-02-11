@@ -18,7 +18,9 @@ var projection = d3.geoAlbersUsa()
 var path = d3.geoPath()            
   .projection(projection);  
 
-
+  var color = d3.scaleLinear()
+  .domain([0,30])
+  .range(["white", candidate_color ])
 
 
 
@@ -40,9 +42,7 @@ svg.call(tool_tip);
 d3.csv("map.csv", function (data) {
   var data = data.filter(function (d) { return d.cand == keycand; })
 
-  var color = d3.scaleLinear()
-  .domain([0,30])
-  .range(["white", candidate_color ])
+  
   d3.json("us-states.json", function (json) {
 
 
