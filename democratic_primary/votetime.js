@@ -9,9 +9,13 @@ var demScale = d3.scaleLinear()
 d3.csv("time.csv", function (error, data) {
     var keys = data.columns.slice(1);
 
-    var data = data.filter(function (d) { return d.state == keyState; });
+    var data = data.filter(d => d.state == keyState);
 
     var datatype = "vote"
+
+
+
+
 
     var parseTime = d3.timeParse("%Y-%m-%d"),
         formatDate = d3.timeFormat("%b - %d"),
@@ -24,6 +28,29 @@ d3.csv("time.csv", function (error, data) {
         d.primarydate = parseTime(d.primarydate);
         return d;
     })
+
+    var newest_data = data.filter(d => d.date == d3.max(data, d => d.date))
+
+    var keys = keys.filter(f => f.includes(datatype))
+
+    var col_category = ["#00C181", "#FF6060", "#a4b1b5", "#FFE130", "#FF8D32", "#0091FF", "#FF2EF0", "#CD64FF", "#a4b1b5"]
+
+    var cand_now = keys.map(function (d,j) {
+        return {
+            candidate: d,
+            value: newest_data.map((i) => +i[d]),
+            color: col_category[j]
+        };
+    });
+
+    cand_now.sort((a, b) => a.value - b.value)
+    console.log(cand_now)
+    var keys = cand_now.map((d) =>
+        d.candidate
+    )
+    var color_scale =  cand_now.map((d) =>
+    d.color
+)
 
 
 
@@ -41,11 +68,7 @@ d3.csv("time.csv", function (error, data) {
     });
 
 
-    console.log(now)
-    console.log(nowarray)
-    console.log(asoftoday)
 
-    console.log(data)
 
     var svg = d3.select("#vote").append("svg")
         .attr("viewBox", "0 0 1000 550")
@@ -92,11 +115,9 @@ d3.csv("time.csv", function (error, data) {
         };
     });
 
-    console.log(monthago)
-    console.log(montharray)
-    console.log(onemonthago)
 
-    
+
+
     var svgmonth = svg.append('g')
         .attr('class', 'gmonth')
         .attr("transform", "translate(100,480)")
@@ -136,8 +157,9 @@ d3.csv("time.csv", function (error, data) {
     var y = d3.scaleLinear()
         .rangeRound([height - margin.bottom, margin.top]);
 
+
     var z = d3.scaleOrdinal()
-        .range(["#00C181", "#FF6060", "#a4b1b5", "#FFE130", "#FF8D32", "#0091FF", "#FF2EF0", "#CD64FF", "#a4b1b5"])
+        .range(color_scale)
         ;
 
     var line = d3.line()
@@ -183,7 +205,7 @@ d3.csv("time.csv", function (error, data) {
         .attr("y2", -height)
         .attr("stroke", "grey")
 
-    
+
 
 
     svg.append("text")
@@ -222,11 +244,11 @@ d3.csv("time.csv", function (error, data) {
         .attr("width", width - margin.right - margin.left)
         .attr("height", height)
 
-    update(d3.select('#selectboxvote').property('value'), 0);
+    update();
 
     function update(input, speed) {
 
-        var copy = keys.filter(f => f.includes(input))
+        var copy = keys.filter(f => f.includes("vote"))
 
         var cities = copy.map(function (id) {
             return {
@@ -394,16 +416,16 @@ d3.csv("time.csv", function (error, data) {
         .style("font-weight", 700)
         .text(d => d)
 
-        svg.append("text")
+    svg.append("text")
         .attr("x", 500)
         .attr("y", 520)
         .attr("text-anchor", "middle")
         .style("font-size", 25)
         .style("font-weight", 700)
-        .text(keyState=="US"?"Projected Vote Share":"Projected Vote in "+keyState)
+        .text(keyState == "US" ? "Projected Vote Share" : "Projected Vote in " + keyState)
 
-        svg.append("rect")
-        .attr("y",-50)
+    svg.append("rect")
+        .attr("y", -50)
         .attr("x", 930)
         .attr("width", 75)
         .attr("height", 390)

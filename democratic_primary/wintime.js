@@ -25,6 +25,28 @@ d3.csv("time.csv", function (error, data) {
         return d;
     })
 
+    var newest_data = data.filter(d => d.date == d3.max(data, d => d.date))
+
+    var keys = keys.filter(f => f.includes(datatype))
+
+    var col_category = ["#00C181", "#FF6060", "#a4b1b5", "#FFE130", "#FF8D32", "#0091FF", "#FF2EF0", "#CD64FF", "#a4b1b5"]
+
+    var cand_now = keys.map(function (d,j) {
+        return {
+            candidate: d,
+            value: newest_data.map((i) => +i[d]),
+            color: col_category[j]
+        };
+    });
+
+    cand_now.sort((a, b) => a.value - b.value)
+    console.log(cand_now)
+    var keys = cand_now.map((d) =>
+        d.candidate
+    )
+    var color_scale =  cand_now.map((d) =>
+    d.color
+)
 
 
     //today
@@ -138,7 +160,7 @@ d3.csv("time.csv", function (error, data) {
         .rangeRound([height - margin.bottom, margin.top]);
 
     var z = d3.scaleOrdinal()
-        .range(["#00C181", "#FF6060", "#a4b1b5", "#FFE130", "#FF8D32", "#0091FF", "#FF2EF0", "#CD64FF", "#a4b1b5"])
+        .range(color_scale)
         ;
 
     var line = d3.line()

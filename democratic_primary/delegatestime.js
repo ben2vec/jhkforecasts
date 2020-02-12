@@ -29,6 +29,28 @@ d3.csv("time.csv", function (error, data) {
         return d;
     })
 
+    var newest_data = data.filter(d => d.date == d3.max(data, d => d.date))
+
+    var keys = keys.filter(f => f.includes(datatype))
+
+    var col_category = ["#00C181", "#FF6060", "#a4b1b5", "#FFE130", "#FF8D32", "#0091FF", "#FF2EF0", "#CD64FF", "#a4b1b5"]
+
+    var cand_now = keys.map(function (d, j) {
+        return {
+            candidate: d,
+            value: newest_data.map((i) => +i[d]),
+            color: col_category[j]
+        };
+    });
+
+    cand_now.sort((a, b) => a.value - b.value)
+    console.log(cand_now)
+    var keys = cand_now.map((d) =>
+        d.candidate
+    )
+    var color_scale = cand_now.map((d) =>
+        d.color
+    )
 
 
     //today
@@ -72,7 +94,7 @@ d3.csv("time.csv", function (error, data) {
         .attr("width", 75)
         .attr("height", 25)
         .attr("rx", 10)
-        .attr("fill", d =>keyState =="US"? delScale(d.values):demScale(d.values))
+        .attr("fill", d => keyState == "US" ? delScale(d.values) : demScale(d.values))
 
     nowv.append("text")
         .attr("class", "now-text")
@@ -80,7 +102,7 @@ d3.csv("time.csv", function (error, data) {
         .attr("text-anchor", "middle")
         .style("font-size", 14)
         .style("font-weight", 700)
-        .text(d => d.values )
+        .text(d => d.values)
     //one month ago
     now = parseTime(now)
 
@@ -118,7 +140,7 @@ d3.csv("time.csv", function (error, data) {
         .attr("width", 75)
         .attr("height", 25)
         .attr("rx", 10)
-        .attr("fill",d =>keyState =="US"? delScale(d.values):demScale(d.values))
+        .attr("fill", d => keyState == "US" ? delScale(d.values) : demScale(d.values))
 
     monthv.append("text")
         .attr("class", "now-text")
@@ -126,7 +148,7 @@ d3.csv("time.csv", function (error, data) {
         .attr("text-anchor", "middle")
         .style("font-size", 14)
         .style("font-weight", 700)
-        .text(d => d.values )
+        .text(d => d.values)
 
 
 
@@ -142,7 +164,7 @@ d3.csv("time.csv", function (error, data) {
         .rangeRound([height - margin.bottom, margin.top]);
 
     var z = d3.scaleOrdinal()
-        .range(["#00C181", "#FF6060", "#a4b1b5", "#FFE130", "#FF8D32", "#0091FF", "#FF2EF0", "#CD64FF", "#a4b1b5"])
+        .range(color_scale)
         ;
 
     var line = d3.line()
@@ -188,7 +210,7 @@ d3.csv("time.csv", function (error, data) {
         .attr("y2", -height)
         .attr("stroke", "grey")
 
-    
+
 
 
     svg.append("text")
@@ -272,8 +294,8 @@ d3.csv("time.csv", function (error, data) {
         city.enter().insert("g", ".focus").append("path")
             .attr("class", "line cities")
             .style("stroke", d => z(d.id))
-            .style("stroke-width",3)
-            .style("line-cap","square")
+            .style("stroke-width", 3)
+            .style("line-cap", "square")
             .merge(city)
             .transition().duration(speed)
             .attr("d", d => line(d.values))
@@ -351,13 +373,13 @@ d3.csv("time.csv", function (error, data) {
                 .attr("cx", x(d.date));
 
             focus.selectAll(".lineHoverRect")
-                .style("fill", e =>keyState =="US"? delScale(d[e]):demScale(d[e]))
+                .style("fill", e => keyState == "US" ? delScale(d[e]) : demScale(d[e]))
                 ;
 
             focus.selectAll(".lineHoverText")
                 .attr("transform",
                     "translate(" + 100 + "," + 420 + ")").style("font-weight", 700)
-                .text(e => d[e] );
+                .text(e => d[e]);
 
 
 
@@ -400,17 +422,17 @@ d3.csv("time.csv", function (error, data) {
         .style("font-size", 14)
         .style("font-weight", 700)
         .text(d => d)
-        svg.append("text")
+    svg.append("text")
         .attr("x", 500)
         .attr("y", 520)
         .attr("text-anchor", "middle")
         .style("font-size", 25)
         .style("font-weight", 700)
-        .text(keyState=="US"?"Projected Delegates":"Projected Delegates in "+keyState)
+        .text(keyState == "US" ? "Projected Delegates" : "Projected Delegates in " + keyState)
 
 
-        svg.append("rect")
-        .attr("y",-50)
+    svg.append("rect")
+        .attr("y", -50)
         .attr("x", 930)
         .attr("width", 75)
         .attr("height", 390)
