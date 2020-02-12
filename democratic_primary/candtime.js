@@ -15,7 +15,7 @@ var axisPad = 12 // axis formatting
 var R = 7 //legend marker
 
 var category = ["Biden", "Bloomberg", "Booker", "Buttigieg", "Klobuchar", "Sanders", "Steyer", "Warren", "Yang"]
-// since Category B and E are really close to each other, assign them diverging colors
+
 var color1 = d3.scaleOrdinal()
   .domain(category)
   .range(["#98d2f8", "#00B050", "#a4b1b5", "#98d2f8", "#0077FF", "#002E66", "#E7B5FF", "#B722FF", "purple"])

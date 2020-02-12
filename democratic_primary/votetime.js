@@ -36,6 +36,8 @@ d3.csv("time.csv", function (error, data) {
 
     var maxdate = d3.max(data, d => d.primarydate)
 
+    var newest_day = d3.max(data, d => d.date)
+
     var data = data.filter(d => d.date <= maxdate)
 
     var newest_data = data.filter(d => d.date == d3.max(data, d => d.date))
@@ -191,7 +193,7 @@ d3.csv("time.csv", function (error, data) {
     var overlay = svg.append("rect")
         .attr("class", "overlay")
         .attr("x", margin.left)
-        .attr("width", width - margin.right - margin.left)
+        .attr("width", x(newest_day))
         .attr("height", height)
 
     update();

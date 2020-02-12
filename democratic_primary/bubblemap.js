@@ -9,7 +9,7 @@ var R = 7
 
 
 var category = ["Biden", "Bloomberg", "Booker", "Buttigieg", "Klobuchar", "Sanders", "Steyer", "Warren", "Yang"]
-// since Category B and E are really close to each other, assign them diverging colors
+
 var color = d3.scaleOrdinal()
   .domain(category)
   .range(["#00C181", "#FF6060", "#a4b1b5", "#FFE130", "#FF8D32", "#0091FF", "#FF2EF0", "#CD64FF", "#a4b1b5"])
