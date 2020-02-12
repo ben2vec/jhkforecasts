@@ -25,7 +25,7 @@ var errorscale = d3.scaleLinear()
   data.sort((a,b)=> b.vote - a.vote)
 
   var svg = d3.select("#topline").append("svg")
-    .attr("viewBox", "0 40 1200 550")
+    .attr("viewBox", "0 40 1200 500")
     .append('g')
 
   

@@ -28,7 +28,7 @@ var path = d3.geoPath()               // path generator that will convert GeoJSO
 // Define linear scale for output
 var color3 = d3.scaleLinear()
   .domain([0, 50, 100])
-  .range(["white", "#73b5f0", "#002E66"])
+  .range(["#FF6060", "white", "#00C181"])
 
 
 
@@ -173,7 +173,7 @@ d3.csv("statemaps.csv", function (data) {
         .attr("font-family", "brandon-grotesque")
         .attr("font-weight", "700")
         .attr("font-size", "10")
-        .attr("fill", d => d.value > .5 ? "white" : "black")
+        .attr("fill", "grey")
         .attr("text-anchor", "middle")
 
 

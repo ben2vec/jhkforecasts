@@ -43,7 +43,7 @@ d3.csv("Sheet1.csv", function (error, data) {
   })
 
   var svg = d3.select("#votecalcs").append("svg")
-    .attr("viewBox", "-25 0 1000 560")
+    .attr("viewBox", "-25 0 1000 320")
     .append('g')
 
   var maxweight = d3.max(data, d => d.weight)
@@ -54,7 +54,7 @@ d3.csv("Sheet1.csv", function (error, data) {
 
   var weightscale = d3.scaleLinear()
     .domain([0, 100])
-    .range(["white", "#a4b1b5"]);
+    .range(["white", "#00C181"]);
 
   var delScale = d3.scaleLinear()
     .domain([0, d3.max(data,d=> d.delegatecount) ])
