@@ -70,10 +70,11 @@ d3.csv("time.csv", function (error, data) {
     .domain([0, 50, 100])
     .range(["white", "#0091FF", "#0E2C7E"]);
 
-
+var svg_height = data.length*60 +50
+console.log(svg_height)
     
   var svg = d3.select("#topline").append("svg")
-    .attr("viewBox", "0 0 1000 530")
+    .attr("viewBox", "0 20 1000 "+svg_height+"" )
 
 
   var svgLegend = svg.append('g')
