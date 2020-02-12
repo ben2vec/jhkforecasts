@@ -240,7 +240,7 @@ d3.csv("time.csv", function (error, data) {
         city.enter().insert("g", ".focus").append("path")
             .attr("class", "line cities")
             .style("stroke", d => z(d.id))
-            .style("stroke-width", 3)
+            .style("stroke-width", 2.5)
             .style("line-cap", "square")
             .merge(city)
             .transition().duration(speed)
@@ -361,7 +361,7 @@ d3.csv("time.csv", function (error, data) {
         .attr("text-anchor", "middle")
         .style("font-size", 25)
         .style("font-weight", 700)
-        .text(keyState == "US" ? "Projected Vote Share" : "Projected Vote in " + keyState)
+        .text(keyState == "US" ? "Projected Delegates" : "Projected Delegates in " + keyState)
 
 
 })

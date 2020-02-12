@@ -349,7 +349,7 @@ var candidates = keys
         .attr("text-anchor", "middle")
         .style("font-size", 25)
         .style("font-weight", 700)
-        .text(keyState == "US" ? "Projected Vote Share" : "Projected Vote in " + keyState)
+        .text(keyState == "US" ? "Win Nomination" : "Win" + keyState)
 
         svg.append("line")
         .attr("x1", x(mindate))

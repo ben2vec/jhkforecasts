@@ -356,25 +356,7 @@ d3.csv("bubblemap.csv", function (error, data) {
     })
     .on('mouseout', tool_tip.hide);
 
-  svg.append("text")
-    .text("Press on State For Forecast")
-    .attr("x", 200)
-    .attr("y", 80)
-    .attr("text-anchor", "middle")
-    .attr("font-family", "brandon-grotesque")
-    .attr("font-weight", "500")
-    .attr("font-size", "15")
-    .attr("fill", "black")
-  svg.append("text")
-    .text("Democratic Primary")
-    .attr("x", 200)
-    .attr("y", 50)
-    .attr("text-anchor", "middle")
-    .attr("font-family", "brandon-grotesque")
-    .attr("font-weight", "700")
-    .attr("font-size", "20")
-    .attr("fill", "black")
-
+  
 
 
 
@@ -410,18 +392,7 @@ d3.csv("bubblemap.csv", function (error, data) {
 
   d3.csv("update.csv", function (error, data) {
 
-    svg.selectAll("updated")
-      .data(data)
-      .enter()
-      .append("text")
-      .text(d => d.updated)
-      .attr("x", 200)
-      .attr("y", 20)
-      .attr("fill", "black")
-      .attr("font-size", 10)
-      .attr("fill", "grey")
-      .attr("text-anchor", "middle")
-      .attr("font-weight", 900)
-      .attr("text-decoration", "underline")
+   var update = data[0].updated
+   document.getElementById("update").innerHTML = update
   })
 })

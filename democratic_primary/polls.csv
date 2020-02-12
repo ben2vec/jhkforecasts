@@ -1,4 +1,5 @@
 State,Pollster,Grade,Sample,Date,weight,Biden,Bloomberg,Booker,Buttigieg,Klobuchar,Sanders,Steyer,Warren,Yang
+US,YouGov,B-,552  lv,2/11,24.1,18.0,12.0,0.0,10.0,7.0,22.0,1.0,15.0,2.0
 US,Harris Insights & Analytics,C+,913  rv,2/10,20.0,23.0,16.0,0.0,9.0,3.0,20.0,3.0,9.0,3.0
 New Hampshire,AtlasIntel,-,431  lv,2/10,13.1,12.0,0.0,0.0,24.0,14.0,24.0,1.0,11.0,5.0
 New Hampshire,Data for Progress,B/C,1295  lv,2/10,27.1,9.0,0.0,0.0,26.0,13.0,28.0,3.0,14.0,5.0
@@ -23,6 +24,8 @@ New Hampshire,University of Massachusetts Lowell,A/B,440  lv,2/7,28.2,14.0,0.0,0
 New Hampshire,University of New Hampshire,B,365  lv,2/7,0.7,11.0,2.0,0.0,21.0,5.0,28.0,3.0,9.0,3.0
 New Hampshire,Suffolk University,A-,500  lv,2/7,1.3,11.0,0.0,0.0,25.0,6.0,24.0,2.0,14.0,3.0
 New Hampshire,Emerson College,B-,500  lv,2/7,0.7,11.0,0.0,0.0,24.0,9.0,31.0,2.0,11.0,3.0
+North Carolina,High Point University,A/B,399  rv,2/6,0.0,19.0,13.0,1.0,6.0,3.0,25.0,3.0,12.0,4.0
+North Carolina,High Point University,A/B,225  lv,2/6,20.1,24.0,16.0,0.0,8.0,3.0,20.0,4.0,11.0,3.0
 New Hampshire,Marist College,A+,1058  rv,2/6,0.0,13.0,0.0,0.0,21.0,8.0,25.0,5.0,14.0,4.0
 New Hampshire,Marist College,A+,709  lv,2/6,60.7,13.0,0.0,0.0,21.0,8.0,25.0,4.0,14.0,4.0
 New Hampshire,Suffolk University,A-,500  lv,2/6,0.5,11.0,0.0,0.0,23.0,6.0,24.0,3.0,13.0,3.0
@@ -33,7 +36,7 @@ New Hampshire,Monmouth University,A+,503  lv,2/5,47.6,17.0,0.0,0.0,20.0,9.0,24.0
 North Carolina,Public Policy Polling,B,604  lv,2/5,24.3,25.0,14.0,0.0,9.0,5.0,16.0,2.0,12.0,5.0
 New Hampshire,Suffolk University,A-,500  lv,2/5,0.3,12.0,0.0,0.0,19.0,6.0,25.0,4.0,11.0,2.0
 New Hampshire,Emerson College,B-,500  lv,2/5,0.1,12.0,0.0,0.0,21.0,11.0,31.0,1.0,12.0,4.0
-US,YouGov,B-,616  lv,2/4,18.7,24.0,9.0,0.0,9.0,6.0,19.0,2.0,18.0,3.0
+US,YouGov,B-,616  lv,2/4,2.3,24.0,9.0,0.0,9.0,6.0,19.0,2.0,18.0,3.0
 New Hampshire,Suffolk University,A-,500  lv,2/4,0.1,15.0,0.0,0.0,15.0,6.0,24.0,5.0,10.0,3.0
 New Hampshire,Emerson College,B-,500  lv,2/4,0.1,13.0,0.0,0.0,17.0,11.0,32.0,2.0,11.0,6.0
 South Carolina,Zogby Interactive/JZ Analytics,C,277  lv,2/3,8.7,28.0,4.0,0.0,7.0,2.0,20.0,15.0,11.0,1.0
@@ -66,7 +69,7 @@ US,NBC News/Wall Street Journal,A/B,428  lv,1/29,21.4,26.0,9.0,0.0,7.0,5.0,27.0,
 Washington,SurveyUSA,A,536  lv,1/28,32.4,21.0,12.0,0.0,8.0,3.0,26.0,2.0,16.0,4.0
 Iowa,Park Street Strategies,-,600  lv,1/28,9.3,20.0,0.0,0.0,17.0,12.0,18.0,4.0,17.0,5.0
 US,USC Dornsife/LA Times,B/C,2227  lv,1/28,19.5,34.0,9.0,0.0,9.0,3.0,18.0,2.0,16.0,2.0
-US,YouGov,B-,591  lv,1/28,1.8,26.0,4.0,0.0,7.0,4.0,24.0,1.0,20.0,4.0
+US,YouGov,B-,591  lv,1/28,0.5,26.0,4.0,0.0,7.0,4.0,24.0,1.0,20.0,4.0
 Florida,St. Pete Polls,C+,2590  lv,1/28,21.4,41.0,17.0,0.0,6.0,5.0,9.0,2.0,7.0,2.0
 US,YouGov Blue/Data for Progress,-,1619  lv,1/27,12.1,30.0,5.0,0.0,8.0,4.0,21.0,2.0,23.0,4.0
 California,Change Research,C,1190  lv,1/27,11.9,15.0,4.0,0.0,8.0,3.0,30.0,2.0,16.0,5.0
@@ -112,7 +115,7 @@ Iowa,Civiqs,-,590  lv,1/21,0.3,17.0,0.0,0.0,19.0,6.0,24.0,3.0,19.0,5.0
 Texas,Data for Progress,B/C,684  lv,1/21,11.2,26.0,7.0,0.0,10.0,4.0,20.0,2.0,14.0,3.0
 California,"University of California, Berkeley",B/C,2895  lv,1/21,21.0,15.0,6.0,1.0,7.0,5.0,26.0,2.0,20.0,4.0
 New Hampshire,MassINC Polling Group,A/B,426  lv,1/21,17.1,14.0,1.0,0.0,17.0,6.0,29.0,2.0,13.0,5.0
-US,YouGov,B-,470  lv,1/21,0.4,28.0,6.0,0.0,8.0,4.0,18.0,2.0,21.0,3.0
+US,YouGov,B-,470  lv,1/21,0.2,28.0,6.0,0.0,8.0,4.0,18.0,2.0,21.0,3.0
 US,Monmouth University,A+,372  rv,1/20,2.9,30.0,9.0,0.0,6.0,5.0,23.0,1.0,14.0,3.0
 Wisconsin,Baldwin Wallace University/Oakland University/Ohio Northern University,-,464  rv,1/20,5.8,22.0,8.0,0.0,8.0,3.0,28.0,0.0,15.0,2.0
 Michigan,Baldwin Wallace University/Oakland University/Ohio Northern University,-,477  rv,1/20,5.8,27.0,9.0,0.0,6.0,2.0,22.0,2.0,14.0,4.0
@@ -133,7 +136,7 @@ California,SurveyUSA,A,565  lv,1/16,24.7,30.0,6.0,0.0,8.0,2.0,20.0,4.0,20.0,4.0
 US,SurveyUSA,A,1086  lv,1/16,35.6,32.0,9.0,0.0,9.0,2.0,21.0,3.0,14.0,4.0
 New Hampshire,Emerson College,B-,657  lv,1/16,0.0,14.0,0.0,0.0,18.0,10.0,23.0,4.0,14.0,6.0
 US,Ipsos,B+,552  rv,1/16,0.1,19.0,9.0,0.0,6.0,2.0,20.0,2.0,12.0,4.0
-US,YouGov,B-,521  lv,1/14,0.2,27.0,5.0,2.0,7.0,3.0,20.0,1.0,19.0,3.0
+US,YouGov,B-,521  lv,1/14,0.1,27.0,5.0,2.0,7.0,3.0,20.0,1.0,19.0,3.0
 US,Harris Insights & Analytics,C+,451  rv,1/14,0.1,29.0,7.0,0.0,4.0,3.0,19.0,3.0,11.0,2.0
 South Carolina,GQR Research (GQRR),C+,600  lv,1/13,6.9,44.0,0.0,0.0,5.0,0.0,15.0,12.0,10.0,0.0
 Wisconsin,Marquette University Law School,A/B,358  lv,1/12,13.5,23.0,6.0,1.0,15.0,4.0,19.0,1.0,14.0,6.0
@@ -160,7 +163,7 @@ New Hampshire,Patinkin Research Strategies,-,600  lv,1/7,6.0,21.0,0.0,2.0,17.0,6
 New Hampshire,Monmouth University,A+,404  lv,1/7,0.0,24.0,0.0,0.0,23.0,0.0,21.0,0.0,18.0,0.0
 New Hampshire,Monmouth University,A+,404  lv,1/7,0.0,21.0,0.0,2.0,20.0,7.0,21.0,0.0,15.0,5.0
 New Hampshire,Monmouth University,A+,404  lv,1/7,0.3,19.0,0.0,1.0,20.0,6.0,18.0,4.0,15.0,3.0
-US,YouGov,B-,574  lv,1/7,0.1,27.0,3.0,1.0,7.0,3.0,20.0,2.0,22.0,3.0
+US,YouGov,B-,574  lv,1/7,0.0,27.0,3.0,1.0,7.0,3.0,20.0,2.0,22.0,3.0
 New Mexico,Emerson College,B-,447  lv,1/6,8.2,27.0,3.0,2.0,7.0,2.0,28.0,1.0,8.0,10.0
 US,Morning Consult,B/C,17213  lv,1/5,0.1,31.0,7.0,2.0,8.0,3.0,23.0,4.0,14.0,4.0
 New Hampshire,YouGov,B-,487  lv,1/3,0.3,25.0,0.0,3.0,13.0,7.0,27.0,3.0,18.0,2.0
@@ -273,7 +276,7 @@ US,Morning Consult,B/C,16400  lv,11/10,0.0,32.0,2.0,3.0,8.0,2.0,20.0,1.0,19.0,3.
 New Hampshire,Quinnipiac University,A,1134  lv,11/10,14.8,20.0,0.0,1.0,15.0,3.0,14.0,3.0,16.0,4.0
 Arizona,OH Predictive Insights/MBQF,B/C,260  lv,11/8,2.7,29.0,0.0,2.0,9.0,2.0,16.0,1.0,18.0,4.0
 US,Ipsos,B+,549  rv,11/4,0.0,24.0,0.0,0.0,8.0,0.0,15.0,1.0,13.0,3.0
-North Carolina,High Point University,A/B,347  a,11/7,5.0,33.0,0.0,2.0,4.0,3.0,18.0,2.0,13.0,2.0
+North Carolina,High Point University,A/B,347  a,11/7,0.2,33.0,0.0,2.0,4.0,3.0,18.0,2.0,13.0,2.0
 Iowa,Public Policy Polling,B,715  lv,11/6,5.8,13.0,0.0,1.0,20.0,9.0,14.0,6.0,21.0,3.0
 Iowa,Quinnipiac University,A,698  lv,11/5,10.7,15.0,0.0,1.0,19.0,5.0,17.0,3.0,20.0,3.0
 US,YouGov,B-,579  lv,11/5,0.0,26.0,0.0,2.0,8.0,2.0,14.0,1.0,25.0,1.0
@@ -463,7 +466,7 @@ South Carolina,Tel Opinion Research,B/C,600  lv,9/20,0.0,19.0,0.0,0.0,2.0,0.0,3.
 US,Harris Insights & Analytics,C+,1831  lv,9/20,0.0,32.0,0.0,3.0,5.0,1.0,15.0,1.0,17.0,2.0
 US,Harris Insights & Analytics,C+,761  lv,9/20,0.0,32.0,0.0,3.0,5.0,1.0,15.0,1.0,20.0,2.0
 US,Harris Insights & Analytics,C+,1340  rv,9/20,0.0,28.0,0.0,3.0,4.0,1.0,16.0,1.0,17.0,2.0
-North Carolina,High Point University,A/B,348  a,9/19,0.4,31.0,0.0,4.0,3.0,1.0,20.0,0.0,15.0,4.0
+North Carolina,High Point University,A/B,348  a,9/19,0.1,31.0,0.0,4.0,3.0,1.0,20.0,0.0,15.0,4.0
 New Hampshire,Tel Opinion Research,B/C,600  lv,9/19,0.0,28.0,0.0,0.0,0.0,0.0,14.0,0.0,39.0,0.0
 New Hampshire,Tel Opinion Research,B/C,600  lv,9/19,2.3,24.0,0.0,0.0,9.0,0.0,13.0,0.0,29.0,1.0
 New Hampshire,Tel Opinion Research,B/C,600  lv,9/19,0.0,15.0,0.0,0.0,4.0,2.0,8.0,0.0,18.0,0.0
@@ -1005,9 +1008,6 @@ US,Harris Insights & Analytics,C+,459  rv,11/28,0.0,25.0,2.0,3.0,0.0,0.0,15.0,0.
 Massachusetts,YouGov,B-,655  rv,11/14,0.8,19.0,0.0,3.0,0.0,3.0,14.0,0.0,11.0,0.0
 US,Morning Consult,B/C,733  rv,11/9,0.0,26.0,2.0,3.0,0.0,1.0,19.0,0.0,5.0,0.0
 US,Harris Insights & Analytics,C+,370  rv,11/6,0.0,30.0,5.0,5.0,0.0,0.0,20.0,0.0,5.0,0.0
-,,,  ,,,,,,,,,,,
-,,,  ,,,,,,,,,,,
-,,,  ,,,,,,,,,,,
 ,,,  ,,,,,,,,,,,
 ,,,  ,,,,,,,,,,,
 ,,,  ,,,,,,,,,,,
