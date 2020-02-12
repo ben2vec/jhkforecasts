@@ -193,7 +193,7 @@ d3.csv("time.csv", function (error, data) {
     var overlay = svg.append("rect")
         .attr("class", "overlay")
         .attr("x", margin.left)
-        .attr("width", x(newest_day))
+        .attr("width", x(newest_day)-margin.left)
         .attr("height", height)
 
     update();

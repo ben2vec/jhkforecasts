@@ -32,6 +32,8 @@ d3.csv("time.csv", function (error, data) {
 
     var data = data.filter(d => d.date <= maxdate)
 
+    var newest_day = d3.max(data, d => d.date)
+
     var newest_data = data.filter(d => d.date == d3.max(data, d => d.date))
 
     var keys = keys.filter(f => f.includes(datatype))
@@ -189,10 +191,10 @@ d3.csv("time.csv", function (error, data) {
         .attr("text-anchor", "middle")
         .attr("font-size", 12);
 
-    var overlay = svg.append("rect")
+     var overlay = svg.append("rect")
         .attr("class", "overlay")
         .attr("x", margin.left)
-        .attr("width", width - margin.right - margin.left)
+        .attr("width", x(newest_day)-margin.left)
         .attr("height", height)
 
     update(d3.select('#selectboxdelegates').property('value'), 0);
