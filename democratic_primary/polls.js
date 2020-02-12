@@ -59,7 +59,7 @@ d3.csv("polls.csv", function (error, data) {
 
   var weightScale = d3.scaleLinear()
     .domain([0, 50 ])
-    .range(["white", "#0070C0"]);
+    .range(["white", "#a4b1b5"]);
 
 
   var svgLegend = svg.append('g')

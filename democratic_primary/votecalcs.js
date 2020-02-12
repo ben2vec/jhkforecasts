@@ -54,7 +54,7 @@ d3.csv("Sheet1.csv", function (error, data) {
 
   var weightscale = d3.scaleLinear()
     .domain([0, 100])
-    .range(["white", "#0070C0"]);
+    .range(["white", "#a4b1b5"]);
 
   var delScale = d3.scaleLinear()
     .domain([0, d3.max(data,d=> d.delegatecount) ])
