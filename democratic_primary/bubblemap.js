@@ -231,6 +231,130 @@ d3.csv("bubblemap.csv", function (error, data) {
     .attr("font-weight", 700)
     .attr("font-size", "8")
     .attr("fill", d => d.completed == 1 ? colortwo(d.first) : "black")
+    .on('mouseover', function (d) {
+      tool_tip.show();
+      var tipSVG = d3.select("#tipDiv")
+        .append("svg")
+        .attr("width", 200)
+        .attr("height", 140);
+
+      tipSVG.append("rect")
+      .attr("x",0)
+      .attr("y",0)
+      .attr("width", 200)
+      .attr("height", 140)
+      .attr("fill","white")
+      .attr("stroke","black")
+      .attr("stroke-width",3)
+      .attr("rx",10)
+
+
+
+      tipSVG.append("text")
+        .text(d.state)
+        .attr("y", 20)
+        .attr("x", 87.5)
+        .attr("fill", "black")
+        .style("font-weight", "600")
+        .style("font-size", "20")
+        .attr("text-anchor", "middle");
+
+      tipSVG.append("text")
+        .text("Candidate")
+        .attr("y", 50)
+        .attr("x", 5)
+        .attr("fill", "black")
+        .style("font-weight", "600")
+        .style("font-size", "15");
+      tipSVG.append("text")
+        .text("Vote Share")
+        .attr("y", 50)
+        .attr("x", 150)
+        .attr("fill", "black")
+        .style("font-weight", "600")
+        .style("font-size", "15")
+        .attr("text-anchor", "middle")
+        ;
+
+
+      tipSVG.append("text")
+        .text(d.first)
+        .attr("y", 70)
+        .attr("x", 5)
+        .attr("fill", color(d.first))
+        .style("font-weight", "600")
+        .style("font-size", "15");
+
+
+      tipSVG.append("text")
+        .text(d.firstvote + "%")
+        .attr("y", 70)
+        .attr("x", 150)
+        .attr("fill", color(d.first))
+        .style("font-weight", "600")
+        .style("font-size", "15")
+        .attr("text-anchor", "middle")
+        ;
+
+      tipSVG.append("text")
+        .text(d.second)
+        .attr("y", 90)
+        .attr("x", 5)
+        .attr("fill", color(d.second))
+        .style("font-weight", "600")
+        .style("font-size", "15");
+
+      tipSVG.append("text")
+        .text(d.secondvote + "%")
+        .attr("y", 90)
+        .attr("x", 150)
+        .attr("fill", color(d.second))
+        .style("font-weight", "600")
+        .style("font-size", "15")
+        .attr("text-anchor", "middle")
+        ;
+
+      tipSVG.append("text")
+        .text(d.third)
+        .attr("y", 110)
+        .attr("x", 5)
+        .attr("fill", color(d.third))
+        .style("font-weight", "600")
+        .style("font-size", "15");
+
+      tipSVG.append("text")
+        .text(d.thirdvote + "%")
+        .attr("y", 110)
+        .attr("x", 150)
+        .attr("fill", color(d.third))
+        .style("font-weight", "600")
+        .style("font-size", "15")
+        .attr("text-anchor", "middle")
+        ;
+
+      tipSVG.append("text")
+        .text(d.fourth)
+        .attr("y", 130)
+        .attr("x", 5)
+        .attr("fill", color(d.fourth))
+        .style("font-weight", "600")
+        .style("font-size", "15")
+
+
+      tipSVG.append("text")
+        .text(d.forthvote + "%")
+        .attr("y", 130)
+        .attr("x", 150)
+        .attr("fill", color(d.fourth))
+        .style("font-weight", "600")
+        .style("font-size", "15")
+        .attr("text-anchor", "middle")
+        ;
+
+
+
+    })
+    .on('mouseout', tool_tip.hide);
 
   svg.append("text")
     .text("Press on State For Forecast")
