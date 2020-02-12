@@ -4,7 +4,7 @@ var color = d3.scaleOrdinal()
   .domain(category)
   .range(["#00C181", "#FF6060", "#a4b1b5", "#FFE130", "#FF8D32", "#0091FF", "#FF2EF0", "#CD64FF", "#a4b1b5"])
 
-  
+  var final_results =[]
 
 
 
@@ -246,7 +246,7 @@ svg.append("rect")
     
 
     
-
+    final_results.push(data)
    
 
 

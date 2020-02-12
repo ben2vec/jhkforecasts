@@ -1,3 +1,7 @@
+
+
+// vote time
+
 var margin = { top: 20, right: 100, bottom: 30, left: 30 }
 var width = 1000 - margin.left - margin.right
 var height = 550 - margin.top - margin.bottom
@@ -6,14 +10,15 @@ var demScale = d3.scaleLinear()
     .domain([0, 50])
     .range(["white", "#0091FF"]);
 
+
+
+
 d3.csv("time.csv", function (error, data) {
     var keys = data.columns.slice(1);
 
     var data = data.filter(d => d.state == keyState);
 
     var datatype = "vote"
-
-
 
 
 
@@ -82,12 +87,12 @@ d3.csv("time.csv", function (error, data) {
 
 
 
- var svg = d3.select("#vote").append("svg")
+    var svg = d3.select("#vote").append("svg")
         .attr("viewBox", "0 0 1000 550")
         .append('g')
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    
+
 
 
 
@@ -238,6 +243,11 @@ d3.csv("time.csv", function (error, data) {
             .transition().duration(speed)
             .attr("d", d => line(d.values))
 
+           // var results = final_results[0]
+
+           // console.log(results)
+
+
         tooltip(copy);
     }
 
@@ -317,7 +327,7 @@ d3.csv("time.csv", function (error, data) {
             focus.selectAll(".lineHoverText")
                 .attr("transform",
                     "translate(" + 900 + "," + 440 + ")").style("font-weight", 700)
-                .text(e => d[e] + "%");
+                .text(e => d[e] == "" ? "-" : d[e] + "%");
 
 
 
@@ -340,7 +350,7 @@ d3.csv("time.csv", function (error, data) {
 
     legend.append("text")
         .attr("class", "legend-text")
-        .attr("y",50)
+        .attr("y", 50)
         .style("fill", d => z(d))
         .attr("text-anchor", "middle")
         .style("font-size", 14)
@@ -354,12 +364,21 @@ d3.csv("time.csv", function (error, data) {
         .style("font-size", 25)
         .style("font-weight", 700)
         .text(keyState == "US" ? "Projected Vote Share" : "Projected Vote in " + keyState)
-        svg.append("line")
+    svg.append("line")
         .attr("x1", x(mindate))
         .attr("x2", x(mindate))
         .attr("y1", y(0))
         .attr("y2", -height)
         .attr("stroke", "grey")
+
+    var results = final_results[0]
+
+        console.log(results)
+
+    
+    
+    
+
 
 })
 

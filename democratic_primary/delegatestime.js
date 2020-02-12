@@ -325,7 +325,7 @@ d3.csv("time.csv", function (error, data) {
             focus.selectAll(".lineHoverText")
                 .attr("transform",
                     "translate(" + 900 + "," + 440 + ")").style("font-weight", 700)
-                .text(e => d[e]);
+                .text(e => d[e]==""?"-":d[e]);
 
 
 

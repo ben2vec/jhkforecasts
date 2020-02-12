@@ -105,7 +105,7 @@
   
 
 
-  <h2>page for new simulation.</h2>
+  <h2 style="text-align: center;">Reload page for new simulation.</h2>
   <div id="bubblemap"></div>
   
   <script>
@@ -113,8 +113,8 @@
 
     var parseTime = d3.timeParse("%Y-%m-%d")
     formatTime = d3.timeFormat("%Y-%m-%d")
-    formatValue = d3.format(".2")
-    formatvalue = d3.format(".3");
+    formatValue = d3.format(".1f")
+    formatvalue = d3.format(".1f");
 
 
     d3.csv("simulator.csv", function (data) {
@@ -132,7 +132,7 @@
           Sandersvote: +d.Sandersproj,
           Steyervote: +d.Steyerproj,
           Warrenvote: +d.Warrenproj,
-          Yangvote: +d.Yangproj,
+          Yangvote: 0,
           bi: +d.bi,
           bl: +d.bl,
           bu: +d.bu,
@@ -140,7 +140,7 @@
           sa: +d.sa,
           st: +d.st,
           wa: +d.wa,
-          ya: +d.ya,
+          ya: 0,
           voteperc: +d.voteperc,
         }
       })
@@ -174,7 +174,7 @@
       Sanderssimulation = Math.random()
       Steyersimulation = (Math.random() * 5 + Math.random()) / 6
       Warrensimulation = (Math.random() * 2 + Math.random()) / 3
-      Yangsimulation = (Math.random() * 5 + Math.random()) / 6
+      Yangsimulation = 0
       BidenUS = data[57].Bidenproj
       BloombergUS = data[57].Bloombergproj
       ButtigiegUS = data[57].Buttigeigproj
@@ -182,7 +182,7 @@
       SandersUS = data[57].Sandersproj
       SteyerUS = data[57].Steyerproj
       WarrenUS = data[57].Warrenproj
-      YangUS = data[57].Yangproj
+      YangUS =0
       firstSectionResults = 0
       secondSectionResults = 0
       thirdSectionResults = 0
@@ -289,6 +289,24 @@
       firstSection[0].Steyerdelegates = 0
       firstSection[0].Warrendelegates = 8
       firstSection[0].Yangdelegates = 0
+
+
+      firstSection[1].Bidenvote = 8.7
+      firstSection[1].Bloombergvote = 0
+      firstSection[1].Buttigiegvote = 24.2
+      firstSection[1].Klobucharvote = 19.8
+      firstSection[1].Sandersvote = 25.9
+      firstSection[1].Steyervote = 3.6
+      firstSection[1].Warrenvote = 9.3
+      firstSection[1].Yangvote = 2.8
+      firstSection[1].Bidendelegates = 0
+      firstSection[1].Bloombergdelegates = 0
+      firstSection[1].Buttigiegdelegates = 9
+      firstSection[1].Klobuchardelegates = 6
+      firstSection[1].Sandersdelegates = 9
+      firstSection[1].Steyerdelegates = 0
+      firstSection[1].Warrendelegates = 0
+      firstSection[1].Yangdelegates = 0
 
 
       firstSection.forEach(function (d) {
