@@ -135,7 +135,10 @@ div.tooltip {
       border-radius: 8px;			
       pointer-events: none;			
   }
-
+  .MsoNormal{
+    text-align: center;
+    padding-bottom: 7px;
+  }
 
   .d3-tip {
     line-height: 1;
@@ -166,6 +169,9 @@ div.tooltip {
   #smallprojected{
     display: inline;
   }
+  .MsoNormal{
+    font-size:10px;
+  }
  
 
   .computer{
@@ -192,7 +198,9 @@ div.tooltip {
   #smallprojected{
     display: none;
   }
-  
+  .MsoNormal{
+    font-size:14px;
+  }
  
   .computer{
     display:inline;

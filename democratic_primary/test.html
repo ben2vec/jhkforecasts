@@ -22,1004 +22,844 @@
 
   </style>
 </head>
-<script>
-  var keyState = "Texas"
-</script>
-<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=1095
- style='width:821.0pt;border-collapse:collapse'>
- <tr style='height:22.0pt'>
-  <td width=307 nowrap valign=bottom style='width:230.0pt;border:none;
-  border-bottom:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:22.0pt'>
-  <p class=MsoNormal><span style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>Pollster</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;border:none;border-bottom:
-  solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>Grade</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;border:none;border-bottom:
-  solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>Sample</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;border:none;border-bottom:
-  solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>Date</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;border:none;border-bottom:
-  solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>Biden</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;border:none;border-bottom:
-  solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>Buttigieg</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;border:none;border-bottom:
-  solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>Klobuchar</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;border:none;border-bottom:
-  solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>Sanders</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;border:none;border-bottom:
-  solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>Warren</span></p>
-  </td>
-  <td width=113 nowrap valign=bottom style='width:85.0pt;border-top:none;
-  border-left:solid windowtext 1.0pt;border-bottom:solid windowtext 1.0pt;
-  border-right:none;padding:0in 5.4pt 0in 5.4pt;height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>RMSE</span></p>
-  </td>
- </tr>
- <tr style='height:22.0pt'>
-  <td width=307 nowrap valign=bottom style='width:230.0pt;border:none;
-  border-bottom:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:22.0pt'>
-  <p class=MsoNormal><span style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>Results</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;border:none;border-bottom:
-  solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>-</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;border:none;border-bottom:
-  solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>-</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;border:none;border-bottom:
-  solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>2/3</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;border:none;border-bottom:
-  solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>14.9</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;border:none;border-bottom:
-  solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>21.3</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;border:none;border-bottom:
-  solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>12.3</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;border:none;border-bottom:
-  solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><b><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>24.8</span></b></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;border:none;border-bottom:
-  solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>18.4</span></p>
-  </td>
-  <td width=113 nowrap valign=bottom style='width:85.0pt;border-top:none;
-  border-left:solid windowtext 1.0pt;border-bottom:solid windowtext 1.0pt;
-  border-right:none;padding:0in 5.4pt 0in 5.4pt;height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>-</span></p>
-  </td>
- </tr>
- <tr style='height:22.0pt'>
-  <td width=307 nowrap valign=bottom style='width:230.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal><span style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>Change Research</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>C</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>704  lv</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>1/26</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>18</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>19</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>10</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><b><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>27</span></b></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>15</span></p>
-  </td>
-  <td width=113 nowrap valign=bottom style='width:85.0pt;border:none;
-  border-left:solid windowtext 1.0pt;background:#FCFCFF;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>2.7</span></p>
-  </td>
- </tr>
- <tr style='height:22.0pt'>
-  <td width=307 nowrap valign=bottom style='width:230.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal><span style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>Data for Progress</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>B/C</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>2394  lv</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>2/2</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>18</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>18</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>9</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><b><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>22</span></b></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>19</span></p>
-  </td>
-  <td width=113 nowrap valign=bottom style='width:85.0pt;border:none;
-  border-left:solid windowtext 1.0pt;background:#FCF9FC;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>2.8</span></p>
-  </td>
- </tr>
- <tr style='height:22.0pt'>
-  <td width=307 nowrap valign=bottom style='width:230.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal><span style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>Siena College/New York Times Upshot</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>A+</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>584  lv</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>1/23</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>17</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>18</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>8</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><b><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>25</span></b></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>15</span></p>
-  </td>
-  <td width=113 nowrap valign=bottom style='width:85.0pt;border:none;
-  border-left:solid windowtext 1.0pt;background:#FCF4F7;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>3.0</span></p>
-  </td>
- </tr>
- <tr style='height:22.0pt'>
-  <td width=307 nowrap valign=bottom style='width:230.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal><span style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>Selzer &amp; Co.</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>A+</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>701  lv</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>2/1</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>13</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>16</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>13</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><b><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>20</span></b></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>17</span></p>
-  </td>
-  <td width=113 nowrap valign=bottom style='width:85.0pt;border:none;
-  border-left:solid windowtext 1.0pt;background:#FCEAEC;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>3.4</span></p>
-  </td>
- </tr>
- <tr style='height:22.0pt'>
-  <td width=307 nowrap valign=bottom style='width:230.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal><span style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>Civiqs</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>-</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>615  lv</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>1/29</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>15</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>15</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>8</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><b><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>28</span></b></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>21</span></p>
-  </td>
-  <td width=113 nowrap valign=bottom style='width:85.0pt;border:none;
-  border-left:solid windowtext 1.0pt;background:#FCDCDE;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>3.9</span></p>
-  </td>
- </tr>
- <tr style='height:22.0pt'>
-  <td width=307 nowrap valign=bottom style='width:230.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal><span style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>David Binder Research</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>-</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>300  lv</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>1/30</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>15</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><b><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>19</span></b></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>11</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>17</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>15</span></p>
-  </td>
-  <td width=113 nowrap valign=bottom style='width:85.0pt;border:none;
-  border-left:solid windowtext 1.0pt;background:#FCD9DB;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>4.0</span></p>
-  </td>
- </tr>
- <tr style='height:22.0pt'>
-  <td width=307 nowrap valign=bottom style='width:230.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal><span style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>Park Street Strategies</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>-</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>600  lv</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>1/28</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><b><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>20</span></b></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>17</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>12</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>18</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>17</span></p>
-  </td>
-  <td width=113 nowrap valign=bottom style='width:85.0pt;border:none;
-  border-left:solid windowtext 1.0pt;background:#FBD0D2;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>4.3</span></p>
-  </td>
- </tr>
- <tr style='height:22.0pt'>
-  <td width=307 nowrap valign=bottom style='width:230.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal><span style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>Emerson College</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>B-</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>853  lv</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>2/2</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>21</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>15</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>11</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><b><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>28</span></b></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>14</span></p>
-  </td>
-  <td width=113 nowrap valign=bottom style='width:85.0pt;border:none;
-  border-left:solid windowtext 1.0pt;background:#FBC6C9;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>4.7</span></p>
-  </td>
- </tr>
- <tr style='height:22.0pt'>
-  <td width=307 nowrap valign=bottom style='width:230.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal><span style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>Monmouth University</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>A+</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>544  lv</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>1/27</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><b><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>23</span></b></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>16</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>10</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>21</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>15</span></p>
-  </td>
-  <td width=113 nowrap valign=bottom style='width:85.0pt;border:none;
-  border-left:solid windowtext 1.0pt;background:#FBBCBF;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>5.0</span></p>
-  </td>
- </tr>
- <tr style='height:22.0pt'>
-  <td width=307 nowrap valign=bottom style='width:230.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal><span style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>Morningside College</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>-</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>253  lv</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>1/23</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>19</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>18</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>12</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>15</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>15</span></p>
-  </td>
-  <td width=113 nowrap valign=bottom style='width:85.0pt;border:none;
-  border-left:solid windowtext 1.0pt;background:#FBB7B9;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>5.2</span></p>
-  </td>
- </tr>
- <tr style='height:22.0pt'>
-  <td width=307 nowrap valign=bottom style='width:230.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal><span style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>YouGov</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>B-</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>1356  lv</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>1/23</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><b><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>25</span></b></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>22</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>7</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><b><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>26</span></b></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>15</span></p>
-  </td>
-  <td width=113 nowrap valign=bottom style='width:85.0pt;border:none;
-  border-left:solid windowtext 1.0pt;background:#FAB2B5;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>5.4</span></p>
-  </td>
- </tr>
- <tr style='height:22.0pt'>
-  <td width=307 nowrap valign=bottom style='width:230.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal><span style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>American Research Group</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>B</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>400  lv</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>1/30</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>17</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>9</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>16</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><b><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>23</span></b></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>15</span></p>
-  </td>
-  <td width=113 nowrap valign=bottom style='width:85.0pt;border:none;
-  border-left:solid windowtext 1.0pt;background:#FA9EA1;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>6.1</span></p>
-  </td>
- </tr>
- <tr style='height:22.0pt'>
-  <td width=307 nowrap valign=bottom style='width:230.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal><span style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>Suffolk University</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>A-</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>500  lv</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>1/26</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><b><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>25</span></b></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>18</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>6</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>19</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>13</span></p>
-  </td>
-  <td width=113 nowrap valign=bottom style='width:85.0pt;border:none;
-  border-left:solid windowtext 1.0pt;background:#FA9093;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>6.6</span></p>
-  </td>
- </tr>
- <tr style='height:22.0pt'>
-  <td width=307 nowrap valign=bottom style='width:230.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal><span style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>Neighborhood Research and Media</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>B/C</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>300  lv</span></p>
-  </td>
-  <td width=83 nowrap valign=bottom style='width:62.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>1/17</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><b><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>23</span></b></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>17</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>11</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>10</span></p>
-  </td>
-  <td width=85 nowrap valign=bottom style='width:64.0pt;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>15</span></p>
-  </td>
-  <td width=113 nowrap valign=bottom style='width:85.0pt;border:none;
-  border-left:solid windowtext 1.0pt;background:#F8696B;padding:0in 5.4pt 0in 5.4pt;
-  height:22.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-size:14.0pt;font-family:"brandon-grotesque",sans-serif;
-  color:black'>8.0</span></p>
-  </td>
- </tr>
-</table>
+
+<div id = "iapolls">
+
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 
+   style='width:100%;border-collapse:collapse'>
+   <tr style='height:22.0pt'>
+    <td 307 nowrap valign=bottom style='width:28%;border:none;
+    border-bottom:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:22.0pt'>
+    <p class=MsoNormal><span >Pollster</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;border:none;border-bottom:
+    solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >Grade</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;border:none;border-bottom:
+    solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >Sample</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;border:none;border-bottom:
+    solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >Date</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;border:none;border-bottom:
+    solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >Biden</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;border:none;border-bottom:
+    solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >Buttigieg</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;border:none;border-bottom:
+    solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >Klobuchar</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;border:none;border-bottom:
+    solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >Sanders</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;border:none;border-bottom:
+    solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >Warren</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;border-top:none;
+    border-left:solid windowtext 1.0pt;border-bottom:solid windowtext 1.0pt;
+    border-right:none;padding:0in 5.4pt 0in 5.4pt;height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >RMSE</span></p>
+    </td>
+   </tr>
+   <tr style='height:22.0pt'>
+    <td 307 nowrap valign=bottom style='width:28%;border:none;
+    border-bottom:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:22.0pt'>
+    <p class=MsoNormal><span >Results</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;border:none;border-bottom:
+    solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >-</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;border:none;border-bottom:
+    solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >-</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;border:none;border-bottom:
+    solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >2/3</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;border:none;border-bottom:
+    solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >14.9</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;border:none;border-bottom:
+    solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >21.3</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;border:none;border-bottom:
+    solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >12.3</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;border:none;border-bottom:
+    solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><b><span
+    >24.8</span></b></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;border:none;border-bottom:
+    solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >18.4</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;border-top:none;
+    border-left:solid windowtext 1.0pt;border-bottom:solid windowtext 1.0pt;
+    border-right:none;padding:0in 5.4pt 0in 5.4pt;height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >-</span></p>
+    </td>
+   </tr>
+   <tr style='height:22.0pt'>
+    <td 307 nowrap valign=bottom style='width:28%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal><span >Change Research</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >C</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >704  lv</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >1/26</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >18</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >19</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >10</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><b><span
+    >27</span></b></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >15</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;border:none;border-left:
+    solid windowtext 1.0pt;background:#FCFCFF;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >2.7</span></p>
+    </td>
+   </tr>
+   <tr style='height:22.0pt'>
+    <td 307 nowrap valign=bottom style='width:28%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal><span >Data for Progress</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >B/C</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >2394  lv</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >2/2</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >18</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >18</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >9</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><b><span
+    >22</span></b></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >19</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;border:none;border-left:
+    solid windowtext 1.0pt;background:#FCFAFD;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >2.8</span></p>
+    </td>
+   </tr>
+   <tr style='height:22.0pt'>
+    <td 307 nowrap valign=bottom style='width:28%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal><span >Siena College/New York Times Upshot</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >A+</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >584  lv</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >1/23</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >17</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >18</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >8</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><b><span
+    >25</span></b></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >15</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;border:none;border-left:
+    solid windowtext 1.0pt;background:#FCF4F7;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >3.0</span></p>
+    </td>
+   </tr>
+   <tr style='height:22.0pt'>
+    <td 307 nowrap valign=bottom style='width:28%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal><span >Selzer &amp; Co.</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >A+</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >701  lv</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >2/1</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >13</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >16</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >13</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><b><span
+    >20</span></b></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >17</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;border:none;border-left:
+    solid windowtext 1.0pt;background:#FCE9EC;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >3.4</span></p>
+    </td>
+   </tr>
+   <tr style='height:22.0pt'>
+    <td 307 nowrap valign=bottom style='width:28%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal><span >Civiqs</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >-</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >615  lv</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >1/29</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >15</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >15</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >8</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><b><span
+    >28</span></b></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >21</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;border:none;border-left:
+    solid windowtext 1.0pt;background:#FCDBDE;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >3.9</span></p>
+    </td>
+   </tr>
+   <tr style='height:22.0pt'>
+    <td 307 nowrap valign=bottom style='width:28%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal><span >David Binder Research</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >-</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >300  lv</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >1/30</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >15</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><b><span
+    >19</span></b></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >11</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >17</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >15</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;border:none;border-left:
+    solid windowtext 1.0pt;background:#FCD8DB;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >4.0</span></p>
+    </td>
+   </tr>
+   <tr style='height:22.0pt'>
+    <td 307 nowrap valign=bottom style='width:28%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal><span >Park Street Strategies</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >-</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >600  lv</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >1/28</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><b><span
+    >20</span></b></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >17</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >12</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >18</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >17</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;border:none;border-left:
+    solid windowtext 1.0pt;background:#FBD0D3;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >4.3</span></p>
+    </td>
+   </tr>
+   <tr style='height:22.0pt'>
+    <td 307 nowrap valign=bottom style='width:28%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal><span >Emerson College</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >B-</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >853  lv</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >2/2</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >21</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >15</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >11</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><b><span
+    >28</span></b></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >14</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;border:none;border-left:
+    solid windowtext 1.0pt;background:#FBC5C8;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >4.7</span></p>
+    </td>
+   </tr>
+   <tr style='height:22.0pt'>
+    <td 307 nowrap valign=bottom style='width:28%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal><span >Monmouth University</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >A+</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >544  lv</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >1/27</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><b><span
+    >23</span></b></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >16</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >10</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >21</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >15</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;border:none;border-left:
+    solid windowtext 1.0pt;background:#FBBDBF;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >5.0</span></p>
+    </td>
+   </tr>
+   <tr style='height:22.0pt'>
+    <td 307 nowrap valign=bottom style='width:28%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal><span >Morningside College</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >-</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >253  lv</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >1/23</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >19</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >18</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >12</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >15</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >15</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;border:none;border-left:
+    solid windowtext 1.0pt;background:#FBB7BA;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >5.2</span></p>
+    </td>
+   </tr>
+   <tr style='height:22.0pt'>
+    <td 307 nowrap valign=bottom style='width:28%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal><span >YouGov</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >B-</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >1356  lv</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >1/23</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><b><span
+    >25</span></b></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >22</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >7</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><b><span
+    >26</span></b></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >15</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;border:none;border-left:
+    solid windowtext 1.0pt;background:#FAB2B4;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >5.4</span></p>
+    </td>
+   </tr>
+   <tr style='height:22.0pt'>
+    <td 307 nowrap valign=bottom style='width:28%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal><span >American Research Group</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >B</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >400  lv</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >1/30</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >17</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >9</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >16</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><b><span
+    >23</span></b></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >15</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;border:none;border-left:
+    solid windowtext 1.0pt;background:#FA9EA1;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >6.1</span></p>
+    </td>
+   </tr>
+   <tr style='height:22.0pt'>
+    <td 307 nowrap valign=bottom style='width:28%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal><span >Suffolk University</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >A-</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >500  lv</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >1/26</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><b><span
+    >25</span></b></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >18</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >6</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >19</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >13</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;border:none;border-left:
+    solid windowtext 1.0pt;background:#FA9093;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >6.6</span></p>
+    </td>
+   </tr>
+   <tr style='height:22.0pt'>
+    <td 307 nowrap valign=bottom style='width:28%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal><span >Neighborhood Research and Media</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >B/C</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >300  lv</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >1/17</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><b><span
+    >23</span></b></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >17</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >11</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >10</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >15</span></p>
+    </td>
+    <td 87 nowrap valign=bottom style='width:8%;border:none;border-left:
+    solid windowtext 1.0pt;background:#F8696B;padding:0in 5.4pt 0in 5.4pt;
+    height:22.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    >8.0</span></p>
+    </td>
+   </tr>
+  </table>
 
 
 
