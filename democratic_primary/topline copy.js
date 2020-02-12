@@ -20,7 +20,7 @@ d3.csv("candsoverview.csv", function (error, data) {
   data.sort((a,b)=> b.win - a.win)
 
   var svg = d3.select("#topline").append("svg")
-    .attr("viewBox", "0 0 1000 450")
+    .attr("viewBox", "0 0 900 450")
     .append('g')
 
   
