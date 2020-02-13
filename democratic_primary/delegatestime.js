@@ -1,6 +1,6 @@
 var margin = { top: 20, right: 20, bottom: 30, left: 100 }
 var width = 1000 - margin.left - margin.right
-var height = 550 - margin.top - margin.bottom
+var height = 400 - margin.top - margin.bottom
 var axisPad = 12
 var demScale = d3.scaleLinear()
     .domain([0, 50])
@@ -87,7 +87,7 @@ d3.csv("time.csv", function (error, data) {
     console.log(data)
 
     var svg = d3.select("#delegates").append("svg")
-        .attr("viewBox", "0 0 1000 550")
+        .attr("viewBox", "0 0 1000 400")
         .append('g')
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
@@ -141,21 +141,21 @@ d3.csv("time.csv", function (error, data) {
         .attr("x1", x(demadjust))
         .attr("x2", x(demadjust))
         .attr("y1", y(0))
-        .attr("y2", -height)
+        .attr("y2", 15)
         .attr("stroke", "grey")
 
      svg.append("line")
         .attr("x1", x(mindate))
         .attr("x2", x(mindate))
         .attr("y1", y(0))
-        .attr("y2", -height)
+        .attr("y2", 30)
         .attr("stroke", "grey")
 
     svg.append("line")
         .attr("x1", x(maxdate))
         .attr("x2", x(maxdate))
         .attr("y1", y(0))
-        .attr("y2", -height)
+        .attr("y2", 30)
         .attr("stroke", "grey")
 
 
@@ -257,22 +257,23 @@ d3.csv("time.csv", function (error, data) {
 
         rect.enter().append("rect")
             .attr("class", "lineHoverRect")
-            .attr("y", 422.5)
+            .attr("y", 250)
             .attr("x", 862.5)
             .attr("width", 75)
             .attr("height", 25)
             .attr("rx", 10)
-            .attr("transform", (_, i) => "translate(0," + i * -50 + ")")
+            .attr("transform", (_, i) => "translate(0," + i * -30 + ")")
             .merge(rect);
 
         var labels = focus.selectAll(".lineHoverText")
             .data(copy)
 
         labels.enter().append("text")
+        .attr("y", -172.5)
             .attr("class", "lineHoverText")
             .attr("text-anchor", "middle")
             .attr("font-size", 14)
-            .attr("dy", (_, i) => 1 + i * -50 + "px")
+            .attr("dy", (_, i) => 1 + i * -30 + "px")
             .merge(labels);
 
 
@@ -327,7 +328,7 @@ d3.csv("time.csv", function (error, data) {
             focus.selectAll(".lineHoverText")
                 .attr("transform",
                     "translate(" + 900 + "," + 440 + ")").style("font-weight", 700)
-                .text(e => d[e]==""?"-":d[e]);
+                .text(e => d[e] == "" ? "-" : d[e]);
 
 
 
@@ -345,12 +346,11 @@ d3.csv("time.csv", function (error, data) {
         .data(candidates)
         .enter().append('g')
         .attr("class", "legend")
-        .attr("transform", function (d, i) { return "translate(720," + i * -50 + ")" })
+        .attr("transform", function (d, i) { return "translate(720," + i * -30 + ")" })
 
-
-    legend.append("text")
+        legend.append("text")
         .attr("class", "legend-text")
-        .attr("y",50)
+        .attr("y", -122.5)
         .style("fill", d => z(d))
         .attr("text-anchor", "middle")
         .style("font-size", 14)
@@ -358,10 +358,10 @@ d3.csv("time.csv", function (error, data) {
         .text(d => d)
 
     svg.append("text")
-        .attr("x", 500)
-        .attr("y", 520)
+        .attr("x", 900)
+        .attr("y", 0)
         .attr("text-anchor", "middle")
-        .style("font-size", 25)
+        .style("font-size", 15)
         .style("font-weight", 700)
         .text(keyState == "US" ? "Projected Delegates" : "Projected Delegates in " + keyState)
 
