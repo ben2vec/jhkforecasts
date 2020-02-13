@@ -94,34 +94,28 @@
 </div>
 
 <script>
-  window.onresize = function () { location.reload(); }
-  var candidate = "Biden"
-  var number = 28.9
+  var parseTime = d3.timeParse("%Y-%m-%d");
 
-  var w = window.innerWidth
+  d3.csv("poll_accuracy.csv", function (data) {
 
-  var x = d3.scaleLinear()
-    .domain([0, 100])
-    .range([0, w])
-
+data.forEach(d=>{
+  d.date = parseTime(d.date)
+  return d;
+})
 
 
-  var svg = d3.select("body").append("svg")
-    .attr("width", w)
+console.log(data)
+
+  var svg = d3.select("#pollsters").append("svg")
+    .attr("width", 1000)
     .attr("height", 550)
 
-  svg.append("text")
-    .attr("x", x(50))
-    .attr("y", 520)
-    .attr("text-anchor", "middle")
-    .style("font-size", 25)
-    .style("font-weight", 700)
-    .text(candidate)
+  
 
 
 
 
-  displayWindowSize();
+  })
 </script>
 
 
