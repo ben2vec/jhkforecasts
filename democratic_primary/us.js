@@ -1,7 +1,7 @@
 var glines
 var mouseG
 var tooltip
-var parseDate = d3.timeParse("%Y-%m-%d")
+var parseDate = d3.timeParse("%m/%d/%y")
 var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"]
 
 var margin = { top: 80, right: 100, bottom: 40, left: 40 }
@@ -20,23 +20,24 @@ var color = d3.scaleOrdinal()
   .domain(category)
   .range(["#00C181", "#FF6060", "#a4b1b5", "#FFE130", "#FF8D32", "#0091FF", "#FF2EF0", "#CD64FF", "#a4b1b5"])
 
-d3.csv("states.csv", function (error, data) {
+d3.csv("https://projects.fivethirtyeight.com/polls-page/president_primary_polls.csv", function (error, data) {
 
-  var data = data.filter(function (d) { return d.state == 'US'; })
-
+  var data = data.filter(function (d) { return d.state == "Iowa"; })
+  var data = data.filter(function (d) { return d.party == "DEM"; })
+  
   var res = data.map((d, i) => {
     return {
-      date: parseDate(d.date),
-      dataPoint: +d.dataPoint,
-      candidate: d.candidate,
-      percentage: +d.percentage
+      end_date: parseDate(d.end_date),
+      answer: d.answer,
+      dataPoint: 1,
+      pct: +d.pct
     }
   })
-  console.log(data)
+  console.log(res)
 
 
   var mindate = new Date(2019, 5, 1),
-    maxdate = new Date(2020, 6, 1);
+    maxdate = d3.max(res,d=>d.end_date);
 
   var xScale = d3.scaleTime()
     .domain([mindate, maxdate])
@@ -45,7 +46,7 @@ d3.csv("states.csv", function (error, data) {
 
 
   var yScale = d3.scaleLinear()
-    .domain(d3.extent(res, d => d.percentage))
+    .domain(d3.extent(res, d => d.pct))
     .range([height, 0]);
 
   var svg = d3.select("#chart").append("svg")
@@ -53,6 +54,8 @@ d3.csv("states.csv", function (error, data) {
     .append('g')
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+    svg.selectAll("polls")
+    .data
 
   // CREATE AXES // 
   // render axis first before lines so that lines will overlay the horizontal ticks
@@ -62,7 +65,7 @@ d3.csv("states.csv", function (error, data) {
   svg.append("g")
     .attr("class", "x axis")
     .attr("transform", `translate(0, ${height})`)
-    .call(xAxis.ticks(4)
+    .call(xAxis.ticks(6)
       .tickFormat(d3.timeFormat("%b")))
     .call(g => {
       var years = xScale.ticks(d3.timeYear.every(1))
@@ -130,9 +133,9 @@ d3.csv("states.csv", function (error, data) {
   // line generator
 
   var line = d3.line()
-    .curve(d3.curveCatmullRom)
-    .x(d => xScale(d.date))
-    .y(d => yScale(d.percentage))
+    .curve(d3.curveBundle.beta(.5))
+    .x(d => xScale(d.end_date))
+    .y(d => yScale(d.pct))
 
   renderChart(1) // inital chart render (set default to Bidding Exercise 1 data)
 
@@ -145,7 +148,7 @@ d3.csv("states.csv", function (error, data) {
 
     var resNew = res.filter(d => d.dataPoint == parseInt(dataPoint))
 
-    var maxYVal = Math.round(d3.max(resNew, d => d.percentage));
+    var maxYVal = Math.round(d3.max(resNew, d => d.pct));
 
     var test = 100
     console.log(maxYVal);
@@ -171,7 +174,7 @@ d3.csv("states.csv", function (error, data) {
         .attr('opacity', 0)
     })
     var res_nested = d3.nest()
-      .key(d => d.candidate)
+      .key(d => d.answer)
       .entries(resNew)
 
     glines.select('.line') //select line path within line-group (which represents a vehicle category), then bind new data 
@@ -193,7 +196,7 @@ d3.csv("states.csv", function (error, data) {
   function renderChart(dataPoint) {
 
     var resNew = res.filter(d => d.dataPoint == parseInt(dataPoint))
-    var maxYVal = Math.round(d3.max(resNew, d => d.percentage));
+    var maxYVal = Math.round(d3.max(resNew, d => d.pct));
 
     var test = 100
     console.log(maxYVal);
@@ -219,7 +222,7 @@ d3.csv("states.csv", function (error, data) {
         .attr('opacity', 0)
     })
     var res_nested = d3.nest() // necessary to nest data so that keys represent each vehicle category
-      .key(d => d.candidate)
+      .key(d => d.answer)
       .entries(resNew)
 
     // APPEND MULTIPLE LINES //
@@ -253,7 +256,7 @@ d3.csv("states.csv", function (error, data) {
     //.attr("class", "circle")  
     //.append("circle")
     //.attr("cx", d => xScale(d.date))
-    //.attr("cy", d => yScale(d.percentage))
+    //.attr("cy", d => yScale(d.pct))
     //.attr("r", 2)
 
     // CREATE HOVER TOOLTIP WITH VERTICAL LINE //
@@ -332,58 +335,16 @@ d3.csv("states.csv", function (error, data) {
                 data += " " + xScale(d.values[idx].date) + "," + 0;
                 return data;
               });
-            return "translate(" + xScale(d.values[idx].date) + "," + yScale(d.values[idx].percentage) + ")";
+            return "translate(" + xScale(d.values[idx].date) + "," + yScale(d.values[idx].pct) + ")";
 
           });
 
-        updateTooltipContent(mouse, res_nested)
+
 
       })
 
   }
 
-  function updateTooltipContent(mouse, res_nested) {
-
-    sortingObj = []
-    res_nested.map(d => {
-      var xDate = xScale.invert(mouse[0])
-      var bisect = d3.bisector(function (d) { return d.date; }).left
-      var idx = bisect(d.values, xDate)
-      sortingObj.push({ key: d.values[idx].candidate, percentage: d.values[idx].percentage, dataPoint: d.values[idx].dataPoint, day: d.values[idx].date.getDate(), month: monthNames[d.values[idx].date.getMonth()] })
-    })
-
-    sortingObj.sort(function (x, y) {
-      return d3.descending(x.percentage, y.percentage);
-    })
-
-    var sortingArr = sortingObj.map(d => d.key)
-
-    var res_nested1 = res_nested.slice().sort(function (a, b) {
-      return sortingArr.indexOf(a.key) - sortingArr.indexOf(b.key) // rank vehicle category based on price of percentage
-    })
-
-
-    tooltip.html(sortingObj[0].month + "-" + sortingObj[0].day)
-      .style('display', 'inline')
-      .style('left', d3.event.pageX + 40)
-      .style('top', d3.event.pageY)
-      .style('font-size', 18)
-      .style('font-family', 'brandon-grotesque')
-      .style('font-weight', 700)
-      .style('fill', 'white')
-      .selectAll()
-      .data(res_nested1).enter() // for each vehicle category, list out name and price of percentage
-      .append('div')
-      .style('color', d => {
-        return color(d.key)
-      })
-      .style('font-size', 18)
-      .html(d => {
-        var xDate = xScale.invert(mouse[0])
-        var bisect = d3.bisector(function (d) { return d.date; }).left
-        var idx = bisect(d.values, xDate)
-        return d.key + " - " + d.values[idx].percentage.toString() + "%"
-      })
-  }
+  
 
 })
