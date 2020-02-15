@@ -233,6 +233,7 @@ var candidates = keys
         city.enter().insert("g", ".focus").append("path")
             .attr("class", "line cities")
             .style("stroke", d => z(d.id))
+            .style("opacity",d => z(d.id)=="#a4b1b5"?.3:1)
             .merge(city)
             .transition().duration(speed)
             .attr("d", d => line(d.values))

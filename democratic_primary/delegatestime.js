@@ -242,7 +242,7 @@ d3.csv("time.csv", function (error, data) {
         city.enter().insert("g", ".focus").append("path")
             .attr("class", "line cities")
             .style("stroke", d => z(d.id))
-            .style("stroke-width", 2.5)
+            .style("opacity",d => z(d.id)=="#a4b1b5"?.3:1)
             .style("line-cap", "square")
             .merge(city)
             .transition().duration(speed)

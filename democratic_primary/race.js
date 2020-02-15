@@ -1,6 +1,6 @@
 var marginrace = { top: 20, right: 20, bottom: 40, left: 30 }
 var widthrace = 1000 - marginrace.left - marginrace.right
-var heightrace = 550 - marginrace.top - marginrace.bottom
+var heightrace = 450 - marginrace.top - marginrace.bottom
 
 var delScale = d3.scaleLinear()
     .domain([0, 1990])
@@ -29,7 +29,7 @@ d3.csv("delegatetime.csv", function (error, data) {
     
 
     var svg = d3.select("#race").append("svg")
-        .attr("viewBox", "0 0 1000 550")
+        .attr("viewBox", "0 0 1000 450")
         .append('g')
         .attr("transform", "translate(" + marginrace.left + "," + marginrace.top + ")");
 
@@ -165,7 +165,7 @@ d3.csv("delegatetime.csv", function (error, data) {
 
         rect.enter().append("rect")
             .attr("class", "lineHoverRect")
-            .attr("y", 502.5)
+            .attr("y", 402.5)
             .attr("x", 62.5)
             .attr("width", 75)
             .attr("height", 25)
@@ -234,7 +234,7 @@ d3.csv("delegatetime.csv", function (error, data) {
 
             focus.selectAll(".lineHoverText")
                 .attr("transform",
-                    "translate(" + 100 + "," + 520 + ")").style("font-weight", 700)
+                    "translate(" + 100 + "," + 420 + ")").style("font-weight", 700)
                 .text(e => d[e]);
 
 
@@ -247,7 +247,7 @@ d3.csv("delegatetime.csv", function (error, data) {
 
     var svgLegend = svg.append('g')
         .attr('class', 'gLegend')
-        .attr("transform", "translate(100,390)")
+        .attr("transform", "translate(100,290)")
 
     var legend = svgLegend.selectAll('.legend')
         .data(cands)
