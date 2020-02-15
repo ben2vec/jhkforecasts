@@ -9,15 +9,22 @@ var demScale = d3.scaleLinear()
 var demScale = d3.scaleLinear()
   .domain([0, 50])
   .range(["white", "#0091FF"]);
-  var racetype = keyState == "Iowa" || "Nevada" || "Wyoming" ? " Caucus" : " Primary"
-  d3.csv("delegates.csv", function (error, data) {
-    var data = data.filter(function (d) { return d.state == keyState; });
-    console.log(data[0].date)
-    document.getElementById("primarydate").innerHTML = racetype+" - "+data[0].date;
-  })
+var racetype = keyState == "Iowa" || "Nevada" || "Wyoming" ? " Caucus" : " Primary"
+d3.csv("delegates.csv", function (error, data) {
+  var data = data.filter(function (d) { return d.state == keyState; });
+  console.log(data[0].date)
+  document.getElementById("primarydate").innerHTML = racetype + " - " + data[0].date;
+})
+
+var parseTime = d3.timeParse("%Y-%m-%d %H:%M:%S"),
+        formatDate = d3.timeFormat("%m - %d"),
+        formatMonth = d3.timeFormat("%Y-%m-%d"),
+        bisectDate = d3.bisector(d => d.date).left,
+        formatValue = d3.format("0.0%");
+
 d3.csv("polls.csv", function (error, data) {
 
-  
+
 
   var data = data.filter(function (d) { return d.State == keyState; })
 
@@ -27,7 +34,7 @@ d3.csv("polls.csv", function (error, data) {
       Pollster: d.Pollster,
       Grade: d.Grade,
       Sample: d.Sample,
-      Date: d.Date,
+      Date: parseTime(d.Date),
       weight: d.weight,
       Biden: +d.Biden,
       Bloomberg: +d.Bloomberg,
@@ -42,15 +49,15 @@ d3.csv("polls.csv", function (error, data) {
     }
   })
 
-  
+
   console.log(data.length)
 
-  var svgHeight = data.length*50 +60
+  var svgHeight = data.length * 50 + 60
 
   console.log(svgHeight)
 
   var svg = d3.select("#polls").append("svg")
-    .attr("viewBox", "-50 0 1050 " + svgHeight )
+    .attr("viewBox", "-50 0 1050 " + svgHeight)
     .append('g')
 
   var maxweight = d3.max(data, d => d.weight)
@@ -58,7 +65,7 @@ d3.csv("polls.csv", function (error, data) {
   console.log(maxweight);
 
   var weightScale = d3.scaleLinear()
-    .domain([0, 50 ])
+    .domain([0, 50])
     .range(["white", "#a4b1b5"]);
 
 
@@ -85,7 +92,7 @@ d3.csv("polls.csv", function (error, data) {
     .attr("font-weight", 500)
     .text(d => d.Pollster)
     .attr("text-anchor", "start")
-    .call(wrap,275)
+    .call(wrap, 275)
 
   legend.append("rect")
     .attr("x", 275)
@@ -112,7 +119,7 @@ d3.csv("polls.csv", function (error, data) {
     .style("fill", "Black")
     .style("font-size", 10)
     .attr("font-weight", 700)
-    .text(d => d.Date)
+    .text(d => formatDate(d.Date))
     .attr("text-anchor", "middle")
 
   legend.append("text")
@@ -138,7 +145,7 @@ d3.csv("polls.csv", function (error, data) {
     .style("fill", "Black")
     .style("font-size", 10)
     .attr("font-weight", 700)
-    .text(d => d.weight ==0 ? "-":d.weight)
+    .text(d => d.weight == 0 ? "-" : d.weight)
     .attr("text-anchor", "middle")
 
 
@@ -414,27 +421,27 @@ d3.csv("polls.csv", function (error, data) {
     .attr("stroke-width", 2)
     .attr("stroke", "black")
 
-    function wrap(text, width) {
-      text.each(function() {
-        var text = d3.select(this),
-            words = text.text().split(/\s+/).reverse(),
-            word,
-            line = [],
-            lineNumber = 0,
-            lineHeight = 10, // ems
-            y = text.attr("y"),
-            dy = parseFloat(text.attr("dy")),
-            tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em");
-        while (word = words.pop()) {
-          line.push(word);
+  function wrap(text, width) {
+    text.each(function () {
+      var text = d3.select(this),
+        words = text.text().split(/\s+/).reverse(),
+        word,
+        line = [],
+        lineNumber = 0,
+        lineHeight = 10, // ems
+        y = text.attr("y"),
+        dy = parseFloat(text.attr("dy")),
+        tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em");
+      while (word = words.pop()) {
+        line.push(word);
+        tspan.text(line.join(" "));
+        if (tspan.node().getComputedTextLength() > width) {
+          line.pop();
           tspan.text(line.join(" "));
-          if (tspan.node().getComputedTextLength() > width) {
-            line.pop();
-            tspan.text(line.join(" "));
-            line = [word];
-            tspan = text.append("tspan").attr("x", 0).attr("y",10).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
-          }
+          line = [word];
+          tspan = text.append("tspan").attr("x", 0).attr("y", 10).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
         }
-      });
-    }
+      }
+    });
+  }
 });
