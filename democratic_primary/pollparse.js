@@ -1,5 +1,5 @@
 var month = 2
-var day = 3
+var day = 15
 var year = 2020
 
 var simulation_date = new Date(year, month-1, day)
