@@ -92,25 +92,91 @@
     </tbody>
   </table>
 </div>
-
 <script>
+  var keyState = "Iowa"
+</script>
+<div id="pollsters"></div>
+<script>
+
   var parseTime = d3.timeParse("%Y-%m-%d");
 
   d3.csv("poll_accuracy.csv", function (data) {
 
-data.forEach(d=>{
-  d.date = parseTime(d.date)
-  return d;
-})
+    var data = data.filter(function (d) { return d.State == keyState; });
+    var data = data.filter(function (d) { return d.type != "forecast"; });
+
+    var data = data.map(d => {
+      return {
+        name: d.name,
+        date: parseTime(d.Date),
+        first: d.first,
+        second: d.second,
+        third: d.third,
+        fourth: d.fourth,
+        fifth: d.fifth,
+        RMSE: d.RMSE,
+      }
+    })
+
+    data.sort((a, b) => a.RMSE - b.RMSE)
+
+    var topline = data.slice(0, 2)
+    
+    var height =  data.length * 30 +50
+   
+    var data = data.splice(2,data.length+1)
+
+    var color_scale = d3.scaleLinear()
+    .domain([0,d3.max(data,d=>d.RMSE)])
+    .range(["white","#FF6060"])
+
+    var svg = d3.select("#pollsters").append("svg")
+     .attr("viewBox","0 0 1000 "+height)
+
+      svg.selectAll("topline")
+      .data(data)
+      .enter()
+      .append("text")
+      .text(d=>d.name)
+      .attr("x",30)
+      .attr("y",(d,i)=> i*30 + 100)
+      .attr("font-size",15)
+      .attr("fill","black")
+
+      svg.selectAll("topline")
+      .data(data)
+      .enter()
+      .append("text")
+      .text(d=>d.first)
+      .attr("x",400)
+      .attr("y",(d,i)=> i*30 + 100)
+      .attr("font-size",15)
+      .attr("fill","black")
+      .attr("text-anchor","middle")
+      
+      svg.selectAll("topline")
+      .data(data)
+      .enter()
+      .append("text")
+      .text(d=>d.second)
+      .attr("x",500)
+      .attr("y",(d,i)=> i*30 + 100)
+      .attr("font-size",15)
+      .attr("fill","black")
+      .attr("text-anchor","middle")
+
+      svg.selectAll("topline")
+      .data(data)
+      .enter()
+      .append("text")
+      .text(d=>d.third)
+      .attr("x",600)
+      .attr("y",(d,i)=> i*30 + 100)
+      .attr("font-size",15)
+      .attr("fill","black")
+      .attr("text-anchor","middle")
 
 
-console.log(data)
-
-  var svg = d3.select("#pollsters").append("svg")
-    .attr("width", 1000)
-    .attr("height", 550)
-
-  
 
 
 
