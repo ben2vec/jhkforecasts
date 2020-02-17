@@ -43,15 +43,16 @@ svg.append("rect")
 
     repeat.append("a").attr("xlink:href",d=>d.candidate).append("image")
     .attr("xlink:href",  d=>d.candidate+".jpg")
-    .attr("x", 120)
-    .attr("y", -180)
+    .attr("x", 100)
+    .attr("y", -170)
     .attr("height", 100)
-    .attr("width", 60)
+    .attr("width", 100)
+
     .attr("anchor","middle").on('mouseover', function(d) {
                                   
       d3.select(this)
-      .attr("x", 100)
-      .attr("width",100)
+      .attr("y", -180)
+      
       
 
         
@@ -60,8 +61,8 @@ svg.append("rect")
       function(d) {
       
         d3.select(this)
-        .attr("x", 120)
-        .attr("width",60)
+        .attr("y", -170)
+        
         
 
       });;
