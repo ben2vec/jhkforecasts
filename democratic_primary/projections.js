@@ -98,7 +98,7 @@ console.log(svg_height)
     .text(d => d.candidate)
 
   legend.append("image")
-    .attr("xlink:href", d => d.candidate + ".jpg")
+    .attr("xlink:href", d => "https://raw.githubusercontent.com/jhkersting/home/master/" + d.candidate + "-01.png")
     .attr("y", 0)
     .attr("x", 100)
     .attr("height", 60)

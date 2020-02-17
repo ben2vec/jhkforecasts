@@ -375,9 +375,7 @@ d3.csv("time.csv", function (error, data) {
         .attr("y2", 30)
         .attr("stroke", "grey")
 
-    var results = final_results[0]
-
-        console.log(results)
+    
 
     
     
