@@ -210,6 +210,8 @@ d3.csv("https://raw.githubusercontent.com/jhkersting/jhkforecasts/master/democra
     .attr("text-anchor","middle")
 })
 
+var forecasts = ["JHK Forecasts","RealClearPolitics","Lean Tossup","#10at10","FiveThirtyEight Polling Avg","FiveThirtyEight Forecast"]
+var forecastslinks = ["https://projects.jhkforecasts.com/democratic_primary/","https://www.realclearpolitics.com/epolls/2020/president/us/2020_democratic_presidential_nomination-6730.html","https://leantossup.ca/2020-democratic-presidential-primary/","https://twitter.com/djjohnso","https://projects.fivethirtyeight.com/polls/president-primary-d/national/","https://projects.fivethirtyeight.com/2020-primary-forecast/"]
 
 d3.csv("https://raw.githubusercontent.com/jhkersting/jhkforecasts/master/democratic_primary/poll_accuracy.csv", function (data) {
 
@@ -226,6 +228,7 @@ d3.csv("https://raw.githubusercontent.com/jhkersting/jhkforecasts/master/democra
       fourth: d.fourth,
       fifth: d.fifth,
       RMSE: d.RMSE,
+      link: forecastslinks[forecasts.indexOf(d.name)]
     }
   })
   console.log(data)
@@ -347,6 +350,8 @@ d3.csv("https://raw.githubusercontent.com/jhkersting/jhkforecasts/master/democra
     svg.selectAll("topline")
     .data(data)
     .enter()
+    .append("a")
+    .attr("href",d=>d.link)
     .append("text")
     .text(d=>d.name)
     .attr("x",30)
