@@ -44,6 +44,7 @@ d3.csv("candsoverview.csv", function (error, data) {
         .attr("x", 100)
         .attr("y", 00)
         .attr("height", 300)
+        .attr("width", 300)
 
     var win = data.win+"%"
     var delegates = data.del
