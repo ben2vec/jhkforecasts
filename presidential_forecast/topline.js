@@ -72,6 +72,7 @@ d3.csv("statetoplines.csv", function (error, data) {
             .attr("x", 500)
             .attr("y", 20)
             .attr("fill", "black")
+            .attr("font-family","interstate-mono")
             .attr("font-size", 15)
             .attr("fill", "grey")
             .attr("text-anchor", "middle")
