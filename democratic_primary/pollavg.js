@@ -183,7 +183,7 @@ var startdate = new Date(2018,10,30)
         .rangeRound([height - margin.bottom, margin.top]);
 
     var z = d3.scaleOrdinal()
-        .range(["#00C181", "#FF6060", "#a4b1b5", "#FFE130", "#FF8D32", "#0091FF", "#FF2EF0", "#CD64FF", "#a4b1b5"])
+        .range(["#00C181", "#FF6060", "#a4b1b5", "#FFE130", "#FF8D32", "#0091FF", "#FF2EF0", "#AF0BFF", "#a4b1b5"])
         ;
 
     var line = d3.line()
