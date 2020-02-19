@@ -36,144 +36,18 @@
 </head>
 
 
-<a href="https://jhkforecasts.com">
-  <h1 style="font-weight: 300;text-align: center;">JHK Forecasts</h1>
-</a>
-<!-- <a class="computer" href="https://jhkforecasts.com"><img  style="height: 75px;margin-left: auto;display: block;margin-right: auto;"src="https://raw.githubusercontent.com/jhkersting/jhkforecasts/master/jhk%20forecasts%20logo-01.jpg"/></a>
-    <a class="phone" href="https://jhkforecasts.com"><img  style="height: 50px;margin-left: auto;display: block;margin-right: auto;"src="https://jkstats76.files.wordpress.com/2019/02/cropped-site-icon.png"/></a>
-    <hr>-->
-
-<div id="bigmenu">
-  <table style="border-collapse: collapse; border: none;margin-top: 20px;" cellspacing="0" cellpadding="0" width="100%"
-    height=100px>
-    <tbody>
-      <tr>
-        <td style="width: 33%; border-right: solid grey 1.0pt; " valign="middle" width="33%">
-          <a href="https://projects.jhkforecasts.com/democratic_primary/">
-            <img style="text-align: center;" src="demprimarymenu-01.svg">
-          </a>
-        </td>
-        <td style="width: 33%; border-right: solid grey 1.0pt; border-left: none; " valign="middle" width="33%">
-          <a href="https://projects.jhkforecasts.com/presidential_forecast/">
-            <img style="text-align: center;" src="presforecastmenu-01.svg">
-        </td>
-        <td style="width: 33%; ; " valign="middle" width="33%">
-          <a href="https://projects.jhkforecasts.com/senate_forecast/">
-            <img style="text-align: center;" src="senateforecastmenu-01.svg">
-        </td>
-      </tr>
-    </tbody>
-  </table>
 
 
-</div>
+<h2 id="text"></h2>
 
-
-<div id="smallmenu">
-  <table style="border-collapse: collapse; border: none;margin-top: 20px;" cellspacing="0" cellpadding="0" width="100%">
-    <tbody>
-      <tr>
-        <td style="width: 35%; border-right: solid grey 1.0pt; " valign="top" width="35%">
-          <p style="text-align: center;font-weight: 700;font-size: 13px;"><span style="color: black;"><a
-                href="https://projects.jhkforecasts.com/democratic_primary/"><span style="color: black;">Democratic
-                  Primary</span></a><span></p>
-        </td>
-        <td style="width: 30%; border-right: solid grey 1.0pt; border-left: none; " valign="top" width="30%">
-          <p style="text-align: center;font-weight: 700;font-size: 13px;"><span style="color: black;"><a
-                href="https://projects.jhkforecasts.com/presidential_forecast/"><span
-                  style="color: black;">Presidential</span></a></span></p>
-        </td>
-        <td style="width: 35%; ; " valign="top" width="35%">
-          <p style="text-align: center;font-weight: 700;font-size: 13px;"><span style="color: black;"><a
-                href="https://projects.jhkforecasts.com/senate_forecast/"><span
-                  style="color: black;">Senate</span></a></span></p>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<select id="selectbox"  style="width:20%;font-family: brandon-grotesque;margin-left: 40%;margin-right: 40%;">
+  <option value="vote">Projected Vote Share</option>
+</select>
 <script>
-  var keycand = "Biden"
-</script>
-<div id="histogram"></div>
-<script>
-  var category = ["Biden", "Bloomberg", "Booker", "Buttigieg", "Klobuchar", "Sanders", "Steyer", "Warren", "Yang"]
 
-  var color = d3.scaleOrdinal()
-    .domain(category)
-    .range(["#00C181", "#FF6060", "#a4b1b5", "#FFE130", "#FF8D32", "#0091FF", "#FF2EF0", "#AF0BFF", "#a4b1b5"])
+ var text = "hi" 
+ document.getElementById("text").innerHTML = text
 
-  var candidate_color = color(keycand)
-  d3.csv("histogram.csv", function (data) {
-
-
-    var svg = d3.select("#histogram").append("svg")
-      .attr("viewBox", "0 0 1000 350")
-
-    var output = []
-
-    for (let j = 0; j <= 20; j++) {
-      var candidate = {
-        candidate: keycand,
-        delegates: +data[j].delegates,
-        chance: +data[j][keycand]
-      }
-      output.push(candidate)
-    }
-    console.log(output)
-
-
-    var x = d3.scaleLinear()
-      .domain([0, 4000])
-      .range([50, 950])
-
-    var y = d3.scaleLinear()
-      .domain([0, 100])
-      .range([0, 300])
-
-
-
-    svg.selectAll("bars")
-      .data(output)
-      .enter()
-      .append("rect")
-      .attr("height", d => y(d.chance))
-      .attr("width", 900 / 20)
-      .attr("x", (d, i) => x(d.delegates))
-      .attr("y", d => 300 - y(d.chance))
-      .attr("fill", candidate_color)
-      .attr("stroke", "white")
-      .attr("stroke-width", 2)
-
-
-    var dividers = [0, 1000, 2000, 3000, 4000]
-
-    svg.selectAll("bars")
-      .data(dividers)
-      .enter()
-      .append("text")
-      .text(d => d)
-      .attr("x", d => x(d))
-      .attr("y", 320)
-      .attr("fill", "grey")
-      .attr("text-anchor", "middle")
-
-    svg.append("line")
-      .attr("x1", x(1990))
-      .attr("x2", x(1990))
-      .attr("y1", 100)
-      .attr("y2", 299)
-      .attr("stroke", "grey")
-      .attr("stroke-width",2)
-
-      svg.append("text")
-      .text("1990 Delegates")
-      .attr("x", x(1990)+5)
-      .attr("y", 120)
-      .attr("fill", "grey")
-      .attr("text-anchor", "start")
-
-  })
 </script>
 </body>
 </script>
