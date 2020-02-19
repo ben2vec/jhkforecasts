@@ -1,19 +1,19 @@
-h1{ font-family: brandon-grotesque, sans-serif;
+h1{ font-family: brandon-grotesque, monospace;
   font-weight: inherit;
   font-style: inherit;}  
- h2{ font-family: brandon-grotesque, sans-serif;
+ h2{ font-family: brandon-grotesque, monospace;
    font-weight: inherit;
    font-style: inherit;}
- h3{ font-family: brandon-grotesque, sans-serif;
+ h3{ font-family: brandon-grotesque, monospace;
    font-weight: inherit;
    font-style: inherit;}  
- h4{ font-family: brandon-grotesque, sans-serif;
+ h4{ font-family: brandon-grotesque, monospace;
    font-weight: inherit;
    font-style: inherit;}
- h5{ font-family: brandon-grotesque, sans-serif;
+ h5{ font-family: brandon-grotesque, monospace;
    font-weight: in;
    font-style: inherit;}
-   p{ font-family: brandon-grotesque, sans-serif;
+   p{ font-family: brandon-grotesque, monospace;
     font-weight: inherit;
      font-style: inherit;}
  a{text-decoration:inherit;
@@ -31,10 +31,10 @@ h1{ font-family: brandon-grotesque, sans-serif;
    }
 
   text {
-    font-family: brandon-grotesque, sans-serif;
+    font-family: brandon-grotesque, monospace;
    }
   body {
-    font: 15px sans-serif;
+    font: 15px monospace;
     font-weight:inherit;
   }
   
@@ -70,18 +70,18 @@ h1{ font-family: brandon-grotesque, sans-serif;
     .header {
       margin-top: 60px;
       text-align: inherit;
-      font-family: brandon-grotesque, sans-serif;
+      font-family: brandon-grotesque, monospace;
       font-weight: inherit;
  }
  .dotButtons{
-  font-family: brandon-grotesque, sans-serif;
+  font-family: brandon-grotesque, monospace;
   font-weight: 500;
  }
 
     
     input {
       margin-right: 10px;
-      font-family: brandon-grotesque, sans-serif;
+      font-family: brandon-grotesque, monospace;
       font-weight: 500;
       font-size: 10;
       }
@@ -127,7 +127,7 @@ div.tooltip {
       width: 100px;					
       height: 100px;					
       padding: 2px;				
-      font-family: brandon-grotesque,sans-serif;	
+      font-family: brandon-grotesque,monospace;	
       font-weight: 700 ;	
       background:white;	
       stroke-width: 1;		
@@ -141,7 +141,7 @@ div.tooltip {
 
   .d3-tip {
     line-height: 1;
-    font-family: brandon-grotesque,sans-serif;	
+    font-family: brandon-grotesque,monospace;	
     padding: 0px;
     background:white;
     border-radius: 8px;
