@@ -93,9 +93,91 @@
   </table>
 </div>
 <script>
-  var keyState = "Texas"
+  var keycand = "Biden"
 </script>
-<img src="https://projects.jhkforecasts.com/2020_senate_forecast-01.svg"></img>
+<div id="histogram"></div>
+<script>
+  var category = ["Biden", "Bloomberg", "Booker", "Buttigieg", "Klobuchar", "Sanders", "Steyer", "Warren", "Yang"]
+
+  var color = d3.scaleOrdinal()
+    .domain(category)
+    .range(["#00C181", "#FF6060", "#a4b1b5", "#FFE130", "#FF8D32", "#0091FF", "#FF2EF0", "#AF0BFF", "#a4b1b5"])
+
+  var candidate_color = color(keycand)
+  d3.csv("histogram.csv", function (data) {
+
+
+    var svg = d3.select("#histogram").append("svg")
+      .attr("viewBox", "0 0 1000 350")
+
+    var output = []
+
+    for (let j = 0; j <= 20; j++) {
+      var candidate = {
+        candidate: keycand,
+        delegates: +data[j].delegates,
+        chance: +data[j][keycand]
+      }
+      output.push(candidate)
+    }
+    console.log(output)
+
+
+    var x = d3.scaleLinear()
+      .domain([0, 4000])
+      .range([50, 950])
+
+    var y = d3.scaleLinear()
+      .domain([0, 100])
+      .range([0, 300])
+
+
+
+    svg.selectAll("bars")
+      .data(output)
+      .enter()
+      .append("rect")
+      .attr("height", d => y(d.chance))
+      .attr("width", 900 / 20)
+      .attr("x", (d, i) => x(d.delegates))
+      .attr("y", d => 300 - y(d.chance))
+      .attr("fill", candidate_color)
+      .attr("stroke", "white")
+      .attr("stroke-width", 2)
+
+
+    var dividers = [0, 1000, 2000, 3000, 4000]
+
+    svg.selectAll("bars")
+      .data(dividers)
+      .enter()
+      .append("text")
+      .text(d => d)
+      .attr("x", d => x(d))
+      .attr("y", 320)
+      .attr("fill", "grey")
+      .attr("text-anchor", "middle")
+
+    svg.append("line")
+      .attr("x1", x(1990))
+      .attr("x2", x(1990))
+      .attr("y1", 100)
+      .attr("y2", 299)
+      .attr("stroke", "grey")
+      .attr("stroke-width",2)
+
+      svg.append("text")
+      .text("1990 Delegates")
+      .attr("x", x(1990)+5)
+      .attr("y", 120)
+      .attr("fill", "grey")
+      .attr("text-anchor", "start")
+
+  })
+</script>
+</body>
+</script>
+
 
 
 
