@@ -65,12 +65,12 @@
 
 </select>
 <script>
+var numberformat = d3.format(".1f")
+  d3.csv("manip.csv",(data) =>{
 
-  d3.csv("simulator.csv",(data) =>{
 
-
-    
-  console.log(data)
+    console.log(data)
+  
   update(+d3.select('#biden-slider').property('value'), +d3.select('#bloomberg-slider').property('value'));
 
   function update(biden, bloomberg) {
@@ -78,9 +78,9 @@
     
     var newdata = data.map((d,i)=>{
       return{
-        state: d.state,
-        Biden:+d.Bidenproj == 0 ?0:+d.Bidenproj  + +biden<0?0:+d.Bidenproj  + +biden,
-        Bloomberg: +d.Bloombergproj  == 0 ?0:+d.Bloombergproj  + +bloomberg<0?0:+d.Bloombergproj  + +bloomberg,
+        State: d.State,
+        Biden:+d.Biden == 0 ?0:+d.Biden  + biden<0?0:+d.Biden  + biden,
+        Bloomberg: +d.Bloomberg  == 0 ?0:+d.Bloomberg  + bloomberg<0?0:+d.Bloomberg  + bloomberg,
       }
     })
     
@@ -89,14 +89,14 @@
     console.log(newdata)
     var finaldata = []
     for (let j = 0; j < 57; j++) {
-        var keystate = newdata[j].state
+        var keystate = newdata[j].State
 
-        var dataraw = newdata.filter(function (d) { return d.state == keystate; })
+        var dataraw = newdata.filter(function (d) { return d.State == keystate; })
 
 
 
         
-        var final = [dataraw[0].state,dataraw[0].Biden,dataraw[0].Bloomberg]
+        var final = [dataraw[0].State,numberformat(dataraw[0].Biden),numberformat(dataraw[0].Bloomberg)]
 
         finaldata.push(final)
     }
