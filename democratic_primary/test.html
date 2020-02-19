@@ -7,11 +7,10 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@jhkforecast">
   <meta name="twitter:creator" content="@jhkersting">
-  <meta name="twitter:title" content="Pollster & Forecaster Accurcay - Iowa">
-  <meta name="twitter:description" content="Who Best Predicted Iowa?">
-  <meta name="twitter:image"
-    content="https://jhkforecasts.com/democratic_primary-02.png">
-  <title>Pollster & Forecaster Accurcay - Iowa</title>
+  <meta name="twitter:title" content="Democratic Primary manipulator">
+  <meta name="twitter:description" content="Change the vote fore yourself!">
+  <meta name="twitter:image" content="https://jhkforecasts.com/democratic_primary-02.png">
+  <title>Test</title>
   <script data-ad-client="ca-pub-8025120308040073" async
     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -41,8 +40,30 @@
 
 <table style="border-collapse: collapse;" cellspacing="0" cellpadding="0" width="100%">
   <tbody>
-    <!--Twitter Ratings-->
-    <tr style="height: 40px;"></tr>
+
+    <tr style="height: 100px;">
+      <td style="width: 14%;">
+        <img style="width:95%;margin-left: 2.5%;" src="https://jhkforecasts.com/Biden-01.png" alt="Biden">
+      </td>
+      <td style="width: 14%;">
+        <img style="width:95%;margin-left: 2.5%;" src="https://jhkforecasts.com/Bloomberg-01.png" alt="Bloomberg">
+      </td>
+      <td style="width: 14%;">
+        <img style="width:95%;margin-left: 2.5%;" src="https://jhkforecasts.com/Buttigieg-01.png" alt="Buttigieg">
+      </td>
+      <td style="width: 14%;">
+        <img style="width:95%;margin-left: 2.5%;" src="https://jhkforecasts.com/Klobuchar-01.png" alt="Klobuchar">
+      </td>
+      <td style="width: 14%;">
+        <img style="width:95%;margin-left: 2.5%;" src="https://jhkforecasts.com/Sanders-01.png" alt="Sanders">
+      </td>
+      <td style="width: 14%;">
+        <img style="width:95%;margin-left: 2.5%;" src="https://jhkforecasts.com/Steyer-01.png" alt="Steyer">
+      </td>
+      <td style="width: 14%;">
+        <img style="width:95%;margin-left: 2.5%;" src="https://jhkforecasts.com/Warren-01.png" alt="Warren">
+      </td>
+    </tr>
     <tr>
       <td style="width: 14%;">
         <h1 style="text-align:center;" id="biden-text"></h1>
@@ -50,12 +71,42 @@
       <td style="width: 14%;">
         <h1 style="text-align:center;" id="bloomberg-text"></h1>
       </td>
+      <td style="width: 14%;">
+        <h1 style="text-align:center;" id="buttigieg-text"></h1>
+      </td>
+      <td style="width: 14%;">
+        <h1 style="text-align:center;" id="klobuchar-text"></h1>
+      </td>
+      <td style="width: 14%;">
+        <h1 style="text-align:center;" id="sanders-text"></h1>
+      </td>
+      <td style="width: 14%;">
+        <h1 style="text-align:center;" id="steyer-text"></h1>
+      </td>
+      <td style="width: 14%;">
+        <h1 style="text-align:center;" id="warren-text"></h1>
+      </td>
     </tr>
     <td style="width: 14%;">
-      <input type="range" min="-10" max="10" value="0" class="slider" id="biden-slider">
+      <input type="range" min="0" max="60" value="0" class="slider" id="biden-slider">
     </td>
     <td style="width: 14%;">
-      <input type="range" min="-10" max="10" value="0" class="slider" id="bloomberg-slider">
+      <input type="range" min="0" max="60" value="0" class="slider" id="bloomberg-slider">
+    </td>
+    <td style="width: 14%;">
+      <input type="range" min="0" max="60" value="0" class="slider" id="buttigieg-slider">
+    </td>
+    <td style="width: 14%;">
+      <input type="range" min="0" max="60" value="0" class="slider" id="klobuchar-slider">
+    </td>
+    <td style="width: 14%;">
+      <input type="range" min="0" max="60" value="0" class="slider" id="sanders-slider">
+    </td>
+    <td style="width: 14%;">
+      <input type="range" min="0" max="60" value="0" class="slider" id="steyer-slider">
+    </td>
+    <td style="width: 14%;">
+      <input type="range" min="0" max="60" value="0" class="slider" id="warren-slider">
     </td>
     </tr>
   </tbody>
@@ -65,57 +116,117 @@
 
 </select>
 <script>
-var numberformat = d3.format(".1f")
-  d3.csv("manip.csv",(data) =>{
+  var numberformat = d3.format(".1f")
+  var candidates = ["Biden", "Bloomberg", "Buttigieg", "Klobuchar", "Sanders", "Steyer", "Warren"]
 
+  var color = d3.scaleOrdinal()
+    .domain(candidates)
+    .range(["#00C181", "#FF6060", "#FFE130", "#FF8D32", "#0091FF", "#FF2EF0", "#AF0BFF"])
+  d3.csv("manip.csv", (data) => {
 
-    console.log(data)
-  
-  update(+d3.select('#biden-slider').property('value'), +d3.select('#bloomberg-slider').property('value'));
+    var us = data[57]
 
-  function update(biden, bloomberg) {
-    
-    
-    var newdata = data.map((d,i)=>{
-      return{
-        State: d.State,
-        Biden:+d.Biden == 0 ?0:+d.Biden  + biden<0?0:+d.Biden  + biden,
-        Bloomberg: +d.Bloomberg  == 0 ?0:+d.Bloomberg  + bloomberg<0?0:+d.Bloomberg  + bloomberg,
+    document.getElementById("biden-slider").value = us[candidates[0]]
+    document.getElementById("bloomberg-slider").value = us[candidates[1]]
+    document.getElementById("buttigieg-slider").value = us[candidates[2]]
+    document.getElementById("klobuchar-slider").value = us[candidates[3]]
+    document.getElementById("sanders-slider").value = us[candidates[4]]
+    document.getElementById("steyer-slider").value = us[candidates[5]]
+    document.getElementById("warren-slider").value = us[candidates[6]]
+
+    update(d3.select('#biden-slider').property('value'), d3.select('#bloomberg-slider').property('value'), d3.select('#buttigieg-slider').property('value'), d3.select('#klobuchar-slider').property('value'), d3.select('#sanders-slider').property('value'), d3.select('#steyer-slider').property('value'), d3.select('#warren-slider').property('value'))
+
+    function update(biden, bloomberg, buttigieg, klobuchar, sanders, steyer, warren) {
+      var cands = [biden, bloomberg, buttigieg, klobuchar, sanders, steyer, warren]
+      var change = {
+        [candidates[0]]: biden / us[candidates[0]],
+        [candidates[1]]: bloomberg / us[candidates[1]],
+        [candidates[2]]: buttigieg / us[candidates[2]],
+        [candidates[3]]: klobuchar / us[candidates[3]],
+        [candidates[4]]: sanders / us[candidates[4]],
+        [candidates[5]]: steyer / us[candidates[5]],
+        [candidates[6]]: warren / us[candidates[6]],
+        [candidates[0] + "change"]: biden - us[candidates[0]],
+        [candidates[1] + "change"]: bloomberg - us[candidates[1]],
+        [candidates[2] + "change"]: buttigieg - us[candidates[2]],
+        [candidates[3] + "change"]: klobuchar - us[candidates[3]],
+        [candidates[4] + "change"]: sanders - us[candidates[4]],
+        [candidates[5] + "change"]: steyer - us[candidates[5]],
+        [candidates[6] + "change"]: warren - us[candidates[6]],
       }
-    })
-    
+      document.getElementById("biden-text").innerHTML = cands[0]
+      document.getElementById("bloomberg-text").innerHTML = cands[1]
+      document.getElementById("buttigieg-text").innerHTML = cands[2]
+      document.getElementById("klobuchar-text").innerHTML = cands[3]
+      document.getElementById("sanders-text").innerHTML = cands[4]
+      document.getElementById("steyer-text").innerHTML = cands[5]
+      document.getElementById("warren-text").innerHTML = cands[6]
+
+      var newdata = data.map((d, i) => {
+        return {
+          State: d.State,
+          [candidates[0]]: d[candidates[0] + "res"] != "" ? d[candidates[0] + "res"] : +d[candidates[0]] == 0 ? 0 : ((+d[candidates[0]] * change[candidates[0]]) + (+d[candidates[0]] + change[candidates[0] + "change"])) / 2 > 90 ? 90 : ((+d[candidates[0]] * change[candidates[0]]) + (+d[candidates[0]] + change[candidates[0] + "change"])) / 2 < 0 ? 0 : ((+d[candidates[0]] * change[candidates[0]]) + (+d[candidates[0]] + change[candidates[0] + "change"])) / 2,
+          [candidates[1]]: d[candidates[1] + "res"] != "" ? d[candidates[1] + "res"] : +d[candidates[1]] == 0 ? 0 : ((+d[candidates[1]] * change[candidates[1]]) + (+d[candidates[1]] + change[candidates[1] + "change"])) / 2 > 90 ? 90 : ((+d[candidates[1]] * change[candidates[1]]) + (+d[candidates[1]] + change[candidates[1] + "change"])) / 2< 0 ? 0 : ((+d[candidates[1]] * change[candidates[1]]) + (+d[candidates[1]] + change[candidates[1] + "change"])) / 2,
+          [candidates[2]]: d[candidates[2] + "res"] != "" ? d[candidates[2] + "res"] : +d[candidates[2]] == 0 ? 0 : ((+d[candidates[2]] * change[candidates[2]]) + (+d[candidates[2]] + change[candidates[2] + "change"])) / 2 > 90 ? 90 : ((+d[candidates[2]] * change[candidates[2]]) + (+d[candidates[2]] + change[candidates[2] + "change"])) / 2< 0 ? 0 : ((+d[candidates[2]] * change[candidates[2]]) + (+d[candidates[2]] + change[candidates[2] + "change"])) / 2,
+          [candidates[3]]: d[candidates[3] + "res"] != "" ? d[candidates[3] + "res"] : +d[candidates[3]] == 0 ? 0 : ((+d[candidates[3]] * change[candidates[3]]) + (+d[candidates[3]] + change[candidates[3] + "change"])) / 2 > 90 ? 90 : ((+d[candidates[3]] * change[candidates[3]]) + (+d[candidates[3]] + change[candidates[3] + "change"])) / 2< 0 ? 0 : ((+d[candidates[3]] * change[candidates[3]]) + (+d[candidates[3]] + change[candidates[3] + "change"])) / 2,
+          [candidates[4]]: d[candidates[4] + "res"] != "" ? d[candidates[4] + "res"] : +d[candidates[4]] == 0 ? 0 : ((+d[candidates[4]] * change[candidates[4]]) + (+d[candidates[4]] + change[candidates[4] + "change"])) / 2 > 90 ? 90 : ((+d[candidates[4]] * change[candidates[4]]) + (+d[candidates[4]] + change[candidates[4] + "change"])) / 2< 0 ? 0 : ((+d[candidates[4]] * change[candidates[4]]) + (+d[candidates[4]] + change[candidates[4] + "change"])) / 2,
+          [candidates[5]]: d[candidates[5] + "res"] != "" ? d[candidates[5] + "res"] : +d[candidates[5]] == 0 ? 0 : ((+d[candidates[5]] * change[candidates[5]]) + (+d[candidates[5]] + change[candidates[5] + "change"])) / 2 > 90 ? 90 : ((+d[candidates[5]] * change[candidates[5]]) + (+d[candidates[5]] + change[candidates[5] + "change"])) / 2< 0 ? 0 : ((+d[candidates[5]] * change[candidates[5]]) + (+d[candidates[5]] + change[candidates[5] + "change"])) / 2,
+          [candidates[6]]: d[candidates[6] + "res"] != "" ? d[candidates[6] + "res"] : +d[candidates[6]] == 0 ? 0 : ((+d[candidates[6]] * change[candidates[6]]) + (+d[candidates[6]] + change[candidates[6] + "change"])) / 2 > 90 ? 90 : ((+d[candidates[6]] * change[candidates[6]]) + (+d[candidates[6]] + change[candidates[6] + "change"])) / 2< 0 ? 0 : ((+d[candidates[6]] * change[candidates[6]]) + (+d[candidates[6]] + change[candidates[6] + "change"])) / 2,
+        }
+      })
 
 
-    console.log(newdata)
-    var finaldata = []
-    for (let j = 0; j < 57; j++) {
+
+      var finaldata = []
+      for (let j = 0; j < 57; j++) {
         var keystate = newdata[j].State
 
         var dataraw = newdata.filter(function (d) { return d.State == keystate; })
 
 
 
-        
-        var final = [dataraw[0].State,numberformat(dataraw[0].Biden),numberformat(dataraw[0].Bloomberg)]
 
+        var final = [dataraw[0].State, numberformat(dataraw[0].Biden), numberformat(dataraw[0].Bloomberg), numberformat(dataraw[0].Buttigieg), numberformat(dataraw[0].Klobuchar), numberformat(dataraw[0].Sanders), numberformat(dataraw[0].Steyer), numberformat(dataraw[0].Warren)]
+        var final = final.join("     ")
         finaldata.push(final)
+      }
+
+
+
+      document.getElementById("demo").innerHTML = finaldata.join("<br>")
+
+
+
+      var bi = d3.select("#biden-slider")
+        .on("change", function () {
+          update(+this.value, bloomberg, buttigieg, klobuchar, sanders, steyer, warren);
+        })
+
+      var bl = d3.select("#bloomberg-slider")
+        .on("change", function () {
+          update(biden, +this.value, buttigieg, klobuchar, sanders, steyer, warren);
+        })
+      var bu = d3.select("#buttigieg-slider")
+        .on("change", function () {
+          update(biden, bloomberg, +this.value, klobuchar, sanders, steyer, warren);
+        })
+      var kl = d3.select("#klobuchar-slider")
+        .on("change", function () {
+          update(biden, bloomberg, buttigieg, +this.value, sanders, steyer, warren);
+        })
+      var sa = d3.select("#sanders-slider")
+        .on("change", function () {
+          update(biden, bloomberg, buttigieg, klobuchar, +this.value, steyer, warren);
+        })
+      var st = d3.select("#steyer-slider")
+        .on("change", function () {
+          update(biden, bloomberg, buttigieg, klobuchar, sanders, +this.value, warren);
+        })
+      var wa = d3.select("#warren-slider")
+        .on("change", function () {
+          update(biden, bloomberg, buttigieg, klobuchar, sanders, steyer, +this.value);
+        })
     }
-
-
-   
-    document.getElementById("demo").innerHTML = finaldata.join("<br>")
-  }
-
-
-  var biden_slider = d3.select("#biden-slider")
-    .on("change", function () {
-      update(+this.value, 0);
-    })
-
-  var bloomberg_slider = d3.select("#bloomberg-slider")
-    .on("change", function () {
-      update(0, +this.value);
-    })
   })
 
 </script>

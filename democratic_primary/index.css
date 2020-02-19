@@ -1,213 +1,231 @@
-h1{ font-family: brandon-grotesque, sans-serif;
+h1 {
+  font-family: brandon-grotesque, sans-serif;
   font-weight: inherit;
-  font-style: inherit;}  
- h2{ font-family: brandon-grotesque, sans-serif;
-   font-weight: inherit;
-   font-style: inherit;}
- h3{ font-family: brandon-grotesque, sans-serif;
-   font-weight: inherit;
-   font-style: inherit;}  
- h4{ font-family: brandon-grotesque, sans-serif;
-   font-weight: inherit;
-   font-style: inherit;}
- h5{ font-family: brandon-grotesque, sans-serif;
-   font-weight: in;
-   font-style: inherit;}
-   p{ font-family: brandon-grotesque, sans-serif;
-    font-weight: inherit;
-     font-style: inherit;}
- a{text-decoration:inherit;
-  color: inherit;}
+  font-style: inherit;
+}
 
-  a:hover{
-    text-decoration:none ;
-    color: inherit;
-  }
- .center {
-     display: center;
-     margin-left: auto;
-     margin-right: center;
-     box-align: center ;
-   }
+h2 {
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: inherit;
+  font-style: inherit;
+}
 
-  text {
-    font-family: brandon-grotesque, sans-serif;
-   }
-  body {
-    font: 15px sans-serif;
-    font-weight:inherit;
-  }
-  
-  .axis path,
-  .axis line {
-    fill: none;
-    stroke: black;
+h3 {
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: inherit;
+  font-style: inherit;
+}
 
-  }
-  
-  .x.axis path {
-    display: ruby-base-container;
-  }
+h4 {
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: inherit;
+  font-style: inherit;
+}
 
-  .y.axis path {
-    stroke:black;
-  }
-  
-  
+h5 {
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: in;
+  font-style: inherit;
+}
 
+p {
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: inherit;
+  font-style: inherit;
+}
 
-  .line {
-    fill: none;
-    stroke-width: 3px;
-    stroke-linecap: round;
-  }
-  .rect {
-    fill: inherit;
-    stroke-width: 1;
-  }
-  
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
 
-    .header {
-      margin-top: 60px;
-      text-align: inherit;
-      font-family: brandon-grotesque, sans-serif;
-      font-weight: inherit;
- }
- .dotButtons{
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.center {
+  display: center;
+  margin-left: auto;
+  margin-right: center;
+  box-align: center;
+}
+
+text {
+  font-family: brandon-grotesque, sans-serif;
+}
+
+body {
+  font: 15px sans-serif;
+  font-weight: inherit;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: black;
+}
+
+.x.axis path {
+  display: ruby-base-container;
+}
+
+.y.axis path {
+  stroke: black;
+}
+
+.line {
+  fill: none;
+  stroke-width: 3px;
+  stroke-linecap: round;
+}
+
+.rect {
+  fill: inherit;
+  stroke-width: 1;
+}
+
+.header {
+  margin-top: 60px;
+  text-align: inherit;
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: inherit;
+}
+
+.dotButtons {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 500;
- }
+}
 
-    
-    input {
-      margin-right: 10px;
-      font-family: brandon-grotesque, sans-serif;
-      font-weight: 500;
-      font-size: 10;
-      }
-      .form-check-label {
-      font-size: 0.8em;
-      margin-right: 20px;
-    }
-    .radio-toolbar {
-      margin: 10px;
-      display: none;
-    }
-    
-    .radio-toolbar input[type="radio"] {
-      opacity: 0;
-      position: fixed;
-      width: 0;
-    }
-    
-    .radio-toolbar label {
-      border: none;
-      color: black;
-      padding: 10px 10px;
-      font-size: 16px;
-      font-family: brandon-grotesque;
-      border-radius: 10px;
-      cursor: pointer;;
-    }
-    
-    .radio-toolbar label:hover {
-      background-color: #ddd;
-    }
-    
-    
-    
-    .radio-toolbar input[type="radio"]:checked + label {
-        background-color: #e7e7e7;
-        stroke: rgb(0, 0, 0);
-        stroke-width: 1px;
-    }
-div.tooltip {	
-      position: absolute;			
-      text-align: center;			
-      width: 100px;					
-      height: 100px;					
-      padding: 2px;				
-      font-family: brandon-grotesque,sans-serif;	
-      font-weight: 700 ;	
-      background:white;	
-      stroke-width: 1;		
-      stroke: black;
-      border-radius: 8px;			
-      pointer-events: none;			
-  }
-  .MsoNormal{
-    padding-bottom: 7px;
-  }
+input {
+  margin-right: 10px;
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 500;
+  font-size: 10;
+}
 
-  .d3-tip {
-    line-height: 1;
-    font-family: brandon-grotesque,sans-serif;	
-    padding: 0px;
-    background:white;
-    border-radius: 8px;
-    border-color: black;
-    border-width: 1px;
-    border: black;
-    font-size: 12px;
-    stroke-width: 2px;
-  }
-  
-@media only screen and (max-width:850px){
-  #tipDiv{
+.form-check-label {
+  font-size: 0.8em;
+  margin-right: 20px;
+}
+
+.radio-toolbar {
+  margin: 10px;
+  display: none;
+}
+
+.radio-toolbar input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+.radio-toolbar label {
+  border: none;
+  color: black;
+  padding: 10px 10px;
+  font-size: 16px;
+  font-family: brandon-grotesque;
+  border-radius: 10px;
+  cursor: pointer;
+  ;
+}
+
+.radio-toolbar label:hover {
+  background-color: #ddd;
+}
+
+.radio-toolbar input[type="radio"]:checked+label {
+  background-color: #e7e7e7;
+  stroke: rgb(0, 0, 0);
+  stroke-width: 1px;
+}
+
+div.tooltip {
+  position: absolute;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  padding: 2px;
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 700;
+  background: white;
+  stroke-width: 1;
+  stroke: black;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+.MsoNormal {
+  padding-bottom: 7px;
+}
+
+.d3-tip {
+  line-height: 1;
+  font-family: brandon-grotesque, sans-serif;
+  padding: 0px;
+  background: white;
+  border-radius: 8px;
+  border-color: black;
+  border-width: 1px;
+  border: black;
+  font-size: 12px;
+  stroke-width: 2px;
+}
+
+@media only screen and (max-width:850px) {
+  #tipDiv {
     display: none;
   }
-  #bigmenu{
+  #bigmenu {
     display: none;
   }
-  #smallmenu{
+  #smallmenu {
     display: inline;
   }
-  #bigprojected{
+  #bigprojected {
     display: none;
   }
-  #smallprojected{
+  #smallprojected {
     display: inline;
   }
-  .MsoNormal{
-    font-size:10px;
+  .MsoNormal {
+    font-size: 10px;
   }
- 
-
-  .computer{
-    display:none;
+  .computer {
+    display: none;
   }
-  .phone{
-    display:inline;
+  .phone {
+    display: inline;
   }
 }
-@media only screen and (min-width:851px){
 
-  #tipDiv{
+@media only screen and (min-width:851px) {
+  #tipDiv {
     display: inline;
   }
-  #bigmenu{
+  #bigmenu {
     display: inline;
   }
-  #smallmenu{
+  #smallmenu {
     display: none;
   }
-  #bigprojected{
+  #bigprojected {
     display: inline;
   }
-  #smallprojected{
+  #smallprojected {
     display: none;
   }
-  .MsoNormal{
-    font-size:14px;
+  .MsoNormal {
+    font-size: 14px;
   }
- 
-  .computer{
-    display:inline;
+  .computer {
+    display: inline;
   }
-  .phone{
-    display:none;
+  .phone {
+    display: none;
   }
-} 
+}
+
 .pollline {
   fill: none;
   stroke-width: 3px;
@@ -216,31 +234,31 @@ div.tooltip {
 }
 
 /*x-axis styles*/
+
 .c_x_axis text {
   font: 15px brandon-grotesque;
 }
 
-.c_x_axis path,
-.c_x_axis line {
+.c_x_axis path, .c_x_axis line {
   fill: none;
   stroke: #000;
   shape-rendering: crispEdges;
 }
 
 /*y-axis styles*/
+
 .c_y_axis text {
   font: 15px brandon-grotesque;
 }
 
-
-.c_y_axis path,
-.c_y_axis line {
+.c_y_axis path, .c_y_axis line {
   fill: none;
   stroke: #000;
   shape-rendering: crispEdges;
 }
 
 /*y-axis gridline styles*/
+
 .c_y_grid {
   fill: none;
   stroke: grey;
@@ -250,6 +268,7 @@ div.tooltip {
 }
 
 /*Smoothed line styles*/
+
 .c_sline1 {
   fill: none;
   stroke: darkblue;
@@ -258,6 +277,7 @@ div.tooltip {
 }
 
 /* The container must be positioned relative: */
+
 .custom-select {
   margin-left: 40%;
   text-align: center;
@@ -266,13 +286,12 @@ div.tooltip {
   font-size: 15px;
 }
 
-
-
 .select-selected {
   background-color: rgb(130, 183, 236);
 }
 
 /* Style the arrow inside the select element: */
+
 .select-selected:after {
   position: absolute;
   content: "";
@@ -285,13 +304,15 @@ div.tooltip {
 }
 
 /* Point the arrow upwards when the select box is open (active): */
+
 .select-selected.select-arrow-active:after {
   border-color: transparent transparent #fff transparent;
   top: 7px;
 }
 
 /* style the items (options), including the selected item: */
-.select-items div,.select-selected {
+
+.select-items div, .select-selected {
   color: #ffffff;
   padding: 8px 16px;
   border: 1px solid transparent;
@@ -300,6 +321,7 @@ div.tooltip {
 }
 
 /* Style items (options): */
+
 .select-items {
   position: absolute;
   background-color: rgb(130, 183, 236);
@@ -311,12 +333,12 @@ div.tooltip {
 
 /* Hide the items when the select box is closed: */
 
-
 .select-items div:hover, .same-as-selected {
   background-color: rgba(0, 0, 0, 0.1);
 }
-.custom-select{
-  display:none;
+
+.custom-select {
+  display: none;
 }
 
 .y-axis line {
@@ -341,13 +363,16 @@ div.tooltip {
 .hoverCircle {
   opacity: 1;
 }
+
 #win {
   display: none;
 }
+
 #delegates {
   display: none;
 }
-.legend{
+
+.legend {
   position: static;
 }
 
@@ -359,7 +384,6 @@ div.tooltip {
   font-family: brandon-grotesque;
   border-radius: 10px;
   cursor: pointer;
-
 }
 
 .default {
@@ -368,9 +392,11 @@ div.tooltip {
 }
 
 /* Gray */
+
 .default:hover {
   background: #ddd;
 }
+
 .slidecontainer {
   width: 100%;
 }
@@ -387,37 +413,70 @@ div.tooltip {
   margin-left: 2.5%;
 }
 
-.slider:hover {
-  opacity: 1;
-}
-
 #biden-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 25px;
+  width: 10px;
   height: 25px;
-  background: blue;
+  background: #00C181;
   cursor: pointer;
+  opacity: 1;
 }
 
-#biden-slider::-moz-range-thumb {
-  width: 25px;
+#bloomberg-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
   height: 25px;
-  background: blue;
-  cursor: pointer;}
+  background: #FF6060;
+  cursor: pointer;
+  opacity: 1;
+}
 
-  #bloomberg-slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 25px;
-    height: 25px;
-    background: red;
-    cursor: pointer;
-  }
-  
-  #bloomberg-slider::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
-    background: red;
-    cursor: pointer;
+#buttigieg-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 25px;
+  background: #FFE130;
+  cursor: pointer;
+  opacity: 1;
+}
+
+#klobuchar-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 25px;
+  background: #FF8D32;
+  cursor: pointer;
+  opacity: 1;
+}
+
+#sanders-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 25px;
+  background: #0091FF;
+  cursor: pointer;
+  opacity: 1;
+}
+#steyer-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 25px;
+  background: #FF2EF0;
+  cursor: pointer;
+  opacity: 1;
+}
+#warren-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 25px;
+  background: #AF0BFF;
+  cursor: pointer;
+  opacity: 1;
 }
