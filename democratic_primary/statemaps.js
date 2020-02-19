@@ -101,7 +101,7 @@ d3.csv("statemaps.csv", function (data) {
       .attr("xlink:href", function (d) { return d.properties.name })
       .attr("transform", "translate(120,0)" )
       .append("path")
-      .attr("class", "states")
+      .attr("class", d=>d.properties.name)
       .attr("d", path)
       .style("stroke", "#fff")
       .style("stroke-width", "1")
