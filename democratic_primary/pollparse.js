@@ -5,8 +5,8 @@ var year = 2020
 
 var biden_bump = -2
 var bloomberg_bump = 3
-var buttigieg_bump = 0
-var klobuchar_bump = 0
+var buttigieg_bump = 1
+var klobuchar_bump = 1
 var sanders_bump = 1
 var steyer_bump = 0
 var warren_bump = -2
@@ -35,7 +35,7 @@ var entrance = [new Date(2019, 0, 11), new Date(2020, 10, 0), new Date(2019, 0, 
 
 var states_info = [{ "state": "Alabama", "primary_date": "03/03/20", "total_delegates": 52, "voteperc": 0.010912609 }, { "state": "Alaska", "primary_date": "04/04/20", "total_delegates": 15, "voteperc": 0.001741926 }, { "state": "American Samoa", "primary_date": "03/03/20", "total_delegates": 6, "voteperc": 0 }, { "state": "Arizona", "primary_date": "03/17/20", "total_delegates": 67, "voteperc": 0.035812053 }, { "state": "Arkansas", "primary_date": "03/03/20", "total_delegates": 31, "voteperc": 0.005691453 }, { "state": "California", "primary_date": "03/03/20", "total_delegates": 416, "voteperc": 0.130939702 }, { "state": "Colorado", "primary_date": "03/03/20", "total_delegates": 67, "voteperc": 0.0200269 }, { "state": "Connecticut", "primary_date": "04/28/20", "total_delegates": 60, "voteperc": 0.013425937 }, { "state": "Delaware", "primary_date": "04/28/20", "total_delegates": 21, "voteperc": 0.003524164 }, { "state": "Democrats Abroad", "primary_date": "03/03/20", "total_delegates": 13, "voteperc": 0 }, { "state": "District of Columbia", "primary_date": "06/02/20", "total_delegates": 20, "voteperc": 0.004230589 }, { "state": "Florida", "primary_date": "03/17/20", "total_delegates": 219, "voteperc": 0.017368808 }, { "state": "Georgia", "primary_date": "03/24/20", "total_delegates": 105, "voteperc": 0.028090687 }, { "state": "Guam", "primary_date": "05/02/20", "total_delegates": 7, "voteperc": 0 }, { "state": "Hawaii", "primary_date": "04/04/20", "total_delegates": 24, "voteperc": 0.003992172 }, { "state": "Idaho", "primary_date": "03/10/20", "total_delegates": 20, "voteperc": 0.002838517 }, { "state": "Illinois", "primary_date": "03/17/20", "total_delegates": 155, "voteperc": 0.067385695 }, { "state": "Indiana", "primary_date": "05/05/20", "total_delegates": 82, "voteperc": 0.015453563 }, { "state": "Iowa", "primary_date": "02/03/20", "total_delegates": 41, "voteperc": 0.009777621 }, { "state": "Kansas", "primary_date": "05/02/20", "total_delegates": 39, "voteperc": 0.006387167 }, { "state": "Kentucky", "primary_date": "05/19/20", "total_delegates": 54, "voteperc": 0.009406437 }, { "state": "Louisiana", "primary_date": "04/04/20", "total_delegates": 54, "voteperc": 0.011669592 }, { "state": "Maine", "primary_date": "03/03/20", "total_delegates": 24, "voteperc": 0.005351022 }, { "state": "Maryland", "primary_date": "04/28/20", "total_delegates": 96, "voteperc": 0.025099718 }, { "state": "Massachusetts", "primary_date": "03/03/20", "total_delegates": 91, "voteperc": 0.029844265 }, { "state": "Michigan", "primary_date": "03/10/20", "total_delegates": 125, "voteperc": 0.033937434 }, { "state": "Minnesota", "primary_date": "03/03/20", "total_delegates": 75, "voteperc": 0.020458216 }, { "state": "Mississippi", "primary_date": "03/10/20", "total_delegates": 36, "voteperc": 0.00725662 }, { "state": "Missouri", "primary_date": "03/10/20", "total_delegates": 68, "voteperc": 0.016021101 }, { "state": "Montana", "primary_date": "06/02/20", "total_delegates": 19, "voteperc": 0.002658182 }, { "state": "Nebraska", "primary_date": "05/12/20", "total_delegates": 29, "voteperc": 0.004255479 }, { "state": "Nevada", "primary_date": "02/22/20", "total_delegates": 36, "voteperc": 0.008066284 }, { "state": "New Hampshire", "primary_date": "02/11/20", "total_delegates": 24, "voteperc": 0.005213273 }, { "state": "New Jersey", "primary_date": "06/02/20", "total_delegates": 126, "voteperc": 0.032134075 }, { "state": "New Mexico", "primary_date": "06/02/20", "total_delegates": 34, "voteperc": 0.005762354 }, { "state": "New York", "primary_date": "04/28/20", "total_delegates": 274, "voteperc": 0.068150785 }, { "state": "North Carolina", "primary_date": "03/03/20", "total_delegates": 110, "voteperc": 0.032747924 }, { "state": "North Dakota", "primary_date": "03/10/20", "total_delegates": 14, "voteperc": 0.001402438 }, { "state": "Northern Marianas", "primary_date": "03/14/20", "total_delegates": 6, "voteperc": 0 }, { "state": "Ohio", "primary_date": "03/17/20", "total_delegates": 136, "voteperc": 0.046231316 }, { "state": "Oklahoma", "primary_date": "03/03/20", "total_delegates": 37, "voteperc": 0.006287995 }, { "state": "Oregon", "primary_date": "05/19/20", "total_delegates": 61, "voteperc": 0.014989564 }, { "state": "Pennsylvania", "primary_date": "04/28/20", "total_delegates": 186, "voteperc": 0.043773886 }, { "state": "Puerto Rico", "primary_date": "03/29/20", "total_delegates": 51, "voteperc": 0.014958062 }, { "state": "Rhode Island", "primary_date": "04/28/20", "total_delegates": 26, "voteperc": 0.003777285 }, { "state": "South Carolina", "primary_date": "02/29/20", "total_delegates": 54, "voteperc": 0.012794722 }, { "state": "South Dakota", "primary_date": "06/02/20", "total_delegates": 16, "voteperc": 0.001756944 }, { "state": "Tennessee", "primary_date": "03/03/20", "total_delegates": 64, "voteperc": 0.01302391 }, { "state": "Texas", "primary_date": "03/03/20", "total_delegates": 228, "voteperc": 0.058005389 }, { "state": "Utah", "primary_date": "03/03/20", "total_delegates": 29, "voteperc": 0.004647081 }, { "state": "Vermont", "primary_date": "03/03/20", "total_delegates": 16, "voteperc": 0.002671106 }, { "state": "Virgin Islands", "primary_date": "06/06/20", "total_delegates": 7, "voteperc": 0 }, { "state": "Virginia", "primary_date": "03/03/20", "total_delegates": 99, "voteperc": 0.029638996 }, { "state": "Washington", "primary_date": "03/10/20", "total_delegates": 89, "voteperc": 0.026067684 }, { "state": "West Virginia", "primary_date": "05/12/20", "total_delegates": 28, "voteperc": 0.002823992 }, { "state": "Wisconsin", "primary_date": "04/07/20", "total_delegates": 84, "voteperc": 0.020680059 }, { "state": "Wyoming", "primary_date": "04/04/20", "total_delegates": 14, "voteperc": 0.000837248 }]
 var states_demographic = [{ "state": "Alabama", "Biden": 28.29, "Bloomberg": 24.5, "Booker": 24.29, "Buttigieg": 12.17, "Klobuchar": 18.78, "Sanders": 14.78, "Steyer": 21.26, "Warren": 14.49, "Yang": 18.45 }, { "state": "Alaska", "Biden": 26.94, "Bloomberg": 20.55, "Booker": 15.97, "Buttigieg": 19.32, "Klobuchar": 22.64, "Sanders": 22.73, "Steyer": 21.87, "Warren": 20.29, "Yang": 21.46 }, { "state": "American Samoa", "Biden": 20, "Bloomberg": 20, "Booker": 20, "Buttigieg": 16, "Klobuchar": 20, "Sanders": 20, "Steyer": 20, "Warren": 18, "Yang": 20 }, { "state": "Arizona", "Biden": 32.73, "Bloomberg": 20.67, "Booker": 17.36, "Buttigieg": 17.64, "Klobuchar": 21.56, "Sanders": 21.52, "Steyer": 21.05, "Warren": 18.24, "Yang": 20.81 }, { "state": "Arkansas", "Biden": 26.65, "Bloomberg": 25.25, "Booker": 21.14, "Buttigieg": 15.26, "Klobuchar": 21.77, "Sanders": 15.74, "Steyer": 20.81, "Warren": 15.67, "Yang": 19.05 }, { "state": "California", "Biden": 21.29, "Bloomberg": 18.74, "Booker": 18.49, "Buttigieg": 13.77, "Klobuchar": 18.95, "Sanders": 22.28, "Steyer": 20.53, "Warren": 17.9, "Yang": 22.63 }, { "state": "Colorado", "Biden": 17.17, "Bloomberg": 19.81, "Booker": 17.44, "Buttigieg": 16.48, "Klobuchar": 20.58, "Sanders": 27.95, "Steyer": 21.07, "Warren": 18.44, "Yang": 21.25 }, { "state": "Connecticut", "Biden": 17.99, "Bloomberg": 22.58, "Booker": 18.72, "Buttigieg": 19.87, "Klobuchar": 21.11, "Sanders": 21.9, "Steyer": 21.87, "Warren": 21.33, "Yang": 20.07 }, { "state": "Delaware", "Biden": 38.34, "Bloomberg": 23, "Booker": 18.79, "Buttigieg": 20.17, "Klobuchar": 21.37, "Sanders": 21.47, "Steyer": 21.79, "Warren": 20.93, "Yang": 19.89 }, { "state": "Democrats Abroad", "Biden": 20, "Bloomberg": 20, "Booker": 20, "Buttigieg": 16, "Klobuchar": 20, "Sanders": 20, "Steyer": 20, "Warren": 18, "Yang": 20 }, { "state": "District of Columbia", "Biden": 28.55, "Bloomberg": 22.83, "Booker": 26.2, "Buttigieg": 8.98, "Klobuchar": 16.02, "Sanders": 15.52, "Steyer": 21.5, "Warren": 13.88, "Yang": 18.46 }, { "state": "Florida", "Biden": 23, "Bloomberg": 30, "Booker": 21.7, "Buttigieg": 13.07, "Klobuchar": 20.23, "Sanders": 15.83, "Steyer": 20.35, "Warren": 22.06, "Yang": 19.4 }, { "state": "Georgia", "Biden": 28.05, "Bloomberg": 24.3, "Booker": 24.08, "Buttigieg": 12.05, "Klobuchar": 18.73, "Sanders": 14.74, "Steyer": 21.08, "Warren": 14.49, "Yang": 18.45 }, { "state": "Guam", "Biden": 20, "Bloomberg": 20, "Booker": 20, "Buttigieg": 16, "Klobuchar": 20, "Sanders": 20, "Steyer": 20, "Warren": 18, "Yang": 20 }, { "state": "Hawaii", "Biden": 15.37, "Bloomberg": 18.63, "Booker": 17.97, "Buttigieg": 13.52, "Klobuchar": 18.81, "Sanders": 21.92, "Steyer": 20.36, "Warren": 18.32, "Yang": 23.43 }, { "state": "Idaho", "Biden": 21.69, "Bloomberg": 21.16, "Booker": 16.44, "Buttigieg": 19.14, "Klobuchar": 22.65, "Sanders": 31.55, "Steyer": 21.33, "Warren": 14.83, "Yang": 20.67 }, { "state": "Illinois", "Biden": 19.96, "Bloomberg": 20.23, "Booker": 19.36, "Buttigieg": 19.99, "Klobuchar": 22.61, "Sanders": 20.2, "Steyer": 19.8, "Warren": 17.99, "Yang": 19.57 }, { "state": "Indiana", "Biden": 19.31, "Bloomberg": 20.6, "Booker": 18.19, "Buttigieg": 26.33, "Klobuchar": 23.68, "Sanders": 21.01, "Steyer": 19.86, "Warren": 18.92, "Yang": 20.01 }, { "state": "Iowa", "Biden": 18.52, "Bloomberg": 21.14, "Booker": 16.17, "Buttigieg": 23.78, "Klobuchar": 25.81, "Sanders": 25, "Steyer": 24.9, "Warren": 19.89, "Yang": 20.22 }, { "state": "Kansas", "Biden": 18.63, "Bloomberg": 20.9, "Booker": 16.39, "Buttigieg": 23.3, "Klobuchar": 25.5, "Sanders": 26.49, "Steyer": 19.89, "Warren": 19.67, "Yang": 20.1 }, { "state": "Kentucky", "Biden": 20.54, "Bloomberg": 25.33, "Booker": 19.81, "Buttigieg": 16.8, "Klobuchar": 22.89, "Sanders": 24, "Steyer": 21.21, "Warren": 17.58, "Yang": 20.13 }, { "state": "Louisiana", "Biden": 28.88, "Bloomberg": 24.6, "Booker": 25.08, "Buttigieg": 11.44, "Klobuchar": 18.17, "Sanders": 14.71, "Steyer": 21.2, "Warren": 13.71, "Yang": 18.25 }, { "state": "Maine", "Biden": 17.51, "Bloomberg": 22.82, "Booker": 17.48, "Buttigieg": 21.17, "Klobuchar": 22.4, "Sanders": 22.2, "Steyer": 21.85, "Warren": 21.7, "Yang": 20.24 }, { "state": "Maryland", "Biden": 25.41, "Bloomberg": 22.24, "Booker": 22.48, "Buttigieg": 16.47, "Klobuchar": 18.06, "Sanders": 20.34, "Steyer": 22.13, "Warren": 19.13, "Yang": 19.01 }, { "state": "Massachusetts", "Biden": 17.06, "Bloomberg": 22.91, "Booker": 17.4, "Buttigieg": 21.12, "Klobuchar": 22.23, "Sanders": 22.43, "Steyer": 21.71, "Warren": 24.07, "Yang": 20.67 }, { "state": "Michigan", "Biden": 19.6, "Bloomberg": 20.87, "Booker": 18.39, "Buttigieg": 21.14, "Klobuchar": 23.69, "Sanders": 20.49, "Steyer": 19.6, "Warren": 18.17, "Yang": 19.76 }, { "state": "Minnesota", "Biden": 18.57, "Bloomberg": 20.76, "Booker": 16.93, "Buttigieg": 22.5, "Klobuchar": 39.7, "Sanders": 21.31, "Steyer": 19.78, "Warren": 19.57, "Yang": 20.24 }, { "state": "Mississippi", "Biden": 29.8, "Bloomberg": 24.39, "Booker": 26.39, "Buttigieg": 10.37, "Klobuchar": 17.17, "Sanders": 14.01, "Steyer": 21.42, "Warren": 13.14, "Yang": 17.76 }, { "state": "Missouri", "Biden": 25.58, "Bloomberg": 30.7, "Booker": 20.27, "Buttigieg": 15.48, "Klobuchar": 21.74, "Sanders": 16.59, "Steyer": 20.93, "Warren": 16.75, "Yang": 19.73 }, { "state": "Montana", "Biden": 28.3, "Bloomberg": 21.88, "Booker": 16.83, "Buttigieg": 19.7, "Klobuchar": 23.17, "Sanders": 21.58, "Steyer": 21.53, "Warren": 18.69, "Yang": 20.88 }, { "state": "Nebraska", "Biden": 19.18, "Bloomberg": 21.34, "Booker": 16.94, "Buttigieg": 23.29, "Klobuchar": 25.34, "Sanders": 25.89, "Steyer": 19.88, "Warren": 19.21, "Yang": 19.92 }, { "state": "Nevada", "Biden": 23.4, "Bloomberg": 19.45, "Booker": 17.97, "Buttigieg": 15.93, "Klobuchar": 20.09, "Sanders": 22.03, "Steyer": 26.29, "Warren": 18.34, "Yang": 21.3 }, { "state": "New Hampshire", "Biden": 17.17, "Bloomberg": 23.28, "Booker": 16.96, "Buttigieg": 21.92, "Klobuchar": 22.84, "Sanders": 22.47, "Steyer": 26.82, "Warren": 22.26, "Yang": 20.54 }, { "state": "New Jersey", "Biden": 23.71, "Bloomberg": 22.89, "Booker": 24.59, "Buttigieg": 19.26, "Klobuchar": 20.6, "Sanders": 21.39, "Steyer": 21.81, "Warren": 20.47, "Yang": 19.85 }, { "state": "New Mexico", "Biden": 16.46, "Bloomberg": 19.55, "Booker": 16.97, "Buttigieg": 16.3, "Klobuchar": 20.68, "Sanders": 22.02, "Steyer": 20.68, "Warren": 18.36, "Yang": 21.76 }, { "state": "New York", "Biden": 28.31, "Bloomberg": 32.07, "Booker": 19.86, "Buttigieg": 18.09, "Klobuchar": 19.83, "Sanders": 21.63, "Steyer": 21.62, "Warren": 20.33, "Yang": 19.99 }, { "state": "North Carolina", "Biden": 26.81, "Bloomberg": 25.15, "Booker": 21.8, "Buttigieg": 14.82, "Klobuchar": 21.13, "Sanders": 15.84, "Steyer": 21.11, "Warren": 15.99, "Yang": 19.39 }, { "state": "North Dakota", "Biden": 18.94, "Bloomberg": 21.5, "Booker": 16.44, "Buttigieg": 23.3, "Klobuchar": 25.71, "Sanders": 28.16, "Steyer": 19.18, "Warren": 18.37, "Yang": 19.54 }, { "state": "Northern Marinas", "Biden": 20, "Bloomberg": 20, "Booker": 20, "Buttigieg": 16, "Klobuchar": 20, "Sanders": 20, "Steyer": 20, "Warren": 18, "Yang": 20 }, { "state": "Ohio", "Biden": 19.39, "Bloomberg": 20.44, "Booker": 17.69, "Buttigieg": 21.19, "Klobuchar": 23.55, "Sanders": 19.88, "Steyer": 19.27, "Warren": 17.86, "Yang": 18.85 }, { "state": "Oklahoma", "Biden": 17.15, "Bloomberg": 25.16, "Booker": 19.47, "Buttigieg": 15.83, "Klobuchar": 22.53, "Sanders": 27.73, "Steyer": 20.04, "Warren": 15.75, "Yang": 19.49 }, { "state": "Oregon", "Biden": 21.88, "Bloomberg": 20.27, "Booker": 16.25, "Buttigieg": 18.34, "Klobuchar": 21.74, "Sanders": 22.6, "Steyer": 21.47, "Warren": 19.59, "Yang": 21.28 }, { "state": "Pennsylvania", "Biden": 24.5, "Bloomberg": 20.35, "Booker": 18.29, "Buttigieg": 21.07, "Klobuchar": 23.65, "Sanders": 20.58, "Steyer": 19.8, "Warren": 18.55, "Yang": 19.65 }, { "state": "Puerto Rico", "Biden": 20, "Bloomberg": 20, "Booker": 20, "Buttigieg": 16, "Klobuchar": 20, "Sanders": 20, "Steyer": 20, "Warren": 18, "Yang": 20 }, { "state": "Rhode Island", "Biden": 17.7, "Bloomberg": 23.08, "Booker": 18.13, "Buttigieg": 20.52, "Klobuchar": 21.68, "Sanders": 21.74, "Steyer": 21.58, "Warren": 21.2, "Yang": 20.25 }, { "state": "South Carolina", "Biden": 26.12, "Bloomberg": 24.44, "Booker": 25.12, "Buttigieg": 11.54, "Klobuchar": 18.25, "Sanders": 14.43, "Steyer": 26.38, "Warren": 13.88, "Yang": 17.89 }, { "state": "South Dakota", "Biden": 18.58, "Bloomberg": 21.11, "Booker": 16.39, "Buttigieg": 22.94, "Klobuchar": 25.26, "Sanders": 24.79, "Steyer": 19.32, "Warren": 18.77, "Yang": 19.93 }, { "state": "Tennessee", "Biden": 26.96, "Bloomberg": 25.21, "Booker": 21.93, "Buttigieg": 15.06, "Klobuchar": 21.29, "Sanders": 16.17, "Steyer": 21.42, "Warren": 16.42, "Yang": 19.55 }, { "state": "Texas", "Biden": 25, "Bloomberg": 23.2, "Booker": 21.28, "Buttigieg": 12.21, "Klobuchar": 19.92, "Sanders": 19, "Steyer": 19.95, "Warren": 20.38, "Yang": 20.34 }, { "state": "Utah", "Biden": 17.77, "Bloomberg": 21.47, "Booker": 16.63, "Buttigieg": 19.36, "Klobuchar": 22.39, "Sanders": 25.35, "Steyer": 21.65, "Warren": 19.32, "Yang": 21.07 }, { "state": "Vermont", "Biden": 17.11, "Bloomberg": 23.35, "Booker": 16.74, "Buttigieg": 22.56, "Klobuchar": 23.19, "Sanders": 62.41, "Steyer": 22.06, "Warren": 22.84, "Yang": 20.53 }, { "state": "Virgin Islands", "Biden": 20, "Bloomberg": 20, "Booker": 20, "Buttigieg": 16, "Klobuchar": 20, "Sanders": 20, "Steyer": 20, "Warren": 18, "Yang": 20 }, { "state": "Virginia", "Biden": 25.61, "Bloomberg": 24.35, "Booker": 20.94, "Buttigieg": 14.52, "Klobuchar": 23.84, "Sanders": 24.36, "Steyer": 20.86, "Warren": 19.46, "Yang": 20.77 }, { "state": "Washington", "Biden": 16.73, "Bloomberg": 20.07, "Booker": 16.21, "Buttigieg": 18.23, "Klobuchar": 21.64, "Sanders": 22.76, "Steyer": 21.53, "Warren": 19.8, "Yang": 21.34 }, { "state": "West Virginia", "Biden": 25.05, "Bloomberg": 25.85, "Booker": 18.19, "Buttigieg": 17.96, "Klobuchar": 24.22, "Sanders": 28.6, "Steyer": 20.38, "Warren": 10.73, "Yang": 19.59 }, { "state": "Wisconsin", "Biden": 18.66, "Bloomberg": 20.88, "Booker": 16.95, "Buttigieg": 22.56, "Klobuchar": 24.76, "Sanders": 21.21, "Steyer": 19.74, "Warren": 19.45, "Yang": 20.2 }, { "state": "Wyoming", "Biden": 27.94, "Bloomberg": 21.5, "Booker": 16.44, "Buttigieg": 19.3, "Klobuchar": 22.71, "Sanders": 27.16, "Steyer": 21.18, "Warren": 18.37, "Yang": 20.54 }]
-
+console.log(states_demographic)
 var pollster_grade = [
     { Grade: "A+", Value: 1.5 },
     { Grade: "A", Value: 1.35 },
@@ -543,7 +543,7 @@ d3.csv("https://projects.fivethirtyeight.com/polls-page/president_primary_polls.
             Warren: states_demographic[i].Warren / 20 * us_polling_average.Warren,
             Yang: states_demographic[i].Yang / 20 * us_polling_average.Yang,
         }
-
+        //regression[]
 
         var raw = {
             state: res.state,
@@ -719,7 +719,7 @@ d3.csv("https://projects.fivethirtyeight.com/polls-page/president_primary_polls.
             Sandersvote: d.Sanders,
             Steyervote: d.Steyer,
             Warrenvote: d.Warren,
-            Yangvote: d.Yang,
+            Yangvote: 0,
             bi: d.Bidendelegates,
             bl: d.Bloombergdelegates,
             bu: d.Buttigiegdelegates,
@@ -727,12 +727,25 @@ d3.csv("https://projects.fivethirtyeight.com/polls-page/president_primary_polls.
             sa: d.Sandersdelegates,
             st: d.Steyerdelegates,
             wa: d.Warrendelegates,
-            ya: d.Yangdelegates,
+            ya: 0,
             voteperc: d.voteperc,
         }
     })
+    //place results
+    rawvote[0].bi = 6
+    rawvote[0].bl = 0
+    rawvote[0].bu = 14
+    rawvote[0].kl = 1
+    rawvote[0].sa = 12
+    rawvote[0].st = 0
+    rawvote[0].wa = 8
+    rawvote[1].bi = 0
+    rawvote[1].bl = 0
+    rawvote[1].bu = 9
+    rawvote[1].kl = 6
+    rawvote[1].sa = 9
+    rawvote[1].wa = 0
 
-    
 
     var data = data.map((d, k) => {
         return {
@@ -798,7 +811,7 @@ d3.csv("https://projects.fivethirtyeight.com/polls-page/president_primary_polls.
             d.Sandersvoteraw = jStat.normal.inv((Sanderssimulation * 3 + Math.random()) / 4, d.Sandersproj, d.Sandersstd);
             d.Steyervoteraw = jStat.normal.inv((Steyersimulation * 3 + Math.random()) / 4, d.Steyerproj, d.Steyerstd);
             d.Warrenvoteraw = jStat.normal.inv((Warrensimulation * 3 + Math.random()) / 4, d.Warrenproj, d.Warrenstd);
-            d.Yangvoteraw = jStat.normal.inv((Yangsimulation * 3 + Math.random()) / 4, d.Yangproj, d.Yangstd);
+            d.Yangvoteraw = 0//jStat.normal.inv((Yangsimulation * 3 + Math.random()) / 4, d.Yangproj, d.Yangstd);
             d.Bidenvoteraw = d.Bidenvoteraw > 0 ? d.Bidenvoteraw : 0;
             d.Bloombergvoteraw = d.Bloombergvoteraw > 0 ? d.Bloombergvoteraw : 0;
             d.Buttigiegvoteraw = d.Buttigiegvoteraw > 0 ? d.Buttigiegvoteraw : 0;
@@ -806,7 +819,7 @@ d3.csv("https://projects.fivethirtyeight.com/polls-page/president_primary_polls.
             d.Sandersvoteraw = d.Sandersvoteraw > 0 ? d.Sandersvoteraw : 0;
             d.Steyervoteraw = d.Steyervoteraw > 0 ? d.Steyervoteraw : 0;
             d.Warrenvoteraw = d.Warrenvoteraw > 0 ? d.Warrenvoteraw : 0;
-            d.Yangvoteraw = d.Yangvoteraw > 0 ? d.Yangvoteraw : 0;
+            d.Yangvoteraw = 0//d.Yangvoteraw > 0 ? d.Yangvoteraw : 0;
             d.sumvoteraw = d.Bidenvoteraw + d.Bloombergvoteraw + d.Buttigiegvoteraw + d.Klobucharvoteraw + d.Sandersvoteraw + d.Steyervoteraw + d.Warrenvoteraw + d.Yangvoteraw
             d.candsabove0 = (d.Bidenvoteraw > 0 ? 1 : 0) + (d.Bloombergvoteraw > 0 ? 1 : 0) + (d.Buttigiegvoteraw > 0 ? 1 : 0) + (d.Klobucharvoteraw > 0 ? 1 : 0) + (d.Sandersvoteraw > 0 ? 1 : 0) + (d.Steyervoteraw > 0 ? 1 : 0) + (d.Warrenvoteraw > 0 ? 1 : 0) + (d.Yangvoteraw > 0 ? 1 : 0)
             d.sumdistribute = (100 - d.sumvoteraw) / 2
@@ -867,6 +880,56 @@ d3.csv("https://projects.fivethirtyeight.com/polls-page/president_primary_polls.
             d.voteperc = d.voteperc
             return d;
         })
+        //Iowa
+        firstSection[0].Bidenvote = 15
+        firstSection[0].Bloombergvote = 0
+        firstSection[0].Buttigiegvote = 21.3
+        firstSection[0].Klobucharvote = 12.7
+        firstSection[0].SandersVote = 25
+        firstSection[0].Steyervote = 1.7
+        firstSection[0].Warrenvote = 18.4
+        firstSection[0].Yangvote = 5
+        firstSection[0].Bidendelegates = 6
+        firstSection[0].Bloombergdelegates = 0
+        firstSection[0].Buttigiegdelegates = 14
+        firstSection[0].Klobuchardelegates = 1
+        firstSection[0].SandersVote = 12
+        firstSection[0].Steyerdelegates = 0
+        firstSection[0].Warrendelegates = 8
+        firstSection[0].Yangdelegates = 0
+        rawvote[0].bi = 6
+        rawvote[0].bl = 0
+        rawvote[0].bu = 14
+        rawvote[0].kl = 1
+        rawvote[0].sa = 12
+        rawvote[0].st = 0
+        rawvote[0].wa = 8
+    
+        //New Hampshire
+        firstSection[1].Bidenvote = 8.7
+        firstSection[1].Bloombergvote = 0
+        firstSection[1].Buttigiegvote = 24.2
+        firstSection[1].Klobucharvote = 19.8
+        firstSection[1].SandersVote = 25.9
+        firstSection[1].Steyervote = 3.6
+        firstSection[1].Warrenvote = 9.3
+        firstSection[1].Yangvote = 2.8
+        firstSection[1].Bidendelegates = 0
+        firstSection[1].Bloombergdelegates = 0
+        firstSection[1].Buttigiegdelegates = 9
+        firstSection[1].Klobuchardelegates = 6
+        firstSection[1].SandersVote = 9
+        firstSection[1].Steyerdelegates = 0
+        firstSection[1].Warrendelegates = 0
+        firstSection[1].Yangdelegates = 0
+        rawvote[1].bi = 0
+        rawvote[1].bl = 0
+        rawvote[1].bu = 9
+        rawvote[1].kl = 6
+        rawvote[1].sa = 9
+        rawvote[1].wa = 0
+
+
 
         var firstSectionResults = [{ Candidate: "Biden", Delegates: d3.sum(firstSection, d => d.Bidendelegates) },
         { Candidate: "Bloomberg", Delegates: d3.sum(firstSection, d => d.Bloombergdelegates) },
@@ -879,26 +942,11 @@ d3.csv("https://projects.fivethirtyeight.com/polls-page/president_primary_polls.
         ]
 
         firstSectionResults.forEach(function (d) {
-            d.dropOut = d.Delegates == 0 ? Math.random() < .4 ? 1 : 0 : 0;
+            d.dropOut = 0 ;
             return d;
         })
-        Bidenbump = 0
-        Bloombergbump = 0
-        Buttigiegbump = 0
-        Klobucharbump = 0
-        Sandersbump = 0
-        Steyerbump = 0
-        Warrenbump = 0
-        Yangbump = 0
 
-        //Bidenbump = firstSection[1].Bidenwin * 3 + firstSection[1].Bidenwin * 3
-        //Bloombergbump = 2
-        //Buttigiegbump = firstSection[1].Buttigiegwin * 3 + firstSection[1].Buttigiegwin * 1
-        //Klobucharbump = firstSection[1].Klobucharwin * 5 + firstSection[1].Klobucharwin * 5
-        //Sandersbump = firstSection[1].Sanderswin * 4 + firstSection[1].Sanderswin * 4
-        //Steyerbump = firstSection[1].Steyerwin * 4 + firstSection[1].Steyerwin * 2
-        //Warrenbump = firstSection[1].Warrenwin * 3 + firstSection[1].Warrenwin * 2
-        //Yangbump = firstSection[1].Yangwin * 3 + firstSection[1].Yangwin * 3
+        firstSectionResults[7].dropOut = 1
 
 
 
@@ -942,7 +990,7 @@ d3.csv("https://projects.fivethirtyeight.com/polls-page/president_primary_polls.
             d.Sandersvoteraw = firstSectionResults[4].dropOut == 1 ? 0 : jStat.normal.inv((Sanderssimulation * 3 + Math.random()) / 4, d.Sandersproj, d.Sandersstd);
             d.Steyervoteraw = firstSectionResults[5].dropOut == 1 ? 0 : jStat.normal.inv((Steyersimulation * 3 + Math.random()) / 4, d.Steyerproj, d.Steyerstd);
             d.Warrenvoteraw = firstSectionResults[6].dropOut == 1 ? 0 : jStat.normal.inv((Warrensimulation * 3 + Math.random()) / 4, d.Warrenproj, d.Warrenstd);
-            d.Yangvoteraw = firstSectionResults[7].dropOut == 1 ? 0 : jStat.normal.inv((Yangsimulation * 3 + Math.random()) / 4, d.Yangproj, d.Yangstd);
+            d.Yangvoteraw = 0//firstSectionResults[7].dropOut == 1 ? 0 : jStat.normal.inv((Yangsimulation * 3 + Math.random()) / 4, d.Yangproj, d.Yangstd);
             d.Bidenvoteraw = d.Bidenvoteraw > 0 ? d.Bidenvoteraw : 0;
             d.Bloombergvoteraw = d.Bloombergvoteraw > 0 ? d.Bloombergvoteraw : 0;
             d.Buttigiegvoteraw = d.Buttigiegvoteraw > 0 ? d.Buttigiegvoteraw : 0;
@@ -950,7 +998,7 @@ d3.csv("https://projects.fivethirtyeight.com/polls-page/president_primary_polls.
             d.Sandersvoteraw = d.Sandersvoteraw > 0 ? d.Sandersvoteraw : 0;
             d.Steyervoteraw = d.Steyervoteraw > 0 ? d.Steyervoteraw : 0;
             d.Warrenvoteraw = d.Warrenvoteraw > 0 ? d.Warrenvoteraw : 0;
-            d.Yangvoteraw = d.Yangvoteraw > 0 ? d.Yangvoteraw : 0;
+            d.Yangvoteraw = 0//d.Yangvoteraw > 0 ? d.Yangvoteraw : 0;
             d.sumvoteraw = d.Bidenvoteraw + d.Bloombergvoteraw + d.Buttigiegvoteraw + d.Klobucharvoteraw + d.Sandersvoteraw + d.Steyervoteraw + d.Warrenvoteraw + d.Yangvoteraw
             d.candsabove0 = (d.Bidenvoteraw > 0 ? 1 : 0) + (d.Bloombergvoteraw > 0 ? 1 : 0) + (d.Buttigiegvoteraw > 0 ? 1 : 0) + (d.Klobucharvoteraw > 0 ? 1 : 0) + (d.Sandersvoteraw > 0 ? 1 : 0) + (d.Steyervoteraw > 0 ? 1 : 0) + (d.Warrenvoteraw > 0 ? 1 : 0) + (d.Yangvoteraw > 0 ? 1 : 0)
             d.sumdistribute = (100 - d.sumvoteraw) / 2
@@ -1037,7 +1085,7 @@ d3.csv("https://projects.fivethirtyeight.com/polls-page/president_primary_polls.
             d.Sandersvoteraw = secondSectionResults[4].dropOut == 1 ? 0 : jStat.normal.inv((Sanderssimulation * 3 + Math.random()) / 4, d.Sandersproj, d.Sandersstd);
             d.Steyervoteraw = secondSectionResults[5].dropOut == 1 ? 0 : jStat.normal.inv((Steyersimulation * 3 + Math.random()) / 4, d.Steyerproj, d.Steyerstd);
             d.Warrenvoteraw = secondSectionResults[6].dropOut == 1 ? 0 : jStat.normal.inv((Warrensimulation * 3 + Math.random()) / 4, d.Warrenproj, d.Warrenstd);
-            d.Yangvoteraw = secondSectionResults[7].dropOut == 1 ? 0 : jStat.normal.inv((Yangsimulation * 3 + Math.random()) / 4, d.Yangproj, d.Yangstd);
+            d.Yangvoteraw = 0//secondSectionResults[7].dropOut == 1 ? 0 : jStat.normal.inv((Yangsimulation * 3 + Math.random()) / 4, d.Yangproj, d.Yangstd);
             d.Bidenvoteraw = d.Bidenvoteraw > 0 ? d.Bidenvoteraw : 0;
             d.Bloombergvoteraw = d.Bloombergvoteraw > 0 ? d.Bloombergvoteraw : 0;
             d.Buttigiegvoteraw = d.Buttigiegvoteraw > 0 ? d.Buttigiegvoteraw : 0;
@@ -1045,7 +1093,7 @@ d3.csv("https://projects.fivethirtyeight.com/polls-page/president_primary_polls.
             d.Sandersvoteraw = d.Sandersvoteraw > 0 ? d.Sandersvoteraw : 0;
             d.Steyervoteraw = d.Steyervoteraw > 0 ? d.Steyervoteraw : 0;
             d.Warrenvoteraw = d.Warrenvoteraw > 0 ? d.Warrenvoteraw : 0;
-            d.Yangvoteraw = d.Yangvoteraw > 0 ? d.Yangvoteraw : 0;
+            d.Yangvoteraw = 0//d.Yangvoteraw > 0 ? d.Yangvoteraw : 0;
             d.sumvoteraw = d.Bidenvoteraw + d.Bloombergvoteraw + d.Buttigiegvoteraw + d.Klobucharvoteraw + d.Sandersvoteraw + d.Steyervoteraw + d.Warrenvoteraw + d.Yangvoteraw
             d.candsabove0 = (d.Bidenvoteraw > 0 ? 1 : 0) + (d.Bloombergvoteraw > 0 ? 1 : 0) + (d.Buttigiegvoteraw > 0 ? 1 : 0) + (d.Klobucharvoteraw > 0 ? 1 : 0) + (d.Sandersvoteraw > 0 ? 1 : 0) + (d.Steyervoteraw > 0 ? 1 : 0) + (d.Warrenvoteraw > 0 ? 1 : 0) + (d.Yangvoteraw > 0 ? 1 : 0)
             d.sumdistribute = (100 - d.sumvoteraw) / 2
@@ -1132,7 +1180,7 @@ d3.csv("https://projects.fivethirtyeight.com/polls-page/president_primary_polls.
             d.Sandersvoteraw = thirdSectionResults[4].dropOut == 1 ? 0 : jStat.normal.inv((Sanderssimulation * 3 + Math.random()) / 4, d.Sandersproj, d.Sandersstd);
             d.Steyervoteraw = thirdSectionResults[5].dropOut == 1 ? 0 : jStat.normal.inv((Steyersimulation * 3 + Math.random()) / 4, d.Steyerproj, d.Steyerstd);
             d.Warrenvoteraw = thirdSectionResults[6].dropOut == 1 ? 0 : jStat.normal.inv((Warrensimulation * 3 + Math.random()) / 4, d.Warrenproj, d.Warrenstd);
-            d.Yangvoteraw = thirdSectionResults[7].dropOut == 1 ? 0 : jStat.normal.inv((Yangsimulation * 3 + Math.random()) / 4, d.Yangproj, d.Yangstd);
+            d.Yangvoteraw = 0//thirdSectionResults[7].dropOut == 1 ? 0 : jStat.normal.inv((Yangsimulation * 3 + Math.random()) / 4, d.Yangproj, d.Yangstd);
             d.Bidenvoteraw = d.Bidenvoteraw > 0 ? d.Bidenvoteraw : 0;
             d.Bloombergvoteraw = d.Bloombergvoteraw > 0 ? d.Bloombergvoteraw : 0;
             d.Buttigiegvoteraw = d.Buttigiegvoteraw > 0 ? d.Buttigiegvoteraw : 0;
@@ -1140,7 +1188,7 @@ d3.csv("https://projects.fivethirtyeight.com/polls-page/president_primary_polls.
             d.Sandersvoteraw = d.Sandersvoteraw > 0 ? d.Sandersvoteraw : 0;
             d.Steyervoteraw = d.Steyervoteraw > 0 ? d.Steyervoteraw : 0;
             d.Warrenvoteraw = d.Warrenvoteraw > 0 ? d.Warrenvoteraw : 0;
-            d.Yangvoteraw = d.Yangvoteraw > 0 ? d.Yangvoteraw : 0;
+            d.Yangvoteraw = 0//d.Yangvoteraw > 0 ? d.Yangvoteraw : 0;
             d.sumvoteraw = d.Bidenvoteraw + d.Bloombergvoteraw + d.Buttigiegvoteraw + d.Klobucharvoteraw + d.Sandersvoteraw + d.Steyervoteraw + d.Warrenvoteraw + d.Yangvoteraw
             d.candsabove0 = (d.Bidenvoteraw > 0 ? 1 : 0) + (d.Bloombergvoteraw > 0 ? 1 : 0) + (d.Buttigiegvoteraw > 0 ? 1 : 0) + (d.Klobucharvoteraw > 0 ? 1 : 0) + (d.Sandersvoteraw > 0 ? 1 : 0) + (d.Steyervoteraw > 0 ? 1 : 0) + (d.Warrenvoteraw > 0 ? 1 : 0) + (d.Yangvoteraw > 0 ? 1 : 0)
             d.sumdistribute = (100 - d.sumvoteraw) / 2
@@ -1227,7 +1275,7 @@ d3.csv("https://projects.fivethirtyeight.com/polls-page/president_primary_polls.
             d.Sandersvoteraw = fourthSectionResults[4].dropOut == 1 ? 0 : jStat.normal.inv((Sanderssimulation * 3 + Math.random()) / 4, d.Sandersproj, d.Sandersstd);
             d.Steyervoteraw = fourthSectionResults[5].dropOut == 1 ? 0 : jStat.normal.inv((Steyersimulation * 3 + Math.random()) / 4, d.Steyerproj, d.Steyerstd);
             d.Warrenvoteraw = fourthSectionResults[6].dropOut == 1 ? 0 : jStat.normal.inv((Warrensimulation * 3 + Math.random()) / 4, d.Warrenproj, d.Warrenstd);
-            d.Yangvoteraw = fourthSectionResults[7].dropOut == 1 ? 0 : jStat.normal.inv((Yangsimulation * 3 + Math.random()) / 4, d.Yangproj, d.Yangstd);
+            d.Yangvoteraw = 0//fourthSectionResults[7].dropOut == 1 ? 0 : jStat.normal.inv((Yangsimulation * 3 + Math.random()) / 4, d.Yangproj, d.Yangstd);
             d.Bidenvoteraw = d.Bidenvoteraw > 0 ? d.Bidenvoteraw : 0;
             d.Bloombergvoteraw = d.Bloombergvoteraw > 0 ? d.Bloombergvoteraw : 0;
             d.Buttigiegvoteraw = d.Buttigiegvoteraw > 0 ? d.Buttigiegvoteraw : 0;
@@ -1235,7 +1283,7 @@ d3.csv("https://projects.fivethirtyeight.com/polls-page/president_primary_polls.
             d.Sandersvoteraw = d.Sandersvoteraw > 0 ? d.Sandersvoteraw : 0;
             d.Steyervoteraw = d.Steyervoteraw > 0 ? d.Steyervoteraw : 0;
             d.Warrenvoteraw = d.Warrenvoteraw > 0 ? d.Warrenvoteraw : 0;
-            d.Yangvoteraw = d.Yangvoteraw > 0 ? d.Yangvoteraw : 0;
+            d.Yangvoteraw = 0//d.Yangvoteraw > 0 ? d.Yangvoteraw : 0;
             d.sumvoteraw = d.Bidenvoteraw + d.Bloombergvoteraw + d.Buttigiegvoteraw + d.Klobucharvoteraw + d.Sandersvoteraw + d.Steyervoteraw + d.Warrenvoteraw + d.Yangvoteraw
             d.candsabove0 = (d.Bidenvoteraw > 0 ? 1 : 0) + (d.Bloombergvoteraw > 0 ? 1 : 0) + (d.Buttigiegvoteraw > 0 ? 1 : 0) + (d.Klobucharvoteraw > 0 ? 1 : 0) + (d.Sandersvoteraw > 0 ? 1 : 0) + (d.Steyervoteraw > 0 ? 1 : 0) + (d.Warrenvoteraw > 0 ? 1 : 0) + (d.Yangvoteraw > 0 ? 1 : 0)
             d.sumdistribute = (100 - d.sumvoteraw) / 2
@@ -1532,7 +1580,7 @@ d3.csv("https://projects.fivethirtyeight.com/polls-page/president_primary_polls.
 
 
         var final = { State: keystate, bidenwin: d3.mean(dataraw, d => d.Bidenwin), Bloombergwin: d3.mean(dataraw, d => d.Bloombergwin), sanderswin: d3.mean(dataraw, d => d.Sanderswin) }
-        var final = [formatFinal(dataraw[0].today), keystate, formatFinal(dataraw[0].date), dataraw[0].delegates, +formatvalue(dataraw[0].Bidenvote), +formatvalue(dataraw[0].Bloombergvote), +formatvalue(dataraw[0].Buttigiegvote), +formatvalue(dataraw[0].Klobucharvote), +formatvalue(dataraw[0].Sandersvote), +formatvalue(dataraw[0].Steyervote), +formatvalue(dataraw[0].Warrenvote), +formatvalue(dataraw[0].Yangvote), Math.round(d3.mean(dataraw, d => d.Bidenwin) * 1000) / 10, Math.round(d3.mean(dataraw, d => d.Bloombergwin) * 1000) / 10, Math.round(d3.mean(dataraw, d => d.Buttigiegwin) * 1000) / 10, Math.round(d3.mean(dataraw, d => d.Klobucharwin) * 1000) / 10, Math.round(d3.mean(dataraw, d => d.Sanderswin) * 1000) / 10, Math.round(d3.mean(dataraw, d => d.Steyerwin) * 1000) / 10, Math.round(d3.mean(dataraw, d => d.Warrenwin) * 1000) / 10, Math.round(d3.mean(dataraw, d => d.Yangwin) * 1000) / 10, dataraw[0].Bidendelegates, dataraw[0].Bloombergdelegates, dataraw[0].Buttigiegdelegates, dataraw[0].Klobuchardelegates, dataraw[0].Sandersdelegates, dataraw[0].Steyerdelegates, dataraw[0].Warrendelegates, dataraw[0].Yangdelegates, +formatvalue(dataraw[0].Bidenavgdelegates), +formatvalue(dataraw[0].Bloombergdelegates), +formatvalue(dataraw[0].Buttigiegavgdelegates), +formatvalue(dataraw[0].Klobucharavgdelegates), +formatvalue(dataraw[0].Sandersavgdelegates), +formatvalue(dataraw[0].Steyeravgdelegates), +formatvalue(dataraw[0].Warrenavgdelegates), +formatvalue(dataraw[0].Yangavgdelegates)]
+        var final = [formatFinal(dataraw[0].today), keystate, formatFinal(dataraw[0].date), dataraw[0].delegates, +formatvalue(dataraw[0].Bidenvote), +formatvalue(dataraw[0].Bloombergvote),0, +formatvalue(dataraw[0].Buttigiegvote), +formatvalue(dataraw[0].Klobucharvote), +formatvalue(dataraw[0].Sandersvote), +formatvalue(dataraw[0].Steyervote), +formatvalue(dataraw[0].Warrenvote), +formatvalue(dataraw[0].Yangvote), Math.round(d3.mean(dataraw, d => d.Bidenwin) * 1000) / 10, Math.round(d3.mean(dataraw, d => d.Bloombergwin) * 1000) / 10,0, Math.round(d3.mean(dataraw, d => d.Buttigiegwin) * 1000) / 10, Math.round(d3.mean(dataraw, d => d.Klobucharwin) * 1000) / 10, Math.round(d3.mean(dataraw, d => d.Sanderswin) * 1000) / 10, Math.round(d3.mean(dataraw, d => d.Steyerwin) * 1000) / 10, Math.round(d3.mean(dataraw, d => d.Warrenwin) * 1000) / 10, Math.round(d3.mean(dataraw, d => d.Yangwin) * 1000) / 10, dataraw[0].Bidendelegates, dataraw[0].Bloombergdelegates,0, dataraw[0].Buttigiegdelegates, dataraw[0].Klobuchardelegates, dataraw[0].Sandersdelegates, dataraw[0].Steyerdelegates, dataraw[0].Warrendelegates, dataraw[0].Yangdelegates]
 
         finaldata.push(final)
     }
