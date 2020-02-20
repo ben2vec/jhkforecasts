@@ -481,3 +481,10 @@ div.tooltip {
   cursor: pointer;
   opacity: 1;
 }
+
+div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
