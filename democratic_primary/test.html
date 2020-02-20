@@ -42,70 +42,76 @@
   <tbody>
 
     <tr style="height: 100px;">
-      <td style="width: 14%;">
+      <td style="width: 13%;">
         <img style="width:95%;margin-left: 2.5%;" src="https://jhkforecasts.com/Biden-01.png" alt="Biden">
       </td>
-      <td style="width: 14%;">
+      <td style="width: 13%;">
         <img style="width:95%;margin-left: 2.5%;" src="https://jhkforecasts.com/Bloomberg-01.png" alt="Bloomberg">
       </td>
-      <td style="width: 14%;">
+      <td style="width: 13%;">
         <img style="width:95%;margin-left: 2.5%;" src="https://jhkforecasts.com/Buttigieg-01.png" alt="Buttigieg">
       </td>
-      <td style="width: 14%;">
+      <td style="width: 13%;">
         <img style="width:95%;margin-left: 2.5%;" src="https://jhkforecasts.com/Klobuchar-01.png" alt="Klobuchar">
       </td>
-      <td style="width: 14%;">
+      <td style="width: 13%;">
         <img style="width:95%;margin-left: 2.5%;" src="https://jhkforecasts.com/Sanders-01.png" alt="Sanders">
       </td>
-      <td style="width: 14%;">
+      <td style="width: 13%;">
         <img style="width:95%;margin-left: 2.5%;" src="https://jhkforecasts.com/Steyer-01.png" alt="Steyer">
       </td>
-      <td style="width: 14%;">
+      <td style="width: 13%;">
         <img style="width:95%;margin-left: 2.5%;" src="https://jhkforecasts.com/Warren-01.png" alt="Warren">
+      </td>
+      <td style="width: 13%;"valign="bottom">
+        <h1 style="text-align:center;" >TOTAL</h1>
       </td>
     </tr>
     <tr>
-      <td style="width: 14%;">
+      <td style="width: 13%;">
         <h1 style="text-align:center;" id="biden-text"></h1>
       </td>
-      <td style="width: 14%;">
+      <td style="width: 13%;">
         <h1 style="text-align:center;" id="bloomberg-text"></h1>
       </td>
-      <td style="width: 14%;">
+      <td style="width: 13%;">
         <h1 style="text-align:center;" id="buttigieg-text"></h1>
       </td>
-      <td style="width: 14%;">
+      <td style="width: 13%;">
         <h1 style="text-align:center;" id="klobuchar-text"></h1>
       </td>
-      <td style="width: 14%;">
+      <td style="width: 13%;">
         <h1 style="text-align:center;" id="sanders-text"></h1>
       </td>
-      <td style="width: 14%;">
+      <td style="width: 13%;">
         <h1 style="text-align:center;" id="steyer-text"></h1>
       </td>
-      <td style="width: 14%;">
+      <td style="width: 13%;">
         <h1 style="text-align:center;" id="warren-text"></h1>
       </td>
+      <td style="width: 13%;">
+        <h1 style="text-align:center;" id="total-text"></h1>
+      </td>
     </tr>
-    <td style="width: 14%;">
+    <td style="width: 13%;">
       <input type="range" min="0" max="60" value="0" class="slider" id="biden-slider">
     </td>
-    <td style="width: 14%;">
+    <td style="width: 13%;">
       <input type="range" min="0" max="60" value="0" class="slider" id="bloomberg-slider">
     </td>
-    <td style="width: 14%;">
+    <td style="width: 13%;">
       <input type="range" min="0" max="60" value="0" class="slider" id="buttigieg-slider">
     </td>
-    <td style="width: 14%;">
+    <td style="width: 13%;">
       <input type="range" min="0" max="60" value="0" class="slider" id="klobuchar-slider">
     </td>
-    <td style="width: 14%;">
+    <td style="width: 13%;">
       <input type="range" min="0" max="60" value="0" class="slider" id="sanders-slider">
     </td>
-    <td style="width: 14%;">
+    <td style="width: 13%;">
       <input type="range" min="0" max="60" value="0" class="slider" id="steyer-slider">
     </td>
-    <td style="width: 14%;">
+    <td style="width: 13%;">
       <input type="range" min="0" max="60" value="0" class="slider" id="warren-slider">
     </td>
     </tr>
@@ -161,20 +167,32 @@
       document.getElementById("sanders-text").innerHTML = cands[4]
       document.getElementById("steyer-text").innerHTML = cands[5]
       document.getElementById("warren-text").innerHTML = cands[6]
+      document.getElementById("total-text").innerHTML = d3.sum(cands)
 
       var newdata = data.map((d, i) => {
         return {
           State: d.State,
-          [candidates[0]]: d[candidates[0] + "res"] != "" ? d[candidates[0] + "res"] : +d[candidates[0]] == 0 ? 0 : ((+d[candidates[0]] * change[candidates[0]]) + (+d[candidates[0]] + change[candidates[0] + "change"])) / 2 > 90 ? 90 : ((+d[candidates[0]] * change[candidates[0]]) + (+d[candidates[0]] + change[candidates[0] + "change"])) / 2 < 0 ? 0 : ((+d[candidates[0]] * change[candidates[0]]) + (+d[candidates[0]] + change[candidates[0] + "change"])) / 2,
-          [candidates[1]]: d[candidates[1] + "res"] != "" ? d[candidates[1] + "res"] : +d[candidates[1]] == 0 ? 0 : ((+d[candidates[1]] * change[candidates[1]]) + (+d[candidates[1]] + change[candidates[1] + "change"])) / 2 > 90 ? 90 : ((+d[candidates[1]] * change[candidates[1]]) + (+d[candidates[1]] + change[candidates[1] + "change"])) / 2< 0 ? 0 : ((+d[candidates[1]] * change[candidates[1]]) + (+d[candidates[1]] + change[candidates[1] + "change"])) / 2,
-          [candidates[2]]: d[candidates[2] + "res"] != "" ? d[candidates[2] + "res"] : +d[candidates[2]] == 0 ? 0 : ((+d[candidates[2]] * change[candidates[2]]) + (+d[candidates[2]] + change[candidates[2] + "change"])) / 2 > 90 ? 90 : ((+d[candidates[2]] * change[candidates[2]]) + (+d[candidates[2]] + change[candidates[2] + "change"])) / 2< 0 ? 0 : ((+d[candidates[2]] * change[candidates[2]]) + (+d[candidates[2]] + change[candidates[2] + "change"])) / 2,
-          [candidates[3]]: d[candidates[3] + "res"] != "" ? d[candidates[3] + "res"] : +d[candidates[3]] == 0 ? 0 : ((+d[candidates[3]] * change[candidates[3]]) + (+d[candidates[3]] + change[candidates[3] + "change"])) / 2 > 90 ? 90 : ((+d[candidates[3]] * change[candidates[3]]) + (+d[candidates[3]] + change[candidates[3] + "change"])) / 2< 0 ? 0 : ((+d[candidates[3]] * change[candidates[3]]) + (+d[candidates[3]] + change[candidates[3] + "change"])) / 2,
-          [candidates[4]]: d[candidates[4] + "res"] != "" ? d[candidates[4] + "res"] : +d[candidates[4]] == 0 ? 0 : ((+d[candidates[4]] * change[candidates[4]]) + (+d[candidates[4]] + change[candidates[4] + "change"])) / 2 > 90 ? 90 : ((+d[candidates[4]] * change[candidates[4]]) + (+d[candidates[4]] + change[candidates[4] + "change"])) / 2< 0 ? 0 : ((+d[candidates[4]] * change[candidates[4]]) + (+d[candidates[4]] + change[candidates[4] + "change"])) / 2,
-          [candidates[5]]: d[candidates[5] + "res"] != "" ? d[candidates[5] + "res"] : +d[candidates[5]] == 0 ? 0 : ((+d[candidates[5]] * change[candidates[5]]) + (+d[candidates[5]] + change[candidates[5] + "change"])) / 2 > 90 ? 90 : ((+d[candidates[5]] * change[candidates[5]]) + (+d[candidates[5]] + change[candidates[5] + "change"])) / 2< 0 ? 0 : ((+d[candidates[5]] * change[candidates[5]]) + (+d[candidates[5]] + change[candidates[5] + "change"])) / 2,
-          [candidates[6]]: d[candidates[6] + "res"] != "" ? d[candidates[6] + "res"] : +d[candidates[6]] == 0 ? 0 : ((+d[candidates[6]] * change[candidates[6]]) + (+d[candidates[6]] + change[candidates[6] + "change"])) / 2 > 90 ? 90 : ((+d[candidates[6]] * change[candidates[6]]) + (+d[candidates[6]] + change[candidates[6] + "change"])) / 2< 0 ? 0 : ((+d[candidates[6]] * change[candidates[6]]) + (+d[candidates[6]] + change[candidates[6] + "change"])) / 2,
+          [candidates[0]]: d[candidates[0] + "res"] != "" ? +d[candidates[0] + "res"] : +d[candidates[0]] == 0 ? 0 : ((+d[candidates[0]] * change[candidates[0]]) + (+d[candidates[0]] + change[candidates[0] + "change"])) / 2 > 90 ? 90 : ((+d[candidates[0]] * change[candidates[0]]) + (+d[candidates[0]] + change[candidates[0] + "change"])) / 2 < 0 ? 0 : ((+d[candidates[0]] * change[candidates[0]]) + (+d[candidates[0]] + change[candidates[0] + "change"])) / 2,
+          [candidates[1]]: d[candidates[1] + "res"] != "" ? +d[candidates[1] + "res"] : +d[candidates[1]] == 0 ? 0 : ((+d[candidates[1]] * change[candidates[1]]) + (+d[candidates[1]] + change[candidates[1] + "change"])) / 2 > 90 ? 90 : ((+d[candidates[1]] * change[candidates[1]]) + (+d[candidates[1]] + change[candidates[1] + "change"])) / 2 < 0 ? 0 : ((+d[candidates[1]] * change[candidates[1]]) + (+d[candidates[1]] + change[candidates[1] + "change"])) / 2,
+          [candidates[2]]: d[candidates[2] + "res"] != "" ? +d[candidates[2] + "res"] : +d[candidates[2]] == 0 ? 0 : ((+d[candidates[2]] * change[candidates[2]]) + (+d[candidates[2]] + change[candidates[2] + "change"])) / 2 > 90 ? 90 : ((+d[candidates[2]] * change[candidates[2]]) + (+d[candidates[2]] + change[candidates[2] + "change"])) / 2 < 0 ? 0 : ((+d[candidates[2]] * change[candidates[2]]) + (+d[candidates[2]] + change[candidates[2] + "change"])) / 2,
+          [candidates[3]]: d[candidates[3] + "res"] != "" ? +d[candidates[3] + "res"] : +d[candidates[3]] == 0 ? 0 : ((+d[candidates[3]] * change[candidates[3]]) + (+d[candidates[3]] + change[candidates[3] + "change"])) / 2 > 90 ? 90 : ((+d[candidates[3]] * change[candidates[3]]) + (+d[candidates[3]] + change[candidates[3] + "change"])) / 2 < 0 ? 0 : ((+d[candidates[3]] * change[candidates[3]]) + (+d[candidates[3]] + change[candidates[3] + "change"])) / 2,
+          [candidates[4]]: d[candidates[4] + "res"] != "" ? +d[candidates[4] + "res"] : +d[candidates[4]] == 0 ? 0 : ((+d[candidates[4]] * change[candidates[4]]) + (+d[candidates[4]] + change[candidates[4] + "change"])) / 2 > 90 ? 90 : ((+d[candidates[4]] * change[candidates[4]]) + (+d[candidates[4]] + change[candidates[4] + "change"])) / 2 < 0 ? 0 : ((+d[candidates[4]] * change[candidates[4]]) + (+d[candidates[4]] + change[candidates[4] + "change"])) / 2,
+          [candidates[5]]: d[candidates[5] + "res"] != "" ? +d[candidates[5] + "res"] : +d[candidates[5]] == 0 ? 0 : ((+d[candidates[5]] * change[candidates[5]]) + (+d[candidates[5]] + change[candidates[5] + "change"])) / 2 > 90 ? 90 : ((+d[candidates[5]] * change[candidates[5]]) + (+d[candidates[5]] + change[candidates[5] + "change"])) / 2 < 0 ? 0 : ((+d[candidates[5]] * change[candidates[5]]) + (+d[candidates[5]] + change[candidates[5] + "change"])) / 2,
+          [candidates[6]]: d[candidates[6] + "res"] != "" ? +d[candidates[6] + "res"] : +d[candidates[6]] == 0 ? 0 : ((+d[candidates[6]] * change[candidates[6]]) + (+d[candidates[6]] + change[candidates[6] + "change"])) / 2 > 90 ? 90 : ((+d[candidates[6]] * change[candidates[6]]) + (+d[candidates[6]] + change[candidates[6] + "change"])) / 2 < 0 ? 0 : ((+d[candidates[6]] * change[candidates[6]]) + (+d[candidates[6]] + change[candidates[6] + "change"])) / 2,
         }
       })
 
+      newdata.forEach(function (d, i) {
+        d.total = d[candidates[0]] + d[candidates[1]] + d[candidates[2]] + d[candidates[3]] + d[candidates[4]] + d[candidates[5]] + d[candidates[6]]
+        d[candidates[0]] = data[i][candidates[0] + "res"] != "" ? +data[i][candidates[0] + "res"] : 100 / d.total * +d[candidates[0]]
+        d[candidates[1]] = data[i][candidates[1] + "res"] != "" ? +data[i][candidates[1] + "res"] : 100 / d.total * +d[candidates[1]]
+        d[candidates[2]] = data[i][candidates[2] + "res"] != "" ? +data[i][candidates[2] + "res"] : 100 / d.total * +d[candidates[2]]
+        d[candidates[3]] = data[i][candidates[3] + "res"] != "" ? +data[i][candidates[3] + "res"] : 100 / d.total * +d[candidates[3]]
+        d[candidates[4]] = data[i][candidates[4] + "res"] != "" ? +data[i][candidates[4] + "res"] : 100 / d.total * +d[candidates[4]]
+        d[candidates[5]] = data[i][candidates[5] + "res"] != "" ? +data[i][candidates[5] + "res"] : 100 / d.total * +d[candidates[5]]
+        d[candidates[6]] = data[i][candidates[6] + "res"] != "" ? +data[i][candidates[6] + "res"] : 100 / d.total * +d[candidates[6]]
+        return d;
+      })
 
 
       var finaldata = []
