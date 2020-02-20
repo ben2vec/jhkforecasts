@@ -417,7 +417,7 @@ div.tooltip {
 #biden-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 5;
+  width: 20;
   height: 25px;
   background: #00C181;
   cursor: pointer;
@@ -427,7 +427,7 @@ div.tooltip {
 #bloomberg-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 5;
+  width: 20;
   height: 25px;
   background: #FF6060;
   cursor: pointer;
@@ -437,7 +437,7 @@ div.tooltip {
 #buttigieg-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 5;
+  width: 20;
   height: 25px;
   background: #FFE130;
   cursor: pointer;
@@ -447,7 +447,7 @@ div.tooltip {
 #klobuchar-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 5;
+  width: 20;
   height: 25px;
   background: #FF8D32;
   cursor: pointer;
@@ -457,7 +457,7 @@ div.tooltip {
 #sanders-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 5;
+  width: 20;
   height: 25px;
   background: #0091FF;
   cursor: pointer;
@@ -466,7 +466,7 @@ div.tooltip {
 #steyer-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 5;
+  width: 20;
   height: 25px;
   background: #FF2EF0;
   cursor: pointer;
@@ -475,7 +475,7 @@ div.tooltip {
 #warren-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 5;
+  width: 20;
   height: 25px;
   background: #AF0BFF;
   cursor: pointer;
