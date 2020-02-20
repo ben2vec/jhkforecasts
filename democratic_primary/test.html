@@ -41,7 +41,7 @@
 <table style="border-collapse: collapse;" cellspacing="0" cellpadding="0" width="100%">
   <tbody>
 
-    <tr style="height: 100px;">
+    <tr>
       <td style="width: 13%;">
         <img style="width:95%;margin-left: 2.5%;" src="https://jhkforecasts.com/Biden-01.png" alt="Biden">
       </td>
@@ -63,8 +63,7 @@
       <td style="width: 13%;">
         <img style="width:95%;margin-left: 2.5%;" src="https://jhkforecasts.com/Warren-01.png" alt="Warren">
       </td>
-      <td style="width: 13%;"valign="bottom">
-        <h1 style="text-align:center;" >TOTAL</h1>
+      <td style="width: 9%;" valign="bottom">
       </td>
     </tr>
     <tr>
@@ -90,30 +89,32 @@
         <h1 style="text-align:center;" id="warren-text"></h1>
       </td>
       <td style="width: 13%;">
-        <h1 style="text-align:center;" id="total-text"></h1>
+        <h4 style="text-align:center;">Total</h4>
+        <h4 style="text-align:center;" id="total-text"></h4>
       </td>
     </tr>
-    <td style="width: 13%;">
-      <input type="range" min="0" max="60" value="0" class="slider" id="biden-slider">
-    </td>
-    <td style="width: 13%;">
-      <input type="range" min="0" max="60" value="0" class="slider" id="bloomberg-slider">
-    </td>
-    <td style="width: 13%;">
-      <input type="range" min="0" max="60" value="0" class="slider" id="buttigieg-slider">
-    </td>
-    <td style="width: 13%;">
-      <input type="range" min="0" max="60" value="0" class="slider" id="klobuchar-slider">
-    </td>
-    <td style="width: 13%;">
-      <input type="range" min="0" max="60" value="0" class="slider" id="sanders-slider">
-    </td>
-    <td style="width: 13%;">
-      <input type="range" min="0" max="60" value="0" class="slider" id="steyer-slider">
-    </td>
-    <td style="width: 13%;">
-      <input type="range" min="0" max="60" value="0" class="slider" id="warren-slider">
-    </td>
+    <tr>
+      <td style="width: 13%;">
+        <input type="range" min="0" max="60" value="0" class="slider" id="biden-slider">
+      </td>
+      <td style="width: 13%;">
+        <input type="range" min="0" max="60" value="0" class="slider" id="bloomberg-slider">
+      </td>
+      <td style="width: 13%;">
+        <input type="range" min="0" max="60" value="0" class="slider" id="buttigieg-slider">
+      </td>
+      <td style="width: 13%;">
+        <input type="range" min="0" max="60" value="0" class="slider" id="klobuchar-slider">
+      </td>
+      <td style="width: 13%;">
+        <input type="range" min="0" max="60" value="0" class="slider" id="sanders-slider">
+      </td>
+      <td style="width: 13%;">
+        <input type="range" min="0" max="60" value="0" class="slider" id="steyer-slider">
+      </td>
+      <td style="width: 13%;">
+        <input type="range" min="0" max="60" value="0" class="slider" id="warren-slider">
+      </td>
     </tr>
   </tbody>
 </table>
@@ -191,9 +192,13 @@
         d[candidates[4]] = data[i][candidates[4] + "res"] != "" ? +data[i][candidates[4] + "res"] : 100 / d.total * +d[candidates[4]]
         d[candidates[5]] = data[i][candidates[5] + "res"] != "" ? +data[i][candidates[5] + "res"] : 100 / d.total * +d[candidates[5]]
         d[candidates[6]] = data[i][candidates[6] + "res"] != "" ? +data[i][candidates[6] + "res"] : 100 / d.total * +d[candidates[6]]
+        d[candidates[0] + "under15"] = data[i][candidates[0] + "res"]!= "" ?+data[i][candidates[0] + "resdel"]: d[candidates[0]] < 15 ? d[candidates[0]] > 10 ? Math.round((.02 * d[candidates[0]] - .2) * data[i].Delegates) : 0 : 0
+
+
         return d;
       })
 
+      console.log(newdata)
 
       var finaldata = []
       for (let j = 0; j < 57; j++) {
