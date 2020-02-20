@@ -407,7 +407,7 @@ div.tooltip {
   height: 25px;
   background: #d3d3d3;
   outline: none;
-  margin-top: -30px;
+  margin-top: -10px;
   opacity: 0.7;
   -webkit-transition: .2s;
   transition: opacity .2s;

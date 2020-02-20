@@ -42,7 +42,7 @@ d3.csv("candsoverview.csv", function (error, data) {
     .attr("transform", function (d, i) { return "translate(" + i * 100 + ",0)" })
 
   repeat.append("a").attr("xlink:href", d => d.candidate).append("image")
-    .attr("xlink:href", d => "https://raw.githubusercontent.com/jhkersting/home/master/" + d.candidate + "-01.png")
+  .attr("xlink:href", d => "https://raw.githubusercontent.com/jhkersting/home/master/" + d.candidate + "-01.png")
     .attr("x", 100)
     .attr("y", -170)
     .attr("height", 100)
