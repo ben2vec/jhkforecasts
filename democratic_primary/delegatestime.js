@@ -66,25 +66,7 @@ d3.csv("time.csv", function (error, data) {
     var candidates = candidates.map((d) =>
         d[0].toUpperCase() + d.substring(1)
     )
-    //today
-    var now = d3.max(data, d => d.forecastdate)
-
-    var nowarray = data.filter(function (d) { return d.forecastdate == now; });
-
-    var copytwo = keys.filter(f => f.includes(datatype))
-
-    var asoftoday = copytwo.map(function (id) {
-        return {
-            values: nowarray.map(d => { return +d[id] })
-        };
-    });
-
-
-    console.log(now)
-    console.log(nowarray)
-    console.log(asoftoday)
-
-    console.log(data)
+    
 
     var svg = d3.select("#delegates").append("svg")
         .attr("viewBox", "0 0 1000 400")
@@ -197,11 +179,11 @@ d3.csv("time.csv", function (error, data) {
         .attr("width", x(newest_day)-margin.left)
         .attr("height", height)
 
-    update(d3.select('#selectboxdelegates').property('value'), 0);
+        update(datatype, 0);
 
     function update(input, speed) {
 
-        var copy = keys.filter(f => f.includes("del"))
+        var copy = keys.filter(f => f.includes(input))
 
         var cities = copy.map(function (id) {
             return {

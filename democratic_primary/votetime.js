@@ -193,14 +193,15 @@ d3.csv("time.csv", function (error, data) {
     var overlay = svg.append("rect")
         .attr("class", "overlay")
         .attr("x", margin.left)
-        .attr("width", x(newest_day)-margin.left)
+        .attr("width", x(newest_day) - margin.left)
         .attr("height", height)
 
-    update();
+    update(datatype, 0);
+
 
     function update(input, speed) {
 
-        var copy = keys.filter(f => f.includes("vote"))
+        var copy = keys.filter(f => f.includes(input))
 
         var cities = copy.map(function (id) {
             return {
@@ -241,14 +242,14 @@ d3.csv("time.csv", function (error, data) {
         city.enter().insert("g", ".focus").append("path")
             .attr("class", "line cities")
             .style("stroke", d => z(d.id))
-            .style("opacity",d => z(d.id)=="#a4b1b5"?.3:1)
+            .style("opacity", d => z(d.id) == "#a4b1b5" ? .3 : 1)
             .merge(city)
             .transition().duration(speed)
             .attr("d", d => line(d.values))
 
-           // var results = final_results[0]
+        // var results = final_results[0]
 
-           // console.log(results)
+        // console.log(results)
 
 
         tooltip(copy);
@@ -272,7 +273,7 @@ d3.csv("time.csv", function (error, data) {
             .data(copy)
 
         labels.enter().append("text")
-        .attr("y", -172.5)
+            .attr("y", -172.5)
             .attr("class", "lineHoverText")
             .attr("text-anchor", "middle")
             .attr("font-size", 14)
@@ -375,11 +376,11 @@ d3.csv("time.csv", function (error, data) {
         .attr("y2", 30)
         .attr("stroke", "grey")
 
-    
 
-    
-    
-    
+
+
+
+
 
 
 })

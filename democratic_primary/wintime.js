@@ -38,7 +38,7 @@ d3.csv("time.csv", function (error, data) {
 
     var col_category = ["#00C181", "#FF6060", "#a4b1b5", "#FFE130", "#FF8D32", "#0091FF", "#FF2EF0", "#AF0BFF", "#a4b1b5"]
 
-    var cand_now = keys.map(function (d,j) {
+    var cand_now = keys.map(function (d, j) {
         return {
             candidate: d,
             value: newest_data.map((i) => +i[d]),
@@ -51,10 +51,10 @@ d3.csv("time.csv", function (error, data) {
     var keys = cand_now.map((d) =>
         d.candidate
     )
-    var color_scale =  cand_now.map((d) =>
-    d.color
-)
-var candidates = keys
+    var color_scale = cand_now.map((d) =>
+        d.color
+    )
+    var candidates = keys
 
     var candidates = candidates.map((d) =>
         d.slice(0, -3)
@@ -89,7 +89,7 @@ var candidates = keys
         .append('g')
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    
+
     var mindate = new Date(2019, 5, 1),
         maxdate = d3.max(data, d => d.primarydate)
     demadjust = new Date(2020, 0, 4);
@@ -180,19 +180,18 @@ var candidates = keys
         .attr("text-anchor", "middle")
         .attr("font-size", 12);
 
-        var overlay = svg.append("rect")
+    var overlay = svg.append("rect")
         .attr("class", "overlay")
         .attr("x", margin.left)
-        .attr("width", x(newest_day)-margin.left)
+        .attr("width", x(newest_day) - margin.left)
         .attr("height", height)
 
-    update();
+        update(datatype, 0);
 
-    update(d3.select('#selectboxwin').property('value'), 0);
 
     function update(input, speed) {
 
-        var copy = keys.filter(f => f.includes("win"))
+        var copy = keys.filter(f => f.includes(input))
 
         var cities = copy.map(function (id) {
             return {
@@ -233,7 +232,7 @@ var candidates = keys
         city.enter().insert("g", ".focus").append("path")
             .attr("class", "line cities")
             .style("stroke", d => z(d.id))
-            .style("opacity",d => z(d.id)=="#a4b1b5"?.3:1)
+            .style("opacity", d => z(d.id) == "#a4b1b5" ? .3 : 1)
             .merge(city)
             .transition().duration(speed)
             .attr("d", d => line(d.values))
@@ -259,7 +258,7 @@ var candidates = keys
             .data(copy)
 
         labels.enter().append("text")
-        .attr("y", -172.5)
+            .attr("y", -172.5)
             .attr("class", "lineHoverText")
             .attr("text-anchor", "middle")
             .attr("font-size", 14)
@@ -339,7 +338,7 @@ var candidates = keys
         .attr("transform", function (d, i) { return "translate(720," + i * -30 + ")" })
 
 
-        legend.append("text")
+    legend.append("text")
         .attr("class", "legend-text")
         .attr("y", -122.5)
         .style("fill", d => z(d))
@@ -356,7 +355,7 @@ var candidates = keys
         .style("font-weight", 700)
         .text(keyState == "US" ? "Win Nomination" : "Win" + keyState)
 
-        svg.append("line")
+    svg.append("line")
         .attr("x1", x(mindate))
         .attr("x2", x(mindate))
         .attr("y1", y(0))
