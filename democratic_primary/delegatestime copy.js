@@ -115,7 +115,7 @@ d3.csv("time.csv", function (error, data) {
         ;
 
     var line = d3.line()
-        .curve(d3.curveCatmullRom)
+        .curve(d3.curveStepAfter)
         .x(d => x(d.date))
         .y(d => y(d.degrees));
 
@@ -224,8 +224,8 @@ d3.csv("time.csv", function (error, data) {
                     .style("text-anchor", "right")
                     .attr("y", 0)
                     .attr('fill', 'black')
-                    .attr('font-size', 15)
-                    .attr('font-weight', 400)
+                    .attr('font-size', 18)
+                    .attr('font-weight', 500)
                 g.selectAll("line").remove()
 
 
@@ -242,6 +242,7 @@ d3.csv("time.csv", function (error, data) {
         city.enter().insert("g", ".focus").append("path")
             .attr("class", "line cities")
             .style("stroke", d => z(d.id))
+            .style("stroke-width",4)
             .style("opacity", d => z(d.id) == "#a4b1b5" ? .3 : 1)
             .merge(city)
             .transition().duration(speed)
@@ -319,7 +320,7 @@ d3.csv("time.csv", function (error, data) {
                 .attr("x", x(d.date))
                 .attr("y", 0)
                 .attr("text-anchor", "middle")
-                .style("font-size", 12)
+                .style("font-size", 15)
                 .style("font-weight", 700)
                 .text(formatDate(d.date));
 
@@ -328,7 +329,7 @@ d3.csv("time.csv", function (error, data) {
                 .attr("cx", x(d.date));
 
             focus.selectAll(".lineHoverRect")
-                .style("fill", e => demScale(d[e]))
+                .style("fill", e => delScale(d[e]))
                 ;
 
             focus.selectAll(".lineHoverText")
