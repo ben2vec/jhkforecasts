@@ -392,7 +392,7 @@ d3.csv("bubblemap.csv", function (error, data) {
 
   d3.csv("update.csv", function (error, data) {
 
-   var update = data[0].updated
-   document.getElementById("update").innerHTML = update
+    var update = data[0].updated
+    document.getElementById("update").innerHTML = update
   })
 })

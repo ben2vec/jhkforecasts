@@ -11,7 +11,7 @@ d3.csv("statetoplines.csv", function (error, data) {
     console.log(data)
 
     var svg = d3.select("#topline").append("svg")
-        .attr("viewBox", '0 0 1000 200')
+        .attr("viewBox", '0 0 1000 100')
 
 
     svg.append("text")
@@ -38,10 +38,6 @@ d3.csv("statetoplines.csv", function (error, data) {
         .data(data)
         .enter()
         .append("rect")
-        .attr("x", 500)
-        .attr("width", 0)
-        .transition()
-        .duration(1000)
         .attr("x", d => d.xValue)
         .attr("y", 40)
         .attr("width", d => d.width)
@@ -64,20 +60,8 @@ d3.csv("statetoplines.csv", function (error, data) {
 
     d3.csv("update.csv", function (error, data) {
 
-        svg.selectAll("updated")
-            .data(data)
-            .enter()
-            .append("text")
-            .text(d => d.updated)
-            .attr("x", 500)
-            .attr("y", 20)
-            .attr("fill", "black")
-            .attr("font-family","interstate-mono")
-            .attr("font-size", 15)
-            .attr("fill", "grey")
-            .attr("text-anchor", "middle")
-            .attr("font-weight", 900)
-
+        var update = data[0].updated
+        document.getElementById("update").innerHTML = update
 
 
     });

@@ -198,6 +198,9 @@ div.tooltip {
     display: inline;
   }
 }
+#bubblemap {
+  width: 100%;
+}
 
 @media only screen and (min-width:851px) {
   #tipDiv {
@@ -223,6 +226,10 @@ div.tooltip {
   }
   .phone {
     display: none;
+  }
+  #bubblemap {
+    width: 80%;
+    margin-left: 10%;
   }
 }
 
