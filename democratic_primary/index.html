@@ -144,23 +144,28 @@
   
   <hr>
   <h2 style="font-weight: 700;" class="custom-select">Changes Over Time</h2>
-  <select id="selectboxvote" class="custom-select" style="width:200px;">
-    <option value="vote">Projected Vote Share</option>
-
-
-
-  </select>
-  <div id="vote"></div>
   
-  <div id="win"></div>
-  <select id="selectboxdelegates" class="custom-select" style="width:200px;">
-    <option value="Delegates">Projected Delegates</option>
-  </select>
-  <div id="delegates"></div>
-  <div style="text-align:center ;">
+ 
+  <div class="phone" id="votephone"></div>
+
+  <script src="delegatestime copy.js"></script>
+  <div class="phone" style="display: none;"id="delegatesphone"></div>
+  <script src="wintime copy.js"></script>
+  <div class="phone" style="display: none;" id="winphone"></div>
+  <script src="votetime copy.js"></script>
+
+  <div class="computer" id="win"></div>
+  <div class="computer" id="vote"></div>
+  <div class="computer" id="delegates"></div>
+  <div class ="computer" style="text-align:center ;">
     <button class="btn default" onclick="votefunc()" id="votebutton">Projected Vote Share</button>
     <button class="btn default" onclick="winfunc()" id="winbutton">Win Nomination</button>
     <button class="btn default" onclick="delegatesfunc()" id="winbutton">Projected Delegates</button>
+  </div>
+  <div class ="phone" style="text-align:center ;">
+    <button class="btn default" onclick="votephonefunc()" id="votebutton">Projected Vote Share</button>
+    <button class="btn default" onclick="winphonefunc()" id="winbutton">Win Nomination</button>
+    <button class="btn default" onclick="delegatesphonefunc()" id="winbutton">Projected Delegates</button>
   </div>
   <script>
     keyState = "US"
@@ -192,6 +197,43 @@
       var vote = document.getElementById("vote");
       var win = document.getElementById("win");
       var delegates = document.getElementById("delegates");
+
+      vote.style.display = "none";
+      win.style.display = "none";
+      delegates.style.display = "inline";
+    }
+  </script>
+
+  <script>
+  
+    function votephonefunc() {
+      var vote = document.getElementById("votephone");
+      var win = document.getElementById("winphone");
+      var delegates = document.getElementById("delegatesphone");
+
+      vote.style.display = "inline";
+      win.style.display = "none";
+      delegates.style.display = "none";
+    }
+  </script>
+  <script>
+
+    function winphonefunc() {
+      var vote = document.getElementById("votephone");
+      var win = document.getElementById("winphone");
+      var delegates = document.getElementById("delegatesphone");
+
+      vote.style.display = "none";
+      win.style.display = "inline";
+      delegates.style.display = "none";
+    }
+  </script>
+  <script>
+
+    function delegatesphonefunc() {
+      var vote = document.getElementById("votephone");
+      var win = document.getElementById("winphone");
+      var delegates = document.getElementById("delegatesphone");
 
       vote.style.display = "none";
       win.style.display = "none";
