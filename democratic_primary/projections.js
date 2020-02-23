@@ -16,6 +16,7 @@ d3.csv("time.csv", function (error, data) {
 
   data.forEach(function (d) {
     d.date = parseDate(d.forecastdate)
+    d.primarydate = parseDate(d.primarydate)
     return d;
   })
   var newest_day = d3.max(data, d => d.date)
@@ -87,25 +88,13 @@ console.log(svg_height)
     .attr("class", "legend")
     .attr("transform", function (d, i) { return "translate(0," + i * 60 + ")" })
 
-  legend.append("text")
-    .attr("class", "legend-text")
-    .attr("y", 30)
-    .style("fill", d => color(d.candidate))
-    .attr("text-anchor", "start")
-    .attr("dominant-baseline", "middle")
-    .style("font-size", 25)
-    .style("font-weight", 700)
-    .text(d => d.candidate)
-
   legend.append("image")
-    .attr("xlink:href", d => "https://raw.githubusercontent.com/jhkersting/home/master/" + d.candidate + "-01.png")
-    .attr("y", 0)
-    .attr("x", 100)
-    .attr("height", 60)
-    .attr("width", 60)
-    .transition()
-    .duration(1000)
-    .attr("x", d => x(d.vote))
+  .attr("xlink:href", d => "https://raw.githubusercontent.com/jhkersting/home/master/" + d.candidate + "-01.png")
+  .attr("y", 0)
+  .attr("x", 40)
+  .attr("height", 60)
+  .attr("width", 60)
+
 
   legend.append("text")
     .attr("class", "legend-text")
