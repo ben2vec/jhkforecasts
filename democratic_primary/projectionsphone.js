@@ -1,6 +1,6 @@
 
 var parseDate = d3.timeParse("%Y-%m-%d")
-
+var numberformat = d3.format(".1f")
 
 
 var category = ["Biden", "Bloomberg", "Booker", "Buttigieg", "Klobuchar", "Sanders", "Steyer", "Warren", "Yang"]
@@ -16,13 +16,14 @@ d3.csv("time.csv", function (error, data) {
 
     data.forEach(function (d) {
         d.date = parseDate(d.forecastdate)
-        return d;
+    d.primarydate = parseDate(d.primarydate)
+    return d;
     })
     var newest_day = d3.max(data, d => d.date)
-
-    var newest_data = data.filter(d => d.date == newest_day)
-
-
+  var primary_date = data[0].primarydate
+  var newest_data = data.filter(d => d.date == newest_day)
+  var completed = primary_date <= newest_day ? 1 : 0
+  console.log(completed)
     var vote = keys.filter(f => f.includes("vote"))
     var win = keys.filter(f => f.includes("win"))
     var del = keys.filter(f => f.includes("del"))
@@ -112,7 +113,7 @@ d3.csv("time.csv", function (error, data) {
         .attr("dominant-baseline", "middle")
         .style("font-size",30)
         .style("font-weight", 900)
-        .text(d => d.vote + "%")
+        .text(d => numberformat(d.vote) + "%")
 
 
     legend.append("rect")
@@ -143,7 +144,7 @@ d3.csv("time.csv", function (error, data) {
         .attr("dominant-baseline", "middle")
         .style("font-size", 30)
         .style("font-weight", 700)
-        .text(d => +d.win + "%")
+        .text(d => numberformat(d.win) + "%")
 
 
     legend.append("text")
@@ -159,43 +160,75 @@ d3.csv("time.csv", function (error, data) {
 
 
 
-    svg.append("text")
-        .attr("class", "legend-text")
-        .attr("y", 30)
-        .attr("x", 375)
-        .style("fill", "Black")
-        .attr("text-anchor", "middle")
-        .attr("dominant-baseline", "middle")
-        .style("font-size", 25)
-        .style("font-weight", 700)
-        .text("Win " + keyState)
-
-    svg.append("text")
-        .attr("class", "legend-text")
-        .attr("y", 30)
-        .attr("x", 525)
-        .style("fill", "Black")
-        .attr("text-anchor", "middle")
-        .attr("dominant-baseline", "middle")
-        .style("font-size", 25)
-        .style("font-weight", 700)
-        .text("Delegates")
         svg.append("text")
         .attr("class", "legend-text")
-        .attr("y", 30)
+        .attr("y", 37)
         .attr("x", 225)
         .style("fill", "Black")
         .attr("text-anchor", "middle")
         .attr("dominant-baseline", "middle")
-        .style("font-size", 25)
+        .style("font-size", 20)
         .style("font-weight", 700)
-        .text("Proj. Vote")
+        .text("Vote")
+      svg.append("text")
+        .attr("class", "legend-text")
+        .attr("y", 15)
+        .attr("x", 225)
+        .style("fill", "Black")
+        .attr("text-anchor", "middle")
+        .attr("dominant-baseline", "middle")
+        .style("font-size", 20)
+        .style("font-weight", 700)
+        .text("Projected")
+    
+      svg.append("text")
+        .attr("class", "legend-text")
+        .attr("y", 37)
+        .attr("x", 375)
+        .style("fill", "Black")
+        .attr("text-anchor", "middle")
+        .attr("dominant-baseline", "middle")
+        .style("font-size", 20)
+        .style("font-weight", 700)
+        .text(completed == 1 ? "Vote" : keyState)
+      svg.append("text")
+        .attr("class", "legend-text")
+        .attr("y", 15)
+        .attr("x", 375)
+        .style("fill", "Black")
+        .attr("text-anchor", "middle")
+        .attr("dominant-baseline", "middle")
+        .style("font-size", 20)
+        .style("font-weight", 700)
+        .text(completed == 1 ? "Actual" : "Win")
+    
+      svg.append("text")
+        .attr("class", "legend-text")
+        .attr("y", 15)
+        .attr("x", 525)
+        .style("fill", "Black")
+        .attr("text-anchor", "middle")
+        .attr("dominant-baseline", "middle")
+        .style("font-size", 20)
+        .style("font-weight", 700)
+        .text(completed == 1 ? "" : "Projected")
+        svg.append("text")
+        .attr("class", "legend-text")
+        .attr("y", 37)
+        .attr("x", 525)
+        .style("fill", "Black")
+        .attr("text-anchor", "middle")
+        .attr("dominant-baseline", "middle")
+        .style("font-size", 20)
+        .style("font-weight", 700)
+        .text("Delegates")
+    
 
     svg.append("line")
         .attr("x1", 0)
         .attr("x2", 1000)
-        .attr("y1", 45)
-        .attr("y2", 45)
+        .attr("y1", 47)
+        .attr("y2", 47)
         .attr("stroke", "grey")
 
 
