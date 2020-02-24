@@ -1,5 +1,5 @@
 var parseTime = d3.timeParse("%Y-%m-%d");
-
+var numberformat = d3.format(".1f")
 d3.csv("https://raw.githubusercontent.com/jhkersting/jhkforecasts/master/democratic_primary/poll_accuracy.csv", function (data) {
   var raw = data
   var forecasters = data.filter(function (d) { return d.type == "forecast"; });
@@ -93,7 +93,7 @@ d3.csv("https://raw.githubusercontent.com/jhkersting/jhkforecasts/master/democra
     .data(qualifying_pollsters)
     .enter()
     .append("text")
-    .text(d => d.avg_rmse)
+    .text(d => numberformat(d.avg_rmse))
     .attr("x", 600)
     .attr("y", (d, i) => i * 50 + 60)
     .attr("font-size", 25)
@@ -211,7 +211,7 @@ d3.csv("https://raw.githubusercontent.com/jhkersting/jhkforecasts/master/democra
     .data(avg_data)
     .enter()
     .append("text")
-    .text(d => d.avg_rmse)
+    .text(d => numberformat(d.avg_rmse))
     .attr("x", 600)
     .attr("y", (d, i) => i * 30 + 47.5)
     .attr("font-size", 15)
@@ -356,7 +356,7 @@ d3.csv("https://raw.githubusercontent.com/jhkersting/jhkforecasts/master/democra
     .data(forecast_data)
     .enter()
     .append("text")
-    .text(d => d.avg_rmse)
+    .text(d => numberformat(d.avg_rmse))
     .attr("x", 600)
     .attr("y", (d, i) => i * 50 + 60)
     .attr("font-size", 25)
