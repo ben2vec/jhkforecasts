@@ -11,7 +11,7 @@ var div = d3.select("#raceto270").append("div")
 
 var tool_tip1 = d3.tip()
   .attr("class", "d3-tip")
-  .offset([-60, -30])
+  .offset([-60, -80])
   .html("<div id='tipDiv1'></div>");
 
 svg.call(tool_tip1)
@@ -79,28 +79,36 @@ d3.csv("evrace.csv", function (error, data) {
       tool_tip1.show();
       var tipSVG = d3.select("#tipDiv1")
         .append("svg")
-        .attr("width", 150)
+        .attr("width", 160)
         .attr("height", 50);
 
-
+        tipSVG.append("rect")
+        .attr("y1", 0)
+        .attr("x1", 0)
+        .attr("width", 160)
+        .attr("height", 50)
+        .attr("rx", 8)
+        .attr("fill", "white")
+        .attr("stroke", "black")
+        .attr("stroke-width", 2)
 
       tipSVG.append("text")
         .text(d.state)
         .attr("y", 20)
-        .attr("x", 75)
+        .attr("x", 80)
         .attr("fill", "#black")
         .attr("text-anchor", "middle")
         .style("font-weight", "600")
-        .style("font-size", "20");
+        .style("font-size", 18);
 
       tipSVG.append("text")
         .text((Math.abs(d.gopWin - 50) + 50) + "%")
         .attr("y", 40)
-        .attr("x", 75)
+        .attr("x", 80)
         .attr("fill", "#black")
         .attr("text-anchor", "middle")
         .style("font-weight", "600")
-        .style("font-size", "20");
+        .style("font-size", 18);
 
 
 

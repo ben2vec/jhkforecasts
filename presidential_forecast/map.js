@@ -41,7 +41,7 @@ var svg = d3.select("#usmap")
 
 var tool_tip = d3.tip()
   .attr("class", "d3-tip")
-  .offset([-120, -30])
+  .offset([-180, -90])
   .html("<div id='tipDiv'></div>");
 
 svg.call(tool_tip);
@@ -98,6 +98,8 @@ d3.csv("US Map.csv", function (data) {
     }
     console.log(json.features)
     console.log(data)
+
+    
     // Bind the data to the SVG and create one path per GeoJSON feature
     svg.selectAll("path")
       .data(json.features)
@@ -117,76 +119,63 @@ d3.csv("US Map.csv", function (data) {
         var tipSVG = d3.select("#tipDiv")
           .append("svg")
           .attr("width", 175)
-          .attr("height", 120)
+          .attr("height", 175)
           ;
         tipSVG.append("rect")
-          .attr("y1", 0)
-          .attr("x1", 0)
-          .attr("width", 175)
-          .attr("height", 120)
+          .attr("y", 1.5)
+          .attr("x", 1.5)
+          .attr("width", 172)
+          .attr("height", 172)
           .attr("rx", 8)
           .attr("fill", "white")
           .attr("stroke", "black")
           .attr("stroke-width", 2)
 
 
-        tipSVG.append("rect")
-          .attr("fill", "#FF6060")
+
+        tipSVG.append("text")
+          .text(d.properties.name)
+          .attr("y", 20)
+          .attr("x", 87.5)
+          .attr("fill", "#black")
+          .style("font-weight", "600")
+          .style("font-size", "20")
+          .attr("text-anchor", "middle")
+
+        tipSVG.append("image")
+          .attr("xlink:href", d => "https://jhkforecasts.com/Trump-01.png")
+          .attr("x", 90)
           .attr("y", 50)
-          .attr("x", 5)
-          .attr("width", 0)
-          .attr("height", 20)
-          .transition()
-          .duration(300)
-          .attr("width", d.properties.gopWin);
-
-        tipSVG.append("text")
-          .text("Gop Win" + "%")
-          .attr("y", 45)
-          .attr("x", 5),
-
-          tipSVG.append("text")
-            .text(d.properties.name)
-            .attr("y", 20)
-            .attr("x", 10)
-            .attr("fill", "#black")
-            .style("font-weight", "600")
-            .style("font-size", "20");
-
-        tipSVG.append("text")
-          .text("Dem Win" + "%")
-          .attr("y", 105)
-          .attr("x", 5);
-
+          .attr("width", 82)
+          .attr("height", 82)
 
         tipSVG.append("text")
           .text(d.properties.gopWin + "%")
-          .attr("y", 65)
-          .attr("x", 5)
-
-          .attr("x", 110)
-          .attr("fill", "#FF6060")
+          .attr("y", 150)
+          .attr("x", 131.25)
+          .attr("fill", color(100))
           .style("font-weight", "600")
-          .style("font-size", "15");
-
-        tipSVG.append("rect")
-          .attr("fill", "#0091FF")
-          .attr("y", 70)
-          .attr("x", 5)
-          .attr("width", 0)
-          .attr("height", 20)
-          .transition()
-          .duration(300)
-          .attr("width", d.properties.demWin);
+          .style("font-size", 20)
+          .attr("text-anchor", "middle")
 
         tipSVG.append("text")
           .text(d.properties.demWin + "%")
-          .attr("y", 85)
-          .attr("x", 5)
-          .attr("x", 110)
-          .attr("fill", "#0091FF")
+          .attr("y", 150)
+          .attr("x", 43.75)
+          .attr("fill", color(0))
           .style("font-weight", "600")
-          .style("font-size", "15");
+          .style("font-size", 20)
+          .attr("text-anchor", "middle")
+
+        tipSVG.append("text")
+          .text("D")
+          .attr("y", 100)
+          .attr("x", 43.75)
+          .attr("fill", color(0))
+          .style("font-weight", "600")
+          .style("font-size", 40)
+          .attr("text-anchor", "middle")
+
       })
       .on('mouseout',
         function (d) {

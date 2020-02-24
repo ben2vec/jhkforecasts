@@ -1,38 +1,21 @@
 
-/*  This visualization was made possible by modifying code provided by:
- 
-Scott Murray, Choropleth example from "Interactive Data Visualization for the Web" 
-https://github.com/alignedleft/d3-book/blob/master/chapter_12/05_choropleth.html   
-    
-Malcolm Maclean, tooltips example tutorial
-http://www.d3noob.org/2013/01/adding-tooltips-to-d3js-graph.html
- 
-Mike Bostock, Pie Chart Legend
-http://bl.ocks.org/mbostock/3888852  */
-
-
-//Width and height of map
 var width3 = 1020;
 var height3 = 500;
 
-// D3 Projection
 var projection = d3.geoAlbersUsa()
   .translate([width3 / 2, height3 / 2])    // translate to center of screen
   .scale([900]);          // scale things down so see entire US
 
-// Define path generator
 var path = d3.geoPath()               // path generator that will convert GeoJSON to SVG paths
   .projection(projection);  // tell path generator to use albersUsa projection
 
 
-// Define linear scale for output
 var color3 = d3.scaleLinear()
   .domain([0, 50, 100])
   .range(["#FFC000", "white", "#00C181"])
 
 
 
-//Create SVG element and append map to the SVG
 var svg = d3.select("#statesim")
   .append("svg")
   .attr("viewBox", '0 20 1020 480');
@@ -47,20 +30,14 @@ var tool_tip = d3.tip()
 svg.call(tool_tip);
 
 
-// Load in my states data!
 d3.csv("statemaps.csv", function (data) {
-  // setting the range of the input data
   var data = data.filter(function (d) { return d.statecat == keyState; })
-  // Load GeoJSON data and merge with states data
   d3.json("us-states.json", function (json) {
 
-    // Loop through each state data value in the .csv file
     for (var i = 0; i < data.length; i++) {
 
-      // Grab State Name
       var dataState = data[i].state;
 
-      // Grab data value 
       var value = data[i].value
 
       var label = data[i].label
@@ -72,13 +49,11 @@ d3.csv("statemaps.csv", function (data) {
       var rank = data[i].rank
         ;
 
-      // Find the corresponding state inside the GeoJSON
       for (var j = 0; j < json.features.length; j++) {
         var jsonState = json.features[j].properties.name;
 
         if (dataState == jsonState) {
 
-          // Copy the data value into the JSON
           json.features[j].properties.value = value
           json.features[j].properties.xValue = xvalue
           json.features[j].properties.yValue = yvalue
@@ -86,14 +61,12 @@ d3.csv("statemaps.csv", function (data) {
           json.features[j].properties.rank = rank
             ;
 
-          // Stop looking through the JSON
 
           break;
         }
       }
     }
     console.log(json.features)
-    // Bind the data to the SVG and create one path per GeoJSON feature
     svg.selectAll("path")
       .data(json.features)
       .enter()
@@ -116,10 +89,20 @@ d3.csv("statemaps.csv", function (data) {
         tool_tip.show();
         var tipSVG = d3.select("#tipDiv")
           .append("svg")
-          .attr("width", 170)
+          .attr("width", 175)
           .attr("height", 120)
           ;
 
+        
+        tipSVG.append("rect")
+        .attr("y1", 0)
+        .attr("x1", 0)
+        .attr("width", 175)
+        .attr("height", 120)
+        .attr("rx", 8)
+        .attr("fill", "white")
+        .attr("stroke", "black")
+        .attr("stroke-width", 2)
 
 
 
