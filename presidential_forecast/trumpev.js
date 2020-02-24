@@ -1,3 +1,4 @@
+var number = d3.format(".2f")
 var category = ["Trump", "Democrats", "3rd Party"]
       // since Category B and E are really close to each other, assign them diverging colors
       var colorScale = d3.scaleOrdinal()
@@ -10,7 +11,7 @@ var category = ["Trump", "Democrats", "3rd Party"]
         
       console.log(data)  
       
-      var max = d3.max(data,d=> d.demPerc)
+      var max = Math.round(d3.max(data,d=> d.demPerc)*10)/10
 
       console.log(max)
         
@@ -136,7 +137,7 @@ var category = ["Trump", "Democrats", "3rd Party"]
 
 
             svg.append("text")
-            .text(max+"%")
+            .text(number(max)+"%")
             .attr("x",10)
             .attr("y", 5)
             .attr("fill","black")
@@ -145,7 +146,7 @@ var category = ["Trump", "Democrats", "3rd Party"]
             .attr("text-anchor","middle")
 
             svg.append("text")
-            .text(max/2+"%")
+            .text(number(max/2)+"%")
             .attr("x",10)
             .attr("y", 75)
             .attr("fill","black")
