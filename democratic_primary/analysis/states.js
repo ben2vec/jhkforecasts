@@ -14,6 +14,7 @@ d3.csv("https://raw.githubusercontent.com/jhkersting/jhkforecasts/master/democra
       third: d.third,
       fourth: d.fourth,
       fifth: d.fifth,
+      sixth: d.sixth,
       RMSE: d.RMSE,
     }
   })
@@ -250,6 +251,7 @@ d3.csv("https://raw.githubusercontent.com/jhkersting/jhkforecasts/master/democra
       third: d.third,
       fourth: d.fourth,
       fifth: d.fifth,
+      sixth: d.sixth,
       RMSE: d.RMSE,
       link: forecastslinks[forecasts.indexOf(d.name)]
     }
