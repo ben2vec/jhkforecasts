@@ -1,6 +1,6 @@
 var candidates = ["Trump", "Biden", "Bloomberg", "Buttigeig", "Klobuchar", "Sanders", "Steyer", "Warren"]
 var timeparse = d3.timeParse("%m/%d/%y")
-
+var time_scale = 86400000
 d3.csv("pollster-ratings.csv", pollster_ratings => {
 
     var pollster_names = pollster_ratings.map((d, i) => {
@@ -11,15 +11,49 @@ d3.csv("pollster-ratings.csv", pollster_ratings => {
         return d["538Grade"]
     })
     var pollster_bias = pollster_ratings.map((d, i) => {
-        return d.MeanRevertedBias
+        return +d.MeanRevertedBias
     })
+    var grade_scale = [
+        { Grade: "A+", Value: 1.5 },
+        { Grade: "A", Value: 1.35 },
+        { Grade: "A-", Value: 1.2 },
+        { Grade: "A/B", Value: 1.1 },
+        { Grade: "B+", Value: 1 },
+        { Grade: "B", Value: .925 },
+        { Grade: "B-", Value: .85 },
+        { Grade: "B/C", Value: .8 },
+        { Grade: "C+", Value: .7 },
+        { Grade: "C", Value: .65 },
+        { Grade: "C-", Value: .55 },
+        { Grade: "C/D", Value: .5 },
+        { Grade: "D+", Value: .4 },
+        { Grade: "D", Value: .3 },
+        { Grade: "D-", Value: .2 },
+        { Grade: "", Value: .7 },
+    ]
+    var pollster_grade_letter = grade_scale.map((d) => {
+        return d.Grade
+    })
+
+    var pollster_grade_value = grade_scale.map((d) => {
+        return d.Value
+    })
+
     d3.csv("partisanlean.csv", pvi => {
         var pvi = pvi.map((d, i) => {
             return {
                 state: d.state,
-                pvi: d.pvi
+                pvi: d.pvi,
+                thirdparty: +d.thirdparty
             }
         })
+        var us = {
+            state: "US",
+            pvi: 0,
+            thirdparty: 1
+
+        }
+        pvi.push(us)
         console.log(pvi)
         d3.csv("https://projects.fivethirtyeight.com/polls-page/president_polls.csv", data => {
             var data = data.filter(d => d.answer != "Schultz")
@@ -52,19 +86,79 @@ d3.csv("pollster-ratings.csv", pollster_ratings => {
                     date: timeparse(datanew[i][0].end_date),
                     population: datanew[i][0].population,
                     grade: pollster_grade[pollster_names.indexOf(datanew[i][0].pollster)] == undefined ? "C+" : pollster_grade[pollster_names.indexOf(datanew[i][0].pollster)],
-                    bias: pollster_bias[pollster_names.indexOf(datanew[i][0].pollster)] == undefined ? "C+" : pollster_grade[pollster_names.indexOf(datanew[i][0].pollster)],
+                    bias: pollster_bias[pollster_names.indexOf(datanew[i][0].pollster)] == undefined ? "C+" : pollster_bias[pollster_names.indexOf(datanew[i][0].pollster)],
                     dem: datanew[i][0].answer,
                     gop: datanew[i][1].answer,
                     dem_pct: +datanew[i][0].pct,
                     gop_pct: +datanew[i][1].pct,
-                    poll_index: datanew[i][0].state == "" ? "US" : datanew[i][0].state+ datanew[i][0].pollster,
+                    poll_index: datanew[i][0].state == "" ? "US" + datanew[i][0].pollster : datanew[i][0].state + datanew[i][0].pollster,
                 }
             })
-            var data_new = data_new.filter(d=>d.gop =="Trump")
-            
-     
-            
-            console.log(data_new)
+            var data_new = data_new.filter(d => d.gop == "Trump")
+
+            update(d3.select('#selectbox').property('value'));
+            function update(input) {
+                var data_filtered = data_new.filter(d => d.dem == input)
+
+                data_filtered.forEach((d, i) => {
+                    d.grade_value = pollster_grade_value[pollster_grade_letter.indexOf(d.grade)]
+                    d.population_adj = d.population == "lv" ? 1.33 : d.population == "rv" ? 1 : .7
+                    d.n_adjusted = d.n > 4000 ? Math.pow((d.n - 4000), .2) + 27 : Math.pow(d.n, .4)
+                    d.weight = d.n_adjusted * d.population_adj
+                    d.sum = (d.dem_pct + d.gop_pct)
+                    d.weight = Math.pow(d.weight, d.grade_value) * ((d.dem_pct + d.gop_pct) / 100)
+                    d.time_weight = d.weight / (1 + (((new Date() - d.date) / time_scale) / 20))
+                    d.dem_adj = (d.dem_pct - (d.bias / 2))
+                    d.gop_adj = (d.gop_pct + (d.bias / 2))
+                    return d;
+                })
+
+
+                var data_filtered = d3.nest()
+                    .key(d => d.poll_id)
+                    .entries(data_filtered)
+
+                var best_poll = []
+                for (var i = 0; i < data_filtered.length; i++) {
+                    var polls = data_filtered[i].values
+                    polls.sort((a, b) => b.weight - a.weight)
+                    var poll = polls[0]
+                    best_poll.push(poll)
+                }
+                var data_filtered = d3.nest()
+                    .key(d => d.poll_index)
+                    .entries(best_poll)
+                var weighted_polls = []
+                for (var i = 0; i < data_filtered.length; i++) {
+                    var polls = data_filtered[i].values
+                    polls.sort((a, b) => b.date - a.date)
+                    polls.forEach((d, j) => {
+                        d.weight = d.time_weight / Math.pow(j + 1, 2)
+                        return d;
+                    })
+                    polls.sort((a, b) => b.weight - a.weight)
+                    var poll = polls[0]
+                    weighted_polls.push(poll)
+                }
+                var data_filtered = weighted_polls
+
+                console.log(data_filtered)
+
+                data_filtered.forEach((d, i) => {
+
+                    return d;
+                })
+
+
+
+            }
+
+            var selectbox = d3.select("#selectbox")
+                .on("change", function () {
+                    update(this.value);
+                })
+
+
 
         })
     })
