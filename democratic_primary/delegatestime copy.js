@@ -124,50 +124,30 @@ d3.csv("time.csv", function (error, data) {
         .attr("transform", "translate(0," + (heightph - marginph.bottom) + ")")
         .call(d3.axisBottom(x).ticks(6)
             .tickFormat(d3.timeFormat("%b")))
+            .call(d3.axisBottom(x).tickSize(-700)
+            .tickFormat(d3.timeFormat("%b")))
         .call(g => {
             var years = x.ticks(d3.timeYear.every(1))
             var xshift = 0
             g.selectAll("text")
-                .style("text-anchor", "right")
+                .style("text-anchor", "middle")
                 .attr("y", axisPad)
                 .attr('fill', 'black')
                 .attr('font-size', 15)
-                .attr('font-weight', 400)
-            g.selectAll("line").remove()
+                .attr('font-weight', 800)
+                .attr("transform",)
+
+            g.selectAll("line") .attr("opacity",.5)
+            .attr("stroke","grey")
 
 
             g.select(".domain")
-                .remove()
 
         })
 
     demadjust = new Date(2020, 0, 4);
 
-    svg.append("line")
-        .attr("x1", x(demadjust))
-        .attr("x2", x(demadjust))
-        .attr("y1", y(0))
-        .attr("y2", 10)
-        .attr("stroke", "grey")
-
-    svg.append("line")
-        .attr("x1", x(maxdate))
-        .attr("x2", x(maxdate))
-        .attr("y1", y(0))
-        .attr("y2", 30)
-        .attr("stroke", "grey")
-
-
-
-
-    svg.append("text")
-        .attr("x", x(demadjust) - 5)
-        .attr("y", "20")
-        .attr('fill', 'grey')
-        .attr('font-size', '15')
-        .attr('font-weight', 500)
-        .attr("text-anchor", "end")
-        .text("Demographic Calculation Adjusted >")
+    
 
 
     svg.append("g")
@@ -224,13 +204,14 @@ d3.csv("time.csv", function (error, data) {
                     .style("text-anchor", "right")
                     .attr("y", 0)
                     .attr('fill', 'black')
-                    .attr('font-size', 18)
-                    .attr('font-weight', 500)
-                g.selectAll("line").remove()
+                    .attr('font-size', 15)
+                    .attr('font-weight', 800)
+                g.selectAll("line")
+                .attr("opacity",.5)
+                .attr("stroke","grey")
 
 
                 g.select(".domain")
-                    .remove()
 
             })
 
@@ -243,7 +224,7 @@ d3.csv("time.csv", function (error, data) {
             .attr("class", "line cities")
             .style("stroke", d => z(d.id))
             .style("stroke-width",4)
-            .style("opacity", d => z(d.id) == "#a4b1b5" ? .3 : 1)
+            .style("opacity", d => z(d.id) == "#a4b1b5" ? .3 : .8)
             .merge(city)
             .transition().duration(speed)
             .attr("d", d => line(d.values))
@@ -372,13 +353,8 @@ d3.csv("time.csv", function (error, data) {
         .attr("text-anchor", "middle")
         .style("font-size", 15)
         .style("font-weight", 700)
-        .text(keyState == "US" ? "Projected Vote Share" : "Projected Vote in " + keyState)
-    svg.append("line")
-        .attr("x1", x(mindate))
-        .attr("x2", x(mindate))
-        .attr("y1", y(0))
-        .attr("y2", 30)
-        .attr("stroke", "grey")
+        .text("Projected Delegates")
+   
 
 
 

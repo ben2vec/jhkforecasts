@@ -386,6 +386,7 @@ div.tooltip {
   padding: 10px 10px;
   font-size: 2vw;
   font-family: brandon-grotesque;
+  font-weight: 800;
   border-radius: 10px;
   cursor: pointer;
 }
