@@ -98,7 +98,7 @@ d3.csv("time.csv", function (error, data) {
         svg.append("g")
         .attr("class", "x-axis")
         .attr("transform", "translate(0," + (height - margin.bottom) + ")")
-        .call(d3.axisBottom(x).tickSize(-290)
+        .call(d3.axisBottom(x).tickSize(-300)
             .tickFormat(d3.timeFormat("%b")))
         .call(g => {
             var years = x.ticks(d3.timeYear.every(1))
@@ -279,7 +279,7 @@ d3.csv("time.csv", function (error, data) {
             focus.selectAll(".lineHoverText")
                 .attr("transform",
                     "translate(" + 900 + "," + 440 + ")").style("font-weight", 700)
-                .text(e => d[e] == "" ? "-" : d[e]);
+                .text(e => d[e] == 0 ? "-" : d[e]);
 
 
 
