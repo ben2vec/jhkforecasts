@@ -353,7 +353,7 @@ d3.csv("time.csv", function (error, data) {
         .attr("text-anchor", "middle")
         .style("font-size", 15)
         .style("font-weight", 700)
-        .text(keyState == "US" ? "Win Nomination" : "Win" + keyState)
+        .text(keyState == "US" ? "Win Nomination" : "Win " + keyState)
 
     svg.append("line")
         .attr("x1", x(mindate))

@@ -124,7 +124,7 @@ d3.csv("time.csv", function (error, data) {
     .attr("width", 80)
     .attr("height", 50)
     .attr("rx", 10)
-    .style("fill", d => demScale((d.delegates / total_delegates) * 100))
+    .style("fill", d =>demScale(d.win))
 
   legend.append("rect")
     .attr("class", "lineHoverRect")
@@ -133,7 +133,7 @@ d3.csv("time.csv", function (error, data) {
     .attr("width", 80)
     .attr("height", 50)
     .attr("rx", 10)
-    .style("fill", d => demScale(d.win))
+    .style("fill", d =>d.del==0?"white" :demScale((d.delegates / total_delegates) * 100))
   legend.append("rect")
     .attr("class", "lineHoverRect")
     .attr("y", 0)

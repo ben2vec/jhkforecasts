@@ -368,7 +368,7 @@ d3.csv("time.csv", function (error, data) {
         .attr("text-anchor", "middle")
         .style("font-size", 15)
         .style("font-weight", 700)
-        .text(keyState == "US" ? "Projected Vote Share" : "Projected Vote in " + keyState)
+        .text("Projected Vote")
     svg.append("line")
         .attr("x1", x(mindate))
         .attr("x2", x(mindate))
