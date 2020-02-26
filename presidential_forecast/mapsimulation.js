@@ -93,7 +93,7 @@ d3.csv("simulation.csv", function (data) {
   data.forEach(function (d, i) {
     d.index = i + 1;
     d.indexev = d.index == 1 ? 0 : data[i - 1].indexev + data[i - 1].electoralvotes;
-    d.tippingpoint = d.indexev<270?d.indexev+d.electoralvotes>=270?1:0:0
+    d.tippingpoint = d.indexev < 270 ? d.indexev + d.electoralvotes >= 270 ? 1 : 0 : 0
     return d;
   })
 
@@ -383,37 +383,37 @@ d3.csv("simulation.csv", function (data) {
           tool_tip.hide()
         })
       .transition()
-        .delay( function(d,i){return 30*i})
-        .style("fill", d => d.properties.margin >= 0 ? gopwincol : demwincol)
-      
+      .delay(function (d, i) { return 30 * i })
+      .style("fill", d => d.properties.margin >= 0 ? gopwincol : demwincol)
+
       ;
-      svg.selectAll("path2")
+    svg.selectAll("path2")
       .data(json.features)
-        .enter()
-        .append("path")
-        .attr("class","states")
+      .enter()
+      .append("path")
+      .attr("class", "states")
       .attr("d", path)
-      .style("stroke", d => d.properties.tippingpoint ==1 ? "black": "none")
+      .style("stroke", d => d.properties.tippingpoint == 1 ? "black" : "none")
       .style("stroke-width", "2")
       .style("fill", "none")
 
-      svg.append("rect")
+    svg.append("rect")
       .attr("x", 850)
       .attr("y", 350)
       .attr("width", 20)
       .attr("height", 20)
       .style("stroke", "black")
-.style("stroke-width", 2)
-.attr("ry","6")
-.style("fill", "none");
+      .style("stroke-width", 2)
+      .attr("ry", "6")
+      .style("fill", "none");
 
-svg.append("text")
-  .text("Tipping Point")
-  .attr("x", 760)
-.attr("y", 365)
-.attr("fill","black")
-.style("font-weight","500")
-.style("font-size","15");
+    svg.append("text")
+      .text("Tipping Point")
+      .attr("x", 760)
+      .attr("y", 365)
+      .attr("fill", "black")
+      .style("font-weight", "500")
+      .style("font-size", "15");
 
     var x = d3.scaleLinear()
       .domain([0, 538])
@@ -507,11 +507,11 @@ svg.append("text")
 
 
     legend.append("rect")
-      .attr("x",d=>d.margin>=0? 530:470)
+      .attr("x", d => d.margin >= 0 ? 530 : 470)
       .attr("y", -27)
       .attr("width", 60)
       .attr("height", 24)
-      .style("fill", d=>d.margin>=0? gopwincol:demwincol)
+      .style("fill", d => d.margin >= 0 ? gopwincol : demwincol)
 
     legend.append("text")
       .attr("class", "legend-text")
@@ -553,7 +553,7 @@ svg.append("text")
       .text(d => formatvalue(d.gopvote) + "%")
       .attr("text-anchor", "middle")
 
-      legend.append("text")
+    legend.append("text")
       .attr("class", "legend-text")
       .attr("x", 620)
       .attr("y", -10)
@@ -568,21 +568,21 @@ svg.append("text")
       .attr("class", "legend-text")
       .attr("x", 750)
       .attr("y", -10)
-      .style("fill", d => d.margin>=0?gopwincol:demwincol)
+      .style("fill", d => d.margin >= 0 ? gopwincol : demwincol)
       .style("font-size", 12)
       .attr("font-weight", 500)
-      .text(d => d.margin>=0?"Trump +"+formatValue(d.margin) + "%":"Democrat +"+formatValue(Math.abs(d.margin)) + "%")
+      .text(d => d.margin >= 0 ? "Trump +" + formatValue(d.margin) + "%" : "Democrat +" + formatValue(Math.abs(d.margin)) + "%")
       .attr("text-anchor", "middle")
 
 
-      legend.append("text")
+    legend.append("text")
       .attr("class", "legend-text")
       .attr("x", 350)
       .attr("y", -10)
-      .style("fill", d=>d.tippingpoint==1?gopev>=270?gopwincol:demwincol:"black")
+      .style("fill", d => d.tippingpoint == 1 ? gopev >= 270 ? gopwincol : demwincol : "black")
       .style("font-size", 15)
       .attr("font-weight", 500)
-      .text(d => d.indexev+d.electoralvotes)
+      .text(d => d.indexev + d.electoralvotes)
       .attr("text-anchor", "middle")
 
 
@@ -595,7 +595,7 @@ svg.append("text")
       .attr("stroke-width", 1)
       .attr("stroke", "#E2E2E2")
 
-      svg.append("text")
+    svg.append("text")
       .attr("class", "legend-text")
       .attr("x", 130)
       .attr("y", 1060)
@@ -605,7 +605,7 @@ svg.append("text")
       .text("State")
       .attr("text-anchor", "start")
 
-      svg.append("text")
+    svg.append("text")
       .attr("class", "legend-text")
       .attr("x", 330)
       .attr("y", 1060)
@@ -615,7 +615,7 @@ svg.append("text")
       .text("Electoral Votes")
       .attr("text-anchor", "middle")
 
-      svg.append("text")
+    svg.append("text")
       .attr("class", "legend-text")
       .attr("x", 450)
       .attr("y", 1060)
@@ -625,7 +625,7 @@ svg.append("text")
       .text("Democrat ranked EVs")
       .attr("text-anchor", "middle")
 
-      svg.append("text")
+    svg.append("text")
       .attr("class", "legend-text")
       .attr("x", 600)
       .attr("y", 1060)
@@ -635,7 +635,7 @@ svg.append("text")
       .text("Democrat")
       .attr("text-anchor", "middle")
 
-      svg.append("text")
+    svg.append("text")
       .attr("class", "legend-text")
       .attr("x", 660)
       .attr("y", 1060)
@@ -645,7 +645,7 @@ svg.append("text")
       .text("Trump")
       .attr("text-anchor", "middle")
 
-      svg.append("text")
+    svg.append("text")
       .attr("class", "legend-text")
       .attr("x", 720)
       .attr("y", 1060)
@@ -655,7 +655,7 @@ svg.append("text")
       .text("3rd Party")
       .attr("text-anchor", "middle")
 
-      svg.append("text")
+    svg.append("text")
       .attr("class", "legend-text")
       .attr("x", 850)
       .attr("y", 1060)
@@ -675,13 +675,13 @@ svg.append("text")
 
 
 
-    d3.csv("US Map.csv", function (error, data) {
+    d3.csv("US Map.csv", maplabels=> {
 
 
 
 
       svg.selectAll("labels")
-        .data(data)
+        .data(maplabels)
         .enter()
         .append("text")
         .attr("class", "winner")

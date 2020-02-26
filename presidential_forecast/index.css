@@ -39,7 +39,6 @@
    color: black;
  }
 
-
  .center {
    display: center;
    margin-left: auto;
@@ -92,13 +91,14 @@
    font-weight: 500;
  }
 
- #selectbox{
-  font-family: brandon-grotesque, sans-serif;
-  font-weight: 700;
-  font-size: 2vw;
-  text-align: center;
-  padding: 10%;
+ #selectbox {
+   font-family: brandon-grotesque, sans-serif;
+   font-weight: 700;
+   font-size: 2vw;
+   text-align: center;
+   padding: 10%;
  }
+
  input {
    margin-right: 10px;
    font-family: brandon-grotesque, sans-serif;
@@ -122,27 +122,25 @@
  }
 
  .radio-toolbar label {
-  border: none;
-  color: black;
-  padding: 10px 10px;
-  font-size: 16px;
-  font-family: brandon-grotesque;
-  border-radius: 10px;
-  cursor: pointer;;
-}
+   border: none;
+   color: black;
+   padding: 10px 10px;
+   font-size: 16px;
+   font-family: brandon-grotesque;
+   border-radius: 10px;
+   cursor: pointer;
+   ;
+ }
 
-.radio-toolbar label:hover {
-  background-color: #ddd;
-}
+ .radio-toolbar label:hover {
+   background-color: #ddd;
+ }
 
-
-
-.radio-toolbar input[type="radio"]:checked + label {
-    background-color: #e7e7e7;
-    stroke: rgb(0, 0, 0);
-    stroke-width: 1px;
-}
-
+ .radio-toolbar input[type="radio"]:checked+label {
+   background-color: #e7e7e7;
+   stroke: rgb(0, 0, 0);
+   stroke-width: 1px;
+ }
 
  .d3-tip {
    line-height: 1;
@@ -156,7 +154,6 @@
    font-size: 12px;
    stroke-width: 2px;
  }
- 
 
  @media only screen and (max-width:600px) {
    #tipDiv {
@@ -180,13 +177,12 @@
    #bubblemap2 {
      display: inline;
    }
-
    #projected {
-    display: none;
-  }
-  #phoneprojectedvote {
-    display: inline;
-  }
+     display: none;
+   }
+   #phoneprojectedvote {
+     display: inline;
+   }
    .computer {
      display: none;
    }
@@ -218,12 +214,15 @@
      display: none;
    }
    #projected {
-    display: inline;
-  }
-  #phoneprojectedvote {
-    display: none;
-  }
-
+     display: inline;
+   }
+   #phoneprojectedvote {
+     display: none;
+   }
+   #usmap {
+     width: 80%;
+     margin-left: 10%;
+   }
    .computer {
      display: inline;
    }

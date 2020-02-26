@@ -1,4 +1,4 @@
-var candidates = ["Trump", "Biden", "Bloomberg", "Buttigeig", "Klobuchar", "Sanders", "Steyer", "Warren"]
+var candidates = ["Biden", "Bloomberg", "Buttigeig", "Klobuchar", "Sanders", "Steyer", "Warren"]
 var timeparse = d3.timeParse("%m/%d/%y")
 var time_scale = 86400000
 var national_third_party = .03
@@ -16,12 +16,12 @@ var thirdwincol = "#FFE130"
 
 
 
-var formatValue = d3.format(".1f");
+var numberformat = d3.format(".1%");
 var formatvalue = d3.format(".3");
 d3.csv("https://projects.jhkforecasts.com/presidential_forecast/pollster-ratings.csv", pollster_ratings => {
-    var svg = d3.select("#map")
+    var svg = d3.select("#usmap")
         .append("svg")
-        .attr("viewBox", '100 -50 820 2800');
+        .attr("viewBox", '100 -150 820 2800');
 
     var width3 = 1020;
     var height3 = 500;
@@ -37,7 +37,7 @@ d3.csv("https://projects.jhkforecasts.com/presidential_forecast/pollster-ratings
 
     var tool_tip = d3.tip()
         .attr("class", "d3-tip")
-        .offset([-150, -30])
+        .offset([-180, -90])
         .html("<div id='tipDiv'></div>");
 
     svg.call(tool_tip);
@@ -136,9 +136,11 @@ d3.csv("https://projects.jhkforecasts.com/presidential_forecast/pollster-ratings
             })
             var data_new = data_new.filter(d => d.gop == "Trump")
 
-            update(d3.select('#selectbox').property('value'));
-            function update(input) {
-                var data_filtered = data_new.filter(d => d.dem == input)
+            var state_data = []
+            var national_data = []
+            for (var c = 0; c < candidates.length; c++) {
+                pvi[22].pvi = candidates[c] == "Klobuchar" ? -12 : pvi[22].pvi
+                var data_filtered = data_new.filter(d => d.dem == candidates[c])
 
                 data_filtered.forEach((d, i) => {
                     d.grade_value = pollster_grade_value[pollster_grade_letter.indexOf(d.grade)]
@@ -224,6 +226,7 @@ d3.csv("https://projects.jhkforecasts.com/presidential_forecast/pollster-ratings
                     var dem = 1 - third_party - gop
                     dem_win = jStat.normal.cdf(margin, 0, sim_stdev)
                     var proj = {
+                        candidate: candidates[c],
                         state: polling_avg[i].state,
                         electoralvotes: pvi[i].electoralvotes,
                         margin: margin,
@@ -258,6 +261,7 @@ d3.csv("https://projects.jhkforecasts.com/presidential_forecast/pollster-ratings
                     var gop_win = gop_ev > 268 ? 1 : 0
                     var dem_win = dem_ev > 269 ? 1 : 0
                     var push_data = {
+                        candidate: candidates[c],
                         gop_ev: gop_ev,
                         dem_ev: dem_ev,
                         gop_win: gop_win,
@@ -266,31 +270,99 @@ d3.csv("https://projects.jhkforecasts.com/presidential_forecast/pollster-ratings
 
                     sim_data.push(push_data)
                 }
+                gop_win_election = d3.mean(sim_data, d => d.gop_win)
+                var candidate_win = {
+                    candidate: candidates[c],
+                    gop_win: d3.mean(sim_data, d => d.gop_win),
+                    dem_win: 1 - gop_win_election
+                }
+                national_data.push(candidate_win)
+                state_data.push(state_proj)
+            }
+            console.log(national_data)
 
-                var gop_win_election = d3.mean(sim_data, d => d.gop_win)
-                console.log(gop_win_election)
+            var Biden = state_data[0]
+            var Bloomberg = state_data[1]
+            var Buttigeig = state_data[2]
+            var Klobuchar = state_data[3]
+            var Sanders = state_data[4]
+            var Steyer = state_data[5]
+            var Warren = state_data[6]
+
+            var state_cand = Biden.concat(Bloomberg)
+            var state_cand = state_cand.concat(Buttigeig)
+            var state_cand = state_cand.concat(Klobuchar)
+            var state_cand = state_cand.concat(Sanders)
+            var state_cand = state_cand.concat(Steyer)
+            var state_cand = state_cand.concat(Warren)
+
+          
+            var state_data = state_cand
+            console.log(state_data)
+            update(d3.select('#selectbox').property('value'));
+            function update(input) {
+                var state = state_data.filter(d=>d.candidate == input)
+                var national = national_data.filter(d=>d.candidate == input)
+                console.log(national)
                 d3.json("us-states.json", function (json) {
 
 
-                    for (var i = 0; i < data.length; i++) {
+                    for (var i = 0; i < state.length; i++) {
 
 
-                        var dataState = state_proj[i].state;
-                        var dataState = state_proj[i].gop_win;
-                       
+                        var dataState = state[i].state;
+                        var gop_win = state[i].gop_win;
+                        var dem_win = state[i].dem_win;
+                        var ev = state[i].electoralvotes;
+
+
                         for (var j = 0; j < json.features.length; j++) {
                             var jsonState = json.features[j].properties.name;
 
                             if (dataState == jsonState) {
                                 json.features[j].properties.gop_win = gop_win
+                                json.features[j].properties.dem_win = dem_win
+                                json.features[j].properties.ev = ev
 
-                                
+
                                 break;
                             }
                         }
                     }
+
+                    svg.append("image")
+                        .attr("xlink:href", d => "https://jhkforecasts.com/Trump-01.png")
+                        .attr("x", 530)
+                        .attr("y", -100)
+                        .attr("width", 100)
+                        .attr("height", 100)
+
+                    svg.append("image")
+                        .attr("xlink:href", d => "https://jhkforecasts.com/" + input + "-01.png")
+                        .attr("x", 400)
+                        .attr("y", -100)
+                        .attr("width", 100)
+                        .attr("height", 100)
+
+                    svg.append("text")
+                        .text(numberformat(national[0].gop_win))
+                        .attr("y", 40)
+                        .attr("x", 580)
+                        .attr("fill", gopwincol)
+                        .style("font-weight", "600")
+                        .style("font-size", 30)
+                        .attr("text-anchor", "middle")
+
+                    svg.append("text")
+                        .text(numberformat(national[0].dem_win))
+                        .attr("y", 40)
+                        .attr("x", 450)
+                        .attr("fill", demwincol)
+                        .style("font-weight", "600")
+                        .style("font-size", 30)
+                        .attr("text-anchor", "middle")
+
                     svg.append("g")
-                        .attr("id", "margin")
                         .selectAll("path2")
                         .data(json.features)
                         .enter()
@@ -298,26 +370,68 @@ d3.csv("https://projects.jhkforecasts.com/presidential_forecast/pollster-ratings
                         .attr("d", path)
                         .style("stroke", "BLACK")
                         .style("stroke-width", "1")
-                        .style("fill", d => color(d.properties.win))
+                        .style("fill", d => color(d.properties.gop_win))
                         .on("mouseover", function (d) {
 
                             tool_tip.show();
                             var tipSVG = d3.select("#tipDiv")
                                 .append("svg")
                                 .attr("width", 175)
-                                .attr("height", 150)
+                                .attr("height", 175)
                                 ;
                             tipSVG.append("rect")
-                                .attr("y1", 0)
-                                .attr("x1", 0)
-                                .attr("width", 175)
-                                .attr("height", 150)
+                                .attr("y", 1.5)
+                                .attr("x", 1.5)
+                                .attr("width", 172)
+                                .attr("height", 172)
                                 .attr("rx", 8)
                                 .attr("fill", "white")
                                 .attr("stroke", "black")
                                 .attr("stroke-width", 2)
 
-                            
+
+
+                            tipSVG.append("text")
+                                .text(d.properties.name)
+                                .attr("y", 20)
+                                .attr("x", 87.5)
+                                .attr("fill", "#black")
+                                .style("font-weight", "600")
+                                .style("font-size", "20")
+                                .attr("text-anchor", "middle")
+
+                            tipSVG.append("image")
+                                .attr("xlink:href", d => "https://jhkforecasts.com/Trump-01.png")
+                                .attr("x", 90)
+                                .attr("y", 50)
+                                .attr("width", 82)
+                                .attr("height", 82)
+
+                            tipSVG.append("image")
+                                .attr("xlink:href", d => "https://jhkforecasts.com/" + input + "-01.png")
+                                .attr("x", 5.5)
+                                .attr("y", 50)
+                                .attr("width", 82)
+                                .attr("height", 82)
+
+                            tipSVG.append("text")
+                                .text(numberformat(d.properties.gop_win))
+                                .attr("y", 150)
+                                .attr("x", 131.25)
+                                .attr("fill", color(100))
+                                .style("font-weight", "600")
+                                .style("font-size", 20)
+                                .attr("text-anchor", "middle")
+
+                            tipSVG.append("text")
+                                .text(numberformat(d.properties.dem_win))
+                                .attr("y", 150)
+                                .attr("x", 43.75)
+                                .attr("fill", color(0))
+                                .style("font-weight", "600")
+                                .style("font-size", 20)
+                                .attr("text-anchor", "middle")
+
 
                         })
                         .on('mouseout',
@@ -325,6 +439,22 @@ d3.csv("https://projects.jhkforecasts.com/presidential_forecast/pollster-ratings
                                 tool_tip.hide()
                             })
 
+                    d3.csv("https://projects.jhkforecasts.com/presidential_forecast/US%20Map.csv", maplabels => {
+
+                        svg.selectAll("labels")
+                            .data(maplabels)
+                            .enter()
+                            .append("text")
+                            .attr("class", "winner")
+                            .text(d => d.label)
+                            .attr("x", d => d.xValue)
+                            .attr("y", d => d.yValue)
+                            .attr("font-family", "brandon-grotesque")
+                            .attr("font-weight", "700")
+                            .attr("font-size", 12)
+                            .attr("fill", "black")
+                            .attr("text-anchor", "middle")
+                    })
                 })
             }
 
