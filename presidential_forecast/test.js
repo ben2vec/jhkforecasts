@@ -1,7 +1,8 @@
 var candidates = ["Trump", "Biden", "Bloomberg", "Buttigeig", "Klobuchar", "Sanders", "Steyer", "Warren"]
 var timeparse = d3.timeParse("%m/%d/%y")
 var time_scale = 86400000
-d3.csv("pollster-ratings.csv", pollster_ratings => {
+var national_third_party = .03
+d3.csv("https://projects.jhkforecasts.com/presidential_forecast/pollster-ratings.csv", pollster_ratings => {
 
     var pollster_names = pollster_ratings.map((d, i) => {
         return d.Pollster
@@ -39,7 +40,7 @@ d3.csv("pollster-ratings.csv", pollster_ratings => {
         return d.Value
     })
 
-    d3.csv("partisanlean.csv", pvi => {
+    d3.csv("https://projects.jhkforecasts.com/presidential_forecast/partisanlean.csv", pvi => {
         var pvi = pvi.map((d, i) => {
             return {
                 state: d.state,
@@ -110,6 +111,7 @@ d3.csv("pollster-ratings.csv", pollster_ratings => {
                     d.time_weight = d.weight / (1 + (((new Date() - d.date) / time_scale) / 20))
                     d.dem_adj = (d.dem_pct - (d.bias / 2))
                     d.gop_adj = (d.gop_pct + (d.bias / 2))
+                    d.margin = d.dem_adj - d.gop_adj
                     return d;
                 })
 
@@ -145,12 +147,49 @@ d3.csv("pollster-ratings.csv", pollster_ratings => {
                 console.log(data_filtered)
 
                 data_filtered.forEach((d, i) => {
-
+                    d.margin_weight = (d.margin / 100) * d.weight
                     return d;
                 })
+                var polling_avg = []
+                for (var i = 0; i < pvi.length; i++) {
+                    var polls = data_filtered.filter(d => d.state == pvi[i].state)
+                    var margin_sum = d3.sum(polls, d => d.margin_weight)
+                    var weight_sum = d3.sum(polls, d => d.weight)
+                    var polling_margin = weight_sum == 0 ? 0 : margin_sum / weight_sum
+                    var avg = {
+                        state: pvi[i].state,
+                        polling_margin: polling_margin,
+                        polling_weight: weight_sum,
+                        pvi: +pvi[i].pvi,
+                        stdev: .15/(Math.pow(weight_sum+20,.3))
+                    }
+                    polling_avg.push(avg)
 
 
+                }
+                console.log(polling_avg)
 
+                var us_polling_avg = polling_avg[56].polling_margin
+
+                var state_proj = []
+
+                for (var i = 0; i < polling_avg.length - 1; i++) {
+
+                    var fundamental_margin = (-polling_avg[i].pvi / 100) + us_polling_avg
+                    var fund_margin_weight = fundamental_margin * 20
+                    var polling_margin_weight = polling_avg[i].polling_margin * polling_avg[i].polling_weight
+                    var margin = (polling_margin_weight + fund_margin_weight) / (polling_avg[i].polling_weight + 20)
+                    
+                    var third_party = pvi[i].thirdparty * national_third_party
+                    
+                    var proj = {
+                        state: polling_avg[i].state,
+                        margin: margin,
+                        third_party: third_party
+                    }
+                    console.log(proj)
+                }
+            
             }
 
             var selectbox = d3.select("#selectbox")
