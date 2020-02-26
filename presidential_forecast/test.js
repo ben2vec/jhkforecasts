@@ -48,6 +48,7 @@ d3.csv("https://projects.jhkforecasts.com/presidential_forecast/pollster-ratings
                 thirdparty: +d.thirdparty
             }
         })
+        pvi[38].thirdparty = 1
         var us = {
             state: "US",
             pvi: 0,
@@ -181,17 +182,24 @@ d3.csv("https://projects.jhkforecasts.com/presidential_forecast/pollster-ratings
                     var margin = (polling_margin_weight + fund_margin_weight) / (polling_avg[i].polling_weight + 20)
                     
                     var third_party = pvi[i].thirdparty * national_third_party
-                    
+                    var gop = ((1-third_party)/2)-(margin/2)
+                    var dem = 1-third_party-gop
                     var proj = {
                         state: polling_avg[i].state,
                         margin: margin,
-                        third_party: third_party
+                        stdev: polling_avg[i].stdev,
+                        sim_stdev: Math.sqrt((Math.pow(polling_avg[i].stdev,2)*2)),
+                        gop: gop,
+                        dem: dem,
+                        third_party: third_party,
+
                     }
-                    console.log(proj)
+                    state_proj.push(proj)
                 }
-            
+                console.log(state_proj)
             }
 
+            
             var selectbox = d3.select("#selectbox")
                 .on("change", function () {
                     update(this.value);
