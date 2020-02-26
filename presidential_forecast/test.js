@@ -2,8 +2,45 @@ var candidates = ["Trump", "Biden", "Bloomberg", "Buttigeig", "Klobuchar", "Sand
 var timeparse = d3.timeParse("%m/%d/%y")
 var time_scale = 86400000
 var national_third_party = .03
-d3.csv("https://projects.jhkforecasts.com/presidential_forecast/pollster-ratings.csv", pollster_ratings => {
+var simulations = 10000
 
+
+var color = d3.scaleLinear()
+    .domain([0, 0.5, 1])
+    .range(["#0091FF", "white", "#FF6060"]);
+
+
+var gopwincol = "#FF6060"
+var demwincol = "#0091FF"
+var thirdwincol = "#FFE130"
+
+
+
+var formatValue = d3.format(".1f");
+var formatvalue = d3.format(".3");
+d3.csv("https://projects.jhkforecasts.com/presidential_forecast/pollster-ratings.csv", pollster_ratings => {
+    var svg = d3.select("#map")
+        .append("svg")
+        .attr("viewBox", '100 -50 820 2800');
+
+    var width3 = 1020;
+    var height3 = 500;
+
+
+    var projection = d3.geoAlbersUsa()
+        .translate([width3 / 2, height3 / 2])
+        .scale([900]);
+
+
+    var path = d3.geoPath()
+        .projection(projection);
+
+    var tool_tip = d3.tip()
+        .attr("class", "d3-tip")
+        .offset([-150, -30])
+        .html("<div id='tipDiv'></div>");
+
+    svg.call(tool_tip);
     var pollster_names = pollster_ratings.map((d, i) => {
         return d.Pollster
     })
@@ -45,7 +82,8 @@ d3.csv("https://projects.jhkforecasts.com/presidential_forecast/pollster-ratings
             return {
                 state: d.state,
                 pvi: d.pvi,
-                thirdparty: +d.thirdparty
+                thirdparty: +d.thirdparty,
+                electoralvotes: +d.electroralvotes
             }
         })
         pvi[38].thirdparty = 1
@@ -151,6 +189,7 @@ d3.csv("https://projects.jhkforecasts.com/presidential_forecast/pollster-ratings
                     d.margin_weight = (d.margin / 100) * d.weight
                     return d;
                 })
+
                 var polling_avg = []
                 for (var i = 0; i < pvi.length; i++) {
                     var polls = data_filtered.filter(d => d.state == pvi[i].state)
@@ -162,10 +201,9 @@ d3.csv("https://projects.jhkforecasts.com/presidential_forecast/pollster-ratings
                         polling_margin: polling_margin,
                         polling_weight: weight_sum,
                         pvi: +pvi[i].pvi,
-                        stdev: .15/(Math.pow(weight_sum+20,.3))
+                        stdev: .15 / (Math.pow(weight_sum + 20, .3))
                     }
                     polling_avg.push(avg)
-
 
                 }
                 console.log(polling_avg)
@@ -180,32 +218,120 @@ d3.csv("https://projects.jhkforecasts.com/presidential_forecast/pollster-ratings
                     var fund_margin_weight = fundamental_margin * 20
                     var polling_margin_weight = polling_avg[i].polling_margin * polling_avg[i].polling_weight
                     var margin = (polling_margin_weight + fund_margin_weight) / (polling_avg[i].polling_weight + 20)
-                    
+                    var sim_stdev = Math.sqrt((Math.pow(polling_avg[i].stdev, 2) * 2))
                     var third_party = pvi[i].thirdparty * national_third_party
-                    var gop = ((1-third_party)/2)-(margin/2)
-                    var dem = 1-third_party-gop
+                    var gop = ((1 - third_party) / 2) - (margin / 2)
+                    var dem = 1 - third_party - gop
+                    dem_win = jStat.normal.cdf(margin, 0, sim_stdev)
                     var proj = {
                         state: polling_avg[i].state,
+                        electoralvotes: pvi[i].electoralvotes,
                         margin: margin,
-                        stdev: polling_avg[i].stdev,
-                        sim_stdev: Math.sqrt((Math.pow(polling_avg[i].stdev,2)*2)),
                         gop: gop,
                         dem: dem,
                         third_party: third_party,
-
+                        gop_win: 1 - dem_win,
+                        dem_win: dem_win,
                     }
                     state_proj.push(proj)
                 }
                 console.log(state_proj)
+                var sim_data = []
+                for (var i = 0; i < simulations; i++) {
+
+                    var sim_prob = Math.random()
+                    var simulation_data = state_proj.map((d, j) => {
+                        return {
+                            state: d.state
+                        }
+
+                    })
+                    simulation_data.forEach((d, j) => {
+                        d.gop_win = (sim_prob * 2 + Math.random()) / 3 < state_proj[j].gop_win ? 1 : 0
+                        d.dem_win = d.gop_win == 1 ? 0 : 1
+                        d.gop_ev = d.gop_win * state_proj[j].electoralvotes
+                        d.dem_ev = d.dem_win * state_proj[j].electoralvotes
+                        return d;
+                    })
+                    var gop_ev = d3.sum(simulation_data, d => d.gop_ev)
+                    var dem_ev = 538 - gop_ev
+                    var gop_win = gop_ev > 268 ? 1 : 0
+                    var dem_win = dem_ev > 269 ? 1 : 0
+                    var push_data = {
+                        gop_ev: gop_ev,
+                        dem_ev: dem_ev,
+                        gop_win: gop_win,
+                        dem_win: dem_win,
+                    }
+
+                    sim_data.push(push_data)
+                }
+
+                var gop_win_election = d3.mean(sim_data, d => d.gop_win)
+                console.log(gop_win_election)
+                d3.json("us-states.json", function (json) {
+
+
+                    for (var i = 0; i < data.length; i++) {
+
+
+                        var dataState = state_proj[i].state;
+                        var dataState = state_proj[i].gop_win;
+                       
+                        for (var j = 0; j < json.features.length; j++) {
+                            var jsonState = json.features[j].properties.name;
+
+                            if (dataState == jsonState) {
+                                json.features[j].properties.gop_win = gop_win
+
+                                
+                                break;
+                            }
+                        }
+                    }
+                    svg.append("g")
+                        .attr("id", "margin")
+                        .selectAll("path2")
+                        .data(json.features)
+                        .enter()
+                        .append("path")
+                        .attr("d", path)
+                        .style("stroke", "BLACK")
+                        .style("stroke-width", "1")
+                        .style("fill", d => color(d.properties.win))
+                        .on("mouseover", function (d) {
+
+                            tool_tip.show();
+                            var tipSVG = d3.select("#tipDiv")
+                                .append("svg")
+                                .attr("width", 175)
+                                .attr("height", 150)
+                                ;
+                            tipSVG.append("rect")
+                                .attr("y1", 0)
+                                .attr("x1", 0)
+                                .attr("width", 175)
+                                .attr("height", 150)
+                                .attr("rx", 8)
+                                .attr("fill", "white")
+                                .attr("stroke", "black")
+                                .attr("stroke-width", 2)
+
+                            
+
+                        })
+                        .on('mouseout',
+                            function (d) {
+                                tool_tip.hide()
+                            })
+
+                })
             }
 
-            
             var selectbox = d3.select("#selectbox")
                 .on("change", function () {
                     update(this.value);
                 })
-
-
 
         })
     })
