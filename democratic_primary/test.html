@@ -4,9 +4,7 @@
 <head>
 
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400italic,600italic,700italic,200,300,400,600,700,900">
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<script src="http://d3js.org/queue.v1.min.js"></script>
-<script src="http://d3js.org/topojson.v1.min.js"></script>
+<script src="http://d3js.org/d3.v4.min.js"></script>
 
 <style>
 
@@ -104,16 +102,12 @@ input {
 </head>
 
 <body>
+<script>
+  var keyState = "US"
+</script>
+<div id="polls"></div>
 
-<div id="content">
-	<h1>U.S. Daily Cigarette Smoking Rate, 1996-2012</h1>
-	<h2 class="year"></h2>
-	<div class="slider"></div>
-	<div id="map"></div>
-	<p>Source: Institute for Health Metrics and Evaluation.</p>
-</div>
-
-<script type="text/javascript" src="map.js"></script>
+<script type="text/javascript" src="polls copy.js"></script>
 
 </body>
 </html>
