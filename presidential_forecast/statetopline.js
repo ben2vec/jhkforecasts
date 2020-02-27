@@ -11,7 +11,7 @@ var category = ["Trump", "Democrats", "3rd Party"]
               console.log(data)  
                 
               var svg = d3.select("#topline").append("svg")
-                    .attr("viewBox", '0 -40 1000 140')
+                    .attr("viewBox", '0 0 1000 200')
         
         
                 svg.append("text")
@@ -25,10 +25,10 @@ var category = ["Trump", "Democrats", "3rd Party"]
         
                 svg.append("image")
                 .attr("xlink:href", d => "https://jhkforecasts.com/Trump-01.png")
-                    .attr("x",875)
-                    .attr("y",-40)
-                    .attr("width",75)
-                    .attr("height",75)
+                    .attr("x",510)
+                    .attr("y",40)
+                    .attr("width",100)
+                    .attr("height",100)
                     
 
                 
