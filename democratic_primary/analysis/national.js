@@ -320,8 +320,8 @@ d3.csv("https://raw.githubusercontent.com/jhkersting/jhkforecasts/master/democra
     .attr("stroke", "black")
     .attr("stroke-width", 1.5)
 
-    var forecasts = ["JHK Forecasts", "RealClearPolitics", "Lean Tossup", "#10at10", "FiveThirtyEight Polling Avg", "FiveThirtyEight Forecast","theHOX"]
-    var forecastslinks = ["https://projects.jhkforecasts.com/democratic_primary/", "https://www.realclearpolitics.com/epolls/2020/president/us/2020_democratic_presidential_nomination-6730.html", "https://leantossup.ca/2020-democratic-presidential-primary/", "https://twitter.com/djjohnso", "https://projects.fivethirtyeight.com/polls/president-primary-d/national/", "https://projects.fivethirtyeight.com/2020-primary-forecast/","https://twitter.com/irihox"]
+    var forecasts = ["JHK Forecasts", "RealClearPolitics", "Lean Tossup", "#10at10", "FiveThirtyEight Polling Avg", "FiveThirtyEight Forecast","theHOX","DDHQ/0ptimus/Ozy"]
+    var forecastslinks = ["https://projects.jhkforecasts.com/democratic_primary/", "https://www.realclearpolitics.com/epolls/2020/president/us/2020_democratic_presidential_nomination-6730.html", "https://leantossup.ca/2020-democratic-presidential-primary/", "https://twitter.com/djjohnso", "https://projects.fivethirtyeight.com/polls/president-primary-d/national/", "https://projects.fivethirtyeight.com/2020-primary-forecast/","https://twitter.com/irihox","https://www.ozy.com/topic/2020-election/"]
     
   var forecast_data = []
 
