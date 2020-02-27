@@ -12,7 +12,7 @@ d3.csv("delegates.csv", function (error, data) {
 
 
   var svg = d3.select("#delegatesover").append("svg")
-    .attr("viewBox", "-50 0 1050 3500")
+    .attr("viewBox", "-50 0 1050 3380")
     .append('g')
 
 

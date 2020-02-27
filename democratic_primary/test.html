@@ -3,99 +3,39 @@
 <html>
 <head>
 
-<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400italic,600italic,700italic,200,300,400,600,700,900">
-<script src="http://d3js.org/d3.v4.min.js"></script>
+  <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@jhkforecast">
+	<meta name="twitter:creator" content="@jhkersting">
+	<meta name="twitter:title" content="North Carolina Primary">
+	<meta name="twitter:description" content="Who is leading the race for the North Carolina Primary">
+	<meta name="twitter:image"
+		content="https://jhkforecasts.com/democratic_primary-02.png">
+	<title>North Carolina Primary</title>
+	<script data-ad-client="ca-pub-8025120308040073" async
+		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140782021-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-<style>
+    gtag('config', 'UA-140782021-2');
+  </script>
+  <script data-ad-client="ca-pub-8025120308040073" async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <link rel="icon" href="https://jkstats76.files.wordpress.com/2019/02/cropped-site-icon.png?w=32" sizes="32x32">
+  <link rel="icon" href="https://jkstats76.files.wordpress.com/2019/02/cropped-site-icon.png?w=192" sizes="192x192">
 
-body, h1, h2, h3, p {
-  margin: 0;
-  padding: 0;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 1em;
-  color: #333;
-  font-weight: 400;
-}
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+  <link rel="stylesheet" href="https://use.typekit.net/htk2wjy.css">
+  <link rel="stylesheet" href="index.css">
 
-#content {
-  margin: 5px;
-  padding: 20px;
-  width: 805px;
-  border: 1px solid #ccc;
-}
 
-#map {
-  margin: 10px 0px 0px 0px;
-  padding: 0px;
-}
-
-h1, h2 {
-  line-height: 1em;
-  font-size: 1.75em;
-  font-weight: 900;
-  color: #000;
-}
-
-h2.year {
-  margin: 10px 0px 0px 0px;
-  font-size: 1.3em;
-  font-weight: 700;
-}
-
-p {
-  margin: 10px 0px 0px 0px;
-}
-
-.county {
-  fill: #fff;
-}
-
-.states {
-  fill: none;
-  stroke: #fff;
-  stroke-linejoin: round;
-}
-
-input {
-  display: block;
-  width: 200px;
-  margin: 10px 0px 0px 0px;
-}
-
-#legend text {
-  font-size: 0.9em;
-  color: #333;
-  font-weight: 400;
-}
-
-.tooltip {
-  position: absolute;
-  padding: 7px;
-  font-size: 0.9em;
-  pointer-events: none;
-  background: #fff;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-
-  -moz-box-shadow:    3px 3px 10px 0px rgba(0, 0, 0, 0.25);
-  -webkit-box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.25);
-  box-shadow:         3px 3px 10px 0px rgba(0, 0, 0, 0.25);
-}
-
-.tooltip p {
-  margin: 0;
-  padding: 0;
-}
-
-.tooltip table {
-  margin: 0;
-  padding: 0;
-  border-collapse: collapse;
-}
-
-.wide {
-  width: 140px;
-}
 
 </style>
 
