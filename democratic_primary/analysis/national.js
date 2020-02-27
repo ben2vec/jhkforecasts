@@ -340,7 +340,7 @@ d3.csv("https://raw.githubusercontent.com/jhkersting/jhkforecasts/master/democra
 
 
   var svg = d3.select("#forecasts").append("svg")
-    .attr("viewBox", "0 0 800 380")
+    .attr("viewBox", "0 0 800 430")
 
   svg.selectAll("rect")
     .data(forecast_data)
