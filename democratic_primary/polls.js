@@ -45,7 +45,7 @@ d3.csv("polls.csv", function (error, data) {
       Steyer: +d.Steyer,
       Warren: +d.Warren,
       Yang: +d.Yang,
-
+      link: d.link
     }
   })
 
@@ -83,7 +83,7 @@ d3.csv("polls.csv", function (error, data) {
 
 
 
-  legend.append("text")
+  legend.append("a").attr("href",d=>d.link).append("text")
     .attr("class", "legend-text")
     .attr("x", 0)
     .attr("y", -10)
@@ -93,6 +93,14 @@ d3.csv("polls.csv", function (error, data) {
     .text(d => d.Pollster)
     .attr("text-anchor", "start")
     .call(wrap, 275)
+    .on("mouseover", function (d) {
+      d3.select(this)
+          .attr("text-decoration", "underline")
+  })
+  .on("mouseout", function (d) {
+      d3.select(this)
+          .attr("text-decoration", "none")
+  })
 
   legend.append("rect")
     .attr("x", 275)

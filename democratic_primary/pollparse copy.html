@@ -1,0 +1,81 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https:////cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
+
+
+
+
+
+</head>
+
+<body>
+    <p id="demo"></p>
+
+    <script>
+
+        var trialruns = 2500
+        var parseTime = d3.timeParse("%m/%d/%y")
+        var formatTime = d3.timeFormat("%m/%d/%y")
+        var formatValue = d3.format(".2")
+        var formatvalue = d3.format(".3");
+        var formatFinal = d3.timeFormat("%Y-%m-%d")
+
+        var simulation_date = new Date()
+
+        var time_data = []
+        //for (let z = 0; z < 58; j++) {
+        var simulation_date_filter = d3.utcDay.offset(simulation_date, 1)
+        var time_scale = 86400000
+        var parse_date = d3.timeParse("%m/%d/%y")
+        var parse_date_time = d3.timeParse("%m/%d/%y %H:%M")
+        formatMonth = d3.timeFormat("%m/%d/%y")
+        var candidates = ["Biden", "Bloomberg", "Booker", "Buttigieg", "Gabbard", "Klobuchar", "Sanders", "Steyer", "Warren", "Yang"]
+        
+        var pollster_grade = [
+            { Grade: "A+", Value: 1.5 },
+            { Grade: "A", Value: 1.35 },
+            { Grade: "A-", Value: 1.2 },
+            { Grade: "A/B", Value: 1.1 },
+            { Grade: "B+", Value: 1 },
+            { Grade: "B", Value: .925 },
+            { Grade: "B-", Value: .85 },
+            { Grade: "B/C", Value: .8 },
+            { Grade: "C+", Value: .7 },
+            { Grade: "C", Value: .65 },
+            { Grade: "C-", Value: .55 },
+            { Grade: "C/D", Value: .5 },
+            { Grade: "D+", Value: .4 },
+            { Grade: "D", Value: .3 },
+            { Grade: "D-", Value: .2 },
+            { Grade: "", Value: .7 },
+        ]
+
+        var pollster_grade_letter = pollster_grade.map((d) => {
+            return d.Grade
+        })
+
+        var pollster_grade_value = pollster_grade.map((d) => {
+            return d.Value
+        })
+
+
+
+
+
+        d3.csv("https://projects.fivethirtyeight.com/polls-page/president_primary_polls.csv", function (data) {
+            var data = data.filter(d => d.party == "DEM")
+            var data = data.filter(d => d.state == keyState)
+            console.log(data)
+        })
+    </script>
+
+
+
+</body>
+
+</html>
