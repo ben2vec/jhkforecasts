@@ -1,6 +1,6 @@
 var parseTime = d3.timeParse("%Y-%m-%d");
 var numberformat = d3.format(".1f")
-d3.csv("https://raw.githubusercontent.com/jhkersting/jhkforecasts/master/democratic_primary/poll_accuracy.csv", function (data) {
+d3.csv("https://projects.jhkforecasts.com/democratic_primary/poll_accuracy.csv", function (data) {
   var raw = data
   var forecasters = data.filter(function (d) { return d.type == "forecast"; });
 
