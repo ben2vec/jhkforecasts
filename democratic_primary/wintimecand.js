@@ -248,7 +248,7 @@ d3.csv("time.csv", function (error, data) {
 
         y.domain([
             0,
-            d3.max(cities, d => d3.max(d.values, c => c.degrees))
+            100
         ]).nice();
 
         svg.selectAll(".y-axis").transition()
