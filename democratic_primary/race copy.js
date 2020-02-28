@@ -1,4 +1,4 @@
-var marginracephone = { top: 20, right: 20, bottom: 40, left: 30 }
+var marginracephone = { top: 20, right: 20, bottom: 50, left: 30 }
 var widthracephone = 1000 - marginracephone.left - marginracephone.right
 var heightracephone = 900 - marginracephone.top - marginracephone.bottom
 
@@ -92,9 +92,9 @@ d3.csv("delegatetime.csv", function (error, data) {
             var xshift = 0
             g.selectAll("text")
                 .style("text-anchor", "right")
-                .attr("y", axisPad)
+                .attr("y", 12)
                 .attr('fill', 'black')
-                .attr('font-size', 15)
+                .attr('font-size', 20)
                 .attr('font-weight', 800)
             g.selectAll("line")
                 .attr("opacity", .5)
@@ -176,10 +176,10 @@ d3.csv("delegatetime.csv", function (error, data) {
                 var years = x.ticks(d3.timeYear.every(1))
                 var xshift = 0
                 g.selectAll("text")
-                    .style("text-anchor", "right")
+                    .style("text-anchor", "end")
                     .attr("y", 0)
                     .attr('fill', 'black')
-                    .attr('font-size', 15)
+                    .attr('font-size', 20)
                     .attr('font-weight', 800)
                 g.selectAll("line")
                     .attr("opacity", .5)
