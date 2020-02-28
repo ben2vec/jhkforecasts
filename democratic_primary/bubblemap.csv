@@ -1,53 +1,53 @@
 state,abbrev,first,firstvote,radius,xValue,yValue,pageLink,second,secondvote,third,thirdvote,fourth,forthvote,completed
-Alabama,AL,Biden,33.1,16.431676725154983,413,332,Alabama,Sanders,22.4,Bloomberg,21.5,Warren,9.2,0
-Alaska,AK,Sanders,30.9,9.486832980505138,41,19,Alaska,Biden,23.3,Bloomberg,14.7,Warren,13.0,0
-Arizona,AZ,Sanders,31.2,18.16590212458495,172,282,Arizona,Biden,23.8,Bloomberg,15.2,Warren,11.4,0
-Arkansas,AR,Bloomberg,25.5,13.416407864998739,325,290,Arkansas,Sanders,23.8,Biden,22.5,Buttigieg,12.1,0
-California,CA,Sanders,35.4,40.620192023179804,103,237,California,Bloomberg,17.1,Biden,13.4,Warren,13.2,0
-Colorado,CO,Sanders,36.3,16.431676725154983,224,249,Colorado,Warren,16.2,Bloomberg,15.3,Buttigieg,12.7,0
-Connecticut,CT,Sanders,30.7,14.491376746189438,586,128,Connecticut,Bloomberg,17.8,Biden,16.7,Warren,14.8,0
-Delaware,DE,Biden,30.5,9.486832980505138,557,183,Delaware,Sanders,25.7,Bloomberg,16.0,Warren,11.1,0
-Florida,FL,Biden,27.8,29.49576240750525,483,380,Florida,Bloomberg,26.9,Sanders,20.8,Buttigieg,8.9,0
-Georgia,GA,Biden,30.6,21.908902300206645,443,298,Georgia,Sanders,25.3,Bloomberg,22.8,Buttigieg,8.3,0
-Hawaii,HI,Sanders,35.7,10.954451150103322,88,372,Hawaii,Bloomberg,16.5,Biden,16.3,Warren,14.3,0
-Idaho,ID,Sanders,39.7,10.954451150103322,188,173,Idaho,Biden,18.5,Bloomberg,15.4,Buttigieg,10.7,0
-Illinois,IL,Sanders,30.3,24.49489742783178,359,207,Illinois,Biden,19.0,Bloomberg,18.1,Buttigieg,14.2,0
-Indiana,IN,Sanders,29.0,18.16590212458495,413,207,Indiana,Buttigieg,19.0,Biden,16.7,Bloomberg,15.3,0
+Alabama,AL,Biden,33.5,16.431676725154983,413,332,Alabama,Sanders,21.7,Bloomberg,20.7,Warren,9.6,0
+Alaska,AK,Sanders,30.2,9.486832980505138,41,19,Alaska,Biden,23.6,Bloomberg,13.8,Warren,13.5,0
+Arizona,AZ,Sanders,31.5,18.16590212458495,172,282,Arizona,Biden,21.7,Bloomberg,14.8,Buttigieg,12.3,0
+Arkansas,AR,Bloomberg,24.7,13.416407864998739,325,290,Arkansas,Sanders,23.1,Biden,22.7,Buttigieg,12.6,0
+California,CA,Sanders,33.9,40.620192023179804,103,237,California,Biden,15.8,Bloomberg,15.6,Warren,13.4,0
+Colorado,CO,Sanders,35.6,16.431676725154983,224,249,Colorado,Warren,16.9,Bloomberg,14.3,Buttigieg,13.3,0
+Connecticut,CT,Sanders,30.1,14.491376746189438,586,128,Connecticut,Bloomberg,16.9,Biden,16.8,Warren,15.4,0
+Delaware,DE,Biden,30.9,9.486832980505138,557,183,Delaware,Sanders,25.1,Bloomberg,15.1,Warren,11.5,0
+Florida,FL,Biden,28.8,29.49576240750525,483,380,Florida,Bloomberg,26.0,Sanders,19.7,Buttigieg,9.2,0
+Georgia,GA,Biden,31.1,21.908902300206645,443,298,Georgia,Sanders,24.5,Bloomberg,21.9,Buttigieg,8.7,0
+Hawaii,HI,Sanders,35.1,10.954451150103322,88,372,Hawaii,Biden,16.4,Bloomberg,15.6,Warren,14.9,0
+Idaho,ID,Sanders,36.0,10.954451150103322,188,173,Idaho,Biden,19.6,Bloomberg,15.3,Buttigieg,11.9,0
+Illinois,IL,Sanders,29.7,24.49489742783178,359,207,Illinois,Biden,19.2,Bloomberg,17.1,Buttigieg,14.8,0
+Indiana,IN,Sanders,28.3,18.16590212458495,413,207,Indiana,Buttigieg,19.7,Biden,16.8,Bloomberg,14.4,0
 Iowa,IA,Buttigieg,26.2,13.416407864998739,306,195,Iowa,Sanders,26.1,Warren,18.0,Biden,15.8,1
-Kansas,KS,Sanders,34.4,13.416407864998739,266,248,Kansas,Biden,15.0,Bloomberg,14.9,Buttigieg,14.6,0
-Kentucky,KY,Sanders,32.0,15.491933384829668,411,251,Kentucky,Biden,21.7,Bloomberg,19.8,Warren,10.7,0
-Louisiana,LA,Biden,34.4,15.491933384829668,326,335,Louisiana,Sanders,22.2,Bloomberg,21.8,Warren,8.8,0
-Maine,ME,Sanders,32.2,10.954451150103322,628,26,Maine,Bloomberg,19.4,Buttigieg,15.6,Warren,13.2,0
-Maryland,MD,Sanders,29.1,17.320508075688775,505,185,Maryland,Biden,23.5,Bloomberg,19.2,Warren,11.3,0
-Massachusetts,MA,Sanders,27.2,18.16590212458495,607,89,Massachusetts,Warren,19.2,Bloomberg,15.7,Buttigieg,14.9,0
-Michigan,MI,Sanders,31.8,21.908902300206645,418,149,Michigan,Biden,17.9,Bloomberg,16.9,Buttigieg,12.7,0
-Minnesota,MN,Sanders,28.0,17.320508075688775,304,142,Minnesota,Klobuchar,27.9,Warren,13.4,Bloomberg,10.3,0
-Mississippi,MS,Biden,36.2,13.416407864998739,373,324,Mississippi,Bloomberg,22.0,Sanders,21.3,Warren,8.3,0
-Missouri,MO,Biden,26.5,17.320508075688775,329,251,Missouri,Bloomberg,24.1,Sanders,20.1,Buttigieg,10.3,0
-Montana,MT,Sanders,31.7,9.486832980505138,206,131,Montana,Biden,18.3,Bloomberg,17.1,Warren,13.1,0
-Nebraska,NE,Sanders,33.5,12.24744871391589,258,209,Nebraska,Biden,15.8,Bloomberg,15.4,Buttigieg,14.6,0
+Kansas,KS,Sanders,33.9,13.416407864998739,266,248,Kansas,Buttigieg,15.3,Biden,15.1,Bloomberg,14.1,0
+Kentucky,KY,Sanders,30.0,15.491933384829668,411,251,Kentucky,Biden,22.4,Bloomberg,19.4,Warren,11.3,0
+Louisiana,LA,Biden,34.9,15.491933384829668,326,335,Louisiana,Sanders,21.6,Bloomberg,20.9,Warren,9.2,0
+Maine,ME,Sanders,31.6,10.954451150103322,628,26,Maine,Bloomberg,18.5,Buttigieg,16.2,Warren,13.8,0
+Maryland,MD,Sanders,28.5,17.320508075688775,505,185,Maryland,Biden,23.8,Bloomberg,18.2,Warren,11.8,0
+Massachusetts,MA,Sanders,26.5,18.16590212458495,607,89,Massachusetts,Warren,20.0,Buttigieg,15.5,Bloomberg,14.7,0
+Michigan,MI,Sanders,31.1,21.908902300206645,418,149,Michigan,Biden,18.1,Bloomberg,15.9,Buttigieg,13.3,0
+Minnesota,MN,Klobuchar,28.7,17.320508075688775,304,142,Minnesota,Sanders,27.3,Warren,14.0,Buttigieg,10.4,0
+Mississippi,MS,Biden,36.7,13.416407864998739,373,324,Mississippi,Bloomberg,21.1,Sanders,20.7,Warren,8.6,0
+Missouri,MO,Biden,26.9,17.320508075688775,329,251,Missouri,Bloomberg,23.3,Sanders,19.2,Buttigieg,10.8,0
+Montana,MT,Sanders,31.1,9.486832980505138,206,131,Montana,Biden,18.4,Bloomberg,16.1,Warren,13.6,0
+Nebraska,NE,Sanders,33.0,12.24744871391589,258,209,Nebraska,Biden,15.9,Buttigieg,15.3,Bloomberg,14.5,0
 Nevada,NV,Sanders,46.8,13.416407864998739,167,220,Nevada,Biden,20.4,Buttigieg,13.9,Warren,9.8,1
 New Hampshire,NH,Sanders,25.9,10.954451150103322,612,54,New%20Hampshire,Buttigieg,24.2,Klobuchar,19.8,Warren,9.3,1
-New Jersey,NJ,Sanders,31.0,20.493901531919196,551,147,New%20Jersey,Bloomberg,22.9,Biden,16.7,Buttigieg,12.0,0
-New Mexico,NM,Sanders,37.4,12.24744871391589,215,303,New%20Mexico,Biden,16.6,Bloomberg,16.5,Warren,11.5,0
-New York,NY,Sanders,27.7,29.49576240750525,548,81,New%20York,Bloomberg,24.7,Biden,18.4,Warren,11.3,0
-North Carolina,NC,Sanders,27.2,21.213203435596427,499,278,North%20Carolina,Bloomberg,23.6,Biden,21.0,Buttigieg,10.7,0
-North Dakota,ND,Sanders,35.1,9.486832980505138,257,136,North%20Dakota,Biden,15.3,Bloomberg,15.2,Buttigieg,14.4,0
-Ohio,OH,Sanders,30.3,23.2379000772445,459,191,Ohio,Biden,18.9,Bloomberg,18.4,Buttigieg,13.2,0
-Oklahoma,OK,Sanders,28.8,14.491376746189438,270,294,Oklahoma,Bloomberg,24.1,Biden,18.6,Buttigieg,11.2,0
-Oregon,OR,Sanders,33.0,14.491376746189438,124,176,Oregon,Biden,19.4,Bloomberg,15.5,Warren,13.4,0
-Pennsylvania,PA,Sanders,29.6,24.49489742783178,498,132,Pennsylvania,Biden,20.2,Bloomberg,19.2,Buttigieg,13.2,0
-Rhode island,RI,Sanders,30.9,10.954451150103322,619,126,Rhode%20Island,Bloomberg,18.2,Biden,15.4,Warren,15.1,0
-South Carolina,SC,Biden,37.2,16.431676725154983,487,322,South%20Carolina,Sanders,24.8,Steyer,15.7,Buttigieg,9.3,0
-South Dakota,SD,Sanders,33.3,9.486832980505138,257,167,South%20Dakota,Bloomberg,15.5,Biden,15.5,Buttigieg,14.8,0
-Tennessee,TN,Biden,29.8,18.16590212458495,379,284,Tennessee,Sanders,24.1,Bloomberg,20.8,Warren,10.3,0
-Texas,TX,Sanders,28.3,33.76388603226827,271,355,Texas,Biden,21.0,Bloomberg,19.3,Warren,13.5,0
-Utah,UT,Sanders,37.6,13.416407864998739,204,218,Utah,Bloomberg,18.7,Warren,13.3,Biden,11.8,0
-Vermont,VT,Sanders,53.3,9.486832980505138,585,47,Vermont,Bloomberg,12.7,Buttigieg,11.3,Warren,10.1,0
-Virginia,VA,Sanders,28.9,19.748417658131498,508,229,Virginia,Bloomberg,23.9,Biden,18.2,Buttigieg,11.5,0
-Washington,WA,Sanders,33.4,18.973665961010276,154,131,Washington,Bloomberg,20.0,Warren,13.1,Biden,11.9,0
-West Virginia,WV,Sanders,35.7,12.24744871391589,451,242,West%20Virginia,Biden,24.9,Bloomberg,19.3,Buttigieg,8.8,0
-Wisconsin,WI,Sanders,33.4,17.320508075688775,359,146,Wisconsin,Bloomberg,18.4,Biden,13.8,Buttigieg,13.5,0
-Wyoming,WY,Sanders,33.2,9.486832980505138,214,177,Wyoming,Biden,23.4,Bloomberg,14.8,Warren,11.4,0
-District of Columbia,DC,Biden,35.3,9.486832980505138,536,193,District%20of%20Columbia,Sanders,23.6,Bloomberg,20.9,Warren,9.0,0
-Puerto Rico,PR,Sanders,29.0,16.431676725154983,630,380,Puerto%_Rico,Biden,26.5,Bloomberg,15.6,Warren,12.2,0
+New Jersey,NJ,Sanders,30.4,20.493901531919196,551,147,New%20Jersey,Bloomberg,22.1,Biden,16.8,Buttigieg,12.5,0
+New Mexico,NM,Sanders,36.8,12.24744871391589,215,303,New%20Mexico,Biden,16.8,Bloomberg,15.5,Warren,12.1,0
+New York,NY,Sanders,27.3,29.49576240750525,548,81,New%20York,Bloomberg,24.2,Biden,17.9,Warren,11.9,0
+North Carolina,NC,Sanders,26.4,21.213203435596427,499,278,North%20Carolina,Bloomberg,22.8,Biden,21.3,Buttigieg,11.2,0
+North Dakota,ND,Sanders,32.7,9.486832980505138,257,136,North%20Dakota,Biden,15.8,Buttigieg,15.5,Bloomberg,14.8,0
+Ohio,OH,Sanders,29.7,23.2379000772445,459,191,Ohio,Biden,19.1,Bloomberg,17.5,Buttigieg,13.8,0
+Oklahoma,OK,Bloomberg,23.5,14.491376746189438,270,294,Oklahoma,Biden,23.4,Sanders,23.0,Buttigieg,11.9,0
+Oregon,OR,Sanders,32.3,14.491376746189438,124,176,Oregon,Biden,19.6,Bloomberg,14.7,Warren,13.9,0
+Pennsylvania,PA,Sanders,28.9,24.49489742783178,498,132,Pennsylvania,Biden,20.5,Bloomberg,18.3,Buttigieg,13.8,0
+Rhode island,RI,Sanders,30.3,10.954451150103322,619,126,Rhode%20Island,Bloomberg,17.3,Warren,15.6,Biden,15.4,0
+South Carolina,SC,Biden,37.8,16.431676725154983,487,322,South%20Carolina,Sanders,23.6,Steyer,15.6,Buttigieg,9.7,0
+South Dakota,SD,Sanders,32.8,9.486832980505138,257,167,South%20Dakota,Biden,15.6,Buttigieg,15.5,Bloomberg,14.6,0
+Tennessee,TN,Biden,30.1,18.16590212458495,379,284,Tennessee,Sanders,23.4,Bloomberg,19.9,Warren,10.7,0
+Texas,TX,Sanders,27.5,33.76388603226827,271,355,Texas,Biden,21.7,Bloomberg,18.3,Warren,14.0,0
+Utah,UT,Sanders,37.1,13.416407864998739,204,218,Utah,Bloomberg,17.8,Warren,13.8,Biden,11.8,0
+Vermont,VT,Sanders,53.2,9.486832980505138,585,47,Vermont,Bloomberg,11.9,Buttigieg,11.7,Warren,10.4,0
+Virginia,VA,Sanders,27.2,19.748417658131498,508,229,Virginia,Bloomberg,23.5,Biden,18.7,Buttigieg,12.2,0
+Washington,WA,Sanders,32.8,18.973665961010276,154,131,Washington,Bloomberg,19.0,Warren,13.8,Buttigieg,12.4,0
+West Virginia,WV,Sanders,30.3,12.24744871391589,451,242,West%20Virginia,Biden,27.1,Bloomberg,19.9,Buttigieg,10.0,0
+Wisconsin,WI,Sanders,32.8,17.320508075688775,359,146,Wisconsin,Bloomberg,17.4,Buttigieg,14.1,Biden,13.9,0
+Wyoming,WY,Sanders,32.0,9.486832980505138,214,177,Wyoming,Biden,23.9,Bloomberg,14.0,Warren,11.9,0
+District of Columbia,DC,Biden,35.8,9.486832980505138,536,193,District%20of%20Columbia,Sanders,22.9,Bloomberg,20.1,Warren,9.4,0
+Puerto Rico,PR,Sanders,28.3,16.431676725154983,630,380,Puerto%_Rico,Biden,26.8,Bloomberg,14.8,Warren,12.6,0

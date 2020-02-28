@@ -1,6 +1,8 @@
 State,Pollster,Grade,Sample,Date,weight,Biden,Bloomberg,Booker,Buttigieg,Klobuchar,Sanders,Steyer,Warren,Yang,link
-South Carolina,Change Research,C,543  lv,2020-02-27 00:00:00,13.5,28.0,0.0,0.0,11.0,0.0,24.0,16.0,12.0,0.0,https://www.postandcourier.com/politics/new-sc-polls-show-biden-continues-to-lead-over-sanders/article_05d916aa-58df-11ea-9452-23751758f31e.html
-South Carolina,Starboard Communications,B/C,1102  lv,2020-02-26 00:00:00,27.5,40.0,0.0,0.0,9.0,6.0,11.0,12.0,9.0,0.0,https://twitter.com/AndyShain/status/1233074240070574081
+South Carolina,Emerson College,B-,425  lv,2020-02-27 00:00:00,21.2,41.0,0.0,0.0,11.0,6.0,25.0,11.0,5.0,0.0,http://emersonpolling.com/2020/02/27/south-carolina-2020-biden-poised-to-win-his-first-contest/
+South Carolina,Change Research,C,543  lv,2020-02-27 00:00:00,14.3,28.0,0.0,0.0,11.0,4.0,24.0,16.0,12.0,0.0,https://www.changeresearch.com/post/post-and-courier-change-research-south-carolina-primary
+US,Fox News/Beacon Research/Shaw & Co. Research,A-,507  lv,2020-02-26 00:00:00,40.6,18.0,16.0,0.0,12.0,5.0,31.0,2.0,10.0,0.0,https://www.foxnews.com/politics/fox-news-poll-february-23-26-2020
+South Carolina,Starboard Communications,B/C,1102  lv,2020-02-26 00:00:00,27.5,40.0,0.0,0.0,9.0,6.0,11.0,12.0,9.0,0.0,https://projects.fivethirtyeight.com/polls/20200227_SC.pdf
 Florida,St. Pete Polls,C+,2788  lv,2020-02-26 00:00:00,36.2,34.0,25.0,0.0,8.0,4.0,13.0,1.0,5.0,0.0,http://stpetepolls.org/files/StPetePolls_2020_State_DEMprimaryFebruary26_AG3D.pdf
 South Carolina,Monmouth University,A+,454  lv,2020-02-25 00:00:00,53.0,36.0,0.0,0.0,6.0,4.0,16.0,15.0,8.0,0.0,https://www.monmouth.edu/polling-institute/documents/monmouthpoll_sc_022720.pdf/
 Colorado,Magellan Strategies,B/C,500  lv,2020-02-25 00:00:00,19.5,11.0,11.0,0.0,12.0,6.0,27.0,1.0,15.0,0.0,https://magellanstrategies.com/magellan-strategies-colorado-democratic-presidential-primary/
@@ -222,7 +224,7 @@ US,Emerson College,B-,497  lv,2020-01-23 00:00:00,1.1,30.0,7.0,0.0,6.0,4.0,27.0,
 US,Ipsos,B+,545  rv,2020-01-23 00:00:00,0.0,24.0,10.0,0.0,7.0,3.0,20.0,2.0,12.0,3.0,https://graphics.reuters.com/USA-ELECTION-POLL/0100B05G09P/index.html
 US,Harris Insights & Analytics,C+,878  rv,2020-01-22 00:00:00,0.1,29.0,11.0,0.0,5.0,2.0,17.0,4.0,9.0,4.0,https://thehill.com/hilltv/rising/480721-bloomberg-surges-past-warren-into-third-place-in-new-national-poll
 Utah,Suffolk University,A-,132  lv,2020-01-22 00:00:00,7.7,12.0,10.0,0.0,5.0,3.0,27.0,1.0,14.0,5.0,https://www.suffolk.edu/-/media/suffolk/documents/academics/research-at-suffolk/suprc/polls/other-states/2020/1_27_2020_utah_marginals_pdftxt.pdf
-US,Fox News/Beacon Research/Shaw & Co. Research,A-,495  lv,2020-01-22 00:00:00,15.5,26.0,10.0,0.0,7.0,3.0,23.0,3.0,14.0,5.0,https://www.scribd.com/document/444324295/Fox-January-19-22-2020-National-Topline-January-26-Release-pdf
+US,Fox News/Beacon Research/Shaw & Co. Research,A-,495  lv,2020-01-22 00:00:00,1.9,26.0,10.0,0.0,7.0,3.0,23.0,3.0,14.0,5.0,https://www.scribd.com/document/444324295/Fox-January-19-22-2020-National-Topline-January-26-Release-pdf
 Iowa,Civiqs,-,590  lv,2020-01-21 00:00:00,0.2,17.0,0.0,0.0,19.0,6.0,24.0,3.0,19.0,5.0,https://projects.fivethirtyeight.com/polls/20200202_IA_1.pdf
 Texas,Data for Progress,B,684  lv,2020-01-21 00:00:00,11.5,26.0,7.0,0.0,10.0,4.0,20.0,2.0,14.0,3.0,http://filesforprogress.org/datasets/2020/1/texas/dfp-tx-dem-primary-jan-2020.pdf
 California,"University of California, Berkeley",B/C,2895  lv,2020-01-21 00:00:00,15.6,15.0,6.0,1.0,7.0,5.0,26.0,2.0,20.0,4.0,https://escholarship.org/uc/item/1h8738br
@@ -308,7 +310,7 @@ US,Suffolk University,A-,384  lv,2019-12-14 00:00:00,8.3,23.0,6.0,3.0,8.0,3.0,14
 US,IBD/TIPP,A/B,312  rv,2019-12-14 00:00:00,0.2,26.0,5.0,3.0,9.0,2.0,18.0,2.0,14.0,2.0,https://projects.fivethirtyeight.com/polls/20191216_National.xlsx
 US,Ipsos,B+,593  rv,2019-12-12 00:00:00,0.0,21.0,7.0,0.0,5.0,2.0,18.0,3.0,11.0,3.0,https://twitter.com/Cmkahn/status/1220734596490452993
 US,Marist College,A+,704  rv,2019-12-11 00:00:00,2.0,24.0,4.0,4.0,13.0,4.0,22.0,0.0,17.0,5.0,http://maristpoll.marist.edu/wp-content/uploads/2019/12/UPDATED_NPR_PBS-NewsHour_Marist-Poll_USA-NOS-and-Tables_1912131159.pdf
-US,Fox News/Beacon Research/Shaw & Co. Research,A-,453  lv,2019-12-11 00:00:00,1.1,30.0,5.0,2.0,7.0,5.0,20.0,1.0,13.0,3.0,https://www.scribd.com/document/439839999/Fox-December-8-11-2019-National-Topline-December-15-Release
+US,Fox News/Beacon Research/Shaw & Co. Research,A-,453  lv,2019-12-11 00:00:00,0.3,30.0,5.0,2.0,7.0,5.0,20.0,1.0,13.0,3.0,https://www.scribd.com/document/439839999/Fox-December-8-11-2019-National-Topline-December-15-Release
 South Carolina,Change Research,C,392  lv,2019-12-11 00:00:00,0.0,27.0,3.0,5.0,9.0,2.0,20.0,5.0,19.0,2.0,https://www.changeresearch.com/post/south-carolina-post-and-courier-poll-december
 California,Change Research,C,862  lv,2019-12-10 00:00:00,0.1,19.0,3.0,3.0,12.0,1.0,26.0,2.0,23.0,4.0,https://www.changeresearch.com/post/change-research-kqed-california-poll-december
 US,YouGov,B-,497  lv,2019-12-10 00:00:00,0.0,26.0,4.0,3.0,11.0,2.0,16.0,1.0,21.0,3.0,https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/4yqcix83qw/econTabReport.pdf
@@ -406,7 +408,7 @@ US,IBD/TIPP,A/B,361  rv,2019-10-31 00:00:00,0.1,29.0,0.0,1.0,7.0,3.0,13.0,1.0,23
 US,Harris Insights & Analytics,C+,640  rv,2019-10-31 00:00:00,0.0,19.0,6.0,3.0,2.0,1.0,12.0,1.0,13.0,2.0,https://harvardharrispoll.com/wp-content/uploads/2019/11/HHP_October19_Topline_RegisteredVoters.pdf
 US,Harris Insights & Analytics,C+,640  rv,2019-10-31 00:00:00,0.0,33.0,0.0,3.0,4.0,3.0,18.0,1.0,15.0,2.0,https://harvardharrispoll.com/wp-content/uploads/2019/11/HHP_October19_Topline_RegisteredVoters.pdf
 US,NBC News/Wall Street Journal,A/B,414  lv,2019-10-30 00:00:00,0.0,27.0,0.0,2.0,6.0,5.0,19.0,0.0,23.0,3.0,https://www.nbcnews.com/politics/meet-the-press/nbc-wsj-poll-49-percent-now-back-trump-s-impeachment-n1075296
-US,Fox News/Beacon Research/Shaw & Co. Research,A-,471  lv,2019-10-30 00:00:00,0.2,31.0,0.0,2.0,7.0,2.0,19.0,1.0,21.0,3.0,https://www.foxnews.com/politics/fox-news-poll-results-october-27-30-2019
+US,Fox News/Beacon Research/Shaw & Co. Research,A-,471  lv,2019-10-30 00:00:00,0.1,31.0,0.0,2.0,7.0,2.0,19.0,1.0,21.0,3.0,https://www.foxnews.com/politics/fox-news-poll-results-october-27-30-2019
 US,ABC News/Washington Post,A+,402  rv,2019-10-30 00:00:00,0.0,28.0,0.0,2.0,9.0,2.0,17.0,1.0,23.0,2.0,https://www.washingtonpost.com/context/context-card/eea087b6-ca22-4cd9-a254-6bdd49d000a4/
 US,ABC News/Washington Post,A+,452  a,2019-10-30 00:00:00,0.0,27.0,0.0,2.0,7.0,1.0,19.0,1.0,21.0,2.0,https://www.washingtonpost.com/context/context-card/eea087b6-ca22-4cd9-a254-6bdd49d000a4/
 Iowa,Siena College/New York Times Upshot,A+,439  lv,2019-10-30 00:00:00,0.3,17.0,0.0,2.0,18.0,4.0,19.0,2.0,22.0,3.0,https://scri.siena.edu/wp-content/uploads/2019/11/IADem1019.pdf
@@ -486,7 +488,7 @@ Iowa,Optimus,C/D,548  lv,2019-10-10 00:00:00,1.3,22.0,0.0,2.0,17.0,0.0,5.0,0.0,2
 US,Harris Insights & Analytics,C+,813  lv,2019-10-10 00:00:00,0.0,35.0,0.0,2.0,6.0,0.0,14.0,1.0,17.0,2.0,https://docs.google.com/spreadsheets/d/e/2PACX-1vQcb34wlIzyonpTv3M9YZEw1fakNoRUZHhxjdjOVjAAsEOzYv6iuR74LItAjMFsm-IJI2yOKH1nTtlM/pubhtml/sheet?headers=false&gid=0
 North Carolina,East Carolina University,-,291  lv,2019-10-09 00:00:00,1.5,29.0,0.0,1.0,4.0,3.0,19.0,0.0,17.0,9.0,https://surveyresearch.ecu.edu/wp-content/pv-uploads/sites/1566/2018/06/ECU_Poll_Report_Impeachment_Election_October_2019.pdf
 US,Harris Insights & Analytics,C+,784  lv,2019-10-09 00:00:00,0.0,36.0,0.0,2.0,5.0,1.0,15.0,2.0,17.0,2.0,https://docs.google.com/spreadsheets/d/e/2PACX-1vSi5aaWoVmwcb6Ct9z_7-AuP5I1UTQV-yXF-7U0sramBKveq00DQXw2EbgzL2Tpn9nAj5Lwrawn795d/pubhtml/sheet?headers=false&gid=0
-US,Fox News/Beacon Research/Shaw & Co. Research,A-,484  lv,2019-10-08 00:00:00,0.1,32.0,0.0,2.0,4.0,2.0,17.0,1.0,22.0,2.0,https://www.foxnews.com/politics/fox-news-poll-october-6-8-2019
+US,Fox News/Beacon Research/Shaw & Co. Research,A-,484  lv,2019-10-08 00:00:00,0.0,32.0,0.0,2.0,4.0,2.0,17.0,1.0,22.0,2.0,https://www.foxnews.com/politics/fox-news-poll-october-6-8-2019
 US,YouGov,B-,598  lv,2019-10-08 00:00:00,0.0,25.0,0.0,1.0,5.0,2.0,13.0,1.0,28.0,3.0,https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/x3neaunoh2/econTabReport.pdf
 US,Harris Insights & Analytics,C+,759  lv,2019-10-08 00:00:00,0.0,36.0,0.0,2.0,5.0,0.0,15.0,2.0,18.0,2.0,https://docs.google.com/spreadsheets/d/e/2PACX-1vSVoSJs3STO7zu9XKnqh_MfkZazEoyBndEn8z5fo7CEc4tGFIiPyM8xso03NRofcb7F8I0-BEjAmpT3/pubhtml/sheet?headers=false&gid=0
 South Carolina,Gravis Marketing,C+,516  lv,2019-10-07 00:00:00,2.3,34.0,0.0,6.0,0.0,2.0,10.0,7.0,9.0,2.0,http://orlando-politics.com/wp-content/uploads/2019/10/South-Carolina-October-10-2019.pdf
@@ -1065,7 +1067,7 @@ US,Monmouth University,A+,310  rv,2019-03-04 00:00:00,0.0,28.0,2.0,5.0,0.0,3.0,2
 Florida,Bendixen & Amandi International,B/C,300  lv,2019-03-04 00:00:00,0.9,26.0,1.0,1.0,0.0,1.0,11.0,0.0,4.0,0.0,https://www.politico.com/f/?id=00000169-505f-dc75-affd-dfffe1070000
 US,GBAO,B/C,817  lv,2019-03-03 00:00:00,0.2,28.0,0.0,3.0,0.0,2.0,20.0,0.0,5.0,0.0,https://cdn.americanprogress.org/content/uploads/2019/05/01090704/CAPForeignPolicy-GenerationsTopline-Results.pdf
 US,Morning Consult,B/C,12560  lv,2019-03-03 00:00:00,0.0,31.0,2.0,4.0,1.0,3.0,27.0,0.0,7.0,0.0,https://morningconsult.com/wp-content/uploads/2019/03/Political-Intelligence-3.5.19.pdf
-South Carolina,Emerson College,B-,291  lv,2019-03-02 00:00:00,0.9,37.0,2.0,6.0,0.0,1.0,21.0,0.0,5.0,0.0,http://emersonpolling.com/2019/03/02/south-carolina-2020-poll-biden-leads-primary-field-by-wide-margin-president-trump-popular-with-base/
+South Carolina,Emerson College,B-,291  lv,2019-03-02 00:00:00,0.1,37.0,2.0,6.0,0.0,1.0,21.0,0.0,5.0,0.0,http://emersonpolling.com/2019/03/02/south-carolina-2020-poll-biden-leads-primary-field-by-wide-margin-president-trump-popular-with-base/
 New Hampshire,University of New Hampshire,B,240  lv,2019-02-26 00:00:00,0.0,8.0,0.0,2.0,1.0,3.0,28.0,0.0,2.0,1.0,https://scholars.unh.edu/cgi/viewcontent.cgi?article=1551&context=survey_center_polls
 New Hampshire,University of New Hampshire,B,240  lv,2019-02-26 00:00:00,0.0,22.0,1.0,3.0,1.0,4.0,26.0,0.0,7.0,0.0,https://scholars.unh.edu/cgi/viewcontent.cgi?article=1551&context=survey_center_polls
 US,Morning Consult,B/C,15642  lv,2019-02-24 00:00:00,0.0,29.0,2.0,4.0,1.0,3.0,27.0,0.0,7.0,0.0,https://morningconsult.com/wp-content/uploads/2019/02/Political-Intelligence-2.26.19.pdf
@@ -1120,8 +1122,6 @@ US,Harris Insights & Analytics,C+,459  rv,2018-11-28 00:00:00,0.0,25.0,2.0,3.0,0
 Massachusetts,YouGov,B-,655  rv,2018-11-14 00:00:00,0.8,19.0,0.0,3.0,0.0,3.0,14.0,0.0,11.0,0.0,https://polsci.umass.edu/sites/default/files/Toplines2018_2020_0.pdf
 US,Morning Consult,B/C,733  rv,2018-11-09 00:00:00,0.0,26.0,2.0,3.0,0.0,1.0,19.0,0.0,5.0,0.0,https://www.politico.com/f/?id=00000167-0956-def8-a56f-89d6b72d0001
 US,Harris Insights & Analytics,C+,370  rv,2018-11-06 00:00:00,0.0,30.0,5.0,5.0,0.0,0.0,20.0,0.0,5.0,0.0,https://thehill.com/hilltv/what-americas-thinking/415500-biden-leads-dem-voters-list-of-potential-2020-contenders-poll
-,,,  ,,,,,,,,,,,,
-,,,  ,,,,,,,,,,,,
 ,,,  ,,,,,,,,,,,,
 ,,,  ,,,,,,,,,,,,
 ,,,  ,,,,,,,,,,,,
