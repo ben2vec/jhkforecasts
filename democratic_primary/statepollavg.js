@@ -16,6 +16,7 @@ d3.csv("simulator.csv", data => {
     { Candidate: "Steyer", Vote: +data[0].Steyerproj },
     { Candidate: "Warren", Vote: +data[0].Warrenproj },
   ]
+  console.log(cands)
   cands.sort((a, b) => b.Vote - a.Vote)
 
   var rankings = cands.map((d, i) => {
@@ -37,7 +38,7 @@ d3.csv("simulator.csv", data => {
     var primary_date = data[0].primarydate
     var newest_data = data.filter(d => d.date == newest_day)
     var completed = primary_date <= newest_day ? 1 : 0
-    console.log(completed)
+   
     var vote = keys.filter(f => f.includes("vote"))
     var win = keys.filter(f => f.includes("win"))
     var del = keys.filter(f => f.includes("del"))
@@ -70,7 +71,7 @@ d3.csv("simulator.csv", data => {
     })
 
 
-    cand_vote.sort((a, b) => b.win - a.win)
+    cand_vote.sort((a, b) => b.vote - a.vote)
     cand_vote.slice(0, 7)
     console.log(cand_vote)
 
@@ -125,6 +126,7 @@ d3.csv("simulator.csv", data => {
         candmax.push(max)
       }
       console.log(candmax)
+
       var x = d3.scaleLinear()
         .domain([0, d3.max(polls, d => d.pct)]).nice()
         .range([80, 920])
