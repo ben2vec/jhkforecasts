@@ -131,7 +131,7 @@ d3.csv("time.csv", function (error, data) {
                 .style("text-anchor", "middle")
                 .attr("y", axisPad)
                 .attr('fill', 'black')
-                .attr('font-size', 15)
+                .attr('font-size', 20)
                 .attr('font-weight', 800)
                 .attr("transform",)
 
@@ -201,7 +201,7 @@ d3.csv("time.csv", function (error, data) {
                     .style("text-anchor", "right")
                     .attr("y", 0)
                     .attr('fill', 'black')
-                    .attr('font-size', 15)
+                    .attr('font-size', 20)
                     .attr('font-weight', 800)
                 g.selectAll("line")
                 .attr("opacity",.5)
