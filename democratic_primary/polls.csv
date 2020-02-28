@@ -2,6 +2,7 @@ State,Pollster,Grade,Sample,Date,weight,Biden,Bloomberg,Booker,Buttigieg,Klobuch
 South Carolina,Data for Progress,A-,1416  lv,2020-02-27 00:00:00,64.5,34.0,0.0,0.0,13.0,5.0,25.0,13.0,7.0,0.0,https://www.dataforprogress.org/blog/2020/2/27/biden-maintains-lead-in-south-carolina
 South Carolina,Emerson College,B-,425  lv,2020-02-27 00:00:00,20.1,41.0,0.0,0.0,11.0,6.0,25.0,11.0,5.0,0.0,http://emersonpolling.com/2020/02/27/south-carolina-2020-biden-poised-to-win-his-first-contest/
 South Carolina,Change Research,C,543  lv,2020-02-27 00:00:00,13.6,28.0,0.0,0.0,11.0,4.0,24.0,16.0,12.0,0.0,https://www.changeresearch.com/post/post-and-courier-change-research-south-carolina-primary
+US,SurveyUSA,A,825  lv,2020-02-26 00:00:00,65.5,21.0,21.0,0.0,9.0,4.0,28.0,2.0,8.0,0.0,http://www.surveyusa.com/client/PollReport.aspx?g=3e396fbb-2173-478d-9abf-33406b33fc0b
 Massachusetts,MassINC Polling Group,A/B,426  lv,2020-02-26 00:00:00,31.9,9.0,13.0,0.0,14.0,6.0,25.0,2.0,17.0,0.0,https://www.wbur.org/news/2020/02/28/wbur-poll-sanders-opens-substantial-lead-in-massachusetts-challenging-warren-on-her-home-turf
 Utah,Harris Insights & Analytics,C+,298  lv,2020-02-26 00:00:00,12.6,6.0,19.0,0.0,18.0,4.0,28.0,0.0,15.0,0.0,https://www.deseret.com/utah/2020/2/27/21156476/poll-sanders-bloomberg-buttigieg-warren-biden-utah-super-tuesday-democratic-presidential-primary
 US,Fox News/Beacon Research/Shaw & Co. Research,A-,507  lv,2020-02-26 00:00:00,38.7,18.0,16.0,0.0,12.0,5.0,31.0,2.0,10.0,0.0,https://www.foxnews.com/politics/fox-news-poll-february-23-26-2020
@@ -73,7 +74,7 @@ US,ABC News/Washington Post,A+,408  rv,2020-02-17 00:00:00,0.0,16.0,14.0,0.0,8.0
 US,ABC News/Washington Post,A+,466  a,2020-02-17 00:00:00,0.0,17.0,14.0,0.0,7.0,6.0,32.0,2.0,11.0,0.0,https://www.washingtonpost.com/context/washington-post-abc-news-poll-feb-14-17-2020/99074fb9-691e-4399-af1e-e6534d53a9d8/
 US,Morning Consult,B/C,15974  lv,2020-02-17 00:00:00,1.9,19.0,20.0,0.0,12.0,6.0,28.0,3.0,10.0,0.0,https://morningconsult.com/2020-democratic-primary/
 California,Public Policy Institute of California,A/B,573  lv,2020-02-17 00:00:00,23.4,14.0,12.0,0.0,12.0,5.0,32.0,3.0,13.0,0.0,https://www.ppic.org/wp-content/uploads/crosstabs-time-trends-methodology-0220.pdf
-US,SurveyUSA,A,1022  lv,2020-02-17 00:00:00,48.7,18.0,18.0,0.0,12.0,4.0,29.0,2.0,10.0,0.0,http://www.surveyusa.com/client/PollReport.aspx?g=e7feecd9-5374-42de-bfff-d16dba2dae6a
+US,SurveyUSA,A,1022  lv,2020-02-17 00:00:00,6.1,18.0,18.0,0.0,12.0,4.0,29.0,2.0,10.0,0.0,http://www.surveyusa.com/client/PollReport.aspx?g=e7feecd9-5374-42de-bfff-d16dba2dae6a
 US,NBC News/Wall Street Journal,A/B,426  lv,2020-02-17 00:00:00,0.0,0.0,0.0,0.0,38.0,0.0,54.0,0.0,0.0,0.0,https://www.nbcnews.com/politics/meet-the-press/nbc-news-wsj-poll-sanders-opens-double-digit-national-lead-n1138191
 US,NBC News/Wall Street Journal,A/B,426  lv,2020-02-17 00:00:00,0.0,0.0,37.0,0.0,0.0,0.0,57.0,0.0,0.0,0.0,https://www.nbcnews.com/politics/meet-the-press/nbc-news-wsj-poll-sanders-opens-double-digit-national-lead-n1138191
 US,NBC News/Wall Street Journal,A/B,426  lv,2020-02-17 00:00:00,22.4,15.0,14.0,0.0,13.0,7.0,27.0,2.0,14.0,0.0,https://www.nbcnews.com/politics/meet-the-press/nbc-news-wsj-poll-sanders-opens-double-digit-national-lead-n1138191
@@ -255,7 +256,7 @@ Iowa,Neighborhood Research and Media,B/C,300  lv,2020-01-17 00:00:00,5.2,23.0,0.
 US,Zogby Interactive/JZ Analytics,C,438  lv,2020-01-16 00:00:00,0.6,24.0,11.0,0.0,8.0,4.0,24.0,3.0,11.0,6.0,https://zogbyanalytics.com/news/911-the-zogby-poll-bloomberg-beating-trump-biden-and-trump-are-all-tied-up-trump-beats-other-democratic-rivals-trump-s-job-approval-continues-to-top-50
 US,Ipsos,B+,681  a,2020-01-16 00:00:00,0.0,18.0,9.0,0.0,6.0,1.0,19.0,1.0,10.0,3.0,https://www.ipsos.com/sites/default/files/ct/news/documents/2020-01/topline_reuters_2020_democratic_primary_tracker_01_17_2020.pdf
 California,SurveyUSA,A,565  lv,2020-01-16 00:00:00,2.3,30.0,6.0,0.0,8.0,2.0,20.0,4.0,20.0,4.0,http://www.surveyusa.com/client/PollReport.aspx?g=9634c475-cb54-4a34-ab4b-c0d9a2b82759
-US,SurveyUSA,A,1086  lv,2020-01-16 00:00:00,3.3,32.0,9.0,0.0,9.0,2.0,21.0,3.0,14.0,4.0,http://www.surveyusa.com/client/PollReport.aspx?g=b4747822-277e-4d2c-b896-eb4e04672c09
+US,SurveyUSA,A,1086  lv,2020-01-16 00:00:00,1.0,32.0,9.0,0.0,9.0,2.0,21.0,3.0,14.0,4.0,http://www.surveyusa.com/client/PollReport.aspx?g=b4747822-277e-4d2c-b896-eb4e04672c09
 New Hampshire,Emerson College,B-,657  lv,2020-01-16 00:00:00,0.0,14.0,0.0,0.0,18.0,10.0,23.0,4.0,14.0,6.0,http://emersonpolling.com/2020/01/17/new-hampshire-2020-sanders-holds-lead-klobuchar-surges-to-double-digits/
 US,Ipsos,B+,552  rv,2020-01-16 00:00:00,0.0,19.0,9.0,0.0,6.0,2.0,20.0,2.0,12.0,4.0,https://www.reuters.com/article/us-usa-election-democrats-poll/sanders-climbs-now-tied-with-biden-among-registered-voters-reuters-poll-idUSKBN1ZG00D
 US,YouGov,B-,521  lv,2020-01-14 00:00:00,0.0,27.0,5.0,2.0,7.0,3.0,20.0,1.0,19.0,3.0,https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/ueji3eha6i/econTabReport.pdf
@@ -359,7 +360,7 @@ US,Ipsos,B+,698  a,2019-11-22 00:00:00,0.0,21.0,0.0,1.0,7.0,2.0,17.0,2.0,11.0,5.
 California,SurveyUSA,A,558  lv,2019-11-22 00:00:00,0.4,28.0,3.0,3.0,8.0,1.0,18.0,3.0,13.0,5.0,http://www.surveyusa.com/client/PollReport.aspx?g=bdcd277b-f00f-48eb-a393-bf59bb2a0fab
 California,SurveyUSA,A,558  lv,2019-11-22 00:00:00,0.0,30.0,0.0,3.0,9.0,1.0,19.0,2.0,13.0,4.0,http://www.surveyusa.com/client/PollReport.aspx?g=bdcd277b-f00f-48eb-a393-bf59bb2a0fab
 US,SocialSphere,B/C,987  lv,2019-11-21 00:00:00,4.9,30.0,2.0,2.0,6.0,1.0,23.0,2.0,12.0,4.0,https://www.realclearpolitics.com/docs/EWTN_Topline.pdf
-US,SurveyUSA,A,1088  lv,2019-11-21 00:00:00,0.5,30.0,3.0,2.0,11.0,2.0,17.0,2.0,15.0,4.0,http://www.surveyusa.com/client/PollReport.aspx?g=1a56d146-5d59-4e5f-a9fa-78219f1ff42f
+US,SurveyUSA,A,1088  lv,2019-11-21 00:00:00,0.2,30.0,3.0,2.0,11.0,2.0,17.0,2.0,15.0,4.0,http://www.surveyusa.com/client/PollReport.aspx?g=1a56d146-5d59-4e5f-a9fa-78219f1ff42f
 US,SurveyUSA,A,1088  lv,2019-11-21 00:00:00,0.0,32.0,0.0,2.0,12.0,2.0,17.0,2.0,16.0,4.0,http://www.surveyusa.com/client/PollReport.aspx?g=1a56d146-5d59-4e5f-a9fa-78219f1ff42f
 US,Change Research,C,1142  lv,2019-11-20 00:00:00,3.6,22.0,1.0,1.0,14.0,2.0,23.0,0.0,23.0,4.0,https://www.electionscience.org/press-releases/new-poll-74-of-democratic-primary-voters-would-support-warren-for-president/
 US,Emerson College,B-,468  lv,2019-11-20 00:00:00,0.1,27.0,1.0,1.0,7.0,1.0,27.0,2.0,20.0,4.0,http://emersonpolling.com/2019/11/21/november-national-poll-support-for-impeachment-declines-biden-and-sanders-lead-democratic-primary/
@@ -467,7 +468,7 @@ US,Harris Insights & Analytics,C+,1839  lv,2019-10-18 00:00:00,0.0,34.0,0.0,2.0,
 US,Ipsos,B+,703  a,2019-10-18 00:00:00,0.0,21.0,0.0,1.0,5.0,1.0,16.0,0.0,15.0,2.0,https://www.ipsos.com/sites/default/files/ct/news/documents/2019-10/topline_reuters_democratic_debate_poll_10_21_2019_wu.pdf
 US,Harris Insights & Analytics,C+,763  lv,2019-10-18 00:00:00,0.0,33.0,0.0,1.0,4.0,2.0,17.0,2.0,18.0,2.0,https://docs.google.com/spreadsheets/d/e/2PACX-1vR13Tl5hUtDQkRG1NHFobnFAa5b223LaBitPb5bxW4Crr_6l4gyjwME4Fa88OJkBr8Lne9zD3sf3Hof/pubhtml/sheet?headers=false&gid=0
 California,SurveyUSA,A,553  lv,2019-10-16 00:00:00,0.1,33.0,0.0,2.0,4.0,1.0,17.0,1.0,18.0,4.0,http://www.surveyusa.com/client/PollReport.aspx?g=3662de7c-9fe8-4524-b39b-789835905d98
-US,SurveyUSA,A,1071  lv,2019-10-16 00:00:00,0.1,32.0,0.0,2.0,5.0,2.0,17.0,1.0,22.0,2.0,http://www.surveyusa.com/client/PollReport.aspx?g=3f8c15c0-bab5-4d13-b944-5b368f707417
+US,SurveyUSA,A,1071  lv,2019-10-16 00:00:00,0.0,32.0,0.0,2.0,5.0,2.0,17.0,1.0,22.0,2.0,http://www.surveyusa.com/client/PollReport.aspx?g=3f8c15c0-bab5-4d13-b944-5b368f707417
 US,Public Religion Research Institute,A/B,436  rv,2019-10-13 00:00:00,4.2,25.0,0.0,3.0,4.0,1.0,17.0,0.0,16.0,3.0,https://projects.fivethirtyeight.com/polls/20191021_National.pdf
 US,Public Religion Research Institute,A/B,487  a,2019-10-13 00:00:00,0.0,24.0,0.0,3.0,4.0,1.0,16.0,0.0,16.0,3.0,https://projects.fivethirtyeight.com/polls/20191021_National.pdf
 US,Harris Insights & Analytics,C+,815  lv,2019-10-17 00:00:00,0.0,34.0,0.0,2.0,3.0,2.0,15.0,2.0,16.0,2.0,https://docs.google.com/spreadsheets/d/e/2PACX-1vQZ29_A6KnPaK6cg4oC72rMRRYBJZ2rRPE_3DD6ouoMACKZuygUFOahnS37cfJOKu1TzsmbZEvc1HxK/pubhtml/sheet?headers=false&gid=0
@@ -1130,7 +1131,6 @@ US,Harris Insights & Analytics,C+,459  rv,2018-11-28 00:00:00,0.0,25.0,2.0,3.0,0
 Massachusetts,YouGov,B-,655  rv,2018-11-14 00:00:00,0.1,19.0,0.0,3.0,0.0,3.0,14.0,0.0,11.0,0.0,https://polsci.umass.edu/sites/default/files/Toplines2018_2020_0.pdf
 US,Morning Consult,B/C,733  rv,2018-11-09 00:00:00,0.0,26.0,2.0,3.0,0.0,1.0,19.0,0.0,5.0,0.0,https://www.politico.com/f/?id=00000167-0956-def8-a56f-89d6b72d0001
 US,Harris Insights & Analytics,C+,370  rv,2018-11-06 00:00:00,0.0,30.0,5.0,5.0,0.0,0.0,20.0,0.0,5.0,0.0,https://thehill.com/hilltv/what-americas-thinking/415500-biden-leads-dem-voters-list-of-potential-2020-contenders-poll
-,,,  ,,,,,,,,,,,,
 ,,,  ,,,,,,,,,,,,
 ,,,  ,,,,,,,,,,,,
 ,,,  ,,,,,,,,,,,,
