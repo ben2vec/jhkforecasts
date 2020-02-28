@@ -111,7 +111,7 @@ d3.csv("time.csv", function (error, data) {
   legend.append("circle")
     .attr("cy", 30)
     .attr("cx", 100)
-    .attr("fill", d => completed==1?color(d.candidate):"white")
+    .attr("fill", d => completed==1?color(d.candidate):"none")
     .attr("r", "5")
     .transition()
     .duration(1000)
