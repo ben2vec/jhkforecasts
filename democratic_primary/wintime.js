@@ -8,6 +8,9 @@ var demScale = d3.scaleLinear()
 
 d3.csv("time.csv", function (error, data) {
     var keys = data.columns.slice(1);
+    var mindate = new Date(2019, 5, 1),
+        maxdate = d3.max(data, d => d.primarydate)
+        demadjust = new Date(2020, 0, 4);
 
     var data = data.filter(function (d) { return d.state == keyState; });
 
@@ -29,7 +32,7 @@ d3.csv("time.csv", function (error, data) {
     var maxdate = d3.max(data, d => d.primarydate)
 
     var data = data.filter(d => d.date <= maxdate)
-
+    var data = data.filter(d => d.date >= mindate)
     var newest_day = d3.max(data, d => d.date)
 
     var newest_data = data.filter(d => d.date == d3.max(data, d => d.date))
@@ -90,9 +93,7 @@ d3.csv("time.csv", function (error, data) {
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 
-    var mindate = new Date(2019, 5, 1),
-        maxdate = d3.max(data, d => d.primarydate)
-    demadjust = new Date(2020, 0, 4);
+
 
     var x = d3.scaleTime()
         .rangeRound([margin.left, width - margin.right])
@@ -125,18 +126,18 @@ d3.csv("time.csv", function (error, data) {
                 .attr('font-size', 15)
                 .attr('font-weight', 800)
             g.selectAll("line")
-            .attr("opacity",.5)
-                    .attr("stroke","grey")
+                .attr("opacity", .5)
+                .attr("stroke", "grey")
 
 
             g.select(".domain")
-                
+
 
         })
 
     demadjust = new Date(2020, 0, 4);
 
-    
+
 
 
     svg.append("g")
@@ -165,7 +166,7 @@ d3.csv("time.csv", function (error, data) {
         .attr("width", x(newest_day) - margin.left)
         .attr("height", height)
 
-        update(datatype, 0);
+    update(datatype, 0);
 
 
     function update(input, speed) {
@@ -196,12 +197,12 @@ d3.csv("time.csv", function (error, data) {
                     .attr('font-size', 15)
                     .attr('font-weight', 800)
                 g.selectAll("line")
-                .attr("opacity",.5)
-                    .attr("stroke","grey")
+                    .attr("opacity", .5)
+                    .attr("stroke", "grey")
 
 
                 g.select(".domain")
-                    
+
 
             })
 
@@ -336,5 +337,5 @@ d3.csv("time.csv", function (error, data) {
         .style("font-weight", 700)
         .text(keyState == "US" ? "Win Nomination" : "Win " + keyState)
 
-    
+
 })

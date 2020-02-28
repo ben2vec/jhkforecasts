@@ -40,7 +40,7 @@
         var simulation_date = new Date(year, month - 1, day)
         
         var time_data = []
-        //for (let z = 0; z < 58; j++) {
+        for (let z = 0; z < 2; z++) {
         var simulation_date_filter = d3.utcDay.offset(simulation_date, 1)
         var time_scale = 86400000
         var parse_date = d3.timeParse("%m/%d/%y")
@@ -1601,13 +1601,18 @@
                 var final = [formatFinal(dataraw[0].today), keystate, formatFinal(dataraw[0].date), dataraw[0].delegates, +formatvalue(dataraw[0].Bidenvote), +formatvalue(dataraw[0].Bloombergvote),0, +formatvalue(dataraw[0].Buttigiegvote), +formatvalue(dataraw[0].Klobucharvote), +formatvalue(dataraw[0].Sandersvote), +formatvalue(dataraw[0].Steyervote), +formatvalue(dataraw[0].Warrenvote), +formatvalue(dataraw[0].Yangvote), Math.round(d3.mean(dataraw, d => d.Bidenwin) * 1000) / 10, Math.round(d3.mean(dataraw, d => d.Bloombergwin) * 1000) / 10,0, Math.round(d3.mean(dataraw, d => d.Buttigiegwin) * 1000) / 10, Math.round(d3.mean(dataraw, d => d.Klobucharwin) * 1000) / 10, Math.round(d3.mean(dataraw, d => d.Sanderswin) * 1000) / 10, Math.round(d3.mean(dataraw, d => d.Steyerwin) * 1000) / 10, Math.round(d3.mean(dataraw, d => d.Warrenwin) * 1000) / 10, Math.round(d3.mean(dataraw, d => d.Yangwin) * 1000) / 10, dataraw[0].Bidendelegates, dataraw[0].Bloombergdelegates,0, dataraw[0].Buttigiegdelegates, dataraw[0].Klobuchardelegates, dataraw[0].Sandersdelegates, dataraw[0].Steyerdelegates, dataraw[0].Warrendelegates, dataraw[0].Yangdelegates]
         
                 finaldata.push(final)
+            
+        
+        
             }
-        
-        
-            //}
-            document.getElementById("demo").innerHTML = finaldata.join("<br>")
+            time_data.push(finaldata)
+           
             //dont go past here
         })
+    }
+    
+    var time_data = time_data[0]
+    document.getElementById("demo").innerHTML = time_data.join("<br>")
         </script>
 
 

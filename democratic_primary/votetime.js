@@ -20,6 +20,9 @@ d3.csv("time.csv", function (error, data) {
 
     var datatype = "vote"
 
+    var mindate = new Date(2019, 5, 1),
+    maxdate = d3.max(data, d => d.primarydate)
+    demadjust = new Date(2020, 0, 4);
 
 
     var parseTime = d3.timeParse("%Y-%m-%d"),
@@ -39,7 +42,7 @@ d3.csv("time.csv", function (error, data) {
     var newest_day = d3.max(data, d => d.date)
 
     var data = data.filter(d => d.date <= maxdate)
-
+var data = data.filter(d => d.date >= mindate)
     var newest_data = data.filter(d => d.date == d3.max(data, d => d.date))
 
     var keys = keys.filter(f => f.includes(datatype))
@@ -98,9 +101,7 @@ d3.csv("time.csv", function (error, data) {
 
 
 
-    var mindate = new Date(2019, 5, 1),
-        maxdate = d3.max(data, d => d.primarydate)
-    demadjust = new Date(2020, 0, 4);
+    
 
     var x = d3.scaleTime()
         .rangeRound([margin.left, width - margin.right])
