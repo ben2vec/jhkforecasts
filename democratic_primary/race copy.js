@@ -1,6 +1,6 @@
-var marginrace = { top: 20, right: 20, bottom: 40, left: 30 }
-var widthrace = 1000 - marginrace.left - marginrace.right
-var heightrace = 450 - marginrace.top - marginrace.bottom
+var marginracephone = { top: 20, right: 20, bottom: 40, left: 30 }
+var widthracephone = 1000 - marginracephone.left - marginracephone.right
+var heightracephone = 900 - marginracephone.top - marginracephone.bottom
 
 var delScale = d3.scaleLinear()
     .domain([0, 1990])
@@ -57,21 +57,21 @@ d3.csv("delegatetime.csv", function (error, data) {
         d[0].toUpperCase() + d.substring(1)
     )
 
-    var svg = d3.select("#race").append("svg")
-        .attr("viewBox", "0 0 1000 450")
+    var svg = d3.select("#racephone").append("svg")
+        .attr("viewBox", "0 0 1000 900")
         .append('g')
-        .attr("transform", "translate(" + marginrace.left + "," + marginrace.top + ")");
+        .attr("transform", "translate(" + marginracephone.left + "," + marginracephone.top + ")");
 
     var mindate = new Date(2020, 1, 1),
         maxdate = new Date(2020, 5, 6)
     demadjust = new Date(2020, 0, 4);
 
     var x = d3.scaleTime()
-        .rangeRound([marginrace.left, widthrace - marginrace.right])
+        .rangeRound([marginracephone.left, widthracephone - marginracephone.right])
         .domain([mindate, maxdate])
 
     var y = d3.scaleLinear()
-        .rangeRound([heightrace - marginrace.bottom, marginrace.top]);
+        .rangeRound([heightracephone - marginracephone.bottom, marginracephone.top]);
 
     var z = d3.scaleOrdinal()
         .range(color_scale)
@@ -84,8 +84,8 @@ d3.csv("delegatetime.csv", function (error, data) {
 
     svg.append("g")
         .attr("class", "x-axis")
-        .attr("transform", "translate(0," + (heightrace - marginrace.bottom) + ")")
-        .call(d3.axisBottom(x).tickSize(-height+marginrace.top).ticks(5)
+        .attr("transform", "translate(0," + (heightracephone - marginracephone.bottom) + ")")
+        .call(d3.axisBottom(x).tickSize(-heightracephone+marginracephone.top+marginracephone.bottom).ticks(5)
             .tickFormat(d3.timeFormat("%b")))
         .call(g => {
             var years = x.ticks(d3.timeYear.every(1))
@@ -97,20 +97,21 @@ d3.csv("delegatetime.csv", function (error, data) {
                 .attr('font-size', 15)
                 .attr('font-weight', 800)
             g.selectAll("line")
-            .attr("opacity",.5)
-                    .attr("stroke","grey")
+                .attr("opacity", .5)
+                .attr("stroke", "grey")
+                .attr("stroke-width", 2)
 
 
             g.select(".domain")
 
         })
 
-       
+
 
 
     svg.append("g")
         .attr("class", "y-axis")
-        .attr("transform", "translate(" + marginrace.left + ",0)");
+        .attr("transform", "translate(" + marginracephone.left + ",0)");
 
     var focus = svg.append("g")
         .attr("class", "focus")
@@ -121,7 +122,7 @@ d3.csv("delegatetime.csv", function (error, data) {
         .attr("stroke-width", 1)
         .style("shape-rendering", "crispEdges")
         .style("opacity", 0)
-        .attr("y1", -heightrace)
+        .attr("y1", -heightracephone)
         .attr("y2", -40);
 
     focus.append("text").attr("class", "lineHoverDate")
@@ -130,9 +131,9 @@ d3.csv("delegatetime.csv", function (error, data) {
 
     var overlay = svg.append("rect")
         .attr("class", "overlay")
-        .attr("x", marginrace.left)
-        .attr("width", widthrace - marginrace.right - marginrace.left)
-        .attr("height", heightrace)
+        .attr("x", marginracephone.left)
+        .attr("width", widthracephone - marginracephone.right - marginracephone.left)
+        .attr("height", heightracephone)
 
     update(d3.select('#selectboxrace').property('value'), 0);
 
@@ -149,29 +150,29 @@ d3.csv("delegatetime.csv", function (error, data) {
 
         y.domain([
             d3.min(cities, d => d3.min(d.values, c => c.degrees)),
-            d3.max(cities, d => d3.max(d.values, c => c.degrees))>2000?d3.max(cities, d => d3.max(d.values, c => c.degrees)):2000
+            d3.max(cities, d => d3.max(d.values, c => c.degrees)) > 2000 ? d3.max(cities, d => d3.max(d.values, c => c.degrees)) : 2000
         ]).nice();
 
         svg.append("line")
-        .attr("x1",30)
-        .attr("x2",930)
-        .attr("y1",y(1990))
-        .attr("y2",y(1990))
-        .attr("stroke-width",2)
-        .attr("stroke","black")
+            .attr("x1", 30)
+            .attr("x2", 930)
+            .attr("y1", y(1990))
+            .attr("y2", y(1990))
+            .attr("stroke-width", 2)
+            .attr("stroke", "black")
 
         svg.append("text")
-        .attr("x",100)
-        .attr("y",y(1990)+15)
-        .attr("text-anchor","middle")
-        .attr("fill","black")
-        .attr("font-weight",700)
-        .text("1990 Delegates")
+            .attr("x", 100)
+            .attr("y", y(1990) + 15)
+            .attr("text-anchor", "middle")
+            .attr("fill", "black")
+            .attr("font-weight", 700)
+            .text("1990 Delegates")
 
 
         svg.selectAll(".y-axis").transition()
             .duration(speed)
-            .call(d3.axisLeft(y).tickSize(-widthrace + marginrace.right + marginrace.left).ticks(5)).call(g => {
+            .call(d3.axisLeft(y).tickSize(-widthracephone + marginracephone.right + marginracephone.left).ticks(5)).call(g => {
                 var years = x.ticks(d3.timeYear.every(1))
                 var xshift = 0
                 g.selectAll("text")
@@ -180,12 +181,13 @@ d3.csv("delegatetime.csv", function (error, data) {
                     .attr('fill', 'black')
                     .attr('font-size', 15)
                     .attr('font-weight', 800)
-                    g.selectAll("line")
-                    .attr("opacity",.5)
-                            .attr("stroke","grey")
-        
-        
-                    g.select(".domain")
+                g.selectAll("line")
+                    .attr("opacity", .5)
+                    .attr("stroke", "grey")
+                    .attr("stroke-width", 2)
+
+
+                g.select(".domain")
 
             })
 
@@ -196,11 +198,11 @@ d3.csv("delegatetime.csv", function (error, data) {
 
         city.enter().insert("g", ".focus").append("path")
             .style("stroke", d => z(d.id))
-            .attr("stroke-width",3)
-            .attr("fill","none")
+            .attr("stroke-width", 5)
+            .attr("fill", "none")
             .attr("d", d => line(d.values))
-            .attr("opacity",.8)
-            
+            .attr("opacity", .8)
+
         tooltip(copy);
     }
 
@@ -210,7 +212,7 @@ d3.csv("delegatetime.csv", function (error, data) {
 
         rect.enter().append("rect")
             .attr("class", "lineHoverRect")
-            .attr("y", 402.5)
+            .attr("y", 852.5)
             .attr("x", 862.5)
             .attr("width", 75)
             .attr("height", 25)
@@ -253,7 +255,7 @@ d3.csv("delegatetime.csv", function (error, data) {
                 d = x0 - d0.date > d1.date - x0 ? d1 : d0;
 
             focus.select(".lineHover")
-                .attr("transform", "translate(" + x(d.date) + "," + heightrace + ")");
+                .attr("transform", "translate(" + x(d.date) + "," + heightracephone + ")");
 
             focus.select(".lineHoverDate")
                 .attr("x", x(d.date))
@@ -273,7 +275,7 @@ d3.csv("delegatetime.csv", function (error, data) {
 
             focus.selectAll(".lineHoverText")
                 .attr("transform",
-                    "translate(" + 900 + "," + 420 + ")").style("font-weight", 700)
+                    "translate(" + 900 + "," + 870 + ")").style("font-weight", 700)
                 .text(e => d[e]);
 
 
@@ -292,16 +294,16 @@ d3.csv("delegatetime.csv", function (error, data) {
         .data(candidates)
         .enter().append('g')
         .attr("class", "legend")
-        .attr("transform", function (d, i) { return "translate(" + i * -100 + ",100)" })
+        .attr("transform", function (d, i) { return "translate(" + i * -100 + ",550)" })
 
-        
+
 
 
     legend.append("text")
         .attr("class", "legend-text")
         .style("fill", d => z(d))
         .attr("text-anchor", "middle")
-        .style("font-size", 14)
+        .style("font-size", 20)
         .style("font-weight", 700)
         .text(d => d)
 
