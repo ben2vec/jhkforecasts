@@ -14,14 +14,26 @@ var category = ["Trump", "Democrats", "3rd Party"]
                     .attr("viewBox", '0 0 1000 200')
         
         
+
+                    svg.append("text")
+                    .text(keyState=="US"?"Win Presidency":"Win "+keyState)
+                    .attr("x",500)
+                    .attr("y",20)
+                    .attr("font-size",30)
+                    .attr("fill","Black")
+                    .attr("text-anchor","middle")
+                    .attr("dominant-baseline","middle")
+                    .attr("font-weight",900);
+
                 svg.append("text")
-                    .text("Democrats")
-                    .attr("x",50)
-                    .attr("y",25)
-                    .attr("font-size",20)
-                    .attr("fill","black")
-                    .attr("text-anchor","start")
-                    .attr("font-weight",500);
+                    .text("D")
+                    .attr("x",440)
+                    .attr("y",90)
+                    .attr("font-size",60)
+                    .attr("fill",colorScale("Democrats"))
+                    .attr("text-anchor","middle")
+                    .attr("dominant-baseline","middle")
+                    .attr("font-weight",900);
         
                 svg.append("image")
                 .attr("xlink:href", d => "https://jhkforecasts.com/Trump-01.png")
@@ -29,31 +41,29 @@ var category = ["Trump", "Democrats", "3rd Party"]
                     .attr("y",40)
                     .attr("width",100)
                     .attr("height",100)
-                    
+                   
+                svg.append("text")
+                    .text(data[1].win+"%")
+                    .attr("x",560)
+                    .attr("y",170)
+                    .attr("font-size",30)
+                    .attr("fill",colorScale("Trump"))
+                    .attr("text-anchor","middle")
+                    .attr("font-weight",900);
+
+                    svg.append("text")
+                    .text(data[0].win+"%")
+                    .attr("x",440)
+                    .attr("y",170)
+                    .attr("font-size",30)
+                    .attr("fill",colorScale("Democrats"))
+                    .attr("text-anchor","middle")
+                    .attr("font-weight",900);
 
                 
         
-                svg.selectAll("bar")
-                    .data(data)
-                    .enter()
-                    .append("rect")
-                    .attr("x",d => d.xValue)
-                    .attr("y",40)
-                    .attr("width",d => d.width)
-                    .attr("height",20)
-                    .attr("fill", d=> colorScale(d.cand))
+                
         
-                svg.selectAll("win")
-                    .data(data)
-                    .enter()
-                    .append("text")
-                    .text(d => d.win+"%")
-                    .attr("x",d => d.xlabel)
-                    .attr("y",95)
-                    .attr("fill", "black")
-                    .attr("font-size",30)
-                    .attr("fill",d=> colorScale(d.cand))
-                    .attr("text-anchor","middle")
-                    .attr("font-weight",900)
+                
             });
         
