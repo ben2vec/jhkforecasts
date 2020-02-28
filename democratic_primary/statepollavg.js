@@ -198,6 +198,17 @@ d3.csv("simulator.csv", data => {
         .style("text-anchor", "middle")
         .attr("dominant-baseline","middle")
 
+
+        svg.append("text")
+        .text("*The darker the circle, the more weight they hold.*")
+        .attr("x",20)
+        .attr("y",20 )
+        .attr("fill", "Black")
+        .attr('font-size', 20)
+        .attr('font-weight', 500)
+        .style("text-anchor", "start")
+        .attr("dominant-baseline","middle")
+
       svg.selectAll()
         .data(candmax)
         .enter()
