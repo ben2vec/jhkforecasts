@@ -17,7 +17,7 @@ d3.csv("topline.csv", function (error, data) {
   formatValue = d3.format(".1f");
   formatvalue = d3.format(".0f");
 
-  data.sort((a, b) => b.majority - a.majority)
+  data.sort((a, b) => b.pluarlity - a.pluarlity)
   console.log(data)
   var svg = d3.select("#topline").append("svg")
     .attr("viewBox", "0 0 900 550")
