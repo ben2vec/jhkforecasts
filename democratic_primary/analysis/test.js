@@ -44,7 +44,7 @@ var parsedate = d3.timeParse("%Y-%m-%d %I:%M:%S")
 var parseDate = d3.timeParse("%m/%d/%y")
 var time_scale = 86400000
 var num_qual_polls = 2
-
+var numberformat = d3.format(".1f")
 console.log(forecasters)
 
 d3.csv("results.csv", results => {
@@ -121,9 +121,14 @@ d3.csv("results.csv", results => {
                 d.rmse = Math.sqrt(d.sumsq / results[a].num_cands)
                 return d;
             })
+            var avg_error = d3.mean(accuracy, d => d.rmse)
+            console.log(avg_error)
 
+            accuracy.forEach((d, i) => {
+                d.mean_reverted_error = d.rmse - avg_error
+                return d;
+            })
             accuracy.sort((a, b) => a.rmse - b.rmse)
-
             pd.push(accuracy)
         }
 
@@ -165,35 +170,417 @@ d3.csv("results.csv", results => {
                     d.rmse = Math.sqrt(d.sumsq / results[a].num_cands)
                     return d;
                 })
+                var avg_error = d3.mean(accuracy, d => d.rmse)
+                console.log(avg_error)
 
+                accuracy.forEach((d, i) => {
+                    d.mean_reverted_error = d.rmse - avg_error
+                    return d;
+                })
                 accuracy.sort((a, b) => a.rmse - b.rmse)
                 fd.push(accuracy)
+                console.log(accuracy)
             }
 
             var polls_data = pd.flat()
             var forecasts_data = fd.flat()
-         
+            console.log(forecasts_data)
+
 
             var pollsters = polls_data.map((d, i) => {
                 return d.pollster
             })
-            console.log(polls_data)
 
             var ps = d3.set(pollsters).values()
-          
 
-            var avg_rmse = ps.map((d,i)=>{
-                return{
-                pollster : d,
-                rmse: d3.mean(polls_data.filter(j=>j.pollster == d),d=>d.rmse),
-                polls :d3.sum(polls_data.filter(j=>j.pollster == d),d=>d.rmse)/d3.mean(polls_data.filter(j=>j.pollster == d),d=>d.rmse),
+
+            var pollsters_avg_rmse = ps.map((d, i) => {
+                return {
+                    pollster: d,
+                    rmse: d3.mean(polls_data.filter(j => j.pollster == d), d => d.rmse),
+                    mr_error: d3.mean(polls_data.filter(j => j.pollster == d), d => d.mean_reverted_error),
+                    polls: d3.sum(polls_data.filter(j => j.pollster == d), d => d.rmse) / d3.mean(polls_data.filter(j => j.pollster == d), d => d.rmse),
                 }
             })
 
-            avg_rmse.sort((a,b)=>a.rmse-b.rmse)
-            console.log(avg_rmse)
-            var qual_polls = avg_rmse.filter(d=>d.polls>=2)
+
+            var forecasts_avg_rmse = forecasters.map((d, i) => {
+                return {
+                    pollster: d.forecaster,
+                    rmse: d3.mean(forecasts_data.filter(j => j.forecaster == d.forecaster), d => d.rmse),
+                    mr_error: d3.mean(forecasts_data.filter(j => j.forecaster == d.forecaster), d => d.mean_reverted_error),
+                }
+            })
+
+            pollsters_avg_rmse.sort((a, b) => a.mr_error - b.mr_error)
+            console.log(pollsters_avg_rmse)
+            forecasts_avg_rmse.sort((a, b) => a.mr_error - b.mr_error)
+            console.log(forecasts_avg_rmse)
+
+            var qual_polls = pollsters_avg_rmse.filter(d => d.polls >= num_qual_polls)
+            
+            
+            pollsters_avg_rmse.forEach((d, i) => {
+                d.rank = i + 1
+                return d;
+            })
+            
+            pollsters_avg_rmse.sort(function (a, b) {
+                a = a.pollster.toLowerCase();
+                b = b.pollster.toLowerCase();
+            
+                return a < b ? -1 : a > b ? 1 : 0;
+              });
+              console.log(pollsters_avg_rmse)
+            
+
+
+            forecasts_avg_rmse.forEach((d, i) => {
+                d.rank = i + 1
+                return d;
+            })
+
+
+            qual_polls.forEach((d, i) => {
+                d.rank = i + 1
+                return d;
+            })
+
             console.log(qual_polls)
+
+            var z = d3.scaleLinear()
+                .domain([0, d3.max(qual_polls, d => d.rmse)])
+                .range(["white", "#FF6060"])
+
+            var mr = d3.scaleLinear()
+                .domain(d3.extent(qual_polls, d => d.mr_error))
+                .range(["white", "#FF6060"])
+
+            console.log(mr(2.1))
+            var height = qual_polls.length * 50 + 30
+
+            var qual = d3.select("#qualpollsters").append("svg")
+                .attr("viewBox", "0 0 800 " + height)
+
+            qual.selectAll("rect")
+                .data(qual_polls)
+                .enter()
+                .append("rect")
+                .attr("fill", d => z(d.rmse))
+                .attr("x", 550)
+                .attr("y", (d, i) => i * 50 + 30)
+                .attr("width", 100)
+                .attr("height", 50);
+
+            qual.selectAll("d")
+                .data(qual_polls)
+                .enter()
+                .append("rect")
+                .attr("fill", d => mr(d.mr_error))
+                .attr("x", 450)
+                .attr("y", (d, i) => i * 50 + 30)
+                .attr("width", 100)
+                .attr("height", 50)
+
+            qual.selectAll("topline")
+                .data(qual_polls)
+                .enter()
+                .append("text")
+                .text(d => numberformat(d.rmse))
+                .attr("x", 600)
+                .attr("y", (d, i) => i * 50 + 60)
+                .attr("font-size", 25)
+                .attr("fill", "black")
+                .attr("text-anchor", "middle")
+                .attr("font-weight", 700)
+                .attr("dominant-baseline", "middle")
+
+
+            qual.selectAll("topline")
+                .data(qual_polls)
+                .enter()
+                .append("text")
+                .text(d => numberformat(d.mr_error))
+                .attr("x", 500)
+                .attr("y", (d, i) => i * 50 + 60)
+                .attr("font-size", 25)
+                .attr("fill", "black")
+                .attr("text-anchor", "middle")
+                .attr("font-weight", 700)
+                .attr("dominant-baseline", "middle")
+
+            qual.selectAll("topline")
+                .data(qual_polls)
+                .enter()
+                .append("text")
+                .text(d => d.pollster)
+                .attr("x", 100)
+                .attr("y", (d, i) => i * 50 + 60)
+                .attr("font-size", 20)
+                .attr("fill", "black")
+                .attr("text-anchor", "start")
+                .attr("font-weight", 700)
+                .attr("dominant-baseline", "middle")
+
+            qual.selectAll("topline")
+                .data(qual_polls)
+                .enter()
+                .append("text")
+                .text(d => d.rank)
+                .attr("x", 50)
+                .attr("y", (d, i) => i * 50 + 60)
+                .attr("font-size", 20)
+                .attr("fill", "black")
+                .attr("text-anchor", "middle")
+                .attr("font-weight", 700)
+                .attr("dominant-baseline", "middle")
+
+
+                qual.selectAll("topline")
+                .data(qual_polls)
+                .enter()
+                .append("line")
+                .attr("x1", 1000)
+                .attr("x2", 000)
+                .attr("y1", (d, i) => i * 50 + 30)
+                .attr("y2", (d, i) => i * 50 + 30)
+                .attr("stroke", "grey")
+                .attr("stroke-width", 1)
+
+            qual.selectAll("topline")
+                .data(qual_polls)
+                .enter()
+                .append("text")
+                .text(d => d.polls)
+                .attr("x", 720)
+                .attr("y", (d, i) => i * 50 + 60)
+                .attr("font-size", 20)
+                .attr("fill", "black")
+                .attr("text-anchor", "middle")
+                .attr("font-weight", 700)
+                .attr("dominant-baseline", "middle")
+
+
+            qual.append("text")
+                .text("Rank")
+                .attr("x", 50)
+                .attr("y", 15)
+                .attr("font-size", 20)
+                .attr("fill", "black")
+                .attr("text-anchor", "middle")
+                .attr("font-weight", 700)
+                .attr("dominant-baseline", "middle")
+
+            qual.append("text")
+                .text("Pollster")
+                .attr("x", 100)
+                .attr("y", 15)
+                .attr("font-size", 20)
+                .attr("fill", "black")
+                .attr("text-anchor", "start")
+                .attr("font-weight", 700)
+                .attr("dominant-baseline", "middle")
+
+
+            qual.append("text")
+                .text("Mean Reverted")
+                .attr("x", 500)
+                .attr("y", 10)
+                .attr("font-size", 15)
+                .attr("fill", "black")
+                .attr("text-anchor", "middle")
+                .attr("font-weight", 700)
+                .attr("dominant-baseline", "middle")
+
+            qual.append("text")
+                .text("Error")
+                .attr("x", 500)
+                .attr("y", 24)
+                .attr("font-size", 15)
+                .attr("fill", "black")
+                .attr("text-anchor", "middle")
+                .attr("font-weight", 700)
+                .attr("dominant-baseline", "middle")
+
+            qual.append("text")
+                .text("Average Error")
+                .attr("x", 600)
+                .attr("y", 15)
+                .attr("font-size", 15)
+                .attr("fill", "black")
+                .attr("text-anchor", "middle")
+                .attr("font-weight", 700)
+                .attr("dominant-baseline", "middle")
+
+            qual.append("text")
+                .text("# of Polls")
+                .attr("x", 720)
+                .attr("y", 15)
+                .attr("font-size", 20)
+                .attr("fill", "black")
+                .attr("text-anchor", "middle")
+                .attr("font-weight", 700)
+                .attr("dominant-baseline", "middle")
+
+            qual.append("line")
+            .attr("x1", 1000)
+            .attr("x2", 000)
+            .attr("y1", 30)
+            .attr("y2", 30)
+            .attr("stroke", "black")
+            .attr("stroke-width", 1.5)
+
+
+            var fore = d3.select("#nationalforecasts").append("svg")
+                .attr("viewBox", "0 0 800 " + height)
+
+            fore.selectAll("rect")
+                .data(forecasts_avg_rmse)
+                .enter()
+                .append("rect")
+                .attr("fill", d => z(d.rmse))
+                .attr("x", 650)
+                .attr("y", (d, i) => i * 50 + 30)
+                .attr("width", 100)
+                .attr("height", 50);
+
+            fore.selectAll("d")
+                .data(forecasts_avg_rmse)
+                .enter()
+                .append("rect")
+                .attr("fill", d => mr(d.mr_error))
+                .attr("x", 550)
+                .attr("y", (d, i) => i * 50 + 30)
+                .attr("width", 100)
+                .attr("height", 50)
+
+            fore.selectAll("topline")
+                .data(forecasts_avg_rmse)
+                .enter()
+                .append("text")
+                .text(d => numberformat(d.rmse))
+                .attr("x", 700)
+                .attr("y", (d, i) => i * 50 + 60)
+                .attr("font-size", 25)
+                .attr("fill", "black")
+                .attr("text-anchor", "middle")
+                .attr("font-weight", 700)
+                .attr("dominant-baseline", "middle")
+
+
+            fore.selectAll("topline")
+                .data(forecasts_avg_rmse)
+                .enter()
+                .append("text")
+                .text(d => numberformat(d.mr_error))
+                .attr("x", 600)
+                .attr("y", (d, i) => i * 50 + 60)
+                .attr("font-size", 25)
+                .attr("fill", "black")
+                .attr("text-anchor", "middle")
+                .attr("font-weight", 700)
+                .attr("dominant-baseline", "middle")
+
+            fore.selectAll("topline")
+                .data(forecasts_avg_rmse)
+                .enter()
+                .append("text")
+                .text(d => d.pollster)
+                .attr("x", 100)
+                .attr("y", (d, i) => i * 50 + 60)
+                .attr("font-size", 20)
+                .attr("fill", "black")
+                .attr("text-anchor", "start")
+                .attr("font-weight", 700)
+                .attr("dominant-baseline", "middle")
+
+            fore.selectAll("topline")
+                .data(forecasts_avg_rmse)
+                .enter()
+                .append("text")
+                .text(d => d.rank)
+                .attr("x", 50)
+                .attr("y", (d, i) => i * 50 + 60)
+                .attr("font-size", 20)
+                .attr("fill", "black")
+                .attr("text-anchor", "middle")
+                .attr("font-weight", 700)
+                .attr("dominant-baseline", "middle")
+
+
+                fore.selectAll("topline")
+                .data(forecasts_avg_rmse)
+                .enter()
+                .append("line")
+                .attr("x1", 1000)
+                .attr("x2", 000)
+                .attr("y1", (d, i) => i * 50 + 30)
+                .attr("y2", (d, i) => i * 50 + 30)
+                .attr("stroke", "grey")
+                .attr("stroke-width", 1)
+            fore.append("text")
+                .text("Rank")
+                .attr("x", 50)
+                .attr("y", 15)
+                .attr("font-size", 20)
+                .attr("fill", "black")
+                .attr("text-anchor", "middle")
+                .attr("font-weight", 700)
+                .attr("dominant-baseline", "middle")
+
+            fore.append("text")
+                .text("Pollster")
+                .attr("x", 100)
+                .attr("y", 15)
+                .attr("font-size", 20)
+                .attr("fill", "black")
+                .attr("text-anchor", "start")
+                .attr("font-weight", 700)
+                .attr("dominant-baseline", "middle")
+
+
+            fore.append("text")
+                .text("Mean Reverted")
+                .attr("x", 600)
+                .attr("y", 10)
+                .attr("font-size", 15)
+                .attr("fill", "black")
+                .attr("text-anchor", "middle")
+                .attr("font-weight", 700)
+                .attr("dominant-baseline", "middle")
+
+            fore.append("text")
+                .text("Error")
+                .attr("x", 600)
+                .attr("y", 24)
+                .attr("font-size", 15)
+                .attr("fill", "black")
+                .attr("text-anchor", "middle")
+                .attr("font-weight", 700)
+                .attr("dominant-baseline", "middle")
+
+            fore.append("text")
+                .text("Average Error")
+                .attr("x", 700)
+                .attr("y", 15)
+                .attr("font-size", 15)
+                .attr("fill", "black")
+                .attr("text-anchor", "middle")
+                .attr("font-weight", 700)
+                .attr("dominant-baseline", "middle")
+
+           
+
+            fore.append("line")
+                .attr("x1", 1000)
+                .attr("x2", 000)
+                .attr("y1", 30)
+                .attr("y2", 30)
+                .attr("stroke", "black")
+                .attr("stroke-width", 1.5)
+
+
+
         })
     })
 })

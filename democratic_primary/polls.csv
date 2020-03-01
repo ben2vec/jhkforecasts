@@ -1,4 +1,5 @@
 State,Pollster,Grade,Sample,Date,weight,Biden,Bloomberg,Booker,Buttigieg,Klobuchar,Sanders,Steyer,Warren,Yang,link
+California,Suffolk University,A-,500  lv,2020-02-29 00:00:00,40.3,14.0,16.0,0.0,7.0,5.0,35.0,3.0,12.0,0.0,https://www.usatoday.com/story/news/politics/elections/2020/03/01/super-tuesday-bernie-sanders-california-usa-today-suffolk-poll/4902797002/
 Texas,YouGov,B-,635  lv,2020-02-29 00:00:00,24.6,26.0,13.0,0.0,6.0,6.0,30.0,1.0,17.0,0.0,https://drive.google.com/file/d/1weevKvGFYvyHzEpUfU_ilzpFm1GrSM7-/view
 California,YouGov,B-,1411  lv,2020-02-29 00:00:00,34.6,19.0,12.0,0.0,9.0,4.0,31.0,3.0,18.0,0.0,https://drive.google.com/file/d/12inCh6uWKgHaqw6wpbLX-hewghd4H_np/view
 Massachusetts,Suffolk University,A-,500  lv,2020-02-29 00:00:00,40.3,11.0,13.0,0.0,12.0,5.0,24.0,2.0,22.0,0.0,https://www.suffolk.edu/-/media/suffolk/documents/academics/research-at-suffolk/suprc/polls/massachusetts2/2020/2-29-2020-ma_marginals.pdf
@@ -1155,7 +1156,6 @@ US,Harris Insights & Analytics,C+,459  rv,2018-11-28 00:00:00,0.0,25.0,2.0,3.0,0
 Massachusetts,YouGov,B-,655  rv,2018-11-14 00:00:00,0.1,19.0,0.0,3.0,0.0,3.0,14.0,0.0,11.0,0.0,https://polsci.umass.edu/sites/default/files/Toplines2018_2020_0.pdf
 US,Morning Consult,B/C,733  rv,2018-11-09 00:00:00,0.0,26.0,2.0,3.0,0.0,1.0,19.0,0.0,5.0,0.0,https://www.politico.com/f/?id=00000167-0956-def8-a56f-89d6b72d0001
 US,Harris Insights & Analytics,C+,370  rv,2018-11-06 00:00:00,0.0,30.0,5.0,5.0,0.0,0.0,20.0,0.0,5.0,0.0,https://thehill.com/hilltv/what-americas-thinking/415500-biden-leads-dem-voters-list-of-potential-2020-contenders-poll
-,,,  ,,,,,,,,,,,,
 ,,,  ,,,,,,,,,,,,
 ,,,  ,,,,,,,,,,,,
 ,,,  ,,,,,,,,,,,,
