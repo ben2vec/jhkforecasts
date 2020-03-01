@@ -222,6 +222,8 @@ d3.csv("bubblemap.csv", function (error, data) {
   svg.selectAll("label")
     .data(data)
     .enter()
+    .append("a")
+    .attr("xlink:href", d => d.state)
     .append("text")
     .text(d => d.abbrev)
     .attr("x", d => x(d.xValue))
