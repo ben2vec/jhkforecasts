@@ -1,3 +1,5 @@
+var fname = ["JHK Forecasts", "RealClearPolitics", "Lean Tossup", "#10at10", "FiveThirtyEight Polling Avg", "FiveThirtyEight Forecast","theHOX","DDHQ/0ptimus/Ozy"]
+var flinks = ["https://projects.jhkforecasts.com/democratic_primary/", "https://www.realclearpolitics.com/epolls/2020/president/us/2020_democratic_presidential_nomination-6730.html", "https://leantossup.ca/2020-democratic-presidential-primary/", "https://twitter.com/djjohnso", "https://projects.fivethirtyeight.com/polls/president-primary-d/national/", "https://projects.fivethirtyeight.com/2020-primary-forecast/","https://twitter.com/irihox","https://www.ozy.com/topic/2020-election/"]
 var forecasters = [
     {
         "forecaster": "#10at10",
@@ -484,6 +486,8 @@ d3.csv("results.csv", results => {
             fore.selectAll("topline")
                 .data(forecasts_avg_rmse)
                 .enter()
+                .append("a")
+                .attr("href",d=>flinks[fname.indexOf(d.pollster)])
                 .append("text")
                 .text(d => d.pollster)
                 .attr("x", 100)
@@ -493,6 +497,7 @@ d3.csv("results.csv", results => {
                 .attr("text-anchor", "start")
                 .attr("font-weight", 700)
                 .attr("dominant-baseline", "middle")
+                .attr("text-decoration", "underline")
 
             fore.selectAll("topline")
                 .data(forecasts_avg_rmse)
@@ -938,8 +943,9 @@ d3.csv("results.csv", results => {
                 stf.selectAll("topline")
                 .data(stateforecasts)
                 .enter()
+                .append("a")
+                .attr("href",d=>flinks[fname.indexOf(d.forecaster)])
                 .append("text")
-                
                 .text(d => d.forecaster)
                 .attr("x", 100)
                 .attr("y", (d, i) => i * 50 + 60)
@@ -948,6 +954,7 @@ d3.csv("results.csv", results => {
                 .attr("text-anchor", "start")
                 .attr("font-weight", 700)
                 .attr("dominant-baseline", "middle")
+                .attr("text-decoration", "underline")
 
 
                 stf.selectAll("topline")
