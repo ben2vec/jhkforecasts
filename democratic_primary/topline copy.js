@@ -5,11 +5,11 @@ var delscale = d3.scaleLinear()
   .domain([0, 1990])
   .range(["white", "#002E66"]);
 
-var category = ["Biden", "Bloomberg", "Booker", "Buttigieg", "Klobuchar", "Sanders", "Steyer", "Warren", "Yang"]
+var category = ["Biden", "Bloomberg", "Booker", "Buttigieg", "Klobuchar", "Sanders", "Steyer", "Warren", "Yang", "No one"]
 
 var color = d3.scaleOrdinal()
   .domain(category)
-  .range(["#00C181", "#FF6060", "#a4b1b5", "#FFE130", "#FF8D32", "#0091FF", "#FF2EF0", "#AF0BFF", "#a4b1b5"])
+  .range(["#00C181", "#FF6060", "#a4b1b5", "#FFE130", "#FF8D32", "#0091FF", "#FF2EF0", "#AF0BFF", "#a4b1b5", "#a4b1b5"])
 
 
 d3.csv("topline.csv", function (error, data) {
@@ -114,9 +114,9 @@ d3.csv("topline.csv", function (error, data) {
     .attr("x", 150)
     .attr("y", 10)
     .style("fill", d => d.win > 50 ? "white" : "black")
-    .style("font-size", d => Math.sqrt(d.majority) + 15)
+    .style("font-size", 20)
     .attr("font-weight", 700)
-    .text(d => d.pluarlity + "%")
+    .text((d, i) => i > 3 ? "-" : d.pluarlity + "%")
     .attr("text-anchor", "middle")
 
   repeat.append("text")
@@ -126,7 +126,7 @@ d3.csv("topline.csv", function (error, data) {
     .style("fill", d => d.win > 50 ? "white" : "black")
     .style("font-size", d => Math.sqrt(d.majority) + 15)
     .attr("font-weight", 700)
-    .text(d => d.majority + "%")
+    .text(d => d.majority == 0 ? "-" : d.majority + "%")
     .attr("text-anchor", "middle")
 
 
@@ -139,7 +139,7 @@ d3.csv("topline.csv", function (error, data) {
     .style("fill", d => d.delegates > 1500 ? "white" : "black")
     .style("font-size", 20)
     .attr("font-weight", 500)
-    .text(d => formatvalue(d.delegates))
+    .text((d, i) => i == 6 ? "-" : formatvalue(d.delegates))
     .attr("text-anchor", "middle")
 
 
@@ -150,7 +150,7 @@ d3.csv("topline.csv", function (error, data) {
     .style("fill", d => d.vote > 50 ? "white" : "black")
     .style("font-size", d => Math.sqrt(d.majority) + 15)
     .attr("font-weight", 700)
-    .text(d => d.voteShare + "%")
+    .text((d, i) => i == 6 ? "-" : d.voteShare + "%")
     .attr("text-anchor", "middle")
 
 
