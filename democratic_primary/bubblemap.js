@@ -8,14 +8,14 @@ var R = 7
 
 
 
-var category = ["Biden", "Bloomberg", "Booker", "Buttigieg", "Klobuchar", "Sanders", "Steyer", "Warren", "Yang"]
+var cat = ["Biden", "Bloomberg", "Buttigieg", "Klobuchar", "Sanders", "Steyer", "Warren"]
 
 var color = d3.scaleOrdinal()
-  .domain(category)
-  .range(["#00C181", "#FF6060", "#a4b1b5", "#FFE130", "#FF8D32", "#0091FF", "#FF2EF0", "#AF0BFF", "#a4b1b5"])
+  .domain(cat)
+  .range(["#00C181", "#FF6060", "#FFE130", "#FF8D32", "#0091FF", "#FF2EF0", "#AF0BFF"])
 var colortwo = d3.scaleOrdinal()
-  .domain(category)
-  .range(["black", "white", "white", "black", "white", "white", "black", "white", "white"])
+  .domain(cat)
+  .range(["black", "white", "black", "white", "white", "black", "white", "white"])
 
 
 var div = d3.select("#bubblemap").append("div")
@@ -58,7 +58,7 @@ d3.csv("bubblemap.csv", function (error, data) {
     .attr("transform", "translate(" + 700 + "," + 30 + ")")
 
   var legend = svgLegend.selectAll('.legend')
-    .data(category)
+    .data(cat)
     .enter().append('g')
     .attr("class", "legend")
     .attr("transform", function (d, i) { return "translate(0," + i * 20 + ")" })

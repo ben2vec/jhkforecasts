@@ -112,22 +112,23 @@ d3.csv("topline.csv", function (error, data) {
   repeat.append("text")
     .attr("class", "repeat-text")
     .attr("x", 150)
-    .attr("y", 10)
+    .attr("y", 7.5)
     .style("fill", d => d.win > 50 ? "white" : "black")
     .style("font-size", 20)
     .attr("font-weight", 700)
     .text((d, i) => i > 3 ? "-" : d.pluarlity + "%")
     .attr("text-anchor", "middle")
-
+    .attr("dominant-baseline", "middle")
   repeat.append("text")
     .attr("class", "repeat-text")
     .attr("x", 150)
-    .attr("y", 110)
+    .attr("y", 107.5)
     .style("fill", d => d.win > 50 ? "white" : "black")
-    .style("font-size", d => Math.sqrt(d.majority) + 15)
+    .style("font-size",20)
     .attr("font-weight", 700)
     .text(d => d.majority == 0 ? "-" : d.majority + "%")
     .attr("text-anchor", "middle")
+    .attr("dominant-baseline", "middle")
 
 
 
@@ -135,24 +136,24 @@ d3.csv("topline.csv", function (error, data) {
   repeat.append("text")
     .attr("class", "repeat-text")
     .attr("x", 150)
-    .attr("y", 210)
+    .attr("y", 207.5)
     .style("fill", d => d.delegates > 1500 ? "white" : "black")
     .style("font-size", 20)
-    .attr("font-weight", 500)
+    .attr("font-weight", 700)
     .text((d, i) => i == 6 ? "-" : formatvalue(d.delegates))
     .attr("text-anchor", "middle")
-
+    .attr("dominant-baseline", "middle")
 
   repeat.append("text")
     .attr("class", "repeat-text")
     .attr("x", 150)
-    .attr("y", 310)
+    .attr("y", 307.5)
     .style("fill", d => d.vote > 50 ? "white" : "black")
-    .style("font-size", d => Math.sqrt(d.majority) + 15)
+    .style("font-size", 20)
     .attr("font-weight", 700)
     .text((d, i) => i == 6 ? "-" : d.voteShare + "%")
     .attr("text-anchor", "middle")
-
+    .attr("dominant-baseline", "middle")
 
 
   svg.append("text")
