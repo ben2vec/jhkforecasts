@@ -406,12 +406,12 @@
         d[candidates[4]] = data[i][candidates[4] + "res"] != "" ? +data[i][candidates[4] + "res"] : 100 / d.total * +d[candidates[4]]
         d[candidates[5]] = data[i][candidates[5] + "res"] != "" ? +data[i][candidates[5] + "res"] : 100 / d.total * +d[candidates[5]]
         d[candidates[6]] = data[i][candidates[6] + "res"] != "" ? +data[i][candidates[6] + "res"] : 100 / d.total * +d[candidates[6]]
-        d[candidates[0] + "under15"] = data[i][candidates[0] + "res"] != "" ? 0 : d[candidates[0]] < 15 ? d[candidates[0]] > 10 ? Math.round((.02 * d[candidates[0]] - .2) * +data[i].Delegates) : 0 : 0
-        d[candidates[1] + "under15"] = data[i][candidates[1] + "res"] != "" ? 0 : d[candidates[1]] < 15 ? d[candidates[1]] > 10 ? Math.round((.02 * d[candidates[1]] - .2) * +data[i].Delegates) : 0 : 0
-        d[candidates[2] + "under15"] = data[i][candidates[2] + "res"] != "" ? 0 : d[candidates[2]] < 15 ? d[candidates[2]] > 10 ? Math.round((.02 * d[candidates[2]] - .2) * +data[i].Delegates) : 0 : 0
-        d[candidates[3] + "under15"] = data[i][candidates[3] + "res"] != "" ? 0 : d[candidates[3]] < 15 ? d[candidates[3]] > 10 ? Math.round((.02 * d[candidates[3]] - .2) * +data[i].Delegates) : 0 : 0
-        d[candidates[4] + "under15"] = data[i][candidates[4] + "res"] != "" ? 0 : d[candidates[4]] < 15 ? d[candidates[4]] > 10 ? Math.round((.02 * d[candidates[4]] - .2) * +data[i].Delegates) : 0 : 0
-        d[candidates[5] + "under15"] = data[i][candidates[5] + "res"] != "" ? 0 : d[candidates[5]] < 15 ? d[candidates[5]] > 10 ? Math.round((.02 * d[candidates[5]] - .2) * +data[i].Delegates) : 0 : 0
+        d[candidates[0] + "under15"] =  d[candidates[0]] < 15 ? d[candidates[0]] > 10 ? Math.round((.02 * d[candidates[0]] - .2) * +data[i].Delegates) : 0 : 0
+        d[candidates[1] + "under15"] =  d[candidates[1]] < 15 ? d[candidates[1]] > 10 ? Math.round((.02 * d[candidates[1]] - .2) * +data[i].Delegates) : 0 : 0
+        d[candidates[2] + "under15"] =  d[candidates[2]] < 15 ? d[candidates[2]] > 10 ? Math.round((.02 * d[candidates[2]] - .2) * +data[i].Delegates) : 0 : 0
+        d[candidates[3] + "under15"] =  d[candidates[3]] < 15 ? d[candidates[3]] > 10 ? Math.round((.02 * d[candidates[3]] - .2) * +data[i].Delegates) : 0 : 0
+        d[candidates[4] + "under15"] =  d[candidates[4]] < 15 ? d[candidates[4]] > 10 ? Math.round((.02 * d[candidates[4]] - .2) * +data[i].Delegates) : 0 : 0
+        d[candidates[5] + "under15"] =  d[candidates[5]] < 15 ? d[candidates[5]] > 10 ? Math.round((.02 * d[candidates[5]] - .2) * +data[i].Delegates) : 0 : 0
         d[candidates[6] + "under15"] = data[i][candidates[6] + "res"] != "" ? 0 : d[candidates[6]] < 15 ? d[candidates[6]] > 10 ? Math.round((.02 * d[candidates[6]] - .2) * +data[i].Delegates) : 0 : 0
         d.sumover15 = (d[candidates[0]] > 15 ? d[candidates[0]] : 0) + (d[candidates[1]] > 15 ? d[candidates[1]] : 0) + (d[candidates[2]] > 15 ? d[candidates[2]] : 0) + (d[candidates[3]] > 15 ? d[candidates[3]] : 0) + (d[candidates[4]] > 15 ? d[candidates[4]] : 0) + (d[candidates[5]] > 15 ? d[candidates[5]] : 0) + (d[candidates[6]] > 15 ? d[candidates[6]] : 0)
         d[candidates[0] + "over15"] = data[i][candidates[0] + "res"] != "" ? +data[i][candidates[0] + "resdel"] : d[candidates[0]] > 15 ? Math.round((d[candidates[0]] / d.sumover15) * +data[i].Delegates) : 0
@@ -431,7 +431,9 @@
         return d;
       })
 
-      console.log(newdata)
+        var bidensum = d3.sum(newdata,d=>d.bidendelegates)
+        console.log()
+        console.log(newdata)
 
       var finaldata = []
       for (let j = 0; j < 57; j++) {
