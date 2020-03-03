@@ -114,9 +114,9 @@ var parse_date = d3.timeParse("%m/%d/%y")
 
             var grade_scale = d3.scaleLinear()
                 .domain([0.2, .75, 1.1, 1.5])
-                .range(["#F0474E", "#FCDD26", "#37B76E", "#2079FF"]);
+                .range(["#F0474E", "#FCDD26", "#37B76E", "#2079FF"])
 
-            var parseTime = d3.timeParse("%Y-%m-%d %H:%M:%S"),
+            var parseTime = d3.timeParse("%Y-%m-%d %H:%M:%S")
                 formatDate = d3.timeFormat("%m - %d"),
                 formatMonth = d3.timeFormat("%Y-%m-%d"),
                 bisectDate = d3.bisector(d => d.date).left,
