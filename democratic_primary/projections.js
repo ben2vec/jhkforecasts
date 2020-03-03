@@ -22,7 +22,7 @@ d3.csv("time.csv", function (error, data) {
   var newest_day = d3.max(data, d => d.date)
   var primary_date = data[0].primarydate
   var newest_data = data.filter(d => d.date == newest_day)
-  var completed = primary_date >= newest_day  ? 0 : 1
+  var completed = primary_date >= newest_day ? 0 : 1
   console.log(completed)
   var vote = keys.filter(f => f.includes("vote"))
   var win = keys.filter(f => f.includes("win"))
@@ -56,15 +56,15 @@ d3.csv("time.csv", function (error, data) {
   })
 
 
-  cand_vote.sort((a, b) => b.win - a.win)
-  cand_vote.sort((a, b) => b.delegates - a.delegates)
+  cand_vote.sort((a, b) => completed == 1 ? b.win - a.win : b.vote - a.vote)
+
   console.log(cand_vote)
 
   var data = cand_vote
   var data = data.filter(d => d.vote > 0)
   var max_vote = completed == 1 ? d3.max(data, d => d.win) : 0
   var max_proj = d3.max(data, d => d.vote)
-  var max = max_vote > max_proj ?max_vote:max_proj
+  var max = max_vote > max_proj ? max_vote : max_proj
   var total_delegates = d3.sum(data, d => d.delegates)
   var x = d3.scaleLinear()
     .range([100, 650])
@@ -112,7 +112,7 @@ d3.csv("time.csv", function (error, data) {
   legend.append("circle")
     .attr("cy", 30)
     .attr("cx", 100)
-    .attr("fill", d => completed==1?color(d.candidate):"none")
+    .attr("fill", d => completed == 1 ? color(d.candidate) : "none")
     .attr("r", "5")
     .transition()
     .duration(1000)
@@ -125,7 +125,7 @@ d3.csv("time.csv", function (error, data) {
     .attr("width", 80)
     .attr("height", 50)
     .attr("rx", 10)
-    .style("fill", d =>demScale(d.win))
+    .style("fill", d => demScale(d.win))
 
   legend.append("rect")
     .attr("class", "lineHoverRect")
@@ -134,7 +134,7 @@ d3.csv("time.csv", function (error, data) {
     .attr("width", 80)
     .attr("height", 50)
     .attr("rx", 10)
-    .style("fill", d =>d.del==0?"white" :demScale((d.delegates / total_delegates) * 100))
+    .style("fill", d => d.del == 0 ? "white" : demScale((d.delegates / total_delegates) * 100))
   legend.append("rect")
     .attr("class", "lineHoverRect")
     .attr("y", 0)
@@ -242,7 +242,7 @@ d3.csv("time.csv", function (error, data) {
     .style("font-weight", 700)
     .text("Delegates")
 
-    svg.append("text")
+  svg.append("text")
     .attr("class", "legend-text")
     .attr("y", 30)
     .attr("x", 150)
@@ -253,7 +253,7 @@ d3.csv("time.csv", function (error, data) {
     .style("font-weight", 700)
     .text("Projected Vote")
 
-    svg.append("circle")
+  svg.append("circle")
     .attr("cy", 27.5)
     .attr("cx", 220)
     .attr("fill", "white")
@@ -261,7 +261,7 @@ d3.csv("time.csv", function (error, data) {
     .attr("stroke-width", 3)
     .attr("r", "5")
 
-    svg.append("text")
+  svg.append("text")
     .attr("class", "legend-text")
     .attr("y", 30)
     .attr("x", 350)
@@ -270,13 +270,13 @@ d3.csv("time.csv", function (error, data) {
     .attr("dominant-baseline", "middle")
     .style("font-size", 15)
     .style("font-weight", 700)
-    .text(completed==1?"Actual Vote":"")
+    .text(completed == 1 ? "Actual Vote" : "")
 
-    svg.append("circle")
+  svg.append("circle")
     .attr("cy", 27.5)
     .attr("cx", 420)
-    .attr("fill", completed==1?"black":"white")
-  
+    .attr("fill", completed == 1 ? "black" : "white")
+
     .attr("r", "5")
 
   svg.append("line")
