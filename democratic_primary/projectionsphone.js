@@ -57,6 +57,7 @@ d3.csv("time.csv", function (error, data) {
 
 
     cand_vote.sort((a, b) => b.win - a.win)
+    cand_vote.sort((a, b) => b.delegates - a.delegates)
     console.log(cand_vote)
 
     var data = cand_vote
