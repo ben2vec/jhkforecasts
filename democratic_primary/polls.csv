@@ -1,4 +1,5 @@
 State,Pollster,Grade,Sample,Date,weight,Biden,Bloomberg,Booker,Buttigieg,Klobuchar,Sanders,Steyer,Warren,Yang,link
+US,Morning Consult,B/C,961  lv,2020-03-03 00:00:00,62.3,36,19,0,0,0,28,0,14,0,https://morningconsult.com/2020/03/03/biden-reclaims-national-lead-with-buttigieg-klobuchar-exits/
 US,Ipsos,B+,579  rv,2020-03-02 00:00:00,0.0,49,0,0,0,0,51,0,0,0,https://www.ipsos.com/sites/default/files/ct/news/documents/2020-03/topline_reuters_2020_election_tracker_03_02_2020_wu.pdf
 US,Ipsos,B+,682  a,2020-03-02 00:00:00,0.0,46,0,0,0,0,54,0,0,0,https://www.ipsos.com/sites/default/files/ct/news/documents/2020-03/topline_reuters_2020_election_tracker_03_02_2020_wu.pdf
 US,Ipsos,B+,579  rv,2020-03-02 00:00:00,0.0,0,44,0,0,0,56,0,0,0,https://www.ipsos.com/sites/default/files/ct/news/documents/2020-03/topline_reuters_2020_election_tracker_03_02_2020_wu.pdf
@@ -42,7 +43,7 @@ California,AtlasIntel,-,727  lv,2020-03-02 00:00:00,21.1,26,15,0,3,1,34,0,15,0,h
 Texas,Elucd,-,833  lv,2020-03-01 00:00:00,23.7,20,14,0,7,5,31,0,13,0,https://elucd.ghost.io/elucd-super-tuesday-democratic-primary-results-3-2-20/
 North Carolina,Elucd,-,657  lv,2020-03-01 00:00:00,21.8,25,15,0,6,6,26,0,12,0,https://elucd.ghost.io/elucd-super-tuesday-democratic-primary-results-3-2-20/
 Colorado,Elucd,-,561  lv,2020-03-01 00:00:00,20.5,10,9,0,10,5,34,0,14,0,https://elucd.ghost.io/elucd-super-tuesday-democratic-primary-results-3-2-20/
-US,Morning Consult,B/C,2656  lv,2020-03-01 00:00:00,74.4,26,17,0,10,3,29,0,11,0,https://morningconsult.com/2020/03/02/post-south-carolina-poll-joe-biden/
+US,Morning Consult,B/C,2656  lv,2020-03-01 00:00:00,9.3,26,17,0,10,3,29,0,11,0,https://morningconsult.com/2020/03/02/post-south-carolina-poll-joe-biden/
 California,Point Blank Political,-,1220  lv,2020-03-01 00:00:00,0.0,0,0,0,0,0,43,0,40,0,https://www.pointblankpolitical.com/2020-ca-dem-primary-post-sc/
 California,Point Blank Political,-,1220  lv,2020-03-01 00:00:00,0.0,0,30,0,0,0,56,0,0,0,https://www.pointblankpolitical.com/2020-ca-dem-primary-post-sc/
 California,Point Blank Political,-,1220  lv,2020-03-01 00:00:00,0.0,41,0,0,0,0,48,0,0,0,https://www.pointblankpolitical.com/2020-ca-dem-primary-post-sc/
@@ -71,7 +72,7 @@ US,Change Research,C,821  lv,2020-02-27 00:00:00,19.4,9,3,0,14,8,40,2,20,0,https
 Texas,Data for Progress,A-,513  lv,2020-02-27 00:00:00,5.2,21,21,0,9,5,30,1,13,0,https://www.dataforprogress.org/blog/2020/2/27/sanders-leads-in-texas-and-north-carolina
 North Carolina,Data for Progress,A-,536  lv,2020-02-27 00:00:00,5.3,25,18,0,10,6,27,1,11,0,https://www.dataforprogress.org/blog/2020/2/27/sanders-leads-in-texas-and-north-carolina
 South Carolina,Trafalgar Group,C-,1081  lv,2020-02-27 00:00:00,17.0,44,0,0,10,6,23,11,6,0,https://www.fitsnews.com/2020/02/28/2020-first-in-the-south-democratic-presidential-primary-the-oracle-speaks/
-US,Morning Consult,B/C,5334  lv,2020-02-27 00:00:00,7.7,21,17,0,10,4,33,3,11,0,https://morningconsult.com/2020/02/28/post-south-carolina-debate-polling-joe-biden/
+US,Morning Consult,B/C,5334  lv,2020-02-27 00:00:00,2.3,21,17,0,10,4,33,3,11,0,https://morningconsult.com/2020/02/28/post-south-carolina-debate-polling-joe-biden/
 US,YouGov,B-,811  rv,2020-02-27 00:00:00,29.0,21,14,0,10,4,27,2,18,0,https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/1apn4drwsv/20200227_yahoo_primary_crosstabs.pdf
 North Carolina,Spry Strategies,C/D,587  lv,2020-02-27 00:00:00,1.6,27,16,0,4,5,19,0,11,0,https://mcusercontent.com/259a50ef0a1608ab2bc2cf891/files/a58dc4e6-e2c2-49f5-9a17-84fdc61bc9f3/Civitas_Democratic_Presidential_Tracking_RD_2_Toplines.pdf
 South Carolina,Data for Progress,A-,1416  lv,2020-02-27 00:00:00,67.4,34,0,0,13,5,25,13,7,0,https://www.dataforprogress.org/blog/2020/2/27/biden-maintains-lead-in-south-carolina
@@ -109,7 +110,7 @@ South Carolina,Public Policy Polling,B,866  lv,2020-02-24 00:00:00,28.7,36,0,0,7
 Wisconsin,Marquette University Law School,A/B,464  lv,2020-02-23 00:00:00,25.5,15,17,0,13,11,29,1,9,0,https://law.marquette.edu/poll/wp-content/uploads/2020/02/MLSP58Toplines.pdf
 California,Change Research,C,1069  lv,2020-02-23 00:00:00,14.9,12,6,0,11,5,37,3,20,4,https://www.changeresearch.com/post/democratic-primary-california-kqed-poll-february
 North Carolina,Spry Strategies,C/D,561  lv,2020-02-23 00:00:00,0.3,20,20,0,3,6,20,0,9,0,https://mcusercontent.com/259a50ef0a1608ab2bc2cf891/files/0f490596-e46a-4d58-b52d-2c8a9a53d084/DemocraticPrimaryPoll_Civitas_0225.pdf
-US,Morning Consult,B/C,2631  lv,2020-02-23 00:00:00,1.2,18,19,0,11,4,32,3,11,0,https://morningconsult.com/2020/02/24/bernie-sanders-rising-post-nevada-polling/
+US,Morning Consult,B/C,2631  lv,2020-02-23 00:00:00,0.5,18,19,0,11,4,32,3,11,0,https://morningconsult.com/2020/02/24/bernie-sanders-rising-post-nevada-polling/
 Florida,Saint Leo University,C/D,342  lv,2020-02-22 00:00:00,6.1,25,25,0,11,5,17,1,7,0,http://polls.saintleo.edu/new-saint-leo-university-poll-confirms-narrowing-of-democratic-primary-field-to-three-candidates-just-ahead-of-super-tuesday/
 US,Saint Leo University,C/D,310  lv,2020-02-22 00:00:00,6.0,25,16,0,6,3,26,2,9,0,http://polls.saintleo.edu/new-saint-leo-university-poll-confirms-narrowing-of-democratic-primary-field-to-three-candidates-just-ahead-of-super-tuesday/
 US,YouGov,B-,6498  lv,2020-02-22 00:00:00,1.7,17,13,0,10,5,28,2,19,0,https://drive.google.com/file/d/1OpQxzzYY4MXgQMfo2j_XicB_tEUtt7eI/view
@@ -127,7 +128,7 @@ Michigan,YouGov,B-,662  lv,2020-02-20 00:00:00,13.5,16,13,0,11,8,25,0,13,0,https
 Pennsylvania,YouGov,B-,537  lv,2020-02-20 00:00:00,12.3,20,19,0,12,5,25,1,9,0,https://elections.wisc.edu/first-2020-election-survey/
 Minnesota,Mason-Dixon Polling & Research Inc.,B+,500  lv,2020-02-20 00:00:00,20.2,8,3,0,3,29,23,1,11,0,http://www.startribune.com/star-tribune-mpr-news-minnesota-poll-results-democratic-primary-klobuchar-sanders-warren-buttigieg-biden/567940781/
 California,University of Massachusetts Lowell,A/B,450  lv,2020-02-20 00:00:00,18.5,13,12,0,12,7,24,2,16,0,https://www.uml.edu/docs/2020-California-topline_tcm18-322536.pdf
-US,Morning Consult,B/C,2609  lv,2020-02-20 00:00:00,0.4,19,17,0,11,5,30,3,12,0,https://morningconsult.com/2020/02/21/michael-bloomberg-polling-post-debate-las-vegas/
+US,Morning Consult,B/C,2609  lv,2020-02-20 00:00:00,0.2,19,17,0,11,5,30,3,12,0,https://morningconsult.com/2020/02/21/michael-bloomberg-polling-post-debate-las-vegas/
 Nevada,Emerson College,B-,425  lv,2020-02-20 00:00:00,12.6,16,0,0,17,11,30,10,12,0,http://emersonpolling.com/2020/02/20/nevada-2020-sanders-with-comfortable-lead-heading-into-caucus-tight-race-for-second-place/
 Maryland,Goucher College,-,371  lv,2020-02-19 00:00:00,6.9,18,16,0,7,6,24,0,6,0,https://www.goucher.edu/hughes-center/documents/Goucher-College-Poll-Feb-2020-Part-2.pdf
 Massachusetts,University of Massachusetts Lowell,A/B,450  lv,2020-02-19 00:00:00,18.0,14,12,0,15,9,21,2,20,0,https://www.uml.edu/docs/2020-Mass-topline_tcm18-322473.pdf
@@ -153,7 +154,7 @@ Illinois,Southern Illinois University,-,475  lv,2020-02-17 00:00:00,7.0,14,17,0,
 US,ABC News/Washington Post,A+,350  lv,2020-02-17 00:00:00,25.7,15,15,0,9,7,33,2,13,0,https://docs.google.com/spreadsheets/d/1wB1N64r9A3Qwij9ds3b2jzdqvcPRWdgDbtEVY30troQ/edit
 US,ABC News/Washington Post,A+,408  rv,2020-02-17 00:00:00,0.0,16,14,0,8,7,32,2,12,0,https://www.washingtonpost.com/context/washington-post-abc-news-poll-feb-14-17-2020/99074fb9-691e-4399-af1e-e6534d53a9d8/
 US,ABC News/Washington Post,A+,466  a,2020-02-17 00:00:00,0.0,17,14,0,7,6,32,2,11,0,https://www.washingtonpost.com/context/washington-post-abc-news-poll-feb-14-17-2020/99074fb9-691e-4399-af1e-e6534d53a9d8/
-US,Morning Consult,B/C,15974  lv,2020-02-17 00:00:00,0.3,19,20,0,12,6,28,3,10,0,https://morningconsult.com/2020-democratic-primary/
+US,Morning Consult,B/C,15974  lv,2020-02-17 00:00:00,0.2,19,20,0,12,6,28,3,10,0,https://morningconsult.com/2020-democratic-primary/
 California,Public Policy Institute of California,A/B,573  lv,2020-02-17 00:00:00,17.3,14,12,0,12,5,32,3,13,0,https://www.ppic.org/wp-content/uploads/crosstabs-time-trends-methodology-0220.pdf
 US,SurveyUSA,A,1022  lv,2020-02-17 00:00:00,4.7,18,18,0,12,4,29,2,10,0,http://www.surveyusa.com/client/PollReport.aspx?g=e7feecd9-5374-42de-bfff-d16dba2dae6a
 US,NBC News/Wall Street Journal,A/B,426  lv,2020-02-17 00:00:00,0.0,0,0,0,38,0,54,0,0,0,https://www.nbcnews.com/politics/meet-the-press/nbc-news-wsj-poll-sanders-opens-double-digit-national-lead-n1138191
@@ -1204,7 +1205,6 @@ US,Change Research,C,2968  lv,2018-12-17 00:00:00,0.0,21,2,4,0,3,16,1,7,0,https:
 US,Morning Consult,B/C,706  rv,2018-12-16 00:00:00,0.0,25,2,3,0,1,15,0,3,0,https://www.politico.com/f/?id=00000167-c362-df35-adef-df67efa30000
 US,McLaughlin & Associates,C/D,468  lv,2018-12-14 00:00:00,0.0,17,2,2,0,1,18,0,4,0,http://mclaughlinonline.com/pols/wp-content/uploads/2018/12/National-Monthly-Omnibus-December-1.pdf
 Iowa,Selzer & Co.,A+,455  lv,2018-12-13 00:00:00,0.0,32,3,4,0,3,19,0,8,0,https://cdn.cnn.com/cnn/2018/images/12/15/rel1iademocrats.pdf
-Iowa,David Binder Research,-,500  lv,2018-12-11 00:00:00,0.0,30,2,6,0,10,13,0,9,0,https://static.politico.com/5e/29/55eea4ed4deeaaf42e628a842376/181214-iowa-survey-memo-v2.pdf
 0,0,-,  ,00:00:00,0.0,0,0,0,0,0,0,0,0,0,0
 0,0,-,  ,00:00:00,0.0,0,0,0,0,0,0,0,0,0,0
 0,0,-,  ,00:00:00,0.0,0,0,0,0,0,0,0,0,0,0
