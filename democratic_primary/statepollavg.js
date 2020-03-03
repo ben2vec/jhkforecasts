@@ -167,7 +167,7 @@ d3.csv("simulator.csv", data => {
         .enter()
         .append("text")
         .text(d => d.candidate)
-        .attr("x", d => x(d.max)+20)
+        .attr("x", d => x(d.max)+10)
         .attr("y", d => d.rank * 75+2)
         .attr("fill", "Black")
         .attr('font-size', 20)
