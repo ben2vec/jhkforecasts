@@ -1,4 +1,9 @@
 State,Pollster,Grade,Sample,Date,weight,Biden,Bloomberg,Booker,Buttigieg,Klobuchar,Sanders,Steyer,Warren,Yang,link
+Texas,AtlasIntel,-,486  lv,2020-03-02 00:00:00,12.8,25.0,16.0,0.0,5.0,3.0,35.0,0.0,9.0,0.0,https://projects.fivethirtyeight.com/polls/20200302_TX.pdf
+California,AtlasIntel,-,727  lv,2020-03-02 00:00:00,14.8,26.0,15.0,0.0,3.0,1.0,34.0,0.0,15.0,0.0,https://projects.fivethirtyeight.com/polls/20200302_CA.pdf
+Texas,Elucd,-,833  lv,2020-03-01 00:00:00,15.9,20.0,14.0,0.0,7.0,5.0,31.0,0.0,13.0,0.0,https://elucd.ghost.io/elucd-super-tuesday-democratic-primary-results-3-2-20/
+North Carolina,Elucd,-,657  lv,2020-03-01 00:00:00,14.6,25.0,15.0,0.0,6.0,6.0,26.0,0.0,12.0,0.0,https://elucd.ghost.io/elucd-super-tuesday-democratic-primary-results-3-2-20/
+Colorado,Elucd,-,561  lv,2020-03-01 00:00:00,13.8,10.0,9.0,0.0,10.0,5.0,34.0,0.0,14.0,0.0,https://elucd.ghost.io/elucd-super-tuesday-democratic-primary-results-3-2-20/
 US,Morning Consult,B/C,2656  lv,2020-03-01 00:00:00,39.5,26.0,17.0,0.0,10.0,3.0,29.0,0.0,11.0,0.0,https://morningconsult.com/2020/03/02/post-south-carolina-poll-joe-biden/
 California,Point Blank Political,-,1220  lv,2020-03-01 00:00:00,0.0,0.0,0.0,0.0,0.0,0.0,43.0,0.0,40.0,0.0,https://www.pointblankpolitical.com/2020-ca-dem-primary-post-sc/
 California,Point Blank Political,-,1220  lv,2020-03-01 00:00:00,0.0,0.0,30.0,0.0,0.0,0.0,56.0,0.0,0.0,0.0,https://www.pointblankpolitical.com/2020-ca-dem-primary-post-sc/
@@ -67,6 +72,8 @@ Wisconsin,Marquette University Law School,A/B,464  lv,2020-02-23 00:00:00,25.6,1
 California,Change Research,C,1069  lv,2020-02-23 00:00:00,14.7,12.0,6.0,0.0,11.0,5.0,37.0,3.0,20.0,4.0,https://www.changeresearch.com/post/democratic-primary-california-kqed-poll-february
 North Carolina,Spry Strategies,C/D,561  lv,2020-02-23 00:00:00,1.0,20.0,20.0,0.0,3.0,6.0,20.0,0.0,9.0,0.0,https://mcusercontent.com/259a50ef0a1608ab2bc2cf891/files/0f490596-e46a-4d58-b52d-2c8a9a53d084/DemocraticPrimaryPoll_Civitas_0225.pdf
 US,Morning Consult,B/C,2631  lv,2020-02-23 00:00:00,1.1,18.0,19.0,0.0,11.0,4.0,32.0,3.0,11.0,0.0,https://morningconsult.com/2020/02/24/bernie-sanders-rising-post-nevada-polling/
+Florida,Saint Leo University,C/D,342  lv,2020-02-22 00:00:00,6.5,25.0,25.0,0.0,11.0,5.0,17.0,1.0,7.0,0.0,http://polls.saintleo.edu/new-saint-leo-university-poll-confirms-narrowing-of-democratic-primary-field-to-three-candidates-just-ahead-of-super-tuesday/
+US,Saint Leo University,C/D,310  lv,2020-02-22 00:00:00,6.3,25.0,16.0,0.0,6.0,3.0,26.0,2.0,9.0,0.0,http://polls.saintleo.edu/new-saint-leo-university-poll-confirms-narrowing-of-democratic-primary-field-to-three-candidates-just-ahead-of-super-tuesday/
 US,YouGov,B-,6498  lv,2020-02-22 00:00:00,1.8,17.0,13.0,0.0,10.0,5.0,28.0,2.0,19.0,0.0,https://drive.google.com/file/d/1OpQxzzYY4MXgQMfo2j_XicB_tEUtt7eI/view
 South Carolina,YouGov,B-,1238  lv,2020-02-22 00:00:00,22.1,28.0,0.0,0.0,10.0,4.0,23.0,18.0,12.0,0.0,https://drive.google.com/file/d/1af1YadukuDouIbnoGHCAkIDgaRAXjr8M/view
 Missouri,Americana Analytics,-,1198  lv,2020-02-21 00:00:00,14.1,22.0,17.0,0.0,11.0,9.0,11.0,1.0,10.0,0.0,https://bloximages.newyork1.vip.townnews.com/kmov.com/content/tncms/assets/v3/editorial/0/b1/0b1dde3a-582a-11ea-bf4c-1fb275dfcdc2/5e55b447ac2f1.pdf.pdf
@@ -1168,13 +1175,6 @@ US,Harris Insights & Analytics,C+,459  rv,2018-11-28 00:00:00,0.0,25.0,2.0,3.0,0
 Massachusetts,YouGov,B-,655  rv,2018-11-14 00:00:00,0.1,19.0,0.0,3.0,0.0,3.0,14.0,0.0,11.0,0.0,https://polsci.umass.edu/sites/default/files/Toplines2018_2020_0.pdf
 US,Morning Consult,B/C,733  rv,2018-11-09 00:00:00,0.0,26.0,2.0,3.0,0.0,1.0,19.0,0.0,5.0,0.0,https://www.politico.com/f/?id=00000167-0956-def8-a56f-89d6b72d0001
 US,Harris Insights & Analytics,C+,370  rv,2018-11-06 00:00:00,0.0,30.0,5.0,5.0,0.0,0.0,20.0,0.0,5.0,0.0,https://thehill.com/hilltv/what-americas-thinking/415500-biden-leads-dem-voters-list-of-potential-2020-contenders-poll
-,,,  ,,,,,,,,,,,,
-,,,  ,,,,,,,,,,,,
-,,,  ,,,,,,,,,,,,
-,,,  ,,,,,,,,,,,,
-,,,  ,,,,,,,,,,,,
-,,,  ,,,,,,,,,,,,
-,,,  ,,,,,,,,,,,,
 ,,,  ,,,,,,,,,,,,
 ,,,  ,,,,,,,,,,,,
 ,,,  ,,,,,,,,,,,,
