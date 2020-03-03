@@ -22,7 +22,7 @@ d3.csv("time.csv", function (error, data) {
   var newest_day = d3.max(data, d => d.date)
   var primary_date = data[0].primarydate
   var newest_data = data.filter(d => d.date == newest_day)
-  var completed = primary_date <= newest_day ? 1 : 0
+  var completed = primary_date >= newest_day  ? 0 : 1
   console.log(completed)
   var vote = keys.filter(f => f.includes("vote"))
   var win = keys.filter(f => f.includes("win"))

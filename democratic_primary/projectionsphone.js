@@ -16,14 +16,14 @@ d3.csv("time.csv", function (error, data) {
 
     data.forEach(function (d) {
         d.date = parseDate(d.forecastdate)
-    d.primarydate = parseDate(d.primarydate)
-    return d;
+        d.primarydate = parseDate(d.primarydate)
+        return d;
     })
     var newest_day = d3.max(data, d => d.date)
-  var primary_date = data[0].primarydate
-  var newest_data = data.filter(d => d.date == newest_day)
-  var completed = primary_date <= newest_day ? 1 : 0
-  console.log(completed)
+    var primary_date = data[0].primarydate
+    var newest_data = data.filter(d => d.date == newest_day)
+    var completed = primary_date >= newest_day  ? 0 : 1
+    console.log(completed)
     var vote = keys.filter(f => f.includes("vote"))
     var win = keys.filter(f => f.includes("win"))
     var del = keys.filter(f => f.includes("del"))
@@ -111,7 +111,7 @@ d3.csv("time.csv", function (error, data) {
         .style("fill", "black")
         .attr("text-anchor", "middle")
         .attr("dominant-baseline", "middle")
-        .style("font-size",30)
+        .style("font-size", 30)
         .style("font-weight", 900)
         .text(d => numberformat(d.vote) + "%")
 
@@ -160,7 +160,7 @@ d3.csv("time.csv", function (error, data) {
 
 
 
-        svg.append("text")
+    svg.append("text")
         .attr("class", "legend-text")
         .attr("y", 37)
         .attr("x", 225)
@@ -170,7 +170,7 @@ d3.csv("time.csv", function (error, data) {
         .style("font-size", 20)
         .style("font-weight", 700)
         .text("Vote")
-      svg.append("text")
+    svg.append("text")
         .attr("class", "legend-text")
         .attr("y", 15)
         .attr("x", 225)
@@ -180,8 +180,8 @@ d3.csv("time.csv", function (error, data) {
         .style("font-size", 20)
         .style("font-weight", 700)
         .text("Projected")
-    
-      svg.append("text")
+
+    svg.append("text")
         .attr("class", "legend-text")
         .attr("y", 37)
         .attr("x", 375)
@@ -191,7 +191,7 @@ d3.csv("time.csv", function (error, data) {
         .style("font-size", 20)
         .style("font-weight", 700)
         .text(completed == 1 ? "Vote" : keyState)
-      svg.append("text")
+    svg.append("text")
         .attr("class", "legend-text")
         .attr("y", 15)
         .attr("x", 375)
@@ -201,8 +201,8 @@ d3.csv("time.csv", function (error, data) {
         .style("font-size", 20)
         .style("font-weight", 700)
         .text(completed == 1 ? "Actual" : "Win")
-    
-      svg.append("text")
+
+    svg.append("text")
         .attr("class", "legend-text")
         .attr("y", 15)
         .attr("x", 525)
@@ -212,7 +212,7 @@ d3.csv("time.csv", function (error, data) {
         .style("font-size", 20)
         .style("font-weight", 700)
         .text(completed == 1 ? "" : "Projected")
-        svg.append("text")
+    svg.append("text")
         .attr("class", "legend-text")
         .attr("y", 37)
         .attr("x", 525)
@@ -222,7 +222,7 @@ d3.csv("time.csv", function (error, data) {
         .style("font-size", 20)
         .style("font-weight", 700)
         .text("Delegates")
-    
+
 
     svg.append("line")
         .attr("x1", 0)
