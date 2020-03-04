@@ -1,36 +1,47 @@
-﻿state,vote_type,#_of_calc,forecaster,sanders,buttigeig,warren,biden,klobuchar,steyer,bloomberg,
-Iowa,first,5,#10at10,26.4,14.5,17.3,19.4,11.5,-,-,
-Iowa,first,5,DDHQ/0ptimus/Ozy,24.3,19.8,17.1,17.8,8.6,7.4,-,
-Iowa,second,5,FiveThirtyEight Forecast,28,19,16,26,9,1,-,
-Iowa,first,5,FiveThirtyEight Polling Avg,22.2,15.7,14.5,20.7,10.1,2.5,-,
-Iowa,first,5,JHK Forecasts,23.2,15.8,15.5,19.9,9,3.5,-,
-Iowa,first,5,Lean Tossup,26,17.8,17.1,21.7,9.6,2.7,-,
-Iowa,first,5,RealClearPolitics,23,16.8,15.5,19.3,9,3,-,
-Iowa,first,5,theHOX,24.7,16,17.4,19.1,11.3,3.8,-,
-New Hampshire,first,5,#10at10,27.4,22.4,12.8,13.3,11.7,-,-,
-New Hampshire,first,5,DDHQ/0ptimus/Ozy,25.7,21.5,12.4,10.3,13.8,3.5,-,
-New Hampshire,first,5,FiveThirtyEight Forecast,28,23,13,12,11,3,-,
-New Hampshire,first,5,FiveThirtyEight Polling Avg,26,21.6,12.5,11.7,10.3,2.6,-,
-New Hampshire,first,5,JHK Forecasts,28.5,22,12.6,10.4,10.7,3,-,
-New Hampshire,first,5,Lean Tossup,27.9,23.7,12.1,11.7,12.8,2.3,-,
-New Hampshire,first,5,RealClearPolitics,28.7,21.3,11,11,11.7,1.7,-,
-New Hampshire,first,5,theHOX,28.7,22.7,13.7,12.9,11.3,2.8,-,
-Nevada,first,6,#10at10,32.1,13.7,15.7,15.4,8,9.6,-,
-Nevada,first,6,DDHQ/0ptimus/Ozy,36.9,14.8,12.4,14.8,9.5,8,-,
-Nevada,second,6,FiveThirtyEight Forecast,39,17,12,16,8,9,-,
-Nevada,first,6,FiveThirtyEight Polling Avg,30.5,15.3,11.8,14.4,8.9,10.2,-,
-Nevada,first,6,JHK Forecasts,34.6,16.1,15.1,14.8,7.7,11.7,-,
-Nevada,first,6,Lean Tossup,31.7,13.6,12.5,13.7,8.9,13.1,-,
-Nevada,first,6,RealClearPolitics,32.5,16,14,16,9.5,9,-,
-Nevada,first,6,theHOX,34,15.5,12.6,15.4,9.1,11.1,-,
-South Carolina,first,5,#10at10,20.4,10.5,8.3,35,4.9,13.3,-,
-South Carolina,first,5,DDHQ/0ptimus/Ozy,24,7,8,40,3,18,-,
-South Carolina,first,5,FiveThirtyEight Forecast,21,9,8,40,13,5,-,
-South Carolina,first,5,FiveThirtyEight Polling Avg,19.1,8.5,7,38.4,4.3,12.9,9.5,
-South Carolina,first,5,JHK Forecasts,24.7,8.1,7.1,39,5.3,15.5,-,
-South Carolina,first,5,Lean Tossup,21.4,9.2,9.7,32.2,5,18.2,-,
-South Carolina,first,5,RealClearPolitics,24.3,11.3,6,39.7,5.7,11.7,-,
-South Carolina,first,5,theHOX,22.2,9.6,8.5,37.7,4.8,14.5,-,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
+﻿state,vote_type,#_of_calc,forecaster,biden,bloomberg,sanders,warren,buttigeig,klobuchar,steyer
+Iowa,first,5,#10at10,19.4,-,26.4,17.3,14.5,11.5,-
+Iowa,first,5,DDHQ/0ptimus/Ozy,17.8,-,24.3,17.1,19.8,8.6,7.4
+Iowa,second,5,FiveThirtyEight Forecast,26,-,28,16,19,9,1
+Iowa,first,5,FiveThirtyEight Polling Avg,20.7,-,22.2,14.5,15.7,10.1,2.5
+Iowa,first,5,JHK Forecasts,19.9,-,23.2,15.5,15.8,9,3.5
+Iowa,first,5,Lean Tossup,21.7,-,26,17.1,17.8,9.6,2.7
+Iowa,first,5,RealClearPolitics,19.3,-,23,15.5,16.8,9,3
+Iowa,first,5,theHOX,19.1,-,24.7,17.4,16,11.3,3.8
+New Hampshire,first,5,#10at10,13.3,-,27.4,12.8,22.4,11.7,-
+New Hampshire,first,5,DDHQ/0ptimus/Ozy,10.3,-,25.7,12.4,21.5,13.8,3.5
+New Hampshire,first,5,FiveThirtyEight Forecast,12,-,28,13,23,11,3
+New Hampshire,first,5,FiveThirtyEight Polling Avg,11.7,-,26,12.5,21.6,10.3,2.6
+New Hampshire,first,5,JHK Forecasts,10.4,-,28.5,12.6,22,10.7,3
+New Hampshire,first,5,Lean Tossup,11.7,-,27.9,12.1,23.7,12.8,2.3
+New Hampshire,first,5,RealClearPolitics,11,-,28.7,11,21.3,11.7,1.7
+New Hampshire,first,5,theHOX,12.9,-,28.7,13.7,22.7,11.3,2.8
+Nevada,first,6,#10at10,15.4,-,32.1,15.7,13.7,8,9.6
+Nevada,first,6,DDHQ/0ptimus/Ozy,14.8,-,36.9,12.4,14.8,9.5,8
+Nevada,second,6,FiveThirtyEight Forecast,16,-,39,12,17,8,9
+Nevada,first,6,FiveThirtyEight Polling Avg,14.4,-,30.5,11.8,15.3,8.9,10.2
+Nevada,first,6,JHK Forecasts,14.8,-,34.6,15.1,16.1,7.7,11.7
+Nevada,first,6,Lean Tossup,13.7,-,31.7,12.5,13.6,8.9,13.1
+Nevada,first,6,RealClearPolitics,16,-,32.5,14,16,9.5,9
+Nevada,first,6,theHOX,15.4,-,34,12.6,15.5,9.1,11.1
+South Carolina,first,5,#10at10,35,-,20.4,8.3,10.5,4.9,13.3
+South Carolina,first,5,DDHQ/0ptimus/Ozy,40,-,24,8,7,3,18
+South Carolina,first,5,FiveThirtyEight Forecast,40,-,21,8,9,13,5
+South Carolina,first,5,FiveThirtyEight Polling Avg,38.4,9.5,19.1,7,8.5,4.3,12.9
+South Carolina,first,5,JHK Forecasts,39,-,24.7,7.1,8.1,5.3,15.5
+South Carolina,first,5,Lean Tossup,32.2,-,21.4,9.7,9.2,5,18.2
+South Carolina,first,5,RealClearPolitics,39.7,-,24.3,6,11.3,5.7,11.7
+South Carolina,first,5,theHOX,37.7,-,22.2,8.5,9.6,4.8,14.5
+Alabama,first,4,JHK Forecasts,0.499295859,0.182820944,0.211540267,0.101119009,-,-,-
+Arkansas,first,4,JHK Forecasts,0.39802407,0.241332418,0.221401412,0.123721411,-,-,-
+California,first,4,JHK Forecasts,0.279669145,0.151667381,0.387041459,0.159667937,-,-,-
+Colorado,first,4,JHK Forecasts,0.273607356,0.171974818,0.351233339,0.179076983,-,-,-
+Maine,first,4,JHK Forecasts,0.295305871,0.183385746,0.345538102,0.163672318,-,-,-
+Massachusetts,first,4,JHK Forecasts,0.277022324,0.168096911,0.298208528,0.230677217,-,-,-
+Minnesota,first,4,JHK Forecasts,0.294427139,0.138974745,0.295526036,0.15714137,-,-,-
+North Carolina,first,4,JHK Forecasts,0.389475165,0.19500569,0.280215133,0.1169744,-,-,-
+Oklahoma,first,4,JHK Forecasts,0.407612745,0.181632543,0.268292579,0.134102397,-,-,-
+Tennessee,first,4,JHK Forecasts,0.39872796,0.192452924,0.274462198,0.120720809,-,-,-
+Texas,first,4,JHK Forecasts,0.352339058,0.182382993,0.315380038,0.133136615,-,-,-
+Utah,first,4,JHK Forecasts,0.302760312,0.201457619,0.310507136,0.16514057,-,-,-
+Vermont,first,4,JHK Forecasts,0.158027468,0.071876394,0.601660266,0.15703649,-,-,-
+Virginia,first,4,JHK Forecasts,0.425773746,0.194052538,0.250132529,0.117658388,-,-,-

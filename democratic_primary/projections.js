@@ -7,7 +7,7 @@ var category = ["Biden", "Bloomberg", "Booker", "Buttigieg", "Klobuchar", "Sande
 
 var color = d3.scaleOrdinal()
   .domain(category)
-  .range(["#00C181", "#FF6060", "#a4b1b5", "#FFE130", "#FF8D32", "#2968F5", "#FF2EF0", "#AF0BFF", "#a4b1b5"])
+  .range(["#00C181", "#FF6060", "#a4b1b5", "#FFE130", "#FF8D32", "#0077FF", "#FF2EF0", "#AF0BFF", "#a4b1b5"])
 
 d3.csv("time.csv", function (error, data) {
   var keys = data.columns.slice(1);
@@ -72,7 +72,7 @@ d3.csv("time.csv", function (error, data) {
 
   var demScale = d3.scaleLinear()
     .domain([0, 50, 100])
-    .range(["white", "#2968F5", "#0E2C7E"]);
+    .range(["white", "#0077FF", "#0E2C7E"]);
 
   var svg_height = data.length * 60 + 50
   console.log(svg_height)

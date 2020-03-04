@@ -2,7 +2,7 @@
 
 var delegateScale = d3.scaleLinear()
   .domain([0, .50, 1])
-  .range(["white", "#2968F5", "#002E66"]);
+  .range(["white", "#0077FF", "#002E66"]);
 
 
 

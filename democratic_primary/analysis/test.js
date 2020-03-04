@@ -199,17 +199,19 @@ d3.csv("results.csv", results => {
             var pollsters_avg_rmse = ps.map((d, i) => {
                 return {
                     pollster: d,
-                    rmse: d3.mean(polls_data.filter(j => j.pollster == d), d => d.rmse),
                     mr_error: d3.mean(polls_data.filter(j => j.pollster == d), d => d.mean_reverted_error),
                     polls: d3.sum(polls_data.filter(j => j.pollster == d), d => d.rmse) / d3.mean(polls_data.filter(j => j.pollster == d), d => d.rmse),
                 }
             })
-
+            pollsters_avg_rmse.forEach((d, i) => {
+                d.rmse = Math.sqrt(d3.sum(polls_data.filter(j => j.pollster == d.pollster), d => Math.pow(d.rmse,2))/d.polls)
+                return d;
+            })
 
             var forecasts_avg_rmse = forecasters.map((d, i) => {
                 return {
                     pollster: d.forecaster,
-                    rmse: d3.mean(forecasts_data.filter(j => j.forecaster == d.forecaster), d => d.rmse),
+                    rmse: Math.sqrt(d3.sum(forecasts_data.filter(j => j.forecaster == d.forecaster), d => Math.pow(d.rmse,2))/states.length),
                     mr_error: d3.mean(forecasts_data.filter(j => j.forecaster == d.forecaster), d => d.mean_reverted_error),
                 }
             })
@@ -405,7 +407,7 @@ d3.csv("results.csv", results => {
                 .attr("dominant-baseline", "middle")
 
             qual.append("text")
-                .text("Average Error")
+                .text("RMSE")
                 .attr("x", 600)
                 .attr("y", 15)
                 .attr("font-size", 15)
@@ -565,7 +567,7 @@ d3.csv("results.csv", results => {
                 .attr("dominant-baseline", "middle")
 
             fore.append("text")
-                .text("Average Error")
+                .text("RMSE")
                 .attr("x", 700)
                 .attr("y", 15)
                 .attr("font-size", 15)
@@ -732,7 +734,7 @@ d3.csv("results.csv", results => {
                 .attr("dominant-baseline", "middle")
 
             all.append("text")
-                .text("Average Error")
+                .text("RMSE")
                 .attr("x", 600)
                 .attr("y", 15)
                 .attr("font-size", 15)
@@ -873,7 +875,7 @@ d3.csv("results.csv", results => {
                 .attr("dominant-baseline", "middle")
 
             stp.append("text")
-                .text("Average Error")
+                .text("RMSE")
                 .attr("x", 850)
                 .attr("y", 15)
                 .attr("font-size", 15)
@@ -1001,7 +1003,7 @@ d3.csv("results.csv", results => {
                 .attr("dominant-baseline", "middle")
 
                 stf.append("text")
-                .text("Average Error")
+                .text("RMSE")
                 .attr("x", 850)
                 .attr("y", 15)
                 .attr("font-size", 15)
