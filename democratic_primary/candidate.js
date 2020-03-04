@@ -1,6 +1,6 @@
 var winscale = d3.scaleLinear()
     .domain([0, 50, 100])
-    .range(["white", "#0091FF", "#002E66"]);
+    .range(["white", "#2968F5", "#002E66"]);
 var delscale = d3.scaleLinear()
     .domain([0, 1990])
     .range(["white", "#002E66"]);
@@ -9,7 +9,7 @@ var category = ["Biden", "Bloomberg", "Booker", "Buttigieg", "Klobuchar", "Sande
 
 var color = d3.scaleOrdinal()
     .domain(category)
-    .range(["#00C181", "#FF6060", "#a4b1b5", "#FFE130", "#FF8D32", "#0091FF", "#FF2EF0", "#AF0BFF", "#a4b1b5"])
+    .range(["#00C181", "#FF6060", "#a4b1b5", "#FFE130", "#FF8D32", "#2968F5", "#FF2EF0", "#AF0BFF", "#a4b1b5"])
 
 
 d3.csv("candsoverview.csv", function (error, data) {

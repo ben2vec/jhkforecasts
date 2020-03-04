@@ -12,7 +12,7 @@ var cat = ["Biden", "Bloomberg", "Buttigieg", "Klobuchar", "Sanders", "Steyer", 
 
 var color = d3.scaleOrdinal()
   .domain(cat)
-  .range(["#00C181", "#FF6060", "#FFE130", "#FF8D32", "#0091FF", "#FF2EF0", "#AF0BFF"])
+  .range(["#00C181", "#FF6060", "#FFE130", "#FF8D32", "#2968F5", "#FF2EF0", "#AF0BFF"])
 var colortwo = d3.scaleOrdinal()
   .domain(cat)
   .range(["black", "white", "black", "white", "white", "black", "white", "white"])

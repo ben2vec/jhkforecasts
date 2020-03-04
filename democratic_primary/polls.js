@@ -106,11 +106,11 @@ var parse_date = d3.timeParse("%m/%d/%y")
 
             var demScale = d3.scaleLinear()
                 .domain([0, 50])
-                .range(["white", "#0091FF"]);
+                .range(["white", "#2968F5"]);
 
             var demScale = d3.scaleLinear()
                 .domain([0, 50])
-                .range(["white", "#0091FF"]);
+                .range(["white", "#2968F5"]);
 
             var grade_scale = d3.scaleLinear()
                 .domain([0.2, .75, 1.1, 1.5])
