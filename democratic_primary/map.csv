@@ -115,7 +115,7 @@ Hawaii,Booker,0.0,0,HI,380.0,465.0
 Idaho,Booker,0.0,0,ID,310.1851,155.0
 Illinois,Booker,0.0,0,IL,596.6602,231.2954
 Indiana,Booker,0.0,0,IN,633.4111,228.4214
-Iowa,Booker,21.3,0,IA,545.8457,202.6782
+Iowa,Booker,0.0,0,IA,545.8457,202.6782
 Kansas,Booker,0.0,0,KS,487.0,259.1592
 Kentucky,Booker,0.0,0,KY,655.1484,264.9658
 Louisiana,Booker,0.0,0,LA,561.4404,369.8135
@@ -128,8 +128,8 @@ Mississippi,Booker,0.0,0,MS,598.6016,342.1514
 Missouri,Booker,0.0,0,MO,557.0,261.123
 Montana,Booker,0.0,0,MT,370.0981,112.7705
 Nebraska,Booker,0.0,0,NE,473.8364,210.0527
-Nevada,Booker,15.4,0,NV,267.8765,219.0957
-New Hampshire,Booker,24.2,0,NH,-1000.0,-1000.0
+Nevada,Booker,0.0,0,NV,267.8765,219.0957
+New Hampshire,Booker,0.0,0,NH,-1000.0,-1000.0
 New Jersey,Booker,0.0,0,NJ,785.0,210.0
 New Mexico,Booker,0.0,0,NM,385.3774,314.1035
 New York,Booker,0.0,0,NY,753.5781,163.2588
@@ -140,7 +140,7 @@ Oklahoma,Booker,0.0,0,OK,500.1963,306.418
 Oregon,Booker,0.0,0,OR,240.2783,139.5654
 Pennsylvania,Booker,0.0,0,PA,730.3535,200.856
 Rhode Island,Booker,0.0,0,RI,-1000.0,-1000.0
-South Carolina,Booker,8.3,0,SC,712.4395,315.6387
+South Carolina,Booker,0.0,0,SC,712.4395,315.6387
 South Dakota,Booker,0.0,0,SD,468.0742,163.5166
 Tennessee,Booker,0.0,0,TN,640.8594,294.8193
 Texas,Booker,0.0,0,TX,480.9902,374.2861
@@ -166,7 +166,7 @@ Hawaii,Buttigieg,0.0,0,HI,380.0,465.0
 Idaho,Buttigieg,0.0,0,ID,310.1851,155.0
 Illinois,Buttigieg,0.0,0,IL,596.6602,231.2954
 Indiana,Buttigieg,0.0,0,IN,633.4111,228.4214
-Iowa,Buttigieg,12.7,14,IA,545.8457,202.6782
+Iowa,Buttigieg,21.3,14,IA,545.8457,202.6782
 Kansas,Buttigieg,0.0,0,KS,487.0,259.1592
 Kentucky,Buttigieg,0.0,0,KY,655.1484,264.9658
 Louisiana,Buttigieg,0.0,0,LA,561.4404,369.8135
@@ -179,8 +179,8 @@ Mississippi,Buttigieg,0.0,0,MS,598.6016,342.1514
 Missouri,Buttigieg,0.0,0,MO,557.0,261.123
 Montana,Buttigieg,0.0,0,MT,370.0981,112.7705
 Nebraska,Buttigieg,0.0,0,NE,473.8364,210.0527
-Nevada,Buttigieg,9.6,3,NV,267.8765,219.0957
-New Hampshire,Buttigieg,19.8,9,NH,-1000.0,-1000.0
+Nevada,Buttigieg,15.4,3,NV,267.8765,219.0957
+New Hampshire,Buttigieg,24.2,9,NH,-1000.0,-1000.0
 New Jersey,Buttigieg,0.0,0,NJ,785.0,210.0
 New Mexico,Buttigieg,0.0,0,NM,385.3774,314.1035
 New York,Buttigieg,0.0,0,NY,753.5781,163.2588
@@ -191,7 +191,7 @@ Oklahoma,Buttigieg,0.0,0,OK,500.1963,306.418
 Oregon,Buttigieg,0.0,0,OR,240.2783,139.5654
 Pennsylvania,Buttigieg,0.0,0,PA,730.3535,200.856
 Rhode Island,Buttigieg,0.0,0,RI,-1000.0,-1000.0
-South Carolina,Buttigieg,3.2,0,SC,712.4395,315.6387
+South Carolina,Buttigieg,8.3,0,SC,712.4395,315.6387
 South Dakota,Buttigieg,0.0,0,SD,468.0742,163.5166
 Tennessee,Buttigieg,0.0,0,TN,640.8594,294.8193
 Texas,Buttigieg,0.0,0,TX,480.9902,374.2861
@@ -203,10 +203,10 @@ West Virginia,Buttigieg,0.0,0,WV,701.0,243.0
 Wisconsin,Buttigieg,0.0,0,WI,585.2529,163.2588
 Wyoming,Buttigieg,0.0,0,WY,385.9287,179.6255
 District of Columbia,Buttigieg,0.0,0,DC,-1000.0,-1000.0
-Alabama,Klobuchar,16.6,0,AL,637.0,338.6934
+Alabama,Klobuchar,0.0,0,AL,637.0,338.6934
 Alaska,Klobuchar,0.0,0,AK,245.0,400.0
 Arizona,Klobuchar,0.0,0,AZ,315.0,306.5801
-Arkansas,Klobuchar,22.4,0,AR,560.0,315.6387
+Arkansas,Klobuchar,0.0,0,AR,560.0,315.6387
 California,Klobuchar,0.0,0,CA,223.0,253.9219
 Colorado,Klobuchar,0.0,0,CO,400.0,245.5645
 Connecticut,Klobuchar,0.0,0,CT,-1000.0,-1000.0
@@ -217,7 +217,7 @@ Hawaii,Klobuchar,0.0,0,HI,380.0,465.0
 Idaho,Klobuchar,0.0,0,ID,310.1851,155.0
 Illinois,Klobuchar,0.0,0,IL,596.6602,231.2954
 Indiana,Klobuchar,0.0,0,IN,633.4111,228.4214
-Iowa,Klobuchar,24.7,1,IA,545.8457,202.6782
+Iowa,Klobuchar,12.7,1,IA,545.8457,202.6782
 Kansas,Klobuchar,0.0,0,KS,487.0,259.1592
 Kentucky,Klobuchar,0.0,0,KY,655.1484,264.9658
 Louisiana,Klobuchar,0.0,0,LA,561.4404,369.8135
@@ -230,8 +230,8 @@ Mississippi,Klobuchar,0.0,0,MS,598.6016,342.1514
 Missouri,Klobuchar,0.0,0,MO,557.0,261.123
 Montana,Klobuchar,0.0,0,MT,370.0981,112.7705
 Nebraska,Klobuchar,0.0,0,NE,473.8364,210.0527
-Nevada,Klobuchar,34.0,0,NV,267.8765,219.0957
-New Hampshire,Klobuchar,25.7,6,NH,-1000.0,-1000.0
+Nevada,Klobuchar,9.6,0,NV,267.8765,219.0957
+New Hampshire,Klobuchar,19.8,6,NH,-1000.0,-1000.0
 New Jersey,Klobuchar,0.0,0,NJ,785.0,210.0
 New Mexico,Klobuchar,0.0,0,NM,385.3774,314.1035
 New York,Klobuchar,0.0,0,NY,753.5781,163.2588
@@ -242,7 +242,7 @@ Oklahoma,Klobuchar,0.0,0,OK,500.1963,306.418
 Oregon,Klobuchar,0.0,0,OR,240.2783,139.5654
 Pennsylvania,Klobuchar,0.0,0,PA,730.3535,200.856
 Rhode Island,Klobuchar,0.0,0,RI,-1000.0,-1000.0
-South Carolina,Klobuchar,19.9,0,SC,712.4395,315.6387
+South Carolina,Klobuchar,3.2,0,SC,712.4395,315.6387
 South Dakota,Klobuchar,0.0,0,SD,468.0742,163.5166
 Tennessee,Klobuchar,0.0,0,TN,640.8594,294.8193
 Texas,Klobuchar,0.0,0,TX,480.9902,374.2861
@@ -254,10 +254,10 @@ West Virginia,Klobuchar,0.0,0,WV,701.0,243.0
 Wisconsin,Klobuchar,0.0,0,WI,585.2529,163.2588
 Wyoming,Klobuchar,0.0,0,WY,385.9287,179.6255
 District of Columbia,Klobuchar,0.0,0,DC,-1000.0,-1000.0
-Alabama,Sanders,0.0,8,AL,637.0,338.6934
+Alabama,Sanders,16.6,8,AL,637.0,338.6934
 Alaska,Sanders,43.6,7,AK,245.0,400.0
 Arizona,Sanders,45.2,30,AZ,315.0,306.5801
-Arkansas,Sanders,0.0,9,AR,560.0,315.6387
+Arkansas,Sanders,22.4,9,AR,560.0,315.6387
 California,Sanders,33.8,228,CA,223.0,253.9219
 Colorado,Sanders,36.5,23,CO,400.0,245.5645
 Connecticut,Sanders,48.3,29,CT,-1000.0,-1000.0
@@ -268,7 +268,7 @@ Hawaii,Sanders,53.0,13,HI,380.0,465.0
 Idaho,Sanders,50.8,10,ID,310.1851,155.0
 Illinois,Sanders,46.0,71,IL,596.6602,231.2954
 Indiana,Sanders,45.7,37,IN,633.4111,228.4214
-Iowa,Sanders,1.7,12,IA,545.8457,202.6782
+Iowa,Sanders,24.7,12,IA,545.8457,202.6782
 Kansas,Sanders,52.1,20,KS,487.0,259.1592
 Kentucky,Sanders,40.1,22,KY,655.1484,264.9658
 Louisiana,Sanders,28.2,15,LA,561.4404,369.8135
@@ -281,8 +281,8 @@ Mississippi,Sanders,26.5,10,MS,598.6016,342.1514
 Missouri,Sanders,31.8,22,MO,557.0,261.123
 Montana,Sanders,47.1,9,MT,370.0981,112.7705
 Nebraska,Sanders,49.8,14,NE,473.8364,210.0527
-Nevada,Sanders,9.0,24,NV,267.8765,219.0957
-New Hampshire,Sanders,3.6,9,NH,-1000.0,-1000.0
+Nevada,Sanders,34.0,24,NV,267.8765,219.0957
+New Hampshire,Sanders,25.7,9,NH,-1000.0,-1000.0
 New Jersey,Sanders,47.6,60,NJ,785.0,210.0
 New Mexico,Sanders,54.3,18,NM,385.3774,314.1035
 New York,Sanders,45.5,125,NY,753.5781,163.2588
@@ -293,7 +293,7 @@ Oklahoma,Sanders,25.4,13,OK,500.1963,306.418
 Oregon,Sanders,47.3,29,OR,240.2783,139.5654
 Pennsylvania,Sanders,43.8,82,PA,730.3535,200.856
 Rhode Island,Sanders,48.9,13,RI,-1000.0,-1000.0
-South Carolina,Sanders,11.3,15,SC,712.4395,315.6387
+South Carolina,Sanders,19.9,15,SC,712.4395,315.6387
 South Dakota,Sanders,50.9,8,SD,468.0742,163.5166
 Tennessee,Sanders,25.0,20,TN,640.8594,294.8193
 Texas,Sanders,30.0,105,TX,480.9902,374.2861
@@ -305,10 +305,10 @@ West Virginia,Sanders,40.4,11,WV,701.0,243.0
 Wisconsin,Sanders,51.4,43,WI,585.2529,163.2588
 Wyoming,Sanders,45.3,6,WY,385.9287,179.6255
 District of Columbia,Sanders,29.8,6,DC,-1000.0,-1000.0
-Alabama,Steyer,5.7,0,AL,637.0,338.6934
+Alabama,Steyer,0.0,0,AL,637.0,338.6934
 Alaska,Steyer,0.0,0,AK,245.0,400.0
 Arizona,Steyer,0.0,0,AZ,315.0,306.5801
-Arkansas,Steyer,10.0,0,AR,560.0,315.6387
+Arkansas,Steyer,0.0,0,AR,560.0,315.6387
 California,Steyer,0.0,0,CA,223.0,253.9219
 Colorado,Steyer,0.0,0,CO,400.0,245.5645
 Connecticut,Steyer,0.0,0,CT,-1000.0,-1000.0
@@ -319,7 +319,7 @@ Hawaii,Steyer,0.0,0,HI,380.0,465.0
 Idaho,Steyer,0.0,0,ID,310.1851,155.0
 Illinois,Steyer,0.0,0,IL,596.6602,231.2954
 Indiana,Steyer,0.0,0,IN,633.4111,228.4214
-Iowa,Steyer,18.5,0,IA,545.8457,202.6782
+Iowa,Steyer,1.7,0,IA,545.8457,202.6782
 Kansas,Steyer,0.0,0,KS,487.0,259.1592
 Kentucky,Steyer,0.0,0,KY,655.1484,264.9658
 Louisiana,Steyer,0.0,0,LA,561.4404,369.8135
@@ -332,8 +332,8 @@ Mississippi,Steyer,0.0,0,MS,598.6016,342.1514
 Missouri,Steyer,0.0,0,MO,557.0,261.123
 Montana,Steyer,0.0,0,MT,370.0981,112.7705
 Nebraska,Steyer,0.0,0,NE,473.8364,210.0527
-Nevada,Steyer,12.9,0,NV,267.8765,219.0957
-New Hampshire,Steyer,9.2,0,NH,-1000.0,-1000.0
+Nevada,Steyer,9.0,0,NV,267.8765,219.0957
+New Hampshire,Steyer,3.6,0,NH,-1000.0,-1000.0
 New Jersey,Steyer,0.0,0,NJ,785.0,210.0
 New Mexico,Steyer,0.0,0,NM,385.3774,314.1035
 New York,Steyer,0.0,0,NY,753.5781,163.2588
@@ -344,7 +344,7 @@ Oklahoma,Steyer,0.0,0,OK,500.1963,306.418
 Oregon,Steyer,0.0,0,OR,240.2783,139.5654
 Pennsylvania,Steyer,0.0,0,PA,730.3535,200.856
 Rhode Island,Steyer,0.0,0,RI,-1000.0,-1000.0
-South Carolina,Steyer,7.1,0,SC,712.4395,315.6387
+South Carolina,Steyer,11.3,0,SC,712.4395,315.6387
 South Dakota,Steyer,0.0,0,SD,468.0742,163.5166
 Tennessee,Steyer,0.0,0,TN,640.8594,294.8193
 Texas,Steyer,0.0,0,TX,480.9902,374.2861
@@ -356,10 +356,10 @@ West Virginia,Steyer,0.0,0,WV,701.0,243.0
 Wisconsin,Steyer,0.0,0,WI,585.2529,163.2588
 Wyoming,Steyer,0.0,0,WY,385.9287,179.6255
 District of Columbia,Steyer,0.0,0,DC,-1000.0,-1000.0
-Alabama,Warren,1.0,0,AL,637.0,338.6934
+Alabama,Warren,5.7,0,AL,637.0,338.6934
 Alaska,Warren,0.0,0,AK,245.0,400.0
 Arizona,Warren,0.0,0,AZ,315.0,306.5801
-Arkansas,Warren,1.0,0,AR,560.0,315.6387
+Arkansas,Warren,10.0,0,AR,560.0,315.6387
 California,Warren,12.2,8,CA,223.0,253.9219
 Colorado,Warren,17.6,13,CO,400.0,245.5645
 Connecticut,Warren,0.0,0,CT,-1000.0,-1000.0
@@ -370,7 +370,7 @@ Hawaii,Warren,0.0,0,HI,380.0,465.0
 Idaho,Warren,0.0,0,ID,310.1851,155.0
 Illinois,Warren,0.0,0,IL,596.6602,231.2954
 Indiana,Warren,0.0,0,IN,633.4111,228.4214
-Iowa,Warren,1.0,8,IA,545.8457,202.6782
+Iowa,Warren,18.5,8,IA,545.8457,202.6782
 Kansas,Warren,0.0,0,KS,487.0,259.1592
 Kentucky,Warren,0.0,0,KY,655.1484,264.9658
 Louisiana,Warren,0.0,0,LA,561.4404,369.8135
@@ -383,8 +383,8 @@ Mississippi,Warren,0.0,0,MS,598.6016,342.1514
 Missouri,Warren,0.0,0,MO,557.0,261.123
 Montana,Warren,0.0,0,MT,370.0981,112.7705
 Nebraska,Warren,0.0,0,NE,473.8364,210.0527
-Nevada,Warren,1.0,0,NV,267.8765,219.0957
-New Hampshire,Warren,1.0,0,NH,-1000.0,-1000.0
+Nevada,Warren,12.9,0,NV,267.8765,219.0957
+New Hampshire,Warren,9.2,0,NH,-1000.0,-1000.0
 New Jersey,Warren,0.0,0,NJ,785.0,210.0
 New Mexico,Warren,0.0,0,NM,385.3774,314.1035
 New York,Warren,0.0,0,NY,753.5781,163.2588
@@ -395,7 +395,7 @@ Oklahoma,Warren,13.4,1,OK,500.1963,306.418
 Oregon,Warren,0.0,0,OR,240.2783,139.5654
 Pennsylvania,Warren,0.0,0,PA,730.3535,200.856
 Rhode Island,Warren,0.0,0,RI,-1000.0,-1000.0
-South Carolina,Warren,1.0,0,SC,712.4395,315.6387
+South Carolina,Warren,7.1,0,SC,712.4395,315.6387
 South Dakota,Warren,0.0,0,SD,468.0742,163.5166
 Tennessee,Warren,10.4,0,TN,640.8594,294.8193
 Texas,Warren,11.4,4,TX,480.9902,374.2861
