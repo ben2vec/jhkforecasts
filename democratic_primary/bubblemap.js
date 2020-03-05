@@ -153,7 +153,7 @@ d3.csv("bubblemap.csv", function (error, data) {
         .text(d.first)
         .attr("y", 70)
         .attr("x", 5)
-        .attr("fill", color(d.first))
+        .attr("fill", colorthree(d.first))
         .style("font-weight", "600")
         .style("font-size", "15");
 
@@ -162,7 +162,7 @@ d3.csv("bubblemap.csv", function (error, data) {
         .text(d.firstvote + "%")
         .attr("y", 70)
         .attr("x", 150)
-        .attr("fill", color(d.first))
+        .attr("fill", colorthree(d.first))
         .style("font-weight", "600")
         .style("font-size", "15")
         .attr("text-anchor", "middle")
@@ -172,7 +172,7 @@ d3.csv("bubblemap.csv", function (error, data) {
         .text(d.second)
         .attr("y", 90)
         .attr("x", 5)
-        .attr("fill", color(d.second))
+        .attr("fill", colorthree(d.second))
         .style("font-weight", "600")
         .style("font-size", "15");
 
@@ -180,44 +180,44 @@ d3.csv("bubblemap.csv", function (error, data) {
         .text(d.secondvote + "%")
         .attr("y", 90)
         .attr("x", 150)
-        .attr("fill", color(d.second))
+        .attr("fill", colorthree(d.second))
         .style("font-weight", "600")
         .style("font-size", "15")
         .attr("text-anchor", "middle")
         ;
 
       tipSVG.append("text")
-        .text(d.third)
+        .text(d.third == "-"?"":d.third)
         .attr("y", 110)
         .attr("x", 5)
-        .attr("fill", color(d.third))
+        .attr("fill", colorthree(d.third))
         .style("font-weight", "600")
         .style("font-size", "15");
 
       tipSVG.append("text")
-        .text(d.thirdvote + "%")
+        .text(d.thirdvote=="-"?"":d.thirdvote + "%")
         .attr("y", 110)
         .attr("x", 150)
-        .attr("fill", color(d.third))
+        .attr("fill", colorthree(d.third))
         .style("font-weight", "600")
         .style("font-size", "15")
         .attr("text-anchor", "middle")
         ;
 
       tipSVG.append("text")
-        .text(d.fourth)
+        .text(d.fourth == "-"?"":d.fourth)
         .attr("y", 130)
         .attr("x", 5)
-        .attr("fill", color(d.fourth))
+        .attr("fill", colorthree(d.fourth))
         .style("font-weight", "600")
         .style("font-size", "15")
 
 
       tipSVG.append("text")
-        .text(d.forthvote + "%")
+        .text(d.forthvote=="-"?"":d.forthvote + "%")
         .attr("y", 130)
         .attr("x", 150)
-        .attr("fill", color(d.fourth))
+        .attr("fill", colorthree(d.fourth))
         .style("font-weight", "600")
         .style("font-size", "15")
         .attr("text-anchor", "middle")
@@ -293,7 +293,7 @@ d3.csv("bubblemap.csv", function (error, data) {
         .text(d.first)
         .attr("y", 70)
         .attr("x", 5)
-        .attr("fill", color(d.first))
+        .attr("fill", colorthree(d.first))
         .style("font-weight", "600")
         .style("font-size", "15");
 
@@ -302,7 +302,7 @@ d3.csv("bubblemap.csv", function (error, data) {
         .text(d.firstvote + "%")
         .attr("y", 70)
         .attr("x", 150)
-        .attr("fill", color(d.first))
+        .attr("fill", colorthree(d.first))
         .style("font-weight", "600")
         .style("font-size", "15")
         .attr("text-anchor", "middle")
@@ -312,7 +312,7 @@ d3.csv("bubblemap.csv", function (error, data) {
         .text(d.second)
         .attr("y", 90)
         .attr("x", 5)
-        .attr("fill", color(d.second))
+        .attr("fill", colorthree(d.second))
         .style("font-weight", "600")
         .style("font-size", "15");
 
@@ -320,44 +320,44 @@ d3.csv("bubblemap.csv", function (error, data) {
         .text(d.secondvote + "%")
         .attr("y", 90)
         .attr("x", 150)
-        .attr("fill", color(d.second))
+        .attr("fill", colorthree(d.second))
         .style("font-weight", "600")
         .style("font-size", "15")
         .attr("text-anchor", "middle")
         ;
 
       tipSVG.append("text")
-        .text(d.third)
+        .text(d.third == "-"?"":d.third)
         .attr("y", 110)
         .attr("x", 5)
-        .attr("fill", color(d.third))
+        .attr("fill", colorthree(d.third))
         .style("font-weight", "600")
         .style("font-size", "15");
 
       tipSVG.append("text")
-        .text(d.thirdvote + "%")
+        .text(d.thirdvote=="-"?"":d.thirdvote + "%")
         .attr("y", 110)
         .attr("x", 150)
-        .attr("fill", color(d.third))
+        .attr("fill", colorthree(d.third))
         .style("font-weight", "600")
         .style("font-size", "15")
         .attr("text-anchor", "middle")
         ;
 
       tipSVG.append("text")
-        .text(d.fourth)
+        .text(d.fourth == "-"?"":d.fourth)
         .attr("y", 130)
         .attr("x", 5)
-        .attr("fill", color(d.fourth))
+        .attr("fill", colorthree(d.fourth))
         .style("font-weight", "600")
         .style("font-size", "15")
 
 
       tipSVG.append("text")
-        .text(d.forthvote + "%")
+        .text(d.forthvote=="-"?"":d.forthvote + "%")
         .attr("y", 130)
         .attr("x", 150)
-        .attr("fill", color(d.fourth))
+        .attr("fill", colorthree(d.fourth))
         .style("font-weight", "600")
         .style("font-size", "15")
         .attr("text-anchor", "middle")

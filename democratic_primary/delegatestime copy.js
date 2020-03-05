@@ -1,7 +1,8 @@
 
 
 // vote time
-
+wholevalue = d3.format(".0f")
+        onelevalue = d3.format(".1f")
 var marginph = { top: 20, right: 100, bottom: 30, left: 30 }
 var widthph = 1000 - marginph.left - marginph.right
 var heightph = 800 - marginph.top - marginph.bottom
@@ -316,7 +317,7 @@ d3.csv("time.csv", function (error, data) {
             focus.selectAll(".lineHoverText")
                 .attr("transform",
                     "translate(" + 900 + "," + 440 + ")").style("font-weight", 700)
-                .text(e => d[e] == "" ? "-" : d[e]);
+                .text(e => d[e] == "" ? "-" : d[e]== 0 ? "-" :wholevalue(d[e]));
 
 
 
