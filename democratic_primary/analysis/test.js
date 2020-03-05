@@ -245,15 +245,15 @@ d3.csv("results.csv", results => {
 
             var z = d3.scaleLinear()
                 .domain([0, d3.max(pollsters_avg_rmse, d => d.rmse)])
-                .range(["white", "#FF6060"])
+                .range(["white", "#a4b1b5"])
 
             var f = d3.scaleLinear()
                 .domain([3, d3.max(forecasts_avg_rmse, d => d.rmse)])
-                .range(["white", "#FF6060"])
+                .range(["white", "#a4b1b5"])
 
             var mr = d3.scaleLinear()
                 .domain(d3.extent(pollsters_avg_rmse, d => d.mr_error))
-                .range(["white", "#FF6060"])
+                .range(["white", "#a4b1b5"])
 
             console.log(mr(2.1))
             var height = qual_polls.length * 50 + 30

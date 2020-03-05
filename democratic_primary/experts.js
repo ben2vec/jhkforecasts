@@ -1,6 +1,6 @@
 var ratingscale = d3.scaleOrdinal()
   .domain(["Solid D","Likely D","Lean D","Tilt D","Tossup","Tilt R","Lean R","Likely R","Solid R"])
-  .range(["white", "#FF6060"]);
+  .range(["white", "#a4b1b5"]);
 
 
 

@@ -27,7 +27,7 @@ d3.csv("delegatetime.csv", function (error, data) {
 
 
 
-    var col_category = ["#00C181", "#FF6060", "#a4b1b5", "#FFE130", "#FF8D32", "#0077FF", "#FF2EF0", "#AF0BFF", "#a4b1b5"]
+    var col_category = ["#00C181", "#a4b1b5", "#a4b1b5", "#a4b1b5", "#a4b1b5", "#0077FF", "#a4b1b5", "#a4b1b5", "#a4b1b5"]
 
     var cand_now = keys.map(function (d, j) {
         return {

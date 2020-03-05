@@ -102,7 +102,7 @@ var parse_date = d3.timeParse("%m/%d/%y")
                 .range(["white", "#a4b1b5"]);
             var gopScale = d3.scaleLinear()
                 .domain([20, 80])
-                .range(["white", "#FF6060"]);
+                .range(["white", "#a4b1b5"]);
 
             var demScale = d3.scaleLinear()
                 .domain([0, 50])

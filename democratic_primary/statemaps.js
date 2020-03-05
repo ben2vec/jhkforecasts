@@ -28,7 +28,7 @@ var path = d3.geoPath()               // path generator that will convert GeoJSO
 // Define linear scale for output
 var color3 = d3.scaleLinear()
   .domain([0, 50, 100])
-  .range(["#FF6060", "white", "#00C181"])
+  .range(["#a4b1b5", "white", "#00C181"])
 
 
 
