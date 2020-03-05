@@ -21,7 +21,7 @@ d3.csv("time.csv", function (error, data) {
         formatDate = d3.timeFormat("%b - %d"),
         formatMonth = d3.timeFormat("%Y-%m-%d"),
         bisectDate = d3.bisector(d => d.date).left,
-        wholevalue = d3.format(".0f");
+        wholevalue = d3.format(".0f")
         onelevalue = d3.format(".1f")
 
     data.forEach(function (d) {
