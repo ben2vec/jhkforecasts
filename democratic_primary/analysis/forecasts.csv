@@ -2,46 +2,108 @@
 Iowa,first,5,#10at10,19.4,-,26.4,17.3,14.5,11.5,-
 Iowa,first,5,DDHQ/0ptimus/Ozy,17.8,-,24.3,17.1,19.8,8.6,7.4
 Iowa,second,5,FiveThirtyEight Forecast,26,-,28,16,19,9,1
-Iowa,first,5,FiveThirtyEight Polling Avg,20.7,-,22.2,14.5,15.7,10.1,2.5
 Iowa,first,5,JHK Forecasts,19.9,-,23.2,15.5,15.8,9,3.5
 Iowa,first,5,Lean Tossup,21.7,-,26,17.1,17.8,9.6,2.7
-Iowa,first,5,RealClearPolitics,19.3,-,23,15.5,16.8,9,3
 Iowa,first,5,theHOX,19.1,-,24.7,17.4,16,11.3,3.8
 New Hampshire,first,5,#10at10,13.3,-,27.4,12.8,22.4,11.7,-
 New Hampshire,first,5,DDHQ/0ptimus/Ozy,10.3,-,25.7,12.4,21.5,13.8,3.5
 New Hampshire,first,5,FiveThirtyEight Forecast,12,-,28,13,23,11,3
-New Hampshire,first,5,FiveThirtyEight Polling Avg,11.7,-,26,12.5,21.6,10.3,2.6
 New Hampshire,first,5,JHK Forecasts,10.4,-,28.5,12.6,22,10.7,3
 New Hampshire,first,5,Lean Tossup,11.7,-,27.9,12.1,23.7,12.8,2.3
-New Hampshire,first,5,RealClearPolitics,11,-,28.7,11,21.3,11.7,1.7
 New Hampshire,first,5,theHOX,12.9,-,28.7,13.7,22.7,11.3,2.8
 Nevada,first,6,#10at10,15.4,-,32.1,15.7,13.7,8,9.6
 Nevada,first,6,DDHQ/0ptimus/Ozy,14.8,-,36.9,12.4,14.8,9.5,8
 Nevada,second,6,FiveThirtyEight Forecast,16,-,39,12,17,8,9
-Nevada,first,6,FiveThirtyEight Polling Avg,14.4,-,30.5,11.8,15.3,8.9,10.2
 Nevada,first,6,JHK Forecasts,14.8,-,34.6,15.1,16.1,7.7,11.7
 Nevada,first,6,Lean Tossup,13.7,-,31.7,12.5,13.6,8.9,13.1
-Nevada,first,6,RealClearPolitics,16,-,32.5,14,16,9.5,9
 Nevada,first,6,theHOX,15.4,-,34,12.6,15.5,9.1,11.1
 South Carolina,first,5,#10at10,35,-,20.4,8.3,10.5,4.9,13.3
 South Carolina,first,5,DDHQ/0ptimus/Ozy,40,-,24,8,7,3,18
 South Carolina,first,5,FiveThirtyEight Forecast,40,-,21,8,9,13,5
-South Carolina,first,5,FiveThirtyEight Polling Avg,38.4,9.5,19.1,7,8.5,4.3,12.9
 South Carolina,first,5,JHK Forecasts,39,-,24.7,7.1,8.1,5.3,15.5
 South Carolina,first,5,Lean Tossup,32.2,-,21.4,9.7,9.2,5,18.2
-South Carolina,first,5,RealClearPolitics,39.7,-,24.3,6,11.3,5.7,11.7
 South Carolina,first,5,theHOX,37.7,-,22.2,8.5,9.6,4.8,14.5
-Alabama,first,4,JHK Forecasts,0.499295859,0.182820944,0.211540267,0.101119009,-,-,-
-Arkansas,first,4,JHK Forecasts,0.39802407,0.241332418,0.221401412,0.123721411,-,-,-
-California,first,4,JHK Forecasts,0.279669145,0.151667381,0.387041459,0.159667937,-,-,-
-Colorado,first,4,JHK Forecasts,0.273607356,0.171974818,0.351233339,0.179076983,-,-,-
-Maine,first,4,JHK Forecasts,0.295305871,0.183385746,0.345538102,0.163672318,-,-,-
-Massachusetts,first,4,JHK Forecasts,0.277022324,0.168096911,0.298208528,0.230677217,-,-,-
-Minnesota,first,4,JHK Forecasts,0.294427139,0.138974745,0.295526036,0.15714137,-,-,-
-North Carolina,first,4,JHK Forecasts,0.389475165,0.19500569,0.280215133,0.1169744,-,-,-
-Oklahoma,first,4,JHK Forecasts,0.407612745,0.181632543,0.268292579,0.134102397,-,-,-
-Tennessee,first,4,JHK Forecasts,0.39872796,0.192452924,0.274462198,0.120720809,-,-,-
-Texas,first,4,JHK Forecasts,0.352339058,0.182382993,0.315380038,0.133136615,-,-,-
-Utah,first,4,JHK Forecasts,0.302760312,0.201457619,0.310507136,0.16514057,-,-,-
-Vermont,first,4,JHK Forecasts,0.158027468,0.071876394,0.601660266,0.15703649,-,-,-
-Virginia,first,4,JHK Forecasts,0.425773746,0.194052538,0.250132529,0.117658388,-,-,-
+Alabama,first,4,JHK Forecasts,49.9295859,18.2820944,21.1540267,10.1119009,-,-,-
+Arkansas,first,4,JHK Forecasts,39.802407,24.1332418,22.1401412,12.3721411,-,-,-
+California,first,4,JHK Forecasts,27.9669145,15.1667381,38.7041459,15.9667937,-,-,-
+Colorado,first,4,JHK Forecasts,27.3607356,17.1974818,35.1233339,17.9076983,-,-,-
+Maine,first,4,JHK Forecasts,29.5305871,18.3385746,34.5538102,16.3672318,-,-,-
+Massachusetts,first,4,JHK Forecasts,27.7022324,16.8096911,29.8208528,23.0677217,-,-,-
+Minnesota,first,4,JHK Forecasts,29.4427139,13.8974745,29.5526036,15.714137,-,-,-
+North Carolina,first,4,JHK Forecasts,38.9475165,19.500569,28.0215133,11.69744,-,-,-
+Oklahoma,first,4,JHK Forecasts,40.7612745,18.1632543,26.8292579,13.4102397,-,-,-
+Tennessee,first,4,JHK Forecasts,39.872796,19.2452924,27.4462198,12.0720809,-,-,-
+Texas,first,4,JHK Forecasts,35.2339058,18.2382993,31.5380038,13.3136615,-,-,-
+Utah,first,4,JHK Forecasts,30.2760312,20.1457619,31.0507136,16.514057,-,-,-
+Vermont,first,4,JHK Forecasts,15.8027468,7.1876394,60.1660266,15.703649,-,-,-
+Virginia,first,4,JHK Forecasts,42.5773746,19.4052538,25.0132529,11.7658388,-,-,-
+Alabama,first,4,FiveThirtyEight Forecast,43.88168,18.78408,20.80243,12.04813,-,-,-
+Arkansas,first,4,FiveThirtyEight Forecast,34.76442,24.6914,22.62023,14.76904,-,-,-
+California,first,4,FiveThirtyEight Forecast,26.45693,17.22513,32.30608,16.46436,-,-,-
+Colorado,first,4,FiveThirtyEight Forecast,22.54149,18.63072,28.6092,17.90351,-,-,-
+Maine,first,4,FiveThirtyEight Forecast,25.5104,19.73072,33.49472,15.91092,-,-,-
+Massachusetts,first,4,FiveThirtyEight Forecast,24.17303,18.72748,28.94374,25.19703,-,-,-
+Minnesota,first,4,FiveThirtyEight Forecast,23.01603,15.51938,27.96044,15.79706,-,-,-
+North Carolina,first,4,FiveThirtyEight Forecast,40.61659,17.51035,24.08478,13.16539,-,-,-
+Oklahoma,first,4,FiveThirtyEight Forecast,34.34083,16.96409,25.02758,16.58747,-,-,-
+Tennessee,first,4,FiveThirtyEight Forecast,34.47959,19.61565,27.20956,14.09919,-,-,-
+Texas,first,4,FiveThirtyEight Forecast,29.98557,18.68761,28.72403,14.52157,-,-,-
+Utah,first,4,FiveThirtyEight Forecast,24.95732,21.10639,29.13468,16.75542,-,-,-
+Vermont,first,4,FiveThirtyEight Forecast,13.96641,11.48004,56.46045,15.05033,-,-,-
+Virginia,first,4,FiveThirtyEight Forecast,43.05705,17.04758,22.81902,13.65519,-,-,-
+Alabama,first,4,theHOX,45.4,18.5,21.3,10.9,-,-,-
+Arkansas,first,4,theHOX,34.1,24.6,20.9,13,-,-,-
+California,first,4,theHOX,24.9,15.4,34.7,15.8,-,-,-
+Colorado,first,4,theHOX,18.3,15.9,34,17.1,-,-,-
+Maine,first,4,theHOX,24.2,19.1,35.6,16.1,-,-,-
+Massachusetts,first,4,theHOX,22.3,17.9,29.3,23.8,-,-,-
+Minnesota,first,4,theHOX,27.2,15.7,32.2,15.4,-,-,-
+North Carolina,first,4,theHOX,38,17.1,27.5,12.2,-,-,-
+Oklahoma,first,4,theHOX,37.7,15.6,28,15.1,-,-,-
+Tennessee,first,4,theHOX,31.5,18.7,27.5,12,-,-,-
+Texas,first,4,theHOX,31.3,17.4,32.4,13.9,-,-,-
+Utah,first,4,theHOX,25.1,22.9,25.6,12.7,-,-,-
+Vermont,first,4,theHOX,13.4,12.2,53,16.4,-,-,-
+Virginia,first,4,theHOX,41.8,15.2,25.2,13.1,-,-,-
+Alabama,first,4,#10at10,48.5,14.9,24.1,9.5,-,-,-
+Arkansas,first,4,#10at10,32.2,17.1,23.3,10.7,-,-,-
+California,first,4,#10at10,22.3,17.2,33.3,14.8,-,-,-
+Colorado,first,4,#10at10,18.4,13.9,32.6,15,-,-,-
+Maine,first,4,#10at10,24.9,13.1,34.6,15.2,-,-,-
+Massachusetts,first,4,#10at10,19.4,12.8,30.1,26.3,-,-,-
+Minnesota,first,4,#10at10,24.7,0,36.6,19,-,-,-
+North Carolina,first,4,#10at10,31.2,14.3,31.2,11,-,-,-
+Oklahoma,first,4,#10at10,25.6,17.2,28.2,10.3,-,-,-
+Tennessee,first,4,#10at10,37.6,17.5,27.4,10.7,-,-,-
+Texas,first,4,#10at10,27.2,15.2,29.3,12.7,-,-,-
+Utah,first,4,#10at10,18,11.2,39.5,13.6,-,-,-
+Vermont,first,4,#10at10,14.5,10.9,56.3,9.6,-,-,-
+Virginia,first,4,#10at10,28.8,17.8,26,10.4,-,-,-
+Alabama,first,4,Lean Tossup,47.14814671,12.15529041,23.70254611,10.48351791,-,-,-
+Arkansas,first,4,Lean Tossup,39.85091887,12.43285603,27.71645137,13.12046589,-,-,-
+California,first,4,Lean Tossup,24.70224773,14.45804208,35.53793096,16.58633988,-,-,-
+Colorado,first,4,Lean Tossup,20.50558049,14.46544226,35.14222186,22.22671132,-,-,-
+Maine,first,4,Lean Tossup,27.96731222,12.31254908,34.30001987,18.30831217,-,-,-
+Massachusetts,first,4,Lean Tossup,26.08074049,11.7928733,28.52022794,27.27264457,-,-,-
+Minnesota,first,4,Lean Tossup,28.65784038,12.45954025,31.11831648,15.34397043,-,-,-
+North Carolina,first,4,Lean Tossup,37.45633022,13.36321219,28.85392388,13.0910564,-,-,-
+Oklahoma,first,4,Lean Tossup,35.95680888,12.99936464,29.76816247,14.18874296,-,-,-
+Tennessee,first,4,Lean Tossup,39.59544179,12.47869717,27.59887671,13.46986098,-,-,-
+Texas,first,4,Lean Tossup,30.41365994,13.4121618,33.5320235,15.49883479,-,-,-
+Utah,first,4,Lean Tossup,28.57112462,13.22800922,34.20624441,16.6252761,-,-,-
+Vermont,first,4,Lean Tossup,20.2784049,9.200740017,53.08889012,12.14599286,-,-,-
+Virginia,first,4,Lean Tossup,38.47815747,13.64516862,27.59082308,13.0800203,-,-,-
+Alabama,first,4,DDHQ/0ptimus/Ozy,49.04,16.25,21.4,10.52,-,-,-
+Arkansas,first,4,DDHQ/0ptimus/Ozy,41.24,20.62,20.43,13.78,-,-,-
+California,first,4,DDHQ/0ptimus/Ozy,25.48,17.42,35.51,16.26,-,-,-
+Colorado,first,4,DDHQ/0ptimus/Ozy,17.86,18.84,34.09,19.17,-,-,-
+Maine,first,4,DDHQ/0ptimus/Ozy,24.25,14.95,39,18.21,-,-,-
+Massachusetts,first,4,DDHQ/0ptimus/Ozy,23.45,19.4,30.6,24.84,-,-,-
+Minnesota,first,4,DDHQ/0ptimus/Ozy,27.04,17.64,31.16,19.66,-,-,-
+North Carolina,first,4,DDHQ/0ptimus/Ozy,48,15.1,22.4,10.99,-,-,-
+Oklahoma,first,4,DDHQ/0ptimus/Ozy,27.66,17.54,26.17,21.5,-,-,-
+Tennessee,first,4,DDHQ/0ptimus/Ozy,39.41,18.83,24.39,13.66,-,-,-
+Texas,first,4,DDHQ/0ptimus/Ozy,30.39,17.93,35.37,13.11,-,-,-
+Utah,first,4,DDHQ/0ptimus/Ozy,19.84,19.23,32.05,18.88,-,-,-
+Vermont,first,4,DDHQ/0ptimus/Ozy,14.99,8.83,56.56,15.03,-,-,-
+Virginia,first,4,DDHQ/0ptimus/Ozy,47.9,13.08,23.15,12.31,-,-,-

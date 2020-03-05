@@ -1,5 +1,5 @@
-var fname = ["JHK Forecasts", "RealClearPolitics", "Lean Tossup", "#10at10", "FiveThirtyEight Polling Avg", "FiveThirtyEight Forecast","theHOX","DDHQ/0ptimus/Ozy"]
-var flinks = ["https://projects.jhkforecasts.com/democratic_primary/", "https://www.realclearpolitics.com/epolls/2020/president/us/2020_democratic_presidential_nomination-6730.html", "https://leantossup.ca/2020-democratic-presidential-primary/", "https://twitter.com/djjohnso", "https://projects.fivethirtyeight.com/polls/president-primary-d/national/", "https://projects.fivethirtyeight.com/2020-primary-forecast/","https://twitter.com/irihox","https://www.ozy.com/topic/2020-election/"]
+var fname = ["JHK Forecasts", "Lean Tossup", "#10at10", "FiveThirtyEight Forecast", "theHOX", "DDHQ/0ptimus/Ozy"]
+var flinks = ["https://projects.jhkforecasts.com/democratic_primary/", "https://leantossup.ca/2020-democratic-presidential-primary/", "https://twitter.com/djjohnso", "https://projects.fivethirtyeight.com/2020-primary-forecast/", "https://twitter.com/irihox", "https://www.ozy.com/topic/2020-election/"]
 var forecasters = [
     {
         "forecaster": "#10at10",
@@ -16,11 +16,7 @@ var forecasters = [
         "fill": "#E5592C",
         "stroke": "#E5592C"
     },
-    {
-        "forecaster": "FiveThirtyEight Polling Avg",
-        "fill": "#E5592C",
-        "stroke": "#000000"
-    },
+
     {
         "forecaster": "JHK Forecasts",
         "fill": "#60C7FE",
@@ -31,11 +27,7 @@ var forecasters = [
         "fill": "#FB0006",
         "stroke": "#04376D"
     },
-    {
-        "forecaster": "RealClearPolitics",
-        "fill": "#E20C08",
-        "stroke": "#E20C08"
-    },
+
     {
         "forecaster": "theHOX",
         "fill": "#FDDE25",
@@ -45,7 +37,7 @@ var forecasters = [
 var parsedate = d3.timeParse("%Y-%m-%d %I:%M:%S")
 var parseDate = d3.timeParse("%m/%d/%y")
 var time_scale = 86400000
-var num_qual_polls = 2
+var num_qual_polls = 5
 var numberformat = d3.format(".1f")
 console.log(forecasters)
 
@@ -204,21 +196,20 @@ d3.csv("results.csv", results => {
                 }
             })
             pollsters_avg_rmse.forEach((d, i) => {
-                d.rmse = Math.sqrt(d3.sum(polls_data.filter(j => j.pollster == d.pollster), d => Math.pow(d.rmse,2))/d.polls)
+                d.rmse = Math.sqrt(d3.sum(polls_data.filter(j => j.pollster == d.pollster), d => Math.pow(d.rmse, 2)) / d.polls)
                 return d;
             })
 
             var forecasts_avg_rmse = forecasters.map((d, i) => {
                 return {
-                    pollster: d.forecaster,
-                    rmse: Math.sqrt(d3.sum(forecasts_data.filter(j => j.forecaster == d.forecaster), d => Math.pow(d.rmse,2))/states.length),
-                    mr_error: d3.mean(forecasts_data.filter(j => j.forecaster == d.forecaster), d => d.mean_reverted_error),
+                    forecast: d.forecaster,
+                    rmse: Math.sqrt(d3.sum(forecasts_data.filter(j => j.forecaster == d.forecaster), d => Math.pow(d.rmse, 2)) / states.length),
                 }
             })
 
             pollsters_avg_rmse.sort((a, b) => a.mr_error - b.mr_error)
             console.log(pollsters_avg_rmse)
-            forecasts_avg_rmse.sort((a, b) => a.mr_error - b.mr_error)
+            forecasts_avg_rmse.sort((a, b) => a.rmse - b.rmse)
             console.log(forecasts_avg_rmse)
 
             var qual_polls = pollsters_avg_rmse.filter(d => d.polls >= num_qual_polls)
@@ -254,6 +245,10 @@ d3.csv("results.csv", results => {
 
             var z = d3.scaleLinear()
                 .domain([0, d3.max(pollsters_avg_rmse, d => d.rmse)])
+                .range(["white", "#FF6060"])
+
+            var f = d3.scaleLinear()
+                .domain([3, d3.max(forecasts_avg_rmse, d => d.rmse)])
                 .range(["white", "#FF6060"])
 
             var mr = d3.scaleLinear()
@@ -436,27 +431,19 @@ d3.csv("results.csv", results => {
 
 
             var fore = d3.select("#nationalforecasts").append("svg")
-                .attr("viewBox", "0 0 800 450")
+                .attr("viewBox", "0 0 800 350")
 
             fore.selectAll("rect")
                 .data(forecasts_avg_rmse)
                 .enter()
                 .append("rect")
-                .attr("fill", d => z(d.rmse))
+                .attr("fill", d => f(d.rmse))
                 .attr("x", 650)
                 .attr("y", (d, i) => i * 50 + 30)
                 .attr("width", 100)
                 .attr("height", 50);
 
-            fore.selectAll("d")
-                .data(forecasts_avg_rmse)
-                .enter()
-                .append("rect")
-                .attr("fill", d => mr(d.mr_error))
-                .attr("x", 550)
-                .attr("y", (d, i) => i * 50 + 30)
-                .attr("width", 100)
-                .attr("height", 50)
+
 
             fore.selectAll("topline")
                 .data(forecasts_avg_rmse)
@@ -472,26 +459,15 @@ d3.csv("results.csv", results => {
                 .attr("dominant-baseline", "middle")
 
 
-            fore.selectAll("topline")
-                .data(forecasts_avg_rmse)
-                .enter()
-                .append("text")
-                .text(d => numberformat(d.mr_error))
-                .attr("x", 600)
-                .attr("y", (d, i) => i * 50 + 60)
-                .attr("font-size", 25)
-                .attr("fill", "black")
-                .attr("text-anchor", "middle")
-                .attr("font-weight", 700)
-                .attr("dominant-baseline", "middle")
+
 
             fore.selectAll("topline")
                 .data(forecasts_avg_rmse)
                 .enter()
                 .append("a")
-                .attr("href",d=>flinks[fname.indexOf(d.pollster)])
+                .attr("href", d => flinks[fname.indexOf(d.forecast)])
                 .append("text")
-                .text(d => d.pollster)
+                .text(d => d.forecast)
                 .attr("x", 100)
                 .attr("y", (d, i) => i * 50 + 60)
                 .attr("font-size", 20)
@@ -546,25 +522,7 @@ d3.csv("results.csv", results => {
                 .attr("dominant-baseline", "middle")
 
 
-            fore.append("text")
-                .text("Mean Reverted")
-                .attr("x", 600)
-                .attr("y", 10)
-                .attr("font-size", 15)
-                .attr("fill", "black")
-                .attr("text-anchor", "middle")
-                .attr("font-weight", 700)
-                .attr("dominant-baseline", "middle")
 
-            fore.append("text")
-                .text("Error")
-                .attr("x", 600)
-                .attr("y", 24)
-                .attr("font-size", 15)
-                .attr("fill", "black")
-                .attr("text-anchor", "middle")
-                .attr("font-weight", 700)
-                .attr("dominant-baseline", "middle")
 
             fore.append("text")
                 .text("RMSE")
@@ -893,7 +851,7 @@ d3.csv("results.csv", results => {
                 .attr("stroke-width", 1.5)
 
             var stf = d3.select("#forecasts").append("svg")
-                .attr("viewBox", "100 0 800 450")
+                .attr("viewBox", "100 0 800 350")
 
             stf.selectAll("rect")
                 .data(stateforecasts)
@@ -905,7 +863,7 @@ d3.csv("results.csv", results => {
                 .attr("width", 100)
                 .attr("height", 50);
 
-                stf.selectAll("d")
+            stf.selectAll("d")
                 .data(stateforecasts)
                 .enter()
                 .append("rect")
@@ -915,7 +873,7 @@ d3.csv("results.csv", results => {
                 .attr("width", 100)
                 .attr("height", 50)
 
-                stf.selectAll("topline")
+            stf.selectAll("topline")
                 .data(stateforecasts)
                 .enter()
                 .append("text")
@@ -929,7 +887,7 @@ d3.csv("results.csv", results => {
                 .attr("dominant-baseline", "middle")
 
 
-                stf.selectAll("topline")
+            stf.selectAll("topline")
                 .data(stateforecasts)
                 .enter()
                 .append("text")
@@ -942,11 +900,11 @@ d3.csv("results.csv", results => {
                 .attr("font-weight", 700)
                 .attr("dominant-baseline", "middle")
 
-                stf.selectAll("topline")
+            stf.selectAll("topline")
                 .data(stateforecasts)
                 .enter()
                 .append("a")
-                .attr("href",d=>flinks[fname.indexOf(d.forecaster)])
+                .attr("href", d => flinks[fname.indexOf(d.forecaster)])
                 .append("text")
                 .text(d => d.forecaster)
                 .attr("x", 100)
@@ -959,7 +917,7 @@ d3.csv("results.csv", results => {
                 .attr("text-decoration", "underline")
 
 
-                stf.selectAll("topline")
+            stf.selectAll("topline")
                 .data(stateforecasts)
                 .enter()
                 .append("line")
@@ -971,7 +929,7 @@ d3.csv("results.csv", results => {
                 .attr("stroke-width", 1)
 
 
-                stf.append("text")
+            stf.append("text")
                 .text("Pollster")
                 .attr("x", 100)
                 .attr("y", 15)
@@ -982,7 +940,7 @@ d3.csv("results.csv", results => {
                 .attr("dominant-baseline", "middle")
 
 
-                stf.append("text")
+            stf.append("text")
                 .text("Mean Reverted")
                 .attr("x", 750)
                 .attr("y", 10)
@@ -992,7 +950,7 @@ d3.csv("results.csv", results => {
                 .attr("font-weight", 700)
                 .attr("dominant-baseline", "middle")
 
-                stf.append("text")
+            stf.append("text")
                 .text("Error")
                 .attr("x", 750)
                 .attr("y", 24)
@@ -1002,7 +960,7 @@ d3.csv("results.csv", results => {
                 .attr("font-weight", 700)
                 .attr("dominant-baseline", "middle")
 
-                stf.append("text")
+            stf.append("text")
                 .text("RMSE")
                 .attr("x", 850)
                 .attr("y", 15)
@@ -1012,7 +970,7 @@ d3.csv("results.csv", results => {
                 .attr("font-weight", 700)
                 .attr("dominant-baseline", "middle")
 
-                stf.append("line")
+            stf.append("line")
                 .attr("x1", 900)
                 .attr("x2", 000)
                 .attr("y1", 30)
