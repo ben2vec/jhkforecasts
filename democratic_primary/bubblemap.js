@@ -10,7 +10,7 @@ var R = 7
 
 var cat = ["Biden", "Bloomberg", "Buttigieg", "Klobuchar", "Sanders", "Steyer", "Warren"]
 
-var color = d3.scaleOrdinal()
+var colorthree = d3.scaleOrdinal()
   .domain(cat)
   .range(["#00C181", "#FF6060", "#FFE130", "#FF8D32", "#0077FF", "#FF2EF0", "#AF0BFF"])
 var colortwo = d3.scaleOrdinal()
@@ -68,13 +68,13 @@ d3.csv("bubblemap.csv", function (error, data) {
     .attr("cx", 0)
     .attr("cy", 0)
     .attr("r", R)
-    .style("fill", d => color(d))
+    .style("fill", d => colorthree(d))
 
   legend.append("text")
     .attr("class", "legend-text")
     .attr("x", R * 2)
     .attr("y", R / 2)
-    .style("fill", d => color(d))
+    .style("fill", d => colorthree(d))
     .style("font-size", 12)
     .style("font-weight", 500)
     .text(d => d)
@@ -89,7 +89,7 @@ d3.csv("bubblemap.csv", function (error, data) {
     .attr("cy", d => y(d.yValue))
     .attr("r", d => d.radius)
     .attr("stroke-width", 2)
-    .style("stroke", d =>color(d.first))
+    .style("stroke", d =>colorthree(d.first))
     .style("fill", "none")
 
   svg.selectAll("states")
@@ -102,7 +102,7 @@ d3.csv("bubblemap.csv", function (error, data) {
     .attr("cy", d => y(d.yValue))
     .attr("r", d => d.radius)
     .style("opacity",d=>d.completed)
-    .style("fill", d =>color(d.first))
+    .style("fill", d =>colorthree(d.first))
     .on('mouseover', function (d) {
       tool_tip.show();
       var tipSVG = d3.select("#tipDiv")
