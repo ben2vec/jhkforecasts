@@ -38,18 +38,18 @@ var parsedate = d3.timeParse("%Y-%m-%d %I:%M:%S")
 var parseDate = d3.timeParse("%m/%d/%y")
 var time_scale = 86400000
 var num_qual_polls = 5
-var numberformat = d3.format(".1f")
-console.log(forecasters)
+var numberformat = d3.format(".2f")
+var numberformat = d3.format(".2f")
 
 d3.csv("results.csv", results => {
     results.forEach((d, i) => {
+        d.raw_date = d.election_date
         d.election_date = parseDate(d.election_date)
+
         return d;
     })
-    console.log(results)
 
     d3.csv("https://projects.jhkforecasts.com/democratic_primary/polls.csv", polls => {
-        console.log(polls)
 
         var states = results.map(d => {
             return d.state
@@ -79,7 +79,7 @@ d3.csv("results.csv", results => {
                 return d;
             })
 
-            var newest_poll = newest_poll.filter(d => d.recency < 35)
+            var newest_poll = newest_poll.filter(d => d.recency < 20)
 
 
             var accuracy = newest_poll.map((d, i) => {
@@ -116,7 +116,6 @@ d3.csv("results.csv", results => {
                 return d;
             })
             var avg_error = d3.mean(accuracy, d => d.rmse)
-            console.log(avg_error)
 
             accuracy.forEach((d, i) => {
                 d.mean_reverted_error = d.rmse - avg_error
@@ -165,7 +164,6 @@ d3.csv("results.csv", results => {
                     return d;
                 })
                 var avg_error = d3.mean(accuracy, d => d.rmse)
-                console.log(avg_error)
 
                 accuracy.forEach((d, i) => {
                     d.mean_reverted_error = d.rmse - avg_error
@@ -173,13 +171,29 @@ d3.csv("results.csv", results => {
                 })
                 accuracy.sort((a, b) => a.rmse - b.rmse)
                 fd.push(accuracy)
-                console.log(accuracy)
             }
 
             var polls_data = pd.flat()
             var forecasts_data = fd.flat()
-            console.log(forecasts_data)
 
+            var states_results = []
+            for (let a = 0; a < states.length; a++) {
+                var polls = polls_data.filter(d => d.state == states[a])
+                polls.sort((a, b) => a.rmse - b.rmse)
+                var forecasts = forecasts_data.filter(d => d.state == states[a])
+                forecasts.sort((a, b) => a.rmse - b.rmse)
+
+                var f = {
+                    state: states[a],
+                    date: results[a].raw_date,
+                    pollster: polls[0].pollster,
+                    forecast: forecasts[0].forecaster
+                }
+
+                states_results.push(f)
+            }
+
+            console.log(states_results)
 
             var pollsters = polls_data.map((d, i) => {
                 return d.pollster
@@ -208,9 +222,7 @@ d3.csv("results.csv", results => {
             })
 
             pollsters_avg_rmse.sort((a, b) => a.mr_error - b.mr_error)
-            console.log(pollsters_avg_rmse)
             forecasts_avg_rmse.sort((a, b) => a.rmse - b.rmse)
-            console.log(forecasts_avg_rmse)
 
             var qual_polls = pollsters_avg_rmse.filter(d => d.polls >= num_qual_polls)
 
@@ -226,7 +238,6 @@ d3.csv("results.csv", results => {
 
                 return a < b ? -1 : a > b ? 1 : 0;
             });
-            console.log(pollsters_avg_rmse)
 
 
 
@@ -241,21 +252,19 @@ d3.csv("results.csv", results => {
                 return d;
             })
 
-            console.log(qual_polls)
 
             var z = d3.scaleLinear()
                 .domain([0, d3.max(pollsters_avg_rmse, d => d.rmse)])
-                .range(["white", "#a4b1b5"])
+                .range(["white", "#FD363F"])
 
             var f = d3.scaleLinear()
                 .domain([3, d3.max(forecasts_avg_rmse, d => d.rmse)])
-                .range(["white", "#a4b1b5"])
+                .range(["white", "#FD363F"])
 
             var mr = d3.scaleLinear()
                 .domain(d3.extent(pollsters_avg_rmse, d => d.mr_error))
-                .range(["white", "#a4b1b5"])
+                .range(["white", "#FD363F"])
 
-            console.log(mr(2.1))
             var height = qual_polls.length * 50 + 30
 
             var qual = d3.select("#qualpollsters").append("svg")
@@ -720,9 +729,7 @@ d3.csv("results.csv", results => {
                 .attr("stroke-width", 1.5)
 
             var statepolls = polls_data.filter(d => d.state == key_state)
-            console.log(statepolls)
             var stateforecasts = forecasts_data.filter(d => d.state == key_state)
-            console.log(stateforecasts)
             var height5 = statepolls.length * 50 + 30
 
             var stp = d3.select("#pollsters").append("svg")
@@ -977,107 +984,122 @@ d3.csv("results.csv", results => {
                 .attr("y2", 30)
                 .attr("stroke", "black")
                 .attr("stroke-width", 1.5)
+
+
+            var height3 = states.length * 50 + 30
+            var st = d3.select("#state").append("svg")
+                .attr("viewBox", "0 0 800 " + height3)
+
+            st.selectAll("rect")
+                .data(states)
+                .enter()
+                .append("a")
+                .attr("href", (d) => d.state)
+                .append("text")
+                .text((d) => d.state)
+                .attr("x", 50)
+                .attr("y", (d, i) => i * 50 + 60)
+                .attr("font-size", 20)
+                .attr("fill", "black")
+                .attr("text-anchor", "start")
+                .attr("font-weight", 700)
+                .attr("dominant-baseline", "middle")
+                .on('mouseover', function (d) {
+
+                    d3.select(this)
+                        .attr("text-decoration", "underline")
+                })
+                .on('mouseout',
+                    function (d) {
+                        d3.select(this)
+                            .attr("text-decoration", "none")
+
+                    });
+
+
+            st.selectAll("rect")
+                .data(states_results)
+                .enter()
+                .append("a")
+                .attr("href", (d) => d.state)
+                .append("text")
+                .text((d) => d.state)
+                .attr("x", 50)
+                .attr("y", (d, i) => i * 50 + 60)
+                .attr("font-size", 20)
+                .attr("fill", "black")
+                .attr("text-anchor", "start")
+                .attr("font-weight", 700)
+                .attr("dominant-baseline", "middle")
+
+            st.selectAll("rect")
+                .data(states_results)
+                .enter()
+                .append("text")
+                .text((d) => d.pollster)
+                .attr("x", 400)
+                .attr("y", (d, i) => i * 50 + 60)
+                .attr("font-size", 15)
+                .attr("fill", "black")
+                .attr("text-anchor", "middle")
+                .attr("font-weight", 700)
+                .attr("dominant-baseline", "middle")
+
+
+            st.selectAll("rect")
+                .data(states_results)
+                .enter()
+                .append("text")
+                .text((d) => d.forecast)
+                .attr("x", 600)
+                .attr("y", (d, i) => i * 50 + 60)
+                .attr("font-size", 15)
+                .attr("fill", "black")
+                .attr("text-anchor", "middle")
+                .attr("font-weight", 700)
+                .attr("dominant-baseline", "middle")
+
+
+            st.append("text")
+                .text("Best Poll")
+                .attr("x", 400)
+                .attr("y", 15)
+                .attr("font-size", 15)
+                .attr("fill", "black")
+                .attr("text-anchor", "middle")
+                .attr("font-weight", 700)
+                .attr("dominant-baseline", "middle")
+
+            st.append("text")
+                .text("Best Forecast")
+                .attr("x", 600)
+                .attr("y", 15)
+                .attr("font-size", 15)
+                .attr("fill", "black")
+                .attr("text-anchor", "middle")
+                .attr("font-weight", 700)
+                .attr("dominant-baseline", "middle")
+
+            st.append("text")
+                .text("State")
+                .attr("x", 50)
+                .attr("y", 15)
+                .attr("font-size", 20)
+                .attr("fill", "black")
+                .attr("text-anchor", "start")
+                .attr("font-weight", 700)
+                .attr("dominant-baseline", "middle")
+            st.append("line")
+                .attr("x1", 1000)
+                .attr("x2", 000)
+                .attr("y1", 30)
+                .attr("y2", 30)
+                .attr("stroke", "black")
+                .attr("stroke-width", 1.5)
         })
     })
 })
 
 
 
-d3.csv("states.csv", function (states) {
-    var height3 = states.length * 50 + 30
-    console.log(states)
-    var st = d3.select("#state").append("svg")
-        .attr("viewBox", "0 0 800 " + height3)
 
-    st.selectAll("rect")
-        .data(states)
-        .enter()
-        .append("a")
-        .attr("href", (d) => d.state)
-        .append("text")
-        .text((d) => d.state)
-        .attr("x", 50)
-        .attr("y", (d, i) => i * 50 + 60)
-        .attr("font-size", 20)
-        .attr("fill", "black")
-        .attr("text-anchor", "start")
-        .attr("font-weight", 700)
-        .attr("dominant-baseline", "middle")
-        .on('mouseover', function (d) {
-
-            d3.select(this)
-                .attr("text-decoration", "underline")
-        })
-        .on('mouseout',
-            function (d) {
-                d3.select(this)
-                    .attr("text-decoration", "none")
-
-            });;
-
-
-    st.selectAll("rect")
-        .data(states)
-        .enter()
-        .append("text")
-        .text((d) => d.pollster)
-        .attr("x", 400)
-        .attr("y", (d, i) => i * 50 + 60)
-        .attr("font-size", 15)
-        .attr("fill", "black")
-        .attr("text-anchor", "middle")
-        .attr("font-weight", 700)
-        .attr("dominant-baseline", "middle")
-
-
-    st.selectAll("rect")
-        .data(states)
-        .enter()
-        .append("text")
-        .text((d) => d.forecast)
-        .attr("x", 600)
-        .attr("y", (d, i) => i * 50 + 60)
-        .attr("font-size", 15)
-        .attr("fill", "black")
-        .attr("text-anchor", "middle")
-        .attr("font-weight", 700)
-        .attr("dominant-baseline", "middle")
-
-
-    st.append("text")
-        .text("Best Poll")
-        .attr("x", 400)
-        .attr("y", 15)
-        .attr("font-size", 15)
-        .attr("fill", "black")
-        .attr("text-anchor", "middle")
-        .attr("font-weight", 700)
-        .attr("dominant-baseline", "middle")
-
-    st.append("text")
-        .text("Best Forecast")
-        .attr("x", 600)
-        .attr("y", 15)
-        .attr("font-size", 15)
-        .attr("fill", "black")
-        .attr("text-anchor", "middle")
-        .attr("font-weight", 700)
-        .attr("dominant-baseline", "middle")
-
-    st.append("text")
-        .text("State")
-        .attr("x", 50)
-        .attr("y", 15)
-        .attr("font-size", 20)
-        .attr("fill", "black")
-        .attr("text-anchor", "start")
-        .attr("font-weight", 700)
-        .attr("dominant-baseline", "middle")
-    st.append("line")
-        .attr("x1", 1000)
-        .attr("x2", 000)
-        .attr("y1", 30)
-        .attr("y2", 30)
-        .attr("stroke", "black")
-        .attr("stroke-width", 1.5)
-})

@@ -20,7 +20,7 @@ h1{ font-family: brandon-grotesque, monospace;
   color: inherit;}
 
   a:hover{
-    text-decoration:none ;
+    text-decoration:underline ;
     color: inherit;
   }
  .center {
