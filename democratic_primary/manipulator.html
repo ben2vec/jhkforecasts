@@ -111,11 +111,11 @@
         <td style="width: 45%;">
           <img style="width:20%;margin-left: 40%;" src="https://jhkforecasts.com/Biden-01.png" alt="Biden">
         </td>
-        
+
         <td style="width: 45%;">
           <img style="width:20%;margin-left: 40%;" src="https://jhkforecasts.com/Sanders-01.png" alt="Sanders">
         </td>
-        
+
         <td style="width: 10%;" valign="bottom">
           <h1 style="text-align:center;font-weight: 700;">Total</h1>
 
@@ -131,7 +131,7 @@
           <h3 style="text-align:center;font-weight: 600;" id="sanders-text">
             </h1>
         </td>
-        
+
         <td style="width: 10%;">
           <h4 style="text-align:center;font-weight: 700;" id="total-text"></h4>
         </td>
@@ -160,7 +160,7 @@
 
         <td style="width: 10%;border-bottom: white solid .5px;">
           <h4 style="text-align:center;font-weight: 700;">Adjusted 2 person race</h4>
-          
+
         </td>
       </tr>
       <tr style="margin-top: -30px;border-bottom: black solid .5px;">
@@ -249,17 +249,20 @@
   d3.csv("manip.csv", (data) => {
 
     var us = data[57]
-
+ 
 
 
     var data = data.filter(function (d) { return d.State != "US"; })
     var statesnames = data.map((d) => {
       return d.State
     })
-    console.log(statesnames)
-    document.getElementById("biden-slider").value = us[candidates[0]]
-    document.getElementById("sanders-slider").value = us[candidates[4]]
+
+
+
+    document.getElementById("biden-slider").value = us[candidates[0]] 
+    document.getElementById("sanders-slider").value = us[candidates[4]] 
     document.getElementById("state-search").value = statesnames[Math.round(Math.random() * 56)]
+
     update(d3.select('#biden-slider').property('value'), 0, 0, 0, d3.select('#sanders-slider').property('value'), 0, 0)
 
     function update(biden, bloomberg, buttigieg, klobuchar, sanders, steyer, warren) {
@@ -285,7 +288,7 @@
       document.getElementById("total-text").innerHTML = d3.sum(cands) + "%"
       document.getElementById("biden").innerHTML = numberformat((100 / d3.sum(cands)) * cands[0]) + "%"
       document.getElementById("sanders").innerHTML = numberformat((100 / d3.sum(cands)) * cands[4]) + "%"
-      
+
       var newdata = data.map((d, i) => {
         return {
           State: d.State,
@@ -336,8 +339,7 @@
       })
       newdata[3].steyerdelegates = 0
       var bidensum = d3.sum(newdata, d => d.bidendelegates)
-      console.log()
-      console.log(newdata)
+     
 
       var finaldata = []
       for (let j = 0; j < 57; j++) {
@@ -361,7 +363,7 @@
       document.getElementById("bidendel").innerHTML = bidendel
       document.getElementById("bidendel").style.fontWeight = bidendel > 1989 ? 900 : 600
 
-     
+
       var sandersdel = d3.sum(finaldata.filter(d => d.candidate == "Sanders"), d => d.delegates)
       document.getElementById("sandersdel").innerHTML = sandersdel
       document.getElementById("sandersdel").style.fontWeight = sandersdel > 1989 ? 900 : 600
@@ -392,8 +394,7 @@
 
         mapdata.push(rank)
       }
-      console.log(finaldata)
-      console.log(mapdata)
+      
 
 
       var states = svg.selectAll(".states")
@@ -559,7 +560,6 @@
       state(d3.select("#state-search").property("value"));
       function state(input) {
         var statedata = finaldata.filter(d => d.state == input)
-        console.log(statedata)
         statedata.sort((a, b) => b.vote - a.vote)
         SVG.selectAll(".cands")
           .data(statedata).enter()
