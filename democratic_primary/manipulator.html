@@ -31,14 +31,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
   <link rel="stylesheet" href="https://use.typekit.net/htk2wjy.css">
   <link rel="stylesheet" href="index.css">
-<style>
-  @media only screen and (min-width:851px) {
-  #bubblemap {
-    width: 80%;
-    margin-left: 10%;
-  }
-}
-</style>
+  <style>
+    @media only screen and (min-width:851px) {
+      #bubblemap {
+        width: 80%;
+        margin-left: 10%;
+      }
+    }
+  </style>
 </head>
 <a href="https://jhkforecasts.com">
   <h1 style="font-weight: 300;text-align: center;">JHK Forecasts</h1>
@@ -97,166 +97,85 @@
 
 
 
-<h1
-  style="text-align: center;font-size: 35;font-weight: 900;background-color: darkblue;color: white;">
+<h1 style="text-align: center;font-size: 35;font-weight: 900;background-color: darkblue;color: white;">
   Democratic Primary Manipulator</h1>
-  <table style="border-collapse: collapse;" cellspacing="0" cellpadding="0" width="100%">
-    <tbody>
-  
-    </tbody>
-  </table>
+<table style="border-collapse: collapse;" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+
+  </tbody>
+</table>
 <div class="sticky">
   <table style="border-collapse: collapse;" cellspacing="0" cellpadding="0" width="100%">
     <tbody>
-      <tr >
-        <td style="width: 13%;">
-          <img style="width:70%;margin-left: 15%;" src="https://jhkforecasts.com/Biden-01.png" alt="Biden">
+      <tr>
+        <td style="width: 45%;">
+          <img style="width:20%;margin-left: 40%;" src="https://jhkforecasts.com/Biden-01.png" alt="Biden">
         </td>
-        <td style="width: 13%;">
-          <img style="width:70%;margin-left: 15%;" src="https://jhkforecasts.com/Bloomberg-01.png" alt="Bloomberg">
+        
+        <td style="width: 45%;">
+          <img style="width:20%;margin-left: 40%;" src="https://jhkforecasts.com/Sanders-01.png" alt="Sanders">
         </td>
-        <td style="width: 13%;">
-          <img style="width:70%;margin-left: 15%;" src="https://jhkforecasts.com/Buttigieg-01.png" alt="Buttigieg">
-        </td>
-        <td style="width: 13%;">
-          <img style="width:70%;margin-left: 15%;" src="https://jhkforecasts.com/Klobuchar-01.png" alt="Klobuchar">
-        </td>
-        <td style="width: 13%;">
-          <img style="width:70%;margin-left: 15%;" src="https://jhkforecasts.com/Sanders-01.png" alt="Sanders">
-        </td>
-        <td style="width: 13%;">
-          <img style="width:70%;margin-left: 15%;" src="https://jhkforecasts.com/Steyer-01.png" alt="Steyer">
-        </td>
-        <td style="width: 13%;">
-          <img style="width:70%;margin-left: 15%;" src="https://jhkforecasts.com/Warren-01.png" alt="Warren">
-        </td>
-        <td style="width: 9%;" valign="bottom">
-          <h4 style="text-align:center;">Total</h4>
+        
+        <td style="width: 10%;" valign="bottom">
+          <h1 style="text-align:center;font-weight: 700;">Total</h1>
 
         </td>
       </tr>
-      
+
       <tr>
-        <td style="width: 13%;">
+        <td style="width: 45%;">
           <h3 style="text-align:center;font-weight: 600;" id="biden-text">
             </h1>
         </td>
-        <td style="width: 13%;">
-          <h3 style="text-align:center;font-weight: 600;" id="bloomberg-text">
-            </h1>
-        </td>
-        <td style="width: 13%;">
-          <h3 style="text-align:center;font-weight: 600;" id="buttigieg-text">
-            </h1>
-        </td>
-        <td style="width: 13%;">
-          <h3 style="text-align:center;font-weight: 600;" id="klobuchar-text">
-            </h1>
-        </td>
-        <td style="width: 13%;">
+        <td style="width: 45%;">
           <h3 style="text-align:center;font-weight: 600;" id="sanders-text">
             </h1>
         </td>
-        <td style="width: 13%;">
-          <h3 style="text-align:center;font-weight: 600;" id="steyer-text">
-            </h1>
-        </td>
-        <td style="width: 13%;">
-          <h3 style="text-align:center;font-weight: 600;" id="warren-text">
-            </h1>
-        </td>
-        <td style="width: 9%;">
-          <h4 style="text-align:center;" id="total-text"></h4>
+        
+        <td style="width: 10%;">
+          <h4 style="text-align:center;font-weight: 700;" id="total-text"></h4>
         </td>
       </tr>
       <tr style="border-bottom: black solid .5px;">
-        <td style="width: 13%;">
-          <input type="range" min="0" max="60" value="0" class="slider" id="biden-slider">
+        <td style="width: 45%;">
+          <input type="range" min="0" max="100" value="0" class="slider" id="biden-slider">
         </td>
-        <td style="width: 13%;">
-          <input type="range" min="0" max="60" value="0" class="slider" id="bloomberg-slider">
+
+        <td style="width: 45%;">
+          <input type="range" min="0" max="100" value="0" class="slider" id="sanders-slider">
         </td>
-        <td style="width: 13%;">
-          <input type="range" min="0" max="60" value="0" class="slider" id="buttigieg-slider">
-        </td>
-        <td style="width: 13%;">
-          <input type="range" min="0" max="60" value="0" class="slider" id="klobuchar-slider">
-        </td>
-        <td style="width: 13%;">
-          <input type="range" min="0" max="60" value="0" class="slider" id="sanders-slider">
-        </td>
-        <td style="width: 13%;">
-          <input type="range" min="0" max="60" value="0" class="slider" id="steyer-slider">
-        </td>
-        <td style="width: 13%;">
-          <input type="range" min="0" max="60" value="0" class="slider" id="warren-slider">
-        </td>
+
       </tr>
       <tr style="margin-top: -30px;border-bottom: black solid .5px;">
-        <td style="width: 13%;">
+        <td style="width: 45%;">
           <h3 style="text-align:center;font-weight: 600;" id="biden">
             </h1>
         </td>
-        <td style="width: 13%;">
-          <h3 style="text-align:center;font-weight: 600;" id="bloomberg">
-            </h1>
-        </td>
-        <td style="width: 13%;">
-          <h3 style="text-align:center;font-weight: 600;" id="buttigieg">
-            </h1>
-        </td>
-        <td style="width: 13%;">
-          <h3 style="text-align:center;font-weight: 600;" id="klobuchar">
-            </h1>
-        </td>
-        <td style="width: 13%;">
+
+        <td style="width: 45%;">
           <h3 style="text-align:center;font-weight: 600;" id="sanders">
             </h1>
         </td>
-        <td style="width: 13%;">
-          <h3 style="text-align:center;font-weight: 600;" id="steyer">
-            </h1>
-        </td>
-        <td style="width: 13%;">
-          <h3 style="text-align:center;font-weight: 600;" id="warren">
-            </h1>
-        </td>
-        <td style="width: 9%;border-bottom: white solid .5px;">
-          <h4 style="text-align:center;">Adjusted</h4>
-          <h4 style="text-align:center;" id="total-text"></h4>
+
+
+        <td style="width: 10%;border-bottom: white solid .5px;">
+          <h4 style="text-align:center;font-weight: 700;">Adjusted 2 person race</h4>
+          
         </td>
       </tr>
       <tr style="margin-top: -30px;border-bottom: black solid .5px;">
-        <td style="width: 13%;">
+        <td style="width: 45%;">
           <h3 style="text-align:center;" id="bidendel">
             </h1>
         </td>
-        <td style="width: 13%;">
-          <h3 style="text-align:center;" id="bloombergdel">
-            </h1>
-        </td>
-        <td style="width: 13%;">
-          <h3 style="text-align:center;" id="buttigiegdel">
-            </h1>
-        </td>
-        <td style="width: 13%;">
-          <h3 style="text-align:center;" id="klobuchardel">
-            </h1>
-        </td>
-        <td style="width: 13%;">
+
+        <td style="width: 45%;">
           <h3 style="text-align:center;" id="sandersdel">
             </h1>
         </td>
-        <td style="width: 13%;">
-          <h3 style="text-align:center;" id="steyerdel">
-            </h1>
-        </td>
-        <td style="width: 13%;">
-          <h3 style="text-align:center;" id="warrendel">
-            </h1>
-        </td>
-        <td style="width: 9%;border-bottom: white solid .5px;">
-          <h4 style="text-align:center;">Delegates</h4>
+
+        <td style="width: 10%;border-bottom: white solid .5px;">
+          <h4 style="text-align:center;font-weight: 700;">Delegates</h4>
 
         </td>
       </tr>
@@ -331,22 +250,17 @@
 
     var us = data[57]
 
-    
+
 
     var data = data.filter(function (d) { return d.State != "US"; })
-    var statesnames = data.map((d)=>{
+    var statesnames = data.map((d) => {
       return d.State
     })
     console.log(statesnames)
-    document.getElementById("biden-slider").value = us[candidates[0]] 
-    document.getElementById("bloomberg-slider").value = us[candidates[1]]
-    document.getElementById("buttigieg-slider").value = us[candidates[2]]
-    document.getElementById("klobuchar-slider").value = us[candidates[3]]
+    document.getElementById("biden-slider").value = us[candidates[0]]
     document.getElementById("sanders-slider").value = us[candidates[4]]
-    document.getElementById("steyer-slider").value = us[candidates[5]]
-    document.getElementById("warren-slider").value = us[candidates[6]]
-    document.getElementById("state-search").value = statesnames[Math.round(Math.random()*56)]
-    update(d3.select('#biden-slider').property('value'), d3.select('#bloomberg-slider').property('value'), d3.select('#buttigieg-slider').property('value'), d3.select('#klobuchar-slider').property('value'), d3.select('#sanders-slider').property('value'), d3.select('#steyer-slider').property('value'), d3.select('#warren-slider').property('value'))
+    document.getElementById("state-search").value = statesnames[Math.round(Math.random() * 56)]
+    update(d3.select('#biden-slider').property('value'), 0, 0, 0, d3.select('#sanders-slider').property('value'), 0, 0)
 
     function update(biden, bloomberg, buttigieg, klobuchar, sanders, steyer, warren) {
       var cands = [biden, bloomberg, buttigieg, klobuchar, sanders, steyer, warren]
@@ -366,22 +280,12 @@
         [candidates[5] + "change"]: steyer - us[candidates[5]],
         [candidates[6] + "change"]: warren - us[candidates[6]],
       }
-      document.getElementById("biden-text").innerHTML = cands[0]+"%"
-      document.getElementById("bloomberg-text").innerHTML = cands[1]+"%"
-      document.getElementById("buttigieg-text").innerHTML = cands[2]+"%"
-      document.getElementById("klobuchar-text").innerHTML = cands[3]+"%"
-      document.getElementById("sanders-text").innerHTML = cands[4]+"%"
-      document.getElementById("steyer-text").innerHTML = cands[5]+"%"
-      document.getElementById("warren-text").innerHTML = cands[6]+"%"
-      document.getElementById("total-text").innerHTML = d3.sum(cands)+"%"
-      document.getElementById("biden").innerHTML = numberformat((100 / d3.sum(cands)) * cands[0])+"%"
-      document.getElementById("bloomberg").innerHTML = numberformat((100 / d3.sum(cands)) * cands[1])+"%"
-      document.getElementById("buttigieg").innerHTML = numberformat((100 / d3.sum(cands)) * cands[2])+"%"
-      document.getElementById("klobuchar").innerHTML = numberformat((100 / d3.sum(cands)) * cands[3])+"%"
-      document.getElementById("sanders").innerHTML = numberformat((100 / d3.sum(cands)) * cands[4])+"%"
-      document.getElementById("steyer").innerHTML = numberformat((100 / d3.sum(cands)) * cands[5])+"%"
-      document.getElementById("warren").innerHTML = numberformat((100 / d3.sum(cands)) * cands[6])+"%"
-
+      document.getElementById("biden-text").innerHTML = cands[0] + "%"
+      document.getElementById("sanders-text").innerHTML = cands[4] + "%"
+      document.getElementById("total-text").innerHTML = d3.sum(cands) + "%"
+      document.getElementById("biden").innerHTML = numberformat((100 / d3.sum(cands)) * cands[0]) + "%"
+      document.getElementById("sanders").innerHTML = numberformat((100 / d3.sum(cands)) * cands[4]) + "%"
+      
       var newdata = data.map((d, i) => {
         return {
           State: d.State,
@@ -406,7 +310,7 @@
         d[candidates[4]] = data[i][candidates[4] + "res"] != "" ? +data[i][candidates[4] + "res"] : 100 / d.total * +d[candidates[4]]
         d[candidates[5]] = data[i][candidates[5] + "res"] != "" ? +data[i][candidates[5] + "res"] : 100 / d.total * +d[candidates[5]]
         d[candidates[6]] = data[i][candidates[6] + "res"] != "" ? +data[i][candidates[6] + "res"] : 100 / d.total * +d[candidates[6]]
-        d[candidates[0] + "under15"] = data[i][candidates[6] + "res"] != "" ? 0 :d[candidates[0]] < 15 ? d[candidates[0]] > 10 ? Math.round((.02 * d[candidates[0]] - .2) * +data[i].Delegates) : 0 : 0
+        d[candidates[0] + "under15"] = data[i][candidates[6] + "res"] != "" ? 0 : d[candidates[0]] < 15 ? d[candidates[0]] > 10 ? Math.round((.02 * d[candidates[0]] - .2) * +data[i].Delegates) : 0 : 0
         d[candidates[1] + "under15"] = data[i][candidates[6] + "res"] != "" ? 0 : d[candidates[1]] < 15 ? d[candidates[1]] > 10 ? Math.round((.02 * d[candidates[1]] - .2) * +data[i].Delegates) : 0 : 0
         d[candidates[2] + "under15"] = data[i][candidates[6] + "res"] != "" ? 0 : d[candidates[2]] < 15 ? d[candidates[2]] > 10 ? Math.round((.02 * d[candidates[2]] - .2) * +data[i].Delegates) : 0 : 0
         d[candidates[3] + "under15"] = data[i][candidates[6] + "res"] != "" ? 0 : d[candidates[3]] < 15 ? d[candidates[3]] > 10 ? Math.round((.02 * d[candidates[3]] - .2) * +data[i].Delegates) : 0 : 0
@@ -430,10 +334,10 @@
         d[candidates[6] + "delegates"] = d[candidates[6] + "over15"] + d[candidates[6] + "under15"]
         return d;
       })
-        newdata[3].steyerdelegates = 0
-        var bidensum = d3.sum(newdata,d=>d.bidendelegates)
-        console.log()
-        console.log(newdata)
+      newdata[3].steyerdelegates = 0
+      var bidensum = d3.sum(newdata, d => d.bidendelegates)
+      console.log()
+      console.log(newdata)
 
       var finaldata = []
       for (let j = 0; j < 57; j++) {
@@ -457,31 +361,10 @@
       document.getElementById("bidendel").innerHTML = bidendel
       document.getElementById("bidendel").style.fontWeight = bidendel > 1989 ? 900 : 600
 
-      var bloombergdel = d3.sum(finaldata.filter(d => d.candidate == "Bloomberg"), d => d.delegates)
-      document.getElementById("bloombergdel").innerHTML = bloombergdel
-      document.getElementById("bloombergdel").style.fontWeight = bloombergdel > 1989 ? 900 : 600
-
-      var buttigiegdel = d3.sum(finaldata.filter(d => d.candidate == "Buttigieg"), d => d.delegates)
-      document.getElementById("buttigiegdel").innerHTML = buttigiegdel
-      document.getElementById("buttigiegdel").style.fontWeight = buttigiegdel > 1989 ? 900 : 600
-
-
-      var klobuchardel = d3.sum(finaldata.filter(d => d.candidate == "Klobuchar"), d => d.delegates)
-      document.getElementById("klobuchardel").innerHTML = klobuchardel
-      document.getElementById("klobuchardel").style.fontWeight = klobuchardel > 1989 ? 900 : 600
-
+     
       var sandersdel = d3.sum(finaldata.filter(d => d.candidate == "Sanders"), d => d.delegates)
       document.getElementById("sandersdel").innerHTML = sandersdel
       document.getElementById("sandersdel").style.fontWeight = sandersdel > 1989 ? 900 : 600
-
-      var steyerdel = d3.sum(finaldata.filter(d => d.candidate == "Steyer"), d => d.delegates)
-      document.getElementById("steyerdel").innerHTML = 0
-      document.getElementById("steyerdel").style.fontWeight = steyerdel > 1989 ? 900 : 600
-
-      var warrendel = d3.sum(finaldata.filter(d => d.candidate == "Warren"), d => d.delegates)
-      document.getElementById("warrendel").innerHTML = warrendel
-      document.getElementById("warrendel").style.fontWeight = warrendel > 1989 ? 900 : 600
-
 
       var mapdata = []
       for (let j = 0; j < 57; j++) {
@@ -696,9 +579,9 @@
           .attr("y", (d, i) => i * 35 + 75)
           .attr("dominant-baseline", "middle")
           .attr("background-color", "white")
-          .attr("font-size",20)
-          .attr("font-weight",700)
-          .attr("fill",d=>color(d.candidate))
+          .attr("font-size", 20)
+          .attr("font-weight", 700)
+          .attr("fill", d => color(d.candidate))
         SVG.selectAll(".cands")
           .data(statedata).enter()
           .append("rect")
@@ -716,8 +599,8 @@
           .attr("y", (d, i) => i * 35 + 75)
           .attr("dominant-baseline", "middle")
           .attr("background-color", "white")
-          .attr("font-size",20)
-          .attr("font-weight",700)
+          .attr("font-size", 20)
+          .attr("font-weight", 700)
 
         SVG.selectAll(".cands")
           .data(statedata).enter()
@@ -736,38 +619,38 @@
           .attr("y", (d, i) => i * 35 + 75)
           .attr("dominant-baseline", "middle")
           .attr("background-color", "white")
-          .attr("font-size",20)
-          .attr("font-weight",700)
-          
+          .attr("font-size", 20)
+          .attr("font-weight", 700)
 
-          SVG.append("text")
+
+        SVG.append("text")
           .text("Candidate")
           .attr("x", 100)
           .attr("text-anchor", "start")
           .attr("y", 40)
           .attr("dominant-baseline", "middle")
           .attr("background-color", "white")
-          .attr("font-size",20)
-          .attr("font-weight",700)
+          .attr("font-size", 20)
+          .attr("font-weight", 700)
 
-          SVG.append("text")
+        SVG.append("text")
           .text("Vote")
           .attr("x", 600)
           .attr("text-anchor", "middle")
           .attr("y", 40)
           .attr("dominant-baseline", "middle")
           .attr("background-color", "white")
-          .attr("font-size",20)
-          .attr("font-weight",700)
-          SVG.append("text")
+          .attr("font-size", 20)
+          .attr("font-weight", 700)
+        SVG.append("text")
           .text("Delegates")
           .attr("x", 800)
           .attr("text-anchor", "middle")
           .attr("y", 40)
           .attr("dominant-baseline", "middle")
           .attr("background-color", "white")
-          .attr("font-size",20)
-          .attr("font-weight",700)
+          .attr("font-size", 20)
+          .attr("font-weight", 700)
 
 
 
