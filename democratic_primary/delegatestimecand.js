@@ -3,8 +3,8 @@ var width = 1000 - margin.left - margin.right
 var height = 550 - margin.top - margin.bottom
 var axisPad = 12
 var demScale = d3.scaleLinear()
-    .domain([0, 50])
-    .range(["white", "#0077FF"]);
+    .domain([0, 50,100])
+    .range(["white", "#0077FF","#001347"]);
 
 var delScale = d3.scaleLinear()
     .domain([0, 1990])

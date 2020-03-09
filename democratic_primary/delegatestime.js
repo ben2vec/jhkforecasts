@@ -5,8 +5,8 @@ var axisPad = 12
 wholevalue = d3.format(".0f")
         onelevalue = d3.format(".1f")
 var demScale = d3.scaleLinear()
-    .domain([0, 50])
-    .range(["white", "#0077FF"]);
+    .domain([0, 50,100])
+    .range(["white", "#0077FF","#001347"]);
 
 var delScale = d3.scaleLinear()
     .domain([0, 1990])

@@ -3,8 +3,8 @@ var width = 1000 - margin.left - margin.right
 var height = 550 - margin.top - margin.bottom
 
 var demScale = d3.scaleLinear()
-    .domain([0, 50])
-    .range(["white", "#0077FF"]);
+    .domain([0, 50,100])
+    .range(["white", "#0077FF","#001347"]);
 
 d3.csv("time.csv", function (error, data) {
     var keys = data.columns.slice(1);

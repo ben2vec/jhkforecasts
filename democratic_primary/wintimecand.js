@@ -9,8 +9,8 @@ var candcolor = d3.scaleOrdinal()
   .range(["#00C181", "#a4b1b5", "#a4b1b5", "#a4b1b5", "#a4b1b5", "#0077FF", "#a4b1b5", "#a4b1b5", "#a4b1b5"])
 
 var demScale = d3.scaleLinear()
-    .domain([0, 50])
-    .range(["white", "#0077FF"]);
+    .domain([0, 50,100])
+    .range(["white", "#0077FF","#001347"]);
 
 d3.csv("time.csv", function (error, data) {
     var keys = data.columns.slice(1);

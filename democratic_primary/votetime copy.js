@@ -7,8 +7,8 @@ var widthph = 1000 - marginph.left - marginph.right
 var heightph = 800 - marginph.top - marginph.bottom
 var axisPad = 12
 var demScale = d3.scaleLinear()
-    .domain([0, 50])
-    .range(["white", "#0077FF"]);
+    .domain([0, 50,100])
+    .range(["white", "#0077FF","#001347"]);
 
 
 
@@ -312,8 +312,8 @@ d3.csv("time.csv", function (error, data) {
             focus.selectAll(".lineHoverText")
                 .attr("transform",
                     "translate(" + 900 + "," + 440 + ")").style("font-weight", 700)
-                .text(e => d[e] == "" ? "-" : d[e]== 0 ? "-" :d[e] + "%");
-
+                .text(e => d[e] == "" ? "-" : d[e]== 0 ? "-" :d[e] + "%")
+                .attr("fill",e =>d[e]>50?"white":"black")
 
 
 
