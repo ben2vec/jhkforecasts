@@ -1,19 +1,23 @@
 var sim_month = 3
 var economic_index = 1
-var sim_day = 8
+var incumbency_adv = 1
+var sim_day = 9
 var sim_year = 2020
 var national_third_party = 4
 var sim_date = new Date(sim_year, sim_month - 1, sim_day)
+var election_date = new Date(2020, 10, 3)
 var dateparse = d3.timeParse("%m/%d/%y")
 var timeparse = d3.timeParse("%m/%d/%y %H:%M")
 var time_scale = 86400000
-var simulations = 10000
+var simulations = 500
 var timeformat = d3.timeFormat("%m/%d/%y")
 var wholeformat = d3.format(".1f")
 var fund_weight = 75
 var experts_weight = 40
 var polls_weight
 var ss_weight = 15
+var days_until_election = (election_date - sim_date) / time_scale
+var variance = 0.0000004 * Math.pow(days_until_election, 3) - .00021 * Math.pow(days_until_election, 2) + 0.034 * days_until_election + 2.1
 var exp = [
 	{ rating: "Tossup", margin: 0 },
 	{ rating: "Tilt R", margin: 3 },
@@ -303,8 +307,8 @@ d3.csv("ssindex.csv", state_similarity => {
 				var fund = data.map((d, i) => {
 					return {
 						state: d.state,
-						index: +d.pvi + current_us_poll_margin,
-						third: +d.third_index * national_third_party,
+						index: +d.pvi + current_us_poll_margin + economic_index / 2 + incumbency_adv / 2,
+						third: +d.third_index * national_third_party - economic_index / 2 - incumbency_adv / 2,
 
 					}
 				})
@@ -314,10 +318,7 @@ d3.csv("ssindex.csv", state_similarity => {
 					return d
 				})
 
-				console.log(fund)
-				console.log(state_poll_avg)
-				console.log(experts_ratings)
-				console.log(ss)
+
 
 
 				var pv = []
@@ -326,14 +327,101 @@ d3.csv("ssindex.csv", state_similarity => {
 					var p = state_poll_avg[b]
 					var e = experts_ratings[b]
 					var s = ss[b]
-					var sum =  fund_weight+p.weight+experts_weight
+					var sum = fund_weight + p.weight + experts_weight + ss_weight
 					var gop_raw = f.gop * fund_weight + p.gop * p.weight + e.gop * experts_weight + s.gop * ss_weight
-					var gop = gop_raw/sum
+					var datevariance = data[b].elasticity * variance
+
+					var pvariance = p.weight > 400 ? 0 : .00005 * Math.pow(p.weight, 2) - 0.0121 * p.weight + 2.2645
 					var dem_raw = f.dem * fund_weight + p.dem * p.weight + e.dem * experts_weight + s.dem * ss_weight
-					
+
 					var third_raw = f.third * fund_weight + p.third * p.weight + e.third * experts_weight + s.third * ss_weight
+					var proj = {
+						state: states[b],
+						ev: +data[b].ev,
+						elasticity: +data[b].elasticity,
+						gop: gop_raw / sum,
+						dem: dem_raw / sum,
+						third: third_raw / sum,
+						stdev: datevariance + pvariance,
+						pct_vote: +data[b].pct_vote
+					}
+					proj.margin = proj.gop - proj.dem
+					proj.gp = proj.gop * proj.pct_vote
+					proj.dp = proj.dem * proj.pct_vote
+					proj.tp = proj.third * proj.pct_vote
+					pv.push(proj)
+				}
+				console.log(pv) 
+
+				simres = []
+				simnatres = []
+				for (let s = 0; s < simulations; s++) {
+					var goprand = Math.random()
+					var demrand = Math.random()
+					var thirdrand = Math.random()
+					var sim = pv.map((d, j) => {
+                        return {
+                            state: d.state
+						}
+					})
+					sim.forEach((d, i) => {
+						d.gop_raw = jStat.normal.inv((goprand * 2 + Math.random()) / 3, pv[i].gop, pv[i].stdev)
+						d.dem_raw = jStat.normal.inv((demrand * 2 + Math.random()) / 3, pv[i].dem, pv[i].stdev)
+						d.third_raw = jStat.normal.inv((thirdrand * 2 + Math.random()) / 3, pv[i].third, pv[i].third / 2)
+						d.tot = d.gop_raw + d.dem_raw + d.third_raw
+						d.gop_sim = d.gop_raw / (d.tot / 100)
+						d.dem_sim = d.dem_raw / (d.tot / 100)
+						d.third_sim = d.third_raw / (d.tot / 100)
+						d.margin_sim = d.gop_raw - d.dem_sim
+						d.winner = d.margin_sim > 0 ? "gop" : "dem"
+						d.gop_ev = d.winner == "gop" ? d.ev : 0
+						d.dem_ev = d.winner == "dem" ? d.ev : 0
+						return d
+					})
+
+					sim.sort((a, b) => a.margin - b.margin)
+
+					sim.forEach(function (d, i) {
+						d.index = i + 1
+						d.indexev = d.index == 1 ? 0 : sim[i - 1].indexev + sim[i - 1].ev
+						d.tippingpoint = d.indexev < 270 ? d.indexev + d.ev >= 270 ? 1 : 0 : 0
+						return d;
+					})
+
+					var gop_ev = d3.sum(sim, d => d.gop_ev)
+					var dem_ev = d3.sum(sim, d => d.dem_ev)
+					var winner = gop_ev > 268 ? "gop" : "dem"
+					var nat = {
+						gop_ev: gop_ev,
+						dem_ev: dem_ev,
+						winner: winner
+					}
+					simres.push(sim)
+					simnatres.push(nat)
+				}
+
+				var sim_results = simres.flat()
+				var national_results = simnatres.flat()
+
+
+				var gop_win = national_results.filter(d => d.winner == "gop").length * 100 / simulations
+				var dem_win = national_results.filter(d => d.winner == "dem").length * 100 / simulations
+				var gop_vote = d3.sum(pv, d => d.gp)
+				var dem_vote = d3.sum(pv, d => d.dp)
+
+
+				for (let b = 0; b < states.length; b++) {
+					var stres = sim_results.filter(d => d.state == states[b])
+					var stproj = pv.filter(d => d.state == states[b])
+
+					var forecast_date = timeformat(sim_date)
+					var state = states[b]
+
+					var gop = [forecast_date, state, "gop", stres.filter(d => d.winner == "gop").length * 100 / simulations]
 					console.log(gop)
 				}
+
+
 			})
 		})
 	})
