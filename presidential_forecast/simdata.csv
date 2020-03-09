@@ -17,18 +17,18 @@ Iowa,6,6.99,0.019781109,1.08,1.094055593,Lean R,Lean R,Lean R,Tossup,Lean R,4.46
 Kansas,6,21.94,0.01132662,1,1.29143794,Solid R,Solid R,Solid R,Solid R,Solid R,19.24
 Kentucky,8,30.52,0.008566415,0.94,0.772167007,Solid R,Solid R,Solid R,Solid R,Solid R,30.48
 Louisiana,8,24.86,0.013916777,0.96,0.934999508,Solid R,Solid R,Solid R,Solid R,Solid R,23.22
-Maine,2,-5.00,0.014675363,1.13,1.557385292,Lean D,Lean D,Lean D,Likely D,Lean D,-5.42
+Maine,2,-5,0.014675363,1.13,1.557385292,Lean D,Lean D,Lean D,Likely D,Lean D,-5.42
 Maryland,10,-25.37,0.005409526,0.96,0.868674396,Solid D,Solid D,Solid D,Solid D,Solid D,-27.98
 Massachusetts,11,-26.97,0.00285206,1.15,1.526291599,Solid D,Solid D,Solid D,Solid D,Solid D,-29.66
 Michigan,16,0.42,0.002556149,1.07,0.858760153,Lean D,Lean D,Tilt D,Lean D,Tossup,-1.62
 Minnesota,10,-1.82,0.020117342,1.03,1.367707415,Lean D,Lean D,Likely D,Likely D,Lean D,-7.62
-Mississippi,6,20.60,0.024049033,0.92,0.645354543,Solid R,Solid R,Solid R,Solid R,Solid R,19.06
+Mississippi,6,20.6,0.024049033,0.92,0.645354543,Solid R,Solid R,Solid R,Solid R,Solid R,19.06
 Missouri,10,19.84,0.034711742,0.95,0.725979141,Solid R,Solid R,Solid R,Solid R,Solid R,16.4
 Montana,3,19.04,0.021298925,1.07,1.718044693,Solid R,Solid R,Solid R,Solid R,Solid R,17.72
 Nebraska,2,29.51,0.008746907,1.01,1.149045228,Solid R,Solid R,Solid R,Solid R,Solid R,20.94
 Nevada,6,0.01,0.020313775,1.08,1.321745753,Lean D,Likely D,Lean D,Lean D,Tossup,-1.06
 New Hampshire,4,-0.56,0.003595711,1.15,1.056367347,Lean D,Lean D,Lean D,Lean D,Tossup,-5.36
-New Jersey,14,-13.20,0.006106034,1.01,0.848069075,Solid D,Solid D,Solid D,Solid D,Solid D,-19.64
+New Jersey,14,-13.2,0.006106034,1.01,0.848069075,Solid D,Solid D,Solid D,Solid D,Solid D,-19.64
 New Mexico,5,-9.07,0.002042064,1.02,1.285752081,Likely D,Solid D,Solid D,Solid D,Likely D,-8.38
 New York,29,-22.53,0.002109632,0.97,1.25910697,Solid D,Solid D,Solid D,Solid D,Solid D,-29.2
 North Carolina,15,5.61,0.001953615,0.98,0.499781612,Lean R,Tossup,Tossup,Tossup,Tossup,2.86
@@ -43,15 +43,15 @@ South Dakota,3,31.45,0.039754397,1.01,1.024630712,Solid R,Solid R,Solid R,Solid 
 Tennessee,11,27.95,0.010509043,0.98,0.654719198,Solid R,Solid R,Solid R,Solid R,Solid R,26.64
 Texas,38,13.49,0.014475047,1.03,0.684989848,Lean R,Likely R,Solid R,Likely R,Lean R,10.24
 Utah,6,32.06,0.044593003,1.06,1.996679046,Solid R,Solid R,Solid R,Solid R,Likely R,29.5
-Vermont,3,-31.60,0.003357011,1.12,1.772926191,Solid D,Solid D,Solid D,Solid D,Solid D,-29.76
+Vermont,3,-31.6,0.003357011,1.12,1.772926191,Solid D,Solid D,Solid D,Solid D,Solid D,-29.76
 Virginia,13,-2.88,0.015210546,0.94,0.86129457,Likely D,Likely D,Solid D,Likely D,Lean D,-8.38
 Washington,12,-13.98,0.002676769,1,1.507129231,Solid D,Solid D,Solid D,Solid D,Solid D,-17.32
 West Virginia,5,36.68,0.018139787,1.04,0.765063837,Solid R,Solid R,Solid R,Solid R,Solid R,40.72
 Wisconsin,10,3.24,0.064871648,1.07,1.036797643,Tossup,Tossup,Tossup,Lean D,Tossup,-1.42
 Wyoming,3,48.09,0.008183285,1.08,1.567561847,Solid R,Solid R,Solid R,Solid R,Solid R,42.16
-District of Columbia,3,-81.00,0.002278783,0.8,1.18179531,Solid D,Solid D,Solid D,Solid D,Solid D,-54.7708
-Maine-1,1,-17.15,0.021525576,1.13,1.222276158,Solid D,Solid D,-,Solid D,Solid D,-20.000
-Maine-2,1,6.35,0.001850477,1.13,1.417425437,Lean R,Lean R,-,Tossup,Lean R,5.200
-Nebraska-1,1,24.80,0.028819608,1.01,1.206093713,Solid R,Solid R,-,Solid R,Solid R,24.800
-Nebraska-2,1,6.80,0.023990976,1.01,1.087108076,Tossup,Lean R,-,Tossup,Tossup,3.200
-Nebraska-3,1,56.75,0.005167201,1.01,1.089091106,Solid R,Solid R,-,Solid R,Solid R,56.800
+District of Columbia,3,-81,0.002278783,0.8,1.18179531,Solid D,Solid D,Solid D,Solid D,Solid D,-54.7708
+Maine-1,1,-17.15,0.021525576,1.13,1.222276158,Solid D,Solid D,,Solid D,Solid D,-20
+Maine-2,1,6.35,0.001850477,1.13,1.417425437,Lean R,Lean R,,Tossup,Lean R,5.2
+Nebraska-1,1,24.8,0.028819608,1.01,1.206093713,Solid R,Solid R,,Solid R,Solid R,24.8
+Nebraska-2,1,6.8,0.023990976,1.01,1.087108076,Tossup,Lean R,,Tossup,Tossup,3.2
+Nebraska-3,1,56.75,0.005167201,1.01,1.089091106,Solid R,Solid R,,Solid R,Solid R,56.8

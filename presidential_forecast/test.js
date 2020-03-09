@@ -10,6 +10,10 @@ var time_scale = 86400000
 var simulations = 10000
 var timeformat = d3.timeFormat("%m/%d/%y")
 var wholeformat = d3.format(".1f")
+var fund_weight = 75
+var experts_weight = 40
+var polls_weight
+var ss_weight = 15
 var exp = [
 	{ rating: "Tossup", margin: 0 },
 	{ rating: "Tilt R", margin: 3 },
@@ -20,6 +24,7 @@ var exp = [
 	{ rating: "Lean D", margin: -5.4 },
 	{ rating: "Likely D", margin: -13.0 },
 	{ rating: "Solid D", margin: -20 },
+	{ rating: "", margin: 0 },
 ]
 var exp_rating = exp.map((d) => {
 	return d.rating
@@ -27,244 +32,309 @@ var exp_rating = exp.map((d) => {
 var exp_margin = exp.map((d) => {
 	return d.margin
 })
-var state_similarity = [{ "rank": 1, "state": "Alabama", "state_comp": "Louisiana", "value": 81, "comp_pvi": 24.86084333 }, { "rank": 2, "state": "Alabama", "state_comp": "Tennessee", "value": 79.2, "comp_pvi": 27.95210789 }, { "rank": 3, "state": "Alabama", "state_comp": "South Carolina", "value": 77.5, "comp_pvi": 16.71872913 }, { "rank": 4, "state": "Alabama", "state_comp": "Arkansas", "value": 75.4, "comp_pvi": 31.71173634 }, { "rank": 5, "state": "Alabama", "state_comp": "Mississippi", "value": 74, "comp_pvi": 20.60447897 }, { "rank": 6, "state": "Alabama", "state_comp": "Georgia", "value": 71.8, "comp_pvi": 8.653037898 }, { "rank": 7, "state": "Alabama", "state_comp": "Oklahoma", "value": 68.5, "comp_pvi": 37.50759662 }, { "rank": 8, "state": "Alabama", "state_comp": "Kentucky", "value": 67.1, "comp_pvi": 30.52236505 }, { "rank": 9, "state": "Alabama", "state_comp": "North Carolina", "value": 65.9, "comp_pvi": 5.614413959 }, { "rank": 10, "state": "Alabama", "state_comp": "Missouri", "value": 65.1, "comp_pvi": 19.83970086 }, { "rank": 1, "state": "Alaska", "state_comp": "South Carolina", "value": 50, "comp_pvi": 16.71872913 }, { "rank": 2, "state": "Alaska", "state_comp": "North Carolina", "value": 45.3, "comp_pvi": 5.614413959 }, { "rank": 3, "state": "Alaska", "state_comp": "Missouri", "value": 42.6, "comp_pvi": 19.83970086 }, { "rank": 4, "state": "Alaska", "state_comp": "Washington", "value": 42, "comp_pvi": -13.97840149 }, { "rank": 5, "state": "Alaska", "state_comp": "Montana", "value": 41.8, "comp_pvi": 19.04432764 }, { "rank": 6, "state": "Alaska", "state_comp": "Indiana", "value": 41.6, "comp_pvi": 19.72467972 }, { "rank": 7, "state": "Alaska", "state_comp": "Georgia", "value": 41.4, "comp_pvi": 8.653037898 }, { "rank": 8, "state": "Alaska", "state_comp": "Kansas", "value": 41.4, "comp_pvi": 21.9404712 }, { "rank": 9, "state": "Alaska", "state_comp": "Virginia", "value": 40.8, "comp_pvi": -2.880027279 }, { "rank": 10, "state": "Alaska", "state_comp": "Oklahoma", "value": 40.5, "comp_pvi": 37.50759662 }, { "rank": 1, "state": "Arizona", "state_comp": "Nevada", "value": 73.3, "comp_pvi": 0.008642973 }, { "rank": 2, "state": "Arizona", "state_comp": "Texas", "value": 70, "comp_pvi": 13.4891771 }, { "rank": 3, "state": "Arizona", "state_comp": "Utah", "value": 65, "comp_pvi": 32.06372464 }, { "rank": 4, "state": "Arizona", "state_comp": "Florida", "value": 63.3, "comp_pvi": 4.586909528 }, { "rank": 5, "state": "Arizona", "state_comp": "New Mexico", "value": 63.1, "comp_pvi": -9.070470147 }, { "rank": 6, "state": "Arizona", "state_comp": "Colorado", "value": 62.9, "comp_pvi": -2.973127033 }, { "rank": 7, "state": "Arizona", "state_comp": "Kansas", "value": 59.9, "comp_pvi": 21.9404712 }, { "rank": 8, "state": "Arizona", "state_comp": "Oregon", "value": 59.4, "comp_pvi": -10.63313409 }, { "rank": 9, "state": "Arizona", "state_comp": "Washington", "value": 58.3, "comp_pvi": -13.97840149 }, { "rank": 10, "state": "Arizona", "state_comp": "Iowa", "value": 56.6, "comp_pvi": 6.986805164 }, { "rank": 1, "state": "Arkansas", "state_comp": "Tennessee", "value": 85.3, "comp_pvi": 27.95210789 }, { "rank": 2, "state": "Arkansas", "state_comp": "Missouri", "value": 81.7, "comp_pvi": 19.83970086 }, { "rank": 3, "state": "Arkansas", "state_comp": "Oklahoma", "value": 78.7, "comp_pvi": 37.50759662 }, { "rank": 4, "state": "Arkansas", "state_comp": "Indiana", "value": 75.9, "comp_pvi": 19.72467972 }, { "rank": 5, "state": "Arkansas", "state_comp": "Kentucky", "value": 75.5, "comp_pvi": 30.52236505 }, { "rank": 6, "state": "Arkansas", "state_comp": "Alabama", "value": 75.4, "comp_pvi": 30.12071404 }, { "rank": 7, "state": "Arkansas", "state_comp": "South Dakota", "value": 71.7, "comp_pvi": 31.44709825 }, { "rank": 8, "state": "Arkansas", "state_comp": "Ohio", "value": 70.3, "comp_pvi": 9.673126597 }, { "rank": 9, "state": "Arkansas", "state_comp": "Nebraska", "value": 69.3, "comp_pvi": 29.50929736 }, { "rank": 10, "state": "Arkansas", "state_comp": "Louisiana", "value": 68.1, "comp_pvi": 24.86084333 }, { "rank": 1, "state": "California", "state_comp": "Nevada", "value": 60.6, "comp_pvi": 0.008642973 }, { "rank": 2, "state": "California", "state_comp": "Arizona", "value": 53.9, "comp_pvi": 7.449078603 }, { "rank": 3, "state": "California", "state_comp": "Washington", "value": 53.5, "comp_pvi": -13.97840149 }, { "rank": 4, "state": "California", "state_comp": "New Mexico", "value": 51.5, "comp_pvi": -9.070470147 }, { "rank": 5, "state": "California", "state_comp": "Oregon", "value": 50.1, "comp_pvi": -10.63313409 }, { "rank": 6, "state": "California", "state_comp": "Texas", "value": 49.2, "comp_pvi": 13.4891771 }, { "rank": 7, "state": "California", "state_comp": "New York", "value": 47.3, "comp_pvi": -22.52786675 }, { "rank": 8, "state": "California", "state_comp": "Colorado", "value": 42.5, "comp_pvi": -2.973127033 }, { "rank": 9, "state": "California", "state_comp": "Utah", "value": 42.2, "comp_pvi": 32.06372464 }, { "rank": 10, "state": "California", "state_comp": "Maryland", "value": 42, "comp_pvi": -25.36538251 }, { "rank": 1, "state": "Colorado", "state_comp": "Minnesota", "value": 67.9, "comp_pvi": -1.821522496 }, { "rank": 2, "state": "Colorado", "state_comp": "Arizona", "value": 62.9, "comp_pvi": 7.449078603 }, { "rank": 3, "state": "Colorado", "state_comp": "Utah", "value": 61.4, "comp_pvi": 32.06372464 }, { "rank": 4, "state": "Colorado", "state_comp": "New Mexico", "value": 60.8, "comp_pvi": -9.070470147 }, { "rank": 5, "state": "Colorado", "state_comp": "Nevada", "value": 60.7, "comp_pvi": 0.008642973 }, { "rank": 6, "state": "Colorado", "state_comp": "Kansas", "value": 58.9, "comp_pvi": 21.9404712 }, { "rank": 7, "state": "Colorado", "state_comp": "Washington", "value": 58.4, "comp_pvi": -13.97840149 }, { "rank": 8, "state": "Colorado", "state_comp": "Illinois", "value": 58.3, "comp_pvi": -15.12454711 }, { "rank": 9, "state": "Colorado", "state_comp": "Nebraska", "value": 57.1, "comp_pvi": 29.50929736 }, { "rank": 10, "state": "Colorado", "state_comp": "Oregon", "value": 56.5, "comp_pvi": -10.63313409 }, { "rank": 1, "state": "Connecticut", "state_comp": "New Jersey", "value": 85, "comp_pvi": -13.20123044 }, { "rank": 2, "state": "Connecticut", "state_comp": "Massachusetts", "value": 84.4, "comp_pvi": -26.97403839 }, { "rank": 3, "state": "Connecticut", "state_comp": "Rhode Island", "value": 82.1, "comp_pvi": -18.88398581 }, { "rank": 4, "state": "Connecticut", "state_comp": "Delaware", "value": 76.5, "comp_pvi": -14.74814097 }, { "rank": 5, "state": "Connecticut", "state_comp": "New York", "value": 76.1, "comp_pvi": -22.52786675 }, { "rank": 6, "state": "Connecticut", "state_comp": "Illinois", "value": 73.5, "comp_pvi": -15.12454711 }, { "rank": 7, "state": "Connecticut", "state_comp": "Virginia", "value": 71.9, "comp_pvi": -2.880027279 }, { "rank": 8, "state": "Connecticut", "state_comp": "New Hampshire", "value": 68.2, "comp_pvi": -0.561806883 }, { "rank": 9, "state": "Connecticut", "state_comp": "Pennsylvania", "value": 66.7, "comp_pvi": 1.22511585 }, { "rank": 10, "state": "Connecticut", "state_comp": "Maine", "value": 65.3, "comp_pvi": -5.002556374 }, { "rank": 1, "state": "Delaware", "state_comp": "North Carolina", "value": 80, "comp_pvi": 5.614413959 }, { "rank": 2, "state": "Delaware", "state_comp": "New Jersey", "value": 78.8, "comp_pvi": -13.20123044 }, { "rank": 3, "state": "Delaware", "state_comp": "Virginia", "value": 78, "comp_pvi": -2.880027279 }, { "rank": 4, "state": "Delaware", "state_comp": "Connecticut", "value": 76.5, "comp_pvi": -13.91177299 }, { "rank": 5, "state": "Delaware", "state_comp": "Maryland", "value": 75.1, "comp_pvi": -25.36538251 }, { "rank": 6, "state": "Delaware", "state_comp": "Illinois", "value": 73.3, "comp_pvi": -15.12454711 }, { "rank": 7, "state": "Delaware", "state_comp": "South Carolina", "value": 73.1, "comp_pvi": 16.71872913 }, { "rank": 8, "state": "Delaware", "state_comp": "Rhode Island", "value": 73.1, "comp_pvi": -18.88398581 }, { "rank": 9, "state": "Delaware", "state_comp": "New York", "value": 72.7, "comp_pvi": -22.52786675 }, { "rank": 10, "state": "Delaware", "state_comp": "Pennsylvania", "value": 71.5, "comp_pvi": 1.22511585 }, { "rank": 1, "state": "Florida", "state_comp": "North Carolina", "value": 75.2, "comp_pvi": 5.614413959 }, { "rank": 2, "state": "Florida", "state_comp": "Pennsylvania", "value": 68.7, "comp_pvi": 1.22511585 }, { "rank": 3, "state": "Florida", "state_comp": "Virginia", "value": 67.2, "comp_pvi": -2.880027279 }, { "rank": 4, "state": "Florida", "state_comp": "South Carolina", "value": 66.9, "comp_pvi": 16.71872913 }, { "rank": 5, "state": "Florida", "state_comp": "Michigan", "value": 66.3, "comp_pvi": 0.420226814 }, { "rank": 6, "state": "Florida", "state_comp": "Georgia", "value": 66, "comp_pvi": 8.653037898 }, { "rank": 7, "state": "Florida", "state_comp": "Ohio", "value": 64.9, "comp_pvi": 9.673126597 }, { "rank": 8, "state": "Florida", "state_comp": "Illinois", "value": 64.4, "comp_pvi": -15.12454711 }, { "rank": 9, "state": "Florida", "state_comp": "Arizona", "value": 63.3, "comp_pvi": 7.449078603 }, { "rank": 10, "state": "Florida", "state_comp": "Alabama", "value": 62.7, "comp_pvi": 30.12071404 }, { "rank": 1, "state": "Georgia", "state_comp": "South Carolina", "value": 80.2, "comp_pvi": 16.71872913 }, { "rank": 2, "state": "Georgia", "state_comp": "North Carolina", "value": 77.4, "comp_pvi": 5.614413959 }, { "rank": 3, "state": "Georgia", "state_comp": "Mississippi", "value": 73.2, "comp_pvi": 20.60447897 }, { "rank": 4, "state": "Georgia", "state_comp": "Alabama", "value": 71.8, "comp_pvi": 30.12071404 }, { "rank": 5, "state": "Georgia", "state_comp": "Virginia", "value": 71, "comp_pvi": -2.880027279 }, { "rank": 6, "state": "Georgia", "state_comp": "Louisiana", "value": 70.9, "comp_pvi": 24.86084333 }, { "rank": 7, "state": "Georgia", "state_comp": "Maryland", "value": 66.8, "comp_pvi": -25.36538251 }, { "rank": 8, "state": "Georgia", "state_comp": "Florida", "value": 66, "comp_pvi": 4.586909528 }, { "rank": 9, "state": "Georgia", "state_comp": "Delaware", "value": 62.9, "comp_pvi": -14.74814097 }, { "rank": 10, "state": "Georgia", "state_comp": "Ohio", "value": 62.3, "comp_pvi": 9.673126597 }, { "rank": 1, "state": "Hawaii", "state_comp": "California", "value": 19.9, "comp_pvi": -26.54479907 }, { "rank": 2, "state": "Hawaii", "state_comp": "Maryland", "value": 18.8, "comp_pvi": -25.36538251 }, { "rank": 3, "state": "Hawaii", "state_comp": "Vermont", "value": 18.2, "comp_pvi": -31.59664992 }, { "rank": 4, "state": "Hawaii", "state_comp": "Massachusetts", "value": 17.8, "comp_pvi": -26.97403839 }, { "rank": 5, "state": "Hawaii", "state_comp": "New York", "value": 17.4, "comp_pvi": -22.52786675 }, { "rank": 6, "state": "Hawaii", "state_comp": "Alaska", "value": 15.1, "comp_pvi": 17.08725949 }, { "rank": 7, "state": "Hawaii", "state_comp": "Washington", "value": 14.8, "comp_pvi": -13.97840149 }, { "rank": 8, "state": "Hawaii", "state_comp": "Illinois", "value": 13.8, "comp_pvi": -15.12454711 }, { "rank": 9, "state": "Hawaii", "state_comp": "Rhode Island", "value": 13.8, "comp_pvi": -18.88398581 }, { "rank": 10, "state": "Hawaii", "state_comp": "New Jersey", "value": 13.7, "comp_pvi": -13.20123044 }, { "rank": 1, "state": "Idaho", "state_comp": "Wyoming", "value": 83.1, "comp_pvi": 48.09267157 }, { "rank": 2, "state": "Idaho", "state_comp": "Montana", "value": 72.5, "comp_pvi": 19.04432764 }, { "rank": 3, "state": "Idaho", "state_comp": "Utah", "value": 71.7, "comp_pvi": 32.06372464 }, { "rank": 4, "state": "Idaho", "state_comp": "South Dakota", "value": 69.8, "comp_pvi": 31.44709825 }, { "rank": 5, "state": "Idaho", "state_comp": "North Dakota", "value": 67.7, "comp_pvi": 35.66519749 }, { "rank": 6, "state": "Idaho", "state_comp": "Nebraska", "value": 65.4, "comp_pvi": 29.50929736 }, { "rank": 7, "state": "Idaho", "state_comp": "Oregon", "value": 64.8, "comp_pvi": -10.63313409 }, { "rank": 8, "state": "Idaho", "state_comp": "Oklahoma", "value": 60.8, "comp_pvi": 37.50759662 }, { "rank": 9, "state": "Idaho", "state_comp": "Kansas", "value": 58.7, "comp_pvi": 21.9404712 }, { "rank": 10, "state": "Idaho", "state_comp": "Iowa", "value": 58.3, "comp_pvi": 6.986805164 }, { "rank": 1, "state": "Illinois", "state_comp": "New Jersey", "value": 76.1, "comp_pvi": -13.20123044 }, { "rank": 2, "state": "Illinois", "state_comp": "Connecticut", "value": 73.5, "comp_pvi": -13.91177299 }, { "rank": 3, "state": "Illinois", "state_comp": "Delaware", "value": 73.3, "comp_pvi": -14.74814097 }, { "rank": 4, "state": "Illinois", "state_comp": "Virginia", "value": 72.8, "comp_pvi": -2.880027279 }, { "rank": 5, "state": "Illinois", "state_comp": "New York", "value": 71.5, "comp_pvi": -22.52786675 }, { "rank": 6, "state": "Illinois", "state_comp": "Michigan", "value": 69.7, "comp_pvi": 0.420226814 }, { "rank": 7, "state": "Illinois", "state_comp": "North Carolina", "value": 69.5, "comp_pvi": 5.614413959 }, { "rank": 8, "state": "Illinois", "state_comp": "Minnesota", "value": 67.4, "comp_pvi": -1.821522496 }, { "rank": 9, "state": "Illinois", "state_comp": "Rhode Island", "value": 66.2, "comp_pvi": -18.88398581 }, { "rank": 10, "state": "Illinois", "state_comp": "Wisconsin", "value": 66, "comp_pvi": 3.241616102 }, { "rank": 1, "state": "Indiana", "state_comp": "Missouri", "value": 88.3, "comp_pvi": 19.83970086 }, { "rank": 2, "state": "Indiana", "state_comp": "Ohio", "value": 85.2, "comp_pvi": 9.673126597 }, { "rank": 3, "state": "Indiana", "state_comp": "Tennessee", "value": 81, "comp_pvi": 27.95210789 }, { "rank": 4, "state": "Indiana", "state_comp": "Kentucky", "value": 78.9, "comp_pvi": 30.52236505 }, { "rank": 5, "state": "Indiana", "state_comp": "Iowa", "value": 76.2, "comp_pvi": 6.986805164 }, { "rank": 6, "state": "Indiana", "state_comp": "Arkansas", "value": 75.9, "comp_pvi": 31.71173634 }, { "rank": 7, "state": "Indiana", "state_comp": "Michigan", "value": 74.6, "comp_pvi": 0.420226814 }, { "rank": 8, "state": "Indiana", "state_comp": "Wisconsin", "value": 72.2, "comp_pvi": 3.241616102 }, { "rank": 9, "state": "Indiana", "state_comp": "Pennsylvania", "value": 70.3, "comp_pvi": 1.22511585 }, { "rank": 10, "state": "Indiana", "state_comp": "Kansas", "value": 68.9, "comp_pvi": 21.9404712 }, { "rank": 1, "state": "Iowa", "state_comp": "Wisconsin", "value": 85.9, "comp_pvi": 3.241616102 }, { "rank": 2, "state": "Iowa", "state_comp": "Missouri", "value": 78.5, "comp_pvi": 19.83970086 }, { "rank": 3, "state": "Iowa", "state_comp": "Indiana", "value": 76.2, "comp_pvi": 19.72467972 }, { "rank": 4, "state": "Iowa", "state_comp": "Ohio", "value": 75.8, "comp_pvi": 9.673126597 }, { "rank": 5, "state": "Iowa", "state_comp": "Kansas", "value": 74.6, "comp_pvi": 21.9404712 }, { "rank": 6, "state": "Iowa", "state_comp": "Nebraska", "value": 73.4, "comp_pvi": 29.50929736 }, { "rank": 7, "state": "Iowa", "state_comp": "Minnesota", "value": 73.4, "comp_pvi": -1.821522496 }, { "rank": 8, "state": "Iowa", "state_comp": "South Dakota", "value": 72.8, "comp_pvi": 31.44709825 }, { "rank": 9, "state": "Iowa", "state_comp": "Montana", "value": 72.7, "comp_pvi": 19.04432764 }, { "rank": 10, "state": "Iowa", "state_comp": "Michigan", "value": 72, "comp_pvi": 0.420226814 }, { "rank": 1, "state": "Kansas", "state_comp": "Nebraska", "value": 87.6, "comp_pvi": 29.50929736 }, { "rank": 2, "state": "Kansas", "state_comp": "North Dakota", "value": 77.3, "comp_pvi": 35.66519749 }, { "rank": 3, "state": "Kansas", "state_comp": "South Dakota", "value": 77.2, "comp_pvi": 31.44709825 }, { "rank": 4, "state": "Kansas", "state_comp": "Missouri", "value": 77.2, "comp_pvi": 19.83970086 }, { "rank": 5, "state": "Kansas", "state_comp": "Oklahoma", "value": 75.8, "comp_pvi": 37.50759662 }, { "rank": 6, "state": "Kansas", "state_comp": "Utah", "value": 75, "comp_pvi": 32.06372464 }, { "rank": 7, "state": "Kansas", "state_comp": "Iowa", "value": 74.6, "comp_pvi": 6.986805164 }, { "rank": 8, "state": "Kansas", "state_comp": "Montana", "value": 74.2, "comp_pvi": 19.04432764 }, { "rank": 9, "state": "Kansas", "state_comp": "Wisconsin", "value": 73.7, "comp_pvi": 3.241616102 }, { "rank": 10, "state": "Kansas", "state_comp": "Minnesota", "value": 69.6, "comp_pvi": -1.821522496 }, { "rank": 1, "state": "Kentucky", "state_comp": "Tennessee", "value": 80.3, "comp_pvi": 27.95210789 }, { "rank": 2, "state": "Kentucky", "state_comp": "Indiana", "value": 78.9, "comp_pvi": 19.72467972 }, { "rank": 3, "state": "Kentucky", "state_comp": "Arkansas", "value": 75.5, "comp_pvi": 31.71173634 }, { "rank": 4, "state": "Kentucky", "state_comp": "West Virginia", "value": 74.3, "comp_pvi": 36.67725476 }, { "rank": 5, "state": "Kentucky", "state_comp": "Missouri", "value": 70.9, "comp_pvi": 19.83970086 }, { "rank": 6, "state": "Kentucky", "state_comp": "Ohio", "value": 70.3, "comp_pvi": 9.673126597 }, { "rank": 7, "state": "Kentucky", "state_comp": "Alabama", "value": 67.1, "comp_pvi": 30.12071404 }, { "rank": 8, "state": "Kentucky", "state_comp": "South Dakota", "value": 62.8, "comp_pvi": 31.44709825 }, { "rank": 9, "state": "Kentucky", "state_comp": "Oklahoma", "value": 62.6, "comp_pvi": 37.50759662 }, { "rank": 10, "state": "Kentucky", "state_comp": "Iowa", "value": 60.9, "comp_pvi": 6.986805164 }, { "rank": 1, "state": "Louisiana", "state_comp": "Mississippi", "value": 84.9, "comp_pvi": 20.60447897 }, { "rank": 2, "state": "Louisiana", "state_comp": "Alabama", "value": 81, "comp_pvi": 30.12071404 }, { "rank": 3, "state": "Louisiana", "state_comp": "South Carolina", "value": 70.9, "comp_pvi": 16.71872913 }, { "rank": 4, "state": "Louisiana", "state_comp": "Georgia", "value": 70.9, "comp_pvi": 8.653037898 }, { "rank": 5, "state": "Louisiana", "state_comp": "Arkansas", "value": 68.1, "comp_pvi": 31.71173634 }, { "rank": 6, "state": "Louisiana", "state_comp": "Tennessee", "value": 67.2, "comp_pvi": 27.95210789 }, { "rank": 7, "state": "Louisiana", "state_comp": "Oklahoma", "value": 62.8, "comp_pvi": 37.50759662 }, { "rank": 8, "state": "Louisiana", "state_comp": "Missouri", "value": 62.3, "comp_pvi": 19.83970086 }, { "rank": 9, "state": "Louisiana", "state_comp": "Kansas", "value": 59.1, "comp_pvi": 21.9404712 }, { "rank": 10, "state": "Louisiana", "state_comp": "North Carolina", "value": 58.7, "comp_pvi": 5.614413959 }, { "rank": 1, "state": "Maine", "state_comp": "New Hampshire", "value": 82.7, "comp_pvi": -0.561806883 }, { "rank": 2, "state": "Maine", "state_comp": "Vermont", "value": 74.1, "comp_pvi": -31.59664992 }, { "rank": 3, "state": "Maine", "state_comp": "Rhode Island", "value": 69.3, "comp_pvi": -18.88398581 }, { "rank": 4, "state": "Maine", "state_comp": "Pennsylvania", "value": 68.5, "comp_pvi": 1.22511585 }, { "rank": 5, "state": "Maine", "state_comp": "Connecticut", "value": 65.3, "comp_pvi": -13.91177299 }, { "rank": 6, "state": "Maine", "state_comp": "Iowa", "value": 64.9, "comp_pvi": 6.986805164 }, { "rank": 7, "state": "Maine", "state_comp": "Wisconsin", "value": 62.9, "comp_pvi": 3.241616102 }, { "rank": 8, "state": "Maine", "state_comp": "Ohio", "value": 61.6, "comp_pvi": 9.673126597 }, { "rank": 9, "state": "Maine", "state_comp": "Michigan", "value": 61.1, "comp_pvi": 0.420226814 }, { "rank": 10, "state": "Maine", "state_comp": "Massachusetts", "value": 60.5, "comp_pvi": -26.97403839 }, { "rank": 1, "state": "Maryland", "state_comp": "New York", "value": 75.8, "comp_pvi": -22.52786675 }, { "rank": 2, "state": "Maryland", "state_comp": "Delaware", "value": 75.1, "comp_pvi": -14.74814097 }, { "rank": 3, "state": "Maryland", "state_comp": "Virginia", "value": 69.8, "comp_pvi": -2.880027279 }, { "rank": 4, "state": "Maryland", "state_comp": "New Jersey", "value": 68.2, "comp_pvi": -13.20123044 }, { "rank": 5, "state": "Maryland", "state_comp": "Georgia", "value": 66.8, "comp_pvi": 8.653037898 }, { "rank": 6, "state": "Maryland", "state_comp": "North Carolina", "value": 65.4, "comp_pvi": 5.614413959 }, { "rank": 7, "state": "Maryland", "state_comp": "Massachusetts", "value": 65.3, "comp_pvi": -26.97403839 }, { "rank": 8, "state": "Maryland", "state_comp": "South Carolina", "value": 64.9, "comp_pvi": 16.71872913 }, { "rank": 9, "state": "Maryland", "state_comp": "Connecticut", "value": 62, "comp_pvi": -13.91177299 }, { "rank": 10, "state": "Maryland", "state_comp": "Rhode Island", "value": 59.4, "comp_pvi": -18.88398581 }, { "rank": 1, "state": "Massachusetts", "state_comp": "Connecticut", "value": 84.4, "comp_pvi": -13.91177299 }, { "rank": 2, "state": "Massachusetts", "state_comp": "Rhode Island", "value": 77, "comp_pvi": -18.88398581 }, { "rank": 3, "state": "Massachusetts", "state_comp": "Vermont", "value": 75.5, "comp_pvi": -31.59664992 }, { "rank": 4, "state": "Massachusetts", "state_comp": "New York", "value": 73.7, "comp_pvi": -22.52786675 }, { "rank": 5, "state": "Massachusetts", "state_comp": "New Jersey", "value": 72.4, "comp_pvi": -13.20123044 }, { "rank": 6, "state": "Massachusetts", "state_comp": "New Hampshire", "value": 68.4, "comp_pvi": -0.561806883 }, { "rank": 7, "state": "Massachusetts", "state_comp": "Delaware", "value": 66.3, "comp_pvi": -14.74814097 }, { "rank": 8, "state": "Massachusetts", "state_comp": "Maryland", "value": 65.3, "comp_pvi": -25.36538251 }, { "rank": 9, "state": "Massachusetts", "state_comp": "Virginia", "value": 64.3, "comp_pvi": -2.880027279 }, { "rank": 10, "state": "Massachusetts", "state_comp": "Illinois", "value": 60.9, "comp_pvi": -15.12454711 }, { "rank": 1, "state": "Michigan", "state_comp": "Pennsylvania", "value": 86.9, "comp_pvi": 1.22511585 }, { "rank": 2, "state": "Michigan", "state_comp": "Wisconsin", "value": 83.9, "comp_pvi": 3.241616102 }, { "rank": 3, "state": "Michigan", "state_comp": "Ohio", "value": 82.8, "comp_pvi": 9.673126597 }, { "rank": 4, "state": "Michigan", "state_comp": "Indiana", "value": 74.6, "comp_pvi": 19.72467972 }, { "rank": 5, "state": "Michigan", "state_comp": "Missouri", "value": 73.7, "comp_pvi": 19.83970086 }, { "rank": 6, "state": "Michigan", "state_comp": "Minnesota", "value": 72.4, "comp_pvi": -1.821522496 }, { "rank": 7, "state": "Michigan", "state_comp": "Iowa", "value": 72, "comp_pvi": 6.986805164 }, { "rank": 8, "state": "Michigan", "state_comp": "North Carolina", "value": 70.8, "comp_pvi": 5.614413959 }, { "rank": 9, "state": "Michigan", "state_comp": "Tennessee", "value": 70.7, "comp_pvi": 27.95210789 }, { "rank": 10, "state": "Michigan", "state_comp": "Illinois", "value": 69.7, "comp_pvi": -15.12454711 }, { "rank": 1, "state": "Minnesota", "state_comp": "Wisconsin", "value": 79.4, "comp_pvi": 3.241616102 }, { "rank": 2, "state": "Minnesota", "state_comp": "Iowa", "value": 73.4, "comp_pvi": 6.986805164 }, { "rank": 3, "state": "Minnesota", "state_comp": "Michigan", "value": 72.4, "comp_pvi": 0.420226814 }, { "rank": 4, "state": "Minnesota", "state_comp": "North Dakota", "value": 69.7, "comp_pvi": 35.66519749 }, { "rank": 5, "state": "Minnesota", "state_comp": "Kansas", "value": 69.6, "comp_pvi": 21.9404712 }, { "rank": 6, "state": "Minnesota", "state_comp": "Nebraska", "value": 68.2, "comp_pvi": 29.50929736 }, { "rank": 7, "state": "Minnesota", "state_comp": "Colorado", "value": 67.9, "comp_pvi": -2.973127033 }, { "rank": 8, "state": "Minnesota", "state_comp": "Illinois", "value": 67.4, "comp_pvi": -15.12454711 }, { "rank": 9, "state": "Minnesota", "state_comp": "Pennsylvania", "value": 66.1, "comp_pvi": 1.22511585 }, { "rank": 10, "state": "Minnesota", "state_comp": "New Hampshire", "value": 64.9, "comp_pvi": -0.561806883 }, { "rank": 1, "state": "Mississippi", "state_comp": "Louisiana", "value": 84.9, "comp_pvi": 24.86084333 }, { "rank": 2, "state": "Mississippi", "state_comp": "Alabama", "value": 74, "comp_pvi": 30.12071404 }, { "rank": 3, "state": "Mississippi", "state_comp": "Georgia", "value": 73.2, "comp_pvi": 8.653037898 }, { "rank": 4, "state": "Mississippi", "state_comp": "South Carolina", "value": 72.5, "comp_pvi": 16.71872913 }, { "rank": 5, "state": "Mississippi", "state_comp": "Tennessee", "value": 62.1, "comp_pvi": 27.95210789 }, { "rank": 6, "state": "Mississippi", "state_comp": "Missouri", "value": 61.2, "comp_pvi": 19.83970086 }, { "rank": 7, "state": "Mississippi", "state_comp": "Arkansas", "value": 60.8, "comp_pvi": 31.71173634 }, { "rank": 8, "state": "Mississippi", "state_comp": "North Carolina", "value": 60.7, "comp_pvi": 5.614413959 }, { "rank": 9, "state": "Mississippi", "state_comp": "Indiana", "value": 57.8, "comp_pvi": 19.72467972 }, { "rank": 10, "state": "Mississippi", "state_comp": "Kansas", "value": 55, "comp_pvi": 21.9404712 }, { "rank": 1, "state": "Missouri", "state_comp": "Indiana", "value": 88.3, "comp_pvi": 19.72467972 }, { "rank": 2, "state": "Missouri", "state_comp": "Ohio", "value": 82.6, "comp_pvi": 9.673126597 }, { "rank": 3, "state": "Missouri", "state_comp": "Arkansas", "value": 81.7, "comp_pvi": 31.71173634 }, { "rank": 4, "state": "Missouri", "state_comp": "Tennessee", "value": 81.5, "comp_pvi": 27.95210789 }, { "rank": 5, "state": "Missouri", "state_comp": "Iowa", "value": 78.5, "comp_pvi": 6.986805164 }, { "rank": 6, "state": "Missouri", "state_comp": "Kansas", "value": 77.2, "comp_pvi": 21.9404712 }, { "rank": 7, "state": "Missouri", "state_comp": "South Dakota", "value": 74.2, "comp_pvi": 31.44709825 }, { "rank": 8, "state": "Missouri", "state_comp": "Michigan", "value": 73.7, "comp_pvi": 0.420226814 }, { "rank": 9, "state": "Missouri", "state_comp": "Wisconsin", "value": 73.7, "comp_pvi": 3.241616102 }, { "rank": 10, "state": "Missouri", "state_comp": "Montana", "value": 72.1, "comp_pvi": 19.04432764 }, { "rank": 1, "state": "Montana", "state_comp": "South Dakota", "value": 77.4, "comp_pvi": 31.44709825 }, { "rank": 2, "state": "Montana", "state_comp": "North Dakota", "value": 75.3, "comp_pvi": 35.66519749 }, { "rank": 3, "state": "Montana", "state_comp": "Nebraska", "value": 74.4, "comp_pvi": 29.50929736 }, { "rank": 4, "state": "Montana", "state_comp": "Kansas", "value": 74.2, "comp_pvi": 21.9404712 }, { "rank": 5, "state": "Montana", "state_comp": "Wyoming", "value": 72.9, "comp_pvi": 48.09267157 }, { "rank": 6, "state": "Montana", "state_comp": "Iowa", "value": 72.7, "comp_pvi": 6.986805164 }, { "rank": 7, "state": "Montana", "state_comp": "Idaho", "value": 72.5, "comp_pvi": 36.87980388 }, { "rank": 8, "state": "Montana", "state_comp": "Missouri", "value": 72.1, "comp_pvi": 19.83970086 }, { "rank": 9, "state": "Montana", "state_comp": "Utah", "value": 70.8, "comp_pvi": 32.06372464 }, { "rank": 10, "state": "Montana", "state_comp": "Oregon", "value": 67.4, "comp_pvi": -10.63313409 }, { "rank": 1, "state": "Nebraska", "state_comp": "Kansas", "value": 87.6, "comp_pvi": 21.9404712 }, { "rank": 2, "state": "Nebraska", "state_comp": "South Dakota", "value": 86.8, "comp_pvi": 31.44709825 }, { "rank": 3, "state": "Nebraska", "state_comp": "North Dakota", "value": 86.5, "comp_pvi": 35.66519749 }, { "rank": 4, "state": "Nebraska", "state_comp": "Utah", "value": 78.8, "comp_pvi": 32.06372464 }, { "rank": 5, "state": "Nebraska", "state_comp": "Montana", "value": 74.4, "comp_pvi": 19.04432764 }, { "rank": 6, "state": "Nebraska", "state_comp": "Iowa", "value": 73.4, "comp_pvi": 6.986805164 }, { "rank": 7, "state": "Nebraska", "state_comp": "Wisconsin", "value": 73.3, "comp_pvi": 3.241616102 }, { "rank": 8, "state": "Nebraska", "state_comp": "Oklahoma", "value": 73.1, "comp_pvi": 37.50759662 }, { "rank": 9, "state": "Nebraska", "state_comp": "Missouri", "value": 72.1, "comp_pvi": 19.83970086 }, { "rank": 10, "state": "Nebraska", "state_comp": "Arkansas", "value": 69.3, "comp_pvi": 31.71173634 }, { "rank": 1, "state": "Nevada", "state_comp": "Arizona", "value": 73.3, "comp_pvi": 7.449078603 }, { "rank": 2, "state": "Nevada", "state_comp": "Washington", "value": 65, "comp_pvi": -13.97840149 }, { "rank": 3, "state": "Nevada", "state_comp": "Oregon", "value": 62.1, "comp_pvi": -10.63313409 }, { "rank": 4, "state": "Nevada", "state_comp": "Colorado", "value": 60.7, "comp_pvi": -2.973127033 }, { "rank": 5, "state": "Nevada", "state_comp": "California", "value": 60.6, "comp_pvi": -26.54479907 }, { "rank": 6, "state": "Nevada", "state_comp": "Texas", "value": 56.5, "comp_pvi": 13.4891771 }, { "rank": 7, "state": "Nevada", "state_comp": "Utah", "value": 56, "comp_pvi": 32.06372464 }, { "rank": 8, "state": "Nevada", "state_comp": "Florida", "value": 55.9, "comp_pvi": 4.586909528 }, { "rank": 9, "state": "Nevada", "state_comp": "New Mexico", "value": 54.9, "comp_pvi": -9.070470147 }, { "rank": 10, "state": "Nevada", "state_comp": "Minnesota", "value": 53.1, "comp_pvi": -1.821522496 }, { "rank": 1, "state": "New Hampshire", "state_comp": "Vermont", "value": 84.2, "comp_pvi": -31.59664992 }, { "rank": 2, "state": "New Hampshire", "state_comp": "Maine", "value": 82.7, "comp_pvi": -5.002556374 }, { "rank": 3, "state": "New Hampshire", "state_comp": "Pennsylvania", "value": 76.5, "comp_pvi": 1.22511585 }, { "rank": 4, "state": "New Hampshire", "state_comp": "Rhode Island", "value": 72.5, "comp_pvi": -18.88398581 }, { "rank": 5, "state": "New Hampshire", "state_comp": "Wisconsin", "value": 69.9, "comp_pvi": 3.241616102 }, { "rank": 6, "state": "New Hampshire", "state_comp": "Massachusetts", "value": 68.4, "comp_pvi": -26.97403839 }, { "rank": 7, "state": "New Hampshire", "state_comp": "Connecticut", "value": 68.2, "comp_pvi": -13.91177299 }, { "rank": 8, "state": "New Hampshire", "state_comp": "Michigan", "value": 68.1, "comp_pvi": 0.420226814 }, { "rank": 9, "state": "New Hampshire", "state_comp": "Ohio", "value": 65.5, "comp_pvi": 9.673126597 }, { "rank": 10, "state": "New Hampshire", "state_comp": "Minnesota", "value": 64.9, "comp_pvi": -1.821522496 }, { "rank": 1, "state": "New Jersey", "state_comp": "New York", "value": 85.1, "comp_pvi": -22.52786675 }, { "rank": 2, "state": "New Jersey", "state_comp": "Connecticut", "value": 85, "comp_pvi": -13.91177299 }, { "rank": 3, "state": "New Jersey", "state_comp": "Virginia", "value": 79.5, "comp_pvi": -2.880027279 }, { "rank": 4, "state": "New Jersey", "state_comp": "Delaware", "value": 78.8, "comp_pvi": -14.74814097 }, { "rank": 5, "state": "New Jersey", "state_comp": "Illinois", "value": 76.1, "comp_pvi": -15.12454711 }, { "rank": 6, "state": "New Jersey", "state_comp": "Rhode Island", "value": 74.3, "comp_pvi": -18.88398581 }, { "rank": 7, "state": "New Jersey", "state_comp": "Massachusetts", "value": 72.4, "comp_pvi": -26.97403839 }, { "rank": 8, "state": "New Jersey", "state_comp": "Maryland", "value": 68.2, "comp_pvi": -25.36538251 }, { "rank": 9, "state": "New Jersey", "state_comp": "Pennsylvania", "value": 68.1, "comp_pvi": 1.22511585 }, { "rank": 10, "state": "New Jersey", "state_comp": "North Carolina", "value": 67.6, "comp_pvi": 5.614413959 }, { "rank": 1, "state": "New Mexico", "state_comp": "Texas", "value": 65.3, "comp_pvi": 13.4891771 }, { "rank": 2, "state": "New Mexico", "state_comp": "Arizona", "value": 63.1, "comp_pvi": 7.449078603 }, { "rank": 3, "state": "New Mexico", "state_comp": "Colorado", "value": 60.8, "comp_pvi": -2.973127033 }, { "rank": 4, "state": "New Mexico", "state_comp": "Nevada", "value": 54.9, "comp_pvi": 0.008642973 }, { "rank": 5, "state": "New Mexico", "state_comp": "California", "value": 51.5, "comp_pvi": -26.54479907 }, { "rank": 6, "state": "New Mexico", "state_comp": "Washington", "value": 51.2, "comp_pvi": -13.97840149 }, { "rank": 7, "state": "New Mexico", "state_comp": "Oregon", "value": 51.1, "comp_pvi": -10.63313409 }, { "rank": 8, "state": "New Mexico", "state_comp": "Illinois", "value": 50.3, "comp_pvi": -15.12454711 }, { "rank": 9, "state": "New Mexico", "state_comp": "Minnesota", "value": 48.1, "comp_pvi": -1.821522496 }, { "rank": 10, "state": "New Mexico", "state_comp": "Utah", "value": 46.9, "comp_pvi": 32.06372464 }, { "rank": 1, "state": "New York", "state_comp": "New Jersey", "value": 85.1, "comp_pvi": -13.20123044 }, { "rank": 2, "state": "New York", "state_comp": "Connecticut", "value": 76.1, "comp_pvi": -13.91177299 }, { "rank": 3, "state": "New York", "state_comp": "Maryland", "value": 75.8, "comp_pvi": -25.36538251 }, { "rank": 4, "state": "New York", "state_comp": "Massachusetts", "value": 73.7, "comp_pvi": -26.97403839 }, { "rank": 5, "state": "New York", "state_comp": "Virginia", "value": 73.5, "comp_pvi": -2.880027279 }, { "rank": 6, "state": "New York", "state_comp": "Delaware", "value": 72.7, "comp_pvi": -14.74814097 }, { "rank": 7, "state": "New York", "state_comp": "Rhode Island", "value": 71.8, "comp_pvi": -18.88398581 }, { "rank": 8, "state": "New York", "state_comp": "Illinois", "value": 71.5, "comp_pvi": -15.12454711 }, { "rank": 9, "state": "New York", "state_comp": "North Carolina", "value": 63.6, "comp_pvi": 5.614413959 }, { "rank": 10, "state": "New York", "state_comp": "Pennsylvania", "value": 63.4, "comp_pvi": 1.22511585 }, { "rank": 1, "state": "North Carolina", "state_comp": "Virginia", "value": 84.9, "comp_pvi": -2.880027279 }, { "rank": 2, "state": "North Carolina", "state_comp": "South Carolina", "value": 84.2, "comp_pvi": 16.71872913 }, { "rank": 3, "state": "North Carolina", "state_comp": "Delaware", "value": 80, "comp_pvi": -14.74814097 }, { "rank": 4, "state": "North Carolina", "state_comp": "Georgia", "value": 77.4, "comp_pvi": 8.653037898 }, { "rank": 5, "state": "North Carolina", "state_comp": "Florida", "value": 75.2, "comp_pvi": 4.586909528 }, { "rank": 6, "state": "North Carolina", "state_comp": "Pennsylvania", "value": 74.3, "comp_pvi": 1.22511585 }, { "rank": 7, "state": "North Carolina", "state_comp": "Ohio", "value": 71.9, "comp_pvi": 9.673126597 }, { "rank": 8, "state": "North Carolina", "state_comp": "Michigan", "value": 70.8, "comp_pvi": 0.420226814 }, { "rank": 9, "state": "North Carolina", "state_comp": "Illinois", "value": 69.5, "comp_pvi": -15.12454711 }, { "rank": 10, "state": "North Carolina", "state_comp": "New Jersey", "value": 67.6, "comp_pvi": -13.20123044 }, { "rank": 1, "state": "North Dakota", "state_comp": "South Dakota", "value": 86.9, "comp_pvi": 31.44709825 }, { "rank": 2, "state": "North Dakota", "state_comp": "Nebraska", "value": 86.5, "comp_pvi": 29.50929736 }, { "rank": 3, "state": "North Dakota", "state_comp": "Kansas", "value": 77.3, "comp_pvi": 21.9404712 }, { "rank": 4, "state": "North Dakota", "state_comp": "Montana", "value": 75.3, "comp_pvi": 19.04432764 }, { "rank": 5, "state": "North Dakota", "state_comp": "Utah", "value": 75.3, "comp_pvi": 32.06372464 }, { "rank": 6, "state": "North Dakota", "state_comp": "Oklahoma", "value": 70.9, "comp_pvi": 37.50759662 }, { "rank": 7, "state": "North Dakota", "state_comp": "Wisconsin", "value": 70.8, "comp_pvi": 3.241616102 }, { "rank": 8, "state": "North Dakota", "state_comp": "Minnesota", "value": 69.7, "comp_pvi": -1.821522496 }, { "rank": 9, "state": "North Dakota", "state_comp": "Wyoming", "value": 69.3, "comp_pvi": 48.09267157 }, { "rank": 10, "state": "North Dakota", "state_comp": "Iowa", "value": 69.3, "comp_pvi": 6.986805164 }, { "rank": 1, "state": "Ohio", "state_comp": "Indiana", "value": 85.2, "comp_pvi": 19.72467972 }, { "rank": 2, "state": "Ohio", "state_comp": "Michigan", "value": 82.8, "comp_pvi": 0.420226814 }, { "rank": 3, "state": "Ohio", "state_comp": "Missouri", "value": 82.6, "comp_pvi": 19.83970086 }, { "rank": 4, "state": "Ohio", "state_comp": "Pennsylvania", "value": 81.4, "comp_pvi": 1.22511585 }, { "rank": 5, "state": "Ohio", "state_comp": "Tennessee", "value": 78.9, "comp_pvi": 27.95210789 }, { "rank": 6, "state": "Ohio", "state_comp": "Wisconsin", "value": 76.5, "comp_pvi": 3.241616102 }, { "rank": 7, "state": "Ohio", "state_comp": "Iowa", "value": 75.8, "comp_pvi": 6.986805164 }, { "rank": 8, "state": "Ohio", "state_comp": "North Carolina", "value": 71.9, "comp_pvi": 5.614413959 }, { "rank": 9, "state": "Ohio", "state_comp": "Kentucky", "value": 70.3, "comp_pvi": 30.52236505 }, { "rank": 10, "state": "Ohio", "state_comp": "Arkansas", "value": 70.3, "comp_pvi": 31.71173634 }, { "rank": 1, "state": "Oklahoma", "state_comp": "Arkansas", "value": 78.7, "comp_pvi": 31.71173634 }, { "rank": 2, "state": "Oklahoma", "state_comp": "Kansas", "value": 75.8, "comp_pvi": 21.9404712 }, { "rank": 3, "state": "Oklahoma", "state_comp": "Nebraska", "value": 73.1, "comp_pvi": 29.50929736 }, { "rank": 4, "state": "Oklahoma", "state_comp": "South Dakota", "value": 72.8, "comp_pvi": 31.44709825 }, { "rank": 5, "state": "Oklahoma", "state_comp": "Tennessee", "value": 71.2, "comp_pvi": 27.95210789 }, { "rank": 6, "state": "Oklahoma", "state_comp": "Missouri", "value": 71.2, "comp_pvi": 19.83970086 }, { "rank": 7, "state": "Oklahoma", "state_comp": "North Dakota", "value": 70.9, "comp_pvi": 35.66519749 }, { "rank": 8, "state": "Oklahoma", "state_comp": "Alabama", "value": 68.5, "comp_pvi": 30.12071404 }, { "rank": 9, "state": "Oklahoma", "state_comp": "Utah", "value": 65.4, "comp_pvi": 32.06372464 }, { "rank": 10, "state": "Oklahoma", "state_comp": "Indiana", "value": 63.5, "comp_pvi": 19.72467972 }, { "rank": 1, "state": "Oregon", "state_comp": "Washington", "value": 82.8, "comp_pvi": -13.97840149 }, { "rank": 2, "state": "Oregon", "state_comp": "Utah", "value": 68.6, "comp_pvi": 32.06372464 }, { "rank": 3, "state": "Oregon", "state_comp": "Montana", "value": 67.4, "comp_pvi": 19.04432764 }, { "rank": 4, "state": "Oregon", "state_comp": "Idaho", "value": 64.8, "comp_pvi": 36.87980388 }, { "rank": 5, "state": "Oregon", "state_comp": "Kansas", "value": 62.9, "comp_pvi": 21.9404712 }, { "rank": 6, "state": "Oregon", "state_comp": "Wisconsin", "value": 62.5, "comp_pvi": 3.241616102 }, { "rank": 7, "state": "Oregon", "state_comp": "Nevada", "value": 62.1, "comp_pvi": 0.008642973 }, { "rank": 8, "state": "Oregon", "state_comp": "Nebraska", "value": 61.6, "comp_pvi": 29.50929736 }, { "rank": 9, "state": "Oregon", "state_comp": "North Dakota", "value": 60.9, "comp_pvi": 35.66519749 }, { "rank": 10, "state": "Oregon", "state_comp": "Rhode Island", "value": 60.9, "comp_pvi": -18.88398581 }, { "rank": 1, "state": "Pennsylvania", "state_comp": "Michigan", "value": 86.9, "comp_pvi": 0.420226814 }, { "rank": 2, "state": "Pennsylvania", "state_comp": "Ohio", "value": 81.4, "comp_pvi": 9.673126597 }, { "rank": 3, "state": "Pennsylvania", "state_comp": "Wisconsin", "value": 79.3, "comp_pvi": 3.241616102 }, { "rank": 4, "state": "Pennsylvania", "state_comp": "New Hampshire", "value": 76.5, "comp_pvi": -0.561806883 }, { "rank": 5, "state": "Pennsylvania", "state_comp": "Virginia", "value": 76, "comp_pvi": -2.880027279 }, { "rank": 6, "state": "Pennsylvania", "state_comp": "North Carolina", "value": 74.3, "comp_pvi": 5.614413959 }, { "rank": 7, "state": "Pennsylvania", "state_comp": "Rhode Island", "value": 73.5, "comp_pvi": -18.88398581 }, { "rank": 8, "state": "Pennsylvania", "state_comp": "Delaware", "value": 71.5, "comp_pvi": -14.74814097 }, { "rank": 9, "state": "Pennsylvania", "state_comp": "Indiana", "value": 70.3, "comp_pvi": 19.72467972 }, { "rank": 10, "state": "Pennsylvania", "state_comp": "Florida", "value": 68.7, "comp_pvi": 4.586909528 }, { "rank": 1, "state": "Rhode island", "state_comp": "Connecticut", "value": 82.1, "comp_pvi": -13.91177299 }, { "rank": 2, "state": "Rhode island", "state_comp": "Massachusetts", "value": 77, "comp_pvi": -26.97403839 }, { "rank": 3, "state": "Rhode island", "state_comp": "New Jersey", "value": 74.3, "comp_pvi": -13.20123044 }, { "rank": 4, "state": "Rhode island", "state_comp": "Pennsylvania", "value": 73.5, "comp_pvi": 1.22511585 }, { "rank": 5, "state": "Rhode island", "state_comp": "Delaware", "value": 73.1, "comp_pvi": -14.74814097 }, { "rank": 6, "state": "Rhode island", "state_comp": "Vermont", "value": 72.8, "comp_pvi": -31.59664992 }, { "rank": 7, "state": "Rhode island", "state_comp": "New Hampshire", "value": 72.5, "comp_pvi": -0.561806883 }, { "rank": 8, "state": "Rhode island", "state_comp": "New York", "value": 71.8, "comp_pvi": -22.52786675 }, { "rank": 9, "state": "Rhode island", "state_comp": "Maine", "value": 69.3, "comp_pvi": -5.002556374 }, { "rank": 10, "state": "Rhode island", "state_comp": "Illinois", "value": 66.2, "comp_pvi": -15.12454711 }, { "rank": 1, "state": "South Carolina", "state_comp": "North Carolina", "value": 84.2, "comp_pvi": 5.614413959 }, { "rank": 2, "state": "South Carolina", "state_comp": "Georgia", "value": 80.2, "comp_pvi": 8.653037898 }, { "rank": 3, "state": "South Carolina", "state_comp": "Alabama", "value": 77.5, "comp_pvi": 30.12071404 }, { "rank": 4, "state": "South Carolina", "state_comp": "Delaware", "value": 73.1, "comp_pvi": -14.74814097 }, { "rank": 5, "state": "South Carolina", "state_comp": "Mississippi", "value": 72.5, "comp_pvi": 20.60447897 }, { "rank": 6, "state": "South Carolina", "state_comp": "Virginia", "value": 71.8, "comp_pvi": -2.880027279 }, { "rank": 7, "state": "South Carolina", "state_comp": "Louisiana", "value": 70.9, "comp_pvi": 24.86084333 }, { "rank": 8, "state": "South Carolina", "state_comp": "Tennessee", "value": 68.2, "comp_pvi": 27.95210789 }, { "rank": 9, "state": "South Carolina", "state_comp": "Ohio", "value": 67, "comp_pvi": 9.673126597 }, { "rank": 10, "state": "South Carolina", "state_comp": "Florida", "value": 66.9, "comp_pvi": 4.586909528 }, { "rank": 1, "state": "South Dakota", "state_comp": "North Dakota", "value": 86.9, "comp_pvi": 35.66519749 }, { "rank": 2, "state": "South Dakota", "state_comp": "Nebraska", "value": 86.8, "comp_pvi": 29.50929736 }, { "rank": 3, "state": "South Dakota", "state_comp": "Montana", "value": 77.4, "comp_pvi": 19.04432764 }, { "rank": 4, "state": "South Dakota", "state_comp": "Kansas", "value": 77.2, "comp_pvi": 21.9404712 }, { "rank": 5, "state": "South Dakota", "state_comp": "Missouri", "value": 74.2, "comp_pvi": 19.83970086 }, { "rank": 6, "state": "South Dakota", "state_comp": "Iowa", "value": 72.8, "comp_pvi": 6.986805164 }, { "rank": 7, "state": "South Dakota", "state_comp": "Oklahoma", "value": 72.8, "comp_pvi": 37.50759662 }, { "rank": 8, "state": "South Dakota", "state_comp": "Utah", "value": 72.3, "comp_pvi": 32.06372464 }, { "rank": 9, "state": "South Dakota", "state_comp": "Wyoming", "value": 71.9, "comp_pvi": 48.09267157 }, { "rank": 10, "state": "South Dakota", "state_comp": "Arkansas", "value": 71.7, "comp_pvi": 31.71173634 }, { "rank": 1, "state": "Tennessee", "state_comp": "Arkansas", "value": 85.3, "comp_pvi": 31.71173634 }, { "rank": 2, "state": "Tennessee", "state_comp": "Missouri", "value": 81.5, "comp_pvi": 19.83970086 }, { "rank": 3, "state": "Tennessee", "state_comp": "Indiana", "value": 81, "comp_pvi": 19.72467972 }, { "rank": 4, "state": "Tennessee", "state_comp": "Kentucky", "value": 80.3, "comp_pvi": 30.52236505 }, { "rank": 5, "state": "Tennessee", "state_comp": "Alabama", "value": 79.2, "comp_pvi": 30.12071404 }, { "rank": 6, "state": "Tennessee", "state_comp": "Ohio", "value": 78.9, "comp_pvi": 9.673126597 }, { "rank": 7, "state": "Tennessee", "state_comp": "Oklahoma", "value": 71.2, "comp_pvi": 37.50759662 }, { "rank": 8, "state": "Tennessee", "state_comp": "Michigan", "value": 70.7, "comp_pvi": 0.420226814 }, { "rank": 9, "state": "Tennessee", "state_comp": "South Dakota", "value": 69.8, "comp_pvi": 31.44709825 }, { "rank": 10, "state": "Tennessee", "state_comp": "South Carolina", "value": 68.2, "comp_pvi": 16.71872913 }, { "rank": 1, "state": "Texas", "state_comp": "Arizona", "value": 70, "comp_pvi": 7.449078603 }, { "rank": 2, "state": "Texas", "state_comp": "New Mexico", "value": 65.3, "comp_pvi": -9.070470147 }, { "rank": 3, "state": "Texas", "state_comp": "Kansas", "value": 60.7, "comp_pvi": 21.9404712 }, { "rank": 4, "state": "Texas", "state_comp": "Florida", "value": 60.2, "comp_pvi": 4.586909528 }, { "rank": 5, "state": "Texas", "state_comp": "Nevada", "value": 56.5, "comp_pvi": 0.008642973 }, { "rank": 6, "state": "Texas", "state_comp": "Missouri", "value": 56.2, "comp_pvi": 19.83970086 }, { "rank": 7, "state": "Texas", "state_comp": "Illinois", "value": 55.2, "comp_pvi": -15.12454711 }, { "rank": 8, "state": "Texas", "state_comp": "Oklahoma", "value": 55.1, "comp_pvi": 37.50759662 }, { "rank": 9, "state": "Texas", "state_comp": "Colorado", "value": 53.8, "comp_pvi": -2.973127033 }, { "rank": 10, "state": "Texas", "state_comp": "Louisiana", "value": 52.8, "comp_pvi": 24.86084333 }, { "rank": 1, "state": "Utah", "state_comp": "Nebraska", "value": 78.8, "comp_pvi": 29.50929736 }, { "rank": 2, "state": "Utah", "state_comp": "North Dakota", "value": 75.3, "comp_pvi": 35.66519749 }, { "rank": 3, "state": "Utah", "state_comp": "Kansas", "value": 75, "comp_pvi": 21.9404712 }, { "rank": 4, "state": "Utah", "state_comp": "South Dakota", "value": 72.3, "comp_pvi": 31.44709825 }, { "rank": 5, "state": "Utah", "state_comp": "Idaho", "value": 71.7, "comp_pvi": 36.87980388 }, { "rank": 6, "state": "Utah", "state_comp": "Montana", "value": 70.8, "comp_pvi": 19.04432764 }, { "rank": 7, "state": "Utah", "state_comp": "Oregon", "value": 68.6, "comp_pvi": -10.63313409 }, { "rank": 8, "state": "Utah", "state_comp": "Wyoming", "value": 67.3, "comp_pvi": 48.09267157 }, { "rank": 9, "state": "Utah", "state_comp": "Oklahoma", "value": 65.4, "comp_pvi": 37.50759662 }, { "rank": 10, "state": "Utah", "state_comp": "Arizona", "value": 65, "comp_pvi": 7.449078603 }, { "rank": 1, "state": "Vermont", "state_comp": "New Hampshire", "value": 84.2, "comp_pvi": -0.561806883 }, { "rank": 2, "state": "Vermont", "state_comp": "Massachusetts", "value": 75.5, "comp_pvi": -26.97403839 }, { "rank": 3, "state": "Vermont", "state_comp": "Maine", "value": 74.1, "comp_pvi": -5.002556374 }, { "rank": 4, "state": "Vermont", "state_comp": "Rhode Island", "value": 72.8, "comp_pvi": -18.88398581 }, { "rank": 5, "state": "Vermont", "state_comp": "Connecticut", "value": 65.2, "comp_pvi": -13.91177299 }, { "rank": 6, "state": "Vermont", "state_comp": "Pennsylvania", "value": 64.1, "comp_pvi": 1.22511585 }, { "rank": 7, "state": "Vermont", "state_comp": "New York", "value": 59.2, "comp_pvi": -22.52786675 }, { "rank": 8, "state": "Vermont", "state_comp": "Ohio", "value": 59.2, "comp_pvi": 9.673126597 }, { "rank": 9, "state": "Vermont", "state_comp": "Wisconsin", "value": 58.3, "comp_pvi": 3.241616102 }, { "rank": 10, "state": "Vermont", "state_comp": "Delaware", "value": 56.5, "comp_pvi": -14.74814097 }, { "rank": 1, "state": "Virginia", "state_comp": "North Carolina", "value": 84.9, "comp_pvi": 5.614413959 }, { "rank": 2, "state": "Virginia", "state_comp": "New Jersey", "value": 79.5, "comp_pvi": -13.20123044 }, { "rank": 3, "state": "Virginia", "state_comp": "Delaware", "value": 78, "comp_pvi": -14.74814097 }, { "rank": 4, "state": "Virginia", "state_comp": "Pennsylvania", "value": 76, "comp_pvi": 1.22511585 }, { "rank": 5, "state": "Virginia", "state_comp": "New York", "value": 73.5, "comp_pvi": -22.52786675 }, { "rank": 6, "state": "Virginia", "state_comp": "Illinois", "value": 72.8, "comp_pvi": -15.12454711 }, { "rank": 7, "state": "Virginia", "state_comp": "Connecticut", "value": 71.9, "comp_pvi": -13.91177299 }, { "rank": 8, "state": "Virginia", "state_comp": "South Carolina", "value": 71.8, "comp_pvi": 16.71872913 }, { "rank": 9, "state": "Virginia", "state_comp": "Georgia", "value": 71, "comp_pvi": 8.653037898 }, { "rank": 10, "state": "Virginia", "state_comp": "Maryland", "value": 69.8, "comp_pvi": -25.36538251 }, { "rank": 1, "state": "Washington", "state_comp": "Oregon", "value": 82.8, "comp_pvi": -10.63313409 }, { "rank": 2, "state": "Washington", "state_comp": "Nevada", "value": 65, "comp_pvi": 0.008642973 }, { "rank": 3, "state": "Washington", "state_comp": "Illinois", "value": 64.4, "comp_pvi": -15.12454711 }, { "rank": 4, "state": "Washington", "state_comp": "Utah", "value": 60.7, "comp_pvi": 32.06372464 }, { "rank": 5, "state": "Washington", "state_comp": "Connecticut", "value": 60.2, "comp_pvi": -13.91177299 }, { "rank": 6, "state": "Washington", "state_comp": "Minnesota", "value": 59.6, "comp_pvi": -1.821522496 }, { "rank": 7, "state": "Washington", "state_comp": "Montana", "value": 58.6, "comp_pvi": 19.04432764 }, { "rank": 8, "state": "Washington", "state_comp": "Colorado", "value": 58.4, "comp_pvi": -2.973127033 }, { "rank": 9, "state": "Washington", "state_comp": "Arizona", "value": 58.3, "comp_pvi": 7.449078603 }, { "rank": 10, "state": "Washington", "state_comp": "Rhode Island", "value": 58.2, "comp_pvi": -18.88398581 }, { "rank": 1, "state": "West Virginia", "state_comp": "Kentucky", "value": 74.3, "comp_pvi": 30.52236505 }, { "rank": 2, "state": "West Virginia", "state_comp": "Tennessee", "value": 60, "comp_pvi": 27.95210789 }, { "rank": 3, "state": "West Virginia", "state_comp": "Indiana", "value": 59.6, "comp_pvi": 19.72467972 }, { "rank": 4, "state": "West Virginia", "state_comp": "Arkansas", "value": 58.8, "comp_pvi": 31.71173634 }, { "rank": 5, "state": "West Virginia", "state_comp": "Ohio", "value": 57.6, "comp_pvi": 9.673126597 }, { "rank": 6, "state": "West Virginia", "state_comp": "Oklahoma", "value": 53.1, "comp_pvi": 37.50759662 }, { "rank": 7, "state": "West Virginia", "state_comp": "Alabama", "value": 52.8, "comp_pvi": 30.12071404 }, { "rank": 8, "state": "West Virginia", "state_comp": "Missouri", "value": 51.4, "comp_pvi": 19.83970086 }, { "rank": 9, "state": "West Virginia", "state_comp": "Pennsylvania", "value": 51.3, "comp_pvi": 1.22511585 }, { "rank": 10, "state": "West Virginia", "state_comp": "Idaho", "value": 47.8, "comp_pvi": 36.87980388 }, { "rank": 1, "state": "Wisconsin", "state_comp": "Iowa", "value": 85.9, "comp_pvi": 6.986805164 }, { "rank": 2, "state": "Wisconsin", "state_comp": "Michigan", "value": 83.9, "comp_pvi": 0.420226814 }, { "rank": 3, "state": "Wisconsin", "state_comp": "Minnesota", "value": 79.4, "comp_pvi": -1.821522496 }, { "rank": 4, "state": "Wisconsin", "state_comp": "Pennsylvania", "value": 79.3, "comp_pvi": 1.22511585 }, { "rank": 5, "state": "Wisconsin", "state_comp": "Ohio", "value": 76.5, "comp_pvi": 9.673126597 }, { "rank": 6, "state": "Wisconsin", "state_comp": "Kansas", "value": 73.7, "comp_pvi": 21.9404712 }, { "rank": 7, "state": "Wisconsin", "state_comp": "Missouri", "value": 73.7, "comp_pvi": 19.83970086 }, { "rank": 8, "state": "Wisconsin", "state_comp": "Nebraska", "value": 73.3, "comp_pvi": 29.50929736 }, { "rank": 9, "state": "Wisconsin", "state_comp": "Indiana", "value": 72.2, "comp_pvi": 19.72467972 }, { "rank": 10, "state": "Wisconsin", "state_comp": "South Dakota", "value": 71.6, "comp_pvi": 31.44709825 }, { "rank": 1, "state": "Wyoming", "state_comp": "Idaho", "value": 83.1, "comp_pvi": 36.87980388 }, { "rank": 2, "state": "Wyoming", "state_comp": "Montana", "value": 72.9, "comp_pvi": 19.04432764 }, { "rank": 3, "state": "Wyoming", "state_comp": "South Dakota", "value": 71.9, "comp_pvi": 31.44709825 }, { "rank": 4, "state": "Wyoming", "state_comp": "North Dakota", "value": 69.3, "comp_pvi": 35.66519749 }, { "rank": 5, "state": "Wyoming", "state_comp": "Nebraska", "value": 68.8, "comp_pvi": 29.50929736 }, { "rank": 6, "state": "Wyoming", "state_comp": "Utah", "value": 67.3, "comp_pvi": 32.06372464 }, { "rank": 7, "state": "Wyoming", "state_comp": "Iowa", "value": 64.8, "comp_pvi": 6.986805164 }, { "rank": 8, "state": "Wyoming", "state_comp": "Kansas", "value": 62.6, "comp_pvi": 21.9404712 }, { "rank": 9, "state": "Wyoming", "state_comp": "Oklahoma", "value": 60.3, "comp_pvi": 37.50759662 }, { "rank": 10, "state": "Wyoming", "state_comp": "Missouri", "value": 58.7, "comp_pvi": 19.83970086 }, { "rank": 1, "state": "District of Columbia", "state_comp": "Maryland", "value": 57, "comp_pvi": -25.36538251 }, { "rank": 2, "state": "District of Columbia", "state_comp": "Virginia", "value": 50, "comp_pvi": -2.880027279 }, { "rank": 3, "state": "District of Columbia", "state_comp": "Delaware", "value": 47.7, "comp_pvi": -14.74814097 }, { "rank": 4, "state": "District of Columbia", "state_comp": "New Jersey", "value": 47.2, "comp_pvi": -13.20123044 }, { "rank": 5, "state": "District of Columbia", "state_comp": "New York", "value": 47, "comp_pvi": -22.52786675 }, { "rank": 6, "state": "District of Columbia", "state_comp": "North Carolina", "value": 46.1, "comp_pvi": 5.614413959 }, { "rank": 7, "state": "District of Columbia", "state_comp": "Connecticut", "value": 44.9, "comp_pvi": -13.91177299 }, { "rank": 8, "state": "District of Columbia", "state_comp": "Georgia", "value": 44.1, "comp_pvi": 8.653037898 }, { "rank": 9, "state": "District of Columbia", "state_comp": "South Carolina", "value": 44, "comp_pvi": 16.71872913 }, { "rank": 10, "state": "District of Columbia", "state_comp": "Pennsylvania", "value": 43.3, "comp_pvi": 1.22511585 }, { "rank": 1, "state": "Maine-2", "state_comp": "Indiana", "value": 85.2, "comp_pvi": 19.72467972 }, { "rank": 2, "state": "Maine-2", "state_comp": "Michigan", "value": 82.8, "comp_pvi": 0.420226814 }, { "rank": 3, "state": "Maine-2", "state_comp": "Missouri", "value": 82.6, "comp_pvi": 19.83970086 }, { "rank": 4, "state": "Maine-2", "state_comp": "Pennsylvania", "value": 81.4, "comp_pvi": 1.22511585 }, { "rank": 5, "state": "Maine-2", "state_comp": "Tennessee", "value": 78.9, "comp_pvi": 27.95210789 }, { "rank": 6, "state": "Maine-2", "state_comp": "Wisconsin", "value": 76.5, "comp_pvi": 3.241616102 }, { "rank": 7, "state": "Maine-2", "state_comp": "Iowa", "value": 75.8, "comp_pvi": 6.986805164 }, { "rank": 8, "state": "Maine-2", "state_comp": "North Carolina", "value": 71.9, "comp_pvi": 5.614413959 }, { "rank": 9, "state": "Maine-2", "state_comp": "Kentucky", "value": 70.3, "comp_pvi": 30.52236505 }, { "rank": 10, "state": "Maine-2", "state_comp": "Arkansas", "value": 70.3, "comp_pvi": 31.71173634 }, { "rank": 1, "state": "Maine-1", "state_comp": "New Hampshire", "value": 85, "comp_pvi": -0.561806883 }, { "rank": 2, "state": "Maine-1", "state_comp": "Vermont", "value": 84.2, "comp_pvi": -31.59664992 }, { "rank": 3, "state": "Maine-1", "state_comp": "Maine", "value": 82.7, "comp_pvi": -5.002556374 }, { "rank": 4, "state": "Maine-1", "state_comp": "Pennsylvania", "value": 76.5, "comp_pvi": 1.22511585 }, { "rank": 5, "state": "Maine-1", "state_comp": "Rhode Island", "value": 72.5, "comp_pvi": -18.88398581 }, { "rank": 6, "state": "Maine-1", "state_comp": "Wisconsin", "value": 69.9, "comp_pvi": 3.241616102 }, { "rank": 7, "state": "Maine-1", "state_comp": "Massachusetts", "value": 68.4, "comp_pvi": -26.97403839 }, { "rank": 8, "state": "Maine-1", "state_comp": "Connecticut", "value": 68.2, "comp_pvi": -13.91177299 }, { "rank": 9, "state": "Maine-1", "state_comp": "Michigan", "value": 68.1, "comp_pvi": 0.420226814 }, { "rank": 10, "state": "Maine-1", "state_comp": "Ohio", "value": 65.5, "comp_pvi": 9.673126597 }, { "rank": 1, "state": "Nebraska-1", "state_comp": "Nebraska", "value": 90, "comp_pvi": 29.50929736 }, { "rank": 2, "state": "Nebraska-1", "state_comp": "Kansas", "value": 87.6, "comp_pvi": 21.9404712 }, { "rank": 3, "state": "Nebraska-1", "state_comp": "South Dakota", "value": 86.8, "comp_pvi": 31.44709825 }, { "rank": 4, "state": "Nebraska-1", "state_comp": "North Dakota", "value": 86.5, "comp_pvi": 35.66519749 }, { "rank": 5, "state": "Nebraska-1", "state_comp": "Utah", "value": 78.8, "comp_pvi": 32.06372464 }, { "rank": 6, "state": "Nebraska-1", "state_comp": "Montana", "value": 74.4, "comp_pvi": 19.04432764 }, { "rank": 7, "state": "Nebraska-1", "state_comp": "Iowa", "value": 73.4, "comp_pvi": 6.986805164 }, { "rank": 8, "state": "Nebraska-1", "state_comp": "Wisconsin", "value": 73.3, "comp_pvi": 3.241616102 }, { "rank": 9, "state": "Nebraska-1", "state_comp": "Oklahoma", "value": 73.1, "comp_pvi": 37.50759662 }, { "rank": 10, "state": "Nebraska-1", "state_comp": "Missouri", "value": 72.1, "comp_pvi": 19.83970086 }, { "rank": 1, "state": "Nebraska-3", "state_comp": "Nebraska", "value": 90, "comp_pvi": 29.50929736 }, { "rank": 2, "state": "Nebraska-3", "state_comp": "Kansas", "value": 87.6, "comp_pvi": 21.9404712 }, { "rank": 3, "state": "Nebraska-3", "state_comp": "South Dakota", "value": 86.8, "comp_pvi": 31.44709825 }, { "rank": 4, "state": "Nebraska-3", "state_comp": "North Dakota", "value": 86.5, "comp_pvi": 35.66519749 }, { "rank": 5, "state": "Nebraska-3", "state_comp": "Utah", "value": 78.8, "comp_pvi": 32.06372464 }, { "rank": 6, "state": "Nebraska-3", "state_comp": "Montana", "value": 74.4, "comp_pvi": 19.04432764 }, { "rank": 7, "state": "Nebraska-3", "state_comp": "Iowa", "value": 73.4, "comp_pvi": 6.986805164 }, { "rank": 8, "state": "Nebraska-3", "state_comp": "Wisconsin", "value": 73.3, "comp_pvi": 3.241616102 }, { "rank": 9, "state": "Nebraska-3", "state_comp": "Oklahoma", "value": 73.1, "comp_pvi": 37.50759662 }, { "rank": 10, "state": "Nebraska-3", "state_comp": "Missouri", "value": 72.1, "comp_pvi": 19.83970086 }, { "rank": 1, "state": "Nebraska-2", "state_comp": "Wisconsin", "value": 85.9, "comp_pvi": 3.241616102 }, { "rank": 2, "state": "Nebraska-2", "state_comp": "Missouri", "value": 78.5, "comp_pvi": 19.83970086 }, { "rank": 3, "state": "Nebraska-2", "state_comp": "Indiana", "value": 76.2, "comp_pvi": 19.72467972 }, { "rank": 4, "state": "Nebraska-2", "state_comp": "Ohio", "value": 75.8, "comp_pvi": 9.673126597 }, { "rank": 5, "state": "Nebraska-2", "state_comp": "Kansas", "value": 74.6, "comp_pvi": 21.9404712 }, { "rank": 6, "state": "Nebraska-2", "state_comp": "Nebraska", "value": 73.4, "comp_pvi": 29.50929736 }, { "rank": 7, "state": "Nebraska-2", "state_comp": "Minnesota", "value": 73.4, "comp_pvi": -1.821522496 }, { "rank": 8, "state": "Nebraska-2", "state_comp": "South Dakota", "value": 72.8, "comp_pvi": 31.44709825 }, { "rank": 9, "state": "Nebraska-2", "state_comp": "Montana", "value": 72.7, "comp_pvi": 19.04432764 }, { "rank": 10, "state": "Nebraska-2", "state_comp": "Michigan", "value": 72, "comp_pvi": 0.420226814 }]
-d3.csv("https://projects.jhkforecasts.com/presidential_forecast/pollster-ratings.csv", pollster_ratings => {
+d3.csv("ssindex.csv", state_similarity => {
+	d3.csv("https://projects.jhkforecasts.com/presidential_forecast/pollster-ratings.csv", pollster_ratings => {
 
-	var pollster_names = pollster_ratings.map((d, i) => {
-		return d.Pollster
-	})
-
-	var pollster_grade = pollster_ratings.map((d, i) => {
-		return d["538Grade"]
-	})
-	var pollster_bias = pollster_ratings.map((d, i) => {
-		return d.MeanRevertedBias == NaN ? 0 : d.MeanRevertedBias
-	})
-	var grade_scale = [
-		{ Grade: "A+", Value: 1.5 },
-		{ Grade: "A", Value: 1.35 },
-		{ Grade: "A-", Value: 1.2 },
-		{ Grade: "A/B", Value: 1.1 },
-		{ Grade: "B+", Value: 1 },
-		{ Grade: "B", Value: .925 },
-		{ Grade: "B-", Value: .85 },
-		{ Grade: "B/C", Value: .8 },
-		{ Grade: "C+", Value: .7 },
-		{ Grade: "C", Value: .65 },
-		{ Grade: "C-", Value: .55 },
-		{ Grade: "C/D", Value: .5 },
-		{ Grade: "D+", Value: .4 },
-		{ Grade: "D", Value: .3 },
-		{ Grade: "D-", Value: .2 },
-		{ Grade: "", Value: .7 },
-	]
-	var pollster_grade_letter = grade_scale.map((d) => {
-		return d.Grade
-	})
-
-	var pollster_grade_value = grade_scale.map((d) => {
-		return d.Value
-	})
-	var ds = []
-	d3.csv("simdata.csv", data => {
-
-
-		var states = data.map(d => {
-			return d.state
-		})
-		console.log(states)
-		var experts_ratings = data.map((d, i) => {
-			return {
-				state: d.state,
-				pvi: +d.pvi,
-				sabato: d.sabato,
-				cook: d.cook,
-				inside: d.inside,
-				bitecofer: d.bitecofer,
-				politico: d.politico,
-				bitecofer_margin: +d.bitecofer_margin
-			}
-		})
-		experts_ratings.forEach((d, i) => {
-			d.sabato_margin = Math.abs(exp_margin[exp_rating.indexOf(d.sabato)]) < Math.abs(d.pvi) ? d.pvi : exp_margin[exp_rating.indexOf(d.sabato)]
-			d.cook_margin = Math.abs(exp_margin[exp_rating.indexOf(d.cook)]) < Math.abs(d.pvi) ? d.pvi : exp_margin[exp_rating.indexOf(d.cook)]
-			d.inside_margin = Math.abs(exp_margin[exp_rating.indexOf(d.inside)]) < Math.abs(d.pvi) ? d.pvi : exp_margin[exp_rating.indexOf(d.inside)]
-			d.politico_margin = Math.abs(exp_margin[exp_rating.indexOf(d.politico)]) < Math.abs(d.pvi) ? d.pvi : exp_margin[exp_rating.indexOf(d.politico)]
-			d.weight = 30
+		var pollster_names = pollster_ratings.map((d, i) => {
+			return d.Pollster
 		})
 
+		var pollster_grade = pollster_ratings.map((d, i) => {
+			return d["538Grade"]
+		})
+		var pollster_bias = pollster_ratings.map((d, i) => {
+			return d.MeanRevertedBias == NaN ? 0 : d.MeanRevertedBias
+		})
+		var grade_scale = [
+			{ Grade: "A+", Value: 1.5 },
+			{ Grade: "A", Value: 1.35 },
+			{ Grade: "A-", Value: 1.2 },
+			{ Grade: "A/B", Value: 1.1 },
+			{ Grade: "B+", Value: 1 },
+			{ Grade: "B", Value: .925 },
+			{ Grade: "B-", Value: .85 },
+			{ Grade: "B/C", Value: .8 },
+			{ Grade: "C+", Value: .7 },
+			{ Grade: "C", Value: .65 },
+			{ Grade: "C-", Value: .55 },
+			{ Grade: "C/D", Value: .5 },
+			{ Grade: "D+", Value: .4 },
+			{ Grade: "D", Value: .3 },
+			{ Grade: "D-", Value: .2 },
+			{ Grade: "", Value: .7 },
+		]
+		var pollster_grade_letter = grade_scale.map((d) => {
+			return d.Grade
+		})
 
-		d3.csv("https://projects.fivethirtyeight.com/polls-page/president_polls.csv", polls => {
-			var polls = polls.filter(d => d.answer != "Schultz")
-			var polls = polls.filter(d => d.candidate_party != "LIB")
-
-			polls.forEach((d, i) => {
-				d.party_id = d.candidate_party == "DEM" ? 0 : 1
-				return d;
-			})
-			polls.sort((a, b) => a.party_id - b.party_id)
-
-
-			var pollsnew = d3.nest()
-				.key(d => d.question_id)
-				.entries(polls)
-
-			var pollsnew = pollsnew.map((d, i) => {
-				return d.values
-			})
-
-			var polls_new = pollsnew.map((d, i) => {
-				return {
-					question_id: +pollsnew[i][0].question_id,
-					poll_id: +pollsnew[i][0].poll_id,
-					state: pollsnew[i][0].state == "" ? "US" : pollsnew[i][0].state,
-					pollster: pollsnew[i][0].pollster,
-					pollster_id: +pollsnew[i][0].pollster_id,
-					url: pollsnew[i][0].url,
-					sponsors: pollsnew[i][0].sponsors,
-					n: pollsnew[i][0].sample_size,
-					date_raw: timeformat(dateparse(pollsnew[i][0].end_date)),
-					date: dateparse(pollsnew[i][0].end_date),
-					created: timeparse(pollsnew[i][0].created_at),
-					population: pollsnew[i][0].population,
-					grade: pollster_grade[pollster_names.indexOf(pollsnew[i][0].pollster)] == undefined ? "-" : pollster_grade[pollster_names.indexOf(pollsnew[i][0].pollster)],
-					bias: pollster_bias[pollster_names.indexOf(pollsnew[i][0].pollster)] == undefined ? 0 : pollster_bias[pollster_names.indexOf(pollsnew[i][0].pollster)],
-					dem: pollsnew[i][0].answer,
-					gop: pollsnew[i][1].answer,
-					dem_pct: +pollsnew[i][0].pct,
-					gop_pct: +pollsnew[i][1].pct,
-					poll_index: pollsnew[i][0].state == "" ? "US" + pollsnew[i][0].pollster : pollsnew[i][0].state + pollsnew[i][0].pollster,
-					margin: +pollsnew[i][0].pct - +pollsnew[i][1].pct
-				}
-			})
-			var polls_new = polls_new.filter(d => d.dem == "Biden" || d.dem == "Sanders")
-			var polls_new = polls_new.filter(d => d.gop == "Trump")
-			var us_polls = polls_new.filter(d => d.state == "US")
-			var polls_new = polls_new.filter(d => d.date > new Date(2019, 6, 1))
+		var pollster_grade_value = grade_scale.map((d) => {
+			return d.Value
+		})
+		var ds = []
+		d3.csv("simdata.csv", data => {
 
 
-
-			var length_from_july_2019 = (sim_date - new Date(2019, 6, 1)) / time_scale
-			//us trendline
-			var us_trendline = []
-			for (var b = 0; b < length_from_july_2019; b++) {
-
-				var run_date = new Date(2019, 6, 1)
-				run_date.setDate(run_date.getDate() + b);
-				var polls = us_polls.filter(d => d.created <= run_date)
-				polls.forEach((d, i) => {
-					d.grade_value = pollster_grade_value[pollster_grade_letter.indexOf(d.grade)]
-					d.population_adj = d.population == "lv" ? 1.33 : d.population == "rv" ? 1 : .7
-					d.n_adjusted = d.n > 4000 ? Math.pow((d.n - 4000), .2) + 27 : Math.pow(d.n, .4)
-					d.weight = d.n_adjusted * d.population_adj
-					d.sum = (d.dem_pct + d.gop_pct)
-					d.weight = Math.pow(d.weight, d.grade_value) * ((d.dem_pct + d.gop_pct) / 100)
-					d.weight = d.weight / (1 + (((run_date - d.date) / time_scale) / 20))
-					d.dem_adj = (d.dem_pct - (d.bias / 2)) + (d.population == "lv" ? 0 : -.5)
-					d.gop_adj = (d.gop_pct + (d.bias / 2)) + (d.population == "lv" ? 0 : .5)
-					d.margin = d.gop_adj - d.dem_adj
-					return d;
-				})
-				var poll_filtered = d3.nest()
-					.key(d => d.pollster_id)
-					.entries(polls)
-				var poll_filtered = poll_filtered.map(d => {
-					return d.values
-				})
-				var ps = []
-				for (c = 0; c < poll_filtered.length; c++) {
-					var f = poll_filtered[c]
-					f.sort((a, b) => b.weight - a.weight)
-					f.forEach((d, i) => {
-						d.weight = d.weight / Math.pow(i + 1, 3)
-						d.margin_weight = d.margin * d.weight
-					})
-					ps.push(f)
-				}
-				var psflat = ps.flat()
-
-				var us_avg = d3.sum(psflat, d => d.margin_weight) / d3.sum(psflat, d => d.weight)
-				var ts = {
-					date: timeformat(run_date),
-					margin: us_avg
-				}
-				us_trendline.push(ts)
-			}
-			var usflat = us_trendline.flat()
-			var us_index_date = usflat.map(d => {
-				return d.date
-			})
-			var us_index_margin = usflat.map(d => {
-				return d.margin
-			})
-			var current_us_poll_margin = us_index_margin[us_index_margin.length - 1]
-			var pa = []
-			for (let b = 0; b < states.length; b++) {
-				var polls = polls_new.filter(d => d.state == states[b])
-				polls.forEach((d, i) => {
-					d.grade_value = pollster_grade_value[pollster_grade_letter.indexOf(d.grade)]
-					d.population_adj = d.population == "lv" ? 1.33 : d.population == "rv" ? 1 : .7
-					d.n_adjusted = d.n > 4000 ? Math.pow((d.n - 4000), .2) + 27 : Math.pow(d.n, .4)
-					d.weight = d.n_adjusted * d.population_adj
-					d.sum = (d.dem_pct + d.gop_pct)
-					d.weight = Math.pow(d.weight, d.grade_value) * ((d.dem_pct + d.gop_pct) / 100)
-					d.weight = d.weight / (1 + (((sim_date - d.date) / time_scale) / 20))
-					d.change = current_us_poll_margin - us_index_margin[us_index_date.indexOf(d.date_raw)]
-					d.dem_adj = (d.dem_pct - (d.bias / 2)) + (d.population == "lv" ? 0 : -1) + d.change / 2
-					d.gop_adj = (d.gop_pct + (d.bias / 2)) + (d.population == "lv" ? 0 : 1) - d.change / 2
-					d.margin = d.gop_adj - d.dem_adj
-					return d;
-				})
-				var poll_filtered = d3.nest()
-					.key(d => d.pollster_id)
-					.entries(polls)
-				var poll_filtered = poll_filtered.map(d => {
-					return d.values
-				})
-				var ps = []
-				for (c = 0; c < poll_filtered.length; c++) {
-					var f = poll_filtered[c]
-					f.sort((a, b) => b.weight - a.weight)
-					f.forEach((d, i) => {
-						d.weight = d.weight / Math.pow(i + 1, 3)
-						d.margin_weight = d.margin * d.weight
-						d.gop_weight = d.gop_adj * d.weight
-						d.dem_weight = d.dem_adj * d.weight
-					})
-					ps.push(f)
-				}
-				var psflat = ps.flat()
-				var gop_avg = d3.sum(psflat, d => d.gop_weight) / d3.sum(psflat, d => d.weight)
-				var dem_avg = d3.sum(psflat, d => d.dem_weight) / d3.sum(psflat, d => d.weight)
-				var third_avg = +data[b].third_index * national_third_party
-				var total_left = 100 - gop_avg - dem_avg - third_avg
-				var weight = d3.sum(psflat, d => d.weight)
-				var sp = {
-					state: states[b],
-					margin: isNaN(gop_avg) == true ? 0 : gop_avg - dem_avg,
-					gop_avg: gop_avg + total_left / 2,
-					dem_avg: dem_avg + total_left / 2,
-					third: third_avg,
-					weight: weight
-				}
-				pa.push(sp)
-			}
-			var state_poll_avg = pa.flat()
-			console.log(state_poll_avg)
-
-			var ssindexstate = state_poll_avg.map(d => {
+			var states = data.map(d => {
 				return d.state
 			})
-			var ssindexmargin = state_poll_avg.map(d => {
-				return d.margin
+			console.log(states)
+			var experts_ratings = data.map((d, i) => {
+				return {
+					state: d.state,
+					pvi: +d.pvi,
+					sabato: d.sabato,
+					cook: d.cook,
+					inside: d.inside,
+					bitecofer: d.bitecofer,
+					politico: d.politico,
+					bitecofer_margin: +d.bitecofer_margin
+				}
+			})
+			experts_ratings.forEach((d, i) => {
+				d.sabato_margin = d.sabato == "Solid R" ? Math.abs(exp_margin[exp_rating.indexOf(d.sabato)]) < Math.abs(d.pvi) ? d.pvi : exp_margin[exp_rating.indexOf(d.sabato)] : d.sabato == "Solid D" ? Math.abs(exp_margin[exp_rating.indexOf(d.sabato)]) < Math.abs(d.pvi) ? d.pvi : exp_margin[exp_rating.indexOf(d.sabato)] : exp_margin[exp_rating.indexOf(d.sabato)]
+
+				d.cook_margin = d.cook == "Solid R" ? Math.abs(exp_margin[exp_rating.indexOf(d.cook)]) < Math.abs(d.pvi) ? d.pvi : exp_margin[exp_rating.indexOf(d.cook)] : d.cook == "Solid D" ? Math.abs(exp_margin[exp_rating.indexOf(d.cook)]) < Math.abs(d.pvi) ? d.pvi : exp_margin[exp_rating.indexOf(d.cook)] : exp_margin[exp_rating.indexOf(d.cook)]
+
+				d.inside_margin = d.inside == "Solid R" ? Math.abs(exp_margin[exp_rating.indexOf(d.inside)]) < Math.abs(d.pvi) ? d.pvi : exp_margin[exp_rating.indexOf(d.inside)] : d.inside == "Solid D" ? Math.abs(exp_margin[exp_rating.indexOf(d.inside)]) < Math.abs(d.pvi) ? d.pvi : exp_margin[exp_rating.indexOf(d.inside)] : exp_margin[exp_rating.indexOf(d.inside)]
+
+				d.politico_margin = d.politico == "Solid R" ? Math.abs(exp_margin[exp_rating.indexOf(d.politico)]) < Math.abs(d.pvi) ? d.pvi : exp_margin[exp_rating.indexOf(d.politico)] : d.politico == "Solid D" ? Math.abs(exp_margin[exp_rating.indexOf(d.politico)]) < Math.abs(d.pvi) ? d.pvi : exp_margin[exp_rating.indexOf(d.politico)] : exp_margin[exp_rating.indexOf(d.politico)]
+
+				d.avg = (d.politico_margin + d.inside_margin + d.cook_margin + d.sabato_margin + d.bitecofer_margin) / 5
+				d.third = +data[i].third_index * national_third_party
+				d.gop = (100 - d.third) / 2 + (d.avg / 2)
+				d.dem = (100 - d.third) / 2 - (d.avg / 2)
 			})
 
-			var ss = []
-			for (let b = 0; b < states.length; b++) {
-				var scompare = state_similarity.filter(d => d.state == states[b])
-				console.log(scompare)
-			}
 
+			d3.csv("https://projects.fivethirtyeight.com/polls-page/president_polls.csv", polls => {
+				var polls = polls.filter(d => d.answer != "Schultz")
+				var polls = polls.filter(d => d.candidate_party != "LIB")
+
+				polls.forEach((d, i) => {
+					d.party_id = d.candidate_party == "DEM" ? 0 : 1
+					return d;
+				})
+				polls.sort((a, b) => a.party_id - b.party_id)
+
+
+				var pollsnew = d3.nest()
+					.key(d => d.question_id)
+					.entries(polls)
+
+				var pollsnew = pollsnew.map((d, i) => {
+					return d.values
+				})
+
+				var polls_new = pollsnew.map((d, i) => {
+					return {
+						question_id: +pollsnew[i][0].question_id,
+						poll_id: +pollsnew[i][0].poll_id,
+						state: pollsnew[i][0].state == "" ? "US" : pollsnew[i][0].state,
+						pollster: pollsnew[i][0].pollster,
+						pollster_id: +pollsnew[i][0].pollster_id,
+						url: pollsnew[i][0].url,
+						sponsors: pollsnew[i][0].sponsors,
+						n: pollsnew[i][0].sample_size,
+						date_raw: timeformat(dateparse(pollsnew[i][0].end_date)),
+						date: dateparse(pollsnew[i][0].end_date),
+						created: timeparse(pollsnew[i][0].created_at),
+						population: pollsnew[i][0].population,
+						grade: pollster_grade[pollster_names.indexOf(pollsnew[i][0].pollster)] == undefined ? "-" : pollster_grade[pollster_names.indexOf(pollsnew[i][0].pollster)],
+						bias: pollster_bias[pollster_names.indexOf(pollsnew[i][0].pollster)] == undefined ? 0 : pollster_bias[pollster_names.indexOf(pollsnew[i][0].pollster)],
+						dem: pollsnew[i][0].answer,
+						gop: pollsnew[i][1].answer,
+						dem_pct: +pollsnew[i][0].pct,
+						gop_pct: +pollsnew[i][1].pct,
+						poll_index: pollsnew[i][0].state == "" ? "US" + pollsnew[i][0].pollster : pollsnew[i][0].state + pollsnew[i][0].pollster,
+						margin: +pollsnew[i][0].pct - +pollsnew[i][1].pct
+					}
+				})
+				var polls_new = polls_new.filter(d => d.dem == "Biden")
+				var polls_new = polls_new.filter(d => d.gop == "Trump")
+				var us_polls = polls_new.filter(d => d.state == "US")
+				var polls_new = polls_new.filter(d => d.date > new Date(2019, 6, 1))
+
+
+
+				var length_from_july_2019 = (sim_date - new Date(2019, 6, 1)) / time_scale
+				//us trendline
+				var us_trendline = []
+				for (var b = 0; b < length_from_july_2019; b++) {
+
+					var run_date = new Date(2019, 6, 1)
+					run_date.setDate(run_date.getDate() + b);
+					var polls = us_polls.filter(d => d.created <= run_date)
+					polls.forEach((d, i) => {
+						d.grade_value = pollster_grade_value[pollster_grade_letter.indexOf(d.grade)]
+						d.population_adj = d.population == "lv" ? 1.33 : d.population == "rv" ? 1 : .7
+						d.n_adjusted = d.n > 4000 ? Math.pow((d.n - 4000), .2) + 27 : Math.pow(d.n, .4)
+						d.weight = d.n_adjusted * d.population_adj
+						d.sum = (d.dem_pct + d.gop_pct)
+						d.weight = Math.pow(d.weight, d.grade_value) * ((d.dem_pct + d.gop_pct) / 100)
+						d.weight = d.weight / (1 + (((run_date - d.date) / time_scale) / 20))
+						d.dem_adj = (d.dem_pct - (d.bias / 2)) + (d.population == "lv" ? 0 : -.5)
+						d.gop_adj = (d.gop_pct + (d.bias / 2)) + (d.population == "lv" ? 0 : .5)
+						d.margin = d.gop_adj - d.dem_adj
+						return d;
+					})
+					var poll_filtered = d3.nest()
+						.key(d => d.pollster_id)
+						.entries(polls)
+					var poll_filtered = poll_filtered.map(d => {
+						return d.values
+					})
+					var ps = []
+					for (c = 0; c < poll_filtered.length; c++) {
+						var f = poll_filtered[c]
+						f.sort((a, b) => b.weight - a.weight)
+						f.forEach((d, i) => {
+							d.weight = d.weight / Math.pow(i + 1, 3)
+							d.margin_weight = d.margin * d.weight
+						})
+						ps.push(f)
+					}
+					var psflat = ps.flat()
+
+					var us_avg = d3.sum(psflat, d => d.margin_weight) / d3.sum(psflat, d => d.weight)
+					var ts = {
+						date: timeformat(run_date),
+						margin: us_avg
+					}
+					us_trendline.push(ts)
+				}
+				var usflat = us_trendline.flat()
+				var us_index_date = usflat.map(d => {
+					return d.date
+				})
+				var us_index_margin = usflat.map(d => {
+					return d.margin
+				})
+				var current_us_poll_margin = us_index_margin[us_index_margin.length - 1]
+				var pa = []
+				for (let b = 0; b < states.length; b++) {
+					var polls = polls_new.filter(d => d.state == states[b])
+					polls.forEach((d, i) => {
+						d.grade_value = pollster_grade_value[pollster_grade_letter.indexOf(d.grade)]
+						d.population_adj = d.population == "lv" ? 1.33 : d.population == "rv" ? 1 : .7
+						d.n_adjusted = d.n > 4000 ? Math.pow((d.n - 4000), .2) + 27 : Math.pow(d.n, .4)
+						d.weight = d.n_adjusted * d.population_adj
+						d.sum = (d.dem_pct + d.gop_pct)
+						d.weight = Math.pow(d.weight, d.grade_value) * ((d.dem_pct + d.gop_pct) / 100)
+						d.weight = d.weight / (1 + (((sim_date - d.date) / time_scale) / 20))
+						d.change = current_us_poll_margin - us_index_margin[us_index_date.indexOf(d.date_raw)]
+						d.dem_adj = (d.dem_pct - (d.bias / 2)) + (d.population == "lv" ? 0 : -1) + d.change / 2
+						d.gop_adj = (d.gop_pct + (d.bias / 2)) + (d.population == "lv" ? 0 : 1) - d.change / 2
+						d.margin = d.gop_adj - d.dem_adj
+						return d;
+					})
+					var poll_filtered = d3.nest()
+						.key(d => d.pollster_id)
+						.entries(polls)
+					var poll_filtered = poll_filtered.map(d => {
+						return d.values
+					})
+					var ps = []
+					for (c = 0; c < poll_filtered.length; c++) {
+						var f = poll_filtered[c]
+						f.sort((a, b) => b.weight - a.weight)
+						f.forEach((d, i) => {
+							d.weight = d.weight / Math.pow(i + 1, 3)
+							d.margin_weight = d.margin * d.weight
+							d.gop_weight = d.gop_adj * d.weight
+							d.dem_weight = d.dem_adj * d.weight
+						})
+						ps.push(f)
+					}
+					var psflat = ps.flat()
+					var gop_avg = d3.sum(psflat, d => d.gop_weight) / d3.sum(psflat, d => d.weight)
+					var dem_avg = d3.sum(psflat, d => d.dem_weight) / d3.sum(psflat, d => d.weight)
+					var third_avg = +data[b].third_index * national_third_party
+					var total_left = 100 - gop_avg - dem_avg - third_avg
+					var weight = d3.sum(psflat, d => d.weight)
+					var sp = {
+						state: states[b],
+						margin: isNaN(gop_avg) == true ? 0 : gop_avg - dem_avg,
+						gop: isNaN(gop_avg) == true ? 0 : gop_avg + total_left / 2,
+						dem: isNaN(gop_avg) == true ? 0 : dem_avg + total_left / 2,
+						third: isNaN(gop_avg) == true ? 0 : third_avg,
+						weight: weight
+					}
+					pa.push(sp)
+				}
+				var state_poll_avg = pa.flat()
+
+				var ssindexstate = state_poll_avg.map(d => {
+					return d.state
+				})
+				var ssindexmargin = state_poll_avg.map(d => {
+					return d.margin
+				})
+
+				var ss = []
+				for (let b = 0; b < states.length; b++) {
+					var scompare = state_similarity.filter(d => d.state == states[b])
+
+					scompare.forEach((d, i) => {
+						d.value = Math.pow(d.value, .4)
+						d.polling_avg = ssindexmargin[ssindexstate.indexOf(d.state_comp)]
+						d.ssinde = d.polling_avg == 0 ? "-" : d.polling_avg - d.comp_pvi
+						d.ss = d.value * d.ssinde
+						return d
+					})
+					var sumval = d3.sum(scompare, d => d.value)
+					var sumss = d3.sum(scompare, d => d.ss)
+					var ssraw = sumss / sumval
+					var ssfinal = +data[b].pvi + ssraw
+					var third = +data[b].third_index * national_third_party
+					var ssindex = {
+						state: states[b],
+						index: ssfinal,
+						third: third,
+						gop: (100 - third) / 2 + (ssfinal / 2),
+						dem: (100 - third) / 2 - (ssfinal / 2)
+					}
+
+
+
+					ss.push(ssindex)
+				}
+
+
+				var fund = data.map((d, i) => {
+					return {
+						state: d.state,
+						index: +d.pvi + current_us_poll_margin,
+						third: +d.third_index * national_third_party,
+
+					}
+				})
+				fund.forEach((d, i) => {
+					d.gop = (100 - d.third) / 2 + (d.index / 2)
+					d.dem = (100 - d.third) / 2 - (d.index / 2)
+					return d
+				})
+
+				console.log(fund)
+				console.log(state_poll_avg)
+				console.log(experts_ratings)
+				console.log(ss)
+
+
+				var pv = []
+				for (let b = 0; b < states.length; b++) {
+					var f = fund[b]
+					var p = state_poll_avg[b]
+					var e = experts_ratings[b]
+					var s = ss[b]
+					var sum =  fund_weight+p.weight+experts_weight
+					var gop_raw = f.gop * fund_weight + p.gop * p.weight + e.gop * experts_weight + s.gop * ss_weight
+					var gop = gop_raw/sum
+					var dem_raw = f.dem * fund_weight + p.dem * p.weight + e.dem * experts_weight + s.dem * ss_weight
+					
+					var third_raw = f.third * fund_weight + p.third * p.weight + e.third * experts_weight + s.third * ss_weight
+					console.log(gop)
+				}
+			})
 		})
 	})
-}
+})
