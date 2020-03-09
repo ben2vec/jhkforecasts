@@ -17,9 +17,7 @@ var color = d3.scaleOrdinal()
 
 var candidate_color = color(keycand)
 
-var color = d3.scaleLinear()
-  .domain([0,30])
-  .range(["white", candidate_color ])
+
 
 var div = d3.select("#bubblemap").append("div")
   .attr("class", "tooltip")
@@ -51,7 +49,7 @@ d3.csv("candbubblemaps.csv", function (error, data) {
 
   var tool_tip1 = d3.tip()
     .attr("class", "d3-tip")
-    .offset([0,100])
+    .offset([0, 100])
     .html("<div id='tipDiv1'></div>");
 
   svg.call(tool_tip1);
@@ -60,7 +58,7 @@ d3.csv("candbubblemaps.csv", function (error, data) {
     .attr('class', 'gLegend')
     .attr("transform", "translate(" + 700 + "," + 30 + ")")
 
-  
+
 
 
 
@@ -68,12 +66,13 @@ d3.csv("candbubblemaps.csv", function (error, data) {
     .data(data)
     .enter()
     .append("a")
-    .attr("xlink:href", d => d.state )
+    .attr("xlink:href", d => d.state)
     .append("circle")
     .attr("cx", d => x(d.xValue))
     .attr("cy", d => y(d.yValue))
     .attr("r", d => d.radius)
-    .style("fill", d => color(d.delegates))
+    .style("fill", d => candidate_color)
+    .attr("opacity", d => d.delegates / 100)
     .on('mouseover', function (d) {
 
       d3.select(this)
@@ -100,7 +99,7 @@ d3.csv("candbubblemaps.csv", function (error, data) {
         .style("text-anchor", "middle");
 
       tipSVG.append("text")
-        .text(d.vote+"%")
+        .text(d.vote + "%")
         .attr("y", 50)
         .attr("x", 150)
         .attr("fill", "#black")
@@ -108,7 +107,7 @@ d3.csv("candbubblemaps.csv", function (error, data) {
         .style("font-size", "15")
         .style("text-anchor", "end");
 
-        tipSVG.append("text")
+      tipSVG.append("text")
         .text(d.delegates)
         .attr("y", 80)
         .attr("x", 150)
@@ -117,7 +116,7 @@ d3.csv("candbubblemaps.csv", function (error, data) {
         .style("font-size", "15")
         .style("text-anchor", "end");
 
-        tipSVG.append("text")
+      tipSVG.append("text")
         .text("Vote Share -->")
         .attr("y", 50)
         .attr("x", 20)
@@ -126,7 +125,7 @@ d3.csv("candbubblemaps.csv", function (error, data) {
         .style("font-size", "15")
         .style("text-anchor", "start");
 
-        tipSVG.append("text")
+      tipSVG.append("text")
         .text("Delegates -->")
         .attr("y", 80)
         .attr("x", 20)
@@ -161,7 +160,7 @@ d3.csv("candbubblemaps.csv", function (error, data) {
     .attr("fill", d => d.delegates > 35 ? "white" : "black")
     .on('mouseover', function (d) {
 
-      
+
 
 
       tool_tip1.show();
@@ -184,7 +183,7 @@ d3.csv("candbubblemaps.csv", function (error, data) {
         .style("text-anchor", "middle");
 
       tipSVG.append("text")
-        .text(d.vote+"%")
+        .text(d.vote + "%")
         .attr("y", 50)
         .attr("x", 150)
         .attr("fill", "#black")
@@ -192,7 +191,7 @@ d3.csv("candbubblemaps.csv", function (error, data) {
         .style("font-size", "15")
         .style("text-anchor", "end");
 
-        tipSVG.append("text")
+      tipSVG.append("text")
         .text(d.delegates)
         .attr("y", 80)
         .attr("x", 150)
@@ -201,7 +200,7 @@ d3.csv("candbubblemaps.csv", function (error, data) {
         .style("font-size", "15")
         .style("text-anchor", "end");
 
-        tipSVG.append("text")
+      tipSVG.append("text")
         .text("Vote Share -->")
         .attr("y", 50)
         .attr("x", 20)
@@ -210,7 +209,7 @@ d3.csv("candbubblemaps.csv", function (error, data) {
         .style("font-size", "15")
         .style("text-anchor", "start");
 
-        tipSVG.append("text")
+      tipSVG.append("text")
         .text("Delegates -->")
         .attr("y", 80)
         .attr("x", 20)
@@ -221,12 +220,12 @@ d3.csv("candbubblemaps.csv", function (error, data) {
 
 
     })
-    .on('mouseout',tool_tip1.hide
-      );
+    .on('mouseout', tool_tip1.hide
+    );
 
-  
+
   svg.append("text")
-    .text(keycand+"'s Delegates")
+    .text(keycand + "'s Delegates")
     .attr("x", 200)
     .attr("y", 50)
     .attr("text-anchor", "middle")
@@ -234,40 +233,42 @@ d3.csv("candbubblemaps.csv", function (error, data) {
     .attr("font-weight", "700")
     .attr("font-size", "20")
     .attr("fill", "black")
- 
-  svg.append("circle")
-  .attr("cx", 550)
-  .attr("cy", 300)
-  .attr("r", 4.781)
-  .style("fill", color(5))
 
   svg.append("circle")
-  .attr("cx", 573)
-  .attr("cy", 300)
-  .attr("r", 6.761)
-  .style("fill", color(10))
+    .attr("cx", 550)
+    .attr("cy", 300)
+    .attr("r", 4.781)
+    .style("fill", candidate_color)
+    .attr("opacity",.05)
+  svg.append("circle")
+    .attr("cx", 573)
+    .attr("cy", 300)
+    .attr("r", 6.761)
+    .style("fill", candidate_color)
+    .attr("opacity",.1)
+  svg.append("circle")
+    .attr("cx", 600)
+    .attr("cy", 300)
+    .attr("r", 9.561)
+    .style("fill", candidate_color)
+    .attr("opacity",.2)
 
   svg.append("circle")
-  .attr("cx", 600)
-  .attr("cy", 300)
-  .attr("r", 9.561)
-  .style("fill", color(20))
-
-
-  svg.append("circle")
-  .attr("cx", 638)
-  .attr("cy", 300)
-  .attr("r", 15.21)
-  .style("fill", color(50))
+    .attr("cx", 638)
+    .attr("cy", 300)
+    .attr("r", 15.21)
+    .style("fill", candidate_color)
+    .attr("opacity",.5)
 
   svg.append("circle")
-  .attr("cx", 690)
-  .attr("cy", 300)
-  .attr("r", 21.38)
-  .style("fill", color(100))
+    .attr("cx", 690)
+    .attr("cy", 300)
+    .attr("r", 21.38)
+    .style("fill", candidate_color)
+    .attr("opacity",1)
 
   svg.append("text")
-  .text("5")
+    .text("5")
     .attr("x", 550)
     .attr("y", 265)
     .attr("text-anchor", "middle")
@@ -276,8 +277,8 @@ d3.csv("candbubblemaps.csv", function (error, data) {
     .attr("font-size", "10")
     .attr("fill", "black")
 
-    svg.append("text")
-  .text("10")
+  svg.append("text")
+    .text("10")
     .attr("x", 573)
     .attr("y", 265)
     .attr("text-anchor", "middle")
@@ -287,8 +288,8 @@ d3.csv("candbubblemaps.csv", function (error, data) {
     .attr("fill", "black")
 
 
-    svg.append("text")
-  .text("20")
+  svg.append("text")
+    .text("20")
     .attr("x", 600)
     .attr("y", 265)
     .attr("text-anchor", "middle")
@@ -297,8 +298,8 @@ d3.csv("candbubblemaps.csv", function (error, data) {
     .attr("font-size", "10")
     .attr("fill", "black")
 
-    svg.append("text")
-  .text("50")
+  svg.append("text")
+    .text("50")
     .attr("x", 638)
     .attr("y", 265)
     .attr("text-anchor", "middle")
@@ -306,27 +307,27 @@ d3.csv("candbubblemaps.csv", function (error, data) {
     .attr("font-weight", "700")
     .attr("font-size", "10")
     .attr("fill", "black")
-    
-    svg.append("text")
+
+  svg.append("text")
     .text("100")
-      .attr("x", 690)
-      .attr("y", 265)
-      .attr("text-anchor", "middle")
-      .attr("font-family", "brandon-grotesque")
-      .attr("font-weight", "700")
-      .attr("font-size", "10")
-      .attr("fill", "black")
+    .attr("x", 690)
+    .attr("y", 265)
+    .attr("text-anchor", "middle")
+    .attr("font-family", "brandon-grotesque")
+    .attr("font-weight", "700")
+    .attr("font-size", "10")
+    .attr("fill", "black")
 
-      svg.append("text")
+  svg.append("text")
     .text("Projected Delegates")
-      .attr("x", 620)
-      .attr("y", 240)
-      .attr("text-anchor", "middle")
-      .attr("font-family", "brandon-grotesque")
-      .attr("font-weight", "700")
-      .attr("font-size", "15")
-      .attr("fill", "black")
+    .attr("x", 620)
+    .attr("y", 240)
+    .attr("text-anchor", "middle")
+    .attr("font-family", "brandon-grotesque")
+    .attr("font-weight", "700")
+    .attr("font-size", "15")
+    .attr("fill", "black")
 
-    
+
 
 })

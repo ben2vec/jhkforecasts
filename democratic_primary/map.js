@@ -93,6 +93,7 @@ d3.csv("map.csv", function (data) {
       .style("stroke", "#fff")
       .style("stroke-width", "1")
       .style("fill", function (d) { return color(d.properties.vote); })
+      
       .attr("text-anchor", "middle").on('mouseover', function (d) {
 
         d3.select(this)
