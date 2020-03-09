@@ -1,21 +1,27 @@
-<!DOCTYPE HTML>
-<meta charset="utf-8">
 <html>
-<head>
 
+<head>
   <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:site" content="@jhkforecast">
-	<meta name="twitter:creator" content="@jhkersting">
-	<meta name="twitter:title" content="North Carolina Primary">
-	<meta name="twitter:description" content="Who is leading the race for the North Carolina Primary">
-	<meta name="twitter:image"
-		content="https://jhkforecasts.com/democratic_primary-02.png">
-	<title>North Carolina Primary</title>
-	<script data-ad-client="ca-pub-8025120308040073" async
-		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  
+
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@jhkforecast">
+  <meta name="twitter:creator" content="@jhkersting">
+  <meta name="twitter:title" content="Democratic Primary Simulator">
+  <meta name="twitter:description" content="Simulate the 2020 Democratic Primary for yourself!">
+  <meta name="twitter:image"
+    content="https://jhkforecasts.com/democratic_primary-02.png">
+  <title>Democratic Primary Simulator</title>
+</head>
+
+<head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140782021-2"></script>
   <script>
@@ -25,8 +31,7 @@
 
     gtag('config', 'UA-140782021-2');
   </script>
-  <script data-ad-client="ca-pub-8025120308040073" async
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
   <link rel="icon" href="https://jkstats76.files.wordpress.com/2019/02/cropped-site-icon.png?w=32" sizes="32x32">
   <link rel="icon" href="https://jkstats76.files.wordpress.com/2019/02/cropped-site-icon.png?w=192" sizes="192x192">
 
@@ -34,20 +39,40 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
   <link rel="stylesheet" href="https://use.typekit.net/htk2wjy.css">
   <link rel="stylesheet" href="index.css">
+  <script src="https:////cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script>
 
 
 
-</style>
-
+  </style>
 </head>
 
 <body>
-<script>
-  var keyState = "South Carolina"
-</script>
-<div id="pollavg"></div>
 
-<script src="test.js"></script>
+  <table>
+    <tbody>
+      <table style="border-collapse: collapse; border: none;margin-top: 20px;" cellspacing="0" cellpadding="0" width="100%"
+    height=100px>
+    <tbody>
+      <tr>
+        <td style="width: 33%; border-right: solid grey 1.0pt; " valign="middle" width="33%">
+          <p style="font-size:  10px;" id="res"></p>
+        </td>
+        <td style="width: 33%; border-right: solid grey 1.0pt; border-left: none; " valign="middle" width="33%">
+          <a href="https://projects.jhkforecasts.com/presidential_forecast/">
+            <img style="text-align: center;" src="presforecastmenu-01.svg">
+        </td>
+        <td style="width: 33%; ; " valign="middle" width="33%">
+          <a href="https://projects.jhkforecasts.com/senate_forecast/">
+            <img style="text-align: center;" src="senateforecastmenu-01.svg">
+        </td>
+      </tr>
+    </tbody>
+  </table>
+    </tbody>
+  </table>
+
+
+<script src="primarysimulation.js"></script>
 
 </body>
 </html>
