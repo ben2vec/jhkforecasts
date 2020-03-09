@@ -351,7 +351,7 @@ d3.csv("ssindex.csv", state_similarity => {
 					proj.tp = proj.third * proj.pct_vote
 					pv.push(proj)
 				}
-				console.log(pv) 
+				console.log(pv)
 
 				simres = []
 				simnatres = []
@@ -360,11 +360,12 @@ d3.csv("ssindex.csv", state_similarity => {
 					var demrand = Math.random()
 					var thirdrand = Math.random()
 					var sim = pv.map((d, j) => {
-                        return {
-                            state: d.state
+						return {
+							state: d.state
 						}
 					})
 					sim.forEach((d, i) => {
+						d.ev = pv[i].ev
 						d.gop_raw = jStat.normal.inv((goprand * 2 + Math.random()) / 3, pv[i].gop, pv[i].stdev)
 						d.dem_raw = jStat.normal.inv((demrand * 2 + Math.random()) / 3, pv[i].dem, pv[i].stdev)
 						d.third_raw = jStat.normal.inv((thirdrand * 2 + Math.random()) / 3, pv[i].third, pv[i].third / 2)
@@ -379,7 +380,7 @@ d3.csv("ssindex.csv", state_similarity => {
 						return d
 					})
 
-					sim.sort((a, b) => a.margin - b.margin)
+					sim.sort((a, b) => a.margin_sim - b.margin_sim)
 
 					sim.forEach(function (d, i) {
 						d.index = i + 1
@@ -402,7 +403,7 @@ d3.csv("ssindex.csv", state_similarity => {
 
 				var sim_results = simres.flat()
 				var national_results = simnatres.flat()
-
+				console.log(sim_results)
 
 				var gop_win = national_results.filter(d => d.winner == "gop").length * 100 / simulations
 				var dem_win = national_results.filter(d => d.winner == "dem").length * 100 / simulations
@@ -412,12 +413,22 @@ d3.csv("ssindex.csv", state_similarity => {
 
 				for (let b = 0; b < states.length; b++) {
 					var stres = sim_results.filter(d => d.state == states[b])
-					var stproj = pv.filter(d => d.state == states[b])
 
 					var forecast_date = timeformat(sim_date)
 					var state = states[b]
+					var ev = data[b].ev
+					var gop_win = stres.filter(d => d.winner == "gop").length * 100 / simulations
+					var dem_win = stres.filter(d => d.winner == "dem").length * 100 / simulations
+					var gop_p10 = pv[b].gop - pv[b].stdev * 1.28
+					var dem_p10 = pv[b].dem - pv[b].stdev * 1.28
+					var gop_vote = pv[b].gop
+					var dem_vote = pv[b].dem
+					var gop_p90 = pv[b].gop + pv[b].stdev * 1.28
+					var dem_p90 = pv[b].dem + pv[b].stdev * 1.28
+					var tp = stres.filter(d => d.tippingpoint == 1).length * 100 / simulations
 
-					var gop = [forecast_date, state, "gop", stres.filter(d => d.winner == "gop").length * 100 / simulations]
+
+					var gop = [forecast_date, state, +ev, "gop", gop_win, tp]
 					console.log(gop)
 				}
 
