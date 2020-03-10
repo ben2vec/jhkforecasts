@@ -1,5 +1,5 @@
 var economic_index = 1
-var incumbency_adv = 0
+var incumbency_adv = 2
 var national_third_party = 4
 var election_date = new Date(2020, 10, 3)
 var time_scale = 86400000
@@ -24,7 +24,7 @@ function update(input) {
 	var sim_month = array[0]
 	var sim_day = array[1]
 	var sim_year = array[2]
-	
+
 	var sim_date = new Date(sim_year, sim_month - 1, sim_day)
 
 	var days_until_election = (election_date - sim_date) / time_scale
@@ -88,10 +88,11 @@ function update(input) {
 			var ds = []
 			d3.csv("https://projects.jhkforecasts.com/presidential_forecast/simdata.csv", data => {
 
-
+				data[52].pvi = +data[52].pvi + 3
 				var states = data.map(d => {
 					return d.state
 				})
+				console.log(states)
 				var experts_ratings = data.map((d, i) => {
 					return {
 						state: d.state,
