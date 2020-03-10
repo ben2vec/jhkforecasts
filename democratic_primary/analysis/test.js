@@ -193,13 +193,13 @@ d3.csv("results.csv", results => {
                 states_results.push(f)
             }
 
-            console.log(states_results)
 
             var pollsters = polls_data.map((d, i) => {
                 return d.pollster
             })
 
             var ps = d3.set(pollsters).values()
+
 
 
             var pollsters_avg_rmse = ps.map((d, i) => {
@@ -213,11 +213,13 @@ d3.csv("results.csv", results => {
                 d.rmse = Math.sqrt(d3.sum(polls_data.filter(j => j.pollster == d.pollster), d => Math.pow(d.rmse, 2)) / d.polls)
                 return d;
             })
-
+            var flength = forecasters.map(d=>{
+                return forecasts_data.filter(j => j.forecaster == d.forecaster).length
+            })
             var forecasts_avg_rmse = forecasters.map((d, i) => {
                 return {
                     forecast: d.forecaster,
-                    rmse: Math.sqrt(d3.sum(forecasts_data.filter(j => j.forecaster == d.forecaster), d => Math.pow(d.rmse, 2)) / states.length),
+                    rmse: Math.sqrt(d3.sum(forecasts_data.filter(j => j.forecaster == d.forecaster), d => Math.pow(d.rmse, 2)) / flength[i]),
                 }
             })
 

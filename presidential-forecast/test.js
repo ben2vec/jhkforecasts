@@ -1,33 +1,32 @@
 var economic_index = 1
 var incumbency_adv = 0
+var national_third_party = 4
+var election_date = new Date(2020, 10, 3)
+var time_scale = 86400000
+var simulations = 50000
+var timeformat = d3.timeFormat("%m/%d/%y")
+var dataformat = d3.format(".3f")
+var fund_weight = 75
+var experts_weight = 40
+var polls_weight
+var ss_weight = 15
 
 var today = new Date()
-var daynum = d3.timeFormat("%d")
-var monthnum = d3.timeFormat("%m")
-var yearnum = d3.timeFormat("%Y")
-console.log(yearnum(today))
-document.getElementById("sim-month").value = monthnum(today)
-document.getElementById("sim-day").value = daynum(today)
-document.getElementById("sim-year").value = yearnum(today)
+var tformat = d3.timeFormat("%m/%d/%Y")
+var dateparse = d3.timeParse("%m/%d/%y")
+var timeparse = d3.timeParse("%m/%d/%y %H:%M")
+document.getElementById("sim").value = tformat(today)
 
-update(d3.select('#sim-month').property('value'), d3.select('#sim-day').property('value'), d3.select('#sim-year').property('value'))
-function update(inputmonth, inputday, inputyear) {
-	var sim_month = inputmonth
-	var sim_day = inputday
-	var sim_year = inputyear
-	var national_third_party = 4
+
+update(d3.select('#sim').property('value'))
+function update(input) {
+	var array = input.split("/")
+	var sim_month = array[0]
+	var sim_day = array[1]
+	var sim_year = array[2]
+	
 	var sim_date = new Date(sim_year, sim_month - 1, sim_day)
-	var election_date = new Date(2020, 10, 3)
-	var dateparse = d3.timeParse("%m/%d/%y")
-	var timeparse = d3.timeParse("%m/%d/%y %H:%M")
-	var time_scale = 86400000
-	var simulations = 50
-	var timeformat = d3.timeFormat("%m/%d/%y")
-	var dataformat = d3.format(".3f")
-	var fund_weight = 75
-	var experts_weight = 40
-	var polls_weight
-	var ss_weight = 15
+
 	var days_until_election = (election_date - sim_date) / time_scale
 	var variance = 0.0000004 * Math.pow(days_until_election, 3) - .00021 * Math.pow(days_until_election, 2) + 0.034 * days_until_election + 2.1
 	var exp = [
@@ -478,18 +477,12 @@ function update(inputmonth, inputday, inputyear) {
 					var res = pr.join("</br>")
 					document.getElementById("pr").innerHTML = res
 
-					var inmonth = d3.select("#sim-month")
+					var inmonth = d3.select("#sim")
 						.on("change", function () {
-							update(+this.value, inputday, inputyear);
+							update(this.value);
+
 						})
-					var inday = d3.select("#sim-day")
-						.on("change", function () {
-							update(inputmonth, +this.value, inputyear);
-						})
-					var inyear = d3.select("#sim-year")
-						.on("change", function () {
-							update(inputmonth, inputday, +this.value);
-						})
+
 				})
 			})
 		})
