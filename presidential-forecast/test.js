@@ -1,8 +1,8 @@
 var economic_index = 1
-var incumbency_adv = 1
+var incumbency_adv = 0
 
 var sim_month = 1
-var sim_day = 1
+var sim_day = 8
 var sim_year = 2020
 var national_third_party = 4
 var sim_date = new Date(sim_year, sim_month - 1, sim_day)
@@ -82,7 +82,6 @@ d3.csv("https://projects.jhkforecasts.com/presidential_forecast/ssindex.csv", st
 			var states = data.map(d => {
 				return d.state
 			})
-			console.log(states)
 			var experts_ratings = data.map((d, i) => {
 				return {
 					state: d.state,
@@ -158,6 +157,7 @@ d3.csv("https://projects.jhkforecasts.com/presidential_forecast/ssindex.csv", st
 				var polls_new = polls_new.filter(d => d.gop == "Trump")
 				var us_polls = polls_new.filter(d => d.state == "US")
 				var polls_new = polls_new.filter(d => d.date > new Date(2019, 6, 1))
+				var polls_new = polls_new.filter(d => d.date < sim_date)
 
 
 				
@@ -343,7 +343,7 @@ d3.csv("https://projects.jhkforecasts.com/presidential_forecast/ssindex.csv", st
 						gop: gop_raw / sum,
 						dem: dem_raw / sum,
 						third: third_raw / sum,
-						stdev: Math.sqrt(2.2 * Math.pow(stdev, 2)),
+						stdev: stdev,
 						pct_vote: +data[b].pct_vote
 					}
 					proj.margin = proj.gop - proj.dem
@@ -352,7 +352,6 @@ d3.csv("https://projects.jhkforecasts.com/presidential_forecast/ssindex.csv", st
 					proj.tp = proj.third * proj.pct_vote
 					pv.push(proj)
 				}
-				console.log(pv)
 
 				simres = []
 				simnatres = []
@@ -367,8 +366,8 @@ d3.csv("https://projects.jhkforecasts.com/presidential_forecast/ssindex.csv", st
 					})
 					sim.forEach((d, i) => {
 						d.ev = pv[i].ev
-						d.gop_raw = jStat.normal.inv((goprand * 2 + Math.random()) / 3, pv[i].gop, pv[i].stdev)
-						d.dem_raw = jStat.normal.inv((demrand * 2 + Math.random()) / 3, pv[i].dem, pv[i].stdev)
+						d.gop_raw = jStat.normal.inv((goprand * 2 + Math.random()) / 3, pv[i].gop,Math.sqrt(2.2 * Math.pow(pv[i].stdev, 2)) )
+						d.dem_raw = jStat.normal.inv((demrand * 2 + Math.random()) / 3, pv[i].dem, Math.sqrt(2.2 * Math.pow(pv[i].stdev, 2)))
 						d.third_raw = jStat.normal.inv((thirdrand * 2 + Math.random()) / 3, pv[i].third, pv[i].third / 2)
 						d.tot = d.gop_raw + d.dem_raw + d.third_raw
 						d.gop_sim = d.gop_raw / (d.tot / 100)
@@ -404,7 +403,6 @@ d3.csv("https://projects.jhkforecasts.com/presidential_forecast/ssindex.csv", st
 
 				var sim_results = simres.flat()
 				var national_results = simnatres.flat()
-				console.log(sim_results)
 
 				var gop_win1 = national_results.filter(d => d.winner == "gop").length * 100 / simulations
 				var dem_win1 = national_results.filter(d => d.winner == "dem").length * 100 / simulations
@@ -455,14 +453,13 @@ d3.csv("https://projects.jhkforecasts.com/presidential_forecast/ssindex.csv", st
 					var gop = [forecast_date, state, +ev, "gop", dataformat(gop_win),  dataformat(gop_p10), dataformat(gop_vote), dataformat(gop_p90),dataformat(tp),dataformat(gpoll_avg),dataformat(gfund_avg),dataformat(gss_avg),dataformat(gexpert_avg),poll_weight,fund_weight,ss_weight,experts_weight]
 					var dem = [forecast_date, state, +ev, "dem", dataformat(dem_win),  dataformat(dem_p10), dataformat(dem_vote), dataformat(dem_p90),dataformat(tp),dataformat(dpoll_avg),dataformat(dfund_avg),dataformat(dss_avg),dataformat(dexpert_avg),poll_weight,fund_weight,ss_weight,experts_weight]
 					var third = [forecast_date, state, +ev, "third", dataformat(third_win),  dataformat(third_p10), dataformat(third_vote), dataformat(third_p90),dataformat(tp),dataformat(tpoll_avg),dataformat(tfund_avg),dataformat(tss_avg),dataformat(texpert_avg),poll_weight,fund_weight,ss_weight,experts_weight]
-					console.log(gop)
 					pr.push(gop)
 					pr.push(dem)
 					pr.push(third)
 				}
-				var usgop =[timeformat(sim_date),"US",dataformat(gop_ev1),"gop",dataformat(gop_win1),,dataformat(gop_vote1),,,,,,,,,,]
-				var usdem =[timeformat(sim_date),"US",dataformat(dem_ev1),"dem",dataformat(dem_win1),,dataformat(dem_vote1),,,,,,,,,,]
-				var usthird =[timeformat(sim_date),"US",0,"third",dataformat(third_win1),,dataformat(third_vote1),,,,,,,,,,]
+				var usgop =[timeformat(sim_date),"US",dataformat(gop_ev1),"gop",dataformat(gop_win1),,dataformat(gop_vote1),,,,,,,,,,,]
+				var usdem =[timeformat(sim_date),"US",dataformat(dem_ev1),"dem",dataformat(dem_win1),,dataformat(dem_vote1),,,,,,,,,,,]
+				var usthird =[timeformat(sim_date),"US",0,"third",dataformat(third_win1),,dataformat(third_vote1),,,,,,,,,,,]
 
 				pr.push(usgop)
 				pr.push(usdem)

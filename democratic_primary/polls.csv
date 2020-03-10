@@ -1,218 +1,231 @@
 State,Pollster,Grade,Sample,Date,weight,Biden,Bloomberg,Booker,Buttigieg,Klobuchar,Sanders,Steyer,Warren,Yang,link
-US,Ipsos,B+,541  rv,2020-03-09 00:00:00,46.8,47,0,0,0,0,30,0,0,0,https://www.reuters.com/article/us-usa-election-democrats-poll/biden-not-sanders-gains-in-popularity-after-warren-drops-out-reuters-ipsos-poll-idUSKBN20W31R
-US,Quinnipiac University,A,559  rv,2020-03-08 00:00:00,65.7,54,0,0,0,0,35,0,0,0,https://poll.qu.edu/national/release-detail?ReleaseID=3657
-Wisconsin,YouGov,B-,192  lv,2020-03-08 00:00:00,20.7,49,0,0,0,0,38,0,0,0,https://docs.cdn.yougov.com/fwvdnnbigm/20200308_yahoo_primary_crosstabs.pdf
-Pennsylvania,YouGov,B-,260  lv,2020-03-08 00:00:00,23.6,59,0,0,0,0,31,0,0,0,https://docs.cdn.yougov.com/fwvdnnbigm/20200308_yahoo_primary_crosstabs.pdf
-Michigan,YouGov,B-,201  lv,2020-03-08 00:00:00,21.1,54,0,0,0,0,41,0,0,0,https://docs.cdn.yougov.com/fwvdnnbigm/20200308_yahoo_primary_crosstabs.pdf
-Michigan,Monmouth University,A+,411  lv,2020-03-08 00:00:00,74.2,51,3,0,0,0,36,0,1,0,https://www.monmouth.edu/polling-institute/documents/monmouthpoll_mi_030920.pdf/
-Michigan,Target Insyght,B/C,600  lv,2020-03-08 00:00:00,33.6,65,2,0,0,1,24,0,3,0,https://www.realclearpolitics.com/docs/2020/Target_Insyght_Michigan_Dem_Primary_March_9_2020.pdf
-Michigan,Concord Public Opinion Partners,-,305  lv,2020-03-08 00:00:00,18.1,53,0,0,0,0,23,0,0,0,https://twitter.com/WelcomePartyNow/status/1237026009410650113
+Missouri,Optimus,C/D,402  lv,2020-03-09 00:00:00,14.1,68,0,0,0,0,29,0,0,0,https://github.com/optimus-forecasting-and-polling/0ptimus-Missouri-March-2020
+Washington,Swayable,-,1840  lv,2020-03-09 00:00:00,36.5,39,0,0,0,0,37,0,0,0,https://swayable.com/insights/democratic-primaries-2020-mini-tuesday-polling
+North Dakota,Swayable,-,383  lv,2020-03-09 00:00:00,18.7,65,0,0,0,0,31,0,0,0,https://swayable.com/insights/democratic-primaries-2020-mini-tuesday-polling
+Mississippi,Swayable,-,1247  lv,2020-03-09 00:00:00,30.1,68,0,0,0,0,28,0,0,0,https://swayable.com/insights/democratic-primaries-2020-mini-tuesday-polling
+Missouri,Swayable,-,2037  lv,2020-03-09 00:00:00,37.9,57,0,0,0,0,36,0,0,0,https://swayable.com/insights/democratic-primaries-2020-mini-tuesday-polling
+Michigan,Swayable,-,3126  lv,2020-03-09 00:00:00,44.2,62,0,0,0,0,28,0,0,0,https://swayable.com/insights/democratic-primaries-2020-mini-tuesday-polling
+Idaho,Swayable,-,833  lv,2020-03-09 00:00:00,26.0,52,0,0,0,0,37,0,0,0,https://swayable.com/insights/democratic-primaries-2020-mini-tuesday-polling
+Washington,Data for Progress,A-,751  lv,2020-03-09 00:00:00,72.0,49,0,0,0,0,43,0,6,0,https://www.dataforprogress.org/blog/2020/3/9/biden-ahead-mi-id
+Michigan,AtlasIntel,-,528  lv,2020-03-09 00:00:00,21.0,48,3,0,0,0,40,0,1,0,https://projects.fivethirtyeight.com/polls/20200309_MI.pdf
+Idaho,Data for Progress,A-,329  lv,2020-03-09 00:00:00,46.6,51,0,0,0,0,47,0,0,0,https://www.dataforprogress.org/blog/2020/3/9/biden-ahead-mi-id
+Michigan,Data for Progress,A-,320  lv,2020-03-09 00:00:00,45.9,59,0,0,0,0,38,0,0,0,https://www.dataforprogress.org/blog/2020/3/9/biden-ahead-mi-id
+US,Ipsos,B+,541  rv,2020-03-09 00:00:00,42.3,47,0,0,0,0,30,0,0,0,https://www.reuters.com/article/us-usa-election-democrats-poll/biden-not-sanders-gains-in-popularity-after-warren-drops-out-reuters-ipsos-poll-idUSKBN20W31R
+Michigan,ROI Rocket,-,1000  lv,2020-03-08 00:00:00,22.0,55,0,0,0,0,45,0,0,0,https://www.prnewswire.com/news-releases/new-poll-biden-leads-in-michigan-on-eve-of-primary-despite-key-weaknesses-301020034.html
+US,Morning Consult,B+,9593  lv,2020-03-08 00:00:00,175.5,56,0,0,0,0,38,0,0,0,https://morningconsult.com/2020-democratic-primary/
+US,Quinnipiac University,A,559  rv,2020-03-08 00:00:00,60.0,54,0,0,0,0,35,0,0,0,https://poll.qu.edu/national/release-detail?ReleaseID=3657
+Wisconsin,YouGov,B-,192  lv,2020-03-08 00:00:00,18.8,49,0,0,0,0,38,0,0,0,https://docs.cdn.yougov.com/fwvdnnbigm/20200308_yahoo_primary_crosstabs.pdf
+Pennsylvania,YouGov,B-,260  lv,2020-03-08 00:00:00,21.5,59,0,0,0,0,31,0,0,0,https://docs.cdn.yougov.com/fwvdnnbigm/20200308_yahoo_primary_crosstabs.pdf
+Michigan,YouGov,B-,201  lv,2020-03-08 00:00:00,19.2,54,0,0,0,0,41,0,0,0,https://docs.cdn.yougov.com/fwvdnnbigm/20200308_yahoo_primary_crosstabs.pdf
+Michigan,Monmouth University,A+,411  lv,2020-03-08 00:00:00,67.8,51,3,0,0,0,36,0,1,0,https://www.monmouth.edu/polling-institute/documents/monmouthpoll_mi_030920.pdf/
+Michigan,Target Insyght,B/C,600  lv,2020-03-08 00:00:00,30.2,65,2,0,0,1,24,0,3,0,https://www.realclearpolitics.com/docs/2020/Target_Insyght_Michigan_Dem_Primary_March_9_2020.pdf
+Michigan,Concord Public Opinion Partners,-,305  lv,2020-03-08 00:00:00,16.4,53,0,0,0,0,23,0,0,0,https://twitter.com/WelcomePartyNow/status/1237026009410650113
 Florida,Point Blank Political,-,3376  lv,2020-03-08 00:00:00,0.0,61,0,0,0,0,32,0,0,0,https://www.pointblankpolitical.com/2020-fl-dem-primary-poll/
-Florida,Point Blank Political,-,3376  lv,2020-03-08 00:00:00,40.9,55,2,0,2,1,29,1,4,0,https://www.pointblankpolitical.com/2020-fl-dem-primary-poll/
-Illinois,Ogden & Fry,B/C,457  lv,2020-03-08 00:00:00,30.0,55,0,0,0,0,26,0,0,0,https://drive.google.com/file/d/1rcSCjbOdGq1UzO-HuMBGOltviJrL-OKI/view
-Michigan,Mitchell Research & Communications,D,602  lv,2020-03-08 00:00:00,12.9,54,1,0,1,1,33,1,3,0,https://www.realclearpolitics.com/docs/2020/Mitchell_Poll_of_MI_Dem_Pres_Primary_Press_Release_3-8-20.pdf
-US,SSRS,A/B,540  rv,2020-03-07 00:00:00,42.9,52,0,0,0,0,36,0,7,0,https://cdn.cnn.com/cnn/2020/images/03/09/rel2a.-.2020.pdf
-Mississippi,Data for Progress,A-,340  lv,2020-03-07 00:00:00,41.2,77,0,0,0,0,22,0,0,0,https://www.dataforprogress.org/blog/2020/3/8/ahead-in-ms-mo
-Missouri,Data for Progress,A-,348  lv,2020-03-07 00:00:00,41.7,62,0,0,0,0,32,0,4,0,https://www.dataforprogress.org/blog/2020/3/8/ahead-in-ms-mo
-Michigan,EPIC-MRA,B+,400  lv,2020-03-06 00:00:00,35.1,51,0,0,0,0,27,0,0,0,https://www.freep.com/story/news/politics/elections/2020/03/09/polls-joe-biden-holds-lead-over-bernie-sanders-michigan-primaries/4994142002/
-Washington,SurveyUSA,A,550  lv,2020-03-06 00:00:00,62.6,36,0,0,0,0,35,0,10,0,https://www.king5.com/article/news/politics/elections/king-5-news-poll-washington-voters-split-between-biden-sanders/281-4806e740-809e-4c9b-9d21-2e4bfb4076b1
-Washington,Data for Progress,A-,737  lv,2020-03-05 00:00:00,57.0,47,0,0,0,0,44,0,5,0,https://www.dataforprogress.org/blog/2020/3/7/narrow-lead-for-biden-in-washington
-Missouri,Remington Research Group,C-,1040  lv,2020-03-05 00:00:00,17.0,53,0,0,0,0,31,0,0,0,https://moscout.com/s/MOSCOUT-030620.pptx
-US,Morning Consult,B+,1390  lv,2020-03-05 00:00:00,64.8,54,0,0,0,0,38,0,0,0,https://morningconsult.com/2020/03/06/democratic-primary-polling-joe-biden-bernie-sanders/
-Missouri,Emerson College,B-,425  lv,2020-03-05 00:00:00,23.3,48,0,0,0,0,44,0,0,0,https://emersonpolling.reportablenews.com/pr/missouri-2020-biden-with-slim-lead-on-sanders
+Florida,Point Blank Political,-,3376  lv,2020-03-08 00:00:00,37.2,55,2,0,2,1,29,1,4,0,https://www.pointblankpolitical.com/2020-fl-dem-primary-poll/
+Illinois,Ogden & Fry,B/C,457  lv,2020-03-08 00:00:00,27.0,55,0,0,0,0,26,0,0,0,https://drive.google.com/file/d/1rcSCjbOdGq1UzO-HuMBGOltviJrL-OKI/view
+Michigan,Mitchell Research & Communications,D,602  lv,2020-03-08 00:00:00,11.6,54,1,0,1,1,33,1,3,0,https://www.realclearpolitics.com/docs/2020/Mitchell_Poll_of_MI_Dem_Pres_Primary_Press_Release_3-8-20.pdf
+Florida,Florida Atlantic University,B/C,399  lv,2020-03-07 00:00:00,21.3,61,0,0,0,0,25,0,0,0,https://business.fau.edu/departments/economics/business-economics-polling/bepi-polls/bepi-polls-2020/biden-way-ahead-in-sunshine-state.php
+US,SSRS,A/B,540  rv,2020-03-07 00:00:00,39.5,52,0,0,0,0,36,0,7,0,https://cdn.cnn.com/cnn/2020/images/03/09/rel2a.-.2020.pdf
+Mississippi,Data for Progress,A-,340  lv,2020-03-07 00:00:00,37.9,77,0,0,0,0,22,0,0,0,https://www.dataforprogress.org/blog/2020/3/8/ahead-in-ms-mo
+Missouri,Data for Progress,A-,348  lv,2020-03-07 00:00:00,38.4,62,0,0,0,0,32,0,4,0,https://www.dataforprogress.org/blog/2020/3/8/ahead-in-ms-mo
+Michigan,EPIC-MRA,B+,400  lv,2020-03-06 00:00:00,32.4,51,0,0,0,0,27,0,0,0,https://ssl2002.webhosting.comcast.net/epic-mra/press/Stwd_DemPresPri_Mar10_2020_Media_Freq.pdf
+Washington,SurveyUSA,A,550  lv,2020-03-06 00:00:00,57.8,36,0,0,0,0,35,0,10,0,https://www.king5.com/article/news/politics/elections/king-5-news-poll-washington-voters-split-between-biden-sanders/281-4806e740-809e-4c9b-9d21-2e4bfb4076b1
+Washington,Data for Progress,A-,737  lv,2020-03-05 00:00:00,6.6,47,0,0,0,0,44,0,5,0,https://www.dataforprogress.org/blog/2020/3/7/narrow-lead-for-biden-in-washington
+Missouri,Remington Research Group,C-,1040  lv,2020-03-05 00:00:00,15.8,53,0,0,0,0,31,0,0,0,https://moscout.com/s/MOSCOUT-030620.pptx
+Missouri,Emerson College,B-,425  lv,2020-03-05 00:00:00,21.6,48,0,0,0,0,44,0,0,0,https://emersonpolling.reportablenews.com/pr/missouri-2020-biden-with-slim-lead-on-sanders
 US,Ipsos,B+,590  rv,2020-03-05 00:00:00,0.0,40,0,0,0,0,30,0,10,0,https://www.ipsos.com/sites/default/files/ct/news/documents/2020-03/topline_reuters_2020_election_tracker_03_05_2020.pdf
 US,Ipsos,B+,716  a,2020-03-05 00:00:00,0.0,34,0,0,0,0,30,0,9,0,https://www.ipsos.com/sites/default/files/ct/news/documents/2020-03/topline_reuters_2020_election_tracker_03_05_2020.pdf
 US,Ipsos,B+,669  a,2020-03-05 00:00:00,0.0,52,0,0,0,0,48,0,0,0,https://www.ipsos.com/sites/default/files/ct/news/documents/2020-03/topline_reuters_2020_election_tracker_03_05_2020.pdf
-US,Ipsos,B+,568  rv,2020-03-05 00:00:00,4.5,55,0,0,0,0,45,0,0,0,https://www.ipsos.com/sites/default/files/ct/news/documents/2020-03/topline_reuters_2020_election_tracker_03_05_2020.pdf
-Arizona,OH Predictive Insights/MBQF,B/C,398  lv,2020-03-04 00:00:00,18.9,45,12,0,0,0,17,0,13,0,https://ohpredictive.com/press-releases/2020-arziona-democratic-primary/
-Florida,St. Pete Polls,C+,1882  lv,2020-03-04 00:00:00,32.7,61,14,0,1,1,12,0,5,0,https://floridapolitics.com/archives/321847-latest-poll-of-florida-primary-shows-joe-biden-with-massive-lead-over-bernie-sanders
-US,YouGov,B-,722  lv,2020-03-03 00:00:00,24.3,28,11,0,7,4,24,0,19,0,https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/3rdraw493c/econTabReport.pdf
-US,Morning Consult,B+,961  lv,2020-03-03 00:00:00,5.6,36,19,0,0,0,28,0,14,0,https://morningconsult.com/2020/03/03/biden-reclaims-national-lead-with-buttigieg-klobuchar-exits/
-Michigan,Glengariff Group Inc.,B/C,600  lv,2020-03-02 00:00:00,18.3,29,11,0,6,3,23,0,7,0,https://www.scribd.com/document/450004461/Michigan-Democratic-primary-poll-results
-US,Harris Insights & Analytics,C+,453  rv,2020-03-02 00:00:00,14.2,28,20,0,0,3,23,0,11,0,https://thehill.com/hilltv/what-americas-thinking/485742-biden-surges-post-sc-primary-in-new-hill-harrisx-poll
+US,Ipsos,B+,568  rv,2020-03-05 00:00:00,4.2,55,0,0,0,0,45,0,0,0,https://www.ipsos.com/sites/default/files/ct/news/documents/2020-03/topline_reuters_2020_election_tracker_03_05_2020.pdf
+Arizona,OH Predictive Insights/MBQF,B/C,398  lv,2020-03-04 00:00:00,17.6,45,12,0,0,0,17,0,13,0,https://ohpredictive.com/press-releases/2020-arziona-democratic-primary/
+Florida,St. Pete Polls,C+,1882  lv,2020-03-04 00:00:00,30.4,61,14,0,1,1,12,0,5,0,https://floridapolitics.com/archives/321847-latest-poll-of-florida-primary-shows-joe-biden-with-massive-lead-over-bernie-sanders
+US,YouGov,B-,722  lv,2020-03-03 00:00:00,22.8,28,11,0,7,4,24,0,19,0,https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/3rdraw493c/econTabReport.pdf
+US,Morning Consult,B+,961  lv,2020-03-03 00:00:00,5.2,36,19,0,0,0,28,0,14,0,https://morningconsult.com/2020/03/03/biden-reclaims-national-lead-with-buttigieg-klobuchar-exits/
+Michigan,Glengariff Group Inc.,B/C,600  lv,2020-03-02 00:00:00,17.3,29,11,0,6,3,23,0,7,0,https://www.scribd.com/document/450004461/Michigan-Democratic-primary-poll-results
+US,Harris Insights & Analytics,C+,453  rv,2020-03-02 00:00:00,13.4,28,20,0,0,3,23,0,11,0,https://thehill.com/hilltv/what-americas-thinking/485742-biden-surges-post-sc-primary-in-new-hill-harrisx-poll
 US,Ipsos,B+,579  rv,2020-03-02 00:00:00,0.0,49,0,0,0,0,51,0,0,0,https://www.ipsos.com/sites/default/files/ct/news/documents/2020-03/topline_reuters_2020_election_tracker_03_02_2020_wu.pdf
 US,Ipsos,B+,682  a,2020-03-02 00:00:00,0.0,46,0,0,0,0,54,0,0,0,https://www.ipsos.com/sites/default/files/ct/news/documents/2020-03/topline_reuters_2020_election_tracker_03_02_2020_wu.pdf
 US,Ipsos,B+,579  rv,2020-03-02 00:00:00,0.0,0,44,0,0,0,56,0,0,0,https://www.ipsos.com/sites/default/files/ct/news/documents/2020-03/topline_reuters_2020_election_tracker_03_02_2020_wu.pdf
 US,Ipsos,B+,682  a,2020-03-02 00:00:00,0.0,0,45,0,0,0,55,0,0,0,https://www.ipsos.com/sites/default/files/ct/news/documents/2020-03/topline_reuters_2020_election_tracker_03_02_2020_wu.pdf
 US,Ipsos,B+,600  rv,2020-03-02 00:00:00,0.0,15,14,0,10,4,24,2,9,0,https://www.ipsos.com/sites/default/files/ct/news/documents/2020-03/topline_reuters_2020_election_tracker_03_02_2020_wu.pdf
 US,Ipsos,B+,735  a,2020-03-02 00:00:00,0.0,13,13,0,8,3,23,2,9,0,https://www.ipsos.com/sites/default/files/ct/news/documents/2020-03/topline_reuters_2020_election_tracker_03_02_2020_wu.pdf
-North Carolina,Spry Strategies,C/D,543  lv,2020-03-02 00:00:00,10.0,45,11,0,3,3,18,0,7,0,https://www.nccivitas.org/polling/biden-momentum-surging-48-hours-super-tuesday/
-Vermont,Data for Progress,A-,236  lv,2020-03-02 00:00:00,23.0,16,8,0,1,0,57,0,16,0,https://www.dataforprogress.org/memos/super-tuesday-final-polling
-Utah,Data for Progress,A-,622  lv,2020-03-02 00:00:00,39.4,23,17,0,7,3,29,0,19,0,https://www.dataforprogress.org/memos/super-tuesday-final-polling
-Maine,Data for Progress,A-,385  lv,2020-03-02 00:00:00,30.6,25,18,0,1,1,34,0,20,0,https://www.dataforprogress.org/memos/super-tuesday-final-polling
-Oklahoma,Data for Progress,A-,300  lv,2020-03-02 00:00:00,26.1,35,19,0,0,0,28,0,16,0,https://www.dataforprogress.org/memos/super-tuesday-final-polling
-Arkansas,Data for Progress,A-,300  lv,2020-03-02 00:00:00,26.1,36,22,0,2,1,23,0,15,0,https://www.dataforprogress.org/memos/super-tuesday-final-polling
-Alabama,Data for Progress,A-,237  lv,2020-03-02 00:00:00,23.0,47,18,0,0,0,22,0,12,0,https://www.dataforprogress.org/memos/super-tuesday-final-polling
-Minnesota,Data for Progress,A-,650  lv,2020-03-02 00:00:00,40.4,27,16,0,0,2,32,0,21,0,https://www.dataforprogress.org/memos/super-tuesday-final-polling
-Tennessee,Data for Progress,A-,368  lv,2020-03-02 00:00:00,29.9,34,20,0,2,2,27,0,15,0,https://www.dataforprogress.org/memos/super-tuesday-final-polling
-Colorado,Data for Progress,A-,464  lv,2020-03-02 00:00:00,33.8,18,16,0,8,4,32,0,21,0,https://www.dataforprogress.org/memos/super-tuesday-final-polling
-Massachusetts,Data for Progress,A-,301  lv,2020-03-02 00:00:00,26.9,26,15,0,2,1,26,0,28,0,https://www.dataforprogress.org/memos/super-tuesday-final-polling
-Virginia,Data for Progress,A-,327  lv,2020-03-02 00:00:00,28.1,39,18,0,0,0,24,0,17,0,https://www.dataforprogress.org/memos/super-tuesday-final-polling
-North Carolina,Data for Progress,A-,334  lv,2020-03-02 00:00:00,28.4,36,18,0,3,2,27,0,14,0,https://www.dataforprogress.org/memos/super-tuesday-final-polling
-Texas,Data for Progress,A-,300  lv,2020-03-02 00:00:00,26.1,30,20,0,4,3,28,0,15,0,https://www.dataforprogress.org/memos/super-tuesday-final-polling
-California,Data for Progress,A-,516  lv,2020-03-02 00:00:00,35.7,25,17,0,5,3,32,0,16,0,https://www.dataforprogress.org/memos/super-tuesday-final-polling
-Vermont,Swayable,-,147  lv,2020-03-02 00:00:00,8.5,11,16,0,5,2,48,0,17,0,https://swayable.com/insights/democratic-primaries-2020-super-tuesday-polling
-Virginia,Swayable,-,1435  lv,2020-03-02 00:00:00,19.4,36,20,0,4,3,20,3,11,0,https://swayable.com/insights/democratic-primaries-2020-super-tuesday-polling
-Utah,Swayable,-,143  lv,2020-03-02 00:00:00,8.4,27,29,0,7,6,22,1,6,0,https://swayable.com/insights/democratic-primaries-2020-super-tuesday-polling
-Texas,Swayable,-,1378  lv,2020-03-02 00:00:00,19.1,27,20,0,5,3,28,3,12,0,https://swayable.com/insights/democratic-primaries-2020-super-tuesday-polling
-Tennessee,Swayable,-,1527  lv,2020-03-02 00:00:00,19.8,28,17,0,8,6,27,1,9,0,https://swayable.com/insights/democratic-primaries-2020-super-tuesday-polling
-Oklahoma,Swayable,-,472  lv,2020-03-02 00:00:00,13.0,38,11,0,1,1,26,1,13,0,https://swayable.com/insights/democratic-primaries-2020-super-tuesday-polling
-North Carolina,Swayable,-,1209  lv,2020-03-02 00:00:00,18.2,36,18,0,4,4,23,1,10,0,https://swayable.com/insights/democratic-primaries-2020-super-tuesday-polling
-Minnesota,Swayable,-,1472  lv,2020-03-02 00:00:00,19.5,20,14,0,4,21,27,1,8,0,https://swayable.com/insights/democratic-primaries-2020-super-tuesday-polling
-Maine,Swayable,-,209  lv,2020-03-02 00:00:00,9.7,22,28,0,10,2,27,0,11,0,https://swayable.com/insights/democratic-primaries-2020-super-tuesday-polling
-Massachusetts,Swayable,-,917  lv,2020-03-02 00:00:00,16.5,17,18,0,11,5,27,4,15,0,https://swayable.com/insights/democratic-primaries-2020-super-tuesday-polling
-Colorado,Swayable,-,921  lv,2020-03-02 00:00:00,16.5,20,19,0,12,4,29,0,12,0,https://swayable.com/insights/democratic-primaries-2020-super-tuesday-polling
-California,Swayable,-,3388  lv,2020-03-02 00:00:00,26.4,21,19,0,8,3,29,4,10,0,https://swayable.com/insights/democratic-primaries-2020-super-tuesday-polling
-Arkansas,Swayable,-,714  lv,2020-03-02 00:00:00,15.1,28,25,0,8,7,17,1,10,0,https://swayable.com/insights/democratic-primaries-2020-super-tuesday-polling
-Alabama,Swayable,-,949  lv,2020-03-02 00:00:00,16.7,42,18,0,3,1,20,2,10,0,https://swayable.com/insights/democratic-primaries-2020-super-tuesday-polling
-Maine,Change Research,C,507  lv,2020-03-02 00:00:00,13.3,24,10,0,0,0,43,0,16,0,https://twitter.com/ChangePolls/status/1234698273631326209
-Virginia,AtlasIntel,-,545  lv,2020-03-02 00:00:00,13.7,42,11,0,1,1,28,0,10,0,https://projects.fivethirtyeight.com/polls/20200302_VA.pdf
-Virginia,Change Research,C,510  lv,2020-03-02 00:00:00,13.3,45,10,0,0,4,25,0,13,0,https://twitter.com/ChangePolls/status/1234689837447299074
-Texas,AtlasIntel,-,486  lv,2020-03-02 00:00:00,11.0,25,16,0,5,3,35,0,9,0,https://projects.fivethirtyeight.com/polls/20200302_TX.pdf
-California,AtlasIntel,-,727  lv,2020-03-02 00:00:00,12.7,26,15,0,3,1,34,0,15,0,https://projects.fivethirtyeight.com/polls/20200302_CA.pdf
-Texas,Elucd,-,833  lv,2020-03-01 00:00:00,13.7,20,14,0,7,5,31,0,13,0,https://elucd.ghost.io/elucd-super-tuesday-democratic-primary-results-3-2-20/
-North Carolina,Elucd,-,657  lv,2020-03-01 00:00:00,12.6,25,15,0,6,6,26,0,12,0,https://elucd.ghost.io/elucd-super-tuesday-democratic-primary-results-3-2-20/
-Colorado,Elucd,-,561  lv,2020-03-01 00:00:00,11.9,10,9,0,10,5,34,0,14,0,https://elucd.ghost.io/elucd-super-tuesday-democratic-primary-results-3-2-20/
-US,Morning Consult,B+,2656  lv,2020-03-01 00:00:00,2.5,26,17,0,10,3,29,0,11,0,https://morningconsult.com/2020/03/02/post-south-carolina-poll-joe-biden/
+North Carolina,Spry Strategies,C/D,543  lv,2020-03-02 00:00:00,9.4,45,11,0,3,3,18,0,7,0,https://www.nccivitas.org/polling/biden-momentum-surging-48-hours-super-tuesday/
+Vermont,Data for Progress,A-,236  lv,2020-03-02 00:00:00,21.7,16,8,0,1,0,57,0,16,0,https://www.dataforprogress.org/memos/super-tuesday-final-polling
+Utah,Data for Progress,A-,622  lv,2020-03-02 00:00:00,37.2,23,17,0,7,3,29,0,19,0,https://www.dataforprogress.org/memos/super-tuesday-final-polling
+Maine,Data for Progress,A-,385  lv,2020-03-02 00:00:00,28.9,25,18,0,1,1,34,0,20,0,https://www.dataforprogress.org/memos/super-tuesday-final-polling
+Oklahoma,Data for Progress,A-,300  lv,2020-03-02 00:00:00,24.6,35,19,0,0,0,28,0,16,0,https://www.dataforprogress.org/memos/super-tuesday-final-polling
+Arkansas,Data for Progress,A-,300  lv,2020-03-02 00:00:00,24.6,36,22,0,2,1,23,0,15,0,https://www.dataforprogress.org/memos/super-tuesday-final-polling
+Alabama,Data for Progress,A-,237  lv,2020-03-02 00:00:00,21.7,47,18,0,0,0,22,0,12,0,https://www.dataforprogress.org/memos/super-tuesday-final-polling
+Minnesota,Data for Progress,A-,650  lv,2020-03-02 00:00:00,38.1,27,16,0,0,2,32,0,21,0,https://www.dataforprogress.org/memos/super-tuesday-final-polling
+Tennessee,Data for Progress,A-,368  lv,2020-03-02 00:00:00,28.2,34,20,0,2,2,27,0,15,0,https://www.dataforprogress.org/memos/super-tuesday-final-polling
+Colorado,Data for Progress,A-,464  lv,2020-03-02 00:00:00,31.9,18,16,0,8,4,32,0,21,0,https://www.dataforprogress.org/memos/super-tuesday-final-polling
+Massachusetts,Data for Progress,A-,301  lv,2020-03-02 00:00:00,25.4,26,15,0,2,1,26,0,28,0,https://www.dataforprogress.org/memos/super-tuesday-final-polling
+Virginia,Data for Progress,A-,327  lv,2020-03-02 00:00:00,26.5,39,18,0,0,0,24,0,17,0,https://www.dataforprogress.org/memos/super-tuesday-final-polling
+North Carolina,Data for Progress,A-,334  lv,2020-03-02 00:00:00,26.8,36,18,0,3,2,27,0,14,0,https://www.dataforprogress.org/memos/super-tuesday-final-polling
+Texas,Data for Progress,A-,300  lv,2020-03-02 00:00:00,24.6,30,20,0,4,3,28,0,15,0,https://www.dataforprogress.org/memos/super-tuesday-final-polling
+California,Data for Progress,A-,516  lv,2020-03-02 00:00:00,33.7,25,17,0,5,3,32,0,16,0,https://www.dataforprogress.org/memos/super-tuesday-final-polling
+Vermont,Swayable,-,147  lv,2020-03-02 00:00:00,8.0,11,16,0,5,2,48,0,17,0,https://swayable.com/insights/democratic-primaries-2020-super-tuesday-polling
+Virginia,Swayable,-,1435  lv,2020-03-02 00:00:00,18.2,36,20,0,4,3,20,3,11,0,https://swayable.com/insights/democratic-primaries-2020-super-tuesday-polling
+Utah,Swayable,-,143  lv,2020-03-02 00:00:00,7.9,27,29,0,7,6,22,1,6,0,https://swayable.com/insights/democratic-primaries-2020-super-tuesday-polling
+Texas,Swayable,-,1378  lv,2020-03-02 00:00:00,17.9,27,20,0,5,3,28,3,12,0,https://swayable.com/insights/democratic-primaries-2020-super-tuesday-polling
+Tennessee,Swayable,-,1527  lv,2020-03-02 00:00:00,18.6,28,17,0,8,6,27,1,9,0,https://swayable.com/insights/democratic-primaries-2020-super-tuesday-polling
+Oklahoma,Swayable,-,472  lv,2020-03-02 00:00:00,12.2,38,11,0,1,1,26,1,13,0,https://swayable.com/insights/democratic-primaries-2020-super-tuesday-polling
+North Carolina,Swayable,-,1209  lv,2020-03-02 00:00:00,17.1,36,18,0,4,4,23,1,10,0,https://swayable.com/insights/democratic-primaries-2020-super-tuesday-polling
+Minnesota,Swayable,-,1472  lv,2020-03-02 00:00:00,18.4,20,14,0,4,21,27,1,8,0,https://swayable.com/insights/democratic-primaries-2020-super-tuesday-polling
+Maine,Swayable,-,209  lv,2020-03-02 00:00:00,9.1,22,28,0,10,2,27,0,11,0,https://swayable.com/insights/democratic-primaries-2020-super-tuesday-polling
+Massachusetts,Swayable,-,917  lv,2020-03-02 00:00:00,15.5,17,18,0,11,5,27,4,15,0,https://swayable.com/insights/democratic-primaries-2020-super-tuesday-polling
+Colorado,Swayable,-,921  lv,2020-03-02 00:00:00,15.5,20,19,0,12,4,29,0,12,0,https://swayable.com/insights/democratic-primaries-2020-super-tuesday-polling
+California,Swayable,-,3388  lv,2020-03-02 00:00:00,24.8,21,19,0,8,3,29,4,10,0,https://swayable.com/insights/democratic-primaries-2020-super-tuesday-polling
+Arkansas,Swayable,-,714  lv,2020-03-02 00:00:00,14.2,28,25,0,8,7,17,1,10,0,https://swayable.com/insights/democratic-primaries-2020-super-tuesday-polling
+Alabama,Swayable,-,949  lv,2020-03-02 00:00:00,15.7,42,18,0,3,1,20,2,10,0,https://swayable.com/insights/democratic-primaries-2020-super-tuesday-polling
+Maine,Change Research,C,507  lv,2020-03-02 00:00:00,12.5,24,10,0,0,0,43,0,16,0,https://twitter.com/ChangePolls/status/1234698273631326209
+Virginia,AtlasIntel,-,545  lv,2020-03-02 00:00:00,12.8,42,11,0,1,1,28,0,10,0,https://projects.fivethirtyeight.com/polls/20200302_VA.pdf
+Virginia,Change Research,C,510  lv,2020-03-02 00:00:00,12.5,45,10,0,0,4,25,0,13,0,https://twitter.com/ChangePolls/status/1234689837447299074
+Texas,AtlasIntel,-,486  lv,2020-03-02 00:00:00,10.4,25,16,0,5,3,35,0,9,0,https://projects.fivethirtyeight.com/polls/20200302_TX.pdf
+California,AtlasIntel,-,727  lv,2020-03-02 00:00:00,12.1,26,15,0,3,1,34,0,15,0,https://projects.fivethirtyeight.com/polls/20200302_CA.pdf
+Texas,Elucd,-,833  lv,2020-03-01 00:00:00,13.0,20,14,0,7,5,31,0,13,0,https://elucd.ghost.io/elucd-super-tuesday-democratic-primary-results-3-2-20/
+North Carolina,Elucd,-,657  lv,2020-03-01 00:00:00,11.9,25,15,0,6,6,26,0,12,0,https://elucd.ghost.io/elucd-super-tuesday-democratic-primary-results-3-2-20/
+Colorado,Elucd,-,561  lv,2020-03-01 00:00:00,11.3,10,9,0,10,5,34,0,14,0,https://elucd.ghost.io/elucd-super-tuesday-democratic-primary-results-3-2-20/
+US,Morning Consult,B+,2656  lv,2020-03-01 00:00:00,2.3,26,17,0,10,3,29,0,11,0,https://morningconsult.com/2020/03/02/post-south-carolina-poll-joe-biden/
 California,Point Blank Political,-,1220  lv,2020-03-01 00:00:00,0.0,0,0,0,0,0,43,0,40,0,https://www.pointblankpolitical.com/2020-ca-dem-primary-post-sc/
 California,Point Blank Political,-,1220  lv,2020-03-01 00:00:00,0.0,0,30,0,0,0,56,0,0,0,https://www.pointblankpolitical.com/2020-ca-dem-primary-post-sc/
 California,Point Blank Political,-,1220  lv,2020-03-01 00:00:00,0.0,41,0,0,0,0,48,0,0,0,https://www.pointblankpolitical.com/2020-ca-dem-primary-post-sc/
-California,Point Blank Political,-,1220  lv,2020-03-01 00:00:00,17.2,22,10,0,6,3,34,1,14,0,https://www.pointblankpolitical.com/2020-ca-dem-primary-post-sc/
-Texas,Emerson College,B-,450  lv,2020-03-01 00:00:00,18.0,26,16,0,5,4,31,2,14,0,http://emersonpolling.com/2020/03/02/texas-2020-sanders-with-slight-lead-over-biden-heading-into-super-tuesday/
-California,Emerson College,B-,545  lv,2020-03-01 00:00:00,19.6,21,11,0,7,5,38,2,16,0,http://emersonpolling.com/2020/03/02/california-2020-sanders-positioned-to-capture-california-on-super-tuesday/
-US,IBD/TIPP,A/B,325  rv,2020-02-29 00:00:00,17.7,20,13,0,7,6,23,1,17,0,https://projects.fivethirtyeight.com/polls/20200304_National.xlsx
-California,Suffolk University,A-,500  lv,2020-02-29 00:00:00,31.3,14,16,0,7,5,35,3,12,0,https://www.suffolk.edu/-/media/suffolk/documents/academics/research-at-suffolk/suprc/polls/other-states/2020/3-1-2020_final_ca_marginals.pdf
-Texas,YouGov,B-,635  lv,2020-02-29 00:00:00,19.2,26,13,0,6,6,30,1,17,0,https://drive.google.com/file/d/1weevKvGFYvyHzEpUfU_ilzpFm1GrSM7-/view
-California,YouGov,B-,1411  lv,2020-02-29 00:00:00,26.9,19,12,0,9,4,31,3,18,0,https://drive.google.com/file/d/12inCh6uWKgHaqw6wpbLX-hewghd4H_np/view
-Massachusetts,Suffolk University,A-,500  lv,2020-02-29 00:00:00,31.3,11,13,0,12,5,24,2,22,0,https://www.suffolk.edu/-/media/suffolk/documents/academics/research-at-suffolk/suprc/polls/massachusetts2/2020/2-29-2020-ma_marginals.pdf
-Maryland,Gonzales Research & Marketing Strategies Inc.,B/C,331  lv,2020-02-28 00:00:00,11.3,19,15,0,5,4,23,0,8,0,https://projects.fivethirtyeight.com/polls/20200306_MD.pdf
-California,YouGov,B-,1020  lv,2020-02-28 00:00:00,2.8,19,13,0,9,6,28,4,18,0,https://www.hoover.org/sites/default/files/hoover_ca_primary_crosstabs_20200228.pdf
-North Carolina,High Point University,A/B,274  lv,2020-02-28 00:00:00,17.9,14,20,2,8,4,28,4,12,0,http://www.highpoint.edu/src/files/2020/03/70memoA.pdf
+California,Point Blank Political,-,1220  lv,2020-03-01 00:00:00,16.2,22,10,0,6,3,34,1,14,0,https://www.pointblankpolitical.com/2020-ca-dem-primary-post-sc/
+Texas,Emerson College,B-,450  lv,2020-03-01 00:00:00,17.0,26,16,0,5,4,31,2,14,0,http://emersonpolling.com/2020/03/02/texas-2020-sanders-with-slight-lead-over-biden-heading-into-super-tuesday/
+California,Emerson College,B-,545  lv,2020-03-01 00:00:00,18.5,21,11,0,7,5,38,2,16,0,http://emersonpolling.com/2020/03/02/california-2020-sanders-positioned-to-capture-california-on-super-tuesday/
+US,IBD/TIPP,A/B,325  rv,2020-02-29 00:00:00,16.9,20,13,0,7,6,23,1,17,0,https://projects.fivethirtyeight.com/polls/20200304_National.xlsx
+California,Suffolk University,A-,500  lv,2020-02-29 00:00:00,29.7,14,16,0,7,5,35,3,12,0,https://www.suffolk.edu/-/media/suffolk/documents/academics/research-at-suffolk/suprc/polls/other-states/2020/3-1-2020_final_ca_marginals.pdf
+Texas,YouGov,B-,635  lv,2020-02-29 00:00:00,18.2,26,13,0,6,6,30,1,17,0,https://drive.google.com/file/d/1weevKvGFYvyHzEpUfU_ilzpFm1GrSM7-/view
+California,YouGov,B-,1411  lv,2020-02-29 00:00:00,25.5,19,12,0,9,4,31,3,18,0,https://drive.google.com/file/d/12inCh6uWKgHaqw6wpbLX-hewghd4H_np/view
+Massachusetts,Suffolk University,A-,500  lv,2020-02-29 00:00:00,29.7,11,13,0,12,5,24,2,22,0,https://www.suffolk.edu/-/media/suffolk/documents/academics/research-at-suffolk/suprc/polls/massachusetts2/2020/2-29-2020-ma_marginals.pdf
+Maryland,Gonzales Research & Marketing Strategies Inc.,B/C,331  lv,2020-02-28 00:00:00,10.8,19,15,0,5,4,23,0,8,0,https://projects.fivethirtyeight.com/polls/20200306_MD.pdf
+California,YouGov,B-,1020  lv,2020-02-28 00:00:00,2.6,19,13,0,9,6,28,4,18,0,https://www.hoover.org/sites/default/files/hoover_ca_primary_crosstabs_20200228.pdf
+North Carolina,High Point University,A/B,274  lv,2020-02-28 00:00:00,17.1,14,20,2,8,4,28,4,12,0,http://www.highpoint.edu/src/files/2020/03/70memoA.pdf
 North Carolina,High Point University,A/B,472  rv,2020-02-28 00:00:00,0.0,14,18,2,8,3,31,4,11,0,http://www.highpoint.edu/src/files/2020/03/70memoA.pdf
-North Carolina,East Carolina University,-,499  lv,2020-02-28 00:00:00,11.1,29,14,0,4,5,25,3,11,0,https://surveyresearch-ecu.reportablenews.com/pr/biden-and-sanders-in-close-race-in-north-carolina-presidential-primary-potential-general-election-matchups-competitive
+North Carolina,East Carolina University,-,499  lv,2020-02-28 00:00:00,10.5,29,14,0,4,5,25,3,11,0,https://surveyresearch-ecu.reportablenews.com/pr/biden-and-sanders-in-close-race-in-north-carolina-presidential-primary-potential-general-election-matchups-competitive
 California,Point Blank Political,-,2276  lv,2020-02-28 00:00:00,0.0,0,0,0,0,0,46,0,36,0,https://www.pointblankpolitical.com/2020-ca-dem-primary-post-debate/
 California,Point Blank Political,-,2276  lv,2020-02-28 00:00:00,0.0,0,32,0,0,0,57,0,0,0,https://www.pointblankpolitical.com/2020-ca-dem-primary-post-debate/
 California,Point Blank Political,-,2276  lv,2020-02-28 00:00:00,0.1,40,0,0,0,0,50,0,0,0,https://www.pointblankpolitical.com/2020-ca-dem-primary-post-debate/
 California,Point Blank Political,-,2276  lv,2020-02-28 00:00:00,0.0,14,12,0,9,3,34,3,14,0,https://www.pointblankpolitical.com/2020-ca-dem-primary-post-debate/
-South Carolina,AtlasIntel,-,477  lv,2020-02-28 00:00:00,10.4,35,0,0,8,4,24,12,7,0,https://projects.fivethirtyeight.com/polls/20200228_SC_2.pdf
-Texas,Marist College,A+,556  lv,2020-02-27 00:00:00,44.3,19,15,0,8,3,34,1,10,0,http://maristpoll.marist.edu/wp-content/uploads/2020/02/NBC-News_Marist-Poll-TX-NOS-and-Tables_2002281546.pdf
+South Carolina,AtlasIntel,-,477  lv,2020-02-28 00:00:00,9.8,35,0,0,8,4,24,12,7,0,https://projects.fivethirtyeight.com/polls/20200228_SC_2.pdf
+Texas,Marist College,A+,556  lv,2020-02-27 00:00:00,42.3,19,15,0,8,3,34,1,10,0,http://maristpoll.marist.edu/wp-content/uploads/2020/02/NBC-News_Marist-Poll-TX-NOS-and-Tables_2002281546.pdf
 Texas,Marist College,A+,1050  rv,2020-02-27 00:00:00,0.0,18,16,0,8,3,35,2,8,0,http://maristpoll.marist.edu/wp-content/uploads/2020/02/NBC-News_Marist-Poll-TX-NOS-and-Tables_2002281546.pdf
-North Carolina,Marist College,A+,568  lv,2020-02-27 00:00:00,44.9,24,15,0,7,5,26,2,11,0,http://maristpoll.marist.edu/wp-content/uploads/2020/02/NBC-News_Marist-Poll-NC-NOS-and-Tables_2002281453.pdf
+North Carolina,Marist College,A+,568  lv,2020-02-27 00:00:00,42.9,24,15,0,7,5,26,2,11,0,http://maristpoll.marist.edu/wp-content/uploads/2020/02/NBC-News_Marist-Poll-NC-NOS-and-Tables_2002281453.pdf
 North Carolina,Marist College,A+,974  rv,2020-02-27 00:00:00,0.0,22,15,0,7,5,27,2,11,0,http://maristpoll.marist.edu/wp-content/uploads/2020/02/NBC-News_Marist-Poll-NC-NOS-and-Tables_2002281453.pdf
-US,Change Research,C,821  lv,2020-02-27 00:00:00,12.3,9,3,0,14,8,40,2,20,0,https://www.electionscience.org/commentary-analysis/two-thirds-of-democratic-voters-support-multiple-candidates-but-current-polls-wont-tell-you-that/
-Texas,Data for Progress,A-,513  lv,2020-02-27 00:00:00,3.5,21,21,0,9,5,30,1,13,0,https://www.dataforprogress.org/blog/2020/2/27/sanders-leads-in-texas-and-north-carolina
-North Carolina,Data for Progress,A-,536  lv,2020-02-27 00:00:00,3.6,25,18,0,10,6,27,1,11,0,https://www.dataforprogress.org/blog/2020/2/27/sanders-leads-in-texas-and-north-carolina
-South Carolina,Trafalgar Group,C-,1081  lv,2020-02-27 00:00:00,11.0,44,0,0,10,6,23,11,6,0,https://www.fitsnews.com/2020/02/28/2020-first-in-the-south-democratic-presidential-primary-the-oracle-speaks/
-US,Morning Consult,B+,5334  lv,2020-02-27 00:00:00,1.2,21,17,0,10,4,33,3,11,0,https://morningconsult.com/2020/02/28/post-south-carolina-debate-polling-joe-biden/
-US,YouGov,B-,811  rv,2020-02-27 00:00:00,2.2,21,14,0,10,4,27,2,18,0,https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/1apn4drwsv/20200227_yahoo_primary_crosstabs.pdf
+US,Change Research,C,821  lv,2020-02-27 00:00:00,11.7,9,3,0,14,8,40,2,20,0,https://www.electionscience.org/commentary-analysis/two-thirds-of-democratic-voters-support-multiple-candidates-but-current-polls-wont-tell-you-that/
+Texas,Data for Progress,A-,513  lv,2020-02-27 00:00:00,3.3,21,21,0,9,5,30,1,13,0,https://www.dataforprogress.org/blog/2020/2/27/sanders-leads-in-texas-and-north-carolina
+North Carolina,Data for Progress,A-,536  lv,2020-02-27 00:00:00,3.4,25,18,0,10,6,27,1,11,0,https://www.dataforprogress.org/blog/2020/2/27/sanders-leads-in-texas-and-north-carolina
+South Carolina,Trafalgar Group,C-,1081  lv,2020-02-27 00:00:00,10.5,44,0,0,10,6,23,11,6,0,https://www.fitsnews.com/2020/02/28/2020-first-in-the-south-democratic-presidential-primary-the-oracle-speaks/
+US,Morning Consult,B+,5334  lv,2020-02-27 00:00:00,1.1,21,17,0,10,4,33,3,11,0,https://morningconsult.com/2020/02/28/post-south-carolina-debate-polling-joe-biden/
+US,YouGov,B-,811  rv,2020-02-27 00:00:00,2.1,21,14,0,10,4,27,2,18,0,https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/1apn4drwsv/20200227_yahoo_primary_crosstabs.pdf
 North Carolina,Spry Strategies,C/D,587  lv,2020-02-27 00:00:00,1.0,27,16,0,4,5,19,0,11,0,https://mcusercontent.com/259a50ef0a1608ab2bc2cf891/files/a58dc4e6-e2c2-49f5-9a17-84fdc61bc9f3/Civitas_Democratic_Presidential_Tracking_RD_2_Toplines.pdf
-South Carolina,Data for Progress,A-,1416  lv,2020-02-27 00:00:00,47.8,34,0,0,13,5,25,13,7,0,https://www.dataforprogress.org/blog/2020/2/27/biden-maintains-lead-in-south-carolina
-South Carolina,Emerson College,B-,425  lv,2020-02-27 00:00:00,14.9,41,0,0,11,6,25,11,5,0,http://emersonpolling.com/2020/02/27/south-carolina-2020-biden-poised-to-win-his-first-contest/
-South Carolina,Change Research,C,543  lv,2020-02-27 00:00:00,10.1,28,0,0,11,4,24,16,12,0,https://www.changeresearch.com/post/post-and-courier-change-research-south-carolina-primary
-Texas,University of Texas at Tyler,B/C,586  lv,2020-02-26 00:00:00,12.2,19,21,0,8,4,29,1,10,0,https://www.scribd.com/document/449521374/DMN-UTTyler-Poll-February-2020-Registered-voters
-Texas,SSRS,A/B,387  lv,2020-02-26 00:00:00,20.8,20,18,0,8,3,29,1,15,0,https://cdn.cnn.com/cnn/2020/images/02/28/rel1_tx.pdf
-California,SSRS,A/B,488  lv,2020-02-26 00:00:00,23.4,13,12,0,7,6,35,3,14,0,https://cdn.cnn.com/cnn/2020/images/02/28/rel1_ca.pdf
-Texas,Univision/University of Houston/Latino Decisions/North Star Opinion Research,-,527  lv,2020-02-26 00:00:00,9.3,20,20,0,6,2,26,2,11,0,https://st1.uvnimg.com/ac/23/c0b90672493cbe07ae750f9b79c9/finalunivisionpolling-tx-weighted.pdf
-US,SurveyUSA,A,825  lv,2020-02-26 00:00:00,45.9,21,21,0,9,4,28,2,8,0,http://www.surveyusa.com/client/PollReport.aspx?g=3e396fbb-2173-478d-9abf-33406b33fc0b
-Massachusetts,MassINC Polling Group,A/B,426  lv,2020-02-26 00:00:00,22.4,9,13,0,14,6,25,2,17,0,https://www.wbur.org/news/2020/02/28/wbur-poll-sanders-opens-substantial-lead-in-massachusetts-challenging-warren-on-her-home-turf
-Utah,Harris Insights & Analytics,C+,298  lv,2020-02-26 00:00:00,9.3,6,19,0,18,4,28,0,15,0,https://www.deseret.com/utah/2020/2/27/21156476/poll-sanders-bloomberg-buttigieg-warren-biden-utah-super-tuesday-democratic-presidential-primary
-US,Fox News/Beacon Research/Shaw & Co. Research,A-,507  lv,2020-02-26 00:00:00,27.2,18,16,0,12,5,31,2,10,0,https://www.foxnews.com/politics/fox-news-poll-february-23-26-2020
-South Carolina,Starboard Communications,B/C,1102  lv,2020-02-26 00:00:00,19.4,40,0,0,9,6,11,12,9,0,https://projects.fivethirtyeight.com/polls/20200227_SC.pdf
-Florida,St. Pete Polls,C+,2788  lv,2020-02-26 00:00:00,3.0,34,25,0,8,4,13,1,5,0,http://stpetepolls.org/files/StPetePolls_2020_State_DEMprimaryFebruary26_AG3D.pdf
-California,"University of California, Berkeley",B/C,3002  lv,2020-02-25 00:00:00,24.9,8,12,0,11,6,34,2,17,1,https://escholarship.org/uc/item/40m769v7
-South Carolina,Monmouth University,A+,454  lv,2020-02-25 00:00:00,37.5,36,0,0,6,4,16,15,8,0,https://www.monmouth.edu/polling-institute/documents/monmouthpoll_sc_022720.pdf/
-Colorado,Magellan Strategies,B/C,500  lv,2020-02-25 00:00:00,13.0,11,11,0,12,6,27,1,15,0,https://magellanstrategies.com/magellan-strategies-colorado-democratic-presidential-primary/
-Colorado,Data for Progress,A-,471  lv,2020-02-25 00:00:00,3.2,10,14,0,14,6,34,0,20,0,https://www.dataforprogress.org/blog/2020/2/26/sanders-ahead-in-virginia-and-colorado
-Virginia,Data for Progress,A-,499  lv,2020-02-25 00:00:00,3.3,19,17,0,12,5,28,1,17,0,https://www.dataforprogress.org/blog/2020/2/26/sanders-ahead-in-virginia-and-colorado
-South Carolina,Clemson University,B/C,650  lv,2020-02-25 00:00:00,12.5,35,0,0,8,4,13,17,8,0,http://newsstand.clemson.edu/wp-content/uploads/2020/02/2020-Palmetto-Poll-Results.pdf
+South Carolina,Data for Progress,A-,1416  lv,2020-02-27 00:00:00,45.6,34,0,0,13,5,25,13,7,0,https://www.dataforprogress.org/blog/2020/2/27/biden-maintains-lead-in-south-carolina
+South Carolina,Emerson College,B-,425  lv,2020-02-27 00:00:00,14.2,41,0,0,11,6,25,11,5,0,http://emersonpolling.com/2020/02/27/south-carolina-2020-biden-poised-to-win-his-first-contest/
+South Carolina,Change Research,C,543  lv,2020-02-27 00:00:00,9.6,28,0,0,11,4,24,16,12,0,https://www.changeresearch.com/post/post-and-courier-change-research-south-carolina-primary
+Texas,University of Texas at Tyler,B/C,586  lv,2020-02-26 00:00:00,11.7,19,21,0,8,4,29,1,10,0,https://www.scribd.com/document/449521374/DMN-UTTyler-Poll-February-2020-Registered-voters
+Texas,SSRS,A/B,387  lv,2020-02-26 00:00:00,19.9,20,18,0,8,3,29,1,15,0,https://cdn.cnn.com/cnn/2020/images/02/28/rel1_tx.pdf
+California,SSRS,A/B,488  lv,2020-02-26 00:00:00,22.4,13,12,0,7,6,35,3,14,0,https://cdn.cnn.com/cnn/2020/images/02/28/rel1_ca.pdf
+Texas,Univision/University of Houston/Latino Decisions/North Star Opinion Research,-,527  lv,2020-02-26 00:00:00,8.9,20,20,0,6,2,26,2,11,0,https://st1.uvnimg.com/ac/23/c0b90672493cbe07ae750f9b79c9/finalunivisionpolling-tx-weighted.pdf
+US,SurveyUSA,A,825  lv,2020-02-26 00:00:00,43.8,21,21,0,9,4,28,2,8,0,http://www.surveyusa.com/client/PollReport.aspx?g=3e396fbb-2173-478d-9abf-33406b33fc0b
+Massachusetts,MassINC Polling Group,A/B,426  lv,2020-02-26 00:00:00,21.4,9,13,0,14,6,25,2,17,0,https://www.wbur.org/news/2020/02/28/wbur-poll-sanders-opens-substantial-lead-in-massachusetts-challenging-warren-on-her-home-turf
+Utah,Harris Insights & Analytics,C+,298  lv,2020-02-26 00:00:00,8.9,6,19,0,18,4,28,0,15,0,https://www.deseret.com/utah/2020/2/27/21156476/poll-sanders-bloomberg-buttigieg-warren-biden-utah-super-tuesday-democratic-presidential-primary
+US,Fox News/Beacon Research/Shaw & Co. Research,A-,507  lv,2020-02-26 00:00:00,25.9,18,16,0,12,5,31,2,10,0,https://www.foxnews.com/politics/fox-news-poll-february-23-26-2020
+South Carolina,Starboard Communications,B/C,1102  lv,2020-02-26 00:00:00,18.4,40,0,0,9,6,11,12,9,0,https://projects.fivethirtyeight.com/polls/20200227_SC.pdf
+Florida,St. Pete Polls,C+,2788  lv,2020-02-26 00:00:00,2.9,34,25,0,8,4,13,1,5,0,http://stpetepolls.org/files/StPetePolls_2020_State_DEMprimaryFebruary26_AG3D.pdf
+California,"University of California, Berkeley",B/C,3002  lv,2020-02-25 00:00:00,23.9,8,12,0,11,6,34,2,17,1,https://escholarship.org/uc/item/40m769v7
+South Carolina,Monmouth University,A+,454  lv,2020-02-25 00:00:00,35.9,36,0,0,6,4,16,15,8,0,https://www.monmouth.edu/polling-institute/documents/monmouthpoll_sc_022720.pdf/
+Colorado,Magellan Strategies,B/C,500  lv,2020-02-25 00:00:00,12.4,11,11,0,12,6,27,1,15,0,https://magellanstrategies.com/magellan-strategies-colorado-democratic-presidential-primary/
+Colorado,Data for Progress,A-,471  lv,2020-02-25 00:00:00,3.1,10,14,0,14,6,34,0,20,0,https://www.dataforprogress.org/blog/2020/2/26/sanders-ahead-in-virginia-and-colorado
+Virginia,Data for Progress,A-,499  lv,2020-02-25 00:00:00,3.1,19,17,0,12,5,28,1,17,0,https://www.dataforprogress.org/blog/2020/2/26/sanders-ahead-in-virginia-and-colorado
+South Carolina,Clemson University,B/C,650  lv,2020-02-25 00:00:00,12.0,35,0,0,8,4,13,17,8,0,http://newsstand.clemson.edu/wp-content/uploads/2020/02/2020-Palmetto-Poll-Results.pdf
 California,Point Blank Political,-,2098  lv,2020-02-25 00:00:00,0.0,11,11,0,9,4,34,3,13,0,https://www.pointblankpolitical.com/2020-ca-dem-primary-pre-debate/
-US,YouGov,B-,584  lv,2020-02-25 00:00:00,0.6,20,11,0,9,4,30,1,16,0,https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/zye3phsf7t/econTabReport.pdf
+US,YouGov,B-,584  lv,2020-02-25 00:00:00,0.5,20,11,0,9,4,30,1,16,0,https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/zye3phsf7t/econTabReport.pdf
 Texas,Public Policy Polling,B,1045  lv,2020-02-25 00:00:00,0.0,31,0,0,11,7,25,3,17,0,https://progresstexas.org/sites/default/files/February%202020%20Progress%20Texas-PPP%20Poll.pdf
 Texas,Public Policy Polling,B,1045  lv,2020-02-25 00:00:00,0.0,24,17,0,10,4,24,1,14,0,https://progresstexas.org/sites/default/files/February%202020%20Progress%20Texas-PPP%20Poll.pdf
 US,Ipsos,B+,2706  a,2020-02-25 00:00:00,0.0,13,14,0,8,4,25,3,8,0,https://fingfx.thomsonreuters.com/gfx/mkt/13/2507/2475/Topline%20Reuters%202020%20Election%20Tracker%2002%2025%202020.pdf
 US,Ipsos,B+,2244  rv,2020-02-25 00:00:00,0.0,15,15,0,10,4,26,3,10,0,https://fingfx.thomsonreuters.com/gfx/mkt/13/2507/2475/Topline%20Reuters%202020%20Election%20Tracker%2002%2025%202020.pdf
-North Carolina,Meredith College,-,430  lv,2020-02-24 00:00:00,7.5,18,17,1,10,4,20,1,11,1,https://www.meredith.edu/assets/images/content/Final_Meredith_College_Poll_Report_February_2020.pdf
-Virginia,Christopher Newport University,A/B,561  lv,2020-02-24 00:00:00,17.0,22,13,0,8,5,17,1,8,5,http://cnu.edu/wasoncenter/surveys/2020-02-28/
-Massachusetts,YouGov,B-,400  lv,2020-02-24 00:00:00,11.3,12,9,0,14,7,25,3,23,0,https://htv-prod-media.s3.amazonaws.com/files/supertuesdaymatoplines-1582851435.pdf
-South Carolina,East Carolina University,-,1142  lv,2020-02-24 00:00:00,12.3,31,0,0,6,2,23,20,8,0,https://surveyresearch-ecu.reportablenews.com/pr/biden-maintains-lead-in-south-carolina-sanders-in-second-steyer-a-close-third
+North Carolina,Meredith College,-,430  lv,2020-02-24 00:00:00,7.2,18,17,1,10,4,20,1,11,1,https://www.meredith.edu/assets/images/content/Final_Meredith_College_Poll_Report_February_2020.pdf
+Virginia,Christopher Newport University,A/B,561  lv,2020-02-24 00:00:00,16.5,22,13,0,8,5,17,1,8,5,http://cnu.edu/wasoncenter/surveys/2020-02-28/
+Massachusetts,YouGov,B-,400  lv,2020-02-24 00:00:00,10.9,12,9,0,14,7,25,3,23,0,https://htv-prod-media.s3.amazonaws.com/files/supertuesdaymatoplines-1582851435.pdf
+South Carolina,East Carolina University,-,1142  lv,2020-02-24 00:00:00,11.8,31,0,0,6,2,23,20,8,0,https://surveyresearch-ecu.reportablenews.com/pr/biden-maintains-lead-in-south-carolina-sanders-in-second-steyer-a-close-third
 US,Harris Insights & Analytics,C+,470  rv,2020-02-24 00:00:00,1.2,17,19,0,12,3,28,3,8,0,https://thehill.com/hilltv/what-americas-thinking/484534-sanders-lead-grows-post-nevada-in-new-hill-harrisx-poll
-North Carolina,Public Policy Polling,B,852  lv,2020-02-24 00:00:00,21.7,23,17,0,9,4,20,3,11,0,https://www.publicpolicypolling.com/wp-content/uploads/2020/02/NorthCarolinaResultsFebruary2020.pdf
-South Carolina,Public Policy Polling,B,866  lv,2020-02-24 00:00:00,21.8,36,0,0,7,3,21,7,8,0,https://www.publicpolicypolling.com/wp-content/uploads/2020/02/SouthCarolinaResultsFebruary2020.pdf
-Wisconsin,Marquette University Law School,A/B,464  lv,2020-02-23 00:00:00,20.1,15,17,0,13,11,29,1,9,0,https://law.marquette.edu/poll/wp-content/uploads/2020/02/MLSP58Toplines.pdf
-California,Change Research,C,1069  lv,2020-02-23 00:00:00,11.0,12,6,0,11,5,37,3,20,4,https://www.changeresearch.com/post/democratic-primary-california-kqed-poll-february
+North Carolina,Public Policy Polling,B,852  lv,2020-02-24 00:00:00,20.8,23,17,0,9,4,20,3,11,0,https://www.publicpolicypolling.com/wp-content/uploads/2020/02/NorthCarolinaResultsFebruary2020.pdf
+South Carolina,Public Policy Polling,B,866  lv,2020-02-24 00:00:00,20.9,36,0,0,7,3,21,7,8,0,https://www.publicpolicypolling.com/wp-content/uploads/2020/02/SouthCarolinaResultsFebruary2020.pdf
+Wisconsin,Marquette University Law School,A/B,464  lv,2020-02-23 00:00:00,19.3,15,17,0,13,11,29,1,9,0,https://law.marquette.edu/poll/wp-content/uploads/2020/02/MLSP58Toplines.pdf
+California,Change Research,C,1069  lv,2020-02-23 00:00:00,10.6,12,6,0,11,5,37,3,20,4,https://www.changeresearch.com/post/democratic-primary-california-kqed-poll-february
 North Carolina,Spry Strategies,C/D,561  lv,2020-02-23 00:00:00,0.2,20,20,0,3,6,20,0,9,0,https://mcusercontent.com/259a50ef0a1608ab2bc2cf891/files/0f490596-e46a-4d58-b52d-2c8a9a53d084/DemocraticPrimaryPoll_Civitas_0225.pdf
 US,Morning Consult,B+,2631  lv,2020-02-23 00:00:00,0.4,18,19,0,11,4,32,3,11,0,https://morningconsult.com/2020/02/24/bernie-sanders-rising-post-nevada-polling/
-Florida,Saint Leo University,C/D,342  lv,2020-02-22 00:00:00,5.1,25,25,0,11,5,17,1,7,0,http://polls.saintleo.edu/new-saint-leo-university-poll-confirms-narrowing-of-democratic-primary-field-to-three-candidates-just-ahead-of-super-tuesday/
-US,Saint Leo University,C/D,310  lv,2020-02-22 00:00:00,4.9,25,16,0,6,3,26,2,9,0,http://polls.saintleo.edu/new-saint-leo-university-poll-confirms-narrowing-of-democratic-primary-field-to-three-candidates-just-ahead-of-super-tuesday/
+Florida,Saint Leo University,C/D,342  lv,2020-02-22 00:00:00,4.9,25,25,0,11,5,17,1,7,0,http://polls.saintleo.edu/new-saint-leo-university-poll-confirms-narrowing-of-democratic-primary-field-to-three-candidates-just-ahead-of-super-tuesday/
+US,Saint Leo University,C/D,310  lv,2020-02-22 00:00:00,4.7,25,16,0,6,3,26,2,9,0,http://polls.saintleo.edu/new-saint-leo-university-poll-confirms-narrowing-of-democratic-primary-field-to-three-candidates-just-ahead-of-super-tuesday/
 US,YouGov,B-,6498  lv,2020-02-22 00:00:00,0.6,17,13,0,10,5,28,2,19,0,https://drive.google.com/file/d/1OpQxzzYY4MXgQMfo2j_XicB_tEUtt7eI/view
-South Carolina,YouGov,B-,1238  lv,2020-02-22 00:00:00,18.3,28,0,0,10,4,23,18,12,0,https://drive.google.com/file/d/1af1YadukuDouIbnoGHCAkIDgaRAXjr8M/view
-Missouri,Americana Analytics,-,1198  lv,2020-02-21 00:00:00,11.0,22,17,0,11,9,11,1,10,0,https://bloximages.newyork1.vip.townnews.com/kmov.com/content/tncms/assets/v3/editorial/0/b1/0b1dde3a-582a-11ea-bf4c-1fb275dfcdc2/5e55b447ac2f1.pdf.pdf
-Oklahoma,SoonerPoll.com,B/C,409  lv,2020-02-21 00:00:00,9.6,21,20,0,10,7,13,1,9,0,https://soonerpoll.com/wpcontent/uploads/2020/02/News9-6_DemocratPrezPrimary_Final.pdf
-South Carolina,Marist College,A+,539  lv,2020-02-21 00:00:00,34.4,27,0,0,9,5,23,15,8,0,http://maristpoll.marist.edu/wp-content/uploads/2020/02/NBC-News_Marist-Poll_SC-NOS-and-Tables_2002241049.pdf
+South Carolina,YouGov,B-,1238  lv,2020-02-22 00:00:00,17.6,28,0,0,10,4,23,18,12,0,https://drive.google.com/file/d/1af1YadukuDouIbnoGHCAkIDgaRAXjr8M/view
+Missouri,Americana Analytics,-,1198  lv,2020-02-21 00:00:00,10.6,22,17,0,11,9,11,1,10,0,https://bloximages.newyork1.vip.townnews.com/kmov.com/content/tncms/assets/v3/editorial/0/b1/0b1dde3a-582a-11ea-bf4c-1fb275dfcdc2/5e55b447ac2f1.pdf.pdf
+Oklahoma,SoonerPoll.com,B/C,409  lv,2020-02-21 00:00:00,9.2,21,20,0,10,7,13,1,9,0,https://soonerpoll.com/wpcontent/uploads/2020/02/News9-6_DemocratPrezPrimary_Final.pdf
+South Carolina,Marist College,A+,539  lv,2020-02-21 00:00:00,33.2,27,0,0,9,5,23,15,8,0,http://maristpoll.marist.edu/wp-content/uploads/2020/02/NBC-News_Marist-Poll_SC-NOS-and-Tables_2002241049.pdf
 South Carolina,Marist College,A+,997  rv,2020-02-21 00:00:00,0.0,25,0,0,9,5,24,15,8,0,http://maristpoll.marist.edu/wp-content/uploads/2020/02/NBC-News_Marist-Poll_SC-NOS-and-Tables_2002241049.pdf
-Florida,Florida Southern College,-,313  lv,2020-02-21 00:00:00,6.4,22,23,0,9,5,18,0,12,0,https://floridapolitics.com/archives/320403-poll-of-floridas-democratic-presidential-primary-2-24-20
-Nevada,Data for Progress,A-,1010  lv,2020-02-21 00:00:00,32.3,16,0,0,15,8,35,8,16,0,http://filesforprogress.org/datasets/2020/2/nv/nv_2_21_2020.pdf
-Nevada,AtlasIntel,-,517  lv,2020-02-21 00:00:00,8.0,11,0,0,14,5,38,11,9,0,https://projects.fivethirtyeight.com/polls/20200221_NV.pdf
-New York,Siena College,A-,315  rv,2020-02-20 00:00:00,14.7,13,21,0,9,9,25,0,11,0,https://scri.siena.edu/wp-content/uploads/2020/02/SNY0220-Crosstabs-1.pdf
+Florida,Florida Southern College,-,313  lv,2020-02-21 00:00:00,6.2,22,23,0,9,5,18,0,12,0,https://floridapolitics.com/archives/320403-poll-of-floridas-democratic-presidential-primary-2-24-20
+Nevada,Data for Progress,A-,1010  lv,2020-02-21 00:00:00,31.1,16,0,0,15,8,35,8,16,0,http://filesforprogress.org/datasets/2020/2/nv/nv_2_21_2020.pdf
+Nevada,AtlasIntel,-,517  lv,2020-02-21 00:00:00,7.7,11,0,0,14,5,38,11,9,0,https://projects.fivethirtyeight.com/polls/20200221_NV.pdf
+New York,Siena College,A-,315  rv,2020-02-20 00:00:00,14.2,13,21,0,9,9,25,0,11,0,https://scri.siena.edu/wp-content/uploads/2020/02/SNY0220-Crosstabs-1.pdf
 Wisconsin,YouGov,B-,428  lv,2020-02-20 00:00:00,1.2,13,13,0,12,9,30,0,12,0,https://elections.wisc.edu/first-2020-election-survey/
 Michigan,YouGov,B-,662  lv,2020-02-20 00:00:00,1.4,16,13,0,11,8,25,0,13,0,https://elections.wisc.edu/first-2020-election-survey/
 Pennsylvania,YouGov,B-,537  lv,2020-02-20 00:00:00,1.3,20,19,0,12,5,25,1,9,0,https://elections.wisc.edu/first-2020-election-survey/
-Minnesota,Mason-Dixon Polling & Research Inc.,B+,500  lv,2020-02-20 00:00:00,17.1,8,3,0,3,29,23,1,11,0,http://www.startribune.com/star-tribune-mpr-news-minnesota-poll-results-democratic-primary-klobuchar-sanders-warren-buttigieg-biden/567940781/
-California,University of Massachusetts Lowell,A/B,450  lv,2020-02-20 00:00:00,16.5,13,12,0,12,7,24,2,16,0,https://www.uml.edu/docs/2020-California-topline_tcm18-322536.pdf
+Minnesota,Mason-Dixon Polling & Research Inc.,B+,500  lv,2020-02-20 00:00:00,16.5,8,3,0,3,29,23,1,11,0,http://www.startribune.com/star-tribune-mpr-news-minnesota-poll-results-democratic-primary-klobuchar-sanders-warren-buttigieg-biden/567940781/
+California,University of Massachusetts Lowell,A/B,450  lv,2020-02-20 00:00:00,15.9,13,12,0,12,7,24,2,16,0,https://www.uml.edu/docs/2020-California-topline_tcm18-322536.pdf
 US,Morning Consult,B+,2609  lv,2020-02-20 00:00:00,0.2,19,17,0,11,5,30,3,12,0,https://morningconsult.com/2020/02/21/michael-bloomberg-polling-post-debate-las-vegas/
-Nevada,Emerson College,B-,425  lv,2020-02-20 00:00:00,10.9,16,0,0,17,11,30,10,12,0,http://emersonpolling.com/2020/02/20/nevada-2020-sanders-with-comfortable-lead-heading-into-caucus-tight-race-for-second-place/
-Maryland,Goucher College,-,371  lv,2020-02-19 00:00:00,6.1,18,16,0,7,6,24,0,6,0,https://www.goucher.edu/hughes-center/documents/Goucher-College-Poll-Feb-2020-Part-2.pdf
-Massachusetts,University of Massachusetts Lowell,A/B,450  lv,2020-02-19 00:00:00,16.2,14,12,0,15,9,21,2,20,0,https://www.uml.edu/docs/2020-Mass-topline_tcm18-322473.pdf
-Illinois,Victory Research,B/C,1208  lv,2020-02-19 00:00:00,14.4,20,15,0,11,6,26,3,7,0,https://projects.fivethirtyeight.com/polls/20200221_IL.pdf
-South Carolina,Winthrop University,A/B,443  lv,2020-02-19 00:00:00,15.3,24,0,0,7,4,19,15,6,1,https://www.winthrop.edu/winthroppoll/current-findings.aspx
-Minnesota,University of Massachusetts Lowell,A/B,450  lv,2020-02-19 00:00:00,16.2,9,9,0,10,27,21,0,16,0,https://www.uml.edu/docs/2020-MN-topline_tcm18-322443.pdf
+Nevada,Emerson College,B-,425  lv,2020-02-20 00:00:00,10.6,16,0,0,17,11,30,10,12,0,http://emersonpolling.com/2020/02/20/nevada-2020-sanders-with-comfortable-lead-heading-into-caucus-tight-race-for-second-place/
+Maryland,Goucher College,-,371  lv,2020-02-19 00:00:00,5.9,18,16,0,7,6,24,0,6,0,https://www.goucher.edu/hughes-center/documents/Goucher-College-Poll-Feb-2020-Part-2.pdf
+Massachusetts,University of Massachusetts Lowell,A/B,450  lv,2020-02-19 00:00:00,15.7,14,12,0,15,9,21,2,20,0,https://www.uml.edu/docs/2020-Mass-topline_tcm18-322473.pdf
+Illinois,Victory Research,B/C,1208  lv,2020-02-19 00:00:00,13.9,20,15,0,11,6,26,3,7,0,https://projects.fivethirtyeight.com/polls/20200221_IL.pdf
+South Carolina,Winthrop University,A/B,443  lv,2020-02-19 00:00:00,14.9,24,0,0,7,4,19,15,6,1,https://www.winthrop.edu/winthroppoll/current-findings.aspx
+Minnesota,University of Massachusetts Lowell,A/B,450  lv,2020-02-19 00:00:00,15.7,9,9,0,10,27,21,0,16,0,https://www.uml.edu/docs/2020-MN-topline_tcm18-322443.pdf
 California,Monmouth University,A+,408  lv,2020-02-19 00:00:00,0.0,0,31,0,0,0,48,0,0,0,https://www.monmouth.edu/polling-institute/documents/monmouthpoll_ca_022020.pdf/
 California,Monmouth University,A+,408  lv,2020-02-19 00:00:00,0.0,0,0,0,0,24,54,0,0,0,https://www.monmouth.edu/polling-institute/documents/monmouthpoll_ca_022020.pdf/
 California,Monmouth University,A+,408  lv,2020-02-19 00:00:00,0.0,0,0,0,26,0,51,0,0,0,https://www.monmouth.edu/polling-institute/documents/monmouthpoll_ca_022020.pdf/
 California,Monmouth University,A+,408  lv,2020-02-19 00:00:00,0.0,36,0,0,0,0,44,0,0,0,https://www.monmouth.edu/polling-institute/documents/monmouthpoll_ca_022020.pdf/
-California,Monmouth University,A+,408  lv,2020-02-19 00:00:00,27.1,17,13,0,9,4,24,5,10,0,https://www.monmouth.edu/polling-institute/documents/monmouthpoll_ca_022020.pdf/
+California,Monmouth University,A+,408  lv,2020-02-19 00:00:00,26.2,17,13,0,9,4,24,5,10,0,https://www.monmouth.edu/polling-institute/documents/monmouthpoll_ca_022020.pdf/
 Florida,St. Pete Polls,C+,2412  lv,2020-02-19 00:00:00,0.6,27,32,0,8,7,11,2,5,0,http://stpetepolls.org/files/StPetePolls_2020_State_DEMprimaryFebruary19_Z8U3J.pdf
-Washington,Elway Research,A/B,404  lv,2020-02-18 00:00:00,15.9,10,15,0,9,11,21,0,11,0,https://crosscut.com/sites/default/files/files/crosscutelway0220.pdf
-Texas,YouGov,B-,1352  lv,2020-02-18 00:00:00,1.8,20,12,0,11,7,20,1,17,0,https://uh.edu/hobby/texasprimary2020/icons/texaspresidentialvote.pdf
-Florida,Tel Opinion Research,B/C,800  lv,2020-02-18 00:00:00,11.1,20,26,0,8,5,13,2,7,1,https://www.politico.com/f/?id=00000170-63be-d956-a770-f7bf93630000
-Texas,University of Massachusetts Lowell,A/B,600  lv,2020-02-18 00:00:00,18.5,20,18,0,7,9,23,2,14,0,https://www.uml.edu/docs/2020-TX-topline_tcm18-322450.pdf
-North Carolina,University of Massachusetts Lowell,A/B,450  lv,2020-02-18 00:00:00,15.9,16,19,0,10,7,23,3,13,0,https://www.uml.edu/docs/2020-NC-topline_tcm18-322447.pdf
-South Carolina,University of Massachusetts Lowell,A/B,400  lv,2020-02-18 00:00:00,15.0,23,0,0,11,9,21,13,11,0,https://www.uml.edu/docs/2020-SC-Primary-topline_tcm18-322374.pdf
+Washington,Elway Research,A/B,404  lv,2020-02-18 00:00:00,15.3,10,15,0,9,11,21,0,11,0,https://crosscut.com/sites/default/files/files/crosscutelway0220.pdf
+Texas,YouGov,B-,1352  lv,2020-02-18 00:00:00,1.7,20,12,0,11,7,20,1,17,0,https://uh.edu/hobby/texasprimary2020/icons/texaspresidentialvote.pdf
+Florida,Tel Opinion Research,B/C,800  lv,2020-02-18 00:00:00,10.8,20,26,0,8,5,13,2,7,1,https://www.politico.com/f/?id=00000170-63be-d956-a770-f7bf93630000
+Texas,University of Massachusetts Lowell,A/B,600  lv,2020-02-18 00:00:00,17.9,20,18,0,7,9,23,2,14,0,https://www.uml.edu/docs/2020-TX-topline_tcm18-322450.pdf
+North Carolina,University of Massachusetts Lowell,A/B,450  lv,2020-02-18 00:00:00,15.4,16,19,0,10,7,23,3,13,0,https://www.uml.edu/docs/2020-NC-topline_tcm18-322447.pdf
+South Carolina,University of Massachusetts Lowell,A/B,400  lv,2020-02-18 00:00:00,14.5,23,0,0,11,9,21,13,11,0,https://www.uml.edu/docs/2020-SC-Primary-topline_tcm18-322374.pdf
 US,YouGov,B-,555  lv,2020-02-18 00:00:00,0.1,18,12,0,11,7,24,2,16,0,https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/m3wzkd0n59/econTabReport.pdf
-Massachusetts,Evan Falchuk and Lou DiNatale,-,453  lv,2020-02-18 00:00:00,6.8,13,13,0,13,14,17,2,16,0,https://projects.fivethirtyeight.com/polls/20200218_MA.xlsx
-US,Emerson College,B-,573  lv,2020-02-18 00:00:00,11.4,22,14,0,8,6,29,3,12,0,http://emersonpolling.com/2020/02/19/february-national-poll-sanders-takes-the-lead-for-democratic-nomination-bloomberg-on-the-rise/
-Illinois,Southern Illinois University,-,475  lv,2020-02-17 00:00:00,6.2,14,17,0,13,8,22,1,6,1,https://paulsimoninstitute.siu.edu/_common/documents/opinion-polling/simon-institute-poll/2020/PSPPI-Simon-Poll-2020-Election-Job-Approval.pdf
-US,ABC News/Washington Post,A+,350  lv,2020-02-17 00:00:00,23.2,15,15,0,9,7,33,2,13,0,https://docs.google.com/spreadsheets/d/1wB1N64r9A3Qwij9ds3b2jzdqvcPRWdgDbtEVY30troQ/edit
+Massachusetts,Evan Falchuk and Lou DiNatale,-,453  lv,2020-02-18 00:00:00,6.6,13,13,0,13,14,17,2,16,0,https://projects.fivethirtyeight.com/polls/20200218_MA.xlsx
+US,Emerson College,B-,573  lv,2020-02-18 00:00:00,11.0,22,14,0,8,6,29,3,12,0,http://emersonpolling.com/2020/02/19/february-national-poll-sanders-takes-the-lead-for-democratic-nomination-bloomberg-on-the-rise/
+Illinois,Southern Illinois University,-,475  lv,2020-02-17 00:00:00,6.0,14,17,0,13,8,22,1,6,1,https://paulsimoninstitute.siu.edu/_common/documents/opinion-polling/simon-institute-poll/2020/PSPPI-Simon-Poll-2020-Election-Job-Approval.pdf
+US,ABC News/Washington Post,A+,350  lv,2020-02-17 00:00:00,22.4,15,15,0,9,7,33,2,13,0,https://docs.google.com/spreadsheets/d/1wB1N64r9A3Qwij9ds3b2jzdqvcPRWdgDbtEVY30troQ/edit
 US,ABC News/Washington Post,A+,408  rv,2020-02-17 00:00:00,0.0,16,14,0,8,7,32,2,12,0,https://www.washingtonpost.com/context/washington-post-abc-news-poll-feb-14-17-2020/99074fb9-691e-4399-af1e-e6534d53a9d8/
 US,ABC News/Washington Post,A+,466  a,2020-02-17 00:00:00,0.0,17,14,0,7,6,32,2,11,0,https://www.washingtonpost.com/context/washington-post-abc-news-poll-feb-14-17-2020/99074fb9-691e-4399-af1e-e6534d53a9d8/
 US,Morning Consult,B+,15974  lv,2020-02-17 00:00:00,0.2,19,20,0,12,6,28,3,10,0,https://morningconsult.com/2020-democratic-primary/
-California,Public Policy Institute of California,A/B,573  lv,2020-02-17 00:00:00,16.4,14,12,0,12,5,32,3,13,0,https://www.ppic.org/wp-content/uploads/crosstabs-time-trends-methodology-0220.pdf
-US,SurveyUSA,A,1022  lv,2020-02-17 00:00:00,4.3,18,18,0,12,4,29,2,10,0,http://www.surveyusa.com/client/PollReport.aspx?g=e7feecd9-5374-42de-bfff-d16dba2dae6a
+California,Public Policy Institute of California,A/B,573  lv,2020-02-17 00:00:00,16.0,14,12,0,12,5,32,3,13,0,https://www.ppic.org/wp-content/uploads/crosstabs-time-trends-methodology-0220.pdf
+US,SurveyUSA,A,1022  lv,2020-02-17 00:00:00,4.1,18,18,0,12,4,29,2,10,0,http://www.surveyusa.com/client/PollReport.aspx?g=e7feecd9-5374-42de-bfff-d16dba2dae6a
 US,NBC News/Wall Street Journal,A/B,426  lv,2020-02-17 00:00:00,0.0,0,0,0,38,0,54,0,0,0,https://www.nbcnews.com/politics/meet-the-press/nbc-news-wsj-poll-sanders-opens-double-digit-national-lead-n1138191
-US,NBC News/Wall Street Journal,A/B,426  lv,2020-02-17 00:00:00,15.7,0,37,0,0,0,57,0,0,0,https://www.nbcnews.com/politics/meet-the-press/nbc-news-wsj-poll-sanders-opens-double-digit-national-lead-n1138191
+US,NBC News/Wall Street Journal,A/B,426  lv,2020-02-17 00:00:00,15.2,0,37,0,0,0,57,0,0,0,https://www.nbcnews.com/politics/meet-the-press/nbc-news-wsj-poll-sanders-opens-double-digit-national-lead-n1138191
 US,NBC News/Wall Street Journal,A/B,426  lv,2020-02-17 00:00:00,0.0,15,14,0,13,7,27,2,14,0,https://www.nbcnews.com/politics/meet-the-press/nbc-news-wsj-poll-sanders-opens-double-digit-national-lead-n1138191
 US,Ipsos,B+,543  rv,2020-02-17 00:00:00,0.0,13,17,0,11,5,25,3,9,0,https://www.ipsos.com/sites/default/files/ct/news/documents/2020-02/topline_reuters_2020_election_tracker_02_18_2020_wu1.pdf
-California,SurveyUSA,A,520  lv,2020-02-16 00:00:00,23.1,15,21,0,12,6,25,3,9,0,http://www.surveyusa.com/client/PollReport.aspx?g=00eb4f81-c6dd-4c7c-a22e-c32a3b4f2c7e
-New Jersey,Fairleigh Dickinson University (PublicMind),A/B,357  rv,2020-02-16 00:00:00,12.5,16,23,0,10,3,25,2,8,0,http://publicmind.fdu.edu/2020/200218/final.pdf
+California,SurveyUSA,A,520  lv,2020-02-16 00:00:00,22.4,15,21,0,12,6,25,3,9,0,http://www.surveyusa.com/client/PollReport.aspx?g=00eb4f81-c6dd-4c7c-a22e-c32a3b4f2c7e
+New Jersey,Fairleigh Dickinson University (PublicMind),A/B,357  rv,2020-02-16 00:00:00,12.1,16,23,0,10,3,25,2,8,0,http://publicmind.fdu.edu/2020/200218/final.pdf
 New Jersey,Fairleigh Dickinson University (PublicMind),A/B,379  a,2020-02-16 00:00:00,0.0,16,23,0,10,3,24,2,7,0,http://publicmind.fdu.edu/2020/200218/final.pdf
-North Carolina,SurveyUSA,A,698  lv,2020-02-16 00:00:00,27.2,20,22,0,11,5,22,0,8,0,http://www.surveyusa.com/client/PollReport.aspx?g=9dabc033-4e80-4d26-87db-2e2014623ac2
+North Carolina,SurveyUSA,A,698  lv,2020-02-16 00:00:00,26.4,20,22,0,11,5,22,0,8,0,http://www.surveyusa.com/client/PollReport.aspx?g=9dabc033-4e80-4d26-87db-2e2014623ac2
 Virginia,Monmouth University,A+,400  lv,2020-02-16 00:00:00,0.0,0,47,0,0,0,41,0,0,0,https://www.monmouth.edu/polling-institute/documents/monmouthpoll_va_021820.pdf/
 Virginia,Monmouth University,A+,400  lv,2020-02-16 00:00:00,0.0,0,0,0,0,42,45,0,0,0,https://www.monmouth.edu/polling-institute/documents/monmouthpoll_va_021820.pdf/
 Virginia,Monmouth University,A+,400  lv,2020-02-16 00:00:00,0.0,0,0,0,42,0,44,0,0,0,https://www.monmouth.edu/polling-institute/documents/monmouthpoll_va_021820.pdf/
-Virginia,Monmouth University,A+,400  lv,2020-02-16 00:00:00,24.2,51,0,0,0,0,38,0,0,0,https://www.monmouth.edu/polling-institute/documents/monmouthpoll_va_021820.pdf/
+Virginia,Monmouth University,A+,400  lv,2020-02-16 00:00:00,23.5,51,0,0,0,0,38,0,0,0,https://www.monmouth.edu/polling-institute/documents/monmouthpoll_va_021820.pdf/
 Virginia,Monmouth University,A+,400  lv,2020-02-16 00:00:00,0.0,18,22,0,11,9,22,0,5,0,https://www.monmouth.edu/polling-institute/documents/monmouthpoll_va_021820.pdf/
-US,Marist College,A+,527  rv,2020-02-16 00:00:00,25.9,15,19,0,8,9,31,2,12,0,http://maristpoll.marist.edu/wp-content/uploads/2020/02/UPDATED_Tuesday-Release_NPR_PBS-NewsHour_Marist-Poll_USA-NOS-and-Tables_2002171446.pdf
+US,Marist College,A+,527  rv,2020-02-16 00:00:00,25.2,15,19,0,8,9,31,2,12,0,http://maristpoll.marist.edu/wp-content/uploads/2020/02/UPDATED_Tuesday-Release_NPR_PBS-NewsHour_Marist-Poll_USA-NOS-and-Tables_2002171446.pdf
 California,YouGov,B-,803  lv,2020-02-15 00:00:00,0.4,21,8,0,6,3,29,2,20,0,https://priceschool.usc.edu/wp-content/uploads/2020/02/USC-Price-USC-Schwarzenegger-CA-Issues-Poll_Full.pdf
 US,Harris Insights & Analytics,C+,449  rv,2020-02-15 00:00:00,0.3,19,18,0,10,5,22,3,12,0,https://thehill.com/hilltv/rising/483646-sanders-leads-in-new-hill-harrisx-poll
-US,Zogby Interactive/JZ Analytics,C,732  lv,2020-02-14 00:00:00,7.3,0,50,0,0,0,50,0,0,0,https://zogbyanalytics.com/news/925-the-zogby-poll-a-majority-of-likely-voters-support-impeaching-president-trump-again-suburban-women-oppose-impeachment-democrats-split-on-sanders-or-bloomberg-republicans-want-romney-s-role-limited-in-the-senate
+US,Zogby Interactive/JZ Analytics,C,732  lv,2020-02-14 00:00:00,7.0,0,50,0,0,0,50,0,0,0,https://zogbyanalytics.com/news/925-the-zogby-poll-a-majority-of-likely-voters-support-impeaching-president-trump-again-suburban-women-oppose-impeachment-democrats-split-on-sanders-or-bloomberg-republicans-want-romney-s-role-limited-in-the-senate
 US,YouGov,B-,437  rv,2020-02-14 00:00:00,0.0,22,9,0,11,3,20,1,15,4,https://smpa.gwu.edu/sites/g/files/zaxdzs2046/f/downloads/GW%20Politics%20Poll%20February%202020%20Toplines%20Final%20%281%29%20%283%29%20%281%29.pdf
-Nevada,Beacon Research,-,600  lv,2020-02-15 00:00:00,6.7,19,0,0,13,7,24,18,10,0,https://twitter.com/RalstonReports/status/1229792062683267072
-Nevada,Data for Progress,A-,766  lv,2020-02-15 00:00:00,2.8,14,0,0,15,9,35,10,16,0,https://www.dataforprogress.org/memos/sanders-has-strong-lead-in-nevada
-Nevada,Point Blank Political,-,256  lv,2020-02-15 00:00:00,5.0,14,0,0,13,16,13,19,7,0,https://www.pointblankpolitical.com/nv-democratic-caucus-2020/
+Nevada,Beacon Research,-,600  lv,2020-02-15 00:00:00,6.5,19,0,0,13,7,24,18,10,0,https://twitter.com/RalstonReports/status/1229792062683267072
+Nevada,Data for Progress,A-,766  lv,2020-02-15 00:00:00,2.7,14,0,0,15,9,35,10,16,0,https://www.dataforprogress.org/memos/sanders-has-strong-lead-in-nevada
+Nevada,Point Blank Political,-,256  lv,2020-02-15 00:00:00,4.9,14,0,0,13,16,13,19,7,0,https://www.pointblankpolitical.com/nv-democratic-caucus-2020/
 South Carolina,Change Research,C,1015  lv,2020-02-14 00:00:00,1.0,23,0,0,15,8,23,20,9,0,https://twitter.com/WelcomePartyNow/status/1230123279479910400
 US,Zogby Interactive/JZ Analytics,C,732  lv,2020-02-14 00:00:00,0.0,18,20,0,9,5,24,4,10,0,https://zogbyanalytics.com/news/916-the-zogby-poll-bernie-sanders-is-the-frontrunner-michael-bloomberg-powers-into-second-place
-Maine,SocialSphere,B/C,350  lv,2020-02-13 00:00:00,7.0,12,14,0,16,4,25,2,9,2,https://www.colby.edu/government/wp-content/uploads/sites/66/2020/02/200216_Colby_College_Maine_Topline_Final.pdf
-Oklahoma,Cole Hargrave Snodgrass & Associates,B/C,172  lv,2020-02-13 00:00:00,5.2,12,20,0,11,6,14,0,8,0,https://projects.fivethirtyeight.com/polls/20200218_OK_2.pdf
+Maine,SocialSphere,B/C,350  lv,2020-02-13 00:00:00,6.8,12,14,0,16,4,25,2,9,2,https://www.colby.edu/government/wp-content/uploads/sites/66/2020/02/200216_Colby_College_Maine_Topline_Final.pdf
+Oklahoma,Cole Hargrave Snodgrass & Associates,B/C,172  lv,2020-02-13 00:00:00,5.1,12,20,0,11,6,14,0,8,0,https://projects.fivethirtyeight.com/polls/20200218_OK_2.pdf
 Oklahoma,Cole Hargrave Snodgrass & Associates,B/C,242  rv,2020-02-13 00:00:00,0.0,11,18,0,9,7,17,0,8,3,https://projects.fivethirtyeight.com/polls/20200218_OK_2.pdf
 US,YouGov,B-,344  lv,2020-02-13 00:00:00,0.0,0,0,0,0,31,0,0,50,0,https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/we97h9ywxh/20200213_yahoo_primary_crosstabs.pdf
 US,YouGov,B-,388  lv,2020-02-13 00:00:00,0.0,0,0,0,33,44,0,0,0,0,https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/we97h9ywxh/20200213_yahoo_primary_crosstabs.pdf
@@ -220,7 +233,7 @@ US,YouGov,B-,347  lv,2020-02-13 00:00:00,0.0,0,0,0,34,0,0,0,52,0,https://d25d250
 US,YouGov,B-,362  lv,2020-02-13 00:00:00,0.0,43,0,0,0,45,0,0,0,0,https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/we97h9ywxh/20200213_yahoo_primary_crosstabs.pdf
 US,YouGov,B-,347  lv,2020-02-13 00:00:00,0.0,45,0,0,42,0,0,0,0,0,https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/we97h9ywxh/20200213_yahoo_primary_crosstabs.pdf
 US,YouGov,B-,366  lv,2020-02-13 00:00:00,0.0,41,0,0,0,0,0,0,49,0,https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/we97h9ywxh/20200213_yahoo_primary_crosstabs.pdf
-South Carolina,East Carolina University,-,703  lv,2020-02-13 00:00:00,0.9,28,6,0,8,7,20,14,7,0,https://surveyresearch-ecu.reportablenews.com/pr/south-carolina-democratic-primary-biden-s-lead-shrinks-sanders-closing-in-steyer-in-third
+South Carolina,East Carolina University,-,703  lv,2020-02-13 00:00:00,0.8,28,6,0,8,7,20,14,7,0,https://surveyresearch-ecu.reportablenews.com/pr/south-carolina-democratic-primary-biden-s-lead-shrinks-sanders-closing-in-steyer-in-third
 US,YouGov,B-,351  lv,2020-02-13 00:00:00,0.0,0,38,0,0,43,0,0,0,0,https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/we97h9ywxh/20200213_yahoo_primary_crosstabs.pdf
 US,YouGov,B-,331  lv,2020-02-13 00:00:00,0.0,0,37,0,44,0,0,0,0,0,https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/we97h9ywxh/20200213_yahoo_primary_crosstabs.pdf
 US,YouGov,B-,367  lv,2020-02-13 00:00:00,0.0,47,34,0,0,0,0,0,0,0,https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/we97h9ywxh/20200213_yahoo_primary_crosstabs.pdf
@@ -230,88 +243,88 @@ US,YouGov,B-,347  lv,2020-02-13 00:00:00,0.0,0,0,0,37,0,54,0,0,0,https://d25d250
 US,YouGov,B-,369  lv,2020-02-13 00:00:00,0.0,0,38,0,0,0,53,0,0,0,https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/we97h9ywxh/20200213_yahoo_primary_crosstabs.pdf
 US,YouGov,B-,348  lv,2020-02-13 00:00:00,0.0,0,0,0,0,0,44,0,42,0,https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/we97h9ywxh/20200213_yahoo_primary_crosstabs.pdf
 US,YouGov,B-,359  lv,2020-02-13 00:00:00,0.0,44,0,0,0,0,48,0,0,0,https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/we97h9ywxh/20200213_yahoo_primary_crosstabs.pdf
-Nevada,WPA Intelligence (WPAi),B/C,413  lv,2020-02-13 00:00:00,7.6,18,0,0,10,10,25,11,13,0,https://www.reviewjournal.com/news/politics-and-government/nevada/sanders-holds-lead-heading-into-nevadas-democratic-caucuses-poll-finds-1957583/
+Nevada,WPA Intelligence (WPAi),B/C,413  lv,2020-02-13 00:00:00,7.4,18,0,0,10,10,25,11,13,0,https://www.reviewjournal.com/news/politics-and-government/nevada/sanders-holds-lead-heading-into-nevadas-democratic-caucuses-poll-finds-1957583/
 Florida,St. Pete Polls,C+,3047  lv,2020-02-13 00:00:00,0.2,26,27,0,11,9,10,1,5,0,http://stpetepolls.org/files/StPetePolls_2020_State_DEMprimaryFebruary13_YBN5.pdf
-Georgia,Landmark Communications,B,500  lv,2020-02-12 00:00:00,11.2,32,14,0,5,3,14,2,4,0,https://www.wsbtv.com/news/local/exclusive-channel-2-poll-finds-biden-with-large-lead-georgia-presidential-primary/523MBVBEZFC6DHI5RK5LS6GLAY/
-US,McLaughlin & Associates,C/D,479  lv,2020-02-11 00:00:00,4.0,24,16,0,11,3,21,3,11,3,https://mclaughlinonline.com/pols/wp-content/uploads/2020/02/National-Monthly-Omnibus-FEBRUARY-PUBLIC.pdf
-Vermont,Braun Research,B/C,332  lv,2020-02-10 00:00:00,6.1,5,7,0,13,4,51,0,9,2,http://projects.vpr.org/vpr-vermont-pbs-2020-polls-february
+Georgia,Landmark Communications,B,500  lv,2020-02-12 00:00:00,10.9,32,14,0,5,3,14,2,4,0,https://www.wsbtv.com/news/local/exclusive-channel-2-poll-finds-biden-with-large-lead-georgia-presidential-primary/523MBVBEZFC6DHI5RK5LS6GLAY/
+US,McLaughlin & Associates,C/D,479  lv,2020-02-11 00:00:00,3.9,24,16,0,11,3,21,3,11,3,https://mclaughlinonline.com/pols/wp-content/uploads/2020/02/National-Monthly-Omnibus-FEBRUARY-PUBLIC.pdf
+Vermont,Braun Research,B/C,332  lv,2020-02-10 00:00:00,5.9,5,7,0,13,4,51,0,9,2,http://projects.vpr.org/vpr-vermont-pbs-2020-polls-february
 US,YouGov,B-,552  lv,2020-02-11 00:00:00,0.0,18,12,0,10,7,22,1,15,2,https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/79zfxkws33/econTabReport.pdf
 US,Harris Insights & Analytics,C+,913  rv,2020-02-10 00:00:00,0.1,23,16,0,9,3,20,3,9,3,https://thehill.com/hilltv/rising/482577-poll-biden-sanders-tie-for-first-while-bloomberg-surges-in-new-national-2020
-New Hampshire,AtlasIntel,-,431  lv,2020-02-10 00:00:00,5.2,12,0,0,24,14,24,1,11,5,https://projects.fivethirtyeight.com/polls/20200210_NH.pdf
-New Hampshire,Data for Progress,A-,1295  lv,2020-02-10 00:00:00,25.4,9,0,0,26,13,28,3,14,5,http://filesforprogress.org/datasets/2020/2/nh/new_hampshire_primary.pdf
+New Hampshire,AtlasIntel,-,431  lv,2020-02-10 00:00:00,5.1,12,0,0,24,14,24,1,11,5,https://projects.fivethirtyeight.com/polls/20200210_NH.pdf
+New Hampshire,Data for Progress,A-,1295  lv,2020-02-10 00:00:00,24.7,9,0,0,26,13,28,3,14,5,http://filesforprogress.org/datasets/2020/2/nh/new_hampshire_primary.pdf
 US,Ipsos,B+,556  rv,2020-02-10 00:00:00,0.0,17,15,0,8,3,20,2,11,5,https://www.ipsos.com/sites/default/files/ct/news/documents/2020-02/topline_reuters_2020_election_tracker_02_10_2020_wu.pdf
 Texas,YouGov,B-,575  lv,2020-02-09 00:00:00,0.3,22,10,1,7,3,24,3,15,6,https://www.texastribune.org/2020/02/14/bernie-sanders-leading-texas-ahead-super-tuesday-uttt-poll-says/
-New Hampshire,Change Research,C,662  lv,2020-02-09 00:00:00,6.0,9,0,0,21,8,30,3,8,5,https://www.changeresearch.com/post/sanders-leads-the-democratic-primary-in-new-hampshire
-US,Monmouth University,A+,357  rv,2020-02-09 00:00:00,16.8,16,11,0,13,6,26,1,13,4,https://www.monmouth.edu/polling-institute/documents/monmouthpoll_us_021120.pdf/
+New Hampshire,Change Research,C,662  lv,2020-02-09 00:00:00,5.9,9,0,0,21,8,30,3,8,5,https://www.changeresearch.com/post/sanders-leads-the-democratic-primary-in-new-hampshire
+US,Monmouth University,A+,357  rv,2020-02-09 00:00:00,16.4,16,11,0,13,6,26,1,13,4,https://www.monmouth.edu/polling-institute/documents/monmouthpoll_us_021120.pdf/
 US,Morning Consult,B+,15346  lv,2020-02-09 00:00:00,0.1,22,17,0,11,3,25,3,11,4,https://morningconsult.com/2020-democratic-primary/
-New Hampshire,Elucd,-,492  lv,2020-02-09 00:00:00,5.3,8,0,0,20,12,26,3,10,1,https://elucd.ghost.io/elucd-new-hampshire-democratic-primary-poll-results-2-10-20/
-California,Capitol Weekly,-,843  lv,2020-02-09 00:00:00,6.4,11,13,1,14,5,29,3,16,4,https://www.dropbox.com/s/vwj05okmdrg2b8t/Feb%202020%20Presidential%20Primary%20Tracking%20Poll%20Toplines%20and%20Crosstabs.xlsx
+New Hampshire,Elucd,-,492  lv,2020-02-09 00:00:00,5.2,8,0,0,20,12,26,3,10,1,https://elucd.ghost.io/elucd-new-hampshire-democratic-primary-poll-results-2-10-20/
+California,Capitol Weekly,-,843  lv,2020-02-09 00:00:00,6.2,11,13,1,14,5,29,3,16,4,https://www.dropbox.com/s/vwj05okmdrg2b8t/Feb%202020%20Presidential%20Primary%20Tracking%20Poll%20Toplines%20and%20Crosstabs.xlsx
 US,Quinnipiac University,A,665  rv,2020-02-09 00:00:00,2.4,17,15,0,10,4,25,1,14,2,https://poll.qu.edu/national/release-detail?ReleaseID=3655
-New Hampshire,University of New Hampshire,B,365  lv,2020-02-09 00:00:00,8.5,11,0,0,22,7,29,1,10,4,https://scholars.unh.edu/cgi/viewcontent.cgi?article=1574&context=survey_center_polls
-New Hampshire,American Research Group,B,400  lv,2020-02-09 00:00:00,9.2,13,1,0,20,13,28,2,11,3,https://americanresearchgroup.com/pres2020/primary/dem/nhdem20-02.html
-New Hampshire,Suffolk University,A-,500  lv,2020-02-09 00:00:00,15.4,12,0,0,19,14,27,2,12,3,https://www.suffolk.edu/-/media/suffolk/documents/academics/research-at-suffolk/suprc/polls/new-hampshire/2020/final-nh-tracking-marginals-2-9-20.pdf
-New Hampshire,Emerson College,B-,500  lv,2020-02-09 00:00:00,8.3,10,0,0,23,14,30,2,11,4,http://emersonpolling.com/2020/02/10/new-hampshire-2020-tracking-poll-night-8-sanders-heads-into-primary-with-lead-buttigieg-within-margin-of-error/
-New Hampshire,RKM Research and Communications Inc.,A/B,512  lv,2020-02-08 00:00:00,13.3,14,0,0,20,6,23,2,16,3,https://www.franklinpierce.edu/institutes/mfcc/2-9-20%20FPU%20NH%20PP%20Pre-Primary%20Tables%20QST%20KM.pdf
-New Hampshire,YouGov,B-,848  lv,2020-02-08 00:00:00,9.8,12,0,0,25,10,29,1,17,1,https://drive.google.com/file/d/1Gapsi49dofC_4vQSFVeJGSlEIXg2wjfx/view
-New Hampshire,University of New Hampshire,B,384  lv,2020-02-08 00:00:00,1.1,12,1,0,21,6,28,2,9,4,https://scholars.unh.edu/cgi/viewcontent.cgi?article=1573&context=survey_center_polls
-New Hampshire,Suffolk University,A-,500  lv,2020-02-08 00:00:00,1.9,10,0,0,22,9,24,2,13,3,https://www.suffolk.edu/-/media/suffolk/documents/academics/research-at-suffolk/suprc/polls/new-hampshire/2020/2-8-20_final_nh_tracking_marginals.pdf
+New Hampshire,University of New Hampshire,B,365  lv,2020-02-09 00:00:00,8.3,11,0,0,22,7,29,1,10,4,https://scholars.unh.edu/cgi/viewcontent.cgi?article=1574&context=survey_center_polls
+New Hampshire,American Research Group,B,400  lv,2020-02-09 00:00:00,8.9,13,1,0,20,13,28,2,11,3,https://americanresearchgroup.com/pres2020/primary/dem/nhdem20-02.html
+New Hampshire,Suffolk University,A-,500  lv,2020-02-09 00:00:00,15.0,12,0,0,19,14,27,2,12,3,https://www.suffolk.edu/-/media/suffolk/documents/academics/research-at-suffolk/suprc/polls/new-hampshire/2020/final-nh-tracking-marginals-2-9-20.pdf
+New Hampshire,Emerson College,B-,500  lv,2020-02-09 00:00:00,8.0,10,0,0,23,14,30,2,11,4,http://emersonpolling.com/2020/02/10/new-hampshire-2020-tracking-poll-night-8-sanders-heads-into-primary-with-lead-buttigieg-within-margin-of-error/
+New Hampshire,RKM Research and Communications Inc.,A/B,512  lv,2020-02-08 00:00:00,13.0,14,0,0,20,6,23,2,16,3,https://www.franklinpierce.edu/institutes/mfcc/2-9-20%20FPU%20NH%20PP%20Pre-Primary%20Tables%20QST%20KM.pdf
+New Hampshire,YouGov,B-,848  lv,2020-02-08 00:00:00,9.6,12,0,0,25,10,29,1,17,1,https://drive.google.com/file/d/1Gapsi49dofC_4vQSFVeJGSlEIXg2wjfx/view
+New Hampshire,University of New Hampshire,B,384  lv,2020-02-08 00:00:00,1.0,12,1,0,21,6,28,2,9,4,https://scholars.unh.edu/cgi/viewcontent.cgi?article=1573&context=survey_center_polls
+New Hampshire,Suffolk University,A-,500  lv,2020-02-08 00:00:00,1.8,10,0,0,22,9,24,2,13,3,https://www.suffolk.edu/-/media/suffolk/documents/academics/research-at-suffolk/suprc/polls/new-hampshire/2020/2-8-20_final_nh_tracking_marginals.pdf
 New Hampshire,Emerson College,B-,500  lv,2020-02-08 00:00:00,1.0,11,0,0,20,13,30,2,12,4,http://emersonpolling.com/2020/02/09/new-hampshire-2020-tracking-poll-night-7-debate-shifts-momentum-for-candidates-but-sanders-stays-in-strong-position/
-Arkansas,Hendrix College,B/C,496  lv,2020-02-07 00:00:00,7.0,19,20,0,16,5,16,0,9,2,https://talkbusiness.net/2020/02/poll-bloomberg-holds-slim-lead-among-logjam-in-arkansas-democratic-presidential-primary/
-New Hampshire,University of Massachusetts Lowell,A/B,440  lv,2020-02-07 00:00:00,12.0,14,0,0,17,8,25,5,15,3,https://www.uml.edu/docs/2020-NH-Primary-2-Topline_tcm18-322047.pdf
+Arkansas,Hendrix College,B/C,496  lv,2020-02-07 00:00:00,6.9,19,20,0,16,5,16,0,9,2,https://talkbusiness.net/2020/02/poll-bloomberg-holds-slim-lead-among-logjam-in-arkansas-democratic-presidential-primary/
+New Hampshire,University of Massachusetts Lowell,A/B,440  lv,2020-02-07 00:00:00,11.7,14,0,0,17,8,25,5,15,3,https://www.uml.edu/docs/2020-NH-Primary-2-Topline_tcm18-322047.pdf
 New Hampshire,University of New Hampshire,B,365  lv,2020-02-07 00:00:00,0.3,11,2,0,21,5,28,3,9,3,https://scholars.unh.edu/cgi/viewcontent.cgi?article=1572&context=survey_center_polls
 New Hampshire,Suffolk University,A-,500  lv,2020-02-07 00:00:00,0.5,11,0,0,25,6,24,2,14,3,https://www.suffolk.edu/-/media/suffolk/documents/academics/research-at-suffolk/suprc/polls/new-hampshire/2020/2-7-20_final_nh_tracking_marginals.pdf
 New Hampshire,Emerson College,B-,500  lv,2020-02-07 00:00:00,0.3,11,0,0,24,9,31,2,11,3,http://emersonpolling.com/2020/02/08/new-hampshire-2020-tracking-poll-night-6-sanders-continues-to-lead-as-buttigieg-inches-closer/
 North Carolina,High Point University,A/B,399  rv,2020-02-06 00:00:00,0.0,19,13,1,6,3,25,3,12,4,http://www.highpoint.edu/src/files/2020/02/69memoA.pdf
 North Carolina,High Point University,A/B,225  lv,2020-02-06 00:00:00,0.3,24,16,0,8,3,20,4,11,3,http://www.highpoint.edu/src/files/2020/02/69memoA.pdf
 New Hampshire,Marist College,A+,1058  rv,2020-02-06 00:00:00,0.0,13,0,0,21,8,25,5,14,4,http://maristpoll.marist.edu/wp-content/uploads/2020/02/NBC-News_Marist-Poll_NH-NOS-and-Tables_2002070938.pdf
-New Hampshire,Marist College,A+,709  lv,2020-02-06 00:00:00,26.1,13,0,0,21,8,25,4,14,4,http://maristpoll.marist.edu/wp-content/uploads/2020/02/NBC-News_Marist-Poll_NH-NOS-and-Tables_2002070938.pdf
+New Hampshire,Marist College,A+,709  lv,2020-02-06 00:00:00,25.5,13,0,0,21,8,25,4,14,4,http://maristpoll.marist.edu/wp-content/uploads/2020/02/NBC-News_Marist-Poll_NH-NOS-and-Tables_2002070938.pdf
 New Hampshire,Suffolk University,A-,500  lv,2020-02-06 00:00:00,0.2,11,0,0,23,6,24,3,13,3,https://www.suffolk.edu/-/media/suffolk/documents/academics/research-at-suffolk/suprc/polls/new-hampshire/2020/2-6-20_final_nh_tracking_marginals.pdf
 New Hampshire,Emerson College,B-,500  lv,2020-02-06 00:00:00,0.1,11,0,0,23,9,32,2,13,2,http://emersonpolling.com/2020/02/07/new-hampshire-2020-tracking-poll-night-5-sanders-holds-lead-in-new-hampshire-buttigieg-continues-to-gain/
 New Hampshire,Monmouth University,A+,503  lv,2020-02-05 00:00:00,0.0,19,0,0,28,0,28,0,16,0,https://www.monmouth.edu/polling-institute/documents/monmouthpoll_nh_020620.pdf/
-New Hampshire,Monmouth University,A+,503  lv,2020-02-05 00:00:00,20.8,17,0,0,22,13,27,0,13,0,https://www.monmouth.edu/polling-institute/documents/monmouthpoll_nh_020620.pdf/
+New Hampshire,Monmouth University,A+,503  lv,2020-02-05 00:00:00,20.3,17,0,0,22,13,27,0,13,0,https://www.monmouth.edu/polling-institute/documents/monmouthpoll_nh_020620.pdf/
 New Hampshire,Monmouth University,A+,503  lv,2020-02-05 00:00:00,0.0,17,0,0,20,9,24,3,13,4,https://www.monmouth.edu/polling-institute/documents/monmouthpoll_nh_020620.pdf/
-North Carolina,Public Policy Polling,B,604  lv,2020-02-05 00:00:00,1.3,25,14,0,9,5,16,2,12,5,https://www.publicpolicypolling.com/wp-content/uploads/2020/02/NCDemPollFebruary2020.pdf
+North Carolina,Public Policy Polling,B,604  lv,2020-02-05 00:00:00,1.2,25,14,0,9,5,16,2,12,5,https://www.publicpolicypolling.com/wp-content/uploads/2020/02/NCDemPollFebruary2020.pdf
 New Hampshire,Suffolk University,A-,500  lv,2020-02-05 00:00:00,0.1,12,0,0,19,6,25,4,11,2,https://www.suffolk.edu/-/media/suffolk/documents/academics/research-at-suffolk/suprc/polls/new-hampshire/2020/2-5-20_final_nh_tracking_marginals.pdf
 New Hampshire,Emerson College,B-,500  lv,2020-02-05 00:00:00,0.1,12,0,0,21,11,31,1,12,4,http://emersonpolling.com/2020/02/06/new-hampshire-2020-tracking-poll-night-4-buttigieg-continues-to-gain-on-sanders/
 US,YouGov,B-,616  lv,2020-02-04 00:00:00,0.0,24,9,0,9,6,19,2,18,3,https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/73jqd6u5mv/econTabReport.pdf
 New Hampshire,Suffolk University,A-,500  lv,2020-02-04 00:00:00,0.1,15,0,0,15,6,24,5,10,3,https://www.suffolk.edu/-/media/suffolk/documents/academics/research-at-suffolk/suprc/polls/new-hampshire/2020/final-nh-tracking-marginals-2-4-20.pdf
 New Hampshire,Emerson College,B-,500  lv,2020-02-04 00:00:00,0.0,13,0,0,17,11,32,2,11,6,http://emersonpolling.com/2020/02/05/new-hampshire-2020-tracking-poll-night-3-buttigieg-gets-an-iowa-bounce-sanders-maintains-strong-lead/
-South Carolina,Zogby Interactive/JZ Analytics,C,277  lv,2020-02-03 00:00:00,3.7,28,4,0,7,2,20,15,11,1,https://zogbyanalytics.com/news/913-the-zogby-poll-february-2020-presidential-election-report
+South Carolina,Zogby Interactive/JZ Analytics,C,277  lv,2020-02-03 00:00:00,3.6,28,4,0,7,2,20,15,11,1,https://zogbyanalytics.com/news/913-the-zogby-poll-february-2020-presidential-election-report
 US,Morning Consult,B+,2500  lv,2020-02-03 00:00:00,0.0,29,16,0,7,3,22,2,13,5,https://morningconsult.com/2020/02/06/buttigieg-and-sanders-move-up-biden-slides-after-bungled-iowa-caucuses/
 US,Ipsos,B+,551  rv,2020-02-03 00:00:00,0.0,22,9,0,5,4,19,3,10,4,https://www.ipsos.com/sites/default/files/ct/news/documents/2020-02/topline_reuters_2020_election_tracker_02_03_2020.pdf
 New Hampshire,Suffolk University,A-,500  lv,2020-02-03 00:00:00,0.0,18,0,0,11,6,24,4,13,3,https://www.suffolk.edu/-/media/suffolk/documents/academics/research-at-suffolk/suprc/polls/new-hampshire/2020/2-3-2020_final_nh_tracking_marginals.pdf
 New Hampshire,Emerson College,B-,500  lv,2020-02-03 00:00:00,0.0,13,0,0,12,12,32,5,13,5,http://emersonpolling.com/2020/02/04/new-hampshire-2020-tracking-poll-night-2-sanders-lead-extends-further/
 South Carolina,East Carolina University,-,469  lv,2020-02-02 00:00:00,0.2,37,1,0,4,2,14,19,8,3,https://surveyresearch-ecu.reportablenews.com/pr/south-carolina-poll-biden-leads-presidential-primary-among-likely-democratic-voters-but-many-open-to-changing-their-mind-before-election-day-trump-and-graham-lead-comfortably-in-general-election-matchups
-New Hampshire,St. Anselm,-,491  lv,2020-02-02 00:00:00,4.4,19,2,0,14,11,19,5,11,4,https://www.anselm.edu/sites/default/files/Documents/NHIOP/Polls/Democratic%20Voter%20Survey%20Jan-Feb%202020.pdf
-US,AtlasIntel,-,532  lv,2020-02-02 00:00:00,4.6,24,8,0,5,2,28,0,11,3,https://projects.fivethirtyeight.com/polls/20200203_National.pdf
+New Hampshire,St. Anselm,-,491  lv,2020-02-02 00:00:00,4.3,19,2,0,14,11,19,5,11,4,https://www.anselm.edu/sites/default/files/Documents/NHIOP/Polls/Democratic%20Voter%20Survey%20Jan-Feb%202020.pdf
+US,AtlasIntel,-,532  lv,2020-02-02 00:00:00,4.5,24,8,0,5,2,28,0,11,3,https://projects.fivethirtyeight.com/polls/20200203_National.pdf
 US,Morning Consult,B+,15259  lv,2020-02-02 00:00:00,0.1,28,14,0,6,3,24,3,14,4,https://morningconsult.com/2020-democratic-primary/
 New Hampshire,Emerson College,B-,500  lv,2020-02-02 00:00:00,0.0,14,0,0,13,8,29,8,12,7,http://emersonpolling.com/2020/02/03/new-hampshire-2020-tracking-poll-night-1-sanders-opens-commanding-lead/
-Iowa,Data for Progress,A-,2394  lv,2020-02-02 00:00:00,28.3,18,2,0,18,9,22,4,19,6,http://filesforprogress.org/datasets/2020/2/ia_caucus.pdf
-Iowa,Emerson College,B-,853  lv,2020-02-02 00:00:00,8.6,21,0,0,15,11,28,4,14,5,http://emersonpolling.com/2020/02/02/iowa-2020-sanders-on-top-going-into-caucus-night/
+Iowa,Data for Progress,A-,2394  lv,2020-02-02 00:00:00,27.8,18,2,0,18,9,22,4,19,6,http://filesforprogress.org/datasets/2020/2/ia_caucus.pdf
+Iowa,Emerson College,B-,853  lv,2020-02-02 00:00:00,8.4,21,0,0,15,11,28,4,14,5,http://emersonpolling.com/2020/02/02/iowa-2020-sanders-on-top-going-into-caucus-night/
 New Hampshire,RKM Research and Communications Inc.,A/B,454  lv,2020-02-01 00:00:00,1.3,24,2,0,8,4,31,0,17,1,https://www.franklinpierce.edu/institutes/mfcc/020220%20FPU%20NH%202020%20pre-Iowa%20TABLES%20and%20QST.pdf
 New Hampshire,University of Massachusetts Lowell,A/B,400  lv,2020-01-31 00:00:00,1.2,22,0,0,12,6,23,6,19,2,https://www.uml.edu/docs/TOPLINE%20-%20UMass%20Lowell%20NH%20Dem%20Primary%2020200203_tcm18-321680.pdf
-Massachusetts,Evan Falchuk and Lou DiNatale,-,334  lv,2020-01-30 00:00:00,0.5,16,8,0,6,7,12,4,23,3,https://projects.fivethirtyeight.com/polls/20200206_MA.xlsx
+Massachusetts,Evan Falchuk and Lou DiNatale,-,334  lv,2020-01-30 00:00:00,0.4,16,8,0,6,7,12,4,23,3,https://projects.fivethirtyeight.com/polls/20200206_MA.xlsx
 Iowa,David Binder Research,-,300  lv,2020-01-30 00:00:00,3.5,46,0,0,0,0,40,0,0,0,https://www.focusonruralamerica.com/2020/02/03/caucus-day-poll-release/
 Iowa,David Binder Research,-,300  lv,2020-01-30 00:00:00,0.0,15,1,0,19,11,17,3,15,1,https://www.focusonruralamerica.com/2020/02/03/caucus-day-poll-release/
 Texas,University of Texas at Tyler,B/C,416  lv,2020-01-30 00:00:00,0.6,34,16,0,4,3,18,2,17,3,https://projects.fivethirtyeight.com/polls/20200202_TX_3.pdf
 Texas,University of Texas at Tyler,B/C,487  rv,2020-01-30 00:00:00,0.0,35,16,0,4,3,18,2,16,3,https://projects.fivethirtyeight.com/polls/20200202_TX_1.pdf
-Iowa,American Research Group,B,400  lv,2020-01-30 00:00:00,7.1,17,2,0,9,16,23,3,15,5,https://americanresearchgroup.com/pres2020/primary/dem/iadem.html
-US,IBD/TIPP,A/B,336  rv,2020-01-30 00:00:00,1.0,26,8,0,7,3,19,2,13,4,https://projects.fivethirtyeight.com/polls/20190131_National.xlsx
+Iowa,American Research Group,B,400  lv,2020-01-30 00:00:00,6.9,17,2,0,9,16,23,3,15,5,https://americanresearchgroup.com/pres2020/primary/dem/iadem.html
+US,IBD/TIPP,A/B,336  rv,2020-01-30 00:00:00,0.9,26,8,0,7,3,19,2,13,4,https://projects.fivethirtyeight.com/polls/20190131_National.xlsx
 US,Ipsos,B+,565  rv,2020-01-30 00:00:00,0.0,23,12,0,4,2,18,4,10,4,https://graphics.reuters.com/USA-ELECTION-POLL/0100B05G09P/index.html
 New Hampshire,YouGov,B-,500  lv,2020-01-29 00:00:00,0.7,20,0,0,12,5,25,5,17,4,https://polsci.umass.edu/sites/default/files/ToplinesFeb2020-REVISED.pdf
 US,Harris Insights & Analytics,C+,980  rv,2020-01-29 00:00:00,0.0,31,13,0,6,3,20,2,12,3,https://harvardharrispoll.com/wp-content/uploads/2020/02/HHP_January2020_RegisteredVoters_Topline.pdf
-Iowa,Civiqs,-,615  lv,2020-01-29 00:00:00,4.5,15,0,0,15,8,28,2,21,5,https://projects.fivethirtyeight.com/polls/20200202_IA_2.pdf
+Iowa,Civiqs,-,615  lv,2020-01-29 00:00:00,4.4,15,0,0,15,8,28,2,21,5,https://projects.fivethirtyeight.com/polls/20200202_IA_2.pdf
 South Carolina,Change Research,C,651  lv,2020-01-29 00:00:00,0.2,25,0,0,7,2,20,18,11,3,https://www.changeresearch.com/post/south-carolina-post-and-courier-january-poll
-US,NBC News/Wall Street Journal,A/B,428  lv,2020-01-29 00:00:00,0.2,26,9,0,7,5,27,2,15,4,https://www.nbcnews.com/politics/2020-election/sanders-biden-are-neck-neck-new-nbc-wsj-national-poll-n1127051
+US,NBC News/Wall Street Journal,A/B,428  lv,2020-01-29 00:00:00,0.1,26,9,0,7,5,27,2,15,4,https://www.nbcnews.com/politics/2020-election/sanders-biden-are-neck-neck-new-nbc-wsj-national-poll-n1127051
 Washington,SurveyUSA,A,536  lv,2020-01-28 00:00:00,1.8,21,12,0,8,3,26,2,16,4,https://www.king5.com/article/news/politics/elections/bernie-sanders-democratic-primary-poll/281-54303297-ce1b-4902-9e51-512a441340ac
-Iowa,Park Street Strategies,-,600  lv,2020-01-28 00:00:00,4.3,20,0,0,17,12,18,4,17,5,https://parkstreetstrategies.com/2020-iowa-democratic-caucus-survey-full-results/
-US,USC Dornsife/LA Times,B/C,2227  lv,2020-01-28 00:00:00,9.3,34,9,0,9,3,18,2,16,2,https://drive.google.com/file/d/1_JsEQQbLSxwYLJE-JtvQ-syrSuwU4YN9/view
+Iowa,Park Street Strategies,-,600  lv,2020-01-28 00:00:00,4.2,20,0,0,17,12,18,4,17,5,https://parkstreetstrategies.com/2020-iowa-democratic-caucus-survey-full-results/
+US,USC Dornsife/LA Times,B/C,2227  lv,2020-01-28 00:00:00,9.1,34,9,0,9,3,18,2,16,2,https://drive.google.com/file/d/1_JsEQQbLSxwYLJE-JtvQ-syrSuwU4YN9/view
 US,YouGov,B-,591  lv,2020-01-28 00:00:00,0.0,26,4,0,7,4,24,1,20,4,https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/3ormein07a/econTabReport.pdf
 Florida,St. Pete Polls,C+,2590  lv,2020-01-28 00:00:00,0.1,41,17,0,6,5,9,2,7,2,http://stpetepolls.org/files/StPetePolls_2020_State_DEMprimary_January28_WN2A.pdf
-US,YouGov Blue/Data for Progress,-,1619  lv,2020-01-27 00:00:00,5.7,30,5,0,8,4,21,2,23,4,https://projects.fivethirtyeight.com/polls/20200203_National_2.pdf
+US,YouGov Blue/Data for Progress,-,1619  lv,2020-01-27 00:00:00,5.6,30,5,0,8,4,21,2,23,4,https://projects.fivethirtyeight.com/polls/20200203_National_2.pdf
 California,Change Research,C,1190  lv,2020-01-27 00:00:00,0.7,15,4,0,8,3,30,2,16,5,https://www.changeresearch.com/post/kqed-change-research-california-poll-january
 Iowa,Monmouth University,A+,544  lv,2020-01-27 00:00:00,0.0,29,0,0,20,0,25,0,19,0,https://www.monmouth.edu/polling-institute/documents/monmouthpoll_ia_012920.pdf/
-Iowa,Monmouth University,A+,544  lv,2020-01-27 00:00:00,17.6,22,0,0,17,12,22,0,16,5,https://www.monmouth.edu/polling-institute/documents/monmouthpoll_ia_012920.pdf/
+Iowa,Monmouth University,A+,544  lv,2020-01-27 00:00:00,17.3,22,0,0,17,12,22,0,16,5,https://www.monmouth.edu/polling-institute/documents/monmouthpoll_ia_012920.pdf/
 Iowa,Monmouth University,A+,544  lv,2020-01-27 00:00:00,0.0,23,0,0,16,10,21,4,15,3,https://www.monmouth.edu/polling-institute/documents/monmouthpoll_ia_012920.pdf/
 Iowa,Civiqs,-,655  lv,2020-01-27 00:00:00,0.5,15,1,0,17,11,24,4,19,5,https://civiqs.com/documents/Civiqs_ISU_banner_book_2020_01_cg3q62ypb43uz6bb.pdf
 US,YouGov Blue/Data for Progress,-,1619  lv,2020-01-27 00:00:00,0.0,42,0,0,0,0,23,0,30,0,https://www.politico.com/news/2020/01/28/survey-warren-polls-better-against-biden-than-sanders-108289
@@ -319,13 +332,13 @@ US,YouGov Blue/Data for Progress,-,1619  lv,2020-01-27 00:00:00,0.0,53,0,0,0,0,4
 US,YouGov Blue/Data for Progress,-,1619  lv,2020-01-27 00:00:00,0.0,47,0,0,0,0,0,0,45,0,https://www.politico.com/news/2020/01/28/survey-warren-polls-better-against-biden-than-sanders-108289
 US,Quinnipiac University,A,827  rv,2020-01-27 00:00:00,0.6,26,8,0,6,7,21,2,15,3,https://poll.qu.edu/national/release-detail?ReleaseID=3654
 New Hampshire,American Research Group,B,600  lv,2020-01-27 00:00:00,1.0,13,2,0,12,7,28,2,11,5,https://americanresearchgroup.com/pres2020/primary/dem/nhdem20-01.html
-Pennsylvania,Franklin & Marshall College,B/C,292  rv,2020-01-26 00:00:00,3.8,22,7,0,6,5,15,1,14,5,https://www.fandm.edu/uploads/files/562535870732261549-f-m-poll-release-january-2020.pdf
+Pennsylvania,Franklin & Marshall College,B/C,292  rv,2020-01-26 00:00:00,3.7,22,7,0,6,5,15,1,14,5,https://www.fandm.edu/uploads/files/562535870732261549-f-m-poll-release-january-2020.pdf
 Iowa,Change Research,C,704  lv,2020-01-26 00:00:00,0.0,22,0,0,23,0,30,0,20,0,https://www.changeresearch.com/post/pollercoaster-2020-sanders-leads-by-8-points-in-iowa-caucuses
-Iowa,Change Research,C,704  lv,2020-01-26 00:00:00,4.4,18,0,0,19,10,27,4,15,4,https://www.changeresearch.com/post/pollercoaster-2020-sanders-leads-by-8-points-in-iowa-caucuses
+Iowa,Change Research,C,704  lv,2020-01-26 00:00:00,4.3,18,0,0,19,10,27,4,15,4,https://www.changeresearch.com/post/pollercoaster-2020-sanders-leads-by-8-points-in-iowa-caucuses
 US,Morning Consult,B+,17836  lv,2020-01-26 00:00:00,0.0,29,12,0,7,3,23,3,14,5,https://morningconsult.com/2020-democratic-primary/
 New Hampshire,RKM Research and Communications Inc.,A/B,407  lv,2020-01-26 00:00:00,0.3,22,3,0,10,5,29,0,16,1,https://www.franklinpierce.edu/institutes/mfcc/FPU%20PP%20NH%20Jan%202020%2023-26%20Tables.pdf
 Iowa,Emerson College,B-,450  lv,2020-01-26 00:00:00,0.7,21,0,0,10,13,30,5,11,5,http://emersonpolling.com/2020/01/27/iowa-2020-sanders-solidifies-frontrunner-status-in-iowa-while-klobuchar-nears-viability/
-Iowa,Suffolk University,A-,500  lv,2020-01-26 00:00:00,11.0,25,0,0,18,6,19,2,13,3,https://www.suffolk.edu/-/media/suffolk/documents/academics/research-at-suffolk/suprc/polls/other-states/2020/1_27_2020_marginals_pdftxt.pdf
+Iowa,Suffolk University,A-,500  lv,2020-01-26 00:00:00,10.8,25,0,0,18,6,19,2,13,3,https://www.suffolk.edu/-/media/suffolk/documents/academics/research-at-suffolk/suprc/polls/other-states/2020/1_27_2020_marginals_pdftxt.pdf
 Florida,Tel Opinion Research,B/C,600  lv,2020-01-23 00:00:00,0.7,41,0,0,0,0,21,0,18,0,https://www.politico.com/f/?id=0000016f-f3f6-d6d6-abff-f3f713770000
 Florida,Tel Opinion Research,B/C,600  lv,2020-01-23 00:00:00,0.0,29,4,0,4,4,17,2,12,2,https://www.politico.com/f/?id=0000016f-f3f6-d6d6-abff-f3f713770000
 Iowa,Morningside College,-,253  lv,2020-01-23 00:00:00,2.8,19,1,0,18,12,15,6,15,4,https://www.morningside.edu/assets/uploads/campus_life_and_arts_student_life/civic_engagement/2020-Morningside-Poll_Summary-of-Results.pdf
@@ -333,7 +346,7 @@ US,Echelon Insights,-,474  lv,2020-01-23 00:00:00,0.0,56,0,0,32,0,0,0,0,0,http:/
 US,Echelon Insights,-,474  lv,2020-01-23 00:00:00,3.6,54,0,0,0,0,38,0,0,0,http://echeloninsights.com/wp-content/uploads/Omnibus-January-2020_Dem-Primary.pdf
 US,Echelon Insights,-,474  lv,2020-01-23 00:00:00,0.0,48,0,0,0,0,0,0,43,0,http://echeloninsights.com/wp-content/uploads/Omnibus-January-2020_Dem-Primary.pdf
 US,Echelon Insights,-,474  lv,2020-01-23 00:00:00,0.0,26,13,0,7,3,23,2,10,3,http://echeloninsights.com/wp-content/uploads/Omnibus-January-2020_Dem-Primary.pdf
-Iowa,YouGov,B-,1356  lv,2020-01-23 00:00:00,8.3,25,0,0,22,7,26,1,15,1,https://drive.google.com/file/d/1TZ_phVL1vfC0P9b_RDH9ymdLRnk0lrrJ/view
+Iowa,YouGov,B-,1356  lv,2020-01-23 00:00:00,8.1,25,0,0,22,7,26,1,15,1,https://drive.google.com/file/d/1TZ_phVL1vfC0P9b_RDH9ymdLRnk0lrrJ/view
 New Hampshire,Marist College,A+,1077  rv,2020-01-23 00:00:00,0.0,14,0,0,17,10,22,3,12,5,http://maristpoll.marist.edu/wp-content/uploads/2020/01/NBC-News_Marist-Poll_NH-NOS-and-Tables_2001241124.pdf
 New Hampshire,Marist College,A+,697  lv,2020-01-23 00:00:00,0.7,15,0,0,17,10,22,3,13,5,http://maristpoll.marist.edu/wp-content/uploads/2020/01/NBC-News_Marist-Poll_NH-NOS-and-Tables_2001241124.pdf
 New Hampshire,University of New Hampshire,B,516  lv,2020-01-23 00:00:00,0.1,16,1,0,15,6,25,2,12,5,https://scholars.unh.edu/cgi/viewcontent.cgi?article=1571&context=survey_center_polls
@@ -341,43 +354,43 @@ US,ABC News/Washington Post,A+,276  lv,2020-01-23 00:00:00,0.2,34,7,0,4,4,22,1,1
 US,ABC News/Washington Post,A+,349  rv,2020-01-23 00:00:00,0.0,32,8,0,5,3,23,0,12,7,https://www.washingtonpost.com/context/washington-post-abc-news-poll-jan-20-23-2020/50b73242-0f99-4709-b8bc-7e0d56bfe0f3/
 US,ABC News/Washington Post,A+,388  a,2020-01-23 00:00:00,0.0,28,8,0,5,3,24,0,11,7,https://www.washingtonpost.com/context/washington-post-abc-news-poll-jan-20-23-2020/50b73242-0f99-4709-b8bc-7e0d56bfe0f3/
 Missouri,Remington Research Group,C-,1460  lv,2020-01-23 00:00:00,0.5,39,14,0,6,8,7,1,9,2,https://moscout.com/s/MOSCOUT-012420.pptx
-Iowa,Siena College/New York Times Upshot,A+,584  lv,2020-01-23 00:00:00,17.2,23,0,0,23,0,30,0,19,0,https://www.nytimes.com/2020/01/25/us/politics/democratic-iowa-poll-sanders.html
+Iowa,Siena College/New York Times Upshot,A+,584  lv,2020-01-23 00:00:00,16.9,23,0,0,23,0,30,0,19,0,https://www.nytimes.com/2020/01/25/us/politics/democratic-iowa-poll-sanders.html
 Iowa,Siena College/New York Times Upshot,A+,584  lv,2020-01-23 00:00:00,0.0,17,1,0,18,8,25,3,15,3,https://scri.siena.edu/wp-content/uploads/2020/01/IADem0120_4891051654159.pdf
 US,Emerson College,B-,497  lv,2020-01-23 00:00:00,0.7,30,7,0,6,4,27,1,13,8,http://emersonpolling.com/2020/01/24/national-2020-biden-and-sanders-battle-in-two-way-race-for-democratic-nomination/
 US,Ipsos,B+,545  rv,2020-01-23 00:00:00,0.0,24,10,0,7,3,20,2,12,3,https://graphics.reuters.com/USA-ELECTION-POLL/0100B05G09P/index.html
 US,Harris Insights & Analytics,C+,878  rv,2020-01-22 00:00:00,0.0,29,11,0,5,2,17,4,9,4,https://thehill.com/hilltv/rising/480721-bloomberg-surges-past-warren-into-third-place-in-new-national-poll
-Utah,Suffolk University,A-,132  lv,2020-01-22 00:00:00,5.0,12,10,0,5,3,27,1,14,5,https://www.suffolk.edu/-/media/suffolk/documents/academics/research-at-suffolk/suprc/polls/other-states/2020/1_27_2020_utah_marginals_pdftxt.pdf
-US,Fox News/Beacon Research/Shaw & Co. Research,A-,495  lv,2020-01-22 00:00:00,1.3,26,10,0,7,3,23,3,14,5,https://www.scribd.com/document/444324295/Fox-January-19-22-2020-National-Topline-January-26-Release-pdf
+Utah,Suffolk University,A-,132  lv,2020-01-22 00:00:00,4.9,12,10,0,5,3,27,1,14,5,https://www.suffolk.edu/-/media/suffolk/documents/academics/research-at-suffolk/suprc/polls/other-states/2020/1_27_2020_utah_marginals_pdftxt.pdf
+US,Fox News/Beacon Research/Shaw & Co. Research,A-,495  lv,2020-01-22 00:00:00,1.2,26,10,0,7,3,23,3,14,5,https://www.scribd.com/document/444324295/Fox-January-19-22-2020-National-Topline-January-26-Release-pdf
 Iowa,Civiqs,-,590  lv,2020-01-21 00:00:00,0.1,17,0,0,19,6,24,3,19,5,https://projects.fivethirtyeight.com/polls/20200202_IA_1.pdf
 Texas,Data for Progress,A-,684  lv,2020-01-21 00:00:00,0.4,26,7,0,10,4,20,2,14,3,http://filesforprogress.org/datasets/2020/1/texas/dfp-tx-dem-primary-jan-2020.pdf
 California,"University of California, Berkeley",B/C,2895  lv,2020-01-21 00:00:00,1.2,15,6,1,7,5,26,2,20,4,https://escholarship.org/uc/item/1h8738br
-New Hampshire,MassINC Polling Group,A/B,426  lv,2020-01-21 00:00:00,8.3,14,1,0,17,6,29,2,13,5,https://www.wbur.org/news/2020/01/23/new-hampshire-bernie-sanders-lead-january
+New Hampshire,MassINC Polling Group,A/B,426  lv,2020-01-21 00:00:00,8.1,14,1,0,17,6,29,2,13,5,https://www.wbur.org/news/2020/01/23/new-hampshire-bernie-sanders-lead-january
 US,YouGov,B-,470  lv,2020-01-21 00:00:00,0.0,28,6,0,8,4,18,2,21,3,https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/alq58zq5zt/econTabReport.pdf
 US,Monmouth University,A+,372  rv,2020-01-20 00:00:00,1.4,30,9,0,6,5,23,1,14,3,https://www.monmouth.edu/polling-institute/documents/monmouthpoll_us_012220.pdf/
-Wisconsin,Baldwin Wallace University/Oakland University/Ohio Northern University,-,464  rv,2020-01-20 00:00:00,2.9,22,8,0,8,3,28,0,15,2,https://www.bw.edu/Assets/community-research-institute/2020-great-lakes-poll-full-FINAL.pdf
+Wisconsin,Baldwin Wallace University/Oakland University/Ohio Northern University,-,464  rv,2020-01-20 00:00:00,2.8,22,8,0,8,3,28,0,15,2,https://www.bw.edu/Assets/community-research-institute/2020-great-lakes-poll-full-FINAL.pdf
 Michigan,Baldwin Wallace University/Oakland University/Ohio Northern University,-,477  rv,2020-01-20 00:00:00,2.9,27,9,0,6,2,22,2,14,4,https://www.bw.edu/Assets/community-research-institute/2020-great-lakes-poll-full-FINAL.pdf
-Pennsylvania,Baldwin Wallace University/Oakland University/Ohio Northern University,-,502  rv,2020-01-20 00:00:00,3.0,31,9,0,7,3,21,1,12,3,https://www.bw.edu/Assets/community-research-institute/2020-great-lakes-poll-full-FINAL.pdf
+Pennsylvania,Baldwin Wallace University/Oakland University/Ohio Northern University,-,502  rv,2020-01-20 00:00:00,2.9,31,9,0,7,3,21,1,12,3,https://www.bw.edu/Assets/community-research-institute/2020-great-lakes-poll-full-FINAL.pdf
 Ohio,Baldwin Wallace University/Oakland University/Ohio Northern University,-,428  rv,2020-01-20 00:00:00,2.8,32,10,0,6,2,21,2,11,2,https://www.bw.edu/Assets/community-research-institute/2020-great-lakes-poll-full-FINAL.pdf
-US,Pew Research Center,B/C,5861  rv,2020-01-19 00:00:00,10.8,26,5,1,7,2,21,1,16,3,https://www.people-press.org/wp-content/uploads/sites/4/2020/01/PP_2019.01.30_dem-values_report.pdf
+US,Pew Research Center,B/C,5861  rv,2020-01-19 00:00:00,10.6,26,5,1,7,2,21,1,16,3,https://www.people-press.org/wp-content/uploads/sites/4/2020/01/PP_2019.01.30_dem-values_report.pdf
 Texas,Texas Lyceum,-,401  lv,2020-01-19 00:00:00,3.0,28,9,1,6,4,26,2,13,0,https://www.texaslyceum.org/assets/docs/Poll/2020/2020%20Texas%20Lyceum%20Poll%20Results.pdf
-New York,Civis Analytics,-,845  lv,2020-01-19 00:00:00,4.1,30,17,0,7,2,17,4,14,4,http://filesforprogress.org/datasets/2020/1/dfp_poll_january_ny.pdf
+New York,Civis Analytics,-,845  lv,2020-01-19 00:00:00,4.0,30,17,0,7,2,17,4,14,4,http://filesforprogress.org/datasets/2020/1/dfp_poll_january_ny.pdf
 US,SSRS,A/B,500  rv,2020-01-19 00:00:00,1.0,24,5,0,11,4,27,2,14,4,https://cdn.cnn.com/cnn/2020/images/01/22/rel1b.-.2020.pdf
 US,Morning Consult,B+,12402  lv,2020-01-19 00:00:00,0.0,29,10,0,8,3,24,3,15,4,https://morningconsult.com/2020-democratic-primary/
 New Hampshire,Suffolk University,A-,500  lv,2020-01-19 00:00:00,0.0,15,0,0,12,5,16,3,10,6,https://www.suffolk.edu/-/media/suffolk/documents/academics/research-at-suffolk/suprc/polls/new-hampshire/2020/1_21_2020_marginals_pdftxt.pdf
-New Jersey,Emerson College,B-,388  lv,2020-01-19 00:00:00,4.7,28,9,0,6,4,25,0,15,6,http://emersonpolling.com/2020/01/20/new-jersey-2020-generational-divide-between-biden-and-sanders-on-display/
+New Jersey,Emerson College,B-,388  lv,2020-01-19 00:00:00,4.6,28,9,0,6,4,25,0,15,6,http://emersonpolling.com/2020/01/20/new-jersey-2020-generational-divide-between-biden-and-sanders-on-display/
 Iowa,David Binder Research,-,500  lv,2020-01-18 00:00:00,0.1,24,1,0,16,11,14,4,18,3,https://www.focusonruralamerica.com/2020/01/20/january-poll-results/
-Iowa,Neighborhood Research and Media,B/C,300  lv,2020-01-17 00:00:00,3.7,23,0,0,17,11,10,2,15,2,https://www.scribd.com/document/443446801/Iowa-Caucus-Memo-011920
+Iowa,Neighborhood Research and Media,B/C,300  lv,2020-01-17 00:00:00,3.6,23,0,0,17,11,10,2,15,2,https://www.scribd.com/document/443446801/Iowa-Caucus-Memo-011920
 US,Zogby Interactive/JZ Analytics,C,438  lv,2020-01-16 00:00:00,0.1,24,11,0,8,4,24,3,11,6,https://zogbyanalytics.com/news/911-the-zogby-poll-bloomberg-beating-trump-biden-and-trump-are-all-tied-up-trump-beats-other-democratic-rivals-trump-s-job-approval-continues-to-top-50
 US,Ipsos,B+,681  a,2020-01-16 00:00:00,0.0,18,9,0,6,1,19,1,10,3,https://www.ipsos.com/sites/default/files/ct/news/documents/2020-01/topline_reuters_2020_democratic_primary_tracker_01_17_2020.pdf
 California,SurveyUSA,A,565  lv,2020-01-16 00:00:00,1.5,30,6,0,8,2,20,4,20,4,http://www.surveyusa.com/client/PollReport.aspx?g=9634c475-cb54-4a34-ab4b-c0d9a2b82759
-US,SurveyUSA,A,1086  lv,2020-01-16 00:00:00,0.7,32,9,0,9,2,21,3,14,4,http://www.surveyusa.com/client/PollReport.aspx?g=b4747822-277e-4d2c-b896-eb4e04672c09
+US,SurveyUSA,A,1086  lv,2020-01-16 00:00:00,0.6,32,9,0,9,2,21,3,14,4,http://www.surveyusa.com/client/PollReport.aspx?g=b4747822-277e-4d2c-b896-eb4e04672c09
 New Hampshire,Emerson College,B-,657  lv,2020-01-16 00:00:00,0.0,14,0,0,18,10,23,4,14,6,http://emersonpolling.com/2020/01/17/new-hampshire-2020-sanders-holds-lead-klobuchar-surges-to-double-digits/
 US,Ipsos,B+,552  rv,2020-01-16 00:00:00,0.0,19,9,0,6,2,20,2,12,4,https://www.reuters.com/article/us-usa-election-democrats-poll/sanders-climbs-now-tied-with-biden-among-registered-voters-reuters-poll-idUSKBN1ZG00D
 US,YouGov,B-,521  lv,2020-01-14 00:00:00,0.0,27,5,2,7,3,20,1,19,3,https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/ueji3eha6i/econTabReport.pdf
 US,Harris Insights & Analytics,C+,451  rv,2020-01-14 00:00:00,0.0,29,7,0,4,3,19,3,11,2,https://thehill.com/hilltv/rising/478208-sanders-hits-highest-support-since-august
-South Carolina,GQR Research (GQRR),C+,600  lv,2020-01-13 00:00:00,4.1,44,0,0,5,0,15,12,10,0,https://www.thestate.com/news/politics-government/election/article239675533.html
+South Carolina,GQR Research (GQRR),C+,600  lv,2020-01-13 00:00:00,4.0,44,0,0,5,0,15,12,10,0,https://www.thestate.com/news/politics-government/election/article239675533.html
 Wisconsin,Marquette University Law School,A/B,358  lv,2020-01-12 00:00:00,0.8,23,6,1,15,4,19,1,14,6,https://law.marquette.edu/poll/wp-content/uploads/2020/01/MLSP57Toplines.pdf
-Florida,Florida Atlantic University,B/C,494  lv,2020-01-12 00:00:00,4.2,42,7,3,3,6,16,2,10,5,https://business.fau.edu/departments/economics/business-economics-polling/bepi-polls/bepi-polls-2020/biden-widening-lead-in-florida-where-trunp-has-fallen-behind.php
+Florida,Florida Atlantic University,B/C,494  lv,2020-01-12 00:00:00,0.5,42,7,3,3,6,16,2,10,5,https://business.fau.edu/departments/economics/business-economics-polling/bepi-polls/bepi-polls-2020/biden-widening-lead-in-florida-where-trunp-has-fallen-behind.php
 North Carolina,Public Policy Polling,B,509  lv,2020-01-12 00:00:00,0.2,31,8,1,6,3,18,3,15,5,https://www.publicpolicypolling.com/wp-content/uploads/2020/01/NCDemResultsJanuary2020.pdf
 US,Morning Consult,B+,17096  lv,2020-01-12 00:00:00,0.0,29,8,2,8,3,23,4,14,5,https://morningconsult.com/2020-democratic-primary/
 California,Public Policy Institute of California,A/B,530  lv,2020-01-12 00:00:00,1.0,24,1,0,6,4,27,0,23,3,https://www.ppic.org/wp-content/uploads/ppic-statewide-survey-californians-and-their-government-january-2020.pdf
@@ -385,23 +398,23 @@ New Hampshire,RKM Research and Communications Inc.,A/B,434  lv,2020-01-12 00:00:
 US,Quinnipiac University,A,651  rv,2020-01-12 00:00:00,0.2,25,6,1,8,4,19,1,16,5,https://poll.qu.edu/national/release-detail?ReleaseID=3653
 Iowa,Monmouth University,A+,405  lv,2020-01-12 00:00:00,0.0,28,0,0,25,0,24,0,16,0,https://www.monmouth.edu/polling-institute/documents/monmouthpoll_ia_011320.pdf/
 Iowa,Monmouth University,A+,405  lv,2020-01-12 00:00:00,0.0,24,0,4,17,8,18,4,15,3,https://www.monmouth.edu/polling-institute/documents/monmouthpoll_ia_011320.pdf/
-Nevada,Suffolk University,A-,500  lv,2020-01-11 00:00:00,8.6,19,0,2,8,4,18,8,11,4,https://www.suffolk.edu/-/media/suffolk/documents/academics/research-at-suffolk/suprc/polls/other-states/2020/1_14_2020_marginals_pdftxt.pdf
+Nevada,Suffolk University,A-,500  lv,2020-01-11 00:00:00,8.4,19,0,2,8,4,18,8,11,4,https://www.suffolk.edu/-/media/suffolk/documents/academics/research-at-suffolk/suprc/polls/other-states/2020/1_14_2020_marginals_pdftxt.pdf
 US,IBD/TIPP,A/B,333  rv,2020-01-11 00:00:00,0.2,26,7,0,9,3,15,2,20,3,https://projects.fivethirtyeight.com/polls/20200114_National.xlsx
-California,Tulchin Research,B/C,1121  lv,2020-01-10 00:00:00,5.5,25,7,1,8,2,29,3,12,5,https://projects.fivethirtyeight.com/polls/20200122_CA.pdf
+California,Tulchin Research,B/C,1121  lv,2020-01-10 00:00:00,5.4,25,7,1,8,2,29,3,12,5,https://projects.fivethirtyeight.com/polls/20200122_CA.pdf
 US,Ipsos,B+,436  rv,2020-01-09 00:00:00,0.0,23,8,2,7,1,20,3,15,3,https://www.ipsos.com/sites/default/files/ct/news/documents/2020-01/topline_reuters_2020_democratic_primary_tracker_01_10_2020_0.pdf
 US,Ipsos,B+,707  a,2020-01-09 00:00:00,0.0,15,6,2,5,1,17,3,10,3,https://www.ipsos.com/sites/default/files/ct/news/documents/2020-01/topline_reuters_2020_democratic_primary_tracker_01_10_2020_0.pdf
 California,Capitol Weekly,-,1053  lv,2020-01-09 00:00:00,0.5,20,6,1,11,5,24,2,21,7,https://www.dropbox.com/s/5w1aofozhv4iwl5/Jan%202020%20Presidential%20Primary%20Tracking%20Poll%20Toplines%20and%20Crosstabs.xlsx
 Nevada,Myers Research/Strategic Services,-,600  lv,2020-01-08 00:00:00,3.1,28,0,2,6,4,29,8,14,5,https://www.yang2020.com/wp-content/uploads/Myers-Research-Nevada.pdf
-Iowa,Selzer & Co.,A+,701  lv,2020-01-08 00:00:00,14.8,15,1,3,16,6,20,2,17,5,https://cdn.cnn.com/cnn/2020/images/01/10/rel1_ia.-.democrats.pdf
-Wisconsin,Fox News/Beacon Research/Shaw & Co. Research,A-,671  lv,2020-01-08 00:00:00,9.6,23,7,3,9,4,21,2,13,3,https://www.scribd.com/document/442330004/Fox-News-Poll-January-5-8-2020-Wisconsin
-Nevada,Fox News/Beacon Research/Shaw & Co. Research,A-,635  lv,2020-01-08 00:00:00,9.3,23,2,3,6,2,17,12,12,4,https://www.scribd.com/document/442329790/Fox-News-Poll-January-5-8-2020-Nevada
-South Carolina,Fox News/Beacon Research/Shaw & Co. Research,A-,808  lv,2020-01-08 00:00:00,10.6,36,2,2,4,1,14,15,10,2,https://www.scribd.com/document/442330110/Fox-News-Poll-January-5-8-2020-South-Carolina
-New Hampshire,Patinkin Research Strategies,-,600  lv,2020-01-07 00:00:00,3.1,21,0,2,17,6,19,6,10,5,https://www.yang2020.com/wp-content/uploads/Patinkin-Research-Strategies-New-Hampshire.pdf
+Iowa,Selzer & Co.,A+,701  lv,2020-01-08 00:00:00,14.6,15,1,3,16,6,20,2,17,5,https://cdn.cnn.com/cnn/2020/images/01/10/rel1_ia.-.democrats.pdf
+Wisconsin,Fox News/Beacon Research/Shaw & Co. Research,A-,671  lv,2020-01-08 00:00:00,9.4,23,7,3,9,4,21,2,13,3,https://www.scribd.com/document/442330004/Fox-News-Poll-January-5-8-2020-Wisconsin
+Nevada,Fox News/Beacon Research/Shaw & Co. Research,A-,635  lv,2020-01-08 00:00:00,9.2,23,2,3,6,2,17,12,12,4,https://www.scribd.com/document/442329790/Fox-News-Poll-January-5-8-2020-Nevada
+South Carolina,Fox News/Beacon Research/Shaw & Co. Research,A-,808  lv,2020-01-08 00:00:00,10.4,36,2,2,4,1,14,15,10,2,https://www.scribd.com/document/442330110/Fox-News-Poll-January-5-8-2020-South-Carolina
+New Hampshire,Patinkin Research Strategies,-,600  lv,2020-01-07 00:00:00,3.0,21,0,2,17,6,19,6,10,5,https://www.yang2020.com/wp-content/uploads/Patinkin-Research-Strategies-New-Hampshire.pdf
 New Hampshire,Monmouth University,A+,404  lv,2020-01-07 00:00:00,0.0,24,0,0,23,0,21,0,18,0,https://www.monmouth.edu/polling-institute/documents/monmouthpoll_nh_010920.pdf/
 New Hampshire,Monmouth University,A+,404  lv,2020-01-07 00:00:00,0.2,21,0,2,20,7,21,0,15,5,https://www.monmouth.edu/polling-institute/documents/monmouthpoll_nh_010920.pdf/
 New Hampshire,Monmouth University,A+,404  lv,2020-01-07 00:00:00,0.0,19,0,1,20,6,18,4,15,3,https://www.monmouth.edu/polling-institute/documents/monmouthpoll_nh_010920.pdf/
 US,YouGov,B-,574  lv,2020-01-07 00:00:00,0.0,27,3,1,7,3,20,2,22,3,https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/6s5t9qkjll/econTabReport.pdf
-New Mexico,Emerson College,B-,447  lv,2020-01-06 00:00:00,4.1,27,3,2,7,2,28,1,8,10,http://emersonpolling.com/2020/01/07/new-mexico-2020-democrats-strong-in-the-land-of-enchantment-but-split-between-sanders-and-biden-for-nomination/
+New Mexico,Emerson College,B-,447  lv,2020-01-06 00:00:00,4.0,27,3,2,7,2,28,1,8,10,http://emersonpolling.com/2020/01/07/new-mexico-2020-democrats-strong-in-the-land-of-enchantment-but-split-between-sanders-and-biden-for-nomination/
 US,Morning Consult,B+,17213  lv,2020-01-05 00:00:00,0.0,31,7,2,8,3,23,4,14,4,https://morningconsult.com/2020-democratic-primary/
 New Hampshire,YouGov,B-,487  lv,2020-01-03 00:00:00,0.1,25,0,3,13,7,27,3,18,2,https://drive.google.com/file/d/1UjNP6OAAS91_5VEFDFnPiTA3YD6yrOQh/view
 Iowa,YouGov,B-,747  lv,2020-01-03 00:00:00,0.6,23,0,2,23,7,23,2,16,2,https://drive.google.com/file/d/1YoVEJY6TBhHvfrmNoApfpvOHNtNM6t6O/view
@@ -454,7 +467,7 @@ US,Ipsos,B+,719  a,2019-12-05 00:00:00,0.0,19,4,1,6,1,14,1,9,3,https://www.ipsos
 US,YouGov,B-,541  lv,2019-12-03 00:00:00,0.0,27,3,3,12,3,13,0,18,2,https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/799kgtotz3/econTabReport.pdf
 South Carolina,YouGov,B-,400  lv,2019-12-02 00:00:00,0.3,61,0,0,0,0,0,0,29,0,https://fairvote.app.box.com/s/xahiy4th2qj5v50o64tagfb5fqc74s6k
 South Carolina,YouGov,B-,400  lv,2019-12-02 00:00:00,0.0,39,2,2,10,2,13,7,10,3,https://fairvote.app.box.com/s/xahiy4th2qj5v50o64tagfb5fqc74s6k
-US,David Binder Research,-,1200  lv,2019-12-01 00:00:00,2.6,29,8,2,10,2,15,2,14,2,https://thirdway.imgix.net/pdfs/override/Creating-an-Updraft-for-Down-Ballot-Democrats-in-2020.pdf
+US,David Binder Research,-,1200  lv,2019-12-01 00:00:00,2.5,29,8,2,10,2,15,2,14,2,https://thirdway.imgix.net/pdfs/override/Creating-an-Updraft-for-Down-Ballot-Democrats-in-2020.pdf
 US,Morning Consult,B+,15773  lv,2019-12-01 00:00:00,0.0,29,5,2,9,2,20,2,15,4,https://morningconsult.com/2020-democratic-primary/
 US,Harris Insights & Analytics,C+,437  rv,2019-12-01 00:00:00,0.0,31,6,1,9,2,15,2,10,2,https://thehill.com/hilltv/rising/472629-bloomberg-overtakes-harris-in-new-poll
 US,Harris Insights & Analytics,C+,756  rv,2019-11-29 00:00:00,0.0,20,4,1,5,2,12,2,9,2,https://harvardharrispoll.com/wp-content/uploads/2019/12/HHP_November2019_Topline_RegisteredVoters.pdf
@@ -462,7 +475,7 @@ US,Harris Insights & Analytics,C+,756  rv,2019-11-29 00:00:00,0.0,29,7,1,8,2,16,
 California,"University of California, Berkeley",B/C,1694  lv,2019-11-27 00:00:00,0.1,14,2,1,12,3,24,1,22,3,https://escholarship.org/uc/item/4bn38460
 US,YouGov,B-,550  lv,2019-11-26 00:00:00,0.0,23,3,2,12,3,15,1,17,3,https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/a10nw9wbas/econTabReport.pdf
 New Hampshire,Emerson College,B-,549  lv,2019-11-26 00:00:00,0.0,14,1,2,22,2,26,3,14,5,http://emersonpolling.com/2019/11/27/new-hampshire-2020-sanders-jumps-to-lead-buttigieg-surges-while-warren-and-biden-slip/
-Delaware,Data for Progress,A-,528  lv,2019-11-25 00:00:00,5.1,35,1,3,8,1,13,0,11,1,http://filesforprogress.org/datasets/2019/12/de/VITMS-de.pdf
+Delaware,Data for Progress,A-,528  lv,2019-11-25 00:00:00,5.0,35,1,3,8,1,13,0,11,1,http://filesforprogress.org/datasets/2019/12/de/VITMS-de.pdf
 Illinois,Victory Research,B/C,1200  lv,2019-11-25 00:00:00,0.4,23,4,2,16,3,15,2,17,1,https://projects.fivethirtyeight.com/polls/20191202_IL.pdf
 US,Quinnipiac University,A,574  rv,2019-11-25 00:00:00,0.0,24,3,2,16,3,13,0,14,2,https://poll.qu.edu/national/release-detail?ReleaseID=3650
 US,Ipsos,B+,589  rv,2019-11-22 00:00:00,0.0,23,0,0,9,2,16,2,13,6,https://twitter.com/Cmkahn/status/1220734596490452993
@@ -483,7 +496,7 @@ US,YouGov,B-,586  lv,2019-11-19 00:00:00,0.0,30,0,1,9,2,12,1,22,2,https://d25d25
 New York,Siena College,A-,380  rv,2019-11-18 00:00:00,0.5,24,0,2,5,1,13,0,14,2,https://scri.siena.edu/wp-content/uploads/2019/11/SNY1119-Crosstabs.pdf
 US,Swayable,-,1787  lv,2019-11-18 00:00:00,2.7,30,0,2,7,2,17,2,18,4,https://swayable.com/insights/primaries2019
 US,Swayable,-,3709  a,2019-11-18 00:00:00,0.0,27,0,2,6,2,20,2,15,5,https://swayable.com/insights/primaries2019
-Georgia,SurveyUSA,A,536  lv,2019-11-18 00:00:00,6.1,36,6,0,7,0,17,0,14,0,http://www.surveyusa.com/client/PollReport.aspx?g=128c319e-4d47-4e41-827c-c67900e8414b
+Georgia,SurveyUSA,A,536  lv,2019-11-18 00:00:00,6.0,36,6,0,7,0,17,0,14,0,http://www.surveyusa.com/client/PollReport.aspx?g=128c319e-4d47-4e41-827c-c67900e8414b
 Georgia,SurveyUSA,A,536  lv,2019-11-18 00:00:00,0.0,39,0,0,7,0,18,0,14,0,http://www.surveyusa.com/client/PollReport.aspx?g=128c319e-4d47-4e41-827c-c67900e8414b
 New Hampshire,St. Anselm,-,255  lv,2019-11-18 00:00:00,0.2,15,0,3,25,6,9,5,15,2,https://www.anselm.edu/sites/default/files/Documents/NHIOP/Polls/1119%20Topline%20Summary.pdf
 Wisconsin,Marquette University Law School,A/B,340  lv,2019-11-17 00:00:00,0.1,30,0,3,13,3,17,1,15,2,https://law.marquette.edu/poll/wp-content/uploads/2019/11/MLSP55Toplines.pdf
@@ -494,12 +507,12 @@ US,Ipsos,B+,581  rv,2019-11-14 00:00:00,0.0,26,0,0,6,1,18,1,12,2,https://twitter
 Texas,University of Texas at Tyler,B/C,427  rv,2019-11-14 00:00:00,0.0,28,0,1,8,2,18,2,19,2,https://projects.fivethirtyeight.com/polls/20191118_TX.pdf
 US,Ipsos,B+,685  a,2019-11-14 00:00:00,0.0,19,3,1,6,1,19,1,13,2,https://www.ipsos.com/sites/default/files/ct/news/documents/2019-11/topline_reuters_2020_election_tracker_11_15_2019.pdf
 US,Ipsos,B+,702  a,2019-11-14 00:00:00,0.0,23,0,2,6,1,18,1,11,2,https://www.ipsos.com/sites/default/files/ct/news/documents/2019-11/topline_reuters_2020_election_tracker_11_15_2019.pdf
-South Carolina,University of North Florida,A/B,436  lv,2019-11-13 00:00:00,3.8,36,1,2,3,1,10,8,10,1,https://www.unf.edu/uploadedFiles/aa/coas/porl/Final%20Press%20Nov%2018.pdf
+South Carolina,University of North Florida,A/B,436  lv,2019-11-13 00:00:00,3.7,36,1,2,3,1,10,8,10,1,https://www.unf.edu/uploadedFiles/aa/coas/porl/Final%20Press%20Nov%2018.pdf
 South Carolina,YouGov,B-,877  lv,2019-11-13 00:00:00,0.0,45,0,2,8,1,15,2,17,0,https://drive.google.com/file/d/18LZNu8nrKO8zvVKbrdkagjcbZaYN_uW5/view
-Nevada,YouGov,B-,626  lv,2019-11-13 00:00:00,2.7,33,0,2,9,2,23,2,21,1,https://drive.google.com/file/d/1jgKZ5VeYaiRia45NZeDD9DLOnHUgscCV/view
+Nevada,YouGov,B-,626  lv,2019-11-13 00:00:00,2.6,33,0,2,9,2,23,2,21,1,https://drive.google.com/file/d/1jgKZ5VeYaiRia45NZeDD9DLOnHUgscCV/view
 New Hampshire,YouGov,B-,510  lv,2019-11-13 00:00:00,0.0,22,0,1,16,3,20,1,31,1,https://drive.google.com/file/d/1_pubOi7tGP9BOHHNbNj3XLtMXxOUheSd/view
 Iowa,YouGov,B-,718  lv,2019-11-13 00:00:00,0.1,22,0,1,21,5,22,2,18,1,https://drive.google.com/file/d/13afQpotpd1MwwjjjoegtFv-tRtQ6tQbO/view
-Iowa,Selzer & Co.,A+,500  lv,2019-11-13 00:00:00,0.9,15,2,3,25,6,15,3,16,3,https://cdn.cnn.com/cnn/2019/images/11/16/rel4a_ia.pdf
+Iowa,Selzer & Co.,A+,500  lv,2019-11-13 00:00:00,0.8,15,2,3,25,6,15,3,16,3,https://cdn.cnn.com/cnn/2019/images/11/16/rel4a_ia.pdf
 Nevada,Fox News/Beacon Research/Shaw & Co. Research,A-,627  lv,2019-11-13 00:00:00,0.6,24,0,1,8,2,18,5,18,3,https://www.scribd.com/document/435041220/Fox-News-Poll-Joe-Biden-November-10-13-2019
 North Carolina,Fox News/Beacon Research/Shaw & Co. Research,A-,669  lv,2019-11-13 00:00:00,5.3,37,0,2,6,1,14,2,15,2,https://www.scribd.com/document/435038869/Fox-News-Poll-North-Carolina-November-10-13-2019
 California,Public Policy Institute of California,A/B,682  lv,2019-11-12 00:00:00,0.2,24,0,1,7,1,17,1,23,5,https://www.ppic.org/wp-content/uploads/ppic-statewide-survey-californians-and-their-government-november-2019.pdf
@@ -538,7 +551,7 @@ Iowa,Siena College/New York Times Upshot,A+,439  lv,2019-10-30 00:00:00,0.2,17,0
 US,YouGov,B-,630  lv,2019-10-29 00:00:00,0.0,27,0,1,8,2,14,1,23,3,https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/zgaz948hzw/econTabReport.pdf
 Arizona,Emerson College,B-,339  lv,2019-10-28 00:00:00,1.8,28,0,0,12,2,21,0,21,5,http://emersonpolling.com/2019/10/29/arizona-poll-toss-ups-in-presidential-and-senate-races-biden-holds-small-lead-in-democratic-primary-with-warren-and-sanders-tied-for-second/
 US,Swayable,-,2172  lv,2019-10-27 00:00:00,0.1,29,0,3,6,2,17,1,19,3,https://swayable.com/insights/primaries2019
-Massachusetts,Evan Falchuk and Lou DiNatale,-,443  lv,2019-10-25 00:00:00,0.1,35,0,0,0,0,13,0,41,0,https://commonwealthmagazine.org/wp-content/uploads/2016/05/Mass.-poll-of-likely-Dem-voters.xlsx
+Massachusetts,Evan Falchuk and Lou DiNatale,-,443  lv,2019-10-25 00:00:00,0.0,35,0,0,0,0,13,0,41,0,https://commonwealthmagazine.org/wp-content/uploads/2016/05/Mass.-poll-of-likely-Dem-voters.xlsx
 US,Swayable,-,4358  a,2019-10-27 00:00:00,0.0,27,0,3,5,2,19,2,15,4,https://swayable.com/insights/primaries2019
 Texas,YouGov,B-,541  lv,2019-10-27 00:00:00,0.0,23,0,1,6,2,12,1,18,4,https://www.texastribune.org/2019/11/04/democrats-dont-have-candidate-who-would-beat-trump-texas-today-poll/
 Pennsylvania,Franklin & Marshall College,B/C,226  rv,2019-10-27 00:00:00,0.2,30,0,1,8,2,12,0,18,1,https://www.fandm.edu/uploads/files/93374337988676509-f-m-poll-release-october-2019.pdf
@@ -557,7 +570,7 @@ US,Echelon Insights,-,449  lv,2019-10-25 00:00:00,0.0,32,0,2,6,2,15,1,22,1,http:
 Arizona,Siena College/New York Times Upshot,A+,209  rv,2019-10-23 00:00:00,3.1,24,0,0,5,1,16,0,15,1,https://scri.siena.edu/wp-content/uploads/2019/11/AZ1019-CrosstabsALL.pdf
 US,McLaughlin & Associates,C/D,468  lv,2019-10-22 00:00:00,0.0,0,1,4,5,2,23,2,20,6,https://mclaughlinonline.com/pols/wp-content/uploads/2019/10/National-Monthly-Omnibus-October-PUBLIC-1.pdf
 US,McLaughlin & Associates,C/D,468  lv,2019-10-22 00:00:00,0.0,28,0,3,3,2,18,0,16,6,https://mclaughlinonline.com/pols/wp-content/uploads/2019/10/National-Monthly-Omnibus-October-PUBLIC-1.pdf
-Maine,Maine People's Resource Center,B/C,728  lv,2019-10-21 00:00:00,2.2,27,0,3,9,0,15,0,22,2,http://mprc.me/research/mprc_pres_primary_1019.pdf
+Maine,Maine People's Resource Center,B/C,728  lv,2019-10-21 00:00:00,2.1,27,0,3,9,0,15,0,22,2,http://mprc.me/research/mprc_pres_primary_1019.pdf
 Iowa,Civiqs,-,598  lv,2019-10-22 00:00:00,0.0,12,0,1,20,4,18,3,28,2,https://civiqs.com/documents/Civiqs_ISU_banner_book_2019_10.pdf
 US,YouGov,B-,628  lv,2019-10-22 00:00:00,0.0,24,0,2,8,1,15,1,21,3,https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/s96v7z4zoa/econTabReport.pdf
 US,Harris Insights & Analytics,C+,440  rv,2019-10-22 00:00:00,0.0,27,0,1,6,1,14,1,19,2,https://thehill.com/hilltv/rising/466927-warren-overtakes-sanders-in-new-poll
@@ -669,7 +682,7 @@ US,Harris Insights & Analytics,C+,3100  rv,2019-09-27 00:00:00,0.0,28,0,2,4,1,15
 US,Harris Insights & Analytics,C+,772  lv,2019-09-27 00:00:00,0.0,33,0,3,5,2,13,1,19,1,https://docs.google.com/spreadsheets/d/e/2PACX-1vRWsinsq6q8_jAlS4HWb7SHrceM2F6wjZIGT6GCfpMYTQtbfcwlPgnyAgT0r-P8igll0wMbPbSx7ox_/pubhtml/sheet?headers=false&gid=0
 US,Harris Insights & Analytics,C+,1309  rv,2019-09-27 00:00:00,0.0,28,0,3,4,2,13,1,15,2,https://docs.google.com/spreadsheets/d/e/2PACX-1vRWsinsq6q8_jAlS4HWb7SHrceM2F6wjZIGT6GCfpMYTQtbfcwlPgnyAgT0r-P8igll0wMbPbSx7ox_/pubhtml/sheet?headers=false&gid=0
 Nevada,SSRS,A/B,324  lv,2019-09-26 00:00:00,2.4,22,0,2,4,1,22,4,18,3,https://cdn.cnn.com/cnn/2019/images/09/28/rel1_nv.pdf
-South Carolina,SSRS,A/B,406  lv,2019-09-26 00:00:00,2.7,37,0,2,4,1,11,3,16,0,https://cdn.cnn.com/cnn/2019/images/09/28/rel1_sc.pdf
+South Carolina,SSRS,A/B,406  lv,2019-09-26 00:00:00,2.6,37,0,2,4,1,11,3,16,0,https://cdn.cnn.com/cnn/2019/images/09/28/rel1_sc.pdf
 US,Harris Insights & Analytics,C+,801  lv,2019-09-26 00:00:00,0.0,31,0,3,5,2,13,0,20,2,https://docs.google.com/spreadsheets/d/e/2PACX-1vTUMQmusBtCFhCiYye3TUP4yGXcAMWTxL2URuMuIxjFIJIRXnUzyuMuUm7rUDX9C5YCbnGCKhKOENf5/pubhtml/sheet?headers=false&gid=0
 US,Harris Insights & Analytics,C+,1335  rv,2019-09-26 00:00:00,0.0,28,0,3,3,1,14,0,15,2,https://docs.google.com/spreadsheets/d/e/2PACX-1vTUMQmusBtCFhCiYye3TUP4yGXcAMWTxL2URuMuIxjFIJIRXnUzyuMuUm7rUDX9C5YCbnGCKhKOENf5/pubhtml/sheet?headers=false&gid=0
 California,Public Policy Institute of California,A/B,692  lv,2019-09-25 00:00:00,0.1,22,0,2,6,1,21,1,23,3,https://www.ppic.org/wp-content/uploads/ppic-statewide-survey-californians-and-their-government-september-2019.pdf
@@ -704,7 +717,7 @@ US,Harris Insights & Analytics,C+,1831  lv,2019-09-20 00:00:00,0.0,32,0,3,5,1,15
 US,Harris Insights & Analytics,C+,761  lv,2019-09-20 00:00:00,0.0,32,0,3,5,1,15,1,20,2,https://docs.google.com/spreadsheets/d/e/2PACX-1vToFq5GlAnqAlIkHkLKrwPfl7-vv4qQAMc3oEDXODMlGSo4akYBgzK_Q9SWXUBt3rEbKJ2fdvvhLBfu/pubhtml/sheet?headers=false&gid=0
 US,Harris Insights & Analytics,C+,1340  rv,2019-09-20 00:00:00,0.0,28,0,3,4,1,16,1,17,2,https://docs.google.com/spreadsheets/d/e/2PACX-1vToFq5GlAnqAlIkHkLKrwPfl7-vv4qQAMc3oEDXODMlGSo4akYBgzK_Q9SWXUBt3rEbKJ2fdvvhLBfu/pubhtml/sheet?headers=false&gid=0
 North Carolina,High Point University,A/B,348  a,2019-09-19 00:00:00,0.0,31,0,4,3,1,20,0,15,4,http://www.highpoint.edu/src/files/2019/09/66memoC.pdf
-New Hampshire,Tel Opinion Research,B/C,600  lv,2019-09-19 00:00:00,1.7,28,0,0,0,0,14,0,39,0,https://www.politico.com/f/?id=0000016d-6568-d8ed-a36d-ede817180000
+New Hampshire,Tel Opinion Research,B/C,600  lv,2019-09-19 00:00:00,1.6,28,0,0,0,0,14,0,39,0,https://www.politico.com/f/?id=0000016d-6568-d8ed-a36d-ede817180000
 New Hampshire,Tel Opinion Research,B/C,600  lv,2019-09-19 00:00:00,0.0,24,0,0,9,0,13,0,29,1,https://www.politico.com/f/?id=0000016d-6568-d8ed-a36d-ede817180000
 New Hampshire,Tel Opinion Research,B/C,600  lv,2019-09-19 00:00:00,0.0,15,0,0,4,2,8,0,18,0,https://www.politico.com/f/?id=0000016d-6568-d8ed-a36d-ede817180000
 Maryland,Goucher College,-,300  lv,2019-09-19 00:00:00,0.1,33,0,1,5,1,10,0,21,1,https://www.goucher.edu/hughes-center/documents/Goucher-College-Poll-Sept19-Part-3.pdf
@@ -726,7 +739,7 @@ US,Harris Insights & Analytics,C+,799  lv,2019-09-17 00:00:00,0.0,32,0,3,5,2,14,
 US,Harris Insights & Analytics,C+,1329  rv,2019-09-17 00:00:00,0.0,27,0,3,4,1,14,1,13,3,https://docs.google.com/spreadsheets/d/e/2PACX-1vSkjH2s-g-2MUvescdMg8gQxFQiNANdT_xOAkvIViDyrNnP0uHUaAZgoOOYEcTWmUGaWbAqcQwuniN-/pubhtml/sheet?headers=false&gid=0
 Missouri,Show Me Victories,-,400  lv,2019-09-16 00:00:00,1.0,34,0,1,10,1,14,0,22,1,https://files.constantcontact.com/a1529b48301/2b9dc5b1-e472-4676-99c1-4e7d639d53dc.pdf
 New Jersey,Monmouth University,A+,325  rv,2019-09-16 00:00:00,3.3,26,0,9,6,1,18,0,20,1,https://www.monmouth.edu/polling-institute/documents/monmouthpoll_nj_091919.pdf/
-US,Civiqs,-,1291  lv,2019-09-16 00:00:00,1.6,24,0,1,7,1,14,1,30,2,http://filesforprogress.org/datasets/sep_18/civiqs_debate/post_debate.pdf
+US,Civiqs,-,1291  lv,2019-09-16 00:00:00,1.5,24,0,1,7,1,14,1,30,2,http://filesforprogress.org/datasets/sep_18/civiqs_debate/post_debate.pdf
 Iowa,David Binder Research,-,500  lv,2019-09-16 00:00:00,0.0,25,0,2,12,8,9,3,23,2,http://www.focusonruralamerica.com/2019/09/18/september-2019-poll-results/
 US,SurveyUSA,A,1017  lv,2019-09-16 00:00:00,0.0,33,0,4,5,1,17,0,19,3,http://www.surveyusa.com/client/PollReport.aspx?g=af31ac4e-3786-426b-828e-6359cb6c34bb
 US,NBC News/Wall Street Journal,A/B,506  lv,2019-09-16 00:00:00,0.0,31,0,2,7,2,14,1,25,4,https://www.nbcnews.com/politics/meet-the-press/nbc-wsj-poll-biden-leads-dem-2020-field-warren-s-n1055511
@@ -737,7 +750,7 @@ Virginia,Research America Inc.,B/C,882  rv,2019-09-15 00:00:00,1.7,23,0,1,4,2,9,
 Virginia,Research America Inc.,B/C,1009  a,2019-09-15 00:00:00,0.0,23,0,1,4,2,10,0,10,3,https://www.umw.edu/news/wp-content/uploads/sites/7/2019/09/Topline-2-2019.pdf
 California,Change Research,C,3325  lv,2019-09-15 00:00:00,0.0,18,0,2,10,1,23,0,25,3,https://www.changeresearch.com/california-poll-sept-12-15
 Texas,University of Texas at Tyler,B/C,474  rv,2019-09-15 00:00:00,0.0,28,0,6,4,0,17,1,11,1,https://www.uttyler.edu/politicalscience/files/pollingcenter/UT-Tyler-Poll-Sept19-Toplines-RV-in-Texas.pdf
-Florida,Florida Atlantic University,B/C,407  lv,2019-09-15 00:00:00,0.2,34,0,1,5,0,14,0,24,2,https://business.fau.edu/departments/economics/business-economics-polling/bepi-polls/bepi-polls-2019/warren-cutting-into-bidens-lead-in-florida.php
+Florida,Florida Atlantic University,B/C,407  lv,2019-09-15 00:00:00,0.1,34,0,1,5,0,14,0,24,2,https://business.fau.edu/departments/economics/business-economics-polling/bepi-polls/bepi-polls-2019/warren-cutting-into-bidens-lead-in-florida.php
 California,SurveyUSA,A,547  lv,2019-09-15 00:00:00,0.0,27,0,2,3,1,18,0,16,7,http://www.surveyusa.com/client/PollReport.aspx?g=58e0ba48-d312-4f29-9007-67c41aa7d9a5
 US,Morning Consult,B+,7487  lv,2019-09-15 00:00:00,0.0,32,0,3,5,2,20,1,18,3,https://morningconsult.com/2020-democratic-primary/
 California,Capitol Weekly,-,599  lv,2019-09-13 00:00:00,0.0,18,0,1,7,1,21,0,29,4,https://www.dropbox.com/s/svk9hn0dof8301b/Sept%202019%20Presidential%20Primary%20Tracking%20Poll%20Toplines%20and%20Crosstabs.xlsx
@@ -773,7 +786,7 @@ Texas,YouGov,B-,552  lv,2019-09-08 00:00:00,0.0,26,0,1,4,1,12,0,18,3,https://www
 US,Morning Consult,B+,17824  lv,2019-09-08 00:00:00,0.0,33,0,3,5,1,21,1,16,3,https://morningconsult.com/2020-democratic-primary/
 US,Harris Insights & Analytics,C+,1350  rv,2019-09-08 00:00:00,0.0,27,0,3,5,1,17,1,13,3,https://scottrasmussen.com/3-day-dems-voting-for-trends/
 US,Harris Insights & Analytics,C+,1350  rv,2019-09-07 00:00:00,0.0,26,0,2,5,1,17,1,13,2,https://scottrasmussen.com/3-day-dems-voting-for-trends/
-US,Benenson Strategy Group,B/C,762  lv,2019-09-06 00:00:00,1.7,28,0,3,8,0,21,0,14,2,http://dfer.org/wp-content/uploads/2019/09/DFER-BSG-Polling-Results-9.12.19.pdf
+US,Benenson Strategy Group,B/C,762  lv,2019-09-06 00:00:00,1.6,28,0,3,8,0,21,0,14,2,http://dfer.org/wp-content/uploads/2019/09/DFER-BSG-Polling-Results-9.12.19.pdf
 US,YouGov,B-,1002  lv,2019-09-06 00:00:00,0.0,27,0,2,6,1,15,0,24,2,https://www.fairvote.org/democratic_primary_2020_poll
 US,YouGov,B-,1002  lv,2019-09-06 00:00:00,0.0,0,0,0,0,0,36,0,55,0,https://www.fairvote.org/democratic_primary_2020_poll
 US,YouGov,B-,1002  lv,2019-09-06 00:00:00,0.0,43,0,0,0,0,0,0,49,0,https://www.fairvote.org/democratic_primary_2020_poll
@@ -841,7 +854,7 @@ US,Echelon Insights,-,479  rv,2019-08-21 00:00:00,0.0,55,0,0,0,0,0,0,0,0,http://
 US,Echelon Insights,-,479  rv,2019-08-21 00:00:00,0.0,52,0,0,0,0,0,0,32,0,http://echeloninsights.com/wp-content/uploads/Omnibus-August-2019_Dem-Primary.pdf
 US,Echelon Insights,-,479  rv,2019-08-21 00:00:00,0.0,55,0,0,0,0,35,0,0,0,http://echeloninsights.com/wp-content/uploads/Omnibus-August-2019_Dem-Primary.pdf
 US,Harris Insights & Analytics,C+,1326  rv,2019-08-21 00:00:00,0.0,28,0,2,4,1,17,1,10,2,https://docs.google.com/spreadsheets/d/e/2PACX-1vSpkfBpgfuh3VYa9EFn4XoRZGPHc94ZOg1lr6LX01cnFO-XrgKgfbgYGo8r6RbNptJ-cHANcIN0R4a4/pubhtml/sheet?headers=false&gid=0
-New Jersey,Change Research,C,635  lv,2019-08-20 00:00:00,1.1,26,0,5,12,0,21,1,23,1,https://www.changeresearch.com/new-jersey-poll-august-16-20-2019
+New Jersey,Change Research,C,635  lv,2019-08-20 00:00:00,1.0,26,0,5,12,0,21,1,23,1,https://www.changeresearch.com/new-jersey-poll-august-16-20-2019
 US,Monmouth University,A+,298  rv,2019-08-20 00:00:00,0.0,19,0,4,4,1,20,0,20,3,https://www.monmouth.edu/polling-institute/documents/monmouthpoll_us_082619.pdf/
 US,YouGov,B-,559  lv,2019-08-20 00:00:00,0.0,22,0,2,7,0,19,0,17,1,https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/u4gcv1suy6/econTabReport.pdf
 US,Harris Insights & Analytics,C+,1335  rv,2019-08-20 00:00:00,0.0,28,0,3,4,1,17,1,9,2,https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3xkVPbuzVLmkZ3cSkrGQZ49ZufaSgYmxYl3u28SXsei00hlSy-tIrsj3-t-aWh-kApfJDCiGM9MMO/pubhtml/sheet?headers=false&gid=0
@@ -859,7 +872,7 @@ US,Harris Insights & Analytics,C+,909  rv,2019-08-18 00:00:00,0.0,42,0,0,0,0,0,0
 US,Harris Insights & Analytics,C+,909  rv,2019-08-18 00:00:00,0.0,44,0,0,0,0,38,0,0,0,https://scottrasmussen.com/crosstabs-aug-16-18-two-day-totals/
 US,Morning Consult,B+,17115  lv,2019-08-18 00:00:00,0.0,31,0,3,5,1,20,1,15,3,https://morningconsult.com/2020-democratic-primary/
 US,Harris Insights & Analytics,C+,1350  rv,2019-08-17 00:00:00,0.0,26,0,3,4,1,16,1,11,2,https://scottrasmussen.com/3-day-dems-voting-for-trends/
-Nevada,Gravis Marketing,C+,382  rv,2019-08-16 00:00:00,1.0,25,0,3,5,2,10,6,15,2,http://orlando-politics.com/wp-content/uploads/2019/08/Nevada-General-and-Democratic-Caucus-August-16-2019.pdf
+Nevada,Gravis Marketing,C+,382  rv,2019-08-16 00:00:00,0.9,25,0,3,5,2,10,6,15,2,http://orlando-politics.com/wp-content/uploads/2019/08/Nevada-General-and-Democratic-Caucus-August-16-2019.pdf
 US,Harris Insights & Analytics,C+,3118  rv,2019-08-16 00:00:00,0.0,29,0,2,4,1,15,1,11,2,https://docs.google.com/spreadsheets/d/e/2PACX-1vT62_Q_LqzJnHPcihzY-4KloC-pX6nQqloVcb-d1nPkTqknRPNOH2fqPhxASRUGWo1OaK0TxEqzFBdj/pubhtml/sheet?headers=false&gid=0
 US,Harris Insights & Analytics,C+,1317  rv,2019-08-16 00:00:00,0.0,27,0,2,4,1,16,1,12,2,https://docs.google.com/spreadsheets/d/e/2PACX-1vR4u8p1FyRDkBaH5T2lzzPbFSP8EwJwGeeftLnEvqTBHvCKafQSK4ZYmmREfk3FgKak86J6YjTNADHq/pubhtml/sheet?headers=false&gid=0
 US,Harris Insights & Analytics,C+,1336  rv,2019-08-15 00:00:00,0.0,28,0,2,3,1,14,1,12,3,https://docs.google.com/spreadsheets/d/e/2PACX-1vSwQ21LM6gfLgTNdctbfauyKqMhCIO0RxhNiIi3G3oPwOS2YF_bgOAZxSIfy_g6CIQi7jKnExKZL6Yl/pubhtml/sheet?headers=false&gid=0
@@ -1017,7 +1030,7 @@ Mississippi,Chism Strategies,-,523  lv,2019-06-21 00:00:00,0.8,50,0,2,2,1,7,0,7,
 South Carolina,Change Research,C,308  lv,2019-06-20 00:00:00,0.0,39,0,5,11,0,13,0,15,2,https://docs.google.com/spreadsheets/d/1LqfkQsESsQYMT7dpYqsRX4RRcJoX_uTjq-WgUOJPVh8/edit
 New Hampshire,Change Research,C,308  lv,2019-06-20 00:00:00,0.0,24,0,0,14,1,28,0,21,1,https://docs.google.com/spreadsheets/d/1LqfkQsESsQYMT7dpYqsRX4RRcJoX_uTjq-WgUOJPVh8/edit
 Iowa,Change Research,C,308  lv,2019-06-20 00:00:00,0.0,27,0,5,17,2,18,0,20,1,https://docs.google.com/spreadsheets/d/1LqfkQsESsQYMT7dpYqsRX4RRcJoX_uTjq-WgUOJPVh8/edit
-US,Park Street Strategies,-,600  lv,2019-06-04 00:00:00,0.8,32,0,1,7,2,15,0,13,1,https://www.scribd.com/document/413642865/Read-Park-Strategies-survey
+US,Park Street Strategies,-,600  lv,2019-06-04 00:00:00,0.7,32,0,1,7,2,15,0,13,1,https://www.scribd.com/document/413642865/Read-Park-Strategies-survey
 US,Swayable,-,977  lv,2019-06-03 00:00:00,0.0,40,0,4,6,1,20,0,7,0,https://swayable.com/insights/primaries2019
 US,Swayable,-,1961  a,2019-06-03 00:00:00,0.0,36,0,3,5,2,22,0,6,1,https://swayable.com/insights/primaries2019
 US,YouGov,B-,576  lv,2019-06-18 00:00:00,0.0,26,0,2,9,1,13,0,14,1,https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/f0cbavpadc/econTabReport.pdf
@@ -1033,7 +1046,7 @@ South Carolina,YouGov,B-,559  lv,2019-06-12 00:00:00,0.0,45,0,4,6,1,18,0,8,1,htt
 New Hampshire,YouGov,B-,448  lv,2019-06-12 00:00:00,0.0,33,0,3,10,1,20,0,17,1,https://drive.google.com/file/d/0ByVu4fDHYJgVSm5SVnVXZHBkOVpPQXpXX0pPWF9YSHhVb1g0/view
 Iowa,YouGov,B-,441  lv,2019-06-12 00:00:00,0.0,30,0,3,11,4,22,0,12,0,https://drive.google.com/file/d/0ByVu4fDHYJgVSm5SVnVXZHBkOVpPQXpXX0pPWF9YSHhVb1g0/view
 US,Fox News/Beacon Research/Shaw & Co. Research,A-,449  lv,2019-06-12 00:00:00,0.0,32,0,3,8,2,13,0,9,2,https://www.foxnews.com/politics/fox-news-poll-6-16
-Minnesota,Change Research,C,772  lv,2019-06-12 00:00:00,0.9,20,0,1,11,16,19,0,21,2,https://www.changeresearch.com/minnesota-poll-june-8-12-2019
+Minnesota,Change Research,C,772  lv,2019-06-12 00:00:00,0.8,20,0,1,11,16,19,0,21,2,https://www.changeresearch.com/minnesota-poll-june-8-12-2019
 Florida,Climate Nexus,-,676  rv,2019-06-11 00:00:00,0.7,32,0,2,6,1,16,0,10,2,https://climatenexus.org/wp-content/uploads/Florida-Poll-Toplines-6_17_19.pdf
 Nevada,Monmouth University,A+,370  lv,2019-06-11 00:00:00,2.6,36,0,2,7,1,13,0,19,2,https://www.monmouth.edu/polling-institute/documents/monmouthpoll_nv_061219.pdf/
 US,YouGov,B-,513  lv,2019-06-11 00:00:00,0.0,26,0,2,8,1,12,0,16,1,https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/b0wzlf9avh/econTabReport.pdf
@@ -1192,19 +1205,6 @@ US,GBAO,B/C,817  lv,2019-03-03 00:00:00,0.1,28,0,3,0,2,20,0,5,0,https://cdn.amer
 US,Morning Consult,B+,12560  lv,2019-03-03 00:00:00,0.0,31,2,4,1,3,27,0,7,0,https://morningconsult.com/wp-content/uploads/2019/03/Political-Intelligence-3.5.19.pdf
 South Carolina,Emerson College,B-,291  lv,2019-03-02 00:00:00,0.1,37,2,6,0,1,21,0,5,0,http://emersonpolling.com/2019/03/02/south-carolina-2020-poll-biden-leads-primary-field-by-wide-margin-president-trump-popular-with-base/
 New Hampshire,University of New Hampshire,B,240  lv,2019-02-26 00:00:00,0.0,8,0,2,1,3,28,0,2,1,https://scholars.unh.edu/cgi/viewcontent.cgi?article=1551&context=survey_center_polls
-New Hampshire,University of New Hampshire,B,240  lv,2019-02-26 00:00:00,0.0,22,1,3,1,4,26,0,7,0,https://scholars.unh.edu/cgi/viewcontent.cgi?article=1551&context=survey_center_polls
-US,Morning Consult,B+,15642  lv,2019-02-24 00:00:00,0.0,29,2,4,1,3,27,0,7,0,https://morningconsult.com/wp-content/uploads/2019/02/Political-Intelligence-2.26.19.pdf
-US,D-CYFOR,-,453  rv,2019-02-23 00:00:00,0.5,39,2,4,0,2,14,0,5,0,https://projects.fivethirtyeight.com/polls/20190301_US.pdf
-New Hampshire,Emerson College,B-,405  lv,2019-02-22 00:00:00,0.0,25,2,5,1,8,27,0,9,0,http://emersonpolling.com/2019/02/23/bernie-takes-early-lead-in-new-hampshire-democratic-primary-potential-tight-us-senate-race-if-gov-sununu-takes-on-sen-shaheen/
-US,Harris Insights & Analytics,C+,337  rv,2019-02-20 00:00:00,0.0,37,3,2,0,0,22,0,4,0,https://harvardharrispoll.com/wp-content/uploads/2019/02/HHP_Feb2019_RV_topline.pdf
-US,Harris Insights & Analytics,C+,346  rv,2019-02-20 00:00:00,0.0,30,2,5,0,0,19,0,4,0,https://harvardharrispoll.com/wp-content/uploads/2019/02/HHP_Feb2019_RV_topline.pdf
-South Carolina,Change Research,C,600  lv,2019-02-18 00:00:00,0.0,0,0,28,1,5,0,0,20,1,https://docsend.com/view/y8dpeq2
-South Carolina,Change Research,C,600  lv,2019-02-18 00:00:00,0.0,36,1,10,0,1,14,0,9,1,https://docsend.com/view/y8dpeq2
-US,Harris Insights & Analytics,C+,370  rv,2019-02-18 00:00:00,0.0,25,5,4,0,2,11,0,5,0,https://thehill.com/hilltv/what-americas-thinking/430614-one-fourth-of-democratic-voters-say-theyd-support-michelle
-US,Morning Consult,B+,15383  lv,2019-02-17 00:00:00,0.0,30,2,5,0,4,21,0,8,0,https://morningconsult.com/wp-content/uploads/2019/02/Political-Intelligence-2.19.19.pdf
-US,Emerson College,B-,431  lv,2019-02-16 00:00:00,0.0,27,2,9,0,5,17,0,9,0,http://emersonpolling.com/2019/02/16/majority-of-americans-disagree-with-trumps-national-emergency-despite-a-plurality-agreeing-with-border-wall-extension/
-New Hampshire,YouGov,B-,337  lv,2019-02-15 00:00:00,0.0,28,2,3,0,1,20,0,9,0,https://www.umass.edu/newsoffice/article/presidential-politics-biden-leads-umass
-California,Change Research,C,948  lv,2019-02-11 00:00:00,0.0,0,0,7,2,0,0,0,23,1,https://docsend.com/view/mjz7a9j
 0,0,-,  ,00:00:00,0.0,0,0,0,0,0,0,0,0,0,0
 0,0,-,  ,00:00:00,0.0,0,0,0,0,0,0,0,0,0,0
 0,0,-,  ,00:00:00,0.0,0,0,0,0,0,0,0,0,0,0

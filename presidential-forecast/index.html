@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<style>
+		#more {
+			display: none;
+		}
+
+		.btn {
+			border: none;
+			color: white;
+			padding: 10px 10px;
+			font-size: 16px;
+			font-family: brandon-grotesque;
+			border-radius: 10px;
+			cursor: pointer;
+
+		}
+
+		.default {
+			background-color: #e7e7e7;
+			color: black;
+		}
+
+		/* Gray */
+		.default:hover {
+			background: #ddd;
+		}
+	</style>
+	<title>2020 Presidential Forecast</title>
+</head>
+
+<head>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script data-ad-client="ca-pub-8025120308040073" async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140782021-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-140782021-2');
+        </script>
+	<link rel="icon" href="https://jkstats76.files.wordpress.com/2019/02/cropped-site-icon.png?w=32" sizes="32x32">
+	<link rel="icon" href="https://jkstats76.files.wordpress.com/2019/02/cropped-site-icon.png?w=192" sizes="192x192">
+
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+	<link rel="stylesheet" href="https://use.typekit.net/htk2wjy.css">
+	<link rel="stylesheet" href="index.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+
+
+
+
+<body>
+
+
+	<a href="https://jhkforecasts.com">
+  <h1 style="font-weight: 300;text-align: center;">JHK Forecasts</h1>
+</a>
+	  <!-- <a class="computer" href="https://jhkforecasts.com"><img  style="height: 75px;margin-left: auto;display: block;margin-right: auto;"src="https://raw.githubusercontent.com/jhkersting/jhkforecasts/master/jhk%20forecasts%20logo-01.jpg"/></a>
+		<a class="phone" href="https://jhkforecasts.com"><img  style="height: 50px;margin-left: auto;display: block;margin-right: auto;"src="https://jkstats76.files.wordpress.com/2019/02/cropped-site-icon.png"/></a>
+		<hr>-->
+	
+	  <div id="bigmenu">
+		<table style="border-collapse: collapse; border: none;margin-top: 20px;" cellspacing="0" cellpadding="0"
+		  width="100%" height=100px>
+		  <tbody>
+			<tr>
+			  <td style="width: 33%; border-right: solid grey 1.0pt; " valign="middle" width="33%">
+				<a href="https://projects.jhkforecasts.com/democratic_primary/">
+				  <img style="text-align: center;" src="demprimarymenu-01.svg">
+				</a>
+			  </td>
+			  <td style="width: 33%; border-right: solid grey 1.0pt; border-left: none; " valign="middle" width="33%">
+				<a href="https://projects.jhkforecasts.com/presidential_forecast/">
+				  <img style="text-align: center;" src="presforecastmenu-01.svg">
+			  </td>
+			  <td style="width: 33%; ; " valign="middle" width="33%">
+				<a href="https://projects.jhkforecasts.com/senate_forecast/">
+				  <img style="text-align: center;" src="senateforecastmenu-01.svg">
+			  </td>
+			</tr>
+		  </tbody>
+		</table>
+	
+	
+	  </div>
+	
+	
+	  <div id="smallmenu">
+		<table style="border-collapse: collapse; border: none;margin-top: 20px;" cellspacing="0" cellpadding="0"
+		  width="100%">
+		  <tbody>
+			<tr>
+			  <td style="width: 35%; border-right: solid grey 1.0pt; " valign="top" width="35%">
+				<p style="text-align: center;font-weight: 700;font-size: 13px;"><span style="color: black;"><a
+					  href="https://projects.jhkforecasts.com/democratic_primary/"><span style="color: black;">Democratic
+						Primary</span></a><span></p>
+			  </td>
+			  <td style="width: 30%; border-right: solid grey 1.0pt; border-left: none; " valign="top" width="30%">
+				<p style="text-align: center;font-weight: 700;font-size: 13px;"><span style="color: black;"><a
+					  href="https://projects.jhkforecasts.com/presidential_forecast/"><span
+						style="color: black;">Presidential</span></a></span></p>
+			  </td>
+			  <td style="width: 35%; ; " valign="top" width="35%">
+				<p style="text-align: center;font-weight: 700;font-size: 13px;"><span style="color: black;"><a
+					  href="https://projects.jhkforecasts.com/senate_forecast/"><span
+						style="color: black;">Senate</span></a></span></p>
+			  </td>
+			</tr>
+		  </tbody>
+		</table>
+	  </div>
+	  <div>
+		<h1 style="text-align: center;font-weight: 700;font-size: 2vw;"><span style="color: black;">Interactives/Projects</span>
+		<table style="border-collapse: collapse; border: none;margin-top: 20px;" cellspacing="0" cellpadding="0" width="100%">
+		  <tbody>
+			<tr>
+			  <td style="width: 35%; border-right: solid grey 1.0pt; " valign="top" width="35%">
+				<h1 style="text-align: center;font-weight: 700;font-size: 2vw;text-decoration: solid underline;color: #0077FF;"><a
+					  href="https://politicalpolls.jhkforecasts.com/general_election">Who Beats Trump?</a></>
+			  </td>
+			  <td style="width: 35%; border-right: solid grey 1.0pt; " valign="top" width="35%">
+				<h1 style="text-align: center;font-weight: 700;font-size: 2vw;text-decoration: solid underline;color: #0077FF;"><a
+					  href="pressimulation">Simulator</a></>
+			  
+			  
+			</tr>
+			<tr>
+			  <td style="width: 35%; border-right: solid grey 1.0pt;padding: 5px; " valign="top" width="35%">
+				<p style="text-align: center;font-weight: 700;font-size: 1.5vw;">See how each candidate fares against Trump.</p>
+			  </td>
+			  <td style="width: 30%; border-right: solid grey 1.0pt; border-left: none;padding: 5px " valign="top" width="30%">
+				<p style="text-align: center;font-weight: 700;font-size: 1.5vw;">Simulates the general election once based the forecast.</p>
+			   
+			</tr>
+		  </tbody>
+		</table>
+	  </div>
+	
+	<!--<h4 style="text-align: center;font-family: interstate-mono;font-weight: 300;font-style: normal;color: grey;"id="update"></h4>
+	<div id="topline"></div>
+
+	<div id="usmap"></div>
+
+	
+		<table style="border-collapse: collapse; border: none;" cellspacing="0" cellpadding="0" width="100%">
+			<tbody>
+				<tr>
+					</td>
+					<td style="width: 50%; " valign="top" width="50%">
+						<div id="tablevote"></div>
+					</td>
+					<td style="width: 50%; " valign="top" width="50%">
+						<div id="tableev"></div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	
+
+	<h1 style="margin-left: 2%;font-size: 20;font-weight: 800;">The Race to 270 Electoral Votes</h1>
+	<p style="margin-left: 4%;font-size: 15;">The race for the White House is won by the candidate who gets 270
+		electoral votes. Below shows how close each party is to getting the 270 electoral votes. </p>
+	<div id="raceto270"></div>
+	<h1 style="margin-left: 2%;font-size: 20;font-weight: 800;">Only Time Will Tell</h1>
+	<p style="margin-left: 4%;font-size: 15;">The graph below show the ever-changing race for the White House.</p>
+	<div id="phonetime">
+		<div id="bubbles"></div>
+
+
+		<div class="radio-toolbar" style="text-align:center ;">
+
+			<input type="radio" id="projvote" name="dataPoint" value="1" checked>
+			<label for="projvote">Win Presidency</label>
+
+			<input type="radio" id="win%" name="dataPoint" value="2">
+			<label for="win%">Vote Share</label>
+			<input type="radio" id="ev" name="dataPoint" value="3">
+			<label for="ev">Electoral Votes</label>
+
+
+			<div id="chart2"></div>
+		</div>
+	</div>
+
+	</div>
+	</div>
+
+	<h1 style="margin-left: 2%;font-size: 20;font-weight: 800;">A Better Way to look at things.</h1>
+	<p style="margin-left: 4%;font-size: 15;">Normal maps can be confusing when it comes to the electoral college. The
+		map below shows each state, sized based on the electoral votes it get, and colored by each candidates chance of
+		winning.</p>
+	<div id="bubblemap"></div>
+	<div id="bubblemap2"></div>
+	
+	<h1 style="margin-left: 2%;font-size: 20;font-weight: 800;">This or That</h1>
+	<p style="margin-left: 4%;font-size: 15;">There are many possble outcomes in the electoral college. The histogram
+		below show the spread of electoral votes of 20,000 simulations of the election.</p>
+
+	
+	<div id="demev"></div>
+	<h1 style="margin-left: 2%;font-size: 20;font-weight: 800;">The Battlegrounds</h1>
+	<p style="margin-left: 4%;font-size: 15;">The states below are ranked by the most detrimental to outcome of the
+		election. Tipping point measures which state will give the candidate the 270th electoral vote. The closer the
+		circle is to the center, the closer the race is. And bars that are wider mean that the model is certain about
+		that race. </p>
+
+
+	<p><span id="tippingpoint"></span><span id="dots"></span><span id="more"><span></p>
+	<div style="text-align:center ;">
+		<button class="btn default" onclick="myFunction()" id="myBtn">Read more</button>
+	</div>
+
+	<script>
+		var keyState = "US"
+		function myFunction() {
+			var polls = document.getElementById("tippingpoint");
+			var dots = document.getElementById("dots");
+			var moreText = document.getElementById("more");
+			var btnText = document.getElementById("myBtn");
+
+			if (dots.style.display === "none") {
+				polls.style.display = "inline";
+				dots.style.display = "inline";
+				btnText.innerHTML = "Show more";
+				moreText.style.display = "none";
+			} else {
+				polls.style.display = "inline"
+				dots.style.display = "none";
+				btnText.innerHTML = "Show less";
+				moreText.style.display = "inline";
+			}
+		}
+	</script>
+	<script src="tippingpoint.js"></script>
+	<script src="tippingpointmore.js"></script>
+
+
+
+
+	<script src="statetopline.js"></script>
+	<script src="map.js"></script>
+	<script src="270ev.js"></script>
+	<script src="bubblemap.js"></script>
+	<script src="timechangeus.js"></script>
+	<script src="votechart.js"></script>
+	<script src="evchart.js"></script>
+	<script src="trumpev.js"></script>
+	<script src="demev.js"></script>
+	<script src="timechangephone.js"></script>
+	<script src="bubblemapphone.js"></script>
+	
+	<script>
+		var category = ["Trump", "Democrats", "3rd Party"]
+		// since Category B and E are really close to each other, assign them diverging colors
+		var colorScale = d3.scaleOrdinal()
+			.domain(category)
+			.range(["#FF6060", "#0091FF", "#FFE130"])
+
+		d3.csv("topline.csv", function (error, data) {
+
+
+
+			var svg = d3.select("#tablevote").append("svg")
+				.attr("viewBox", '0 0 600 400')
+				.append('g')
+
+			svg.append("text")
+				.text("Projected Vote Share")
+				.attr("x", 20)
+				.attr("y", 40)
+				.style("fill", "Black")
+				.style("font-size", 30)
+				.attr("font-weight", 700)
+
+			svg.append("line")
+				.attr("x1", 20)
+				.attr("x2", 600)
+				.attr("y1", 60)
+				.attr("y2", 60)
+				.attr("stroke-width", 1)
+				.attr("stroke", "black")
+
+			var svgLegend = svg.append('g')
+				.attr('class', 'gLegend')
+				.attr("transform", "translate(" + 20 + "," + 120 + ")")
+
+
+
+			var legend = svgLegend.selectAll('.legend')
+				.data(data)
+				.enter().append('g')
+				.attr("class", "legend")
+				.attr("transform", function (d, i) { return "translate(0," + i * 90 + ")" })
+
+			legend.append("circle")
+				.attr("cx", 500)
+				.attr("cy", -5)
+				.attr("r", 42)
+				.style("fill", d => colorScale(d.cand))
+				.style("opacity", d => d.voteShare / 100)
+
+			legend.append("text")
+				.attr("class", "legend-text")
+				.attr("x", 7 / 2)
+				.attr("y", 7 / 2)
+				.style("fill", "Black")
+				.style("font-size", 30)
+				.attr("font-weight", 700)
+				.text(d => d.cand)
+
+			legend.append("text")
+				.attr("class", "legend-text")
+				.attr("x", 500)
+				.attr("y", 5)
+				.style("fill", "Black")
+				.style("font-size", 30)
+				.attr("font-weight", 700)
+				.text(d => d.voteShare + "%")
+				.attr("text-anchor", "middle")
+		});
+
+	</script>
+
+	<script>
+		var category = ["Trump", "Democrats", "3rd Party"]
+		// since Category B and E are really close to each other, assign them diverging colors
+		var colorScale = d3.scaleOrdinal()
+			.domain(category)
+			.range(["#FF6060", "#0091FF", "#FFE130"])
+
+		d3.csv("topline.csv", function (error, data) {
+
+
+
+			var svg = d3.select("#tableev").append("svg")
+				.attr("viewBox", '0 0 600 400')
+				.append('g')
+
+			svg.append("text")
+				.text("Average Electoral Votes")
+				.attr("x", 20)
+				.attr("y", 40)
+				.style("fill", "Black")
+				.style("font-size", 30)
+				.attr("font-weight", 700)
+
+			svg.append("line")
+				.attr("x1", 20)
+				.attr("x2", 600)
+				.attr("y1", 60)
+				.attr("y2", 60)
+				.attr("stroke-width", 1)
+				.attr("stroke", "black")
+
+			var svgLegend = svg.append('g')
+				.attr('class', 'gLegend')
+				.attr("transform", "translate(" + 20 + "," + 120 + ")")
+
+
+
+			var legend = svgLegend.selectAll('.legend')
+				.data(data)
+				.enter().append('g')
+				.attr("class", "legend")
+				.attr("transform", function (d, i) { return "translate(0," + i * 90 + ")" })
+
+			legend.append("circle")
+				.attr("cx", 500)
+				.attr("cy", -5)
+				.attr("r", 42)
+				.style("fill", d => colorScale(d.cand))
+				.style("opacity", d => d.ev / 538)
+
+			legend.append("text")
+				.attr("class", "legend-text")
+				.attr("x", 7 / 2)
+				.attr("y", 7 / 2)
+				.style("fill", "Black")
+				.style("font-size", 30)
+				.attr("font-weight", 700)
+				.text(d => d.cand)
+
+			legend.append("text")
+				.attr("class", "legend-text")
+				.attr("x", 500)
+				.attr("y", 5)
+				.style("fill", "Black")
+				.style("font-size", 30)
+				.attr("font-weight", 700)
+				.text(d => d.ev)
+				.attr("text-anchor", "middle")
+		});
+
+	</script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-h2+d+5c-9-3e"
+     data-ad-client="ca-pub-8025120308040073"
+     data-ad-slot="8603820464"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-h2+d+5c-9-3e"
+     data-ad-client="ca-pub-8025120308040073"
+     data-ad-slot="8603820464"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-h2+d+5c-9-3e"
+     data-ad-client="ca-pub-8025120308040073"
+     data-ad-slot="8603820464"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script>
+	var w = window.innerWidth
+	document.getElementById("usmap").style.width = w > 600? "80%":"100%"
+	document.getElementById("usmap").style.marginLeft = w > 600?"10%":0
+
+</script>-->
+<h1 style="text-align: center;font-weight: 700;font-size: 5vw;">🚧🚧🏗️Under Construction🏗️🚧🚧</h1>
+</body>
+
+</html>
