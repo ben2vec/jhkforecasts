@@ -11,7 +11,7 @@ var timeparse = d3.timeParse("%m/%d/%y %H:%M")
 var time_scale = 86400000
 var simulations = 500
 var timeformat = d3.timeFormat("%m/%d/%y")
-var wholeformat = d3.format(".1f")
+var dataformat = d3.format(".3f")
 var fund_weight = 75
 var experts_weight = 40
 var polls_weight
@@ -159,7 +159,7 @@ d3.csv("ssindex.csv", state_similarity => {
 				var polls_new = polls_new.filter(d => d.date > new Date(2019, 6, 1))
 
 
-
+				
 				var length_from_july_2019 = (sim_date - new Date(2019, 6, 1)) / time_scale
 				//us trendline
 				var us_trendline = []
@@ -333,7 +333,7 @@ d3.csv("ssindex.csv", state_similarity => {
 
 					var pvariance = p.weight > 400 ? 0 : .00005 * Math.pow(p.weight, 2) - 0.0121 * p.weight + 2.2645
 					var dem_raw = f.dem * fund_weight + p.dem * p.weight + e.dem * experts_weight + s.dem * ss_weight
-
+					var stdev = datevariance + pvariance
 					var third_raw = f.third * fund_weight + p.third * p.weight + e.third * experts_weight + s.third * ss_weight
 					var proj = {
 						state: states[b],
@@ -342,7 +342,7 @@ d3.csv("ssindex.csv", state_similarity => {
 						gop: gop_raw / sum,
 						dem: dem_raw / sum,
 						third: third_raw / sum,
-						stdev: datevariance + pvariance,
+						stdev: Math.sqrt(2.2 * Math.pow(stdev, 2)),
 						pct_vote: +data[b].pct_vote
 					}
 					proj.margin = proj.gop - proj.dem
@@ -407,10 +407,12 @@ d3.csv("ssindex.csv", state_similarity => {
 
 				var gop_win = national_results.filter(d => d.winner == "gop").length * 100 / simulations
 				var dem_win = national_results.filter(d => d.winner == "dem").length * 100 / simulations
+				var third_win = 0
 				var gop_vote = d3.sum(pv, d => d.gp)
 				var dem_vote = d3.sum(pv, d => d.dp)
+				var third_vote = d3.sum(pv, d => d.tp)
 
-
+				var pr = []
 				for (let b = 0; b < states.length; b++) {
 					var stres = sim_results.filter(d => d.state == states[b])
 
@@ -419,20 +421,50 @@ d3.csv("ssindex.csv", state_similarity => {
 					var ev = data[b].ev
 					var gop_win = stres.filter(d => d.winner == "gop").length * 100 / simulations
 					var dem_win = stres.filter(d => d.winner == "dem").length * 100 / simulations
+					var third_win = stres.filter(d => d.winner == "third").length * 100 / simulations
 					var gop_p10 = pv[b].gop - pv[b].stdev * 1.28
 					var dem_p10 = pv[b].dem - pv[b].stdev * 1.28
+					var third_p10 = pv[b].third - pv[b].third / 2 * 1.28
 					var gop_vote = pv[b].gop
 					var dem_vote = pv[b].dem
+					var third_vote = pv[b].third
 					var gop_p90 = pv[b].gop + pv[b].stdev * 1.28
 					var dem_p90 = pv[b].dem + pv[b].stdev * 1.28
+					var third_p90 = pv[b].third + pv[b].third / 2 * 1.28
 					var tp = stres.filter(d => d.tippingpoint == 1).length * 100 / simulations
+					var gpoll_avg = state_poll_avg[b].gop
+					var dpoll_avg = state_poll_avg[b].dem
+					var tpoll_avg = state_poll_avg[b].third
+					var poll_weight = state_poll_avg[b].weight
+					var gfund_avg = fund[b].gop
+					var dfund_avg = fund[b].dem
+					var tfund_avg = fund[b].third
+					var gss_avg = ss[b].gop
+					var dss_avg = ss[b].dem
+					var tss_avg = ss[b].third
+					var gexpert_avg = experts_ratings[b].gop
+					var dexpert_avg = experts_ratings[b].dem
+					var texpert_avg = experts_ratings[b].third
 
 
-					var gop = [forecast_date, state, +ev, "gop", gop_win, tp]
+
+					var gop = [forecast_date, state, +ev, "gop", dataformat(gop_win),  dataformat(gop_p10), dataformat(gop_vote), dataformat(gop_p90),dataformat(tp),dataformat(gpoll_avg),dataformat(gfund_avg),dataformat(gss_avg),dataformat(gexpert_avg),poll_weight,fund_weight,ss_weight,experts_weight]
+					var dem = [forecast_date, state, +ev, "dem", dataformat(dem_win),  dataformat(dem_p10), dataformat(dem_vote), dataformat(dem_p90),dataformat(tp),dataformat(dpoll_avg),dataformat(dfund_avg),dataformat(dss_avg),dataformat(dexpert_avg),poll_weight,fund_weight,ss_weight,experts_weight]
+					var third = [forecast_date, state, +ev, "third", dataformat(third_win),  dataformat(third_p10), dataformat(third_vote), dataformat(third_p90),dataformat(tp),dataformat(tpoll_avg),dataformat(tfund_avg),dataformat(tss_avg),dataformat(texpert_avg),poll_weight,fund_weight,ss_weight,experts_weight]
 					console.log(gop)
+					pr.push(gop)
+					pr.push(dem)
+					pr.push(third)
 				}
+				var usgop =[timeformat(sim_date),"US",538,"gop",dataformat(gop_win),,dataformat(gop_vote),,,,,,,,,,]
+				var usdem =[timeformat(sim_date),"US",538,"dem",dataformat(dem_win),,dataformat(dem_vote),,,,,,,,,,]
+				var usthird =[timeformat(sim_date),"US",538,"third",dataformat(third_win),,dataformat(third_vote),,,,,,,,,,]
 
-
+				pr.push(usgop)
+				pr.push(usdem)
+				pr.push(usthird)
+				var res = pr.join("</br>")
+				document.getElementById("pr").innerHTML = res
 			})
 		})
 	})
