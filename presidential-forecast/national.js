@@ -1,4 +1,11 @@
 var colors = ["#FF6060", "#0091FF", "#FFE130"]
+
+var category = ["gop", "dem", "third"]
+
+var cand_colors = d3.scaleOrdinal()
+  .domain(category)
+  .range(["#FF6060", "#0091FF", "#FFE130"])
+
 var tformat = d3.timeFormat("%m/%d/%Y")
 var dateparse = d3.timeParse("%m/%d/%y")
 var timeparse = d3.timeParse("%m/%d/%y %H:%M")
@@ -20,16 +27,12 @@ var color = d3.scaleLinear()
   .domain([0, 50, 100])
   .range(["#0091FF", "white", "#FF6060"]);
 
-
-
 var map = d3.select("#usmap")
   .append("svg")
   .attr("viewBox", '100 50 1120 450');
-
-
-
-
-
+var overview = d3.select("#overview")
+  .append("svg")
+  .attr("viewBox", '0 0 1000 400');
 
 var tool_tip = d3.tip()
   .attr("class", "d3-tip")
@@ -119,7 +122,7 @@ d3.csv("data.csv", function (data) {
       .style("stroke", "#fff")
       .style("stroke-width", "1")
       .style("fill", d => color(d.properties.gopWin))
-      
+
 
     map.selectAll("label")
       .data(json.features)
@@ -133,7 +136,7 @@ d3.csv("data.csv", function (data) {
       .attr("font-size", "10")
       .attr("fill", "black")
       .attr("text-anchor", "middle")
-      
+
 
     map.selectAll("path2")
       .data(json.features)
@@ -220,7 +223,7 @@ d3.csv("data.csv", function (data) {
       .on('mouseout',
         function (d) {
 
-          
+
           tool_tip.hide()
         });
 
@@ -292,7 +295,7 @@ d3.csv("data.csv", function (data) {
       .attr("height", 150)
 
     var dateparse = d3.timeParse("%m/%d/%y")
-    var margin = { top: 20, right: 60, bottom: 30, left: 60 }
+    var margin = { top: 20, right: 60, bottom: 30, left: 20 }
     var width = 1000 - margin.left - margin.right
     var height = 400 - margin.top - margin.bottom
     var axisPad = 12
@@ -555,21 +558,92 @@ d3.csv("data.csv", function (data) {
             .attr("dominant-baseline", "middle")
         }
       }
+      var winbutton = d3.select("#winbutton")
+        .on("click", function () {
+          update("win", 500)
+        })
+
+      var votebutton = d3.select("#votebutton")
+        .on("click", function () {
+          update("vote", 500)
+        })
+      var evbutton = d3.select("#evbutton")
+        .on("click", function () {
+          update("ev", 500)
+        })
     }
-    var winbutton = d3.select("#winbutton")
-      .on("click", function () {
-        update("win", 500)
-      })
 
-    var votebutton = d3.select("#votebutton")
-      .on("click", function () {
-        update("vote", 500)
-      })
-    var evbutton = d3.select("#evbutton")
-      .on("click", function () {
-        update("ev", 500)
-      })
+    var overview_data = newest_data.filter(d => d.state == "US")
+    overview_data.sort((a, b) => b.electoral_vote - a.electoral_vote)
 
+    overview.selectAll()
+      .data(overview_data)
+      .enter()
+      .append("text")
+      .text(d => onevalue(d.electoral_vote))
+      .attr("y", (d, i) => 100 + i * 100)
+      .attr("x", 450)
+      .attr("fill", (d, i) => cand_colors(d.party))
+      .style("font-weight", "800")
+      .style("font-size", 25)
+      .attr("text-anchor", "middle")
+
+    overview.selectAll()
+      .data(overview_data)
+      .enter()
+      .append("text")
+      .text(d => onevalue(d.proj_vote) + "%")
+      .attr("y", (d, i) => 100 + i * 100)
+      .attr("x", 850)
+      .attr("fill", (d, i) => cand_colors(d.party))
+      .style("font-weight", "800")
+      .style("font-size", 25)
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "middle")
+
+      overview.append("image")
+      .attr("xlink:href", d => "https://jhkforecasts.com/Trump-01.png")
+      .attr("x", 100)
+      .attr("y",  overview_data[0].party == "gop"?55:155)
+      .attr("width", 90)
+      .attr("height", 90)
+      overview.append("image")
+      .attr("xlink:href", d => "https://jhkforecasts.com/Biden-01.png")
+      .attr("x", 100)
+      .attr("y",  overview_data[0].party == "gop"?155:55)
+      .attr("width", 90)
+      .attr("height", 90)
+
+
+      overview.append("text")
+      .text("?")
+      .attr("y", 300)
+      .attr("x", 145)
+      .attr("fill", cand_colors("third"))
+      .style("font-weight", "800")
+      .style("font-size", 50)
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "middle")
+
+
+      overview.append("text")
+      .text("Avg Electoral Votes")
+      .attr("y", 30)
+      .attr("x", 450)
+      .attr("fill", "Black")
+      .style("font-weight", "800")
+      .style("font-size", 20)
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "middle")
+      overview.append("text")
+      .text("Popular Vote")
+      .attr("y", 30)
+      .attr("x", 850)
+      .attr("fill", "Black")
+      .style("font-weight", "800")
+      .style("font-size", 20)
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "middle")
 
   })
 })
