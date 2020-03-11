@@ -210,7 +210,7 @@ d3.csv("results.csv", results => {
                 return {
                     pollster: d,
                     mr_error: d3.mean(polls_data.filter(j => j.pollster == d), d => d.mean_reverted_error),
-                    polls: d3.sum(polls_data.filter(j => j.pollster == d), d => d.rmse) / d3.mean(polls_data.filter(j => j.pollster == d), d => d.rmse),
+                    polls: Math.round(d3.sum(polls_data.filter(j => j.pollster == d), d => d.rmse) / d3.mean(polls_data.filter(j => j.pollster == d), d => d.rmse)),
                 }
             })
             pollsters_avg_rmse.forEach((d, i) => {
