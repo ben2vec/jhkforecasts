@@ -219,10 +219,7 @@
    #phoneprojectedvote {
      display: none;
    }
-   #usmap {
-     width: 80%;
-     margin-left: 10%;
-   }
+   
    .computer {
      display: inline;
    }
