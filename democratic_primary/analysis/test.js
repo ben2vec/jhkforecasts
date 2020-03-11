@@ -54,6 +54,7 @@ d3.csv("results.csv", results => {
         var states = results.map(d => {
             return d.state
         })
+        console.log(states)
         var pd = []
         for (let a = 0; a < states.length; a++) {
             var states_polls = polls.filter(d => d.State == states[a])
