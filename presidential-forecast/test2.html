@@ -15,20 +15,30 @@
 <script src="https:////cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script>
 
 <body>
-    
-                    <input id="sim-month" style="width:200px;font-size: 20px;text-align: center;margin-top:10"
-                        type="text" value="08/30/2020">
-             
-
-
-    <p style="font-size: 9px;" id="pr"></p>
     <script>
-
-        var string = "3/08/2020"
-        var array = string.split("/")
-        console.log(array)
-
+        var key_state = "US"
     </script>
+    <div style="margin-left: 20%;">
+        <table style="border-collapse: collapse; border: none;margin-top: 20px;text-align: center;width: 60%;" cellspacing="0"
+            
+            <tbody>
+                <tr>
+                    <td style="width: 33%; ">
+                        <button class="btn default" id="winbutton">Win White House</button>
+                    </td>
+                    <td style="width: 33%; ">
+                        <button class="btn default" id="votebutton">Popular Vote</button>
+                    </td>
+                    <td style="width: 33%;">
+                        <button class="btn default" id="evbutton">Electoral Votes</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="time"></div>
+
+    <script src="time.js"></script>
 
 
     </div>

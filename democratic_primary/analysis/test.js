@@ -141,6 +141,7 @@ d3.csv("results.csv", results => {
                         sanders: +d.sanders,
                         steyer: +d.steyer,
                         warren: +d.warren,
+                        margin: d.margin,
                         biden_res: +results[a].biden,
                         bloomberg_res: +results[a].bloomberg,
                         buttigeig_res: +results[a].buttigeig,
@@ -148,6 +149,7 @@ d3.csv("results.csv", results => {
                         sanders_res: +results[a].sanders,
                         steyer_res: +results[a].steyer,
                         warren_res: +results[a].warren,
+                        margin_res: results[a].margin,
                     }
                 })
 
@@ -160,9 +162,10 @@ d3.csv("results.csv", results => {
                     d.steyer_error = +results[a].steyercalc == 0 ? 0 : Math.pow(Math.abs(d.steyer - d.steyer_res), 2)
                     d.warren_error = +results[a].warrencalc == 0 ? 0 : Math.pow(Math.abs(d.warren - d.warren_res), 2)
                     d.sumsq = d.biden_error + d.bloomberg_error + d.buttigeig_error + d.klobuchar_error + d.sanders_error + d.steyer_error + d.warren_error
-                    d.rmse = Math.sqrt(d.sumsq / results[a].num_cands)
+                    d.rmse = d.margin == "-" ? Math.sqrt(d.sumsq / results[a].num_cands) : Math.abs(d.margin - d.margin_res) / 2
                     return d;
                 })
+                console.log(accuracy)
                 var avg_error = d3.mean(accuracy, d => d.rmse)
 
                 accuracy.forEach((d, i) => {
@@ -213,19 +216,20 @@ d3.csv("results.csv", results => {
                 d.rmse = Math.sqrt(d3.sum(polls_data.filter(j => j.pollster == d.pollster), d => Math.pow(d.rmse, 2)) / d.polls)
                 return d;
             })
-            var flength = forecasters.map(d=>{
+            var flength = forecasters.map(d => {
                 return forecasts_data.filter(j => j.forecaster == d.forecaster).length
             })
             var forecasts_avg_rmse = forecasters.map((d, i) => {
                 return {
                     forecast: d.forecaster,
                     rmse: Math.sqrt(d3.sum(forecasts_data.filter(j => j.forecaster == d.forecaster), d => Math.pow(d.rmse, 2)) / flength[i]),
+                    mr_error: Math.sqrt(d3.sum(forecasts_data.filter(j => j.forecaster == d.forecaster), d => Math.pow(d.mean_reverted_error, 2)) / flength[i]),
                 }
             })
-
+           
             pollsters_avg_rmse.sort((a, b) => a.mr_error - b.mr_error)
             forecasts_avg_rmse.sort((a, b) => a.rmse - b.rmse)
-
+            console.log(forecasts_avg_rmse)
             var qual_polls = pollsters_avg_rmse.filter(d => d.polls >= num_qual_polls)
 
 

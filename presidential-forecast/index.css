@@ -233,3 +233,29 @@
   top: 0;
   background-color: white;
 }
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+.statesover {
+  fill: none;
+  pointer-events: all;
+}
+.btn {
+  border: none;
+  color: white;
+  padding: 2px 5px;
+  font-size: 1.2vw;
+  font-family: brandon-grotesque;
+  font-weight: 800;
+  border-radius: 10px;
+  border: #ddd solid 2pt;
+  width: 95%;
+  margin-left: 2.5%;
+  cursor: pointer;
+}
+
+.default {
+  color: black;
+}
