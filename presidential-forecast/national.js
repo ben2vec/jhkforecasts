@@ -10,6 +10,7 @@ var tformat = d3.timeFormat("%m/%d/%Y")
 var dateparse = d3.timeParse("%m/%d/%y")
 var timeparse = d3.timeParse("%m/%d/%y %H:%M")
 var numberformat = d3.format(".1f")
+var updated_format = d3.timeFormat("%b. %d %Y %I:%M %p")
 var widthmap = 1020
 var heightmap = 500;
 var states = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming", "District of Columbia", "Maine-1", "Maine-2", "Nebraska-1", "Nebraska-2", "Nebraska-3", "US"]
@@ -44,7 +45,8 @@ map.call(tool_tip);
 
 d3.csv("data.csv", function (data) {
 
-
+  var updated = data[data.length-1].experts_weight
+  console.log(updated)
   data.forEach((d, i) => {
     d.forecast_date = dateparse(d.forecast_date)
     return d
@@ -52,6 +54,7 @@ d3.csv("data.csv", function (data) {
 
   var newest_update = d3.max(data, d => d.forecast_date)
 
+  document.getElementById("updated").innerHTML  = "Updated: "+ updated
 
   var newest_data = data.slice(data.length - 171, data.length)
 

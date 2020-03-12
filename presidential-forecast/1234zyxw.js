@@ -5,7 +5,7 @@ var election_date = new Date(2020, 10, 3)
 var time_scale = 86400000
 var simulations = 50000
 var timeformat = d3.timeFormat("%m/%d/%y")
-var updateformat = d3.timeFormat("%b. %d, %Y %I:%M %p")
+var updateformat = d3.timeFormat("%b. %d %Y %I:%M %p")
 var dataformat = d3.format(".3f")
 var fund_weight = 75
 var experts_weight = 40
@@ -469,9 +469,9 @@ function update(input) {
 						pr.push(dem)
 						pr.push(third)
 					}
-					var usgop = [timeformat(sim_date), "US", dataformat(gop_ev1), "gop", dataformat(gop_win1), , dataformat(gop_vote1), , , , , , , , , , ,updateformat(today)]
-					var usdem = [timeformat(sim_date), "US", dataformat(dem_ev1), "dem", dataformat(dem_win1), , dataformat(dem_vote1), , , , , , , , , , ,updateformat(today)]
-					var usthird = [timeformat(sim_date), "US", 0, "third", dataformat(third_win1), , dataformat(third_vote1), , , , , , , , , , ,updateformat(today)]
+					var usgop = [timeformat(sim_date), "US", dataformat(gop_ev1), "gop", dataformat(gop_win1), , dataformat(gop_vote1), , , , , , , , , , updateformat(today)]
+					var usdem = [timeformat(sim_date), "US", dataformat(dem_ev1), "dem", dataformat(dem_win1), , dataformat(dem_vote1), , , , , , , , , , updateformat(today)]
+					var usthird = [timeformat(sim_date), "US", 0, "third", dataformat(third_win1), , dataformat(third_vote1), , , , , , , , , , updateformat(today)]
 
 					pr.push(usgop)
 					pr.push(usdem)

@@ -689,7 +689,7 @@ d3.csv("simulation.csv", function (data) {
         .attr("x", d => d.xValue)
         .attr("y", d => d.yValue)
         .attr("font-family", "brandon-grotesque")
-        .attr("font-weight", "700")
+        .attr("font-weight", "500")
         .attr("font-size", "10")
         .attr("fill", "black")
         .attr("text-anchor", "middle")
