@@ -259,3 +259,7 @@
 .default {
   color: black;
 }
+
+.hovertext {
+  text-decoration: underline ;
+}
