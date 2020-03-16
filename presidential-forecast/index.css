@@ -163,24 +163,7 @@
    #smallmenu {
      display: inline;
    }
-   #bigprojected {
-     display: none;
-   }
-   #smallprojected {
-     display: inline;
-   }
-   #bubblemap {
-     display: none;
-   }
-   #bubblemap2 {
-     display: inline;
-   }
-   #projected {
-     display: none;
-   }
-   #phoneprojectedvote {
-     display: inline;
-   }
+  
    .computer {
      display: none;
    }
@@ -197,25 +180,7 @@
    #smallmenu {
      display: none;
    }
-   #bigprojected {
-     display: inline;
-   }
-   #smallprojected {
-     display: none;
-   }
-   #bubblemap {
-     display: inline;
-   }
-   #bubblemap2 {
-     display: none;
-   }
-   #projected {
-     display: inline;
-   }
-   #phoneprojectedvote {
-     display: none;
-   }
-   
+  
    .computer {
      display: inline;
    }
