@@ -156,9 +156,7 @@
  }
 
  @media only screen and (max-width:600px) {
-   #tipDiv {
-     display: none;
-   }
+  
    #bigmenu {
      display: none;
    }
@@ -192,9 +190,7 @@
  }
 
  @media only screen and (min-width:601px) {
-   #tipDiv {
-     display: inline;
-   }
+   
    #bigmenu {
      display: inline;
    }

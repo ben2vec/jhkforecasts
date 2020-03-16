@@ -29,9 +29,9 @@ var color = d3.scaleLinear()
   .domain([0, 50, 100])
   .range(["#0091FF", "white", "#FF6060"]);
 
-var map = d3.select("#usmap")
+var maphone = d3.select("#usmapphone")
   .append("svg")
-  .attr("viewBox", '100 50 1120 450');
+  .attr("viewBox", '100 -200 820 700');
 var overview = d3.select("#overview")
   .append("svg")
   .attr("viewBox", '0 0 1000 400');
@@ -41,7 +41,7 @@ var tool_tip = d3.tip()
   .offset([-180, -90])
   .html("<div id='tipDiv'></div>");
 
-map.call(tool_tip);
+maphone.call(tool_tip);
 
 
 d3.csv("data.csv", function (data) {
@@ -115,11 +115,55 @@ d3.csv("data.csv", function (data) {
     }
     console.log(json.features)
 
-    map.selectAll("path")
+
+
+    maphone.append("text")
+      .text("Win White House")
+      .attr("x", 510)
+      .attr("y", -170)
+      .attr("font-family", "brandon-grotesque")
+      .attr("font-weight", "700")
+      .attr("font-size", "35")
+      .attr("fill", "black")
+      .attr("text-anchor", "middle")
+
+    maphone.append("text")
+      .text(numberformat(newest_data[168].win) + "%")
+      .attr("x", 700)
+      .attr("y", -70)
+      .attr("font-family", "brandon-grotesque")
+      .attr("font-weight", "700")
+      .attr("font-size", "45")
+      .attr("fill", colors[0])
+      .attr("text-anchor", "end")
+
+    maphone.append("text")
+      .text(numberformat(newest_data[169].win) + "%")
+      .attr("x", 310)
+      .attr("y",-70)
+      .attr("font-family", "brandon-grotesque")
+      .attr("font-weight", "700")
+      .attr("font-size", "45")
+      .attr("fill", colors[1])
+      .attr("text-anchor", "start")
+
+    maphone.append("image")
+      .attr("xlink:href", d => "https://jhkforecasts.com/Trump-01.png")
+      .attr("x", 710)
+      .attr("y", -150)
+      .attr("width", 150)
+      .attr("height", 150)
+
+    maphone.append("image")
+      .attr("xlink:href", d => "https://jhkforecasts.com/Biden-01.png")
+      .attr("x", 150)
+      .attr("y", -150)
+      .attr("width", 150)
+      .attr("height", 150)
+
+    maphone.selectAll("path")
       .data(json.features)
       .enter()
-      //.append("a")
-      //.attr("xlink:href", d=> d.properties.name )
       .append("path")
       .attr("class", "states")
       .attr("d", path)
@@ -128,7 +172,7 @@ d3.csv("data.csv", function (data) {
       .style("fill", d => color(d.properties.gopWin))
 
 
-    map.selectAll("label")
+    maphone.selectAll("label")
       .data(json.features)
       .enter()
       .append("text")
@@ -141,7 +185,7 @@ d3.csv("data.csv", function (data) {
       .attr("text-anchor", "middle")
 
 
-    map.selectAll("path2")
+    maphone.selectAll("path2")
       .data(json.features)
       .enter()
       .append("path")
@@ -230,7 +274,7 @@ d3.csv("data.csv", function (data) {
           tool_tip.hide()
         });
 
-    map.append("rect")
+    maphone.append("rect")
       .attr("x", 850)
       .attr("y", 350)
       .attr("width", 20)
@@ -240,7 +284,7 @@ d3.csv("data.csv", function (data) {
       .attr("ry", "6")
       .style("fill", "none");
 
-    map.append("text")
+    maphone.append("text")
       .text("Tipping Points")
       .attr("x", 760)
       .attr("y", 365)
@@ -253,49 +297,7 @@ d3.csv("data.csv", function (data) {
 
     var winner = newest_data[168].win > newest_data[169].win ? "Trump" : "Biden"
 
-    map.append("text")
-      .text("Win White House")
-      .attr("x", 1037.5)
-      .attr("y", 80)
-      .attr("font-family", "brandon-grotesque")
-      .attr("font-weight", "700")
-      .attr("font-size", "25")
-      .attr("fill", "black")
-      .attr("text-anchor", "middle")
-
-    map.append("text")
-      .text(numberformat(newest_data[168].win) + "%")
-      .attr("x", 1100)
-      .attr("y", winner == "Trump" ? 175 : 375)
-      .attr("font-family", "brandon-grotesque")
-      .attr("font-weight", "700")
-      .attr("font-size", "35")
-      .attr("fill", colors[0])
-      .attr("text-anchor", "middle")
-
-    map.append("text")
-      .text(numberformat(newest_data[169].win) + "%")
-      .attr("x", 1100)
-      .attr("y", winner == "Biden" ? 175 : 375)
-      .attr("font-family", "brandon-grotesque")
-      .attr("font-weight", "700")
-      .attr("font-size", "35")
-      .attr("fill", colors[1])
-      .attr("text-anchor", "middle")
-
-    map.append("image")
-      .attr("xlink:href", d => "https://jhkforecasts.com/Trump-01.png")
-      .attr("x", 900)
-      .attr("y", winner == "Trump" ? 100 : 300)
-      .attr("width", 150)
-      .attr("height", 150)
-
-    map.append("image")
-      .attr("xlink:href", d => "https://jhkforecasts.com/Biden-01.png")
-      .attr("x", 900)
-      .attr("y", winner == "Biden" ? 100 : 300)
-      .attr("width", 150)
-      .attr("height", 150)
+    
 
     var dateparse = d3.timeParse("%m/%d/%y")
     var margin = { top: 20, right: 60, bottom: 30, left: 20 }
