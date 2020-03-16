@@ -792,7 +792,7 @@ d3.csv("data.csv", function (data) {
 
     var bubblemap = d3.select("#bubblemap")
       .append("svg")
-      .attr("viewBox", '-100 0 900 450')
+      .attr("viewBox", '-50 0 800 450')
 
 
 
