@@ -472,7 +472,7 @@ d3.csv("data.csv", function (data) {
       city.enter().insert("g", ".focus").append("path")
         .attr("class", "line cities")
         .style("stroke", (d, i) => colors[i])
-        .style("stroke-width", 4)
+        .style("stroke-width", 3)
         .style("opacity", .9)
         .merge(city)
         .transition().duration(speed)
