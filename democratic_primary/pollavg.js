@@ -4,7 +4,7 @@ var height = 550 - margin.top - margin.bottom
 
 var demscale = d3.scaleLinear()
     .domain([0, 30])
-    .range(["white", "#0077FF"]);
+    .range(["white", "#3E5AA9"]);
 
 d3.csv("Sheet2.csv", function (error, data) {
     var keys = data.columns.slice(1);
@@ -183,7 +183,7 @@ var startdate = new Date(2018,10,30)
         .rangeRound([height - margin.bottom, margin.top]);
 
     var z = d3.scaleOrdinal()
-        .range(["#00C181", "#a4b1b5", "#a4b1b5", "#a4b1b5", "#a4b1b5", "#0077FF", "#a4b1b5", "#a4b1b5", "#a4b1b5"])
+        .range(["#00C181", "#a4b1b5", "#a4b1b5", "#a4b1b5", "#a4b1b5", "#3E5AA9", "#a4b1b5", "#a4b1b5", "#a4b1b5"])
         ;
 
     var line = d3.line()

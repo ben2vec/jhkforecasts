@@ -18,7 +18,7 @@ var category = ["Biden", "Bloomberg", "Booker", "Buttigieg", "Klobuchar", "Sande
 
 var color1 = d3.scaleOrdinal()
   .domain(category)
-  .range(["#98d2f8", "#00B050", "#a4b1b5", "#98d2f8", "#0077FF", "#002E66", "#E7B5FF", "#B722FF", "purple"])
+  .range(["#98d2f8", "#00B050", "#a4b1b5", "#98d2f8", "#3E5AA9", "#002E66", "#E7B5FF", "#B722FF", "purple"])
 
 d3.csv("states.csv", function (error, data) {
 

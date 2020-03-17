@@ -4,7 +4,7 @@ var height = 400 - margin.top - margin.bottom
 var axisPad = 12
 var demScale = d3.scaleLinear()
     .domain([0, 50,100])
-    .range(["white", "#0077FF","#001347"]);
+    .range(["white", "#3E5AA9","#001347"]);
 
 d3.csv("time.csv", function (error, data) {
     var keys = data.columns.slice(1);
@@ -40,7 +40,7 @@ d3.csv("time.csv", function (error, data) {
 
     var keys = keys.filter(f => f.includes(datatype))
 
-    var col_category = ["#00C181", "#a4b1b5", "#a4b1b5", "#a4b1b5", "#a4b1b5", "#0077FF", "#a4b1b5", "#a4b1b5", "#a4b1b5"]
+    var col_category = ["#00C181", "#a4b1b5", "#a4b1b5", "#a4b1b5", "#a4b1b5", "#3E5AA9", "#a4b1b5", "#a4b1b5", "#a4b1b5"]
 
     var cand_now = keys.map(function (d, j) {
         return {

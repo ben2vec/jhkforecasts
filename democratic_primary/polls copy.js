@@ -4,11 +4,11 @@ var gopScale = d3.scaleLinear()
 
 var demScale = d3.scaleLinear()
   .domain([0, 50])
-  .range(["white", "#0077FF"]);
+  .range(["white", "#3E5AA9"]);
 
 var demScale = d3.scaleLinear()
   .domain([0, 50])
-  .range(["white", "#0077FF"]);
+  .range(["white", "#3E5AA9"]);
 var racetype = keyState == "Iowa" || "Nevada" || "Wyoming" ? " Caucus" : " Primary"
 
 

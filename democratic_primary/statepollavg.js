@@ -3,7 +3,7 @@ var parseDate = d3.timeParse("%Y-%m-%d")
 var numberformat = d3.format(".1f")
 var color = d3.scaleOrdinal()
   .domain(category)
-  .range(["#00C181", "#a4b1b5", "#a4b1b5", "#a4b1b5", "#a4b1b5", "#0077FF", "#a4b1b5", "#a4b1b5", "#a4b1b5"])
+  .range(["#00C181", "#a4b1b5", "#a4b1b5", "#a4b1b5", "#a4b1b5", "#3E5AA9", "#a4b1b5", "#a4b1b5", "#a4b1b5"])
 
 d3.csv("simulator.csv", data => {
   var data = data.filter(d => d.state == keyState)

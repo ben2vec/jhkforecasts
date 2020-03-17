@@ -1,6 +1,6 @@
 var winscale = d3.scaleLinear()
   .domain([0, 50, 100])
-  .range(["white", "#0077FF", "#002E66"]);
+  .range(["white", "#3E5AA9", "#002E66"]);
 var delscale = d3.scaleLinear()
   .domain([0, 1990])
   .range(["white", "#002E66"]);

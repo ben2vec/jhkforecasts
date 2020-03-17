@@ -27,15 +27,15 @@ var svgContainer = d3.select("#bubbles").append("svg")
 
 var colorScale = d3.scaleLinear()
         .domain([0,10,100])
-          .range(["white" ,"#0077FF","#002E66"])
+          .range(["white" ,"#3E5AA9","#002E66"])
 
 var colorScale2 = d3.scaleLinear()
           .domain([0,10,40])
-            .range(["white" ,"#0077FF","#002E66"])
+            .range(["white" ,"#3E5AA9","#002E66"])
 
             var colorScale3 = d3.scaleLinear()
             .domain([0,maxdelegates/2,maxdelegates])
-              .range(["white" ,"#0077FF","#002E66"])
+              .range(["white" ,"#3E5AA9","#002E66"])
    
 
 

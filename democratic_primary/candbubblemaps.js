@@ -12,7 +12,7 @@ var category = ["Biden", "Bloomberg", "Booker", "Buttigieg", "Klobuchar", "Sande
 
 var color = d3.scaleOrdinal()
   .domain(category)
-  .range(["#00C181", "#a4b1b5", "#a4b1b5", "#a4b1b5", "#a4b1b5", "#0077FF", "#a4b1b5", "#a4b1b5", "#a4b1b5"])
+  .range(["#00C181", "#a4b1b5", "#a4b1b5", "#a4b1b5", "#a4b1b5", "#3E5AA9", "#a4b1b5", "#a4b1b5", "#a4b1b5"])
 
 
 var candidate_color = color(keycand)

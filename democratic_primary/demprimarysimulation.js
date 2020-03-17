@@ -14,12 +14,12 @@ var axisPad = 12
 var R =7
 
 
-var colors = ["#00C181", "#00B050", "#98d2f8", "#0077FF", "#002E66", "#E7B5FF", "#B722FF", "purple"]
+var colors = ["#00C181", "#00B050", "#98d2f8", "#3E5AA9", "#002E66", "#E7B5FF", "#B722FF", "purple"]
 var category = ["Biden", "Bloomberg", "Booker", "Buttigieg", "Klobuchar", "Sanders", "Steyer", "Warren", "Yang"]
 
 var color = d3.scaleOrdinal()
   .domain(category)
-  .range(["#00C181", "#a4b1b5", "#a4b1b5", "#a4b1b5", "#a4b1b5", "#0077FF", "#a4b1b5", "#a4b1b5", "#a4b1b5"])
+  .range(["#00C181", "#a4b1b5", "#a4b1b5", "#a4b1b5", "#a4b1b5", "#3E5AA9", "#a4b1b5", "#a4b1b5", "#a4b1b5"])
 var colortwo = d3.scaleOrdinal()
   .domain(category)
   .range(["black", "white", "white", "black", "white", "white", "black", "white", "white"])

@@ -2,7 +2,7 @@ var category = ["Biden", "Bloomberg", "Booker", "Buttigieg", "Klobuchar", "Sande
 
 var color = d3.scaleOrdinal()
   .domain(category)
-  .range(["#00C181", "#a4b1b5", "#a4b1b5", "#a4b1b5", "#a4b1b5", "#0077FF", "#a4b1b5", "#a4b1b5", "#a4b1b5"])
+  .range(["#00C181", "#a4b1b5", "#a4b1b5", "#a4b1b5", "#a4b1b5", "#3E5AA9", "#a4b1b5", "#a4b1b5", "#a4b1b5"])
 
   var final_results =[]
 
@@ -16,11 +16,11 @@ d3.csv("finalresults.csv", function (error, data) {
 
 var colorscale = d3.scaleLinear()
     .domain([0,20,50])
-    .range(["#98d2f8", "#0077FF","#002E66"]);
+    .range(["#98d2f8", "#3E5AA9","#002E66"]);
 
 var errorscale = d3.scaleLinear()
     .domain([-10,0,10])
-    .range(["#a4b1b5", "white","#0077FF"]);
+    .range(["#a4b1b5", "white","#3E5AA9"]);
 
   data.sort((a,b)=> b.vote - a.vote)
 
