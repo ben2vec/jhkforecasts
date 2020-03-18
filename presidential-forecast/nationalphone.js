@@ -1134,7 +1134,7 @@ d3.csv("data.csv", function (data) {
         finaldt.margin = finaldt.gop_vote - finaldt.dem_vote
         fdt.push(finaldt)
       }
-      var min_stdev = d3.min(fdt, d => d.std) * 1.8
+      var min_stdev = d3.min(fdt, d => d.std) * 1.5
       var highest_curve = jStat.normal.pdf(0, 0, min_stdev)
       fdt.sort((a, b) => b.tipping_point - a.tipping_point)
       var y3 = d3.scaleLinear()
@@ -1147,8 +1147,8 @@ d3.csv("data.csv", function (data) {
 
         for (let l = 1; l < 500; l++) {
 
-          var gq = jStat.normal.inv(l / 500, fdt[k].margin, fdt[k].std * 1.8)
-          var gp = jStat.normal.pdf(gq, fdt[k].margin, fdt[k].std * 1.8)
+          var gq = jStat.normal.inv(l / 500, fdt[k].margin, fdt[k].std * 1.5)
+          var gp = jStat.normal.pdf(gq, fdt[k].margin, fdt[k].std * 1.5)
 
 
 
