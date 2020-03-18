@@ -5,6 +5,7 @@ var category = ["gop", "dem", "third"]
 var cand_colors = d3.scaleOrdinal()
   .domain(category)
   .range(["#FF6060", "#0091FF", "#FFE130"])
+var bars_info = [{ "state": "Alabama", "abbrev": "AL", "radius": 16.43, "x": 413, "y": 332 }, { "state": "Alaska", "abbrev": "AK", "radius": 9.49, "x": 41, "y": 19 }, { "state": "Arizona", "abbrev": "AZ", "radius": 18.17, "x": 172, "y": 282 }, { "state": "Arkansas", "abbrev": "AR", "radius": 13.42, "x": 325, "y": 290 }, { "state": "California", "abbrev": "CA", "radius": 40.62, "x": 103, "y": 237 }, { "state": "Colorado", "abbrev": "CO", "radius": 16.43, "x": 224, "y": 249 }, { "state": "Connecticut", "abbrev": "CT", "radius": 14.49, "x": 586, "y": 128 }, { "state": "Delaware", "abbrev": "DE", "radius": 9.49, "x": 557, "y": 183 }, { "state": "Florida", "abbrev": "FL", "radius": 29.5, "x": 483, "y": 380 }, { "state": "Georgia", "abbrev": "GA", "radius": 21.91, "x": 443, "y": 298 }, { "state": "Hawaii", "abbrev": "HI", "radius": 10.95, "x": 88, "y": 372 }, { "state": "Idaho", "abbrev": "ID", "radius": 10.95, "x": 188, "y": 173 }, { "state": "Illinois", "abbrev": "IL", "radius": 24.49, "x": 359, "y": 207 }, { "state": "Indiana", "abbrev": "IN", "radius": 18.17, "x": 413, "y": 207 }, { "state": "Iowa", "abbrev": "IA", "radius": 13.42, "x": 306, "y": 195 }, { "state": "Kansas", "abbrev": "KS", "radius": 13.42, "x": 266, "y": 248 }, { "state": "Kentucky", "abbrev": "KY", "radius": 15.49, "x": 411, "y": 251 }, { "state": "Louisiana", "abbrev": "LA", "radius": 15.49, "x": 326, "y": 335 }, { "state": "Maine", "abbrev": "ME", "radius": 7.75, "x": 628, "y": 26 }, { "state": "Maryland", "abbrev": "MD", "radius": 17.32, "x": 505, "y": 185 }, { "state": "Massachusetts", "abbrev": "MA", "radius": 18.17, "x": 607, "y": 89 }, { "state": "Michigan", "abbrev": "MI", "radius": 21.91, "x": 418, "y": 149 }, { "state": "Minnesota", "abbrev": "MN", "radius": 17.32, "x": 304, "y": 142 }, { "state": "Mississippi", "abbrev": "MS", "radius": 13.42, "x": 373, "y": 324 }, { "state": "Missouri", "abbrev": "MO", "radius": 17.32, "x": 329, "y": 251 }, { "state": "Montana", "abbrev": "MT", "radius": 9.49, "x": 206, "y": 131 }, { "state": "Nebraska", "abbrev": "NE", "radius": 7.75, "x": 258, "y": 209 }, { "state": "Nevada", "abbrev": "NV", "radius": 13.42, "x": 167, "y": 220 }, { "state": "New Hampshire", "abbrev": "NH", "radius": 10.95, "x": 612, "y": 54 }, { "state": "New Jersey", "abbrev": "NJ", "radius": 20.49, "x": 551, "y": 147 }, { "state": "New Mexico", "abbrev": "NM", "radius": 12.25, "x": 215, "y": 303 }, { "state": "New York", "abbrev": "NY", "radius": 29.5, "x": 548, "y": 81 }, { "state": "North Carolina", "abbrev": "NC", "radius": 21.21, "x": 499, "y": 278 }, { "state": "North Dakota", "abbrev": "ND", "radius": 9.49, "x": 257, "y": 136 }, { "state": "Ohio", "abbrev": "OH", "radius": 23.24, "x": 459, "y": 191 }, { "state": "Oklahoma", "abbrev": "OK", "radius": 14.49, "x": 270, "y": 294 }, { "state": "Oregon", "abbrev": "OR", "radius": 14.49, "x": 124, "y": 176 }, { "state": "Pennsylvania", "abbrev": "PA", "radius": 24.49, "x": 498, "y": 132 }, { "state": "Rhode Island", "abbrev": "RI", "radius": 10.95, "x": 619, "y": 126 }, { "state": "South Carolina", "abbrev": "SC", "radius": 16.43, "x": 487, "y": 322 }, { "state": "South Dakota", "abbrev": "SD", "radius": 9.49, "x": 257, "y": 167 }, { "state": "Tennessee", "abbrev": "TN", "radius": 18.17, "x": 379, "y": 284 }, { "state": "Texas", "abbrev": "TX", "radius": 33.76, "x": 271, "y": 355 }, { "state": "Utah", "abbrev": "UT", "radius": 13.42, "x": 204, "y": 218 }, { "state": "Vermont", "abbrev": "VT", "radius": 9.49, "x": 585, "y": 47 }, { "state": "Virginia", "abbrev": "VA", "radius": 19.75, "x": 508, "y": 229 }, { "state": "Washington", "abbrev": "WA", "radius": 18.97, "x": 154, "y": 131 }, { "state": "West Virginia", "abbrev": "WV", "radius": 12.25, "x": 451, "y": 242 }, { "state": "Wisconsin", "abbrev": "WI", "radius": 17.32, "x": 359, "y": 146 }, { "state": "Wyoming", "abbrev": "WY", "radius": 9.49, "x": 214, "y": 177 }, { "state": "District of Columbia", "abbrev": "DC", "radius": 9.49, "x": 536, "y": 193 }, { "state": "Maine-1", "abbrev": "NE-2", "radius": 5.48, "x": 612, "y": 26 }, { "state": "Maine-2", "abbrev": "ME-2", "radius": 5.48, "x": 644, "y": 26 }, { "state": "Nebraska-1", "abbrev": "NE-1", "radius": 5.48, "x": 242, "y": 209 }, { "state": "Nebraska-2", "abbrev": "NE-2", "radius": 5.48, "x": 258, "y": 193 }, { "state": "Nebraska-3", "abbrev": "NE-3", "radius": 5.48, "x": 274, "y": 209 }]
 
 var tformat = d3.timeFormat("%m/%d/%Y")
 var dateparse = d3.timeParse("%m/%d/%y")
@@ -135,7 +136,7 @@ d3.csv("data.csv", function (data) {
       .text(d => d.properties.label)
       .attr("x", d => d.properties.xv)
       .attr("y", d => d.properties.yv)
-      .attr("font-family", "brandon-grotesque")
+      .style("font-family", "source-code-pro")
       .attr("font-size", "10")
       .attr("fill", "black")
       .attr("text-anchor", "middle")
@@ -298,9 +299,9 @@ d3.csv("data.csv", function (data) {
       .attr("height", 150)
 
     var dateparse = d3.timeParse("%m/%d/%y")
-    var margin = { top: 20, right: 60, bottom: 30, left: 20 }
-    var width = 1000 - margin.left - margin.right
-    var height = 400 - margin.top - margin.bottom
+    var margin = { top: 20, right: 40, bottom: 20, left: 20 }
+    var width = 1100 - margin.left - margin.right
+    var height = 450 - margin.top - margin.bottom
     var axisPad = 12
 
     var time_data = data.filter(d => d.state == key_state)
@@ -335,7 +336,7 @@ d3.csv("data.csv", function (data) {
       onevalue = d3.format(".1f")
 
     var time = d3.select("#time").append("svg")
-      .attr("viewBox", "0 0 1000 400")
+      .attr("viewBox", "0 0 1100 450")
       .append('g')
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
@@ -360,7 +361,7 @@ d3.csv("data.csv", function (data) {
     time.append("g")
       .attr("class", "x-axis")
       .attr("transform", "translate(0," + (height - margin.bottom) + ")")
-      .call(d3.axisBottom(x).tickSize(-300).ticks(5)
+      .call(d3.axisBottom(x).tickSize(-370).ticks(5)
         .tickFormat(d3.timeFormat("%b")))
       .call(g => {
         var years = x.ticks(d3.timeYear.every(1))
@@ -648,21 +649,28 @@ d3.csv("data.csv", function (data) {
       .attr("text-anchor", "middle")
       .attr("dominant-baseline", "middle")
 
-    var sd2 = sd
 
-    sd2.sort((a, b) => a.margin - b.margin)
-
-    var y2 = d3.scaleLinear()
-      .domain([0, 40, 100])
-      .range([10, 300, 345])
-
-    sd2.forEach(function (d, i) {
-      d.index = i + 1;
-      d.indexev = d.index == 1 ? 0 : sd2[i - 1].indexev + sd2[i - 1].electoral_votes;
-      d.height = Math.abs(d.margin)
-      return d;
-    })
-    console.log(sd2)
+    var sdbars = []
+    for (let k = 0; k < bars_info.length; k++) {
+      var dt = newest_data.filter(d => d.state == bubble_info[k].state)
+      var finaldt = {
+        state: bubble_info[k].state,
+        electoral_votes: +dt[0].electoral_vote,
+        gop_win: +dt[0].win,
+        dem_win: +dt[1].win,
+        third_win: +dt[2].win,
+        gop_vote: +dt[0].proj_vote,
+        dem_vote: +dt[1].proj_vote,
+        third_vote: +dt[2].proj_vote,
+        x: bubble_info[k].x,
+        y: bubble_info[k].y,
+        r: bubble_info[k].radius,
+        label: bubble_info[k].abbrev,
+        tp: dt[0].tipping_point
+      }
+      finaldt.margin = finaldt.gop_vote - finaldt.dem_vote
+      sdbars.push(finaldt)
+    }
 
     var bars = d3.select("#bars")
       .append("svg")
@@ -675,29 +683,49 @@ d3.csv("data.csv", function (data) {
 
     bars.call(tool_tip2);
 
-    var x2 = d3.scaleLinear()
-      .domain([0, 538])
-      .range([50, 950])
+    var gopbars = sdbars.filter(d => d.margin >= 0)
+    var dembars = sdbars.filter(d => d.margin < 0)
+
+    gopbars.sort((a, b) => b.margin - a.margin)
+    gopbars.forEach(function (d, i) {
+      d.index = i + 1;
+      d.indexev = d.index == 1 ? 0 : gopbars[i - 1].indexev + gopbars[i - 1].electoral_votes;
+
+    })
+    dembars.sort((a, b) => a.margin - b.margin)
+    dembars.forEach(function (d, i) {
+      d.index = i + 1;
+      d.indexev = d.index == 1 ? 0 : dembars[i - 1].indexev + dembars[i - 1].electoral_votes;
+
+    })
+
+    var gop_ev_bars = d3.sum(gopbars, d => d.electoral_votes)
+    var dem_ev_bars = d3.sum(dembars, d => d.electoral_votes)
+
+    var max_evs = gop_ev_bars > dem_ev_bars ? gop_ev_bars : dem_ev_bars
+
+
+
+    var xbars = d3.scaleLinear()
+      .range([50, 850])
+      .domain([0, max_evs]).nice()
 
 
 
     bars.selectAll("bars")
-      .data(sd2)
+      .data(gopbars)
       .enter()
       .append("rect")
-      .attr("x", d => x2(d.indexev))
-      .attr("y", (d, i) => 350 - y2(d.height))
-      .attr("width", d => d.electoral_votes * (900 / 538))
-      .attr("height", (d, i) => y2(d.height))
+      .attr("x", d => xbars(d.indexev))
+      .attr("y", gop_ev_bars < dem_ev_bars ? 200 : 100)
+      .attr("width", d => d.electoral_votes * (800 / max_evs))
+      .attr("height", 70)
       .attr("ry", 3)
       .attr("fill", d => color(d.gop_win))
-      .attr("stroke", "white")
-      .attr("stroke-width", .5)
+      .attr("stroke", "black")
+      .attr("stroke-width", 1)
       .on('mouseover', function (d) {
 
-        d3.select(this)
-          .attr("stroke", "black")
-          .attr("stroke-width", 2)
 
         tool_tip2.show();
         var tipSVG = d3.select("#tipDiv2")
@@ -758,13 +786,128 @@ d3.csv("data.csv", function (data) {
       })
       .on('mouseout',
         function (d) {
-          d3.select(this)
-            .attr("stroke", "white")
-            .attr("stroke-width", .5)
+
 
 
           tool_tip2.hide()
         });
+
+
+    bars.selectAll("bars")
+      .data(dembars)
+      .enter()
+      .append("rect")
+      .attr("x", d => xbars(d.indexev))
+      .attr("y", gop_ev_bars > dem_ev_bars ? 200 : 100)
+      .attr("width", d => d.electoral_votes * (800 / max_evs))
+      .attr("height", 70)
+      .attr("ry", 3)
+      .attr("fill", d => color(d.gop_win))
+      .attr("stroke", "black")
+      .attr("stroke-width", 1)
+      .on('mouseover', function (d) {
+
+
+        tool_tip2.show();
+        var tipSVG = d3.select("#tipDiv2")
+          .append("svg")
+          .attr("width", 180)
+          .attr("height", 180)
+          ;
+        tipSVG.append("rect")
+          .attr("y", 1)
+          .attr("x", 1)
+          .attr("width", 178)
+          .attr("height", 178)
+          .attr("rx", 8)
+          .attr("fill", "white")
+          .attr("stroke", "black")
+          .attr("stroke-width", 2)
+
+
+
+        tipSVG.append("text")
+          .text(d.state)
+          .attr("y", 20)
+          .attr("x", 87.5)
+          .attr("fill", "#black")
+          .style("font-weight", "600")
+          .style("font-size", "20")
+          .attr("text-anchor", "middle")
+
+        tipSVG.append("text")
+          .text(d.electoral_votes + " Electoral Votes")
+          .attr("y", 40)
+          .attr("x", 87.5)
+          .attr("fill", "#black")
+          .style("font-weight", "500")
+          .style("font-size", "17")
+          .attr("text-anchor", "middle")
+
+
+        tipSVG.append("image")
+          .attr("xlink:href", d.margin > 0 ? "https://jhkforecasts.com/Trump-01.png" : "https://jhkforecasts.com/Biden-01.png")
+          .attr("x", 45)
+          .attr("y", 50)
+          .attr("width", 90)
+          .attr("height", 90)
+
+        tipSVG.append("text")
+          .text(d.margin > 0 ? "Trump +" + numberformat(Math.abs(d.margin)) : "Biden +" + numberformat(Math.abs(d.margin)))
+          .attr("y", 160)
+          .attr("x", 87.5)
+          .attr("fill", d.margin > 0 ? cand_colors("gop") : cand_colors("dem"))
+          .style("font-weight", "700")
+          .style("font-size", "17")
+          .attr("text-anchor", "middle")
+
+
+
+
+      })
+      .on('mouseout',
+        function (d) {
+
+
+
+          tool_tip2.hide()
+        });
+
+    bars.append("image")
+      .attr("xlink:href", d => "https://jhkforecasts.com/Biden-01.png")
+      .attr("x", xbars(dem_ev_bars) + 10)
+      .attr("y", gop_ev_bars > dem_ev_bars ? 200 : 100)
+      .attr("width", 75)
+      .attr("height", 75)
+
+
+    bars.append("text")
+      .text(dem_ev_bars)
+      .attr("x", xbars(dem_ev_bars) + 85)
+      .attr("y", gop_ev_bars > dem_ev_bars ? 237.5 : 137.5)
+      .attr("fill",colors[1])
+      .style("font-weight", "600")
+      .style("font-size", "25")
+      .attr("text-anchor", "start")
+      .attr("dominant-baseline","middle")
+
+      bars.append("text")
+      .text(gop_ev_bars)
+      .attr("x", xbars(gop_ev_bars) + 85)
+      .attr("y", gop_ev_bars < dem_ev_bars ? 237.5 : 137.5)
+      .attr("fill",colors[0])
+      .style("font-weight", "600")
+      .style("font-size", "25")
+      .attr("text-anchor", "start")
+      .attr("dominant-baseline","middle")
+
+
+    bars.append("image")
+      .attr("xlink:href", d => "https://jhkforecasts.com/Trump-01.png")
+      .attr("x", xbars(gop_ev_bars) + 10)
+      .attr("y", gop_ev_bars < dem_ev_bars ? 200 : 100)
+      .attr("width", 75)
+      .attr("height", 75)
 
 
     var sd3 = []
@@ -814,11 +957,12 @@ d3.csv("data.csv", function (data) {
       .append("text")
       .text(d => d.label)
       .attr("x", d => d.x)
-      .attr("y", d => d.y + 1.5)
+      .attr("y", d => d.y + 1.1)
       .attr("fill", "black")
       .attr("text-anchor", "middle")
       .attr("dominant-baseline", "middle")
       .attr("font-size", 8)
+      .style("font-family", "source-code-pro")
 
 
     bubblemap.selectAll("overfill")
@@ -828,7 +972,8 @@ d3.csv("data.csv", function (data) {
       .attr("class", "statesover")
       .attr("cx", d => d.x)
       .attr("cy", d => d.y)
-      .attr("r", d => d.r).on('mouseover', function (d) {
+      .attr("r", d => d.r)
+      .on('mouseover', function (d) {
 
 
         tool_tip2.show();
@@ -897,6 +1042,8 @@ d3.csv("data.csv", function (data) {
         });
 
 
+
+
     var pct = [60, 70, 80, 90, 100]
 
     bubblemap.selectAll("key")
@@ -923,23 +1070,23 @@ d3.csv("data.csv", function (data) {
       .data(pct)
       .enter()
       .append("text")
-      .text(d => d )
+      .text(d => d)
       .attr("y", 260)
       .attr("x", (d, i) => 600 + i * 25)
       .attr("fill", "black")
       .attr("text-anchor", "middle")
-      .attr("font-size",12)
-      .attr("font-weight",800)
+      .attr("font-size", 12)
+      .attr("font-weight", 800)
 
 
-      bubblemap.append("text")
+    bubblemap.append("text")
       .text("Win State")
       .attr("y", 230)
-      .attr("x",650)
+      .attr("x", 650)
       .attr("fill", "black")
       .attr("text-anchor", "middle")
-      .attr("font-size",15)
-      .attr("font-weight",800)
+      .attr("font-size", 15)
+      .attr("font-weight", 800)
 
 
 

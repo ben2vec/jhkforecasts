@@ -3,7 +3,7 @@ var incumbency_adv = 2
 var national_third_party = 5
 var election_date = new Date(2020, 10, 3)
 var time_scale = 86400000
-var simulations = 50000
+var simulations = 100000
 var timeformat = d3.timeFormat("%m/%d/%y")
 var updateformat = d3.timeFormat("%b. %d %Y %I:%M %p")
 var dataformat = d3.format(".3f")
@@ -424,8 +424,8 @@ function update(input) {
 					var third_vote1 = d3.sum(pv, d => d.tp)
 					var gop_ev1 = d3.mean(national_results, d => d.gop_ev)
 					var dem_ev1 = d3.mean(national_results, d => d.dem_ev)
-
-
+					var evstdev = d3.deviation(national_results, d => d.gop_ev)
+					console.log(evstdev)
 					var pr = []
 					for (let b = 0; b < states.length; b++) {
 						var stres = sim_results.filter(d => d.state == states[b])
@@ -469,8 +469,8 @@ function update(input) {
 						pr.push(dem)
 						pr.push(third)
 					}
-					var usgop = [timeformat(sim_date), "US", dataformat(gop_ev1), "gop", dataformat(gop_win1), , dataformat(gop_vote1), , , , , , , , , , updateformat(today)]
-					var usdem = [timeformat(sim_date), "US", dataformat(dem_ev1), "dem", dataformat(dem_win1), , dataformat(dem_vote1), , , , , , , , , , updateformat(today)]
+					var usgop = [timeformat(sim_date), "US", dataformat(gop_ev1), "gop", dataformat(gop_win1), dataformat(evstdev), dataformat(gop_vote1), , , , , , , , , , updateformat(today)]
+					var usdem = [timeformat(sim_date), "US", dataformat(dem_ev1), "dem", dataformat(dem_win1),dataformat(evstdev) , dataformat(dem_vote1), , , , , , , , , , updateformat(today)]
 					var usthird = [timeformat(sim_date), "US", 0, "third", dataformat(third_win1), , dataformat(third_vote1), , , , , , , , , , updateformat(today)]
 
 					pr.push(usgop)

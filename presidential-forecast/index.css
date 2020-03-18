@@ -50,10 +50,7 @@
    font-family: brandon-grotesque, sans-serif;
  }
 
- body {
-   font: 15px sans-serif;
-   font-weight: inherit;
- }
+ 
 
  .axis path, .axis line {
    fill: none;
@@ -207,7 +204,6 @@
   border: none;
   color: white;
   padding: 2px 5px;
-  font-size: 1.2vw;
   font-family: brandon-grotesque;
   font-weight: 800;
   border-radius: 10px;
@@ -219,6 +215,12 @@
 
 .default {
   color: black;
+  font-size: 1.2vw;
+}
+
+.other {
+  color: black;
+  font-size: 2vw;
 }
 
 .hovertext {
