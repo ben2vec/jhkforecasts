@@ -40,21 +40,20 @@
 	<meta name="twitter:creator" content="@jhkersting">
 	<meta name="twitter:title" content="2020 Presidential Election">
 	<meta name="twitter:description" content="Who is win the 2020 Presidential Election?">
-	<meta name="twitter:image"
-		content="https://jhkforecasts.com/Presidential-Forecast-04.png">
+	<meta name="twitter:image" content="https://jhkforecasts.com/Presidential-Forecast-04.png">
 	<title>2020 Presidential Forecast</title>
 	<script data-ad-client="ca-pub-8025120308040073" async
 		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140782021-2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140782021-2"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
 
-    gtag('config', 'UA-140782021-2');
-  </script>
-	<link rel="icon" href="https://jhkforecasts.com/LOGO-01.png" >
+		gtag('config', 'UA-140782021-2');
+	</script>
+	<link rel="icon" href="https://jhkforecasts.com/LOGO-01.png">
 	<script src="https://d3js.org/d3.v4.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
 	<link rel="stylesheet" href="https://use.typekit.net/htk2wjy.css">
@@ -123,125 +122,129 @@
 			</tbody>
 		</table>
 	</div>
-	<h1 style="text-align: center;font-weight: 900;color: white;font-size: 5vw;background-color: #3E5AA9;" >Presidential Forecast </h1>
+	<h1 style="text-align: center;font-weight: 900;color: white;font-size: 5vw;background-color: #3E5AA9;">Presidential
+		Forecast </h1>
 	<script>
 		var key_state = "US"
 	</script>
 
 	<p style=" font-family: interstate-mono;font-weight: 400;text-align: center;;color:grey" id="updated"></p>
 	<div class="computer">
-	<div id="topline"></div>
+		<div id="topline"></div>
 		<div id="usmap"></div>
-	<div id="overview"></div>
+		<div id="overview"></div>
 
-	<h1 style="margin-left: 2%;font-weight: 900;">The Ever-changing Race for the White House</h1>
-	<p style="margin-left: 5%;font-weight: 500;">The race for the Presidency can change in an
-		instance, the chart below shows the zigs and zags of the race for the White House up until today.</p>
-	<table
-		style="margin-left:20%;border-collapse: collapse; border: none;margin-top: 20px;text-align: center;width: 60%;"
-		cellspacing="0">
-		<tbody>
-			<tr>
-				<td style="width: 33%; ">
-					<button class="btn default" id="winbutton">Win White House</button>
-				</td>
-				<td style="width: 33%; ">
-					<button class="btn default" id="votebutton">Popular Vote</button>
-				</td>
-				<td style="width: 33%;">
-					<button class="btn default" id="evbutton">Electoral Votes</button>
-				</td>
-			</tr>
-		</tbody>
-	</table>
+		<h1 style="margin-left: 2%;font-weight: 900;">The Ever-changing Race for the White House</h1>
+		<p style="margin-left: 5%;font-weight: 500;">The race for the Presidency can change in an
+			instance, the chart below shows the zigs and zags of the race for the White House up until today.</p>
+		<table
+			style="margin-left:20%;border-collapse: collapse; border: none;margin-top: 20px;text-align: center;width: 60%;"
+			cellspacing="0">
+			<tbody>
+				<tr>
+					<td style="width: 33%; ">
+						<button class="btn default" id="winbutton">Win White House</button>
+					</td>
+					<td style="width: 33%; ">
+						<button class="btn default" id="votebutton">Popular Vote</button>
+					</td>
+					<td style="width: 33%;">
+						<button class="btn default" id="evbutton">Electoral Votes</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
 
-	<div id="time"></div>
-	<h1 style="margin-left: 2%;font-weight: 900;">The Race to 270</h1>
-	<p style="margin-left: 5%;font-weight: 500;">The race for the Presidency is all about one thing,
-		getting 270
-		electoral votes. The bars below represent each state, with the width determined by the electoral votes for that
-		.</p>
-	<div id="bars"></div>
-	<div style="text-align:center">
-		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-		<ins class="adsbygoogle" style="display:block;margin-right:auto;margin-left: auto" data-ad-format="fluid"
-		  data-ad-layout-key="-h2+d+5c-9-3e" data-ad-client="ca-pub-8025120308040073" data-ad-slot="8603820464"></ins>
-		<script>
-		  (adsbygoogle = window.adsbygoogle || []).push({});
-		</script>
-	  </div>
-	<h1 style="margin-left: 2%;font-weight: 900;">A Better Way to Look at it</h1>
-	<p style="margin-left: 5%;font-weight: 500;">Normal maps can be confusing when it comes to the
-		electoral college. The
-		map below shows each state, sized based on the electoral votes it get, and colored by each candidates chance of
-		winning.</p>
-	<div id="bubblemap"></div>
-	<h1 style="margin-left: 2%;font-weight: 900;">The Tipping Points</h1>
-	<p style="margin-left: 5%;font-weight: 500;">The election always comes down to a few states. The
-		chart below shows which states are the closest, and which ones will decide the election. The tipping point
-		measure is defined as the state that gets the eventual winner to 270.</p>
-	<div id="dist"></div>
-	<button style="width: 30%;margin-left: 35%;"class="btn default" id="more">Show more</button>
-	<button style="width: 30%;margin-left: 35%;"class="btn default" id="less">Show less</button>
-</div>
+		<div id="time"></div>
+		<h1 style="margin-left: 2%;font-weight: 900;">The Race to 270</h1>
+		<p style="margin-left: 5%;font-weight: 500;">The race for the Presidency is all about one thing,
+			getting 270
+			electoral votes. The bars below represent each state, with the width determined by the electoral votes for
+			that
+			.</p>
+		<div id="bars"></div>
+		<div style="text-align:center">
+			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<ins class="adsbygoogle" style="display:block;margin-right:auto;margin-left: auto" data-ad-format="fluid"
+				data-ad-layout-key="-h2+d+5c-9-3e" data-ad-client="ca-pub-8025120308040073"
+				data-ad-slot="8603820464"></ins>
+			<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</div>
+		<h1 style="margin-left: 2%;font-weight: 900;">A Better Way to Look at it</h1>
+		<p style="margin-left: 5%;font-weight: 500;">Normal maps can be confusing when it comes to the
+			electoral college. The
+			map below shows each state, sized based on the electoral votes it get, and colored by each candidates chance
+			of
+			winning.</p>
+		<div id="bubblemap"></div>
+		<h1 style="margin-left: 2%;font-weight: 900;">The Tipping Points</h1>
+		<p style="margin-left: 5%;font-weight: 500;">The election always comes down to a few states. The
+			chart below shows which states are the closest, and which ones will decide the election. The tipping point
+			measure is defined as the state that gets the eventual winner to 270.</p>
+		<div id="dist"></div>
+		<button style="width: 30%;margin-left: 35%;" class="btn default" id="more">Show more</button>
+		<button style="width: 30%;margin-left: 35%;" class="btn default" id="less">Show less</button>
+	</div>
 	<div class="phone">
-	<div id="usmapphone"></div>
-	<div id="overviewphone"></div>
+		<div id="usmapphone"></div>
+		<div id="overviewphone"></div>
 
-	<h1 style="margin-left: 2%;font-weight: 900;">The Ever-changing Race for the White House</h1>
-	<p style="margin-left: 5%;font-weight: 500;">The race for the Presidency can change in an
-		instance, the chart below shows the zigs and zags of the race for the White House up until today.</p>
-	<table
-		style="margin-left:10%;border-collapse: collapse; border: none;margin-top: 20px;text-align: center;width: 80%;"
-		cellspacing="0">
-		<tbody>
-			<tr>
-				<td style="width: 33%; ">
-					<button class="btn other" id="winbuttonphone">Win White House</button>
-				</td>
-				<td style="width: 33%; ">
-					<button class="btn other" id="votebuttonphone">Popular Vote</button>
-				</td>
-				<td style="width: 33%;">
-					<button class="btn other" id="evbuttonphone">Electoral Votes</button>
-				</td>
-			</tr>
-		</tbody>
-	</table>
+		<h1 style="margin-left: 2%;font-weight: 900;">The Ever-changing Race for the White House</h1>
+		<p style="margin-left: 5%;font-weight: 500;">The race for the Presidency can change in an
+			instance, the chart below shows the zigs and zags of the race for the White House up until today.</p>
+		<table
+			style="margin-left:10%;border-collapse: collapse; border: none;margin-top: 20px;text-align: center;width: 80%;"
+			cellspacing="0">
+			<tbody>
+				<tr>
+					<td style="width: 33%; ">
+						<button class="btn other" id="winbuttonphone">Win White House</button>
+					</td>
+					<td style="width: 33%; ">
+						<button class="btn other" id="votebuttonphone">Popular Vote</button>
+					</td>
+					<td style="width: 33%;">
+						<button class="btn other" id="evbuttonphone">Electoral Votes</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
 
-	<div id="timephone"></div>
-	<h1 style="margin-left: 2%;font-weight: 900;">The Race to 270</h1>
-	<p style="margin-left: 5%;font-weight: 500;">The race for the Presidency is all about one thing,
-		getting 270
-		electoral votes. The bars below represent each state, with the width determined by the electoral votes for that
-		state, and the height the projected margin.</p>
-	<div id="barsphone"></div>
-	<h1 style="margin-left: 2%;font-weight: 900;">A Better Way to Look at it</h1>
-	<p style="margin-left: 5%;font-weight: 500;">Normal maps can be confusing when it comes to the
-		electoral college. The
-		map below shows each state, sized based on the electoral votes it get, and colored by each candidates chance of
-		winning.</p>
-	<div id="bubblemapphone"></div>
-	<div style="text-align:center">
-		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-		<ins class="adsbygoogle" style="display:block;margin-right:auto;margin-left: auto" data-ad-format="fluid"
-		  data-ad-layout-key="-h2+d+5c-9-3e" data-ad-client="ca-pub-8025120308040073" data-ad-slot="8603820464"></ins>
-		<script>
-		  (adsbygoogle = window.adsbygoogle || []).push({});
-		</script>
-	  </div>
-	<h1 style="margin-left: 2%;font-weight: 900;">The Tipping Points</h1>
-	<p style="margin-left: 5%;font-weight: 500;">The election always comes down to a few states. The
-		chart below shows which states are the closest, and which ones will decide the election. The tipping point
-		measure is defined as the state that gets the eventual winner to 270.</p>
-	<div id="distphone"></div>
-	<button style="width: 30%;margin-left: 35%;"class="btn default" id="morephone">Show more</button>
-	<button style="width: 30%;margin-left: 35%;"class="btn default" id="lessphone">Show less</button>
-</div>
-	
-
-	<a href="data.csv"><h2 style="font-weight: 900;color: #3E5AA9;text-decoration: underline;">Download Data</h2></a>
-	
+		<div id="timephone"></div>
+		<h1 style="margin-left: 2%;font-weight: 900;">The Race to 270</h1>
+		<p style="margin-left: 5%;font-weight: 500;">The race for the Presidency is all about one thing,
+			getting 270
+			electoral votes. The bars below represent each state, with the width determined by the electoral votes for
+			that
+			state, and the height the projected margin.</p>
+		<div id="barsphone"></div>
+		<h1 style="margin-left: 2%;font-weight: 900;">A Better Way to Look at it</h1>
+		<p style="margin-left: 5%;font-weight: 500;">Normal maps can be confusing when it comes to the
+			electoral college. The
+			map below shows each state, sized based on the electoral votes it get, and colored by each candidates chance
+			of
+			winning.</p>
+		<div id="bubblemapphone"></div>
+		<div style="text-align:center">
+			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<ins class="adsbygoogle" style="display:block;margin-right:auto;margin-left: auto" data-ad-format="fluid"
+				data-ad-layout-key="-h2+d+5c-9-3e" data-ad-client="ca-pub-8025120308040073"
+				data-ad-slot="8603820464"></ins>
+			<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</div>
+		<h1 style="margin-left: 2%;font-weight: 900;">The Tipping Points</h1>
+		<p style="margin-left: 5%;font-weight: 500;">The election always comes down to a few states. The
+			chart below shows which states are the closest, and which ones will decide the election. The tipping point
+			measure is defined as the state that gets the eventual winner to 270.</p>
+		<div id="distphone"></div>
+		<button style="width: 30%;margin-left: 35%;" class="btn default" id="morephone">Show more</button>
+		<button style="width: 30%;margin-left: 35%;" class="btn default" id="lessphone">Show less</button>
+	</div>
+	<hr>
 	<div>
 
 		<h1 style="text-align: center;font-weight: 700;font-size: 2vw;"><span
@@ -278,22 +281,35 @@
 				</tbody>
 			</table>
 	</div>
+<hr>
 
+	<a href="https://twitter.com/jhkersting">
+		<h2 style="font-weight: 900;color: #3E5AA9;text-decoration: underline;font-size: 2vw;">Created by Jack Kersting
+		</h2>
+	</a>
+	<a href="forecast_methodology">
+		<h2 style="font-weight: 900;color: #3E5AA9;text-decoration: underline;font-size: 2vw;">How the model works</h2>
+	</a>
+	<a href="data.csv">
+		<h2 style="font-weight: 900;color: #3E5AA9;text-decoration: underline;font-size: 2vw;">Download Data</h2>
+	</a>
+<hr>
 	<div style="text-align:center">
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 		<ins class="adsbygoogle" style="display:block;margin-right:auto;margin-left: auto" data-ad-format="fluid"
-		  data-ad-layout-key="-h2+d+5c-9-3e" data-ad-client="ca-pub-8025120308040073" data-ad-slot="8603820464"></ins>
+			data-ad-layout-key="-h2+d+5c-9-3e" data-ad-client="ca-pub-8025120308040073" data-ad-slot="8603820464"></ins>
 		<script>
-		  (adsbygoogle = window.adsbygoogle || []).push({});
+			(adsbygoogle = window.adsbygoogle || []).push({});
 		</script>
-	  </div><div style="text-align:center">
+	</div>
+	<div style="text-align:center">
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 		<ins class="adsbygoogle" style="display:block;margin-right:auto;margin-left: auto" data-ad-format="fluid"
-		  data-ad-layout-key="-h2+d+5c-9-3e" data-ad-client="ca-pub-8025120308040073" data-ad-slot="8603820464"></ins>
+			data-ad-layout-key="-h2+d+5c-9-3e" data-ad-client="ca-pub-8025120308040073" data-ad-slot="8603820464"></ins>
 		<script>
-		  (adsbygoogle = window.adsbygoogle || []).push({});
+			(adsbygoogle = window.adsbygoogle || []).push({});
 		</script>
-	  </div>
+	</div>
 	<script src="national.js"></script>
 	<script src="nationalphone.js"></script>
 
