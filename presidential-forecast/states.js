@@ -399,7 +399,7 @@ d3.csv("data.csv", data => {
 
   var time_data = data.filter(d => d.state == key_state)
 
-  var time_data = time_data.filter(d => d.forecast_date > new Date(2020, 0, 1))
+   var lol
   var data_length = time_data.filter(d => d.party == "gop").length
   var max_date = d3.max(time_data, d => d.forecast_date)
   var line_data = []
@@ -427,7 +427,7 @@ d3.csv("data.csv", data => {
 
   var time_data = data.filter(d => d.state == key_state)
 
-  var time_data = time_data.filter(d => d.forecast_date > new Date(2020, 0, 1))
+   var lol
   var data_length = time_data.filter(d => d.party == "gop").length
   var max_date = d3.max(time_data, d => d.forecast_date)
   var line_data = []
@@ -464,7 +464,7 @@ d3.csv("data.csv", data => {
 
   var x = d3.scaleTime()
     .rangeRound([margin.left, width - margin.right])
-    .domain([new Date(2020, 0, 1), new Date(2020, 10, 3)])
+    .domain([new Date(2020, 2, 1), new Date(2020, 10, 3)])
 
   var y = d3.scaleLinear()
     .rangeRound([height - margin.bottom, margin.top]);

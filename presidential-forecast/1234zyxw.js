@@ -385,7 +385,7 @@ function update(input) {
 							d.gop_sim = d.gop_raw / (d.tot / 100)
 							d.dem_sim = d.dem_raw / (d.tot / 100)
 							d.third_sim = d.third_raw / (d.tot / 100)
-							d.margin_sim = d.gop_raw - d.dem_sim
+							d.margin_sim = d.gop_sim - d.dem_sim
 							d.winner = d.margin_sim > 0 ? "gop" : "dem"
 							d.gop_ev = d.winner == "gop" ? d.ev : 0
 							d.dem_ev = d.winner == "dem" ? d.ev : 0
