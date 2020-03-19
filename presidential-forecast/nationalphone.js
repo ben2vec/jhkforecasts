@@ -1180,7 +1180,7 @@ d3.csv("data.csv", function (data) {
 
       var x3p = d3.scaleLinear()
         .domain([-75, 75])
-        .range([150, 775])
+        .range([200, 775])
 
       var area = d3.area()
         .x0(d => x3p(d.x))
@@ -1247,6 +1247,7 @@ d3.csv("data.csv", function (data) {
         .attr("x", 20)
         .attr("y", (d, i) => i * 80 + 150)
         .attr("font-weight", 700)
+        .attr("font-size", 25)
 
       distphone.selectAll()
         .data(sd4)
