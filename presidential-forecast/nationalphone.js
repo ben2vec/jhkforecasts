@@ -36,7 +36,7 @@ var maphone = d3.select("#usmapphone")
 
 var overviewphone = d3.select("#overviewphone")
   .append("svg")
-  .attr("viewBox", '0 0 1000 800');
+  .attr("viewBox", '0 0 1000 700');
 
 var tool_tip = d3.tip()
   .attr("class", "d3-tip")
@@ -182,7 +182,7 @@ d3.csv("data.csv", function (data) {
       .attr("x", d => d.properties.xv)
       .attr("y", d => d.properties.yv)
       .style("font-family", "source-code-pro")
-      .attr("font-size", "10")
+      .attr("font-size",13)
       .attr("fill", "black")
       .attr("text-anchor", "middle")
 
@@ -963,6 +963,8 @@ d3.csv("data.csv", function (data) {
     bubblemapphone.selectAll("circ")
       .data(sd3)
       .enter()
+      .append("a")
+      .attr("xlink:href", d => d.state)
       .append("circle")
       .attr("cx", d => d.x)
       .attr("cy", d => d.y)
@@ -974,6 +976,8 @@ d3.csv("data.csv", function (data) {
     bubblemapphone.selectAll("labels")
       .data(sd3)
       .enter()
+      .append("a")
+      .attr("xlink:href", d => d.state)
       .append("text")
       .text(d => d.label)
       .attr("x", d => d.x)
@@ -981,7 +985,7 @@ d3.csv("data.csv", function (data) {
       .attr("fill", "black")
       .attr("text-anchor", "middle")
       .attr("dominant-baseline", "middle")
-      .attr("font-size", 8)
+      .attr("font-size",13)
       .style("font-family", "source-code-pro")
 
 
@@ -990,7 +994,7 @@ d3.csv("data.csv", function (data) {
       .data(sd3)
       .enter()
       .append("a")
-        .attr("xlink:href", d => d.state)
+      .attr("xlink:href", d => d.state)
       .append("circle")
       .attr("class", "statesover")
       .attr("cx", d => d.x)
