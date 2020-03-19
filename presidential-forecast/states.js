@@ -625,7 +625,6 @@ d3.csv("data.csv", data => {
 
       labels.enter().append("text")
         .attr("class", "lineHoverText")
-        .attr("text-anchor", "middle")
         .attr("font-size", 20)
         .merge(labels)
 
