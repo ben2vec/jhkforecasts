@@ -399,7 +399,7 @@ d3.csv("data.csv", data => {
 
   var time_data = data.filter(d => d.state == key_state)
 
-   var lol
+  var lol
   var data_length = time_data.filter(d => d.party == "gop").length
   var max_date = d3.max(time_data, d => d.forecast_date)
   var line_data = []
@@ -427,7 +427,7 @@ d3.csv("data.csv", data => {
 
   var time_data = data.filter(d => d.state == key_state)
 
-   var lol
+  var lol
   var data_length = time_data.filter(d => d.party == "gop").length
   var max_date = d3.max(time_data, d => d.forecast_date)
   var line_data = []
@@ -663,7 +663,7 @@ d3.csv("data.csv", data => {
           .attr("x", x(d.date) + 10)
           .text((e, i) => i == 1 ? ("Biden " + onevalue(d[e]) + "%") : i == 0 ? "Trump " + onevalue(d[e]) + "%" : "Third " + onevalue(d[e]) + "%")
           .attr("y", e => d[e] == d["gop" + input] ? y(d["gop" + input]) >= y(d["dem" + input]) ? y(d["gop" + input]) + 15 : y(d["gop" + input]) - 15 : d[e] == d["dem" + input] ? y(d["dem" + input]) > y(d["gop" + input]) ? y(d["dem" + input]) + 15 : y(d["dem" + input]) - 15 : y(d[e]) - 15)
-          .attr("text-anchor", (e, i)=>i == 2? "end":"start")
+          .attr("text-anchor", (e, i) => i == 2 ? "end" : "start")
           .attr("dominant-baseline", "middle")
 
         focus.selectAll(".lineHoverText")
@@ -672,7 +672,7 @@ d3.csv("data.csv", data => {
           .text((e, i) => input == "ev" ? i == 1 ? ("Biden " + onevalue(d[e])) : i == 0 ? "Trump " + onevalue(d[e]) : "Third " + onevalue(d[e]) : i == 1 ? ("Biden " + onevalue(d[e]) + "%") : i == 0 ? "Trump " + onevalue(d[e]) + "%" : "Third " + onevalue(d[e]) + "%")
           .attr("fill", (e, i) => colors[i])
           .attr("y", e => d[e] == d["gop" + input] ? y(d["gop" + input]) >= y(d["dem" + input]) ? y(d["gop" + input]) + 15 : y(d["gop" + input]) - 15 : d[e] == d["dem" + input] ? y(d["dem" + input]) > y(d["gop" + input]) ? y(d["dem" + input]) + 15 : y(d["dem" + input]) - 15 : y(d[e]) - 15)
-          .attr("text-anchor", (e, i)=>i == 2? "end":"start")
+          .attr("text-anchor", (e, i) => i == 2 ? "end" : "start")
           .attr("dominant-baseline", "middle")
 
         focus.select(".lineHoverDate")
@@ -713,7 +713,7 @@ d3.csv("data.csv", data => {
     .domain([0, 20])
     .range(["white", colors[2]]);
 
-    var weightscale = d3.scaleLinear()
+  var weightscale = d3.scaleLinear()
     .domain([0, 100])
     .range(["white", "green"]);
 
@@ -721,6 +721,7 @@ d3.csv("data.csv", data => {
   var gop_data = [state_data[state_data.length - 3].fund_avg, state_data[state_data.length - 3].poll_avg, state_data[state_data.length - 3].ss_avg, state_data[state_data.length - 3].experts_avg, state_data[state_data.length - 3].proj_vote]
   var dem_data = [state_data[state_data.length - 2].fund_avg, state_data[state_data.length - 2].poll_avg, state_data[state_data.length - 2].ss_avg, state_data[state_data.length - 2].experts_avg, state_data[state_data.length - 2].proj_vote]
   var third_data = [state_data[state_data.length - 1].fund_avg, state_data[state_data.length - 1].poll_avg, state_data[state_data.length - 1].ss_avg, state_data[state_data.length - 1].experts_avg, state_data[state_data.length - 1].proj_vote]
+  var margin_data = [gop_data[0] - dem_data[0], gop_data[1] - dem_data[1], gop_data[2] - dem_data[2], gop_data[3] - dem_data[3]]
 
   var weight_sum = d3.sum(weights)
   console.log()
@@ -745,7 +746,7 @@ d3.csv("data.csv", data => {
     .attr("cx", 500)
     .attr("cy", (d, i) => 140 + i * 60)
     .attr("r", 20)
-    .attr("fill", d => weightscale(d*100/weight_sum))
+    .attr("fill", d => weightscale(d * 100 / weight_sum))
 
 
 
@@ -842,6 +843,19 @@ d3.csv("data.csv", data => {
     .attr("x", 750)
     .attr("y", (d, i) => 140 + i * 60)
     .attr("fill", "black")
+    .attr("text-anchor", "middle")
+    .attr("dominant-baseline", "middle")
+    .attr("font-size", 25)
+    .attr("font-weight", 700)
+
+  calc.selectAll("gop")
+    .data(margin_data)
+    .enter()
+    .append("text")
+    .text(d => d == 0 ? "-" : "+" + Math.abs(numberformat(d)))
+    .attr("x", 950)
+    .attr("y", (d, i) => 140 + i * 60)
+    .attr("fill", d => d == 0 ? "black" : d > 0 ? colors[0] : colors[1])
     .attr("text-anchor", "middle")
     .attr("dominant-baseline", "middle")
     .attr("font-size", 25)
