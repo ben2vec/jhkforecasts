@@ -48,7 +48,6 @@ map.call(tool_tip);
 d3.csv("data.csv", function (data) {
 
   var updated = data[data.length - 1].experts_weight
-  console.log(updated)
   data.forEach((d, i) => {
     d.forecast_date = dateparse(d.forecast_date)
     return d
@@ -114,7 +113,6 @@ d3.csv("data.csv", function (data) {
         }
       }
     }
-    console.log(json.features)
 
     map.selectAll("path")
       .data(json.features)
@@ -1170,12 +1168,10 @@ d3.csv("data.csv", function (data) {
           tipping_point: fdt[k].tipping_point
         }
 
-        console.log(dt)
         sd4.push(dt)
       }
 
 
-      console.log(sd4)
 
 
 
