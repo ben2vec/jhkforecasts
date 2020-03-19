@@ -136,7 +136,7 @@ d3.csv("data.csv", function (data) {
       .attr("x", d => d.properties.xv)
       .attr("y", d => d.properties.yv)
       .style("font-family", "source-code-pro")
-      .attr("font-size", "10")
+      .attr("font-size", "12")
       .attr("fill", "black")
       .attr("text-anchor", "middle")
 
@@ -256,7 +256,7 @@ d3.csv("data.csv", function (data) {
     var winner = newest_data[168].win > newest_data[169].win ? "Trump" : "Biden"
 
     map.append("text")
-      .text("Win")
+      .text("Win White House")
       .attr("x", 1037.5)
       .attr("y", 80)
       .attr("font-family", "brandon-grotesque")
@@ -966,7 +966,7 @@ d3.csv("data.csv", function (data) {
       .attr("fill", "black")
       .attr("text-anchor", "middle")
       .attr("dominant-baseline", "middle")
-      .attr("font-size", 8)
+      .attr("font-size", 10)
       .style("font-family", "source-code-pro")
 
 
