@@ -148,14 +148,14 @@ d3.csv("data.csv", data => {
 
 
   topline.append("image")
-    .attr("href", "Trump-01.png")
+    .attr("href", "https://jhkforecasts.com/Trump-01.png")
     .attr("x", 260)
     .attr("y", 100)
     .attr("height", 200)
     .attr("width", 200)
 
   topline.append("image")
-    .attr("href", "Biden-01.png")
+    .attr("href", "https://jhkforecasts.com/Biden-01.png")
     .attr("x", 50)
     .attr("y", 100)
     .attr("height", 200)
@@ -361,14 +361,14 @@ d3.csv("data.csv", data => {
     .style("stroke", (d, i) => colors[2])
 
   vote.append("image")
-    .attr("href", "Trump-01.png")
+    .attr("href", "https://jhkforecasts.com/Trump-01.png")
     .attr("x", 20)
     .attr("y", gop_proj_vote > dem_proj_vote ? 25 : 105)
     .attr("height", 75)
     .attr("width", 75)
 
   vote.append("image")
-    .attr("href", "Biden-01.png")
+    .attr("href", "https://jhkforecasts.com/Biden-01.png")
     .attr("x", 20)
     .attr("y", gop_proj_vote < dem_proj_vote ? 25 : 105)
     .attr("height", 75)
@@ -873,14 +873,14 @@ d3.csv("data.csv", data => {
 
 
   calc.append("image")
-    .attr("href", "Trump-01.png")
+    .attr("href", "https://jhkforecasts.com/Trump-01.png")
     .attr("x", 610)
     .attr("y", 20)
     .attr("height", 80)
     .attr("width", 80)
 
   calc.append("image")
-    .attr("href", "Biden-01.png")
+    .attr("href", "https://jhkforecasts.com/Biden-01.png")
     .attr("x", 710)
     .attr("y", 20)
     .attr("height", 80)
