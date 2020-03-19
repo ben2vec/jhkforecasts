@@ -256,7 +256,7 @@ d3.csv("data.csv", function (data) {
     var winner = newest_data[168].win > newest_data[169].win ? "Trump" : "Biden"
 
     map.append("text")
-      .text("Win White House")
+      .text("Win")
       .attr("x", 1037.5)
       .attr("y", 80)
       .attr("font-family", "brandon-grotesque")

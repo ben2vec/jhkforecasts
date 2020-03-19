@@ -696,7 +696,7 @@ d3.csv("data.csv", data => {
 
   }
 
-  var keys = ["Fundamentals", "Polling Average", "State Similarity", "Experts Ratings"]
+  var keys2 = ["Fundamentals", "Polling Average", "State Similarity", "Experts Ratings"]
   var calc = d3.select("#calculation")
     .append("svg")
     .attr("viewBox", '0 0 1000 500')
@@ -725,7 +725,7 @@ d3.csv("data.csv", data => {
   var weight_sum = d3.sum(weights)
   console.log()
   calc.selectAll("gop")
-    .data(keys)
+    .data(keys2)
     .enter()
     .append("text")
     .text(d => d)

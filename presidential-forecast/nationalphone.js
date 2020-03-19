@@ -120,7 +120,7 @@ d3.csv("data.csv", function (data) {
 
 
     maphone.append("text")
-      .text("Win White House")
+      .text("Win")
       .attr("x", 510)
       .attr("y", -170)
       .attr("font-family", "brandon-grotesque")

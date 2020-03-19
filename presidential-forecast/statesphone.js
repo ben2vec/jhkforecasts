@@ -657,20 +657,20 @@ d3.csv("data.csv", data => {
           .text(formatDate(d.date));
       }
     }
-    var winbutton = d3.select("#winbutton")
+    var winbuttontwo = d3.select("#winbuttonphone")
       .on("click", function () {
         update("win", 500)
       })
 
-    var votebutton = d3.select("#votebutton")
+    var votebuttontwo = d3.select("#votebuttonphone")
       .on("click", function () {
         update("vote", 500)
       })
-    document.getElementById("winbutton").innerHTML = "Win " + key_state
+    document.getElementById("winbuttonphone").innerHTML = "Win " + key_state
 
   }
 
-  var keys = ["Fundamentals", "Polling Average", "State Similarity", "Experts Ratings"]
+  var keystwo = ["Fundamentals", "Polling Average", "State Similarity", "Experts Ratings"]
   var calc = d3.select("#calculationphone")
     .append("svg")
     .attr("viewBox", '0 0 1000 500')
@@ -699,7 +699,7 @@ d3.csv("data.csv", data => {
   var weight_sum = d3.sum(weights)
   console.log()
   calc.selectAll("gop")
-    .data(keys)
+    .data(keystwo)
     .enter()
     .append("text")
     .text(d => d)

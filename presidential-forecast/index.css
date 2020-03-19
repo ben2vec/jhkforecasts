@@ -50,8 +50,6 @@
    font-family: brandon-grotesque, sans-serif;
  }
 
- 
-
  .axis path, .axis line {
    fill: none;
    stroke: black;
@@ -153,14 +151,24 @@
  }
 
  @media only screen and (max-width:600px) {
-  
    #bigmenu {
-     display: none;
+     display: block;
    }
    #smallmenu {
-     display: inline;
+     display: block;
    }
-  
+   #winbuttonphone {
+     display: block;
+   }
+   #votebuttonphone {
+     display: block;
+   }
+   #winbutton {
+     display: none;
+   }
+   #votebutton {
+     display: none;
+   }
    .computer {
      display: none;
    }
@@ -170,59 +178,73 @@
  }
 
  @media only screen and (min-width:601px) {
-   
    #bigmenu {
      display: inline;
    }
    #smallmenu {
      display: none;
    }
-  
    .computer {
      display: inline;
    }
    .phone {
      display: none;
    }
+
+   #winbuttonphone {
+    display: none;
+  }
+  #votebuttonphone {
+    display: none;
+  }
+  #winbutton {
+    display: block;
+  }
+  #votebutton {
+    display: block;
+  }
  }
+
  div.sticky {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  background-color: white;
-}
-.overlay {
-  fill: none;
-  pointer-events: all;
-}
+   position: -webkit-sticky;
+   position: sticky;
+   top: 0;
+   background-color: white;
+ }
 
-.statesover {
-  fill: none;
-  pointer-events: all;
-}
-.btn {
-  border: none;
-  color: white;
-  padding: 2px 5px;
-  font-family: brandon-grotesque;
-  font-weight: 800;
-  border-radius: 10px;
-  border: #ddd solid 2pt;
-  width: 95%;
-  margin-left: 2.5%;
-  cursor: pointer;
-}
+ .overlay {
+   fill: none;
+   pointer-events: all;
+ }
 
-.default {
-  color: black;
-  font-size: 1.2vw;
-}
+ .statesover {
+   fill: none;
+   pointer-events: all;
+ }
 
-.other {
-  color: black;
-  font-size: 2vw;
-}
+ .btn {
+   border: none;
+   color: white;
+   padding: 2px 5px;
+   font-family: brandon-grotesque;
+   font-weight: 800;
+   border-radius: 10px;
+   border: #ddd solid 2pt;
+   width: 95%;
+   margin-left: 2.5%;
+   cursor: pointer;
+ }
 
-.hovertext {
-  text-decoration: underline ;
-}
+ .default {
+   color: black;
+   font-size: 1.2vw;
+ }
+
+ .other {
+   color: black;
+   font-size: 2vw;
+ }
+
+ .hovertext {
+   text-decoration: underline;
+ }
