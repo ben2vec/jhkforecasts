@@ -77,7 +77,7 @@ function update(input) {
 				{ Grade: "D+", Value: .4 },
 				{ Grade: "D", Value: .3 },
 				{ Grade: "D-", Value: .2 },
-				{ Grade: "", Value: .7 },
+				{ Grade: "-", Value: .65 },
 			]
 			var pollster_grade_letter = grade_scale.map((d) => {
 				return d.Grade
@@ -210,6 +210,7 @@ function update(input) {
 							})
 							ps.push(f)
 						}
+						console.log(poll_filtered)
 						var psflat = ps.flat()
 
 						var us_avg = d3.sum(psflat, d => d.margin_weight) / d3.sum(psflat, d => d.weight)
