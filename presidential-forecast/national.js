@@ -119,14 +119,15 @@ d3.csv("data.csv", function (data) {
     map.selectAll("path")
       .data(json.features)
       .enter()
-      //.append("a")
-      //.attr("xlink:href", d=> d.properties.name )
+      .append("a")
+      .attr("xlink:href", d => d.properties.name)
       .append("path")
       .attr("class", "states")
       .attr("d", path)
       .style("stroke", "#fff")
       .style("stroke-width", "1")
       .style("fill", d => color(d.properties.gopWin))
+
 
 
     map.selectAll("label")
@@ -549,7 +550,7 @@ d3.csv("data.csv", function (data) {
             .attr("x", x(d.date) + 10)
             .text((e, i) => i == 1 ? ("Biden " + onevalue(d[e]) + "%") : i == 0 ? "Trump " + onevalue(d[e]) + "%" : "Third " + onevalue(d[e]) + "%")
             .attr("y", e => d[e] == d["gop" + input] ? y(d["gop" + input]) > y(d["dem" + input]) ? y(d["gop" + input]) + 15 : y(d["gop" + input]) - 15 : d[e] == d["dem" + input] ? y(d["dem" + input]) > y(d["gop" + input]) ? y(d["dem" + input]) + 15 : y(d["dem" + input]) - 15 : y(d[e]) - 15)
-            .attr("text-anchor", "start")
+            .attr("text-anchor", (e, i)=>i == 2? "end":"start")
             .attr("dominant-baseline", "middle")
 
           focus.selectAll(".lineHoverText")
@@ -558,7 +559,7 @@ d3.csv("data.csv", function (data) {
             .text((e, i) => input == "ev" ? i == 1 ? ("Biden " + onevalue(d[e])) : i == 0 ? "Trump " + onevalue(d[e]) : "Third " + onevalue(d[e]) : i == 1 ? ("Biden " + onevalue(d[e]) + "%") : i == 0 ? "Trump " + onevalue(d[e]) + "%" : "Third " + onevalue(d[e]) + "%")
             .attr("fill", (e, i) => colors[i])
             .attr("y", e => d[e] == d["gop" + input] ? y(d["gop" + input]) > y(d["dem" + input]) ? y(d["gop" + input]) + 15 : y(d["gop" + input]) - 15 : d[e] == d["dem" + input] ? y(d["dem" + input]) > y(d["gop" + input]) ? y(d["dem" + input]) + 15 : y(d["dem" + input]) - 15 : y(d[e]) - 15)
-            .attr("text-anchor", "start")
+            .attr("text-anchor", (e, i)=>i == 2? "end":"start")
             .attr("dominant-baseline", "middle")
         }
       }
@@ -885,21 +886,21 @@ d3.csv("data.csv", function (data) {
       .text(dem_ev_bars)
       .attr("x", xbars(dem_ev_bars) + 85)
       .attr("y", gop_ev_bars > dem_ev_bars ? 237.5 : 137.5)
-      .attr("fill",colors[1])
+      .attr("fill", colors[1])
       .style("font-weight", "600")
       .style("font-size", "25")
       .attr("text-anchor", "start")
-      .attr("dominant-baseline","middle")
+      .attr("dominant-baseline", "middle")
 
-      bars.append("text")
+    bars.append("text")
       .text(gop_ev_bars)
       .attr("x", xbars(gop_ev_bars) + 85)
       .attr("y", gop_ev_bars < dem_ev_bars ? 237.5 : 137.5)
-      .attr("fill",colors[0])
+      .attr("fill", colors[0])
       .style("font-weight", "600")
       .style("font-size", "25")
       .attr("text-anchor", "start")
-      .attr("dominant-baseline","middle")
+      .attr("dominant-baseline", "middle")
 
 
     bars.append("image")
@@ -968,6 +969,8 @@ d3.csv("data.csv", function (data) {
     bubblemap.selectAll("overfill")
       .data(sd3)
       .enter()
+      .append("a")
+      .attr("xlink:href", d => d.state)
       .append("circle")
       .attr("class", "statesover")
       .attr("cx", d => d.x)
@@ -1117,7 +1120,11 @@ d3.csv("data.csv", function (data) {
         fdt.push(finaldt)
       }
       var min_stdev = d3.min(fdt, d => d.std) * .8
-      var highest_curve = jStat.normal.pdf(0, 0, min_stdev)
+      var highest_curve = jStat.normal.pdf(0, 0, min_stdev*.8)
+
+      var tq = jStat.normal.inv(.01, 0, min_stdev )
+      var tp = jStat.normal.pdf(tq, 0, min_stdev )
+
       fdt.sort((a, b) => b.tipping_point - a.tipping_point)
       var y3 = d3.scaleLinear()
         .domain([0, highest_curve])
@@ -1128,26 +1135,24 @@ d3.csv("data.csv", function (data) {
         var gopcurve = []
         var demcurve = []
 
-        for (let l = 1; l < 500; l++) {
+        for (let l = 1; l < 100; l++) {
 
-          var gq = jStat.normal.inv(l / 500, fdt[k].gop_vote, fdt[k].std * .8)
+          var gq = jStat.normal.inv(l / 100, fdt[k].gop_vote, fdt[k].std * .8)
           var gp = jStat.normal.pdf(gq, fdt[k].gop_vote, fdt[k].std * .8)
 
-          var dq = jStat.normal.inv(l / 500, fdt[k].dem_vote, fdt[k].std * .8)
+          var dq = jStat.normal.inv(l / 100, fdt[k].dem_vote, fdt[k].std * .8)
           var dp = jStat.normal.pdf(dq, fdt[k].dem_vote, fdt[k].std * .8)
 
-          var tq = (fdt[k].third_vote / .4) * (l / 500)
-          var tp = jStat.beta.pdf(l / 500, fdt[k].dem_vote, fdt[k].std * .8)
-
+         
           var gopvalues = {
             x: gq,
-            y: -y3(gp) + k * 50 + 160,
+            y: -y3(gp) + k * 50 + 162,
             y2: k * 50 + 160
           }
 
           var demvalues = {
             x: dq,
-            y: -y3(dp) + k * 50 + 160,
+            y: -y3(dp) + k * 50 + 162,
             y2: k * 50 + 160
           }
           gopcurve.push(gopvalues)
@@ -1161,7 +1166,7 @@ d3.csv("data.csv", function (data) {
           tipping_point: fdt[k].tipping_point
         }
 
-
+        console.log(dt)
         sd4.push(dt)
       }
 
@@ -1209,14 +1214,14 @@ d3.csv("data.csv", function (data) {
         .attr("class", "line cities")
         .style("opacity", .4)
         .style("fill", "#FF6060")
-        .attr("d", d => area(d.gopvalues.filter((d, i) => i < 475 && i > 25)))
+        .attr("d", d => area(d.gopvalues.filter((d, i) => i < 90 && i > 10)))
         .style("stroke", (d, i) => "#FF6060")
 
       curves.enter().insert("g", ".focus").append("path")
         .attr("class", "line cities")
         .style("opacity", .4)
         .style("fill", "#0091FF")
-        .attr("d", d => area(d.demvalues.filter((d, i) => i < 475 && i > 25)))
+        .attr("d", d => area(d.demvalues.filter((d, i) => i < 90 && i > 10)))
         .style("stroke", (d, i) => "#0091FF")
 
       var pct = [0, 25, 50, 75, 100]
@@ -1236,11 +1241,21 @@ d3.csv("data.csv", function (data) {
       dist.selectAll()
         .data(sd4)
         .enter()
+        .append("a")
+        .attr("xlink:href", d => d.state)
         .append("text")
         .text(d => d.state)
         .attr("x", 20)
         .attr("y", (d, i) => i * 50 + 150)
         .attr("font-weight", 700)
+        .on("mouseover", function (d) {
+          d3.select(this)
+            .attr("text-decoration", "underline")
+        })
+        .on("mouseout", function (d) {
+          d3.select(this)
+            .attr("text-decoration", "none")
+        })
 
       dist.selectAll()
         .data(sd4)

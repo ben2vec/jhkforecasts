@@ -80,7 +80,7 @@ d3.csv("data.csv", data => {
   document.getElementById("state").style.backgroundColor = gop_win > dem_win ? colors[0] : colors[1]
 
 
-  var topline = d3.select("#topline")
+  var topline = d3.select("#toplinephone")
     .append("svg")
     .attr("viewBox", "0 0 1000 400")
 
@@ -170,13 +170,13 @@ d3.csv("data.csv", data => {
 
 
   var third_curve = jStat.beta.pdf(.4, 2, 3)
-  var y3 = d3.scaleLinear()
+  var y3phone = d3.scaleLinear()
     .domain([0, highest_curve])
-    .range([0, 60])
+    .range([0, 100])
 
-  var t3 = d3.scaleLinear()
+  var t3phone = d3.scaleLinear()
     .domain([0, third_curve])
-    .range([0, 60])
+    .range([0, 100])
 
   var gopcurve = []
   var demcurve = []
@@ -197,20 +197,20 @@ d3.csv("data.csv", data => {
 
     var gopvalues = {
       x: gq,
-      y: -y3(gp) + (gop_proj_vote > dem_proj_vote ? 100 : 180),
-      y2: (gop_proj_vote > dem_proj_vote ? 100 : 180)
+      y: -y3phone(gp) + (gop_proj_vote > dem_proj_vote ? 140 : 280),
+      y2: (gop_proj_vote > dem_proj_vote ? 140 : 280)
     }
 
     var demvalues = {
       x: dq,
-      y: -y3(dp) + (gop_proj_vote < dem_proj_vote ? 100 : 180),
-      y2: (gop_proj_vote < dem_proj_vote ? 100 : 180)
+      y: -y3phone(dp) + (gop_proj_vote < dem_proj_vote ? 140 : 280),
+      y2: (gop_proj_vote < dem_proj_vote ? 140 : 280)
     }
 
     var thirdvalues = {
       x: tq,
-      y: -t3(tp) + 260,
-      y2: 260
+      y: -t3phone(tp) + 420,
+      y2: 420
     }
 
 
@@ -219,9 +219,9 @@ d3.csv("data.csv", data => {
     thirdcurve.push(thirdvalues)
   }
 
-  var vote = d3.select("#vote")
+  var votephone = d3.select("#votephone")
     .append("svg")
-    .attr("viewBox", "0 0 1000 300")
+    .attr("viewBox", "0 0 1000 450")
 
   var sd4 = {
     gopvalues: gopcurve,
@@ -230,20 +230,20 @@ d3.csv("data.csv", data => {
   }
 
 
-  var x3 = d3.scaleLinear()
+  var x3phone = d3.scaleLinear()
     .domain([0, 100])
     .range([150, 775])
 
   var area = d3.area()
-    .x0(d => x3(d.x))
+    .x0(d => x3phone(d.x))
     .y0(d => d.y2)
     .y1(d => d.y)
 
   var line = d3.line()
-    .x(d => x3(d.x))
+    .x(d => x3phone(d.x))
     .y(d => d.y)
 
-  var curves = vote.selectAll(".cities")
+  var curves = votephone.selectAll(".cities")
     .data(sd4)
 
   var proj = [
@@ -256,7 +256,7 @@ d3.csv("data.csv", data => {
   proj.sort((a, b) => b.vote - a.vote)
   var pct = [0, 25, 50, 75, 100]
 
-  vote.append("text")
+  votephone.append("text")
     .text("Projected Vote")
     .attr("x", 980)
     .attr("y", 20)
@@ -266,54 +266,54 @@ d3.csv("data.csv", data => {
     .attr("font-size", 20)
     .attr("font-weight", 700)
 
-  vote.selectAll("lines")
+  votephone.selectAll("lines")
     .data(proj)
     .enter()
     .append("text")
     .text(d => numberformat(d.vote) + "%")
     .attr("x", 980)
-    .attr("y", (d, i) => 237.5 - 160 + i * 75)
+    .attr("y", (d, i) => 237.5 - 130 + i * 140)
     .attr("fill", d => d.color)
     .attr("text-anchor", "end")
     .attr("dominant-baseline", "middle")
     .attr("font-size", 40)
     .attr("font-weight", 700)
 
-  vote.selectAll("lines")
+  votephone.selectAll("lines")
     .data(pct)
     .enter()
     .append("line")
-    .attr("x1", d => x3(d))
-    .attr("x2", d => x3(d))
+    .attr("x1", d => x3phone(d))
+    .attr("x2", d => x3phone(d))
     .attr("y1", 30)
-    .attr("y2", 270)
+    .attr("y2", 430)
     .attr("stroke", "lightgray")
 
-  vote.selectAll("lines")
+  votephone.selectAll("lines")
     .data(pct)
     .enter()
     .append("text")
     .text(d => d + "%")
-    .attr("x", d => x3(d))
+    .attr("x", d => x3phone(d))
     .attr("y", 20)
     .attr("fill", "lightgray")
     .attr("text-anchor", "middle")
-    .attr("font-size", 12)
+    .attr("font-size", 20)
     .attr("font-weight", 700)
 
 
 
-  vote.append("text")
+  votephone.append("text")
     .text(d => "?")
-    .attr("x", 57.5)
-    .attr("y", 237.5)
+    .attr("x", 70)
+    .attr("y", 380)
     .attr("fill", colors[2])
     .attr("text-anchor", "middle")
     .attr("dominant-baseline", "middle")
-    .attr("font-size", 60)
+    .attr("font-size", 80)
     .attr("font-weight", 700)
 
-  vote.append("path")
+  votephone.append("path")
     .attr("class", "line cities")
     .style("stroke-width", 3)
     .style("opacity", .4)
@@ -321,7 +321,7 @@ d3.csv("data.csv", data => {
     .attr("d", area(sd4.demvalues))
     .style("stroke", (d, i) => "lightgrey")
 
-  vote.append("path")
+  votephone.append("path")
     .attr("class", "line cities")
     .style("stroke-width", 3)
     .style("opacity", .4)
@@ -329,7 +329,7 @@ d3.csv("data.csv", data => {
     .attr("d", d => area(sd4.gopvalues))
     .style("stroke", (d, i) => "lightgrey")
 
-  vote.append("path")
+  votephone.append("path")
     .attr("class", "line cities")
     .style("stroke-width", 3)
     .style("opacity", .4)
@@ -339,90 +339,64 @@ d3.csv("data.csv", data => {
 
 
 
-  vote.append("path")
+  votephone.append("path")
     .attr("class", "line cities")
     .style("opacity", .4)
     .style("fill", "#FF6060")
     .attr("d", d => area(sd4.gopvalues.filter((d, i) => i < 950 && i > 50)))
     .style("stroke", (d, i) => "#FF6060")
 
-  vote.append("path")
+  votephone.append("path")
     .attr("class", "line cities")
     .style("opacity", .4)
     .style("fill", "#0091FF")
     .attr("d", d => area(sd4.demvalues.filter((d, i) => i < 950 && i > 50)))
     .style("stroke", (d, i) => "#0091FF")
 
-  vote.append("path")
+  votephone.append("path")
     .attr("class", "line cities")
     .style("opacity", .4)
     .style("fill", colors[2])
     .attr("d", d => area(sd4.thirdvalues.filter((d, i) => i < 850 && i > 150)))
     .style("stroke", (d, i) => colors[2])
 
-  vote.append("image")
+  votephone.append("image")
     .attr("href", "Trump-01.png")
     .attr("x", 20)
-    .attr("y", gop_proj_vote > dem_proj_vote ? 25 : 105)
-    .attr("height", 75)
-    .attr("width", 75)
+    .attr("y", gop_proj_vote > dem_proj_vote ? 45 : 185)
+    .attr("height", 100)
+    .attr("width", 100)
 
-  vote.append("image")
+  votephone.append("image")
     .attr("href", "Biden-01.png")
     .attr("x", 20)
-    .attr("y", gop_proj_vote < dem_proj_vote ? 25 : 105)
-    .attr("height", 75)
-    .attr("width", 75)
+    .attr("y", gop_proj_vote < dem_proj_vote ? 45 : 185)
+    .attr("height", 100)
+    .attr("width", 100)
 
-  vote.append("circle")
-    .attr("cx", x3(sd4.gopvalues[499].x))
+  votephone.append("circle")
+    .attr("cx", x3phone(sd4.gopvalues[499].x))
     .attr("cy", 30)
     .attr("r", 6)
     .attr("fill", colors[0])
 
-  vote.append("circle")
-    .attr("cx", x3(sd4.demvalues[499].x))
+  votephone.append("circle")
+    .attr("cx", x3phone(sd4.demvalues[499].x))
     .attr("cy", 30)
     .attr("r", 6)
     .attr("fill", colors[1])
 
-  vote.append("circle")
-    .attr("cx", x3(sd4.thirdvalues[499].x))
+  votephone.append("circle")
+    .attr("cx", x3phone(sd4.thirdvalues[499].x))
     .attr("cy", 30)
     .attr("r", 6)
     .attr("fill", colors[2])
 
-  var marginphone = { top: 20, right: 40, bottom: 30, left: 40 }
+
+
+  var marginphone = { top: 20, right: 0, bottom: 20, left: 40 }
   var widthphone = 1000 - marginphone.left - marginphone.right
   var heightphone = 800 - marginphone.top - marginphone.bottom
-  var axisPad = 12
-
-  var time_data = data.filter(d => d.state == key_state)
-
-  var time_data = time_data.filter(d => d.forecast_date > new Date(2020, 0, 1))
-  var data_length = time_data.filter(d => d.party == "gop").length
-  var max_date = d3.max(time_data, d => d.forecast_date)
-  var line_data = []
-  for (let j = 0; j < data_length; j++) {
-
-    var ld = {
-      date: time_data.filter(d => d.party == "gop")[j].forecast_date,
-      gopwin: time_data.filter(d => d.party == "gop")[j].win,
-      demwin: time_data.filter(d => d.party == "dem")[j].win,
-      thirdwin: time_data.filter(d => d.party == "third")[j].win,
-      gopvote: time_data.filter(d => d.party == "gop")[j].proj_vote,
-      demvote: time_data.filter(d => d.party == "dem")[j].proj_vote,
-      thirdvote: time_data.filter(d => d.party == "third")[j].proj_vote,
-      gopev: time_data.filter(d => d.party == "gop")[j].electoral_vote,
-      demev: time_data.filter(d => d.party == "dem")[j].electoral_vote,
-      thirdev: time_data.filter(d => d.party == "third")[j].electoral_vote,
-    }
-    line_data.push(ld)
-  }
-
-  var margin = { top: 20, right: 40, bottom: 20, left: 20 }
-  var width = 1100 - margin.left - margin.right
-  var height = 450 - margin.top - margin.bottom
   var axisPad = 12
 
   var time_data = data.filter(d => d.state == key_state)
@@ -456,18 +430,18 @@ d3.csv("data.csv", data => {
     wholevalue = d3.format(".0f"),
     onevalue = d3.format(".1f")
 
-  var time = d3.select("#time").append("svg")
-    .attr("viewBox", "0 0 1100 450")
+  var timephone = d3.select("#timephone").append("svg")
+    .attr("viewBox", "0 0 1100 800")
     .append('g')
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    .attr("transform", "translate(" + marginphone.left + "," + marginphone.top + ")");
 
 
-  var x = d3.scaleTime()
-    .rangeRound([margin.left, width - margin.right])
+  var xphone = d3.scaleTime()
+    .rangeRound([marginphone.left, widthphone - marginphone.right])
     .domain([new Date(2020, 0, 1), new Date(2020, 10, 3)])
 
-  var y = d3.scaleLinear()
-    .rangeRound([height - margin.bottom, margin.top]);
+  var yphone = d3.scaleLinear()
+    .rangeRound([heightphone - marginphone.bottom, marginphone.top]);
 
 
   var z = d3.scaleOrdinal()
@@ -476,22 +450,22 @@ d3.csv("data.csv", data => {
 
   var line = d3.line()
     .curve(d3.curveCatmullRom)
-    .x(d => x(d.date))
-    .y(d => y(d.pct));
+    .x(d => xphone(d.date))
+    .y(d => yphone(d.pct));
 
-  time.append("g")
+  timephone.append("g")
     .attr("class", "x-axis")
-    .attr("transform", "translate(0," + (height - margin.bottom) + ")")
-    .call(d3.axisBottom(x).tickSize(-370).ticks(5)
+    .attr("transform", "translate(0," + (heightphone - marginphone.bottom) + ")")
+    .call(d3.axisBottom(xphone).tickSize(-720).ticks(5)
       .tickFormat(d3.timeFormat("%b")))
     .call(g => {
-      var years = x.ticks(d3.timeYear.every(1))
+      var years = xphone.ticks(d3.timeYear.every(1))
       var xshift = 0
       g.selectAll("text")
         .style("text-anchor", "right")
         .attr("y", axisPad)
         .attr('fill', 'black')
-        .attr('font-size', 15)
+        .attr('font-size', 25)
         .attr('font-weight', 800)
       g.selectAll("line")
         .attr("opacity", .2)
@@ -504,27 +478,27 @@ d3.csv("data.csv", data => {
 
     })
 
-  time.append("line")
-    .attr("x1", x(new Date(2020, 10, 3)))
-    .attr("x2", x(new Date(2020, 10, 3)))
+  timephone.append("line")
+    .attr("x1", xphone(new Date(2020, 10, 3)))
+    .attr("x2", xphone(new Date(2020, 10, 3)))
     .attr("y1", 20)
-    .attr("y2", (height - margin.bottom))
+    .attr("y2", (heightphone - marginphone.bottom))
     .attr("stroke", "black")
     .attr("stroke-width", 3)
 
-  time.append("text")
+  timephone.append("text")
     .text("Nov. 3rd")
-    .attr("x", x(new Date(2020, 10, 3)))
+    .attr("x", xphone(new Date(2020, 10, 3)))
     .attr("y", 10)
     .attr("font-weight", 700)
 
 
 
-  time.append("g")
+  timephone.append("g")
     .attr("class", "y-axis")
-    .attr("transform", "translate(" + margin.left + ",0)");
+    .attr("transform", "translate(" + marginphone.left + ",0)");
 
-  var focus = time.append("g")
+  var focus = timephone.append("g")
     .attr("class", "focus")
     .style("display", "none");
 
@@ -533,18 +507,18 @@ d3.csv("data.csv", data => {
     .attr("stroke-width", 1)
     .style("shape-rendering", "crispEdges")
     .style("opacity", 0)
-    .attr("y1", -height)
+    .attr("y1", -heightphone)
     .attr("y2", -40);
 
   focus.append("text").attr("class", "lineHoverDate")
     .attr("text-anchor", "end")
     .attr("font-size", 12);
 
-  var overlay = time.append("rect")
+  var overlay = timephone.append("rect")
     .attr("class", "overlay")
-    .attr("x", margin.left)
-    .attr("width", x(max_date) - margin.left)
-    .attr("height", height)
+    .attr("x", marginphone.left)
+    .attr("width", xphone(max_date) - marginphone.left)
+    .attr("height", heightphone)
 
   var keys = ["gopwin", "demwin", "thirdwin", "gopvote", "demvote", "thirdvote", "gopev", "demev", "thirdev"]
   update("win", 0);
@@ -559,21 +533,21 @@ d3.csv("data.csv", data => {
         values: line_data.map(d => { return { date: d.date, pct: +d[id] } })
       };
     });
-    y.domain([
+    yphone.domain([
       0,
       input == "ev" ? 538 : input == "vote" ? 100 : 100
     ]).nice();
 
-    time.selectAll(".y-axis").transition()
+    timephone.selectAll(".y-axis").transition()
       .duration(speed)
-      .call(d3.axisLeft(y).tickSize(-width + margin.right + margin.left).ticks(5)).call(g => {
-        var years = x.ticks(d3.timeYear.every(1))
+      .call(d3.axisLeft(yphone).tickSize(-widthphone + marginphone.right + marginphone.left).ticks(5)).call(g => {
+        var years = xphone.ticks(d3.timeYear.every(1))
         var xshift = 0
         g.selectAll("text")
           .style("text-anchor", "right")
           .attr("y", 0)
           .attr('fill', 'black')
-          .attr('font-size', 15)
+          .attr('font-size', 25)
           .attr('font-weight', 800)
         g.selectAll("line")
           .attr("opacity", .2)
@@ -586,7 +560,7 @@ d3.csv("data.csv", data => {
 
       })
 
-    var city = time.selectAll(".cities")
+    var city = timephone.selectAll(".cities")
       .data(cities);
 
     city.exit().remove();
@@ -594,7 +568,7 @@ d3.csv("data.csv", data => {
     city.enter().insert("g", ".focus").append("path")
       .attr("class", "line cities")
       .style("stroke", (d, i) => colors[i])
-      .style("stroke-width", 3)
+      .style("stroke-width", 4)
       .style("opacity", .9)
       .merge(city)
       .transition().duration(speed)
@@ -614,7 +588,7 @@ d3.csv("data.csv", data => {
 
       labels2.enter().append("text")
         .attr("class", "lineHoverText2")
-        .attr("font-size", 20)
+        .attr("font-size", 25)
         .style("fill", "white")
         .style("stroke", "white")
         .style("stroke-width", 5)
@@ -626,7 +600,7 @@ d3.csv("data.csv", data => {
       labels.enter().append("text")
         .attr("class", "lineHoverText")
         .attr("text-anchor", "middle")
-        .attr("font-size", 20)
+        .attr("font-size", 25)
         .merge(labels)
 
       var circles = focus.selectAll(".hoverCircle")
@@ -635,19 +609,19 @@ d3.csv("data.csv", data => {
       circles.enter().append("circle")
         .attr("class", "hoverCircle")
         .style("stroke", d => z(d))
-        .style("stroke-width", 3)
+        .style("stroke-width", 4)
         .style("fill", "white")
         .attr("r", 3)
         .merge(circles);
 
-      time.selectAll(".overlay")
+      timephone.selectAll(".overlay")
         .on("mouseover", () => focus.style("display", null))
         .on("mouseout", () => focus.style("display", "none"))
         .on("mousemove", mousemove);
 
       function mousemove() {
 
-        var x0 = x.invert(d3.mouse(this)[0]),
+        var x0 = xphone.invert(d3.mouse(this)[0]),
           i = bisectDate(line_data, x0, 1),
           d0 = line_data[i - 1],
           d1 = line_data[i],
@@ -656,30 +630,30 @@ d3.csv("data.csv", data => {
 
 
         focus.selectAll(".hoverCircle")
-          .attr("cy", e => y(d[e]))
-          .attr("cx", x(d.date));
+          .attr("cy", e => yphone(d[e]))
+          .attr("cx", xphone(d.date));
 
         focus.selectAll(".lineHoverText2")
           .style("font-weight", 700)
-          .attr("x", x(d.date) + 10)
+          .attr("x", xphone(d.date) + 10)
           .text((e, i) => i == 1 ? ("Biden " + onevalue(d[e]) + "%") : i == 0 ? "Trump " + onevalue(d[e]) + "%" : "Third " + onevalue(d[e]) + "%")
-          .attr("y", e => d[e] == d["gop" + input] ? y(d["gop" + input]) >= y(d["dem" + input]) ? y(d["gop" + input]) + 15 : y(d["gop" + input]) - 15 : d[e] == d["dem" + input] ? y(d["dem" + input]) > y(d["gop" + input]) ? y(d["dem" + input]) + 15 : y(d["dem" + input]) - 15 : y(d[e]) - 15)
-          .attr("text-anchor", (e, i)=>i == 2? "end":"start")
+          .attr("y", e => d[e] == d["gop" + input] ? yphone(d["gop" + input]) >= yphone(d["dem" + input]) ? yphone(d["gop" + input]) + 15 : yphone(d["gop" + input]) - 15 : d[e] == d["dem" + input] ? yphone(d["dem" + input]) > yphone(d["gop" + input]) ? yphone(d["dem" + input]) + 15 : yphone(d["dem" + input]) - 15 : yphone(d[e]) - 15)
+          .attr("text-anchor",(e, i)=>i == 2? "end":"start")
           .attr("dominant-baseline", "middle")
 
         focus.selectAll(".lineHoverText")
           .style("font-weight", 700)
-          .attr("x", x(d.date) + 10)
+          .attr("x", xphone(d.date) + 10)
           .text((e, i) => input == "ev" ? i == 1 ? ("Biden " + onevalue(d[e])) : i == 0 ? "Trump " + onevalue(d[e]) : "Third " + onevalue(d[e]) : i == 1 ? ("Biden " + onevalue(d[e]) + "%") : i == 0 ? "Trump " + onevalue(d[e]) + "%" : "Third " + onevalue(d[e]) + "%")
           .attr("fill", (e, i) => colors[i])
-          .attr("y", e => d[e] == d["gop" + input] ? y(d["gop" + input]) >= y(d["dem" + input]) ? y(d["gop" + input]) + 15 : y(d["gop" + input]) - 15 : d[e] == d["dem" + input] ? y(d["dem" + input]) > y(d["gop" + input]) ? y(d["dem" + input]) + 15 : y(d["dem" + input]) - 15 : y(d[e]) - 15)
+          .attr("y", e => d[e] == d["gop" + input] ? yphone(d["gop" + input]) >= yphone(d["dem" + input]) ? yphone(d["gop" + input]) + 15 : yphone(d["gop" + input]) - 15 : d[e] == d["dem" + input] ? yphone(d["dem" + input]) > yphone(d["gop" + input]) ? yphone(d["dem" + input]) + 15 : yphone(d["dem" + input]) - 15 : yphone(d[e]) - 15)
           .attr("text-anchor", (e, i)=>i == 2? "end":"start")
           .attr("dominant-baseline", "middle")
 
         focus.select(".lineHoverDate")
-          .attr("x", x(d.date))
+          .attr("x", xphone(d.date))
           .attr("y", 0)
-          .style("font-size", 15)
+          .style("font-size", 25)
           .style("font-weight", 700)
           .text(formatDate(d.date));
       }
@@ -698,7 +672,7 @@ d3.csv("data.csv", data => {
   }
 
   var keys = ["Fundamentals", "Polling Average", "State Similarity", "Experts Ratings"]
-  var calc = d3.select("#calculation")
+  var calc = d3.select("#calculationphone")
     .append("svg")
     .attr("viewBox", '0 0 1000 500')
 
@@ -714,7 +688,7 @@ d3.csv("data.csv", data => {
     .domain([0, 20])
     .range(["white", colors[2]]);
 
-    var weightscale = d3.scaleLinear()
+  var weightscale = d3.scaleLinear()
     .domain([0, 100])
     .range(["white", "green"]);
 
@@ -746,7 +720,7 @@ d3.csv("data.csv", data => {
     .attr("cx", 500)
     .attr("cy", (d, i) => 140 + i * 60)
     .attr("r", 20)
-    .attr("fill", d => weightscale(d*100/weight_sum))
+    .attr("fill", d => weightscale(d * 100 / weight_sum))
 
 
 
@@ -964,6 +938,8 @@ d3.csv("data.csv", data => {
       })
       data.sort((a, b) => a.party_id - b.party_id)
 
+      
+
       var datanew = d3.nest()
         .key(d => d.question_id)
         .entries(data)
@@ -1002,7 +978,7 @@ d3.csv("data.csv", data => {
 
 
 
-      var bottom = d3.select("#bottom")
+      var bottom = d3.select("#bottomphone")
         .append("svg")
 
 
@@ -1018,7 +994,7 @@ d3.csv("data.csv", data => {
 
 
 
-        var height = finaldata.length * 40 + 25
+        var height = finaldata.length * 40 + 25 > 825 ? 825 : finaldata.length * 40
 
         bottom.attr("viewBox", '0 0 1000 ' + height)
 

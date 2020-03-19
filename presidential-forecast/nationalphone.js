@@ -554,7 +554,7 @@ d3.csv("data.csv", function (data) {
             .attr("x", xphone(d.date) + 10)
             .text((e, i) => i == 1 ? ("Biden " + onevalue(d[e]) + "%") : i == 0 ? "Trump " + onevalue(d[e]) + "%" : "Third " + onevalue(d[e]) + "%")
             .attr("y", e => d[e] == d["gop" + input] ? yphone(d["gop" + input]) > yphone(d["dem" + input]) ? yphone(d["gop" + input]) + 15 : yphone(d["gop" + input]) - 15 : d[e] == d["dem" + input] ? yphone(d["dem" + input]) > yphone(d["gop" + input]) ? yphone(d["dem" + input]) + 15 : yphone(d["dem" + input]) - 15 : yphone(d[e]) - 15)
-            .attr("text-anchor", "start")
+            .attr("text-anchor", (e, i)=>i == 2? "end":"start")
             .attr("dominant-baseline", "middle")
 
           focus.selectAll(".lineHoverText")
@@ -563,7 +563,7 @@ d3.csv("data.csv", function (data) {
             .text((e, i) => input == "ev" ? i == 1 ? ("Biden " + onevalue(d[e])) : i == 0 ? "Trump " + onevalue(d[e]) : "Third " + onevalue(d[e]) : i == 1 ? ("Biden " + onevalue(d[e]) + "%") : i == 0 ? "Trump " + onevalue(d[e]) + "%" : "Third " + onevalue(d[e]) + "%")
             .attr("fill", (e, i) => colors[i])
             .attr("y", e => d[e] == d["gop" + input] ? yphone(d["gop" + input]) > yphone(d["dem" + input]) ? yphone(d["gop" + input]) + 15 : yphone(d["gop" + input]) - 15 : d[e] == d["dem" + input] ? yphone(d["dem" + input]) > yphone(d["gop" + input]) ? yphone(d["dem" + input]) + 15 : yphone(d["dem" + input]) - 15 : yphone(d[e]) - 15)
-            .attr("text-anchor", "start")
+            .attr("text-anchor", (e, i)=>i == 2? "end":"start")
             .attr("dominant-baseline", "middle")
         }
       }
@@ -989,6 +989,8 @@ d3.csv("data.csv", function (data) {
     bubblemapphone.selectAll("overfill")
       .data(sd3)
       .enter()
+      .append("a")
+        .attr("xlink:href", d => d.state)
       .append("circle")
       .attr("class", "statesover")
       .attr("cx", d => d.x)
@@ -1145,16 +1147,16 @@ d3.csv("data.csv", function (data) {
       for (let k = 0; k < bubble_info.length; k++) {
         var margincurve = []
 
-        for (let l = 1; l < 500; l++) {
+        for (let l = 1; l < 100; l++) {
 
-          var gq = jStat.normal.inv(l / 500, fdt[k].margin, fdt[k].std * 1.5)
+          var gq = jStat.normal.inv(l / 100, fdt[k].margin, fdt[k].std * 1.5)
           var gp = jStat.normal.pdf(gq, fdt[k].margin, fdt[k].std * 1.5)
 
 
 
           var marginvalues = {
             x: gq,
-            y: -y3(gp) + k * 80 + 160,
+            y: -y3(gp) + k * 80 + 163,
             y2: k * 80 + 160
           }
           margincurve.push(marginvalues)
@@ -1207,7 +1209,7 @@ d3.csv("data.csv", function (data) {
         .style("stroke-width", 3)
         .style("opacity", 1)
         .style("fill", color(20))
-        .attr("d", d => area(d.marginvalues.filter((d, i) => i < 475 && i > 25 && d.x < 0.1)))
+        .attr("d", d => area(d.marginvalues.filter((d, i) => i < 90 && i > 10 && d.x < 0.1)))
         .style("stroke", (d, i) => color(20))
 
       curves.enter().insert("g", ".focus").append("path")
@@ -1215,7 +1217,7 @@ d3.csv("data.csv", function (data) {
         .style("stroke-width", 3)
         .style("opacity", 1)
         .style("fill", color(80))
-        .attr("d", d => area(d.marginvalues.filter((d, i) => i < 475 && i > 25 && d.x > 0.2)))
+        .attr("d", d => area(d.marginvalues.filter((d, i) => i < 90 && i > 10 && d.x > 0.2)))
         .style("stroke", (d, i) => color(80))
 
 
@@ -1238,6 +1240,8 @@ d3.csv("data.csv", function (data) {
       distphone.selectAll()
         .data(sd4)
         .enter()
+        .append("a")
+        .attr("xlink:href", d => d.state)
         .append("text")
         .text(d => d.state)
         .attr("x", 20)
