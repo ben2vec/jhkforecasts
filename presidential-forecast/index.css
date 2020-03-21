@@ -190,19 +190,18 @@
    .phone {
      display: none;
    }
-
    #winbuttonphone {
-    display: none;
-  }
-  #votebuttonphone {
-    display: none;
-  }
-  #winbutton {
-    display: block;
-  }
-  #votebutton {
-    display: block;
-  }
+     display: none;
+   }
+   #votebuttonphone {
+     display: none;
+   }
+   #winbutton {
+     display: block;
+   }
+   #votebutton {
+     display: block;
+   }
  }
 
  div.sticky {
@@ -249,8 +248,24 @@
    text-decoration: underline;
  }
 
- hr{
-  height: 1px;
-  background-color: black;
-  border: none;
+ .selectbox {
+   font-family: source-code-pro, monospace;
+   font-weight: 400;
+   font-size: 2vw;
+   text-align: center;
+   padding: 10%;
+ }
+
+ hr {
+   height: 1px;
+   background-color: black;
+   border: none;
+ }
+ div.banner {
+ 
+  top: 0;
+  background-color: white;
+  border-bottom: black solid 1px;
+  margin-left: -8px;
+  margin-right: -8px;
 }

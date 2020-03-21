@@ -1,10 +1,10 @@
-var colors = ["#FF6060", "#0091FF", "#FFE130"]
+var colors = ["#FC474E", "#0091FF", "#FFE130"]
 
 var category = ["gop", "dem", "third"]
 
 var cand_colors = d3.scaleOrdinal()
   .domain(category)
-  .range(["#FF6060", "#0091FF", "#FFE130"])
+  .range(["#FC474E", "#0091FF", "#FFE130"])
 
 var tformat = d3.timeFormat("%m/%d/%Y")
 var dateparse = d3.timeParse("%m/%d/%y")
@@ -28,7 +28,7 @@ var path = d3.geoPath()
 
 var color = d3.scaleLinear()
   .domain([0, 50, 100])
-  .range(["#0091FF", "white", "#FF6060"]);
+  .range(["#0091FF", "white", "#FC474E"]);
 
 var maphone = d3.select("#usmapphone")
   .append("svg")
@@ -1269,7 +1269,7 @@ d3.csv("data.csv", function (data) {
         .attr("y", (d, i) => i * 80 + 150)
         .attr("font-weight", 700)
         .attr("text-anchor", "middle")
-        .attr("fill", d => d.margin >= 0 ? "#FF6060" : "#0091FF")
+        .attr("fill", d => d.margin >= 0 ? "#FC474E" : "#0091FF")
 
 
 

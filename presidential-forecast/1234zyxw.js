@@ -87,7 +87,7 @@ function update(input) {
 				return d.Value
 			})
 			var ds = []
-			d3.csv("https://projects.jhkforecasts.com/presidential_forecast/simdata.csv", data => {
+			d3.csv("simdata.csv", data => {
 
 				data[52].pvi = +data[52].pvi + 3
 				var states = data.map(d => {

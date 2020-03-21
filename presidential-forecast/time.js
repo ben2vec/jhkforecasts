@@ -8,17 +8,17 @@ var wholeformat = d3.format(".1f")
 
 var color = d3.scaleLinear()
     .domain([0, 0.5, 1])
-    .range(["#0091FF", "white", "#FF6060"]);
+    .range(["#0091FF", "white", "#FC474E"]);
 var gopscale = d3.scaleLinear()
     .domain([20, 80])
-    .range(["white", "#FF6060"]);
+    .range(["white", "#FC474E"]);
 
 var demscale = d3.scaleLinear()
     .domain([20, 80])
     .range(["white", "#0091FF"]);
 
 
-var gopwincol = "#FF6060"
+var gopwincol = "#FC474E"
 var demwincol = "#0091FF"
 var thirdwincol = "#FFE130"
 
@@ -860,7 +860,7 @@ d3.csv("https://projects.jhkforecasts.com/presidential_forecast/pollster-ratings
 
 
                 bottom.append("text")
-                    .text("Adj. Margin")
+                    .text("Margin")
                     .attr("y", 12)
                     .attr("x", 950)
                     .attr("fill", "black")

@@ -49,10 +49,10 @@
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@jhkforecast">
 	<meta name="twitter:creator" content="@jhkersting">
-	<meta name="twitter:title" content="2020 President - Indiana">
-	<meta name="twitter:description" content="Who is win the Wisconin in 2020?">
+	<meta name="twitter:title" content="2020 Presidential Experts' Ratings">
+	<meta name="twitter:description" content="What the experts are predicting for 2020?">
 	<meta name="twitter:image" content="https://jhkforecasts.com/Presidential-Forecast-04.png">
-	<title>2020 President - Indiana</title>
+	<title>2020 Presidential Experts' Ratings</title>
 
 	<link rel="icon" href="https://jhkforecasts.com/LOGO-01.png">
 	<script src="https://d3js.org/d3.v4.min.js"></script>
@@ -63,6 +63,8 @@
 </head>
 
 <body>
+
+
 
 	<div class="banner">
 		<?xml version="1.0" encoding="utf-8"?>
@@ -373,77 +375,22 @@
 
 	</div>
 
+	<h1 style="text-align: center;font-weight: 4s00;color: white;font-size: 5vw;background-color: steelblue;font-family: source-code-pro;">
+		EXPERTS' RATINGS </h1>
 
-	<h1 style="text-align: center;font-weight: 900;color: white;font-size: 5vw;" id="state"> </h1>
-	<script>
-		var key_state = "Indiana"
+	<select class="selectbox" style="margin-left: 35%;width:30%;margin-top: 10px;" id="experts-select">
+		<option value="bitecofer">BITECOFER</option>
+		<option value="sabato">SABATO'S CRYSTAL BALL</option>
+		<option value="inside">INSIDE ELECTIONS</option>
+		<option value="politico">POLITICO</option>
+		<option value="cook">COOK POLITCAL REPORT</option>
+	</select>
+	<div id="map"></div>
+	<script src="experts_ratings.js"></script>
+	<hr>
 
-	</script>
 
 
-
-	<div id="topline"></div>
-	<a href="https://projects.jhkforecasts.com/presidential-forecast/"><p style="font-size: 2vw;font-weight:700;text-align: center;text-decoration: underline;">Back to National Forecast</p></a><h1 style="margin-left: 2%;font-weight: 900;">Projected Vote</h1>
-	<p style="margin-left: 5%;font-weight: 500;">(80% Confidence Interval)</p>
-	<div class="computer" id="vote"></div>
-	<div class="phone" id="votephone"></div>
-	<h1 style="margin-left: 2%;font-weight: 900;">Time Changes </h1>
-
-	<table
-	class="computer"	style="margin-left:20%;border-collapse: collapse; border: none;margin-top: 20px;text-align: center;width: 60%;margin-bottom: 20px;"
-		cellspacing="0">
-		<tbody>
-			<tr>
-				<td style="width: 33%; ">
-					<button class="btn default" style="font-size: 2vw;"id="winbutton">Win</button>
-				</td>
-				<td style="width: 33%; ">
-					<button class="btn default"style="font-size: 2vw;" id="votebutton">Projected Vote</button>
-				</td>
-
-			</tr>
-		</tbody>
-	</table>
-
-	<table
-	class="phone"	style="margin-left:20%;border-collapse: collapse; border: none;margin-top: 20px;text-align: center;width: 60%;margin-bottom: 20px;"
-		cellspacing="0">
-		<tbody>
-			<tr>
-				<td style="width: 33%; ">
-					<button class="btn default" style="font-size: 2vw;"id="winbuttonphone">Win</button>
-				</td>
-				<td style="width: 33%; ">
-					<button class="btn default"style="font-size: 2vw;" id="votebuttonphone">Projected Vote</button>
-				</td>
-
-			</tr>
-		</tbody>
-	</table><div class="computer" style="margin-top: 20px;" id="time"></div>
-	<div class="phone" style="margin-top: 20px;" id="timephone"></div>
-	<h1 style="margin-left: 2%;font-weight: 900;">Vote Calculations</h1>
-	<div style="text-align:center">
-		
-	<div id="calculation"></div>
-	<h1 style="margin-left: 2%;font-weight: 900;">Recent Polls </h1>
-	<div id="bottom"></div>           
-<hr>
-	<div style="text-align:center">
-		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-		<ins class="adsbygoogle" style="display:block;margin-right:auto;margin-left: auto" data-ad-format="fluid"
-		  data-ad-layout-key="-h2+d+5c-9-3e" data-ad-client="ca-pub-8025120308040073" data-ad-slot="8603820464"></ins>
-		<script>
-		  (adsbygoogle = window.adsbygoogle || []).push({});
-		</script>
-		<div style="text-align:center">
-			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-			<ins class="adsbygoogle" style="display:block;margin-right:auto;margin-left: auto" data-ad-format="fluid"
-			  data-ad-layout-key="-h2+d+5c-9-3e" data-ad-client="ca-pub-8025120308040073" data-ad-slot="8603820464"></ins>
-			<script>
-			  (adsbygoogle = window.adsbygoogle || []).push({});
-			</script>
-	<script src="states.js"></script>
-	<script src="statesphone.js"></script>
 </body>
 
 </html>
