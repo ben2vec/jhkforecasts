@@ -494,3 +494,11 @@ div.sticky {
   top: 0;
   background-color: white;
 }
+div.banner {
+ 
+  top: 0;
+  background-color: white;
+  border-bottom: black solid 1px;
+  margin-left: -8px;
+  margin-right: -8px;
+}
