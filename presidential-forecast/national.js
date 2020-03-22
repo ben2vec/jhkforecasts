@@ -673,7 +673,7 @@ d3.csv("data.csv", function (data) {
 
     var bars = d3.select("#bars")
       .append("svg")
-      .attr("viewBox", '0 0 1000 400')
+      .attr("viewBox", '0 50 1000 300')
 
     var tool_tip2 = d3.tip()
       .attr("class", "d3-tip")
