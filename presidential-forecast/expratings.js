@@ -4,7 +4,7 @@ var map_labels = [{ "state": "Alabama", "label": "AL", "xValue": 637, "yValue": 
 var timeformat = d3.timeFormat("%b. %d")
 var wholeformat = d3.format(".0f")
 var numberformat = d3.format(".1f")
-var experts = ["cook", "bitecofer", "inside", "politico", "sabato", "jhk"]
+var experts = ["cook", "bitecofer", "inside", "politico", "sabato", "jhk","cnanalysis"]
 var color = d3.scaleLinear()
     .domain([0, 50, 100])
     .range(["#0091FF", "white", "#FF6060"]);
@@ -74,11 +74,12 @@ d3.csv("data.csv", jhk => {
                 inside: d.inside,
                 bitecofer: d.bitecofer,
                 politico: d.politico,
-                jhk: jhkforecasts[i]
+                jhk: jhkforecasts[i],
+                cnanalysis: d.cnanalysis,
             }
         })
 
-        var sd2 = experts_rating.slice(0, 50)
+        var sd2 = experts_rating
         var ratings_nested = []
         var experts_ev = []
         for (let j = 0; j < experts.length; j++) {
@@ -107,9 +108,9 @@ d3.csv("data.csv", jhk => {
                     d3.sum(datas.filter(d => d.rating == "Likely R"), d => d.ev),
                     d3.sum(datas.filter(d => d.rating == "Solid R"), d => d.ev)]
             }
-
+            var dta = datas.slice(0,50)
             experts_ev.push(expev)
-            ratings_nested.push(datas)
+            ratings_nested.push(dta)
         }
         var state_cand = ratings_nested.flat()
         var national_cand = experts_ev.flat()
@@ -308,7 +309,7 @@ d3.csv("data.csv", jhk => {
                     .attr("class", "statesover")
                     .attr("d", path)
                     .attr("stroke", d => d.properties.rating == "Tossup" ? "black" : "none")
-                    .attr("stroke-width", d => d.properties.rating == "Tossup" ? "1" : "0")
+                    .attr("stroke-width", d => d.properties.rating == "Tossup" ? "1.5" : "0")
                     .style("fill", "none")
                     .on("mouseover", function (d) {
 
@@ -383,7 +384,7 @@ d3.csv("data.csv", jhk => {
 
         var svg = d3.select("#tableratings")
             .append("svg")
-            .attr("viewBox", '0 20 900 1800')
+            .attr("viewBox", '0 20 1000 1800')
 
         svg.selectAll("states")
             .data(tabledata)
@@ -481,6 +482,18 @@ d3.csv("data.csv", jhk => {
             .attr("opacity", d => rating_opacity[ratings.indexOf(d.sabato)])
             .attr("stroke", "white")
 
+            svg.selectAll("states")
+            .data(tabledata)
+            .enter()
+            .append("rect")
+            .attr("y", (d, i) => 85 + i * 30)
+            .attr("x", 850)
+            .attr("width", 100)
+            .attr("height", 30)
+            .attr("fill", d =>d.cnanalysis ==""?"white": colorsratings[ratings.indexOf(d.cnanalysis)])
+            .attr("opacity", d => rating_opacity[ratings.indexOf(d.cnanalysis)])
+            .attr("stroke", "white")
+
         svg.selectAll("states")
             .data(tabledata)
             .enter()
@@ -568,6 +581,20 @@ d3.csv("data.csv", jhk => {
             .style("font-weight", "700")
             .attr("dominant-baseline", "central")
 
+            svg.selectAll("states")
+            .data(tabledata)
+            .enter()
+            .append("text")
+            .text(d => d.cnanalysis)
+            .attr("y", (d, i) => 100 + i * 30)
+            .attr("x", 900)
+            .style("font-family", "brandon-grotesque")
+            .attr("font-size", "15")
+            .attr("fill", "black")
+            .attr("text-anchor", "middle")
+            .style("font-weight", "700")
+            .attr("dominant-baseline", "central")
+
         svg.selectAll("states")
             .data(tabledata)
             .enter()
@@ -578,11 +605,14 @@ d3.csv("data.csv", jhk => {
             .attr("x2", 1000)
             .attr("stroke", "lightgrey")
 
-        var exname = ["JHK Forecasts", "Bitecofer", "Cook Political", "Inside Elections", "Poltico", "Sabato's Crystal Ball"]
+        var exname = ["JHK Forecasts", "Bitecofer", "Cook Political", "Inside Elections", "Politico", "Sabato's Crystal Ball","CNALYSIS"]
+        var exlinks = ["https://projects.jhkforecasts.com/presidential-forecast/", "http://cnu.edu/wasoncenter/2019/07/01-2020-election-forecast/", "https://cookpolitical.com/analysis/national/national-politics/introducing-cook-political-reports-2020-electoral-college", "https://insideelections.com/ratings/president", "https://www.politico.com/2020-election/race-forecasts-and-predictions/president/", "http://centerforpolitics.org/crystalball/2020-president/","https://www.cnalysiscom.website/forecasts/2020-president-governor-senate-house-ratings"]
 
         svg.selectAll("states")
             .data(exname)
             .enter()
+            .append("a")
+            .attr("href",(d,i)=>exlinks[i])
             .append("text")
             .text(d => d)
             .attr("x", (d, i) => 300 + i * 100)
@@ -593,12 +623,21 @@ d3.csv("data.csv", jhk => {
             .attr("text-anchor", "middle")
             .style("font-weight", "700")
             .attr("dominant-baseline", "central")
+            .on("mouseover", function (d) {
+                d3.select(this)
+                  .attr("text-decoration", "underline")
+              })
+              .on("mouseout", function (d) {
+                d3.select(this)
+                  .attr("text-decoration", "none")
+              })
             .call(wrap, 100)
 
-
-        svg.selectAll("states")
+            svg.selectAll("states")
             .data(exname)
             .enter()
+            .append("a")
+            .attr("href",(d,i)=>exlinks[i])
             .append("text")
             .text(d => d)
             .attr("x", (d, i) => 300 + i * 100)
@@ -609,7 +648,18 @@ d3.csv("data.csv", jhk => {
             .attr("text-anchor", "middle")
             .style("font-weight", "700")
             .attr("dominant-baseline", "central")
+            .on("mouseover", function (d) {
+                d3.select(this)
+                  .attr("text-decoration", "underline")
+              })
+              .on("mouseout", function (d) {
+                d3.select(this)
+                  .attr("text-decoration", "none")
+              })
             .call(wrap, 100)
+
+
+        
 
         function wrap(text, width) {
             text.each(function () {
