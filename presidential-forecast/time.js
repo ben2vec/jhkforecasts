@@ -8,17 +8,17 @@ var wholeformat = d3.format(".1f")
 
 var color = d3.scaleLinear()
     .domain([0, 0.5, 1])
-    .range(["#0091FF", "white", "#FC474E"]);
+    .range(["#0091FF", "white", "#FF6060"]);
 var gopscale = d3.scaleLinear()
     .domain([20, 80])
-    .range(["white", "#FC474E"]);
+    .range(["white", "#FF6060"]);
 
 var demscale = d3.scaleLinear()
     .domain([20, 80])
     .range(["white", "#0091FF"]);
 
 
-var gopwincol = "#FC474E"
+var gopwincol = "#FF6060"
 var demwincol = "#0091FF"
 var thirdwincol = "#FFE130"
 

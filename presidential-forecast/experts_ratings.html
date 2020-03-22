@@ -81,7 +81,7 @@
 					<rect x="1114" y="5" fill="#FFFFFF" width="113" height="103" />
 					<a xlink:href="https://projects.jhkforecasts.com/2020-elections/">
 						<g>
-							<path fill="#FC474E" d="M1173.5,55.76h-44.38c-4.77,0-8.63-3.86-8.63-8.63V16.97c0-4.77,3.86-8.63,8.63-8.63h44.38
+							<path fill="#FF6060" d="M1173.5,55.76h-44.38c-4.77,0-8.63-3.86-8.63-8.63V16.97c0-4.77,3.86-8.63,8.63-8.63h44.38
 					c4.77,0,8.63,3.86,8.63,8.63v30.16C1182.13,51.89,1178.27,55.76,1173.5,55.76z" />
 							<g>
 								<path fill="#FFFFFF" d="M1124.88,47.02c3.32-4.02,9.65-12.26,13.01-16.73c1.56-1.91,2.56-3.87,2.56-5.58
@@ -378,15 +378,18 @@
 	<h1 style="text-align: center;font-weight: 4s00;color: white;font-size: 5vw;background-color: steelblue;font-family: source-code-pro;">
 		EXPERTS' RATINGS </h1>
 
-	<select class="selectbox" style="margin-left: 35%;width:30%;margin-top: 10px;" id="experts-select">
-		<option value="bitecofer">BITECOFER</option>
-		<option value="sabato">SABATO'S CRYSTAL BALL</option>
-		<option value="inside">INSIDE ELECTIONS</option>
-		<option value="politico">POLITICO</option>
-		<option value="cook">COOK POLITCAL REPORT</option>
-	</select>
-	<div id="map"></div>
-	<script src="experts_ratings.js"></script>
+		<select style="margin-left: 35%;width:30%;margin-top: 0px;" class="selectbox" id="selectbox">
+			<option value="jhk">JHK Forecasts</option>
+			<option value="bitecofer">Bitecofer</option>
+			<option value="sabato">Sabato's Crystal Ball</option>
+			<option value="inside">Inside Elections</option>
+			<option value="politico">Poltici</option>
+			<option value="cook">Cook Political Report</option>
+		</select>
+		<div style="margin-top: 10px" id="usmap"></div>
+		<h1 style="margin-left: 2%;font-weight: 900;">Experts' Rating Table </h1>
+		<div style="margin-top: 10px" id="tableratings"></div>
+		<script src="expratings.js"></script>
 	<hr>
 
 

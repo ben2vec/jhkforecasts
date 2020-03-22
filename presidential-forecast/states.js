@@ -1,10 +1,10 @@
-var colors = ["#FC474E", "#0091FF", "#FFE130"]
+var colors = ["#FF0660", "#0091FF", "#FFE130"]
 
 var category = ["gop", "dem", "third"]
 
 var cand_colors = d3.scaleOrdinal()
   .domain(category)
-  .range(["#FC474E", "#0091FF", "#FFE130"])
+  .range(["#FF6060", "#0091FF", "#FFE130"])
 
 var dateparse = d3.timeParse("%m/%d/%y")
 
@@ -46,7 +46,7 @@ var odds = event_odds.map((d, i) => {
 
 var color = d3.scaleLinear()
   .domain([0, 50, 100])
-  .range(["#0091FF", "white", "#FC474E"]);
+  .range(["#0091FF", "white", "#FF6060"]);
 
 
 
@@ -342,9 +342,9 @@ d3.csv("data.csv", data => {
   vote.append("path")
     .attr("class", "line cities")
     .style("opacity", .4)
-    .style("fill", "#FC474E")
+    .style("fill", "#FF6060")
     .attr("d", d => area(sd4.gopvalues.filter((d, i) => i < 950 && i > 50)))
-    .style("stroke", (d, i) => "#FC474E")
+    .style("stroke", (d, i) => "#FF6060")
 
   vote.append("path")
     .attr("class", "line cities")
@@ -703,7 +703,7 @@ d3.csv("data.csv", data => {
 
   var gopscale = d3.scaleLinear()
     .domain([20, 80])
-    .range(["white", "#FC474E"]);
+    .range(["white", "#FF6060"]);
 
   var demscale = d3.scaleLinear()
     .domain([20, 80])
@@ -917,7 +917,7 @@ d3.csv("data.csv", data => {
 
   var gopscale = d3.scaleLinear()
     .domain([20, 80])
-    .range(["white", "#FC474E"]);
+    .range(["white", "#FF6060"]);
 
   var demscale = d3.scaleLinear()
     .domain([20, 80])
@@ -925,7 +925,7 @@ d3.csv("data.csv", data => {
   var tformat = d3.timeFormat("%m/%d/%Y")
   var date2parse = d3.timeParse("%m/%d/%y")
   var timeparse = d3.timeParse("%m/%d/%y %H:%M")
-  var gopwincol = "#FC474E"
+  var gopwincol = "#FF6060"
   var demwincol = "#0091FF"
   var thirdwincol = "#FFE130"
 
