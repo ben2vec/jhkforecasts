@@ -1,14 +1,14 @@
 ﻿state,ev,pvi,pct_vote,elasticity,third_index,sabato,cook,inside,bitecofer,politico,bitecofer_margin,cnanalysis
 Alabama,9,30.12,0.015536572,0.89,0.731030246,Solid R,Solid R,Solid R,Solid R,Solid R,26.3,Solid R
 Alaska,3,17.09,0.002331234,1.16,2.792366624,Solid R,Solid R,Solid R,Solid R,Solid R,13.82,Solid R
-Arizona,11,7.45,0.018827677,1.05,1.116232562,Tossup,Tossup,Tilt R,Tossup,Tossup,5.38,Tossup
+Arizona,11,7.45,0.018827677,1.05,1.116232562,Tossup,Tossup,Tilt R,Lean D,Tossup,5.38,Tossup
 Arkansas,6,31.71,0.008272781,1,1.080016252,Solid R,Solid R,Solid R,Solid R,Solid R,31.38,Solid R
 California,55,-26.54,0.103765787,0.94,1.301041812,Solid D,Solid D,Solid D,Solid D,Solid D,-27.24,Solid D
 Colorado,9,-2.97,0.020342882,1.07,1.444233859,Lean D,Likely D,Solid D,Solid D,Lean D,-11.1,Solid D
 Connecticut,7,-13.91,0.01203577,0.99,1.06628916,Solid D,Solid D,Solid D,Solid D,Solid D,-17.36,Solid D
 Delaware,3,-14.75,0.003247358,0.93,0.810619059,Solid D,Solid D,Solid D,Solid D,Solid D,-12.36,Solid D
 Florida,29,4.59,0.068925799,1.03,0.619925944,Lean R,Tossup,Tossup,Tossup,Tossup,-0.36,Tilt R
-Georgia,16,8.65,0.03010722,0.9,0.527718158,Lean R,Lean R,Likely R,Lean R,Lean R,6.52,Likely R
+Georgia,16,8.65,0.03010722,0.9,0.527718158,Lean R,Lean R,Likely R,Tossup,Lean R,6.52,Likely R
 Hawaii,4,-38.11,0.003138503,1.07,1.239515808,Solid D,Solid D,Solid D,Solid D,Solid D,-39.26,Solid D
 Idaho,4,36.88,0.00505055,1.12,1.591040877,Solid R,Solid R,Solid R,Solid R,Solid R,32.3,Solid R
 Illinois,20,-15.12,0.040509646,1.01,0.836435666,Solid D,Solid D,Solid D,Solid D,Solid D,-16.94,Solid D
@@ -41,7 +41,7 @@ Rhode Island,4,-18.88,0.003396111,1.15,1.220015515,Solid D,Solid D,Solid D,Solid
 South Carolina,9,16.72,0.015387709,0.97,0.752817212,Solid R,Solid R,Solid R,Solid R,Solid R,13.38,Solid R
 South Dakota,3,31.45,0.002707946,1.01,1.024630712,Solid R,Solid R,Solid R,Solid R,Solid R,22.58,Solid R
 Tennessee,11,27.95,0.018351067,0.98,0.654719198,Solid R,Solid R,Solid R,Solid R,Solid R,26.64,Solid R
-Texas,38,13.49,0.06562723,1.03,0.684989848,Lean R,Lean R,Solid R,Likely R,Lean R,10.24,Lean R
+Texas,38,13.49,0.06562723,1.03,0.684989848,Lean R,Lean R,Solid R,Lean R,Lean R,10.24,Lean R
 Utah,6,32.06,0.008278598,1.06,1.996679046,Solid R,Solid R,Solid R,Solid R,Likely R,29.5,Solid R
 Vermont,3,-31.6,0.002305324,1.12,1.772926191,Solid D,Solid D,Solid D,Solid D,Solid D,-29.76,Solid D
 Virginia,13,-2.88,0.02915528,0.94,0.86129457,Likely D,Likely D,Solid D,Likely D,Lean D,-8.38,Solid D
