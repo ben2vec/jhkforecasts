@@ -83,6 +83,128 @@ d3.csv("data.csv", function (data) {
     sd.push(finaldt)
   }
 
+  var boxstates = [sd[28], sd[44], sd[20], sd[38], sd[6], sd[7], sd[19], sd[50]]
+  map.append("rect")
+  .attr("x", 100)
+  .attr("y", 50)
+  .attr("width", 1000)
+  .attr("height", 1000)
+  .attr("fill", "white")
+
+map.selectAll()
+  .data(boxstates)
+  .enter()
+  .append("rect")
+  .attr("x", 825)
+  .attr("y", (d, i) => 130 + 15 * i)
+  .attr("width", 30)
+  .attr("height", 15)
+  .attr("stroke", "white")
+  .attr("fill", d =>color(d.gop_win) )
+map.selectAll()
+  .data(boxstates)
+  .enter()
+  .append("text")
+  .text(d => d.label)
+  .attr("x", 840)
+  .attr("y", (d, i) => 137.5 + 15 * i)
+  .style("font-family", "source-code-pro")
+  .attr("font-size", "10")
+  .attr("fill", "black")
+  .attr("text-anchor", "middle")
+  .style("font-weight", "400")
+  .attr("dominant-baseline", "central")
+  
+map.selectAll()
+  .data(boxstates)
+  .enter()
+  .append("rect")
+  .attr("class", "statesover")
+  .attr("x", 825)
+  .attr("y", (d, i) => 130 + 15 * i)
+  .attr("width", 30)
+  .attr("height", 15)
+  .attr("fill", "none")
+  .on('mouseover', function (d) {
+
+
+    tool_tip.show();
+    var tipSVG = d3.select("#tipDiv")
+      .append("svg")
+      .attr("width", 175)
+      .attr("height", 175)
+      ;
+    tipSVG.append("rect")
+      .attr("y", 1.5)
+      .attr("x", 1.5)
+      .attr("width", 172)
+      .attr("height", 172)
+      .attr("rx", 8)
+      .attr("fill", "white")
+      .attr("stroke", "black")
+      .attr("stroke-width", 2)
+
+
+
+    tipSVG.append("text")
+      .text(d.state)
+      .attr("y", 20)
+      .attr("x", 87.5)
+      .attr("fill", "#black")
+      .style("font-weight", "600")
+      .style("font-size", "20")
+      .attr("text-anchor", "middle")
+
+    tipSVG.append("text")
+      .text(d.electoral_votes + " Electoral Votes")
+      .attr("y", 40)
+      .attr("x", 87.5)
+      .attr("fill", "#black")
+      .style("font-weight", "400")
+      .style("font-size", "15")
+      .attr("text-anchor", "middle")
+
+    tipSVG.append("image")
+      .attr("xlink:href", d => "https://jhkforecasts.com/Trump-01.png")
+      .attr("x", 90)
+      .attr("y", 50)
+      .attr("width", 82)
+      .attr("height", 82)
+
+    tipSVG.append("image")
+      .attr("xlink:href", d => "https://jhkforecasts.com/Biden-01.png")
+      .attr("x", 3)
+      .attr("y", 50)
+      .attr("width", 82)
+      .attr("height", 82)
+
+    tipSVG.append("text")
+      .text(numberformat(d.gop_win) + "%")
+      .attr("y", 150)
+      .attr("x", 131.25)
+      .attr("fill", color(100))
+      .style("font-weight", "600")
+      .style("font-size", 20)
+      .attr("text-anchor", "middle")
+
+    tipSVG.append("text")
+      .text(numberformat(d.dem_win) + "%")
+      .attr("y", 150)
+      .attr("x", 43.75)
+      .attr("fill", color(0))
+      .style("font-weight", "600")
+      .style("font-size", 20)
+      .attr("text-anchor", "middle")
+
+
+
+  })
+  .on('mouseout',
+    function (d) {
+
+
+      tool_tip.hide()
+    });
 
   d3.json("https://projects.jhkforecasts.com/presidential_forecast/us-states.json", function (json) {
 
@@ -113,6 +235,8 @@ d3.csv("data.csv", function (data) {
         }
       }
     }
+
+    
 
     map.selectAll("path")
       .data(json.features)
