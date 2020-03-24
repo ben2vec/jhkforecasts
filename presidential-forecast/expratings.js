@@ -535,10 +535,10 @@ d3.csv("data.csv", jhk => {
             .append("th")
             
             .style("width", (d, i) => i == 0 ? "18%" : i == 1 ? "10%" : "10%")
-            .text(function (d) {
+            .append("a")
+            .attr("href", (d, i) => i > 1 ? exlinks[i-2] : "").text(function (d) {
                 return d
-            }).append("a")
-            .attr("href", (d, i) => i > 1 ? exlinks[i] : "")
+            })
 
         var tBody = table.append("tbody");
 
