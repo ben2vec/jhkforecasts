@@ -605,7 +605,7 @@ d3.csv("data.csv", jhk => {
             .attr("x2", 1000)
             .attr("stroke", "lightgrey")
 
-        var exname = ["JHK Forecasts", "Bitecofer", "Cook Political", "Inside Elections", "Politico", "Sabato's Crystal Ball","CNALYSIS"]
+        var exname = ["JHK Forecasts", "Bitecofer", "Cook Political", "Inside Elections", "Politico", "Sabato's Crystal Ball","CNalysis"]
         var exlinks = ["https://projects.jhkforecasts.com/presidential-forecast/", "http://cnu.edu/wasoncenter/2019/07/01-2020-election-forecast/", "https://cookpolitical.com/analysis/national/national-politics/introducing-cook-political-reports-2020-electoral-college", "https://insideelections.com/ratings/president", "https://www.politico.com/2020-election/race-forecasts-and-predictions/president/", "http://centerforpolitics.org/crystalball/2020-president/","https://www.cnalysiscom.website/forecasts/2020-president-governor-senate-house-ratings"]
 
         svg.selectAll("states")
