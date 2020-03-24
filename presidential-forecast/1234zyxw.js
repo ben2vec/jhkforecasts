@@ -322,7 +322,7 @@ function update(input) {
 						return {
 							state: d.state,
 							index: +d.pvi + current_us_poll_margin + economic_index / 2 + incumbency_adv / 2,
-							third: +d.third_index * national_third_party - economic_index / 2 - incumbency_adv / 2,
+							third: +d.third_index * national_third_party ,
 
 						}
 					})

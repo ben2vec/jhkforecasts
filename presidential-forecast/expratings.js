@@ -149,15 +149,15 @@ d3.csv("data.csv", jhk => {
             })
 
             var jhkev = [
-                d3.sum(jhkdata.filter(d => d.rating <= 5), d => d.ev),
-                d3.sum(jhkdata.filter(d => d.rating <= 15 && d.rating > 5), d => d.ev),
-                d3.sum(jhkdata.filter(d => d.rating <= 35 && d.rating > 15), d => d.ev),
-                d3.sum(jhkdata.filter(d => d.rating <= 45 && d.rating > 35), d => d.ev),
+                d3.sum(jhkdata.filter(d => d.rating <= 10), d => d.ev),
+                d3.sum(jhkdata.filter(d => d.rating <= 25 && d.rating > 10), d => d.ev),
+                d3.sum(jhkdata.filter(d => d.rating <= 40 && d.rating > 25), d => d.ev),
+                d3.sum(jhkdata.filter(d => d.rating <= 45 && d.rating > 40), d => d.ev),
                 d3.sum(jhkdata.filter(d => d.rating <= 55 && d.rating > 45), d => d.ev),
-                d3.sum(jhkdata.filter(d => d.rating <= 65 && d.rating > 55), d => d.ev),
-                d3.sum(jhkdata.filter(d => d.rating <= 85 && d.rating > 65), d => d.ev),
-                d3.sum(jhkdata.filter(d => d.rating <= 95 && d.rating > 85), d => d.ev),
-                d3.sum(jhkdata.filter(d => d.rating > 95), d => d.ev),
+                d3.sum(jhkdata.filter(d => d.rating <= 60 && d.rating > 55), d => d.ev),
+                d3.sum(jhkdata.filter(d => d.rating <= 75 && d.rating > 60), d => d.ev),
+                d3.sum(jhkdata.filter(d => d.rating <= 90 && d.rating > 75), d => d.ev),
+                d3.sum(jhkdata.filter(d => d.rating > 90), d => d.ev),
             ]
 
             var evcats = input == "jhk" ? jhkev : national[0].values
@@ -263,6 +263,7 @@ d3.csv("data.csv", jhk => {
                     .style("font-weight", "700")
                     .attr("dominant-baseline", "central")
 
+                var ratingspct = [">90%",">75%",">60%",">55%","<60%",">55%",">60%",">75%",">90%"]
                 map.selectAll("ratings")
                     .data(evcats)
                     .enter()
@@ -270,6 +271,31 @@ d3.csv("data.csv", jhk => {
                     .attr("x", 950)
                     .text(d => d)
                     .attr("y", (d, i) => 200 + i * 30)
+                    .style("font-family", "brandon-grotesque")
+                    .attr("font-size", "15")
+                    .attr("fill", "black")
+                    .attr("text-anchor", "start")
+                    .style("font-weight", "700")
+                    .attr("dominant-baseline", "central")
+
+                map.selectAll("ratings")
+                    .data(ratingspct)
+                    .enter()
+                    .append("text")
+                    .attr("x", 1000)
+                    .text(d => input =="jhk" ?d:"")
+                    .attr("y", (d, i) => 200 + i * 30)
+                    .style("font-family", "brandon-grotesque")
+                    .attr("font-size", "15")
+                    .attr("fill", "black")
+                    .attr("text-anchor", "start")
+                    .style("font-weight", "700")
+                    .attr("dominant-baseline", "central")
+
+                    map.append("text")
+                    .attr("x", 1000)
+                    .text(input == "jhk"?"Win %":"")
+                    .attr("y", (d, i) => 170)
                     .style("font-family", "brandon-grotesque")
                     .attr("font-size", "15")
                     .attr("fill", "black")
@@ -308,8 +334,8 @@ d3.csv("data.csv", jhk => {
                     .append("path")
                     .attr("class", "statesover")
                     .attr("d", path)
-                    .attr("stroke", d => d.properties.rating == "Tossup" ? "black" : "none")
-                    .attr("stroke-width", d => d.properties.rating == "Tossup" ? "1.5" : "0")
+                    .attr("stroke", d => input =="jhk"?d.properties.rating>45?d.properties.rating<55?"black":"none":"none": d.properties.rating == "Tossup" ? "black" : "none")
+                    .attr("stroke-width", d => 1.5)
                     .style("fill", "none")
                     .on("mouseover", function (d) {
 
