@@ -525,7 +525,7 @@ d3.csv("data.csv", jhk => {
         var table = d3.select("#table").append("table")
         var header = table.append("thead").append("tr")
 
-        var exname = ["State", "Electoral Votes", "JHK Forecasts", "Bitecofer/Niskanen", "Cook Political", "Inside Elections", "Politico", "Sabato's Crystal Ball", "CNalysis"]
+        var exname = ["State", "Electoral Votes", "JHK Forecasts", "Bitecofer/ Niskanen", "Cook Political", "Inside Elections", "Politico", "Sabato's Crystal Ball", "CNalysis"]
         var exlinks = ["https://projects.jhkforecasts.com/presidential-forecast/", "https://www.niskanencenter.org/bitecofer-post-primary-update/", "https://cookpolitical.com/analysis/national/national-politics/introducing-cook-political-reports-2020-electoral-college", "https://insideelections.com/ratings/president", "https://www.politico.com/2020-election/race-forecasts-and-predictions/president/", "http://centerforpolitics.org/crystalball/2020-president/", "https://www.cnalysiscom.website/forecasts/2020-president-governor-senate-house-ratings"]
 
         header
