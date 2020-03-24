@@ -29,7 +29,8 @@ function update(input) {
 	var sim_date = new Date(sim_year, sim_month - 1, sim_day)
 
 	var days_until_election = (election_date - sim_date) / time_scale
-	var variance = 0.0000004 * Math.pow(days_until_election, 3) - .00021 * Math.pow(days_until_election, 2) + 0.034 * days_until_election + 2.1
+	var variance = 0.0000004 * Math.pow(days_until_election, 3) - .00021 * Math.pow(days_until_election, 2) + 0.036 * days_until_election + 2.1
+	console.log(variance)
 	var exp = [
 		{ rating: "Tossup", margin: 0 },
 		{ rating: "Tilt R", margin: 3 },
@@ -93,7 +94,6 @@ function update(input) {
 				var states = data.map(d => {
 					return d.state
 				})
-				console.log(states)
 				var experts_ratings = data.map((d, i) => {
 					return {
 						state: d.state,
@@ -210,7 +210,6 @@ function update(input) {
 							})
 							ps.push(f)
 						}
-						console.log(poll_filtered)
 						var psflat = ps.flat()
 
 						var us_avg = d3.sum(psflat, d => d.margin_weight) / d3.sum(psflat, d => d.weight)
