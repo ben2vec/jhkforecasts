@@ -1,6 +1,6 @@
-var economic_index = 1
-var incumbency_adv = 2
-var national_third_party = 5
+var economic_index = 0
+var incumbency_adv = 3
+var national_third_party = 4.8
 var election_date = new Date(2020, 10, 3)
 var time_scale = 86400000
 var simulations = 50000
