@@ -85,126 +85,129 @@ d3.csv("data.csv", function (data) {
 
   var boxstates = [sd[28], sd[44], sd[20], sd[38], sd[6], sd[7], sd[19], sd[50]]
   map.append("rect")
-  .attr("x", 100)
-  .attr("y", 50)
-  .attr("width", 1000)
-  .attr("height", 1000)
-  .attr("fill", "white")
+    .attr("x", 100)
+    .attr("y", 50)
+    .attr("width", 1000)
+    .attr("height", 1000)
+    .attr("fill", "white")
 
-map.selectAll()
-  .data(boxstates)
-  .enter()
-  .append("rect")
-  .attr("x", 825)
-  .attr("y", (d, i) => 130 + 15 * i)
-  .attr("width", 30)
-  .attr("height", 15)
-  .attr("stroke", "white")
-  .attr("fill", d =>color(d.gop_win) )
-map.selectAll()
-  .data(boxstates)
-  .enter()
-  .append("text")
-  .text(d => d.label)
-  .attr("x", 840)
-  .attr("y", (d, i) => 137.5 + 15 * i)
-  .style("font-family", "source-code-pro")
-  .attr("font-size", "10")
-  .attr("fill", "black")
-  .attr("text-anchor", "middle")
-  .style("font-weight", "400")
-  .attr("dominant-baseline", "central")
-  
-map.selectAll()
-  .data(boxstates)
-  .enter()
-  .append("rect")
-  .attr("class", "statesover")
-  .attr("x", 825)
-  .attr("y", (d, i) => 130 + 15 * i)
-  .attr("width", 30)
-  .attr("height", 15)
-  .attr("fill", "none")
-  .on('mouseover', function (d) {
+  map.selectAll()
+    .data(boxstates)
+    .enter()
+    .append("rect")
+    .attr("x", 825)
+    .attr("y", (d, i) => 130 + 15 * i)
+    .attr("width", 30)
+    .attr("height", 15)
+    .attr("stroke", "white")
+    .attr("fill", d => color(d.gop_win))
 
+  map.selectAll()
+    .data(boxstates)
+    .enter()
+    .append("text")
+    .text(d => d.label)
+    .attr("x", 840)
+    .attr("y", (d, i) => 137.5 + 15 * i)
+    .style("font-family", "source-code-pro")
+    .attr("font-size", "10")
+    .attr("fill", "black")
+    .attr("text-anchor", "middle")
+    .style("font-weight", "400")
+    .attr("dominant-baseline", "central")
 
-    tool_tip.show();
-    var tipSVG = d3.select("#tipDiv")
-      .append("svg")
-      .attr("width", 175)
-      .attr("height", 175)
-      ;
-    tipSVG.append("rect")
-      .attr("y", 1.5)
-      .attr("x", 1.5)
-      .attr("width", 172)
-      .attr("height", 172)
-      .attr("rx", 8)
-      .attr("fill", "white")
-      .attr("stroke", "black")
-      .attr("stroke-width", 2)
+  map.selectAll()
+    .data(boxstates)
+    .enter()
+    .append("a")
+    .attr("href",d=>d.state)
+    .append("rect")
+    .attr("class", "statesover")
+    .attr("x", 825)
+    .attr("y", (d, i) => 130 + 15 * i)
+    .attr("width", 30)
+    .attr("height", 15)
+    .attr("fill", "none")
+    .on('mouseover', function (d) {
 
 
-
-    tipSVG.append("text")
-      .text(d.state)
-      .attr("y", 20)
-      .attr("x", 87.5)
-      .attr("fill", "#black")
-      .style("font-weight", "600")
-      .style("font-size", "20")
-      .attr("text-anchor", "middle")
-
-    tipSVG.append("text")
-      .text(d.electoral_votes + " Electoral Votes")
-      .attr("y", 40)
-      .attr("x", 87.5)
-      .attr("fill", "#black")
-      .style("font-weight", "400")
-      .style("font-size", "15")
-      .attr("text-anchor", "middle")
-
-    tipSVG.append("image")
-      .attr("xlink:href", d => "https://jhkforecasts.com/Trump-01.png")
-      .attr("x", 90)
-      .attr("y", 50)
-      .attr("width", 82)
-      .attr("height", 82)
-
-    tipSVG.append("image")
-      .attr("xlink:href", d => "https://jhkforecasts.com/Biden-01.png")
-      .attr("x", 3)
-      .attr("y", 50)
-      .attr("width", 82)
-      .attr("height", 82)
-
-    tipSVG.append("text")
-      .text(numberformat(d.gop_win) + "%")
-      .attr("y", 150)
-      .attr("x", 131.25)
-      .attr("fill", color(100))
-      .style("font-weight", "600")
-      .style("font-size", 20)
-      .attr("text-anchor", "middle")
-
-    tipSVG.append("text")
-      .text(numberformat(d.dem_win) + "%")
-      .attr("y", 150)
-      .attr("x", 43.75)
-      .attr("fill", color(0))
-      .style("font-weight", "600")
-      .style("font-size", 20)
-      .attr("text-anchor", "middle")
+      tool_tip.show();
+      var tipSVG = d3.select("#tipDiv")
+        .append("svg")
+        .attr("width", 175)
+        .attr("height", 175)
+        ;
+      tipSVG.append("rect")
+        .attr("y", 1.5)
+        .attr("x", 1.5)
+        .attr("width", 172)
+        .attr("height", 172)
+        .attr("rx", 8)
+        .attr("fill", "white")
+        .attr("stroke", "black")
+        .attr("stroke-width", 2)
 
 
 
-  })
-  .on('mouseout',
-    function (d) {
+      tipSVG.append("text")
+        .text(d.state)
+        .attr("y", 20)
+        .attr("x", 87.5)
+        .attr("fill", "#black")
+        .style("font-weight", "600")
+        .style("font-size", "20")
+        .attr("text-anchor", "middle")
+
+      tipSVG.append("text")
+        .text(d.electoral_votes + " Electoral Votes")
+        .attr("y", 40)
+        .attr("x", 87.5)
+        .attr("fill", "#black")
+        .style("font-weight", "400")
+        .style("font-size", "15")
+        .attr("text-anchor", "middle")
+
+      tipSVG.append("image")
+        .attr("xlink:href", d => "https://jhkforecasts.com/Trump-01.png")
+        .attr("x", 90)
+        .attr("y", 50)
+        .attr("width", 82)
+        .attr("height", 82)
+
+      tipSVG.append("image")
+        .attr("xlink:href", d => "https://jhkforecasts.com/Biden-01.png")
+        .attr("x", 3)
+        .attr("y", 50)
+        .attr("width", 82)
+        .attr("height", 82)
+
+      tipSVG.append("text")
+        .text(numberformat(d.gop_win) + "%")
+        .attr("y", 150)
+        .attr("x", 131.25)
+        .attr("fill", color(100))
+        .style("font-weight", "600")
+        .style("font-size", 20)
+        .attr("text-anchor", "middle")
+
+      tipSVG.append("text")
+        .text(numberformat(d.dem_win) + "%")
+        .attr("y", 150)
+        .attr("x", 43.75)
+        .attr("fill", color(0))
+        .style("font-weight", "600")
+        .style("font-size", 20)
+        .attr("text-anchor", "middle")
 
 
-      tool_tip.hide()
-    });
+
+    })
+    .on('mouseout',
+      function (d) {
+
+
+        tool_tip.hide()
+      });
 
   d3.json("https://projects.jhkforecasts.com/presidential_forecast/us-states.json", function (json) {
 
@@ -236,7 +239,7 @@ map.selectAll()
       }
     }
 
-    
+
 
     map.selectAll("path")
       .data(json.features)
@@ -429,7 +432,7 @@ map.selectAll()
 
     var time_data = data.filter(d => d.state == key_state)
 
-     var lol
+    var lol
     var data_length = time_data.filter(d => d.party == "gop").length
     var max_date = d3.max(time_data, d => d.forecast_date)
     var line_data = []
@@ -672,7 +675,7 @@ map.selectAll()
             .attr("x", x(d.date) + 10)
             .text((e, i) => i == 1 ? ("Biden " + onevalue(d[e]) + "%") : i == 0 ? "Trump " + onevalue(d[e]) + "%" : "Third " + onevalue(d[e]) + "%")
             .attr("y", e => d[e] == d["gop" + input] ? y(d["gop" + input]) > y(d["dem" + input]) ? y(d["gop" + input]) + 15 : y(d["gop" + input]) - 15 : d[e] == d["dem" + input] ? y(d["dem" + input]) > y(d["gop" + input]) ? y(d["dem" + input]) + 15 : y(d["dem" + input]) - 15 : y(d[e]) - 15)
-            .attr("text-anchor", (e, i)=>i == 2? "end":"start")
+            .attr("text-anchor", (e, i) => i == 2 ? "end" : "start")
             .attr("dominant-baseline", "middle")
 
           focus.selectAll(".lineHoverText")
@@ -681,7 +684,7 @@ map.selectAll()
             .text((e, i) => input == "ev" ? i == 1 ? ("Biden " + onevalue(d[e])) : i == 0 ? "Trump " + onevalue(d[e]) : "Third " + onevalue(d[e]) : i == 1 ? ("Biden " + onevalue(d[e]) + "%") : i == 0 ? "Trump " + onevalue(d[e]) + "%" : "Third " + onevalue(d[e]) + "%")
             .attr("fill", (e, i) => colors[i])
             .attr("y", e => d[e] == d["gop" + input] ? y(d["gop" + input]) > y(d["dem" + input]) ? y(d["gop" + input]) + 15 : y(d["gop" + input]) - 15 : d[e] == d["dem" + input] ? y(d["dem" + input]) > y(d["gop" + input]) ? y(d["dem" + input]) + 15 : y(d["dem" + input]) - 15 : y(d[e]) - 15)
-            .attr("text-anchor", (e, i)=>i == 2? "end":"start")
+            .attr("text-anchor", (e, i) => i == 2 ? "end" : "start")
             .attr("dominant-baseline", "middle")
         }
       }
@@ -1246,10 +1249,10 @@ map.selectAll()
         fdt.push(finaldt)
       }
       var min_stdev = d3.min(fdt, d => d.std) * .8
-      var highest_curve = jStat.normal.pdf(0, 0, min_stdev*.8)
+      var highest_curve = jStat.normal.pdf(0, 0, min_stdev * .8)
 
-      var tq = jStat.normal.inv(.01, 0, min_stdev )
-      var tp = jStat.normal.pdf(tq, 0, min_stdev )
+      var tq = jStat.normal.inv(.01, 0, min_stdev)
+      var tp = jStat.normal.pdf(tq, 0, min_stdev)
 
       fdt.sort((a, b) => b.tipping_point - a.tipping_point)
       var y3 = d3.scaleLinear()
@@ -1269,7 +1272,7 @@ map.selectAll()
           var dq = jStat.normal.inv(l / 100, fdt[k].dem_vote, fdt[k].std * .8)
           var dp = jStat.normal.pdf(dq, fdt[k].dem_vote, fdt[k].std * .8)
 
-         
+
           var gopvalues = {
             x: gq,
             y: -y3(gp) + k * 50 + 162,
