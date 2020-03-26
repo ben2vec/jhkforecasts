@@ -3,7 +3,7 @@ var incumbency_adv = 3
 var national_third_party = 4.8
 var election_date = new Date(2020, 10, 3)
 var time_scale = 86400000
-var simulations = 50000
+var simulations = 100000
 var timeformat = d3.timeFormat("%m/%d/%y")
 var updateformat = d3.timeFormat("%b. %d %Y %I:%M %p")
 var dataformat = d3.format(".3f")
@@ -29,7 +29,7 @@ function update(input) {
 	var sim_date = new Date(sim_year, sim_month - 1, sim_day)
 
 	var days_until_election = (election_date - sim_date) / time_scale
-	var variance = 0.0000004 * Math.pow(days_until_election, 3) - .00021 * Math.pow(days_until_election, 2) + 0.036 * days_until_election + 2.1
+	var variance = 0.0000004 * Math.pow(days_until_election, 3) - .00021 * Math.pow(days_until_election, 2) + 0.034 * days_until_election + 2.1
 	console.log(variance)
 	var exp = [
 		{ rating: "Tossup", margin: 0 },
@@ -188,7 +188,7 @@ function update(input) {
 							d.weight = d.n_adjusted * d.population_adj
 							d.sum = (d.dem_pct + d.gop_pct)
 							d.weight = Math.pow(d.weight, d.grade_value) * ((d.dem_pct + d.gop_pct) / 100)
-							d.weight = d.weight / (1 + (((run_date - d.date) / time_scale) / 20))
+							d.weight = d.weight / (1 + (((run_date - d.date) / time_scale) / 30))
 							d.dem_adj = (d.dem_pct - (d.bias / 2)) + (d.population == "lv" ? 0 : -.5)
 							d.gop_adj = (d.gop_pct + (d.bias / 2)) + (d.population == "lv" ? 0 : .5)
 							d.margin = d.gop_adj - d.dem_adj
