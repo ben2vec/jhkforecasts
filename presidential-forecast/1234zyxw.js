@@ -169,7 +169,7 @@ function update(input) {
 					var polls_new = polls_new.filter(d => d.gop == "Trump")
 					var us_polls = polls_new.filter(d => d.state == "US")
 					var polls_new = polls_new.filter(d => d.date > new Date(2019, 6, 1))
-					var polls_new = polls_new.filter(d => d.date < sim_date)
+					var polls_new = polls_new.filter(d => d.date <= sim_date)
 
 
 

@@ -7,6 +7,7 @@ California,55,-26.54,0.103765787,0.94,1.301041812,Solid D,Solid D,Solid D,Solid 
 Colorado,9,-2.97,0.020342882,1.07,1.444233859,Lean D,Likely D,Solid D,Solid D,Lean D,-11.1,Solid D
 Connecticut,7,-13.91,0.01203577,0.99,1.06628916,Solid D,Solid D,Solid D,Solid D,Solid D,-17.36,Solid D
 Delaware,3,-14.75,0.003247358,0.93,0.810619059,Solid D,Solid D,Solid D,Solid D,Solid D,-12.36,Solid D
+District of Columbia,3,-81,0.002277527,0.8,1.18179531,Solid D,Solid D,Solid D,Solid D,Solid D,-54.7708,Solid D
 Florida,29,4.59,0.068925799,1.03,0.619925944,Lean R,Tossup,Tossup,Tossup,Tossup,-0.36,Tilt R
 Georgia,16,8.65,0.03010722,0.9,0.527718158,Lean R,Lean R,Likely R,Tossup,Lean R,6.52,Likely R
 Hawaii,4,-38.11,0.003138503,1.07,1.239515808,Solid D,Solid D,Solid D,Solid D,Solid D,-39.26,Solid D
@@ -49,7 +50,6 @@ Washington,12,-13.98,0.024270407,1,1.507129231,Solid D,Solid D,Solid D,Solid D,S
 West Virginia,5,36.68,0.005227386,1.04,0.765063837,Solid R,Solid R,Solid R,Solid R,Solid R,40.72,Solid R
 Wisconsin,10,3.24,0.021776292,1.07,1.036797643,Tossup,Tossup,Tossup,Lean D,Tossup,-1.42,Tossup
 Wyoming,3,48.09,0.00187203,1.08,1.567561847,Solid R,Solid R,Solid R,Solid R,Solid R,42.16,Solid R
-District of Columbia,3,-81,0.002277527,0.8,1.18179531,Solid D,Solid D,Solid D,Solid D,Solid D,-54.7708,Solid D
 Maine-1,1,-17.15,0.002885279,1.13,1.222276158,Solid D,Solid D,,Solid D,Solid D,-20,Solid D
 Maine-2,1,6.35,0.002585921,1.13,1.417425437,Lean R,Likely R,,Tossup,Lean R,5.2,Lean R
 Nebraska-1,1,24.8,0.002065848,1.01,1.206093713,Solid R,Solid R,,Solid R,Solid R,24.8,Solid R
