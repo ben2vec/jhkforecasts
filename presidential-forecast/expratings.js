@@ -48,7 +48,7 @@ var ratings_colors = d3.scaleOrdinal()
 var numberformat = d3.format(".1%");
 var numberFormat = d3.format(".0%");
 
-d3.csv("http://www.leantossup.ca/US_Pres_2020/LT_Data.csv", leantoss => {
+d3.csv("https://www.leantossup.ca/US_Pres_2020/LT_Data.csv", leantoss => {
   
     d3.csv("data.csv", jhk => {
         console.log(leantoss)
