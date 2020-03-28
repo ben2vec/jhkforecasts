@@ -4,7 +4,7 @@ var map_labels = [{ "state": "Alabama", "label": "AL", "xValue": 637, "yValue": 
 var timeformat = d3.timeFormat("%b. %d")
 var wholeformat = d3.format(".0f")
 var numberformat = d3.format(".1f")
-var experts = ["cook", "bitecofer", "inside", "politico", "sabato", "jhk", "cnanalysis"]
+var experts = ["cook", "bitecofer", "inside", "politico", "sabato", "jhk", "cnanalysis", "leantoss"]
 var color = d3.scaleLinear()
     .domain([0, 50, 100])
     .range(["#0091FF", "white", "#FF6060"]);
@@ -16,15 +16,15 @@ var demscale = d3.scaleLinear()
     .domain([20, 80])
     .range(["white", "#0091FF"]);
 var experts_colors = [
-    { rating: "Solid D", color: color(-10), rating_num: -3, opacity: 1 },
-    { rating: "Likely D", color: color(10), rating_num: -2, opacity: 1 },
+    { rating: "Solid D", color: color(-5), rating_num: -3, opacity: 1 },
+    { rating: "Likely D", color: color(15), rating_num: -2, opacity: 1 },
     { rating: "Lean D", color: color(30), rating_num: -1, opacity: 1 },
-    { rating: "Tilt D", color: color(45), rating_num: -.5, opacity: 1 },
+    { rating: "Tilt D", color: color(40), rating_num: -.5, opacity: 1 },
     { rating: "Tossup", color: "white", rating_num: 0, opacity: 1 },
-    { rating: "Tilt R", color: color(55), rating_num: .5, opacity: 1 },
+    { rating: "Tilt R", color: color(60), rating_num: .5, opacity: 1 },
     { rating: "Lean R", color: color(70), rating_num: 1, opacity: 3 },
     { rating: "Likely R", color: color(85), rating_num: 2, opacity: 7 },
-    { rating: "Solid R", color: color(110), rating_num: 3, opacity: 1 },
+    { rating: "Solid R", color: color(105), rating_num: 3, opacity: 1 },
 ]
 var ratings = experts_colors.map(d => {
     return d.rating
@@ -49,7 +49,10 @@ var numberformat = d3.format(".1%");
 var numberFormat = d3.format(".0%");
 
 d3.csv("LT_Data.csv", leantoss => {
-  
+    var leantoss = leantoss.map((d, i) => {
+        return +d.gop_win
+    })
+
     d3.csv("data.csv", jhk => {
         console.log(leantoss)
         jhk.forEach((d, i) => {
@@ -79,6 +82,7 @@ d3.csv("LT_Data.csv", leantoss => {
                     politico: d.politico,
                     jhk: jhkforecasts[i],
                     cnanalysis: d.cnanalysis,
+                    leantoss: leantoss[i]
                 }
             })
 
@@ -148,11 +152,19 @@ d3.csv("LT_Data.csv", leantoss => {
             update(d3.select('#selectbox').property('value'));
             function update(input) {
                 var state = state_data.filter(d => d.expert == input)
+                console.log(state)
                 var national = national_cand.filter(d => d.expert == input)
                 var jhkdata = experts_rating.map((d, i) => {
                     return {
                         ev: d.ev,
                         rating: d.jhk
+                    }
+                })
+
+                var leantossdata = experts_rating.map((d, i) => {
+                    return {
+                        ev: d.ev,
+                        rating: d.leantoss
                     }
                 })
 
@@ -170,7 +182,19 @@ d3.csv("LT_Data.csv", leantoss => {
                     d3.sum(jhkdata.filter(d => d.rating > 90), d => d.ev),
                 ]
 
-                var evcats = input == "jhk" ? jhkev : national[0].values
+                var leantossev = [
+                    d3.sum(leantossdata.filter(d => d.rating <= 10), d => d.ev),
+                    d3.sum(leantossdata.filter(d => d.rating <= 25 && d.rating > 10), d => d.ev),
+                    d3.sum(leantossdata.filter(d => d.rating <= 40 && d.rating > 25), d => d.ev),
+                    d3.sum(leantossdata.filter(d => d.rating <= 45 && d.rating > 40), d => d.ev),
+                    d3.sum(leantossdata.filter(d => d.rating <= 55 && d.rating > 45), d => d.ev),
+                    d3.sum(leantossdata.filter(d => d.rating <= 60 && d.rating > 55), d => d.ev),
+                    d3.sum(leantossdata.filter(d => d.rating <= 75 && d.rating > 60), d => d.ev),
+                    d3.sum(leantossdata.filter(d => d.rating <= 90 && d.rating > 75), d => d.ev),
+                    d3.sum(leantossdata.filter(d => d.rating > 90), d => d.ev),
+                ]
+
+                var evcats = input == "jhk" ? jhkev : input == "leantoss" ? leantossev : national[0].values
                 var dem_ev = evcats.slice(0, 4)
                 var gop_ev = evcats.slice(5, 10)
 
@@ -221,7 +245,7 @@ d3.csv("LT_Data.csv", leantoss => {
                         .attr("width", 30)
                         .attr("height", 15)
                         .attr("stroke", "white")
-                        .attr("fill", d => input == "jhk" ? color(d.rating) : ratings_colors(d.rating))
+                        .attr("fill", d => input == "jhk"|| input == "leantoss" ? color(d.rating) : ratings_colors(d.rating))
                     map.selectAll()
                         .data(boxstates)
                         .enter()
@@ -284,7 +308,7 @@ d3.csv("LT_Data.csv", leantoss => {
 
 
                             tipSVG.append("text")
-                                .text(input == "jhk" ? d.rating > 50 ? "WIN:" + wholeformat(d.rating) + "%" : "WIN:" + wholeformat(100 - d.rating) + "%" : d.rating)
+                                .text(input == "jhk"|| input == "leantoss" ?  d.rating > 50 ? "WIN:" + wholeformat(d.rating) + "%" : "WIN:" + wholeformat(100 - d.rating) + "%" : d.rating)
                                 .attr("y", 160)
                                 .attr("x", 87.5)
                                 .attr("fill", "#black")
@@ -295,7 +319,7 @@ d3.csv("LT_Data.csv", leantoss => {
 
 
                             tipSVG.append("image")
-                                .attr("xlink:href", input == "jhk" ? d.rating > 50 ? "https://jhkforecasts.com/Trump-01.png" : "https://jhkforecasts.com/Biden-01.png" : d.rating_value == 0 ? "https://jhkforecasts.com/No%20one-01.png" : d.rating_value > 0 ? "https://jhkforecasts.com/Trump-01.png" : "https://jhkforecasts.com/Biden-01.png")
+                                .attr("xlink:href", input == "jhk"|| input == "leantoss" ? d.rating > 50 ? "https://jhkforecasts.com/Trump-01.png" : "https://jhkforecasts.com/Biden-01.png" : d.rating_value == 0 ? "https://jhkforecasts.com/No%20one-01.png" : d.rating_value > 0 ? "https://jhkforecasts.com/Trump-01.png" : "https://jhkforecasts.com/Biden-01.png")
                                 .attr("x", 45)
                                 .attr("y", 50)
                                 .attr("width", 90)
@@ -387,7 +411,7 @@ d3.csv("LT_Data.csv", leantoss => {
                         .enter()
                         .append("text")
                         .attr("x", 1000)
-                        .text(d => input == "jhk" ? d : "")
+                        .text(d => input == "jhk"|| input == "leantoss" ? d : "")
                         .attr("y", (d, i) => 200 + i * 30)
                         .style("font-family", "brandon-grotesque")
                         .attr("font-size", "15")
@@ -398,7 +422,7 @@ d3.csv("LT_Data.csv", leantoss => {
 
                     map.append("text")
                         .attr("x", 1000)
-                        .text(input == "jhk" ? "Win %" : "")
+                        .text(input == "jhk"|| input == "leantoss" ? "Win %" : "")
                         .attr("y", (d, i) => 170)
                         .style("font-family", "brandon-grotesque")
                         .attr("font-size", "15")
@@ -415,7 +439,7 @@ d3.csv("LT_Data.csv", leantoss => {
                         .attr("d", path)
                         .style("stroke", "white")
                         .style("stroke-width", 1)
-                        .style("fill", d => input == "jhk" ? color(d.properties.rating) : ratings_colors(d.properties.rating))
+                        .style("fill", d => input == "jhk"|| input == "leantoss" ? color(d.properties.rating) : ratings_colors(d.properties.rating))
                         .style("opacity", d => d.properties.opacity)
                         .attr("transform", "translate(-50,0)")
 
@@ -441,7 +465,7 @@ d3.csv("LT_Data.csv", leantoss => {
                         .append("path")
                         .attr("class", "statesover")
                         .attr("d", path)
-                        .attr("stroke", d => input == "jhk" ? d.properties.rating > 45 ? d.properties.rating < 55 ? "black" : "none" : "none" : d.properties.rating == "Tossup" ? "black" : "none")
+                        .attr("stroke", d => input == "jhk"|| input == "leantoss" ? d.properties.rating > 45 ? d.properties.rating < 55 ? "black" : "none" : "none" : d.properties.rating == "Tossup" ? "black" : "none")
                         .attr("stroke-width", d => 1.5)
                         .style("fill", "none")
                         .attr("transform", "translate(-50,0)")
@@ -484,7 +508,7 @@ d3.csv("LT_Data.csv", leantoss => {
 
 
                             tipSVG.append("text")
-                                .text(input == "jhk" ? d.properties.rating > 50 ? "WIN:" + wholeformat(d.properties.rating) + "%" : "WIN:" + wholeformat(100 - d.properties.rating) + "%" : d.properties.rating)
+                                .text(input == "jhk"|| input == "leantoss" ? d.properties.rating > 50 ? "WIN:" + wholeformat(d.properties.rating) + "%" : "WIN:" + wholeformat(100 - d.properties.rating) + "%" : d.properties.rating)
                                 .attr("y", 160)
                                 .attr("x", 87.5)
                                 .attr("fill", "#black")
@@ -495,7 +519,7 @@ d3.csv("LT_Data.csv", leantoss => {
 
 
                             tipSVG.append("image")
-                                .attr("xlink:href", input == "jhk" ? d.properties.rating > 50 ? "https://jhkforecasts.com/Trump-01.png" : "https://jhkforecasts.com/Biden-01.png" : d.properties.rating_value == 0 ? "https://jhkforecasts.com/No%20one-01.png" : d.properties.rating_value > 0 ? "https://jhkforecasts.com/Trump-01.png" : "https://jhkforecasts.com/Biden-01.png")
+                                .attr("xlink:href", input == "jhk"|| input == "leantoss" ? d.properties.rating > 50 ? "https://jhkforecasts.com/Trump-01.png" : "https://jhkforecasts.com/Biden-01.png" : d.properties.rating_value == 0 ? "https://jhkforecasts.com/No%20one-01.png" : d.properties.rating_value > 0 ? "https://jhkforecasts.com/Trump-01.png" : "https://jhkforecasts.com/Biden-01.png")
                                 .attr("x", 45)
                                 .attr("y", 50)
                                 .attr("width", 90)
@@ -521,15 +545,15 @@ d3.csv("LT_Data.csv", leantoss => {
 
 
 
-                myArray.push([d.state, d.ev, d.jhk, d.bitecofer, d.cook, d.inside, d.politico, d.sabato, d.cnanalysis]);
+                myArray.push([d.state, d.ev, d.jhk, d.bitecofer, d.cook, d.inside, d.politico, d.sabato, d.cnanalysis,d.leantoss]);
 
             })
 
             var table = d3.select("#table").append("table")
             var header = table.append("thead").append("tr")
 
-            var exname = ["State", "Electoral Votes", "JHK Forecasts", "Bitecofer/ Niskanen", "Cook Political", "Inside Elections", "Politico", "Sabato's Crystal Ball", "CNalysis"]
-            var exlinks = ["https://projects.jhkforecasts.com/presidential-forecast/", "https://www.niskanencenter.org/bitecofer-post-primary-update/", "https://cookpolitical.com/analysis/national/national-politics/introducing-cook-political-reports-2020-electoral-college", "https://insideelections.com/ratings/president", "https://www.politico.com/2020-election/race-forecasts-and-predictions/president/", "http://centerforpolitics.org/crystalball/2020-president/", "https://www.cnalysiscom.website/forecasts/2020-president-governor-senate-house-ratings"]
+            var exname = ["State", "Electoral Votes", "JHK Forecasts", "Bitecofer/ Niskanen", "Cook Political", "Inside Elections", "Politico", "Sabato's Crystal Ball", "CNalysis","Lean Tossup"]
+            var exlinks = ["https://projects.jhkforecasts.com/presidential-forecast/", "https://www.niskanencenter.org/bitecofer-post-primary-update/", "https://cookpolitical.com/analysis/national/national-politics/introducing-cook-political-reports-2020-electoral-college", "https://insideelections.com/ratings/president", "https://www.politico.com/2020-election/race-forecasts-and-predictions/president/", "http://centerforpolitics.org/crystalball/2020-president/", "https://www.cnalysiscom.website/forecasts/2020-president-governor-senate-house-ratings","https://leantossup.ca/us-presidency/"]
 
             header
                 .selectAll("th")
@@ -537,7 +561,7 @@ d3.csv("LT_Data.csv", leantoss => {
                 .enter()
                 .append("th")
 
-                .style("width", (d, i) => i == 0 ? "18%" : i == 1 ? "10%" : "10%")
+                .style("width", (d, i) => i == 0 ? "18%" : i == 1 ? "9%" : "9%")
                 .append("a")
                 .attr("href", (d, i) => i > 1 ? exlinks[i - 2] : "").text(function (d) {
                     return d
@@ -557,9 +581,8 @@ d3.csv("LT_Data.csv", leantoss => {
                 })
                 .enter()
                 .append("td")
-                .style("background-color", (d, i) => i == 2 ? color(d) : i > 2 ? colorsratings[ratings.indexOf(d)] : "none")
-                .style("opacity", (d, i) => i > 2 ? rating_opacity[ratings.indexOf(d)] : 1)
-                .text((d, i) => i == 2 ? wholeformat(Math.abs(d - 50) + 50) + "%" : i > 2 ? d.split(" ")[0] : d)
+                .style("background-color", (d, i) => i == 2 || i == 9 ? color(d) : i > 2 ? colorsratings[ratings.indexOf(d)] : "none")
+                .text((d, i) => i == 2|| i == 9 ? wholeformat(Math.abs(d - 50) + 50) + "%" : i > 2 ? d.split(" ")[0] : d)
 
 
 
