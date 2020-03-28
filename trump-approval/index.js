@@ -1,13 +1,15 @@
 var dateparse = d3.timeParse("%m/%d/%y")
 var today = new Date()
-var starting_day = new Date()
+var starting_day = new Date(2017,0,22)
 var tformat = d3.timeFormat("%m/%d/%Y")
 var dateparse = d3.timeParse("%m/%d/%y")
 var timeparse = d3.timeParse("%m/%d/%y %H:%M")
 var numberformat = d3.format(".1f")
 var updated_format = d3.timeFormat("%b. %d %Y %I:%M %p")
 var time_scale = 86400000
+var days = (today-starting_day)/time_scale
 
+console.log(days)
 
 var grade_scale = [
    { Grade: "A+", Value: 1.5 },
@@ -55,8 +57,11 @@ d3.csv("https://projects.fivethirtyeight.com/polls-page/president_approval_polls
       return d
    })
 
+   var res = []
 
-   console.log(data[0])
+   
+
+   console.log(data)
 
 
 
