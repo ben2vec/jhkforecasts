@@ -5,7 +5,7 @@ var category = ["gop", "dem", "third"]
 var cand_colors = d3.scaleOrdinal()
   .domain(category)
   .range(["#FF6060", "#0091FF", "#FFE130"])
-
+  var wholeformat = d3.format(".0f")
 var dateparse = d3.timeParse("%m/%d/%y")
 
 var tformat = d3.timeFormat("%m/%d/%Y")
@@ -889,7 +889,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
   var demwincol = "#0091FF"
   var thirdwincol = "#FFE130"
 
-  d3.csv("https://projects.jhkforecasts.com/presidential_forecast/pollster-ratings.csv", pollster_ratings => {
+  d3.csv("https://data.jhkforecasts.com/pollster-ratings.csv", pollster_ratings => {
 
     var pollster_names = pollster_ratings.map((d, i) => {
       return d.Pollster
@@ -961,12 +961,12 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
           population: datanew[i][0].population,
           grade: pollster_grade[pollster_names.indexOf(datanew[i][0].pollster)] == undefined ? "-" : pollster_grade[pollster_names.indexOf(datanew[i][0].pollster)],
           bias: pollster_bias[pollster_names.indexOf(datanew[i][0].pollster)] == undefined ? 0 : pollster_bias[pollster_names.indexOf(datanew[i][0].pollster)],
-          dem: datanew[i][0].answer,
-          gop: datanew[i][1].answer,
-          dem_pct: +datanew[i][0].pct,
-          gop_pct: +datanew[i][1].pct,
+          dem: wholeformat(datanew[i][0].answer),
+          gop: wholeformat(datanew[i][1].answer),
+          dem_pct: wholeformat(+datanew[i][0].pct),
+          gop_pct: wholeformat(+datanew[i][1].pct),
           poll_index: datanew[i][0].state == "" ? "US" + datanew[i][0].pollster : datanew[i][0].state + datanew[i][0].pollster,
-          margin: +datanew[i][0].pct - +datanew[i][1].pct
+          margin: wholeformat(+datanew[i][1].pct) - wholeformat(+datanew[i][0].pct)
         }
       })
       var data_new = data_new.filter(d => d.gop == "Trump")
@@ -1161,7 +1161,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
           .text(d => d.margin == 0 ? "Even" : d.margin > 0 ? "Biden +" + pollformat(d.margin) : "Trump +" + pollformat(Math.abs(d.margin)))
           .attr("y", (d, i) => 40 + i * 40)
           .attr("x", (d, i) => 950)
-          .attr("fill", d => d.margin == 0 ? "black" : d.margin > 0 ? demwincol : gopwincol)
+          .attr("fill", d => d.margin == 0 ? "black" : d.margin >= 0 ? demwincol : gopwincol)
           .style("font-weight", "600")
           .style("font-size", 15)
           .attr("text-anchor", "middle")

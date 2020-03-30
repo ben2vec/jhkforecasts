@@ -1,4 +1,5 @@
 var colors = ["#FF0660", "#0091FF", "#FFE130"]
+var wholeformat = d3.format(".0f")
 
 var category = ["gop", "dem", "third"]
 
@@ -929,7 +930,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
   var demwincol = "#0091FF"
   var thirdwincol = "#FFE130"
 
-  d3.csv("https://projects.jhkforecasts.com/presidential_forecast/pollster-ratings.csv", pollster_ratings => {
+  d3.csv("https://data.jhkforecasts.com/pollster-ratings.csv", pollster_ratings => {
 
     var pollster_names = pollster_ratings.map((d, i) => {
       return d.Pollster
@@ -1004,7 +1005,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
           dem_pct: +datanew[i][0].pct,
           gop_pct: +datanew[i][1].pct,
           poll_index: datanew[i][0].state == "" ? "US" + datanew[i][0].pollster : datanew[i][0].state + datanew[i][0].pollster,
-          margin: +datanew[i][0].pct - +datanew[i][1].pct
+          margin: wholeformat(+datanew[i][0].pct) - wholeformat(+datanew[i][1].pct)
         }
       })
       var data_new = data_new.filter(d => d.gop == "Trump")
@@ -1156,7 +1157,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
           .data(finaldata)
           .enter()
           .append("text")
-          .text(d => d.dem_pct)
+          .text(d => wholeformat(d.dem_pct))
           .attr("y", (d, i) => 40 + i * 40)
           .attr("x", (d, i) => 650)
           .attr("fill", "black")
@@ -1169,7 +1170,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
           .data(finaldata)
           .enter()
           .append("text")
-          .text(d => pollformat(d.gop_pct))
+          .text(d => wholeformat(d.gop_pct))
           .attr("y", (d, i) => 40 + i * 40)
           .attr("x", (d, i) => 750)
           .attr("fill", "black")
