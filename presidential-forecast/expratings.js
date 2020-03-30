@@ -719,7 +719,7 @@ d3.csv("https://data.jhkforecasts.com/2020-LT-pres.csv", leantoss => {
                 .on("change", function () {
                     this.value == "all"?d3.select("#new").style("display","none") && d3.select("#ex").style("display","none")&&d3.select("#all").style("display","block"):
                     this.value == "new"?d3.select("#new").style("display","block") && d3.select("#ex").style("display","none")&&d3.select("#all").style("display","none"):
-                    d3.select("#new").style("display","none") && d3.select("#ex").style("display","block")&&d3.select("#all").style("display","non")
+                    d3.select("#new").style("display","none") && d3.select("#ex").style("display","block")&&d3.select("#all").style("display","none")
 
                 })
 
