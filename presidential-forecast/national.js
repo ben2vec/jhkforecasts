@@ -425,8 +425,8 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
 
     var dateparse = d3.timeParse("%m/%d/%y")
     var margin = { top: 20, right: 40, bottom: 20, left: 20 }
-    var width = 1100 - margin.left - margin.right
-    var height = 450 - margin.top - margin.bottom
+    var width = 1200 - margin.left - margin.right
+    var height = 550 - margin.top - margin.bottom
     var axisPad = 12
 
     var time_data = data.filter(d => d.state == key_state)
@@ -461,7 +461,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
       onevalue = d3.format(".1f")
 
     var time = d3.select("#time").append("svg")
-      .attr("viewBox", "0 0 1100 450")
+      .attr("viewBox", "0 0 1200 550")
       .append('g')
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
@@ -486,7 +486,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
     time.append("g")
       .attr("class", "x-axis")
       .attr("transform", "translate(0," + (height - margin.bottom) + ")")
-      .call(d3.axisBottom(x).tickSize(-370).ticks(5)
+      .call(d3.axisBottom(x).tickSize(-470).ticks(5)
         .tickFormat(d3.timeFormat("%b")))
       .call(g => {
         var years = x.ticks(d3.timeYear.every(1))
