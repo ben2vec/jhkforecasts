@@ -48,6 +48,7 @@
 			position: sticky;
 			top: 0;
 			border-bottom: 2px;
+			padding:5px;
 		}
 
 		td {
@@ -61,8 +62,9 @@
 			color: black;
 			font-weight: 700;
 		}
+
 		table {
-			width:100%
+			width: 100%
 		}
 	</style>
 	<script data-ad-client="ca-pub-8025120308040073" async
@@ -412,13 +414,17 @@
 
 	<select style="margin-left: 35%;width:30%;margin-top: 0px;" class="selectbox" id="selectbox">
 		<option value="jhk">JHK Forecasts</option>
-		<option value="bitecofer">Bitecofer/Niskanen</option>
-		<option value="sabato">Sabato's Crystal Ball</option>
-		<option value="inside">Inside Elections</option>
-		<option value="politico">Politico</option>
-		<option value="cnanalysis">CNalysis</option>
-		<option value="cook">Cook Political Report</option>
-		<option value="leantoss">Lean Tossup</option>
+		<optgroup label="Experts">
+			<option value="cook">Cook Political Report</option>
+			<option value="sabato">Sabato's Crystal Ball</option>
+			<option value="inside">Inside Elections</option>
+			<option value="politico">Politico</option>
+		</optgroup>
+		<optgroup label="Newcomers">
+			<option value="bitecofer">Bitecofer/Niskanen</option>
+			<option value="cnalysis">CNalysis</option>
+			<option value="leantoss">Lean Tossup</option>
+		</optgroup>
 	</select>
 	<div style="margin-top: 10px" id="usmap"></div>
 	<div style="text-align:center">
@@ -429,8 +435,15 @@
 			(adsbygoogle = window.adsbygoogle || []).push({});
 		</script>
 	</div>
+	<select style="margin-left: 35%;width:30%;margin-top: 0px;" class="selectbox" id="selectbox2">
+		<option value="ex">Experts</option>
+		<option value="new">Newcomers</option>
+		<option value="all">ALL</option>
+	</select>
 	<h1 style="margin-left: 2%;font-weight: 900;">Experts' Rating Table </h1>
-	<div id="table"></div>
+	<div id="all"></div>
+	<div id="ex"></div>
+	<div id="new"></div>
 	<hr>
 	<div style="text-align:center">
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

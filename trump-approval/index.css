@@ -1,35 +1,35 @@
  h1 {
-   font-family: source-code-pro, monospace;
+   font-family: brandon-grotesque, monospace;
    font-weight: inherit;
    font-style: inherit;
  }
 
  h2 {
-   font-family: source-code-pro, monospace;
+   font-family: brandon-grotesque, monospace;
    font-weight: inherit;
    font-style: inherit;
  }
 
  h3 {
-   font-family: source-code-pro, monospace;
+   font-family: brandon-grotesque, monospace;
    font-weight: inherit;
    font-style: inherit;
  }
 
  h4 {
-   font-family: source-code-pro, monospace;
+   font-family: brandon-grotesque, monospace;
    font-weight: inherit;
    font-style: inherit;
  }
 
  h5 {
-   font-family: source-code-pro, monospace;
+   font-family: brandon-grotesque, monospace;
    font-weight: in;
    font-style: inherit;
  }
 
  p {
-   font-family: source-code-pro, monospace;
+   font-family: brandon-grotesque, monospace;
    font-weight: inherit;
    font-style: inherit;
  }
@@ -47,7 +47,7 @@
  }
 
  text {
-   font-family: source-code-pro, monospace;
+   font-family: brandon-grotesque, monospace;
  }
 
  .axis path, .axis line {
@@ -77,17 +77,17 @@
  .header {
    margin-top: 60px;
    text-align: inherit;
-   font-family: source-code-pro, monospace;
+   font-family: brandon-grotesque, monospace;
    font-weight: inherit;
  }
 
  .dotButtons {
-   font-family: source-code-pro, monospace;
+   font-family: brandon-grotesque, monospace;
    font-weight: 500;
  }
 
  .selectbox {
-   font-family: source-code-pro, monospace;
+   font-family: brandon-grotesque, monospace;
    font-weight: 700;
    font-size: 2vw;
    text-align: center;
@@ -96,7 +96,7 @@
 
  input {
    margin-right: 10px;
-   font-family: source-code-pro, monospace;
+   font-family: brandon-grotesque, monospace;
    font-weight: 500;
    font-size: 10;
  }
@@ -121,7 +121,7 @@
    color: black;
    padding: 10px 10px;
    font-size: 16px;
-   font-family: source-code-pro;
+   font-family: brandon-grotesque;
    border-radius: 10px;
    cursor: pointer;
    ;
@@ -139,7 +139,7 @@
 
  .d3-tip {
    line-height: 1;
-   font-family: source-code-pro, monospace;
+   font-family: brandon-grotesque, monospace;
    padding: 0px;
    background: none;
    border-radius: 8px;
@@ -226,7 +226,7 @@
    border: none;
    color: white;
    padding: 2px 5px;
-   font-family: source-code-pro;
+   font-family: brandon-grotesque;
    font-weight: 800;
    border-radius: 10px;
    border: #ddd solid 2pt;

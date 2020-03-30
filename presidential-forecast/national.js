@@ -44,7 +44,7 @@ var tool_tip = d3.tip()
 map.call(tool_tip);
 
 
-d3.csv("data.csv", function (data) {
+d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
 
   var updated = data[data.length - 1].experts_weight
   data.forEach((d, i) => {

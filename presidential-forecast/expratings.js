@@ -1,10 +1,64 @@
-var candidates = ["Biden", "Sanders"]
+
+var forecasters = [
+    {
+        "forecast": "JHK Forecasts",
+        "link": "https://projects.jhkforecasts.com/presidential-forecast/",
+        "type": "",
+        "shorthand": "jhk"
+    },
+    {
+        "forecast": "Bitecofer/ Niskanen",
+        "link": "https://www.niskanencenter.org/bitecofer-post-primary-update/",
+        "type": "newcomer",
+        "shorthand": "bitecofer"
+    },
+    {
+        "forecast": "Cook Political",
+        "link": "https://cookpolitical.com/analysis/national/national-politics/introducing-cook-political-reports-2020-electoral-college",
+        "type": "expert",
+        "shorthand": "cook"
+    },
+    {
+        "forecast": "Inside Elections",
+        "link": "https://insideelections.com/ratings/president",
+        "type": "expert",
+        "shorthand": "inside"
+    },
+    {
+        "forecast": "Politico",
+        "link": "https://www.politico.com/2020-election/race-forecasts-and-predictions/president/",
+        "type": "expert",
+        "shorthand": "politico"
+    },
+    {
+        "forecast": "Sabato's Crystal Ball",
+        "link": "http://centerforpolitics.org/crystalball/2020-president/",
+        "type": "expert",
+        "shorthand": "sabato"
+    },
+    {
+        "forecast": "CNalysis",
+        "link": "https://www.cnalysiscom.website/forecasts/2020-president-governor-senate-house-ratings",
+        "type": "newcomer",
+        "shorthand": "cnalysis"
+    },
+    {
+        "forecast": "Lean Tossup",
+        "link": "https://leantossup.ca/us-presidency/",
+        "type": "newcomer",
+        "shorthand": "leantoss"
+    }
+]
+var expert = forecasters.filter(d => d.type == "expert")
+expert.unshift(forecasters[0])
+var newcomer = forecasters.filter(d => d.type == "newcomer")
+newcomer.unshift(forecasters[0])
 var timeparse = d3.timeParse("%m/%d/%y")
 var map_labels = [{ "state": "Alabama", "label": "AL", "xValue": 637, "yValue": 338.6934 }, { "state": "Alaska", "label": "AK", "xValue": 245, "yValue": 400 }, { "state": "Arizona", "label": "AZ", "xValue": 315, "yValue": 306.5801 }, { "state": "Arkansas", "label": "AR", "xValue": 560, "yValue": 315.6387 }, { "state": "California", "label": "CA", "xValue": 223, "yValue": 253.9219 }, { "state": "Colorado", "label": "CO", "xValue": 400, "yValue": 245.5645 }, { "state": "Connecticut", "label": "CT", "xValue": -1000, "yValue": -1000 }, { "state": "Delaware", "label": "DE", "xValue": -1000, "yValue": -1000 }, { "state": "District of Columbia", "label": "DC", "xValue": -1000, "yValue": -1000 }, { "state": "Florida", "label": "FL", "xValue": 714, "yValue": 397.8154 }, { "state": "Georgia", "label": "GA", "xValue": 680.0117, "yValue": 335.2354 }, { "state": "Hawaii", "label": "HI", "xValue": 380, "yValue": 465 }, { "state": "Idaho", "label": "ID", "xValue": 310.1851, "yValue": 155 }, { "state": "Illinois", "label": "IL", "xValue": 596.6602, "yValue": 231.2954 }, { "state": "Indiana", "label": "IN", "xValue": 633.4111, "yValue": 228.4214 }, { "state": "Iowa", "label": "IA", "xValue": 545.8457, "yValue": 202.6782 }, { "state": "Kansas", "label": "KS", "xValue": 487, "yValue": 259.1592 }, { "state": "Kentucky", "label": "KY", "xValue": 655.1484, "yValue": 264.9658 }, { "state": "Louisiana", "label": "LA", "xValue": 561.4404, "yValue": 369.8135 }, { "state": "Maine", "label": "ME", "xValue": 807.3105, "yValue": 109.855 }, { "state": "Maryland", "label": "MD", "xValue": -1000, "yValue": -1000 }, { "state": "Massachusetts", "label": "MA", "xValue": -1000, "yValue": -1000 }, { "state": "Michigan", "label": "MI", "xValue": 645.6465, "yValue": 181.3647 }, { "state": "Minnesota", "label": "MN", "xValue": 530.8594, "yValue": 141.5874 }, { "state": "Mississippi", "label": "MS", "xValue": 598.6016, "yValue": 342.1514 }, { "state": "Missouri", "label": "MO", "xValue": 557, "yValue": 261.123 }, { "state": "Montana", "label": "MT", "xValue": 370.0981, "yValue": 112.7705 }, { "state": "Nebraska", "label": "NE", "xValue": 473.8364, "yValue": 210.0527 }, { "state": "Nevada", "label": "NV", "xValue": 267.8765, "yValue": 219.0957 }, { "state": "New Hampshire", "label": "NH", "xValue": -1000, "yValue": -1000 }, { "state": "New Jersey", "label": "NJ", "xValue": 785, "yValue": 210 }, { "state": "New Mexico", "label": "NM", "xValue": 385.3774, "yValue": 314.1035 }, { "state": "New York", "label": "NY", "xValue": 753.5781, "yValue": 163.2588 }, { "state": "North Carolina", "label": "NC", "xValue": 728.6084, "yValue": 284.5029 }, { "state": "North Dakota", "label": "ND", "xValue": 467.0742, "yValue": 117.3823 }, { "state": "Ohio", "label": "OH", "xValue": 670.7197, "yValue": 219.4883 }, { "state": "Oklahoma", "label": "OK", "xValue": 500.1963, "yValue": 306.418 }, { "state": "Oregon", "label": "OR", "xValue": 240.2783, "yValue": 139.5654 }, { "state": "Pennsylvania", "label": "PA", "xValue": 730.3535, "yValue": 200.856 }, { "state": "Rhode Island", "label": "RI", "xValue": -1000, "yValue": -1000 }, { "state": "South Carolina", "label": "SC", "xValue": 712.4395, "yValue": 315.6387 }, { "state": "South Dakota", "label": "SD", "xValue": 468.0742, "yValue": 163.5166 }, { "state": "Tennessee", "label": "TN", "xValue": 640.8594, "yValue": 294.8193 }, { "state": "Texas", "label": "TX", "xValue": 480.9902, "yValue": 374.2861 }, { "state": "Utah", "label": "UT", "xValue": 330.1084, "yValue": 234.978 }, { "state": "Vermont", "label": "VT", "xValue": -1000, "yValue": -1000 }, { "state": "Virginia", "label": "VA", "xValue": 731.0264, "yValue": 252.7842 }, { "state": "Washington", "label": "WA", "xValue": 256.9365, "yValue": 88.0762 }, { "state": "West Virginia", "label": "WV", "xValue": 701, "yValue": 243 }, { "state": "Wisconsin", "label": "WI", "xValue": 585.2529, "yValue": 163.2588 }, { "state": "Wyoming", "label": "WY", "xValue": 385.9287, "yValue": 179.6255 }]
 var timeformat = d3.timeFormat("%b. %d")
 var wholeformat = d3.format(".0f")
 var numberformat = d3.format(".1f")
-var experts = ["cook", "bitecofer", "inside", "politico", "sabato", "jhk", "cnanalysis", "leantoss"]
+var forecasts = forecasters.map(d => { return d.shorthand })
 var color = d3.scaleLinear()
     .domain([0, 50, 100])
     .range(["#0091FF", "white", "#FF6060"]);
@@ -15,7 +69,7 @@ var gopscale = d3.scaleLinear()
 var demscale = d3.scaleLinear()
     .domain([20, 80])
     .range(["white", "#0091FF"]);
-var experts_colors = [
+var ratings_colors = [
     { rating: "Solid D", color: color(-5), rating_num: -3, opacity: 1 },
     { rating: "Likely D", color: color(15), rating_num: -2, opacity: 1 },
     { rating: "Lean D", color: color(30), rating_num: -1, opacity: 1 },
@@ -26,18 +80,18 @@ var experts_colors = [
     { rating: "Likely R", color: color(85), rating_num: 2, opacity: 7 },
     { rating: "Solid R", color: color(105), rating_num: 3, opacity: 1 },
 ]
-var ratings = experts_colors.map(d => {
+var ratings = ratings_colors.map(d => {
     return d.rating
 })
 
-var colorsratings = experts_colors.map(d => {
+var colorsratings = ratings_colors.map(d => {
     return d.color
 })
-var rating_value = experts_colors.map(d => {
+var rating_value = ratings_colors.map(d => {
     return d.rating_num
 })
 
-var rating_opacity = experts_colors.map(d => {
+var rating_opacity = ratings_colors.map(d => {
     return d.opacity
 })
 
@@ -48,15 +102,13 @@ var ratings_colors = d3.scaleOrdinal()
 var numberformat = d3.format(".1%");
 var numberFormat = d3.format(".0%");
 
-d3.csv("LT_Data.csv", leantoss => {
+d3.csv("https://data.jhkforecasts.com/2020-LT-pres.csv", leantoss => {
     var leantoss = leantoss.map((d, i) => {
         return +d.gop_win
     })
 
-    d3.csv("data.csv", jhk => {
-        console.log(leantoss)
+    d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", jhk => {
         jhk.forEach((d, i) => {
-            d.forecast_date = timeparse(d.forecast_date)
             d.win = +d.win
             return d
         })
@@ -68,9 +120,9 @@ d3.csv("LT_Data.csv", leantoss => {
         })
 
 
-        d3.csv("simdata.csv", data => {
+        d3.csv("https://data.jhkforecasts.com/2020-pres-input.csv", data => {
 
-            var experts_rating = data.map((d, i) => {
+            var forecasts_rating = data.map((d, i) => {
                 return {
                     state: d.state,
                     ev: +d.ev,
@@ -81,30 +133,30 @@ d3.csv("LT_Data.csv", leantoss => {
                     bitecofer: d.bitecofer,
                     politico: d.politico,
                     jhk: jhkforecasts[i],
-                    cnanalysis: d.cnanalysis,
+                    cnalysis: d.cnanalysis,
                     leantoss: leantoss[i]
                 }
             })
 
-            var sd2 = experts_rating
+            var sd2 = forecasts_rating
             var ratings_nested = []
-            var experts_ev = []
-            for (let j = 0; j < experts.length; j++) {
+            var forecasts_ev = []
+            for (let j = 0; j < forecasts.length; j++) {
                 var datas = sd2.map((d, i) => {
                     return {
                         state: d.state,
-                        expert: experts[j],
+                        expert: forecasts[j],
                         ev: d.ev,
                         pvi: d.pvi,
-                        rating: d[experts[j]],
-                        rating_value: rating_value[ratings.indexOf(d[experts[j]])],
-                        opacity: rating_opacity[ratings.indexOf(d[experts[j]])]
+                        rating: d[forecasts[j]],
+                        rating_value: rating_value[ratings.indexOf(d[forecasts[j]])],
+                        opacity: rating_opacity[ratings.indexOf(d[forecasts[j]])]
 
                     }
                 })
 
                 var expev = {
-                    expert: experts[j],
+                    expert: forecasts[j],
                     values:
                         [d3.sum(datas.filter(d => d.rating == "Solid D"), d => d.ev),
                         d3.sum(datas.filter(d => d.rating == "Likely D"), d => d.ev),
@@ -121,11 +173,11 @@ d3.csv("LT_Data.csv", leantoss => {
                     d.label = map_labels[i].label
                 })
 
-                experts_ev.push(expev)
+                forecasts_ev.push(expev)
                 ratings_nested.push(dta)
             }
             var state_cand = ratings_nested.flat()
-            var national_cand = experts_ev.flat()
+            var national_cand = forecasts_ev.flat()
             var map = d3.select("#usmap")
                 .append("svg")
                 .attr("viewBox", '75 50 970 450');
@@ -152,16 +204,15 @@ d3.csv("LT_Data.csv", leantoss => {
             update(d3.select('#selectbox').property('value'));
             function update(input) {
                 var state = state_data.filter(d => d.expert == input)
-                console.log(state)
                 var national = national_cand.filter(d => d.expert == input)
-                var jhkdata = experts_rating.map((d, i) => {
+                var jhkdata = forecasts_rating.map((d, i) => {
                     return {
                         ev: d.ev,
                         rating: d.jhk
                     }
                 })
 
-                var leantossdata = experts_rating.map((d, i) => {
+                var leantossdata = forecasts_rating.map((d, i) => {
                     return {
                         ev: d.ev,
                         rating: d.leantoss
@@ -169,7 +220,6 @@ d3.csv("LT_Data.csv", leantoss => {
                 })
 
                 var boxstates = [state[29], state[45], state[21], state[39], state[6], state[7], state[20], state[8]]
-                console.log(boxstates)
                 var jhkev = [
                     d3.sum(jhkdata.filter(d => d.rating <= 10), d => d.ev),
                     d3.sum(jhkdata.filter(d => d.rating <= 25 && d.rating > 10), d => d.ev),
@@ -245,7 +295,7 @@ d3.csv("LT_Data.csv", leantoss => {
                         .attr("width", 30)
                         .attr("height", 15)
                         .attr("stroke", "white")
-                        .attr("fill", d => input == "jhk"|| input == "leantoss" ? color(d.rating) : ratings_colors(d.rating))
+                        .attr("fill", d => input == "jhk" || input == "leantoss" ? color(d.rating) : ratings_colors(d.rating))
                     map.selectAll()
                         .data(boxstates)
                         .enter()
@@ -308,7 +358,7 @@ d3.csv("LT_Data.csv", leantoss => {
 
 
                             tipSVG.append("text")
-                                .text(input == "jhk"|| input == "leantoss" ?  d.rating > 50 ? "WIN:" + wholeformat(d.rating) + "%" : "WIN:" + wholeformat(100 - d.rating) + "%" : d.rating)
+                                .text(typeof d.rating == "number" ? d.rating > 50 ? "WIN:" + wholeformat(d.rating) + "%" : "WIN:" + wholeformat(100 - d.rating) + "%" : d.rating)
                                 .attr("y", 160)
                                 .attr("x", 87.5)
                                 .attr("fill", "#black")
@@ -319,7 +369,7 @@ d3.csv("LT_Data.csv", leantoss => {
 
 
                             tipSVG.append("image")
-                                .attr("xlink:href", input == "jhk"|| input == "leantoss" ? d.rating > 50 ? "https://jhkforecasts.com/Trump-01.png" : "https://jhkforecasts.com/Biden-01.png" : d.rating_value == 0 ? "https://jhkforecasts.com/No%20one-01.png" : d.rating_value > 0 ? "https://jhkforecasts.com/Trump-01.png" : "https://jhkforecasts.com/Biden-01.png")
+                                .attr("xlink:href", typeof d.rating == "number" ? d.rating > 50 ? "https://jhkforecasts.com/Trump-01.png" : "https://jhkforecasts.com/Biden-01.png" : d.rating_value == 0 ? "https://jhkforecasts.com/No%20one-01.png" : d.rating_value > 0 ? "https://jhkforecasts.com/Trump-01.png" : "https://jhkforecasts.com/Biden-01.png")
                                 .attr("x", 45)
                                 .attr("y", 50)
                                 .attr("width", 90)
@@ -411,7 +461,7 @@ d3.csv("LT_Data.csv", leantoss => {
                         .enter()
                         .append("text")
                         .attr("x", 1000)
-                        .text(d => input == "jhk"|| input == "leantoss" ? d : "")
+                        .text(d => typeof json.features[0].properties.rating == "number" ? d : "")
                         .attr("y", (d, i) => 200 + i * 30)
                         .style("font-family", "brandon-grotesque")
                         .attr("font-size", "15")
@@ -422,7 +472,7 @@ d3.csv("LT_Data.csv", leantoss => {
 
                     map.append("text")
                         .attr("x", 1000)
-                        .text(input == "jhk"|| input == "leantoss" ? "Win %" : "")
+                        .text(typeof json.features[0].properties.rating == "number" ? "Win %" : "")
                         .attr("y", (d, i) => 170)
                         .style("font-family", "brandon-grotesque")
                         .attr("font-size", "15")
@@ -439,7 +489,7 @@ d3.csv("LT_Data.csv", leantoss => {
                         .attr("d", path)
                         .style("stroke", "white")
                         .style("stroke-width", 1)
-                        .style("fill", d => input == "jhk"|| input == "leantoss" ? color(d.properties.rating) : ratings_colors(d.properties.rating))
+                        .style("fill", d => typeof d.properties.rating == "number" ? color(d.properties.rating) : ratings_colors(d.properties.rating))
                         .style("opacity", d => d.properties.opacity)
                         .attr("transform", "translate(-50,0)")
 
@@ -465,7 +515,7 @@ d3.csv("LT_Data.csv", leantoss => {
                         .append("path")
                         .attr("class", "statesover")
                         .attr("d", path)
-                        .attr("stroke", d => input == "jhk"|| input == "leantoss" ? d.properties.rating > 45 ? d.properties.rating < 55 ? "black" : "none" : "none" : d.properties.rating == "Tossup" ? "black" : "none")
+                        .attr("stroke", d => typeof d.properties.rating == "number" ? d.properties.rating > 45 ? d.properties.rating < 55 ? "black" : "none" : "none" : d.properties.rating == "Tossup" ? "black" : "none")
                         .attr("stroke-width", d => 1.5)
                         .style("fill", "none")
                         .attr("transform", "translate(-50,0)")
@@ -508,7 +558,7 @@ d3.csv("LT_Data.csv", leantoss => {
 
 
                             tipSVG.append("text")
-                                .text(input == "jhk"|| input == "leantoss" ? d.properties.rating > 50 ? "WIN:" + wholeformat(d.properties.rating) + "%" : "WIN:" + wholeformat(100 - d.properties.rating) + "%" : d.properties.rating)
+                                .text(typeof d.properties.rating == "number" ? d.properties.rating > 50 ? "WIN:" + wholeformat(d.properties.rating) + "%" : "WIN:" + wholeformat(100 - d.properties.rating) + "%" : d.properties.rating)
                                 .attr("y", 160)
                                 .attr("x", 87.5)
                                 .attr("fill", "#black")
@@ -519,7 +569,7 @@ d3.csv("LT_Data.csv", leantoss => {
 
 
                             tipSVG.append("image")
-                                .attr("xlink:href", input == "jhk"|| input == "leantoss" ? d.properties.rating > 50 ? "https://jhkforecasts.com/Trump-01.png" : "https://jhkforecasts.com/Biden-01.png" : d.properties.rating_value == 0 ? "https://jhkforecasts.com/No%20one-01.png" : d.properties.rating_value > 0 ? "https://jhkforecasts.com/Trump-01.png" : "https://jhkforecasts.com/Biden-01.png")
+                                .attr("xlink:href", typeof d.properties.rating == "number" ? d.properties.rating > 50 ? "https://jhkforecasts.com/Trump-01.png" : "https://jhkforecasts.com/Biden-01.png" : d.properties.rating_value == 0 ? "https://jhkforecasts.com/No%20one-01.png" : d.properties.rating_value > 0 ? "https://jhkforecasts.com/Trump-01.png" : "https://jhkforecasts.com/Biden-01.png")
                                 .attr("x", 45)
                                 .attr("y", 50)
                                 .attr("width", 90)
@@ -531,66 +581,149 @@ d3.csv("LT_Data.csv", leantoss => {
                             })
                 })
 
-
-
-
-
             }
-            var tabledata = experts_rating
+            var tabledata = forecasts_rating
             tabledata.sort((a, b) => b.pvi - a.pvi)
             tabledata.sort((a, b) => b.jhk - a.jhk)
-            var myArray = [];
 
+            var all = [];
+            var ex = []
+            var New = []
             tabledata.forEach(function (d, i) {
-
-
-
-                myArray.push([d.state, d.ev, d.jhk, d.bitecofer, d.cook, d.inside, d.politico, d.sabato, d.cnanalysis,d.leantoss]);
-
+                all.push([d.state, d.ev, d.jhk, d.bitecofer, d.cook, d.inside, d.politico, d.sabato, d.cnalysis, d.leantoss]);
+                ex.push([d.state, d.ev, d.jhk, d.cook, d.inside, d.politico, d.sabato,]);
+                New.push([d.state, d.ev, d.jhk, d.bitecofer, d.cnalysis, d.leantoss]);
             })
+            var allnames = ["State", "Electoral Votes"]
+            allnames.push(forecasters.map(d => { return d.forecast }))
+            var allnames = allnames.flat()
 
-            var table = d3.select("#table").append("table")
-            var header = table.append("thead").append("tr")
+            var allwidth = 75 / (allnames.length-2)
 
-            var exname = ["State", "Electoral Votes", "JHK Forecasts", "Bitecofer/ Niskanen", "Cook Political", "Inside Elections", "Politico", "Sabato's Crystal Ball", "CNalysis","Lean Tossup"]
-            var exlinks = ["https://projects.jhkforecasts.com/presidential-forecast/", "https://www.niskanencenter.org/bitecofer-post-primary-update/", "https://cookpolitical.com/analysis/national/national-politics/introducing-cook-political-reports-2020-electoral-college", "https://insideelections.com/ratings/president", "https://www.politico.com/2020-election/race-forecasts-and-predictions/president/", "http://centerforpolitics.org/crystalball/2020-president/", "https://www.cnalysiscom.website/forecasts/2020-president-governor-senate-house-ratings","https://leantossup.ca/us-presidency/"]
+            var exnames = ["State", "Electoral Votes"]
+            exnames.push(expert.map(d => { return d.forecast }))
+            var exnames = exnames.flat()
 
-            header
+            var exwidth = 75 / (exnames.length-2)
+
+            var newnames = ["State", "Electoral Votes"]
+            newnames.push(newcomer.map(d => { return d.forecast }))
+            var newnames = newnames.flat()
+
+            var newwidth = 75 / (newnames.length-2)
+
+            var alltable = d3.select("#all").append("table")
+            var allheader = alltable.append("thead").append("tr")
+
+
+            allheader
                 .selectAll("th")
-                .data(exname)
+                .data(allnames)
                 .enter()
                 .append("th")
-
-                .style("width", (d, i) => i == 0 ? "18%" : i == 1 ? "9%" : "9%")
+                .style("width", (d, i) => i == 0 ? "20%" : i == 1 ? "5%" : allwidth +"%")
                 .append("a")
-                .attr("href", (d, i) => i > 1 ? exlinks[i - 2] : "").text(function (d) {
+                .attr("href", (d, i) => i > 1 ? forecasters.map(d => { return d.link })[i - 2] : "").text(function (d) {
                     return d
                 })
 
-            var tBody = table.append("tbody");
+            var alltBody = alltable.append("tbody");
 
-            var rows = tBody.selectAll("tr")
-                .data(myArray)
+            var allrows = alltBody.selectAll("tr")
+                .data(all)
                 .enter()
                 .append("tr")
 
-            rows
+            allrows
                 .selectAll("td")
                 .data(function (d) {
                     return d;
                 })
                 .enter()
                 .append("td")
-                .style("background-color", (d, i) => i == 2 || i == 9 ? color(d) : i > 2 ? colorsratings[ratings.indexOf(d)] : "none")
-                .text((d, i) => i == 2|| i == 9 ? wholeformat(Math.abs(d - 50) + 50) + "%" : i > 2 ? d.split(" ")[0] : d)
+                .style("background-color", (d, i) => typeof d == "number" ? i == 1 ? "white" : color(d) : i > 2 ? colorsratings[ratings.indexOf(d)] : "none")
+                .text((d, i) => typeof d == "number" ? i == 1 ? d : wholeformat(Math.abs(d - 50) + 50) + "%" : i > 2 ? d.split(" ")[0] : d)
+
+            //experts table
+            var extable = d3.select("#ex").append("table")
+            var exheader = extable.append("thead").append("tr")
 
 
+            exheader
+                .selectAll("th")
+                .data(exnames)
+                .enter()
+                .append("th")
+                .style("width", (d, i) => i == 0 ? "20%" : i == 1 ? "5%" : exwidth +"%")
+                .append("a")
+                .attr("href", (d, i) => i > 1 ? expert.map(d => { return d.link })[i - 2] : "").text(function (d) {
+                    return d
+                })
+
+            var extBody = extable.append("tbody");
+
+            var exrows = extBody.selectAll("tr")
+                .data(ex)
+                .enter()
+                .append("tr")
+
+            exrows
+                .selectAll("td")
+                .data(function (d) {
+                    return d;
+                })
+                .enter()
+                .append("td")
+                .style("background-color", (d, i) => typeof d == "number" ? i == 1 ? "white" : color(d) : i > 2 ? colorsratings[ratings.indexOf(d)] : "none")
+                .text((d, i) => typeof d == "number" ? i == 1 ? d : wholeformat(Math.abs(d - 50) + 50) + "%" : i > 2 ? d.split(" ")[0] : d)
+
+            //newcomer table
+            var newtable = d3.select("#new").append("table")
+            var newheader = newtable.append("thead").append("tr")
+
+
+            newheader
+                .selectAll("th")
+                .data(newnames)
+                .enter()
+                .append("th")
+                .style("width", (d, i) => i == 0 ? "20%" : i == 1 ? "5%" : newwidth +"%")
+                .append("a")
+                .attr("href", (d, i) => i > 1 ? newcomer.map(d => { return d.link })[i - 2] : "").text(function (d) {
+                    return d
+                })
+
+            var newtBody = newtable.append("tbody");
+
+            var newrows = newtBody.selectAll("tr")
+                .data(New)
+                .enter()
+                .append("tr")
+            newrows
+                .selectAll("td")
+                .data(function (d) {
+                    return d;
+                })
+                .enter()
+                .append("td")
+                .style("background-color", (d, i) => typeof d == "number" ? i == 1 ? "white" : color(d) : i > 2 ? colorsratings[ratings.indexOf(d)] : "none")
+                .text((d, i) => typeof d == "number" ? i == 1 ? d : wholeformat(Math.abs(d - 50) + 50) + "%" : i > 2 ? d.split(" ")[0] : d)
 
 
             var selectbox = d3.select("#selectbox")
                 .on("change", function () {
-                    update(this.value);
+                    update(this.value)
                 })
+
+            var selectbox2= d3.select("#selectbox2")
+                .on("change", function () {
+                    this.value == "all"?d3.select("#new").style("display","none") && d3.select("#ex").style("display","none")&&d3.select("#all").style("display","block"):
+                    this.value == "new"?d3.select("#new").style("display","block") && d3.select("#ex").style("display","none")&&d3.select("#all").style("display","none"):
+                    d3.select("#new").style("display","none") && d3.select("#ex").style("display","block")&&d3.select("#all").style("display","non")
+
+                })
+
+
 
         })
     })

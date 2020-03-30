@@ -4,7 +4,7 @@ var map_labels = [{ "state": "Alabama", "label": "AL", "xValue": 637, "yValue": 
 var timeformat = d3.timeFormat("%b. %d")
 var wholeformat = d3.format(".0f")
 var numberformat = d3.format(".1f")
-var experts = ["cook", "bitecofer", "inside", "politico", "sabato", "jhk", "cnanalysis"]
+var forecasts = ["cook", "bitecofer", "inside", "politico", "sabato", "jhk", "cnanalysis"]
 var color = d3.scaleLinear()
     .domain([0, 50, 100])
     .range(["#0091FF", "white", "#FF6060"]);
@@ -47,7 +47,7 @@ var ratings_colors = d3.scaleOrdinal()
 
 var numberformat = d3.format(".1%");
 var numberFormat = d3.format(".0%");
-d3.csv("data.csv", jhk => {
+d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", jhk => {
 
     jhk.forEach((d, i) => {
         d.forecast_date = timeparse(d.forecast_date)
@@ -82,21 +82,21 @@ d3.csv("data.csv", jhk => {
         var sd2 = experts_rating
         var ratings_nested = []
         var experts_ev = []
-        for (let j = 0; j < experts.length; j++) {
+        for (let j = 0; j < forecasts.length; j++) {
             var datas = sd2.map((d, i) => {
                 return {
                     state: d.state,
-                    expert: experts[j],
+                    expert: forecasts[j],
                     ev: d.ev,
                     pvi: d.pvi,
-                    rating: d[experts[j]],
-                    rating_value: rating_value[ratings.indexOf(d[experts[j]])],
-                    opacity: rating_opacity[ratings.indexOf(d[experts[j]])]
+                    rating: d[forecasts[j]],
+                    rating_value: rating_value[ratings.indexOf(d[forecasts[j]])],
+                    opacity: rating_opacity[ratings.indexOf(d[forecasts[j]])]
                 }
             })
 
             var expev = {
-                expert: experts[j],
+                expert: forecasts[j],
                 values:
                     [d3.sum(datas.filter(d => d.rating == "Solid D"), d => d.ev),
                     d3.sum(datas.filter(d => d.rating == "Likely D"), d => d.ev),

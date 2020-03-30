@@ -51,7 +51,7 @@ var color = d3.scaleLinear()
 
 
 
-d3.csv("data.csv", data => {
+d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
 
   data.forEach((d, i) => {
     d.forecast_date = dateparse(d.forecast_date)
