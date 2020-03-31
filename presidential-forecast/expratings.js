@@ -155,7 +155,7 @@ d3.csv("https://data.jhkforecasts.com/2020-LT-pres.csv", leantoss => {
                     }
                 })
 
-                var expev = {
+                var expev = typeof datas[0].rating == "string"?{
                     expert: forecasts[j],
                     values:
                         [d3.sum(datas.filter(d => d.rating == "Solid D"), d => d.ev),
@@ -167,7 +167,20 @@ d3.csv("https://data.jhkforecasts.com/2020-LT-pres.csv", leantoss => {
                         d3.sum(datas.filter(d => d.rating == "Lean R"), d => d.ev),
                         d3.sum(datas.filter(d => d.rating == "Likely R"), d => d.ev),
                         d3.sum(datas.filter(d => d.rating == "Solid R"), d => d.ev)]
-                }
+                }:{
+                    expert: forecasts[j],
+                    values:
+                    [d3.sum(datas.filter(d => d.rating <= 10), d => d.ev),
+                    d3.sum(datas.filter(d => d.rating <= 25 && d.rating > 10), d => d.ev),
+                    d3.sum(datas.filter(d => d.rating <= 40 && d.rating > 25), d => d.ev),
+                    d3.sum(datas.filter(d => d.rating <= 45 && d.rating > 40), d => d.ev),
+                    d3.sum(datas.filter(d => d.rating <= 55 && d.rating > 45), d => d.ev),
+                    d3.sum(datas.filter(d => d.rating <= 60 && d.rating > 55), d => d.ev),
+                    d3.sum(datas.filter(d => d.rating <= 75 && d.rating > 60), d => d.ev),
+                    d3.sum(datas.filter(d => d.rating <= 90 && d.rating > 75), d => d.ev),
+                    d3.sum(datas.filter(d => d.rating > 90), d => d.ev)]
+                    }
+                
                 var dta = datas.slice(0, 51)
                 dta.forEach((d, i) => {
                     d.label = map_labels[i].label
@@ -178,6 +191,7 @@ d3.csv("https://data.jhkforecasts.com/2020-LT-pres.csv", leantoss => {
             }
             var state_cand = ratings_nested.flat()
             var national_cand = forecasts_ev.flat()
+            console.log(national_cand)
             var map = d3.select("#usmap")
                 .append("svg")
                 .attr("viewBox", '75 50 970 450');
@@ -220,31 +234,9 @@ d3.csv("https://data.jhkforecasts.com/2020-LT-pres.csv", leantoss => {
                 })
 
                 var boxstates = [state[29], state[45], state[21], state[39], state[6], state[7], state[20], state[8]]
-                var jhkev = [
-                    d3.sum(jhkdata.filter(d => d.rating <= 10), d => d.ev),
-                    d3.sum(jhkdata.filter(d => d.rating <= 25 && d.rating > 10), d => d.ev),
-                    d3.sum(jhkdata.filter(d => d.rating <= 40 && d.rating > 25), d => d.ev),
-                    d3.sum(jhkdata.filter(d => d.rating <= 45 && d.rating > 40), d => d.ev),
-                    d3.sum(jhkdata.filter(d => d.rating <= 55 && d.rating > 45), d => d.ev),
-                    d3.sum(jhkdata.filter(d => d.rating <= 60 && d.rating > 55), d => d.ev),
-                    d3.sum(jhkdata.filter(d => d.rating <= 75 && d.rating > 60), d => d.ev),
-                    d3.sum(jhkdata.filter(d => d.rating <= 90 && d.rating > 75), d => d.ev),
-                    d3.sum(jhkdata.filter(d => d.rating > 90), d => d.ev),
-                ]
+                
 
-                var leantossev = [
-                    d3.sum(leantossdata.filter(d => d.rating <= 10), d => d.ev),
-                    d3.sum(leantossdata.filter(d => d.rating <= 25 && d.rating > 10), d => d.ev),
-                    d3.sum(leantossdata.filter(d => d.rating <= 40 && d.rating > 25), d => d.ev),
-                    d3.sum(leantossdata.filter(d => d.rating <= 45 && d.rating > 40), d => d.ev),
-                    d3.sum(leantossdata.filter(d => d.rating <= 55 && d.rating > 45), d => d.ev),
-                    d3.sum(leantossdata.filter(d => d.rating <= 60 && d.rating > 55), d => d.ev),
-                    d3.sum(leantossdata.filter(d => d.rating <= 75 && d.rating > 60), d => d.ev),
-                    d3.sum(leantossdata.filter(d => d.rating <= 90 && d.rating > 75), d => d.ev),
-                    d3.sum(leantossdata.filter(d => d.rating > 90), d => d.ev),
-                ]
-
-                var evcats = input == "jhk" ? jhkev : input == "leantoss" ? leantossev : national[0].values
+                var evcats = national[0].values
                 var dem_ev = evcats.slice(0, 4)
                 var gop_ev = evcats.slice(5, 10)
 
