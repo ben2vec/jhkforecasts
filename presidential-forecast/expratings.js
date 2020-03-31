@@ -242,7 +242,7 @@ d3.csv("https://data.jhkforecasts.com/2020-LT-pres.csv", leantoss => {
                 function update(input) {
                     var state = state_data.filter(d => d.expert == input)
                     var national = national_cand.filter(d => d.expert == input)
-                   
+
 
                     var boxstates = [state[29], state[45], state[21], state[39], state[6], state[7], state[20], state[8]]
 
@@ -294,18 +294,19 @@ d3.csv("https://data.jhkforecasts.com/2020-LT-pres.csv", leantoss => {
                             .enter()
                             .append("rect")
                             .attr("x", 775)
-                            .attr("y", (d, i) => 130 + 15 * i)
+                            .attr("y", (d, i) => 130 + 17.5 * i)
                             .attr("width", 30)
                             .attr("height", 15)
-                            .attr("stroke", "white")
-                            .attr("fill", d => input == "jhk" || input == "leantoss" ? color(d.rating) : ratings_colors(d.rating))
+                            .attr("stroke", d => typeof d.rating == "number" ? Math.abs(d.rating - 50) < 5 ? "black" : "white" : d.rating == "Tossup" ? "black" : "white")
+                            .attr("fill", d => typeof d.rating == "number" ? color(d.rating) : ratings_colors(d.rating))
+
                         map.selectAll()
                             .data(boxstates)
                             .enter()
                             .append("text")
                             .text(d => d.label)
                             .attr("x", 790)
-                            .attr("y", (d, i) => 137.5 + 15 * i)
+                            .attr("y", (d, i) => 137.5 + 17.5 * i)
                             .style("font-family", "source-code-pro")
                             .attr("font-size", "10")
                             .attr("fill", "black")
@@ -593,9 +594,9 @@ d3.csv("https://data.jhkforecasts.com/2020-LT-pres.csv", leantoss => {
                 var ex = []
                 var New = []
                 tabledata.forEach(function (d, i) {
-                    all.push([d.state, d.ev, d.jhk, d.bitecofer, d.cook, d.inside, d.politico, d.sabato, d.cnalysis, d.leantoss,d.pluralvote]);
+                    all.push([d.state, d.ev, d.jhk, d.bitecofer, d.cook, d.inside, d.politico, d.sabato, d.cnalysis, d.leantoss, d.pluralvote]);
                     ex.push([d.state, d.ev, d.jhk, d.cook, d.inside, d.politico, d.sabato]);
-                    New.push([d.state, d.ev, d.jhk, d.bitecofer, d.cnalysis, d.leantoss,d.pluralvote]);
+                    New.push([d.state, d.ev, d.jhk, d.bitecofer, d.cnalysis, d.leantoss, d.pluralvote]);
                 })
                 var allnames = ["State", "Electoral Votes"]
                 allnames.push(forecasters.map(d => { return d.forecast }))
