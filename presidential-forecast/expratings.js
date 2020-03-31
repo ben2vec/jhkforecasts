@@ -76,15 +76,15 @@ var demscale = d3.scaleLinear()
     .domain([20, 80])
     .range(["white", "#0091FF"]);
 var ratings_colors = [
-    { rating: "Solid D", color: color(-5), rating_num: -3, opacity: 1 },
-    { rating: "Likely D", color: color(15), rating_num: -2, opacity: 1 },
-    { rating: "Lean D", color: color(30), rating_num: -1, opacity: 1 },
-    { rating: "Tilt D", color: color(40), rating_num: -.5, opacity: 1 },
-    { rating: "Tossup", color: "white", rating_num: 0, opacity: 1 },
-    { rating: "Tilt R", color: color(60), rating_num: .5, opacity: 1 },
-    { rating: "Lean R", color: color(70), rating_num: 1, opacity: 3 },
-    { rating: "Likely R", color: color(85), rating_num: 2, opacity: 7 },
-    { rating: "Solid R", color: color(105), rating_num: 3, opacity: 1 },
+    { rating: "Solid D", color: color(-5), rating_num: 0, opacity: 1 },
+    { rating: "Likely D", color: color(15), rating_num: 10, opacity: 1 },
+    { rating: "Lean D", color: color(30), rating_num: 25, opacity: 1 },
+    { rating: "Tilt D", color: color(40), rating_num: 40, opacity: 1 },
+    { rating: "Tossup", color: "white", rating_num: 50, opacity: 1 },
+    { rating: "Tilt R", color: color(60), rating_num: 60, opacity: 1 },
+    { rating: "Lean R", color: color(70), rating_num: 75, opacity: 3 },
+    { rating: "Likely R", color: color(85), rating_num: 90, opacity: 7 },
+    { rating: "Solid R", color: color(105), rating_num: 100, opacity: 1 },
 ]
 var ratings = ratings_colors.map(d => {
     return d.rating
@@ -149,12 +149,12 @@ d3.csv("https://data.jhkforecasts.com/2020-LT-pres.csv", leantoss => {
                         state: d.state,
                         ev: +d.ev,
                         pvi: +d.pvi,
-                        sabato: d.sabato,
+                        jhk: jhkforecasts[i],
+                        bitecofer: d.bitecofer,
                         cook: d.cook,
                         inside: d.inside,
-                        bitecofer: d.bitecofer,
                         politico: d.politico,
-                        jhk: jhkforecasts[i],
+                        sabato: d.sabato,
                         cnalysis: d.cnanalysis,
                         leantoss: leantoss[i],
                         pluralvote: pluralvote[i].win
@@ -172,8 +172,9 @@ d3.csv("https://data.jhkforecasts.com/2020-LT-pres.csv", leantoss => {
                             ev: d.ev,
                             pvi: d.pvi,
                             rating: d[forecasts[j]],
-                            rating_value: rating_value[ratings.indexOf(d[forecasts[j]])],
-                            opacity: rating_opacity[ratings.indexOf(d[forecasts[j]])]
+                            rating_value: typeof d[forecasts[j]] == "string" ? rating_value[ratings.indexOf(d[forecasts[j]])] : d[forecasts[j]],
+                            opacity: rating_opacity[ratings.indexOf(d[forecasts[j]])],
+                            full_forecast: forecasters[j].forecast
 
                         }
                     })
@@ -193,16 +194,20 @@ d3.csv("https://data.jhkforecasts.com/2020-LT-pres.csv", leantoss => {
                     } : {
                             expert: forecasts[j],
                             values:
-                                [d3.sum(datas.filter(d => d.rating <= 10), d => d.ev),
-                                d3.sum(datas.filter(d => d.rating <= 25 && d.rating > 10), d => d.ev),
-                                d3.sum(datas.filter(d => d.rating <= 40 && d.rating > 25), d => d.ev),
+                                [d3.sum(datas.filter(d => d.rating <= 5), d => d.ev),
+                                d3.sum(datas.filter(d => d.rating <= 20 && d.rating > 5), d => d.ev),
+                                d3.sum(datas.filter(d => d.rating <= 40 && d.rating > 20), d => d.ev),
                                 d3.sum(datas.filter(d => d.rating <= 45 && d.rating > 40), d => d.ev),
                                 d3.sum(datas.filter(d => d.rating <= 55 && d.rating > 45), d => d.ev),
                                 d3.sum(datas.filter(d => d.rating <= 60 && d.rating > 55), d => d.ev),
-                                d3.sum(datas.filter(d => d.rating <= 75 && d.rating > 60), d => d.ev),
-                                d3.sum(datas.filter(d => d.rating <= 90 && d.rating > 75), d => d.ev),
-                                d3.sum(datas.filter(d => d.rating > 90), d => d.ev)]
+                                d3.sum(datas.filter(d => d.rating <= 80 && d.rating > 60), d => d.ev),
+                                d3.sum(datas.filter(d => d.rating <= 95 && d.rating > 75), d => d.ev),
+                                d3.sum(datas.filter(d => d.rating > 95), d => d.ev)]
                         }
+                    var aggregated = []
+                    map_labels.forEach((d, i) => {
+
+                    })
 
                     var dta = datas.slice(0, 51)
                     dta.forEach((d, i) => {
@@ -214,7 +219,6 @@ d3.csv("https://data.jhkforecasts.com/2020-LT-pres.csv", leantoss => {
                 }
                 var state_cand = ratings_nested.flat()
                 var national_cand = forecasts_ev.flat()
-                console.log(national_cand)
                 var map = d3.select("#usmap")
                     .append("svg")
                     .attr("viewBox", '75 50 970 450');
@@ -282,6 +286,8 @@ d3.csv("https://data.jhkforecasts.com/2020-LT-pres.csv", leantoss => {
                                 }
                             }
                         }
+                        var mapdata = json.features
+
                         map.append("rect")
                             .attr("x", 100)
                             .attr("y", 50)
@@ -313,9 +319,12 @@ d3.csv("https://data.jhkforecasts.com/2020-LT-pres.csv", leantoss => {
                             .attr("text-anchor", "middle")
                             .style("font-weight", "400")
                             .attr("dominant-baseline", "central")
+
                         map.selectAll()
                             .data(boxstates)
                             .enter()
+                            .append("a")
+                            .attr("href", "#state-search")
                             .append("rect")
                             .attr("class", "statesover")
                             .attr("x", 775)
@@ -383,6 +392,10 @@ d3.csv("https://data.jhkforecasts.com/2020-LT-pres.csv", leantoss => {
                                 function (d) {
                                     tool_tip.hide()
                                 })
+                            .on("click", function (d) {
+                                stateproj(d.properties.name);
+                                document.getElementById("state-search").value = d.properties.name
+                            })
 
 
 
@@ -445,7 +458,7 @@ d3.csv("https://data.jhkforecasts.com/2020-LT-pres.csv", leantoss => {
                             .style("font-weight", "700")
                             .attr("dominant-baseline", "central")
 
-                        var ratingspct = [">90%", ">75%", ">60%", ">55%", "<55%", ">55%", ">60%", ">75%", ">90%"]
+                        var ratingspct = [">95%", ">80%", ">60%", ">55%", "<55%", ">55%", ">60%", ">80%", ">95%"]
                         map.selectAll("ratings")
                             .data(evcats)
                             .enter()
@@ -487,7 +500,7 @@ d3.csv("https://data.jhkforecasts.com/2020-LT-pres.csv", leantoss => {
 
                         map.append("g")
                             .selectAll("path2")
-                            .data(json.features)
+                            .data(mapdata)
                             .enter()
                             .append("path")
                             .attr("d", path)
@@ -498,7 +511,7 @@ d3.csv("https://data.jhkforecasts.com/2020-LT-pres.csv", leantoss => {
                             .attr("transform", "translate(-50,0)")
 
                         map.selectAll("label")
-                            .data(json.features)
+                            .data(mapdata)
                             .enter()
                             .append("text")
                             .text(d => d.properties.label)
@@ -514,8 +527,10 @@ d3.csv("https://data.jhkforecasts.com/2020-LT-pres.csv", leantoss => {
 
                         map.append("g")
                             .selectAll("path2")
-                            .data(json.features)
+                            .data(mapdata)
                             .enter()
+                            .append("a")
+                            .attr("href", "#state-search")
                             .append("path")
                             .attr("class", "statesover")
                             .attr("d", path)
@@ -554,7 +569,7 @@ d3.csv("https://data.jhkforecasts.com/2020-LT-pres.csv", leantoss => {
                                     .text(d.properties.ev + " ELECTORAL VOTES")
                                     .attr("y", 40)
                                     .attr("x", 87.5)
-                                    .attr("fill", "#black")
+                                    .attr("fill", "black")
                                     .style("font-weight", "500")
                                     .style("font-size", "14")
                                     .attr("text-anchor", "middle")
@@ -565,7 +580,7 @@ d3.csv("https://data.jhkforecasts.com/2020-LT-pres.csv", leantoss => {
                                     .text(typeof d.properties.rating == "number" ? d.properties.rating > 50 ? "WIN:" + wholeformat(d.properties.rating) + "%" : "WIN:" + wholeformat(100 - d.properties.rating) + "%" : d.properties.rating)
                                     .attr("y", 160)
                                     .attr("x", 87.5)
-                                    .attr("fill", "#black")
+                                    .attr("fill", "black")
                                     .style("font-weight", "500")
                                     .style("font-size", "15")
                                     .attr("text-anchor", "middle")
@@ -583,6 +598,10 @@ d3.csv("https://data.jhkforecasts.com/2020-LT-pres.csv", leantoss => {
                                 function (d) {
                                     tool_tip.hide()
                                 })
+                            .on("click", function (d) {
+                                stateproj(d.properties.name);
+                                document.getElementById("state-search").value = d.properties.name
+                            })
                     })
 
                 }
@@ -714,9 +733,130 @@ d3.csv("https://data.jhkforecasts.com/2020-LT-pres.csv", leantoss => {
                     .text((d, i) => typeof d == "number" ? i == 1 ? d : wholeformat(Math.abs(d - 50) + 50) + "%" : i > 2 ? d.split(" ")[0] : d)
 
 
+
+
+                var projection2 = d3.geoAlbers();
+
+                var path2 = d3.geoPath()
+                    .projection(projection2);
+
+                var svg = d3.select("#state").append("svg")
+
+                var st = map_labels[Math.round(Math.random() * 50)].state
+
+                document.getElementById("state-search").value = st
+
+                stateproj(st)
+                function stateproj(input) {
+                    var stateData = state_cand.filter(d => d.state == input)
+                    var state_proj = d3.mean(stateData, d => d.rating_value)
+                    console.log(state_proj)
+                    stateData.push({ rating: state_proj, full_forecast: "Aggregated Projection" })
+                    svg.attr("viewBox", "0 0 1000 " + (stateData.length * 40 + 150))
+                    var width = 500,
+                        height = stateData.length * 40 + 50;
+                    d3.json("us-states.json", us => {
+
+                        var state = us.features.filter(d => d.properties.name == input)[0];
+
+                        projection2
+                            .scale(1)
+                            .translate([0, 0]);
+
+                        var b = path2.bounds(state),
+                            s = .95 / Math.max((b[1][0] - b[0][0]) / width, (b[1][1] - b[0][1]) / height),
+                            t = [((width - s * (b[1][0] + b[0][0])) / 2), ((height - s * (b[1][1] + b[0][1])) / 2) + 50];
+
+                        projection2
+                            .scale(s)
+                            .translate(t);
+                        svg.append("rect")
+                            .attr("y", (d, i) => 0)
+                            .attr("x", 0)
+                            .attr("height", stateData.length * 40 + 150)
+                            .attr("width", 1000)
+                            .attr("fill", "white")
+                        svg.append("path")
+                            .datum(state)
+                            .attr("fill", color(state_proj))
+                            .attr("d", path2)
+                            .style("stroke", (d, i) => state_proj > 45 && state_proj < 55 ? "Black" : "white")
+
+
+
+                        svg.append("text")
+                            .text(input)
+                            .attr("y", 50)
+                            .attr("x", 250)
+                            .attr("fill", "black")
+                            .style("font-weight", "500")
+                            .style("font-size", 40)
+                            .attr("text-anchor", "middle")
+
+                        svg.selectAll("states")
+                            .data(stateData)
+                            .enter()
+                            .append("rect")
+                            .attr("y", (d, i) => 80 + i * 40)
+                            .attr("x", 850)
+                            .attr("height", 40)
+                            .attr("width", 100)
+                            .style("fill", (d, i) => typeof d.rating == "number" ? color(d.rating) : colorsratings[ratings.indexOf(d.rating)])
+
+
+                        svg.selectAll("states")
+                            .data(stateData)
+                            .enter()
+                            .append("line")
+                            .attr("y1", (d, i) => 80 + i * 40)
+                            .attr("y2", (d, i) => 80 + i * 40)
+                            .attr("x1", (d, i) => 600)
+                            .attr("x2", (d, i) => 950)
+                            .attr("stroke", (d, i) => i == stateData.length - 1 ? "black" : "lightgray")
+                            .attr("stroke-width", (d, i) => i == stateData.length - 1 ? "2" : "1")
+
+
+
+                        svg.selectAll("states")
+                            .data(stateData)
+                            .enter()
+                            .append("text")
+                            .text(d => typeof d.rating == "number" ? wholeformat(Math.abs(d.rating - 50) + 50) + "%" : d.rating)
+                            .attr("y", (d, i) => 100 + i * 40)
+                            .attr("x", 900)
+                            .attr("fill", "black")
+                            .style("font-weight", "500")
+                            .style("font-size", 25)
+                            .attr("text-anchor", "middle")
+                            .attr("dominant-baseline", "central")
+
+
+                        svg.selectAll("states")
+                            .data(stateData)
+                            .enter()
+                            .append("text")
+                            .text(d => d.full_forecast)
+                            .attr("y", (d, i) => 100 + i * 40)
+                            .attr("x", 600)
+                            .attr("fill", "black")
+                            .style("font-weight", "500")
+                            .style("font-size", 25)
+                            .attr("text-anchor", "start")
+                            .attr("dominant-baseline", "central")
+
+
+
+                    })
+                }
+
                 var selectbox = d3.select("#selectbox")
                     .on("change", function () {
                         update(this.value)
+                    })
+
+                var selectbox3 = d3.select("#state-search")
+                    .on("change", function () {
+                        stateproj(this.value)
                     })
 
                 var selectbox2 = d3.select("#selectbox2")
@@ -724,7 +864,9 @@ d3.csv("https://data.jhkforecasts.com/2020-LT-pres.csv", leantoss => {
                         this.value == "all" ? d3.select("#new").style("display", "none") && d3.select("#ex").style("display", "none") && d3.select("#all").style("display", "block") :
                             this.value == "new" ? d3.select("#new").style("display", "block") && d3.select("#ex").style("display", "none") && d3.select("#all").style("display", "none") :
                                 d3.select("#new").style("display", "none") && d3.select("#ex").style("display", "block") && d3.select("#all").style("display", "none")
-                    })
+
+                    });
+
             })
         })
     })
