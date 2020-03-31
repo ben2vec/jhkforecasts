@@ -445,7 +445,7 @@ d3.csv("https://data.jhkforecasts.com/2020-LT-pres.csv", leantoss => {
                             .style("font-weight", "700")
                             .attr("dominant-baseline", "central")
 
-                        var ratingspct = [">90%", ">75%", ">60%", ">55%", "<60%", ">55%", ">60%", ">75%", ">90%"]
+                        var ratingspct = [">90%", ">75%", ">60%", ">55%", "<55%", ">55%", ">60%", ">75%", ">90%"]
                         map.selectAll("ratings")
                             .data(evcats)
                             .enter()
