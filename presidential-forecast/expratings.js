@@ -47,6 +47,12 @@ var forecasters = [
         "link": "https://leantossup.ca/us-presidency/",
         "type": "newcomer",
         "shorthand": "leantoss"
+    },
+    {
+        "forecast": "Plural Vote",
+        "link": "http://www.pluralvote.com/article/2020-forecast/",
+        "type": "newcomer",
+        "shorthand": "pluralvote"
     }
 ]
 var expert = forecasters.filter(d => d.type == "expert")
@@ -118,605 +124,607 @@ d3.csv("https://data.jhkforecasts.com/2020-LT-pres.csv", leantoss => {
         var jhkforecasts = newest_data.map((d, i) => {
             return d.win
         })
-
-
-        d3.csv("https://data.jhkforecasts.com/2020-pres-input.csv", data => {
-
-            var forecasts_rating = data.map((d, i) => {
+        d3.csv("https://raw.githubusercontent.com/seanelevan/pluralvote/master/web/article/2020-forecast/statebystateprob.csv?token=AIYCOI3LWILZQWFAUIU33X26QKW26", pluralvote => {
+            pluralvote.shift()
+            var pluralvote = pluralvote.map((d, i) => {
                 return {
-                    state: d.state,
-                    ev: +d.ev,
-                    pvi: +d.pvi,
-                    sabato: d.sabato,
-                    cook: d.cook,
-                    inside: d.inside,
-                    bitecofer: d.bitecofer,
-                    politico: d.politico,
-                    jhk: jhkforecasts[i],
-                    cnalysis: d.cnanalysis,
-                    leantoss: leantoss[i]
+                    state: d.stateNames,
+                    win: +d.statebystateprob
                 }
             })
+            pluralvote.sort(function (a, b) {
+                if (a.state < b.state) { return -1; }
+                if (a.state > b.state) { return 1; }
+                return 0;
+            })
+            var cds = [pluralvote.splice(20, 2), pluralvote.splice(28, 3)].flat()
+            pluralvote.push(cds)
+            var pluralvote = pluralvote.flat()
+            console.log(pluralvote)
 
-            var sd2 = forecasts_rating
-            var ratings_nested = []
-            var forecasts_ev = []
-            for (let j = 0; j < forecasts.length; j++) {
-                var datas = sd2.map((d, i) => {
+            d3.csv("https://data.jhkforecasts.com/2020-pres-input.csv", data => {
+
+                var forecasts_rating = data.map((d, i) => {
                     return {
                         state: d.state,
+                        ev: +d.ev,
+                        pvi: +d.pvi,
+                        sabato: d.sabato,
+                        cook: d.cook,
+                        inside: d.inside,
+                        bitecofer: d.bitecofer,
+                        politico: d.politico,
+                        jhk: jhkforecasts[i],
+                        cnalysis: d.cnanalysis,
+                        leantoss: leantoss[i],
+                        pluralvote: pluralvote[i].win
+                    }
+                })
+                console.log(forecasts_rating)
+                var sd2 = forecasts_rating
+                var ratings_nested = []
+                var forecasts_ev = []
+                for (let j = 0; j < forecasts.length; j++) {
+                    var datas = sd2.map((d, i) => {
+                        return {
+                            state: d.state,
+                            expert: forecasts[j],
+                            ev: d.ev,
+                            pvi: d.pvi,
+                            rating: d[forecasts[j]],
+                            rating_value: rating_value[ratings.indexOf(d[forecasts[j]])],
+                            opacity: rating_opacity[ratings.indexOf(d[forecasts[j]])]
+
+                        }
+                    })
+
+                    var expev = typeof datas[0].rating == "string" ? {
                         expert: forecasts[j],
-                        ev: d.ev,
-                        pvi: d.pvi,
-                        rating: d[forecasts[j]],
-                        rating_value: rating_value[ratings.indexOf(d[forecasts[j]])],
-                        opacity: rating_opacity[ratings.indexOf(d[forecasts[j]])]
+                        values:
+                            [d3.sum(datas.filter(d => d.rating == "Solid D"), d => d.ev),
+                            d3.sum(datas.filter(d => d.rating == "Likely D"), d => d.ev),
+                            d3.sum(datas.filter(d => d.rating == "Lean D"), d => d.ev),
+                            d3.sum(datas.filter(d => d.rating == "Tilt D"), d => d.ev),
+                            d3.sum(datas.filter(d => d.rating == "Tossup"), d => d.ev),
+                            d3.sum(datas.filter(d => d.rating == "Tilt R"), d => d.ev),
+                            d3.sum(datas.filter(d => d.rating == "Lean R"), d => d.ev),
+                            d3.sum(datas.filter(d => d.rating == "Likely R"), d => d.ev),
+                            d3.sum(datas.filter(d => d.rating == "Solid R"), d => d.ev)]
+                    } : {
+                            expert: forecasts[j],
+                            values:
+                                [d3.sum(datas.filter(d => d.rating <= 10), d => d.ev),
+                                d3.sum(datas.filter(d => d.rating <= 25 && d.rating > 10), d => d.ev),
+                                d3.sum(datas.filter(d => d.rating <= 40 && d.rating > 25), d => d.ev),
+                                d3.sum(datas.filter(d => d.rating <= 45 && d.rating > 40), d => d.ev),
+                                d3.sum(datas.filter(d => d.rating <= 55 && d.rating > 45), d => d.ev),
+                                d3.sum(datas.filter(d => d.rating <= 60 && d.rating > 55), d => d.ev),
+                                d3.sum(datas.filter(d => d.rating <= 75 && d.rating > 60), d => d.ev),
+                                d3.sum(datas.filter(d => d.rating <= 90 && d.rating > 75), d => d.ev),
+                                d3.sum(datas.filter(d => d.rating > 90), d => d.ev)]
+                        }
 
-                    }
-                })
+                    var dta = datas.slice(0, 51)
+                    dta.forEach((d, i) => {
+                        d.label = map_labels[i].label
+                    })
 
-                var expev = typeof datas[0].rating == "string"?{
-                    expert: forecasts[j],
-                    values:
-                        [d3.sum(datas.filter(d => d.rating == "Solid D"), d => d.ev),
-                        d3.sum(datas.filter(d => d.rating == "Likely D"), d => d.ev),
-                        d3.sum(datas.filter(d => d.rating == "Lean D"), d => d.ev),
-                        d3.sum(datas.filter(d => d.rating == "Tilt D"), d => d.ev),
-                        d3.sum(datas.filter(d => d.rating == "Tossup"), d => d.ev),
-                        d3.sum(datas.filter(d => d.rating == "Tilt R"), d => d.ev),
-                        d3.sum(datas.filter(d => d.rating == "Lean R"), d => d.ev),
-                        d3.sum(datas.filter(d => d.rating == "Likely R"), d => d.ev),
-                        d3.sum(datas.filter(d => d.rating == "Solid R"), d => d.ev)]
-                }:{
-                    expert: forecasts[j],
-                    values:
-                    [d3.sum(datas.filter(d => d.rating <= 10), d => d.ev),
-                    d3.sum(datas.filter(d => d.rating <= 25 && d.rating > 10), d => d.ev),
-                    d3.sum(datas.filter(d => d.rating <= 40 && d.rating > 25), d => d.ev),
-                    d3.sum(datas.filter(d => d.rating <= 45 && d.rating > 40), d => d.ev),
-                    d3.sum(datas.filter(d => d.rating <= 55 && d.rating > 45), d => d.ev),
-                    d3.sum(datas.filter(d => d.rating <= 60 && d.rating > 55), d => d.ev),
-                    d3.sum(datas.filter(d => d.rating <= 75 && d.rating > 60), d => d.ev),
-                    d3.sum(datas.filter(d => d.rating <= 90 && d.rating > 75), d => d.ev),
-                    d3.sum(datas.filter(d => d.rating > 90), d => d.ev)]
-                    }
-                
-                var dta = datas.slice(0, 51)
-                dta.forEach((d, i) => {
-                    d.label = map_labels[i].label
-                })
+                    forecasts_ev.push(expev)
+                    ratings_nested.push(dta)
+                }
+                var state_cand = ratings_nested.flat()
+                var national_cand = forecasts_ev.flat()
+                console.log(national_cand)
+                var map = d3.select("#usmap")
+                    .append("svg")
+                    .attr("viewBox", '75 50 970 450');
 
-                forecasts_ev.push(expev)
-                ratings_nested.push(dta)
-            }
-            var state_cand = ratings_nested.flat()
-            var national_cand = forecasts_ev.flat()
-            console.log(national_cand)
-            var map = d3.select("#usmap")
-                .append("svg")
-                .attr("viewBox", '75 50 970 450');
+                var width3 = 1020;
+                var height3 = 500;
 
-            var width3 = 1020;
-            var height3 = 500;
-
-            var projection = d3.geoAlbersUsa()
-                .translate([width3 / 2, height3 / 2])
-                .scale([900]);
+                var projection = d3.geoAlbersUsa()
+                    .translate([width3 / 2, height3 / 2])
+                    .scale([900]);
 
 
-            var path = d3.geoPath()
-                .projection(projection);
+                var path = d3.geoPath()
+                    .projection(projection);
 
-            var tool_tip = d3.tip()
-                .attr("class", "d3-tip")
-                .offset([-180, -90])
-                .html("<div id='tipDiv'></div>");
+                var tool_tip = d3.tip()
+                    .attr("class", "d3-tip")
+                    .offset([-180, -90])
+                    .html("<div id='tipDiv'></div>");
 
-            map.call(tool_tip);
+                map.call(tool_tip);
 
-            var state_data = state_cand
-            update(d3.select('#selectbox').property('value'));
-            function update(input) {
-                var state = state_data.filter(d => d.expert == input)
-                var national = national_cand.filter(d => d.expert == input)
-                var jhkdata = forecasts_rating.map((d, i) => {
-                    return {
-                        ev: d.ev,
-                        rating: d.jhk
-                    }
-                })
+                var state_data = state_cand
+                update(d3.select('#selectbox').property('value'));
+                function update(input) {
+                    var state = state_data.filter(d => d.expert == input)
+                    var national = national_cand.filter(d => d.expert == input)
+                   
 
-                var leantossdata = forecasts_rating.map((d, i) => {
-                    return {
-                        ev: d.ev,
-                        rating: d.leantoss
-                    }
-                })
-
-                var boxstates = [state[29], state[45], state[21], state[39], state[6], state[7], state[20], state[8]]
-                
-
-                var evcats = national[0].values
-                var dem_ev = evcats.slice(0, 4)
-                var gop_ev = evcats.slice(5, 10)
-
-                d3.json("https://projects.jhkforecasts.com/presidential_forecast/us-states.json", function (json) {
-
-                    for (var i = 0; i < state.length; i++) {
-
-                        var dataState = state[i].state;
-                        var rating = state[i].rating;
-                        var ev = state[i].ev;
-                        var opacity = state[i].opacity;
-                        var rating_value = state[i].rating_value;
-                        var xv = map_labels[i].xValue
-                        var yv = map_labels[i].yValue
-                        var label = map_labels[i].label
+                    var boxstates = [state[29], state[45], state[21], state[39], state[6], state[7], state[20], state[8]]
 
 
-                        for (var j = 0; j < json.features.length; j++) {
-                            var jsonState = json.features[j].properties.name;
+                    var evcats = national[0].values
+                    var dem_ev = evcats.slice(0, 4)
+                    var gop_ev = evcats.slice(5, 10)
 
-                            if (dataState == jsonState) {
-                                json.features[j].properties.rating = rating
-                                json.features[j].properties.ev = ev
-                                json.features[j].properties.opacity = opacity
-                                json.features[j].properties.label = label
-                                json.features[j].properties.yv = yv
-                                json.features[j].properties.xv = xv
-                                json.features[j].properties.rating_value = rating_value
+                    d3.json("https://projects.jhkforecasts.com/presidential_forecast/us-states.json", function (json) {
+
+                        for (var i = 0; i < state.length; i++) {
+
+                            var dataState = state[i].state;
+                            var rating = state[i].rating;
+                            var ev = state[i].ev;
+                            var opacity = state[i].opacity;
+                            var rating_value = state[i].rating_value;
+                            var xv = map_labels[i].xValue
+                            var yv = map_labels[i].yValue
+                            var label = map_labels[i].label
 
 
-                                break;
+                            for (var j = 0; j < json.features.length; j++) {
+                                var jsonState = json.features[j].properties.name;
+
+                                if (dataState == jsonState) {
+                                    json.features[j].properties.rating = rating
+                                    json.features[j].properties.ev = ev
+                                    json.features[j].properties.opacity = opacity
+                                    json.features[j].properties.label = label
+                                    json.features[j].properties.yv = yv
+                                    json.features[j].properties.xv = xv
+                                    json.features[j].properties.rating_value = rating_value
+
+
+                                    break;
+                                }
                             }
                         }
-                    }
-                    map.append("rect")
-                        .attr("x", 100)
-                        .attr("y", 50)
-                        .attr("width", 1000)
-                        .attr("height", 1000)
-                        .attr("fill", "white")
+                        map.append("rect")
+                            .attr("x", 100)
+                            .attr("y", 50)
+                            .attr("width", 1000)
+                            .attr("height", 1000)
+                            .attr("fill", "white")
 
-                    map.selectAll()
-                        .data(boxstates)
-                        .enter()
-                        .append("rect")
-                        .attr("x", 775)
-                        .attr("y", (d, i) => 130 + 15 * i)
-                        .attr("width", 30)
-                        .attr("height", 15)
-                        .attr("stroke", "white")
-                        .attr("fill", d => input == "jhk" || input == "leantoss" ? color(d.rating) : ratings_colors(d.rating))
-                    map.selectAll()
-                        .data(boxstates)
-                        .enter()
-                        .append("text")
-                        .text(d => d.label)
-                        .attr("x", 790)
-                        .attr("y", (d, i) => 137.5 + 15 * i)
-                        .style("font-family", "source-code-pro")
-                        .attr("font-size", "10")
-                        .attr("fill", "black")
-                        .attr("text-anchor", "middle")
-                        .style("font-weight", "400")
-                        .attr("dominant-baseline", "central")
-                    map.selectAll()
-                        .data(boxstates)
-                        .enter()
-                        .append("rect")
-                        .attr("class", "statesover")
-                        .attr("x", 775)
-                        .attr("y", (d, i) => 130 + 15 * i)
-                        .attr("width", 30)
-                        .attr("height", 15)
-                        .attr("fill", "none")
-                        .on("mouseover", function (d) {
+                        map.selectAll()
+                            .data(boxstates)
+                            .enter()
+                            .append("rect")
+                            .attr("x", 775)
+                            .attr("y", (d, i) => 130 + 15 * i)
+                            .attr("width", 30)
+                            .attr("height", 15)
+                            .attr("stroke", "white")
+                            .attr("fill", d => input == "jhk" || input == "leantoss" ? color(d.rating) : ratings_colors(d.rating))
+                        map.selectAll()
+                            .data(boxstates)
+                            .enter()
+                            .append("text")
+                            .text(d => d.label)
+                            .attr("x", 790)
+                            .attr("y", (d, i) => 137.5 + 15 * i)
+                            .style("font-family", "source-code-pro")
+                            .attr("font-size", "10")
+                            .attr("fill", "black")
+                            .attr("text-anchor", "middle")
+                            .style("font-weight", "400")
+                            .attr("dominant-baseline", "central")
+                        map.selectAll()
+                            .data(boxstates)
+                            .enter()
+                            .append("rect")
+                            .attr("class", "statesover")
+                            .attr("x", 775)
+                            .attr("y", (d, i) => 130 + 15 * i)
+                            .attr("width", 30)
+                            .attr("height", 15)
+                            .attr("fill", "none")
+                            .on("mouseover", function (d) {
 
-                            tool_tip.show();
-                            var tipSVG = d3.select("#tipDiv")
-                                .append("svg")
-                                .attr("width", 175)
-                                .attr("height", 175)
-                                ;
-                            tipSVG.append("rect")
-                                .attr("y", 1.5)
-                                .attr("x", 1.5)
-                                .attr("width", 172)
-                                .attr("height", 172)
-                                .attr("rx", 8)
-                                .attr("fill", "white")
-                                .attr("stroke", "black")
-                                .attr("stroke-width", 2)
-                            tipSVG.append("text")
-                                .text(d.state)
-                                .attr("y", 20)
-                                .attr("x", 87.5)
-                                .attr("fill", "#black")
-                                .style("font-weight", "600")
-                                .style("font-size", "15")
-                                .attr("text-anchor", "middle")
-                                .style("font-family", "brandon-grotesque")
+                                tool_tip.show();
+                                var tipSVG = d3.select("#tipDiv")
+                                    .append("svg")
+                                    .attr("width", 175)
+                                    .attr("height", 175)
+                                    ;
+                                tipSVG.append("rect")
+                                    .attr("y", 1.5)
+                                    .attr("x", 1.5)
+                                    .attr("width", 172)
+                                    .attr("height", 172)
+                                    .attr("rx", 8)
+                                    .attr("fill", "white")
+                                    .attr("stroke", "black")
+                                    .attr("stroke-width", 2)
+                                tipSVG.append("text")
+                                    .text(d.state)
+                                    .attr("y", 20)
+                                    .attr("x", 87.5)
+                                    .attr("fill", "#black")
+                                    .style("font-weight", "600")
+                                    .style("font-size", "15")
+                                    .attr("text-anchor", "middle")
+                                    .style("font-family", "brandon-grotesque")
 
-                            tipSVG.append("text")
-                                .text(d.ev + " ELECTORAL VOTES")
-                                .attr("y", 40)
-                                .attr("x", 87.5)
-                                .attr("fill", "#black")
-                                .style("font-weight", "500")
-                                .style("font-size", "14")
-                                .attr("text-anchor", "middle")
-                                .style("font-family", "brandon-grotesque")
-
-
-                            tipSVG.append("text")
-                                .text(typeof d.rating == "number" ? d.rating > 50 ? "WIN:" + wholeformat(d.rating) + "%" : "WIN:" + wholeformat(100 - d.rating) + "%" : d.rating)
-                                .attr("y", 160)
-                                .attr("x", 87.5)
-                                .attr("fill", "#black")
-                                .style("font-weight", "500")
-                                .style("font-size", "15")
-                                .attr("text-anchor", "middle")
-                                .style("font-family", "brandon-grotesque")
+                                tipSVG.append("text")
+                                    .text(d.ev + " ELECTORAL VOTES")
+                                    .attr("y", 40)
+                                    .attr("x", 87.5)
+                                    .attr("fill", "#black")
+                                    .style("font-weight", "500")
+                                    .style("font-size", "14")
+                                    .attr("text-anchor", "middle")
+                                    .style("font-family", "brandon-grotesque")
 
 
-                            tipSVG.append("image")
-                                .attr("xlink:href", typeof d.rating == "number" ? d.rating > 50 ? "https://jhkforecasts.com/Trump-01.png" : "https://jhkforecasts.com/Biden-01.png" : d.rating_value == 0 ? "https://jhkforecasts.com/No%20one-01.png" : d.rating_value > 0 ? "https://jhkforecasts.com/Trump-01.png" : "https://jhkforecasts.com/Biden-01.png")
-                                .attr("x", 45)
-                                .attr("y", 50)
-                                .attr("width", 90)
-                                .attr("height", 90)
-                        })
-                        .on('mouseout',
-                            function (d) {
-                                tool_tip.hide()
+                                tipSVG.append("text")
+                                    .text(typeof d.rating == "number" ? d.rating > 50 ? "WIN:" + wholeformat(d.rating) + "%" : "WIN:" + wholeformat(100 - d.rating) + "%" : d.rating)
+                                    .attr("y", 160)
+                                    .attr("x", 87.5)
+                                    .attr("fill", "#black")
+                                    .style("font-weight", "500")
+                                    .style("font-size", "15")
+                                    .attr("text-anchor", "middle")
+                                    .style("font-family", "brandon-grotesque")
+
+
+                                tipSVG.append("image")
+                                    .attr("xlink:href", typeof d.rating == "number" ? d.rating > 50 ? "https://jhkforecasts.com/Trump-01.png" : "https://jhkforecasts.com/Biden-01.png" : d.rating_value == 0 ? "https://jhkforecasts.com/No%20one-01.png" : d.rating_value > 0 ? "https://jhkforecasts.com/Trump-01.png" : "https://jhkforecasts.com/Biden-01.png")
+                                    .attr("x", 45)
+                                    .attr("y", 50)
+                                    .attr("width", 90)
+                                    .attr("height", 90)
                             })
+                            .on('mouseout',
+                                function (d) {
+                                    tool_tip.hide()
+                                })
 
 
 
-                    map.append("image")
-                        .attr("xlink:href", "https://jhkforecasts.com/Biden-01.png")
-                        .attr("x", 850)
-                        .attr("y", 50)
-                        .attr("width", 70)
-                        .attr("height", 70)
-                    map.append("image")
-                        .attr("xlink:href", "https://jhkforecasts.com/Trump-01.png")
-                        .attr("x", 930)
-                        .attr("y", 50)
-                        .attr("width", 70)
-                        .attr("height", 70)
+                        map.append("image")
+                            .attr("xlink:href", "https://jhkforecasts.com/Biden-01.png")
+                            .attr("x", 850)
+                            .attr("y", 50)
+                            .attr("width", 70)
+                            .attr("height", 70)
+                        map.append("image")
+                            .attr("xlink:href", "https://jhkforecasts.com/Trump-01.png")
+                            .attr("x", 930)
+                            .attr("y", 50)
+                            .attr("width", 70)
+                            .attr("height", 70)
 
 
-                    map.append("text")
-                        .attr("x", 965)
-                        .text(d3.sum(gop_ev))
-                        .attr("y", 150)
-                        .style("font-family", "brandon-grotesque")
-                        .attr("font-size", "20")
-                        .attr("fill", color(100))
-                        .attr("text-anchor", "middle")
-                        .style("font-weight", "700")
-                        .attr("dominant-baseline", "central")
+                        map.append("text")
+                            .attr("x", 965)
+                            .text(d3.sum(gop_ev))
+                            .attr("y", 150)
+                            .style("font-family", "brandon-grotesque")
+                            .attr("font-size", "20")
+                            .attr("fill", color(100))
+                            .attr("text-anchor", "middle")
+                            .style("font-weight", "700")
+                            .attr("dominant-baseline", "central")
 
-                    map.append("text")
-                        .attr("x", 885)
-                        .text(d3.sum(dem_ev))
-                        .attr("y", 150)
-                        .style("font-family", "brandon-grotesque")
-                        .attr("font-size", "20")
-                        .attr("fill", color(0))
-                        .attr("text-anchor", "middle")
-                        .style("font-weight", "700")
-                        .attr("dominant-baseline", "central")
+                        map.append("text")
+                            .attr("x", 885)
+                            .text(d3.sum(dem_ev))
+                            .attr("y", 150)
+                            .style("font-family", "brandon-grotesque")
+                            .attr("font-size", "20")
+                            .attr("fill", color(0))
+                            .attr("text-anchor", "middle")
+                            .style("font-weight", "700")
+                            .attr("dominant-baseline", "central")
 
-                    map.selectAll("ratings")
-                        .data(rating_opacity)
-                        .enter()
-                        .append("circle")
-                        .attr("cx", 925)
-                        .attr("cy", (d, i) => 200 + i * 30)
-                        .attr("r", 10)
-                        .attr("fill", (d, i) => colorsratings[i])
+                        map.selectAll("ratings")
+                            .data(rating_opacity)
+                            .enter()
+                            .append("circle")
+                            .attr("cx", 925)
+                            .attr("cy", (d, i) => 200 + i * 30)
+                            .attr("r", 10)
+                            .attr("fill", (d, i) => colorsratings[i])
 
-                    map.selectAll("ratings")
-                        .data(ratings)
-                        .enter()
-                        .append("text")
-                        .attr("x", 900)
-                        .text(d => d)
-                        .attr("y", (d, i) => 200 + i * 30)
-                        .style("font-family", "brandon-grotesque")
-                        .attr("font-size", "15")
-                        .attr("fill", "black")
-                        .attr("text-anchor", "end")
-                        .style("font-weight", "700")
-                        .attr("dominant-baseline", "central")
+                        map.selectAll("ratings")
+                            .data(ratings)
+                            .enter()
+                            .append("text")
+                            .attr("x", 900)
+                            .text(d => d)
+                            .attr("y", (d, i) => 200 + i * 30)
+                            .style("font-family", "brandon-grotesque")
+                            .attr("font-size", "15")
+                            .attr("fill", "black")
+                            .attr("text-anchor", "end")
+                            .style("font-weight", "700")
+                            .attr("dominant-baseline", "central")
 
-                    var ratingspct = [">90%", ">75%", ">60%", ">55%", "<60%", ">55%", ">60%", ">75%", ">90%"]
-                    map.selectAll("ratings")
-                        .data(evcats)
-                        .enter()
-                        .append("text")
-                        .attr("x", 950)
-                        .text(d => d)
-                        .attr("y", (d, i) => 200 + i * 30)
-                        .style("font-family", "brandon-grotesque")
-                        .attr("font-size", "15")
-                        .attr("fill", "black")
-                        .attr("text-anchor", "start")
-                        .style("font-weight", "700")
-                        .attr("dominant-baseline", "central")
+                        var ratingspct = [">90%", ">75%", ">60%", ">55%", "<60%", ">55%", ">60%", ">75%", ">90%"]
+                        map.selectAll("ratings")
+                            .data(evcats)
+                            .enter()
+                            .append("text")
+                            .attr("x", 950)
+                            .text(d => d)
+                            .attr("y", (d, i) => 200 + i * 30)
+                            .style("font-family", "brandon-grotesque")
+                            .attr("font-size", "15")
+                            .attr("fill", "black")
+                            .attr("text-anchor", "start")
+                            .style("font-weight", "700")
+                            .attr("dominant-baseline", "central")
 
-                    map.selectAll("ratings")
-                        .data(ratingspct)
-                        .enter()
-                        .append("text")
-                        .attr("x", 1000)
-                        .text(d => typeof json.features[0].properties.rating == "number" ? d : "")
-                        .attr("y", (d, i) => 200 + i * 30)
-                        .style("font-family", "brandon-grotesque")
-                        .attr("font-size", "15")
-                        .attr("fill", "black")
-                        .attr("text-anchor", "start")
-                        .style("font-weight", "700")
-                        .attr("dominant-baseline", "central")
+                        map.selectAll("ratings")
+                            .data(ratingspct)
+                            .enter()
+                            .append("text")
+                            .attr("x", 1000)
+                            .text(d => typeof json.features[0].properties.rating == "number" ? d : "")
+                            .attr("y", (d, i) => 200 + i * 30)
+                            .style("font-family", "brandon-grotesque")
+                            .attr("font-size", "15")
+                            .attr("fill", "black")
+                            .attr("text-anchor", "start")
+                            .style("font-weight", "700")
+                            .attr("dominant-baseline", "central")
 
-                    map.append("text")
-                        .attr("x", 1000)
-                        .text(typeof json.features[0].properties.rating == "number" ? "Win %" : "")
-                        .attr("y", (d, i) => 170)
-                        .style("font-family", "brandon-grotesque")
-                        .attr("font-size", "15")
-                        .attr("fill", "black")
-                        .attr("text-anchor", "start")
-                        .style("font-weight", "700")
-                        .attr("dominant-baseline", "central")
+                        map.append("text")
+                            .attr("x", 1000)
+                            .text(typeof json.features[0].properties.rating == "number" ? "Win %" : "")
+                            .attr("y", (d, i) => 170)
+                            .style("font-family", "brandon-grotesque")
+                            .attr("font-size", "15")
+                            .attr("fill", "black")
+                            .attr("text-anchor", "start")
+                            .style("font-weight", "700")
+                            .attr("dominant-baseline", "central")
 
-                    map.append("g")
-                        .selectAll("path2")
-                        .data(json.features)
-                        .enter()
-                        .append("path")
-                        .attr("d", path)
-                        .style("stroke", "white")
-                        .style("stroke-width", 1)
-                        .style("fill", d => typeof d.properties.rating == "number" ? color(d.properties.rating) : ratings_colors(d.properties.rating))
-                        .style("opacity", d => d.properties.opacity)
-                        .attr("transform", "translate(-50,0)")
+                        map.append("g")
+                            .selectAll("path2")
+                            .data(json.features)
+                            .enter()
+                            .append("path")
+                            .attr("d", path)
+                            .style("stroke", "white")
+                            .style("stroke-width", 1)
+                            .style("fill", d => typeof d.properties.rating == "number" ? color(d.properties.rating) : ratings_colors(d.properties.rating))
+                            .style("opacity", d => d.properties.opacity)
+                            .attr("transform", "translate(-50,0)")
 
-                    map.selectAll("label")
-                        .data(json.features)
-                        .enter()
-                        .append("text")
-                        .text(d => d.properties.label)
-                        .attr("x", d => d.properties.xv)
-                        .attr("y", d => d.properties.yv)
-                        .style("font-family", "source-code-pro")
-                        .attr("font-size", "10")
-                        .attr("fill", "black")
-                        .attr("text-anchor", "middle")
-                        .style("font-weight", "400")
-                        .attr("transform", "translate(-50,0)")
-
-
-                    map.append("g")
-                        .selectAll("path2")
-                        .data(json.features)
-                        .enter()
-                        .append("path")
-                        .attr("class", "statesover")
-                        .attr("d", path)
-                        .attr("stroke", d => typeof d.properties.rating == "number" ? d.properties.rating > 45 ? d.properties.rating < 55 ? "black" : "none" : "none" : d.properties.rating == "Tossup" ? "black" : "none")
-                        .attr("stroke-width", d => 1.5)
-                        .style("fill", "none")
-                        .attr("transform", "translate(-50,0)")
-                        .on("mouseover", function (d) {
-
-                            tool_tip.show();
-                            var tipSVG = d3.select("#tipDiv")
-                                .append("svg")
-                                .attr("width", 175)
-                                .attr("height", 175)
-                                ;
-                            tipSVG.append("rect")
-                                .attr("y", 1.5)
-                                .attr("x", 1.5)
-                                .attr("width", 172)
-                                .attr("height", 172)
-                                .attr("rx", 8)
-                                .attr("fill", "white")
-                                .attr("stroke", "black")
-                                .attr("stroke-width", 2)
-                            tipSVG.append("text")
-                                .text(d.properties.name)
-                                .attr("y", 20)
-                                .attr("x", 87.5)
-                                .attr("fill", "#black")
-                                .style("font-weight", "600")
-                                .style("font-size", "15")
-                                .attr("text-anchor", "middle")
-                                .style("font-family", "brandon-grotesque")
-
-                            tipSVG.append("text")
-                                .text(d.properties.ev + " ELECTORAL VOTES")
-                                .attr("y", 40)
-                                .attr("x", 87.5)
-                                .attr("fill", "#black")
-                                .style("font-weight", "500")
-                                .style("font-size", "14")
-                                .attr("text-anchor", "middle")
-                                .style("font-family", "brandon-grotesque")
+                        map.selectAll("label")
+                            .data(json.features)
+                            .enter()
+                            .append("text")
+                            .text(d => d.properties.label)
+                            .attr("x", d => d.properties.xv)
+                            .attr("y", d => d.properties.yv)
+                            .style("font-family", "source-code-pro")
+                            .attr("font-size", "10")
+                            .attr("fill", "black")
+                            .attr("text-anchor", "middle")
+                            .style("font-weight", "400")
+                            .attr("transform", "translate(-50,0)")
 
 
-                            tipSVG.append("text")
-                                .text(typeof d.properties.rating == "number" ? d.properties.rating > 50 ? "WIN:" + wholeformat(d.properties.rating) + "%" : "WIN:" + wholeformat(100 - d.properties.rating) + "%" : d.properties.rating)
-                                .attr("y", 160)
-                                .attr("x", 87.5)
-                                .attr("fill", "#black")
-                                .style("font-weight", "500")
-                                .style("font-size", "15")
-                                .attr("text-anchor", "middle")
-                                .style("font-family", "brandon-grotesque")
+                        map.append("g")
+                            .selectAll("path2")
+                            .data(json.features)
+                            .enter()
+                            .append("path")
+                            .attr("class", "statesover")
+                            .attr("d", path)
+                            .attr("stroke", d => typeof d.properties.rating == "number" ? d.properties.rating > 45 ? d.properties.rating < 55 ? "black" : "none" : "none" : d.properties.rating == "Tossup" ? "black" : "none")
+                            .attr("stroke-width", d => 1.5)
+                            .style("fill", "none")
+                            .attr("transform", "translate(-50,0)")
+                            .on("mouseover", function (d) {
+
+                                tool_tip.show();
+                                var tipSVG = d3.select("#tipDiv")
+                                    .append("svg")
+                                    .attr("width", 175)
+                                    .attr("height", 175)
+                                    ;
+                                tipSVG.append("rect")
+                                    .attr("y", 1.5)
+                                    .attr("x", 1.5)
+                                    .attr("width", 172)
+                                    .attr("height", 172)
+                                    .attr("rx", 8)
+                                    .attr("fill", "white")
+                                    .attr("stroke", "black")
+                                    .attr("stroke-width", 2)
+                                tipSVG.append("text")
+                                    .text(d.properties.name)
+                                    .attr("y", 20)
+                                    .attr("x", 87.5)
+                                    .attr("fill", "#black")
+                                    .style("font-weight", "600")
+                                    .style("font-size", "15")
+                                    .attr("text-anchor", "middle")
+                                    .style("font-family", "brandon-grotesque")
+
+                                tipSVG.append("text")
+                                    .text(d.properties.ev + " ELECTORAL VOTES")
+                                    .attr("y", 40)
+                                    .attr("x", 87.5)
+                                    .attr("fill", "#black")
+                                    .style("font-weight", "500")
+                                    .style("font-size", "14")
+                                    .attr("text-anchor", "middle")
+                                    .style("font-family", "brandon-grotesque")
 
 
-                            tipSVG.append("image")
-                                .attr("xlink:href", typeof d.properties.rating == "number" ? d.properties.rating > 50 ? "https://jhkforecasts.com/Trump-01.png" : "https://jhkforecasts.com/Biden-01.png" : d.properties.rating_value == 0 ? "https://jhkforecasts.com/No%20one-01.png" : d.properties.rating_value > 0 ? "https://jhkforecasts.com/Trump-01.png" : "https://jhkforecasts.com/Biden-01.png")
-                                .attr("x", 45)
-                                .attr("y", 50)
-                                .attr("width", 90)
-                                .attr("height", 90)
-                        })
-                        .on('mouseout',
-                            function (d) {
-                                tool_tip.hide()
+                                tipSVG.append("text")
+                                    .text(typeof d.properties.rating == "number" ? d.properties.rating > 50 ? "WIN:" + wholeformat(d.properties.rating) + "%" : "WIN:" + wholeformat(100 - d.properties.rating) + "%" : d.properties.rating)
+                                    .attr("y", 160)
+                                    .attr("x", 87.5)
+                                    .attr("fill", "#black")
+                                    .style("font-weight", "500")
+                                    .style("font-size", "15")
+                                    .attr("text-anchor", "middle")
+                                    .style("font-family", "brandon-grotesque")
+
+
+                                tipSVG.append("image")
+                                    .attr("xlink:href", typeof d.properties.rating == "number" ? d.properties.rating > 50 ? "https://jhkforecasts.com/Trump-01.png" : "https://jhkforecasts.com/Biden-01.png" : d.properties.rating_value == 0 ? "https://jhkforecasts.com/No%20one-01.png" : d.properties.rating_value > 0 ? "https://jhkforecasts.com/Trump-01.png" : "https://jhkforecasts.com/Biden-01.png")
+                                    .attr("x", 45)
+                                    .attr("y", 50)
+                                    .attr("width", 90)
+                                    .attr("height", 90)
                             })
+                            .on('mouseout',
+                                function (d) {
+                                    tool_tip.hide()
+                                })
+                    })
+
+                }
+                var tabledata = forecasts_rating
+                tabledata.sort((a, b) => b.pvi - a.pvi)
+                tabledata.sort((a, b) => b.jhk - a.jhk)
+
+                var all = [];
+                var ex = []
+                var New = []
+                tabledata.forEach(function (d, i) {
+                    all.push([d.state, d.ev, d.jhk, d.bitecofer, d.cook, d.inside, d.politico, d.sabato, d.cnalysis, d.leantoss,d.pluralvote]);
+                    ex.push([d.state, d.ev, d.jhk, d.cook, d.inside, d.politico, d.sabato]);
+                    New.push([d.state, d.ev, d.jhk, d.bitecofer, d.cnalysis, d.leantoss,d.pluralvote]);
                 })
+                var allnames = ["State", "Electoral Votes"]
+                allnames.push(forecasters.map(d => { return d.forecast }))
+                var allnames = allnames.flat()
 
-            }
-            var tabledata = forecasts_rating
-            tabledata.sort((a, b) => b.pvi - a.pvi)
-            tabledata.sort((a, b) => b.jhk - a.jhk)
+                var allwidth = 75 / (allnames.length - 2)
 
-            var all = [];
-            var ex = []
-            var New = []
-            tabledata.forEach(function (d, i) {
-                all.push([d.state, d.ev, d.jhk, d.bitecofer, d.cook, d.inside, d.politico, d.sabato, d.cnalysis, d.leantoss]);
-                ex.push([d.state, d.ev, d.jhk, d.cook, d.inside, d.politico, d.sabato,]);
-                New.push([d.state, d.ev, d.jhk, d.bitecofer, d.cnalysis, d.leantoss]);
+                var exnames = ["State", "Electoral Votes"]
+                exnames.push(expert.map(d => { return d.forecast }))
+                var exnames = exnames.flat()
+
+                var exwidth = 75 / (exnames.length - 2)
+
+                var newnames = ["State", "Electoral Votes"]
+                newnames.push(newcomer.map(d => { return d.forecast }))
+                var newnames = newnames.flat()
+
+                var newwidth = 75 / (newnames.length - 2)
+
+                var alltable = d3.select("#all").append("table")
+                var allheader = alltable.append("thead").append("tr")
+
+
+                allheader
+                    .selectAll("th")
+                    .data(allnames)
+                    .enter()
+                    .append("th")
+                    .style("width", (d, i) => i == 0 ? "20%" : i == 1 ? "5%" : allwidth + "%")
+                    .append("a")
+                    .attr("href", (d, i) => i > 1 ? forecasters.map(d => { return d.link })[i - 2] : "").text(function (d) {
+                        return d
+                    })
+
+                var alltBody = alltable.append("tbody");
+
+                var allrows = alltBody.selectAll("tr")
+                    .data(all)
+                    .enter()
+                    .append("tr")
+
+                allrows
+                    .selectAll("td")
+                    .data(function (d) {
+                        return d;
+                    })
+                    .enter()
+                    .append("td")
+                    .style("background-color", (d, i) => typeof d == "number" ? i == 1 ? "white" : color(d) : i > 2 ? colorsratings[ratings.indexOf(d)] : "none")
+                    .text((d, i) => typeof d == "number" ? i == 1 ? d : wholeformat(Math.abs(d - 50) + 50) + "%" : i > 2 ? d.split(" ")[0] : d)
+
+                //experts table
+                var extable = d3.select("#ex").append("table")
+                var exheader = extable.append("thead").append("tr")
+
+
+                exheader
+                    .selectAll("th")
+                    .data(exnames)
+                    .enter()
+                    .append("th")
+                    .style("width", (d, i) => i == 0 ? "20%" : i == 1 ? "5%" : exwidth + "%")
+                    .append("a")
+                    .attr("href", (d, i) => i > 1 ? expert.map(d => { return d.link })[i - 2] : "").text(function (d) {
+                        return d
+                    })
+
+                var extBody = extable.append("tbody");
+
+                var exrows = extBody.selectAll("tr")
+                    .data(ex)
+                    .enter()
+                    .append("tr")
+
+                exrows
+                    .selectAll("td")
+                    .data(function (d) {
+                        return d;
+                    })
+                    .enter()
+                    .append("td")
+                    .style("background-color", (d, i) => typeof d == "number" ? i == 1 ? "white" : color(d) : i > 2 ? colorsratings[ratings.indexOf(d)] : "none")
+                    .text((d, i) => typeof d == "number" ? i == 1 ? d : wholeformat(Math.abs(d - 50) + 50) + "%" : i > 2 ? d.split(" ")[0] : d)
+
+                //newcomer table
+                var newtable = d3.select("#new").append("table")
+                var newheader = newtable.append("thead").append("tr")
+
+
+                newheader
+                    .selectAll("th")
+                    .data(newnames)
+                    .enter()
+                    .append("th")
+                    .style("width", (d, i) => i == 0 ? "20%" : i == 1 ? "5%" : newwidth + "%")
+                    .append("a")
+                    .attr("href", (d, i) => i > 1 ? newcomer.map(d => { return d.link })[i - 2] : "").text(function (d) {
+                        return d
+                    })
+
+                var newtBody = newtable.append("tbody");
+
+                var newrows = newtBody.selectAll("tr")
+                    .data(New)
+                    .enter()
+                    .append("tr")
+                newrows
+                    .selectAll("td")
+                    .data(function (d) {
+                        return d;
+                    })
+                    .enter()
+                    .append("td")
+                    .style("background-color", (d, i) => typeof d == "number" ? i == 1 ? "white" : color(d) : i > 2 ? colorsratings[ratings.indexOf(d)] : "none")
+                    .text((d, i) => typeof d == "number" ? i == 1 ? d : wholeformat(Math.abs(d - 50) + 50) + "%" : i > 2 ? d.split(" ")[0] : d)
+
+
+                var selectbox = d3.select("#selectbox")
+                    .on("change", function () {
+                        update(this.value)
+                    })
+
+                var selectbox2 = d3.select("#selectbox2")
+                    .on("change", function () {
+                        this.value == "all" ? d3.select("#new").style("display", "none") && d3.select("#ex").style("display", "none") && d3.select("#all").style("display", "block") :
+                            this.value == "new" ? d3.select("#new").style("display", "block") && d3.select("#ex").style("display", "none") && d3.select("#all").style("display", "none") :
+                                d3.select("#new").style("display", "none") && d3.select("#ex").style("display", "block") && d3.select("#all").style("display", "none")
+                    })
             })
-            var allnames = ["State", "Electoral Votes"]
-            allnames.push(forecasters.map(d => { return d.forecast }))
-            var allnames = allnames.flat()
-
-            var allwidth = 75 / (allnames.length-2)
-
-            var exnames = ["State", "Electoral Votes"]
-            exnames.push(expert.map(d => { return d.forecast }))
-            var exnames = exnames.flat()
-
-            var exwidth = 75 / (exnames.length-2)
-
-            var newnames = ["State", "Electoral Votes"]
-            newnames.push(newcomer.map(d => { return d.forecast }))
-            var newnames = newnames.flat()
-
-            var newwidth = 75 / (newnames.length-2)
-
-            var alltable = d3.select("#all").append("table")
-            var allheader = alltable.append("thead").append("tr")
-
-
-            allheader
-                .selectAll("th")
-                .data(allnames)
-                .enter()
-                .append("th")
-                .style("width", (d, i) => i == 0 ? "20%" : i == 1 ? "5%" : allwidth +"%")
-                .append("a")
-                .attr("href", (d, i) => i > 1 ? forecasters.map(d => { return d.link })[i - 2] : "").text(function (d) {
-                    return d
-                })
-
-            var alltBody = alltable.append("tbody");
-
-            var allrows = alltBody.selectAll("tr")
-                .data(all)
-                .enter()
-                .append("tr")
-
-            allrows
-                .selectAll("td")
-                .data(function (d) {
-                    return d;
-                })
-                .enter()
-                .append("td")
-                .style("background-color", (d, i) => typeof d == "number" ? i == 1 ? "white" : color(d) : i > 2 ? colorsratings[ratings.indexOf(d)] : "none")
-                .text((d, i) => typeof d == "number" ? i == 1 ? d : wholeformat(Math.abs(d - 50) + 50) + "%" : i > 2 ? d.split(" ")[0] : d)
-
-            //experts table
-            var extable = d3.select("#ex").append("table")
-            var exheader = extable.append("thead").append("tr")
-
-
-            exheader
-                .selectAll("th")
-                .data(exnames)
-                .enter()
-                .append("th")
-                .style("width", (d, i) => i == 0 ? "20%" : i == 1 ? "5%" : exwidth +"%")
-                .append("a")
-                .attr("href", (d, i) => i > 1 ? expert.map(d => { return d.link })[i - 2] : "").text(function (d) {
-                    return d
-                })
-
-            var extBody = extable.append("tbody");
-
-            var exrows = extBody.selectAll("tr")
-                .data(ex)
-                .enter()
-                .append("tr")
-
-            exrows
-                .selectAll("td")
-                .data(function (d) {
-                    return d;
-                })
-                .enter()
-                .append("td")
-                .style("background-color", (d, i) => typeof d == "number" ? i == 1 ? "white" : color(d) : i > 2 ? colorsratings[ratings.indexOf(d)] : "none")
-                .text((d, i) => typeof d == "number" ? i == 1 ? d : wholeformat(Math.abs(d - 50) + 50) + "%" : i > 2 ? d.split(" ")[0] : d)
-
-            //newcomer table
-            var newtable = d3.select("#new").append("table")
-            var newheader = newtable.append("thead").append("tr")
-
-
-            newheader
-                .selectAll("th")
-                .data(newnames)
-                .enter()
-                .append("th")
-                .style("width", (d, i) => i == 0 ? "20%" : i == 1 ? "5%" : newwidth +"%")
-                .append("a")
-                .attr("href", (d, i) => i > 1 ? newcomer.map(d => { return d.link })[i - 2] : "").text(function (d) {
-                    return d
-                })
-
-            var newtBody = newtable.append("tbody");
-
-            var newrows = newtBody.selectAll("tr")
-                .data(New)
-                .enter()
-                .append("tr")
-            newrows
-                .selectAll("td")
-                .data(function (d) {
-                    return d;
-                })
-                .enter()
-                .append("td")
-                .style("background-color", (d, i) => typeof d == "number" ? i == 1 ? "white" : color(d) : i > 2 ? colorsratings[ratings.indexOf(d)] : "none")
-                .text((d, i) => typeof d == "number" ? i == 1 ? d : wholeformat(Math.abs(d - 50) + 50) + "%" : i > 2 ? d.split(" ")[0] : d)
-
-
-            var selectbox = d3.select("#selectbox")
-                .on("change", function () {
-                    update(this.value)
-                })
-
-            var selectbox2= d3.select("#selectbox2")
-                .on("change", function () {
-                    this.value == "all"?d3.select("#new").style("display","none") && d3.select("#ex").style("display","none")&&d3.select("#all").style("display","block"):
-                    this.value == "new"?d3.select("#new").style("display","block") && d3.select("#ex").style("display","none")&&d3.select("#all").style("display","none"):
-                    d3.select("#new").style("display","none") && d3.select("#ex").style("display","block")&&d3.select("#all").style("display","none")
-
-                })
-
-
-
         })
     })
 })
