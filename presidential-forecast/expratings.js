@@ -125,7 +125,7 @@ d3.csv("https://data.jhkforecasts.com/2020-LT-pres.csv", leantoss => {
             return d.win
         })
         d3.csv("https://raw.githubusercontent.com/seanelevan/pluralvote/master/web/article/2020-forecast/statebystateprob.csv?token=AIYCOI3LWILZQWFAUIU33X26QKW26", pluralvote => {
-            pluralvote.shift()
+            
             var pluralvote = pluralvote.map((d, i) => {
                 return {
                     state: d.stateNames,
@@ -137,6 +137,7 @@ d3.csv("https://data.jhkforecasts.com/2020-LT-pres.csv", leantoss => {
                 if (a.state > b.state) { return 1; }
                 return 0;
             })
+            pluralvote.shift()
             var cds = [pluralvote.splice(20, 2), pluralvote.splice(28, 3)].flat()
             pluralvote.push(cds)
             var pluralvote = pluralvote.flat()
