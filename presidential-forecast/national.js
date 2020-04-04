@@ -263,6 +263,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
       .attr("font-size", "10")
       .attr("fill", "black")
       .attr("text-anchor", "middle")
+      
 
 
     map.selectAll("path2")
