@@ -4,6 +4,7 @@ var color = d3.scaleLinear()
     .range(["#0091FF", "white", "#FF6060"]),
     dataformat = d3.format(".1f")
 d3.csv("apr-4-20-v-16.csv", state => {
+    console.log(state)
     var state = state.slice(0, 51);
     state.sort(function (a, b) {
         if (a.state < b.state) { return -1; }
@@ -41,7 +42,7 @@ d3.csv("apr-4-20-v-16.csv", state => {
             var yv = map_labels[i].yValue
             var label = map_labels[i].label
             var region = map_labels[i].region
-
+            var margin = state[i].vote_margin
 
             for (var j = 0; j < json.features.length; j++) {
                 var jsonState = json.features[j].properties.name;
@@ -52,7 +53,7 @@ d3.csv("apr-4-20-v-16.csv", state => {
                     json.features[j].properties.yv = yv
                     json.features[j].properties.xv = xv
                     json.features[j].properties.region = region
-
+                    json.features[j].properties.margin = +margin
                     break;
                 }
             }
@@ -63,6 +64,7 @@ d3.csv("apr-4-20-v-16.csv", state => {
         var northeast = mapdata.filter(d => d.properties.region == "northeast")
         var south = mapdata.filter(d => d.properties.region == "south")
         var west = mapdata.filter(d => d.properties.region == "west")
+        var battlegrounds = mapdata.filter(d => Math.abs(d.properties.margin) < 10)
 
         map.append("g")
             .selectAll("path2")
@@ -76,7 +78,7 @@ d3.csv("apr-4-20-v-16.csv", state => {
 
         map.append("g")
             .selectAll("path2")
-            .data(west)
+            .data(battlegrounds)
             .enter()
             .append("path")
             .attr("d", path)
@@ -85,7 +87,7 @@ d3.csv("apr-4-20-v-16.csv", state => {
             .style("fill", d => color(d.properties.value))
 
         map.selectAll("label")
-            .data(west)
+            .data(battlegrounds)
             .enter()
             .append("text")
             .text(d => d.properties.label)
@@ -98,7 +100,7 @@ d3.csv("apr-4-20-v-16.csv", state => {
             .style("font-weight", "400")
 
         map.selectAll("label")
-            .data(west)
+            .data(battlegrounds)
             .enter()
             .append("text")
             .text(d => dataformat(d.properties.value))
