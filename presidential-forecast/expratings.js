@@ -66,8 +66,8 @@ var wholeformat = d3.format(".0f")
 var numberformat = d3.format(".1f")
 var forecasts = forecasters.map(d => { return d.shorthand })
 var color = d3.scaleLinear()
-    .domain([0, 50, 100])
-    .range(["#0091FF", "white", "#FF6060"]);
+    .domain([0, 49.5, 50, 50.5, 100])
+    .range(["#0091FF", "#EEF8FF", "white", "#FFF1F1", "#FF6060"]);
 var gopscale = d3.scaleLinear()
     .domain([20, 80])
     .range(["white", "#FF6060"]);
@@ -108,7 +108,7 @@ var ratings_colors = d3.scaleOrdinal()
 var numberformat = d3.format(".1%");
 var numberFormat = d3.format(".0%");
 
-d3.csv("https://data.jhkforecasts.com/2020-LT-pres.csv", leantoss => {
+d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/LT_Data.csv", leantoss => {
     var leantoss = leantoss.map((d, i) => {
         return +d.gop_win
     })
@@ -125,7 +125,7 @@ d3.csv("https://data.jhkforecasts.com/2020-LT-pres.csv", leantoss => {
             return d.win
         })
         d3.csv("https://raw.githubusercontent.com/seanelevan/pluralvote/master/web/article/2020-forecast/statebystateprob.csv?token=AIYCOI3LWILZQWFAUIU33X26QKW26", pluralvote => {
-            
+
             var pluralvote = pluralvote.map((d, i) => {
                 return {
                     state: d.stateNames,
