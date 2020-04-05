@@ -78,7 +78,7 @@ d3.csv("apr-4-20-v-16.csv", state => {
 
         map.append("g")
             .selectAll("path2")
-            .data(battlegrounds)
+            .data(mapdata)
             .enter()
             .append("path")
             .attr("d", path)
@@ -87,7 +87,7 @@ d3.csv("apr-4-20-v-16.csv", state => {
             .style("fill", d => color(d.properties.value))
 
         map.selectAll("label")
-            .data(battlegrounds)
+            .data(mapdata)
             .enter()
             .append("text")
             .text(d => d.properties.label)
@@ -100,7 +100,7 @@ d3.csv("apr-4-20-v-16.csv", state => {
             .style("font-weight", "400")
 
         map.selectAll("label")
-            .data(battlegrounds)
+            .data(mapdata)
             .enter()
             .append("text")
             .text(d => dataformat(d.properties.value))
