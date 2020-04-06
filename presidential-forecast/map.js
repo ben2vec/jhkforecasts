@@ -66,6 +66,14 @@ d3.csv("apr-4-20-v-16.csv", state => {
         var west = mapdata.filter(d => d.properties.region == "west")
         var battlegrounds = mapdata.filter(d => Math.abs(d.properties.margin) < 10)
 
+        map.append("text")
+            .text("Projected 2020 Margin - 2016 Margin")
+            .attr("x", 525)
+            .attr("y", 30)
+            .attr("font-size", "20")
+            .attr("fill", "black")
+            .attr("text-anchor", "middle")
+            .style("font-weight", "800")
         map.append("g")
             .selectAll("path2")
             .data(mapdata)
@@ -78,7 +86,7 @@ d3.csv("apr-4-20-v-16.csv", state => {
 
         map.append("g")
             .selectAll("path2")
-            .data(mapdata)
+            .data(battlegrounds)
             .enter()
             .append("path")
             .attr("d", path)
@@ -87,7 +95,7 @@ d3.csv("apr-4-20-v-16.csv", state => {
             .style("fill", d => color(d.properties.value))
 
         map.selectAll("label")
-            .data(mapdata)
+            .data(battlegrounds)
             .enter()
             .append("text")
             .text(d => d.properties.label)
@@ -100,7 +108,7 @@ d3.csv("apr-4-20-v-16.csv", state => {
             .style("font-weight", "400")
 
         map.selectAll("label")
-            .data(mapdata)
+            .data(battlegrounds)
             .enter()
             .append("text")
             .text(d => dataformat(d.properties.value))

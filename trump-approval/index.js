@@ -112,7 +112,7 @@ d3.csv("https://projects.fivethirtyeight.com/polls-page/president_approval_polls
     var height = 450 - margin.top - margin.bottom
     var axisPad = 12
 
-    var data = data2.map((d, i) => {
+    var data = data.map((d, i) => {
         return {
             date: parseTime(d.date),
             day: i + 5,
