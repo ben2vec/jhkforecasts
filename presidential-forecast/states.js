@@ -476,7 +476,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     ;
 
   var line = d3.line()
-    .curve(d3.curveCatmullRom)
+    .curve(d3.curveLinear)
     .x(d => x(d.date))
     .y(d => y(d.pct));
 
@@ -597,6 +597,8 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
       .style("stroke", (d, i) => colors[i])
       .style("stroke-width", 3)
       .style("opacity", .9)
+      .style("stroke-linecap", "round")
+      .attr("stroke-linejoin", "round")
       .merge(city)
       .transition().duration(speed)
       .attr("d", d => line(d.values))

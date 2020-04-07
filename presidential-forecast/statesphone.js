@@ -5,7 +5,7 @@ var category = ["gop", "dem", "third"]
 var cand_colors = d3.scaleOrdinal()
   .domain(category)
   .range(["#FF6060", "#0091FF", "#FFE130"])
-  var wholeformat = d3.format(".0f")
+var wholeformat = d3.format(".0f")
 var dateparse = d3.timeParse("%m/%d/%y")
 
 var tformat = d3.timeFormat("%m/%d/%Y")
@@ -401,7 +401,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
 
   var time_data = data.filter(d => d.state == key_state)
 
-   var lol
+  var lol
   var data_length = time_data.filter(d => d.party == "gop").length
   var max_date = d3.max(time_data, d => d.forecast_date)
   var line_data = []
@@ -449,7 +449,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     ;
 
   var line = d3.line()
-    .curve(d3.curveCatmullRom)
+    .curve(d3.curveLinear)
     .x(d => xphone(d.date))
     .y(d => yphone(d.pct));
 
@@ -570,6 +570,8 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
       .style("stroke", (d, i) => colors[i])
       .style("stroke-width", 4)
       .style("opacity", .9)
+      .style("stroke-linecap", "round")
+      .attr("stroke-linejoin", "round")
       .merge(city)
       .transition().duration(speed)
       .attr("d", d => line(d.values))
@@ -637,7 +639,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
           .attr("x", xphone(d.date) + 10)
           .text((e, i) => i == 1 ? ("Biden " + onevalue(d[e]) + "%") : i == 0 ? "Trump " + onevalue(d[e]) + "%" : "Third " + onevalue(d[e]) + "%")
           .attr("y", e => d[e] == d["gop" + input] ? yphone(d["gop" + input]) >= yphone(d["dem" + input]) ? yphone(d["gop" + input]) + 15 : yphone(d["gop" + input]) - 15 : d[e] == d["dem" + input] ? yphone(d["dem" + input]) > yphone(d["gop" + input]) ? yphone(d["dem" + input]) + 15 : yphone(d["dem" + input]) - 15 : yphone(d[e]) - 15)
-          .attr("text-anchor",(e, i)=>i == 2? "end":"start")
+          .attr("text-anchor", (e, i) => i == 2 ? "end" : "start")
           .attr("dominant-baseline", "middle")
 
         focus.selectAll(".lineHoverText")
@@ -646,7 +648,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
           .text((e, i) => input == "ev" ? i == 1 ? ("Biden " + onevalue(d[e])) : i == 0 ? "Trump " + onevalue(d[e]) : "Third " + onevalue(d[e]) : i == 1 ? ("Biden " + onevalue(d[e]) + "%") : i == 0 ? "Trump " + onevalue(d[e]) + "%" : "Third " + onevalue(d[e]) + "%")
           .attr("fill", (e, i) => colors[i])
           .attr("y", e => d[e] == d["gop" + input] ? yphone(d["gop" + input]) >= yphone(d["dem" + input]) ? yphone(d["gop" + input]) + 15 : yphone(d["gop" + input]) - 15 : d[e] == d["dem" + input] ? yphone(d["dem" + input]) > yphone(d["gop" + input]) ? yphone(d["dem" + input]) + 15 : yphone(d["dem" + input]) - 15 : yphone(d[e]) - 15)
-          .attr("text-anchor", (e, i)=>i == 2? "end":"start")
+          .attr("text-anchor", (e, i) => i == 2 ? "end" : "start")
           .attr("dominant-baseline", "middle")
 
         focus.select(".lineHoverDate")
@@ -937,7 +939,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
       })
       data.sort((a, b) => a.party_id - b.party_id)
 
-      
+
 
       var datanew = d3.nest()
         .key(d => d.question_id)
