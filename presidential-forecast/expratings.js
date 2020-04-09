@@ -444,7 +444,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/LT_Data.
                             .attr("cy", (d, i) => 200 + i * 30)
                             .attr("r", 10)
                             .attr("fill", (d, i) => colorsratings[i])
-                            .attr("stroke",(d,i)=>i==4?"black":"white")
+                            .attr("stroke", (d, i) => i == 4 ? "black" : "white")
 
                         map.selectAll("ratings")
                             .data(ratings)
