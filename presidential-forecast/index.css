@@ -94,6 +94,11 @@
    padding: 10%;
  }
 
+ @font-face {
+   font-family: decima-pro;
+   src: url(https://fivethirtyeight.com/wp-content/themes/espn-fivethirtyeight/assets/fonts/decimamonopro-webfont.woff2);
+ }
+
  input {
    margin-right: 10px;
    font-family: brandon-grotesque, sans-serif;
@@ -261,21 +266,20 @@
    background-color: black;
    border: none;
  }
- div.banner {
- 
-  top: 0;
-  background-color: white;
-  border-bottom: black solid 1px;
-  margin-left: -8px;
-  margin-right: -8px;
-}
 
-div.sticky {
- 
-  top: 0;
-  background-color: white;
-  border-bottom: black solid 1px;
-  margin-left: -8px;
-  margin-right: -8px;
-  position: sticky
-}
+ div.banner {
+   top: 0;
+   background-color: white;
+   border-bottom: black solid 1px;
+   margin-left: -8px;
+   margin-right: -8px;
+ }
+
+ div.sticky {
+   top: 0;
+   background-color: white;
+   border-bottom: black solid 1px;
+   margin-left: -8px;
+   margin-right: -8px;
+   position: sticky
+ }
