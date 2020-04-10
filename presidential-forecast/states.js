@@ -87,7 +87,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
 
 
   topline.append("text")
-    .text("Chance of an upset is about the chance of...")
+    .text("Chance of an upset is about the odds of...")
     .attr("y", 100)
     .attr("x", 750)
     .attr("fill", "black")
@@ -1139,7 +1139,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
               .attr("text-decoration", "none")
           })
           .call(wrap, 250)
-
+ 
 
 
         bottom.selectAll("cands")

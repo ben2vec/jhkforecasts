@@ -20,7 +20,31 @@ var map_labels = [{ "state": "Alabama", "label": "AL", "xValue": 637, "yValue": 
 var projection = d3.geoAlbersUsa()
   .translate([widthmap / 2, heightmap / 2])
   .scale([900]);
+var event_odds = [
+  { event: "flipping a coin", odds: 50 },
+  { event: "getting a one pair", odds: 43.8 },
+  { event: "NBA player makes a three", odds: 36 },
+  { event: "MLB batter getting on base", odds: 30.8 },
+  { event: "getting a two pair", odds: 23.5 },
+  { event: "rolling a six on a die", odds: 16.666 },
+  { event: "picking a random digit", odds: 10 },
+  { event: "picking an ace", odds: 7.69 },
+  { event: "getting a blackjack", odds: 4.8 },
+  { event: "getting a full house", odds: 2.8 },
+  { event: "getting a four of a kind", odds: 0.168 },
+  { event: "getting a royal flush", odds: 0 },
+]
 
+var events = event_odds.map((d, i) => {
+  return d.event
+})
+
+var odds = event_odds.map((d, i) => {
+  return d.odds
+})
+var odds_scale = d3.scaleLinear()
+  .domain(odds)
+  .range([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
 var path = d3.geoPath()
   .projection(projection);
 
@@ -57,7 +81,34 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
   document.getElementById("updated").innerHTML = "Updated: " + updated
 
   var newest_data = data.slice(data.length - 171, data.length)
+  var upset_odds = newest_data[168].win > newest_data[169].win ? newest_data[169].win : newest_data[168].win
 
+  map.append("text")
+    .text("Chance of an upset is about the odds of...")
+    .attr("y", -30)
+    .attr("x", 450)
+    .attr("fill", "black")
+    .attr("text-anchor", "middle")
+    .attr("font-size", 15)
+    .attr("font-weight", 800)
+
+
+  map.append("text")
+    .text(events[Math.round(odds_scale(upset_odds))])
+    .attr("y", 10)
+    .attr("x", 450)
+    .attr("fill", "black")
+    .attr("text-anchor", "middle")
+    .attr("font-size", 25)
+    .attr("font-weight", 800)
+
+
+  map.append("image")
+    .attr("href", events[Math.round(odds_scale(upset_odds))] + ".svg")
+    .attr("x", 600)
+    .attr("y", -40)
+    .attr("height", 100)
+    .attr("width", 100)
 
   var sd = []
   for (let k = 0; k < map_states.length; k++) {
@@ -85,12 +136,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
 
 
   var boxstates = [sd[28], sd[44], sd[20], sd[38], sd[6], sd[7], sd[19], sd[50]]
-  map.append("rect")
-    .attr("x", 100)
-    .attr("y", 50)
-    .attr("width", 1000)
-    .attr("height", 1000)
-    .attr("fill", "white")
+  
 
   map.selectAll()
     .data(boxstates)
@@ -199,7 +245,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
         .style("font-weight", "600")
         .style("font-size", 20)
         .attr("text-anchor", "middle")
-        
+
 
 
 
@@ -262,11 +308,11 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
       .text(d => d.properties.label)
       .attr("x", d => d.properties.xv)
       .attr("y", d => d.properties.yv)
-      .style("font-family","sf-mono")
+      .style("font-family", "sf-mono")
       .attr("font-size", "9")
       .attr("fill", "black")
       .attr("text-anchor", "middle")
-      .attr("font-weight",400)
+      .attr("font-weight", 400)
 
 
 
@@ -435,7 +481,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
       .attr("font-size", "15")
       .attr("fill", "black")
       .attr("text-anchor", "end")
-      
+
 
     map.append("text")
       .text(numberformat(newest_data[168].win) + "%")
@@ -446,7 +492,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
       .attr("font-size", "30")
       .attr("fill", colors[0])
       .attr("text-anchor", "end")
-      
+
 
     map.append("text")
       .text(numberformat(newest_data[169].win) + "%")
@@ -1146,15 +1192,15 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
       .data(sd3)
       .enter()
       .append("text")
-      .text(d =>d.label)
+      .text(d => d.label)
       .attr("x", d => d.x)
       .attr("y", d => d.y)
       .attr("fill", "black")
       .attr("text-anchor", "middle")
       .attr("dominant-baseline", "central")
       .attr("font-size", 8)
-      .attr("font-weight",600)
-      .style("font-family","sf-mono")
+      .attr("font-weight", 600)
+      .style("font-family", "sf-mono")
 
 
     bubblemap.selectAll("overfill")
