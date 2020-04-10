@@ -221,7 +221,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
       var ev = sd[i].electoral_votes
       var xv = sd[i].x_value
       var yv = sd[i].y_value
-      var label = sd[i].label.toLowerCase()
+      var label = sd[i].label
 
 
       for (var j = 0; j < json.features.length; j++) {
@@ -261,10 +261,11 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
       .text(d => d.properties.label)
       .attr("x", d => d.properties.xv)
       .attr("y", d => d.properties.yv)
-      .attr("font-size", "12")
+      .style("font-family","SF Mono")
+      .attr("font-size", "9")
       .attr("fill", "black")
       .attr("text-anchor", "middle")
-      .attr("font-weight",600)
+      .attr("font-weight",400)
 
 
 
