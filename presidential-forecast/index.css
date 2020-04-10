@@ -93,12 +93,8 @@
    text-align: center;
    padding: 10%;
  }
-
- @font-face {
-   font-family: decima-pro;
-   src: url(https://fivethirtyeight.com/wp-content/themes/espn-fivethirtyeight/assets/fonts/decimamonopro-webfont.woff2);
- }
-
+ @font-face { font-family: "sf-mono"; font-weight: 500; font-style: normal; src: url(https://jhkforecasts.com/fonts/SFMono-Regular.otf); }
+ 
  input {
    margin-right: 10px;
    font-family: brandon-grotesque, sans-serif;

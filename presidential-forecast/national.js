@@ -199,6 +199,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
         .style("font-weight", "600")
         .style("font-size", 20)
         .attr("text-anchor", "middle")
+        
 
 
 
@@ -261,7 +262,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
       .text(d => d.properties.label)
       .attr("x", d => d.properties.xv)
       .attr("y", d => d.properties.yv)
-      .style("font-family","SF Mono")
+      .style("font-family","sf-mono")
       .attr("font-size", "9")
       .attr("fill", "black")
       .attr("text-anchor", "middle")
@@ -434,6 +435,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
       .attr("font-size", "15")
       .attr("fill", "black")
       .attr("text-anchor", "end")
+      
 
     map.append("text")
       .text(numberformat(newest_data[168].win) + "%")
@@ -444,6 +446,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
       .attr("font-size", "30")
       .attr("fill", colors[0])
       .attr("text-anchor", "end")
+      
 
     map.append("text")
       .text(numberformat(newest_data[169].win) + "%")
@@ -1143,14 +1146,15 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
       .data(sd3)
       .enter()
       .append("text")
-      .text(d =>typeof d.label =="number"?d.label: d.label.toLowerCase())
+      .text(d =>d.label)
       .attr("x", d => d.x)
-      .attr("y", d => d.y+1.1)
+      .attr("y", d => d.y)
       .attr("fill", "black")
       .attr("text-anchor", "middle")
-      .attr("dominant-baseline", "middle")
-      .attr("font-size", 10)
+      .attr("dominant-baseline", "central")
+      .attr("font-size", 8)
       .attr("font-weight",600)
+      .style("font-family","sf-mono")
 
 
     bubblemap.selectAll("overfill")
