@@ -109,9 +109,17 @@ var numberformat = d3.format(".1%");
 var numberFormat = d3.format(".0%");
 
 d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/LT_Data.csv", leantoss => {
-    var leantoss = leantoss.map((d, i) => {
-        return +d.gop_win
+    leantoss.sort(function (a, b) {
+        if (a.state < b.state) { return -1; }
+        if (a.state > b.state) { return 1; }
+        return 0;
     })
+
+    var ltcds = [leantoss.splice(19, 2), leantoss.splice(27, 3)].flat()
+    leantoss.push(ltcds)
+    var leantoss = leantoss.flat()
+    console.log(leantoss)
+
 
     d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", jhk => {
         jhk.forEach((d, i) => {
@@ -138,8 +146,8 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/LT_Data.
                 return 0;
             })
             pluralvote.shift()
-            var cds = [pluralvote.splice(20, 2), pluralvote.splice(28, 3)].flat()
-            pluralvote.push(cds)
+            var pvcds = [pluralvote.splice(20, 2), pluralvote.splice(28, 3)].flat()
+            pluralvote.push(pvcds)
             var pluralvote = pluralvote.flat()
             console.log(pluralvote)
 
@@ -157,7 +165,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/LT_Data.
                         politico: d.politico,
                         sabato: d.sabato,
                         cnalysis: d.cnanalysis,
-                        leantoss: leantoss[i],
+                        leantoss: +leantoss[i].gop_win,
                         pluralvote: pluralvote[i].win
                     }
                 })
