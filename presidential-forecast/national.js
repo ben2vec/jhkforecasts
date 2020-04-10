@@ -107,14 +107,14 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
     .data(boxstates)
     .enter()
     .append("text")
-    .text(d => d.label)
+    .text(d => d.label.toLowerCase())
     .attr("x", 840)
     .attr("y", (d, i) => 137.5 + 15 * i)
-    .style("font-family", "source-code-pro")
-    .attr("font-size", "9")
+    .style("font-family", "brandon-grotesque")
+    .attr("font-size", "10")
     .attr("fill", "black")
     .attr("text-anchor", "middle")
-    .style("font-weight", "400")
+    .style("font-weight", "600")
     .attr("dominant-baseline", "central")
 
   map.selectAll()
@@ -221,7 +221,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
       var ev = sd[i].electoral_votes
       var xv = sd[i].x_value
       var yv = sd[i].y_value
-      var label = sd[i].label
+      var label = sd[i].label.toLowerCase()
 
 
       for (var j = 0; j < json.features.length; j++) {
@@ -261,10 +261,10 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
       .text(d => d.properties.label)
       .attr("x", d => d.properties.xv)
       .attr("y", d => d.properties.yv)
-      .style("font-family", "source-code-pro")
-      .attr("font-size", "9")
+      .attr("font-size", "12")
       .attr("fill", "black")
       .attr("text-anchor", "middle")
+      .attr("font-weight",600)
 
 
 
@@ -1142,14 +1142,14 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
       .data(sd3)
       .enter()
       .append("text")
-      .text(d => d.label)
+      .text(d =>typeof d.label =="number"?d.label: d.label.toLowerCase())
       .attr("x", d => d.x)
-      .attr("y", d => d.y + 1.1)
+      .attr("y", d => d.y+1.1)
       .attr("fill", "black")
       .attr("text-anchor", "middle")
       .attr("dominant-baseline", "middle")
-      .attr("font-size", 8)
-      .style("font-family", "source-code-pro")
+      .attr("font-size", 10)
+      .attr("font-weight",600)
 
 
     bubblemap.selectAll("overfill")
