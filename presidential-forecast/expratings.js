@@ -326,7 +326,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/LT_Data.
                             .attr("font-size", "10")
                             .attr("fill", "black")
                             .attr("text-anchor", "middle")
-                            .style("font-weight", "400")
+                            .style("font-weight", "500")
                             .attr("dominant-baseline", "central")
 
                         map.selectAll()
@@ -363,7 +363,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/LT_Data.
                                     .attr("y", 20)
                                     .attr("x", 87.5)
                                     .attr("fill", "#black")
-                                    .style("font-weight", "600")
+                                    .attr("font-weight", "500")
                                     .style("font-size", "15")
                                     .attr("text-anchor", "middle")
                                     .style("font-family", "brandon-grotesque")
@@ -531,7 +531,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/LT_Data.
                             .attr("font-size", "10")
                             .attr("fill", "black")
                             .attr("text-anchor", "middle")
-                            .style("font-weight", "400")
+                            .style("font-weight", "500")
                             .attr("transform", "translate(-50,0)")
 
 
@@ -570,7 +570,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/LT_Data.
                                     .attr("y", 20)
                                     .attr("x", 87.5)
                                     .attr("fill", "#black")
-                                    .style("font-weight", "600")
+                                    .attr("font-weight", "500")
                                     .style("font-size", "15")
                                     .attr("text-anchor", "middle")
                                     .style("font-family", "brandon-grotesque")

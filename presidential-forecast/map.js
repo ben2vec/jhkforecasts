@@ -118,7 +118,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
             .attr("font-size", "10")
             .attr("fill", "black")
             .attr("text-anchor", "middle")
-            .style("font-weight", "400")
+            .style("font-weight", "500")
 
         map.selectAll("label")
             .data(battleground)
