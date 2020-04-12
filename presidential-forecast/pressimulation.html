@@ -691,7 +691,7 @@
 					.attr("y", -10)
 					.style("fill", "Black")
 					.style("font-size", 15)
-					.attr("font-weight", 400)
+					.attr("font-weight", "500")
 					.text(d => d.state)
 					.attr("text-anchor", "start")
 
@@ -701,7 +701,7 @@
 					.attr("y", -10)
 					.style("fill", "Black")
 					.style("font-size", 15)
-					.attr("font-weight", 400)
+					.attr("font-weight", "500")
 					.text(d => d.electoralvotes)
 					.attr("text-anchor", "middle")
 
@@ -711,7 +711,7 @@
 					.attr("y", -10)
 					.style("fill", "Black")
 					.style("font-size", 12)
-					.attr("font-weight", 400)
+					.attr("font-weight", "500")
 					.text(d => formatvalue(d.demvote) + "%")
 					.attr("text-anchor", "middle")
 
@@ -721,7 +721,7 @@
 					.attr("y", -10)
 					.style("fill", "Black")
 					.style("font-size", 12)
-					.attr("font-weight", 400)
+					.attr("font-weight", "500")
 					.text(d => formatvalue(d.gopvote) + "%")
 					.attr("text-anchor", "middle")
 
@@ -731,7 +731,7 @@
 					.attr("y", -10)
 					.style("fill", "Black")
 					.style("font-size", 12)
-					.attr("font-weight", 400)
+					.attr("font-weight", "500")
 					.text(d => formatValue(d.thirdvote) + "%")
 					.attr("text-anchor", "middle")
 
@@ -742,7 +742,7 @@
 					.attr("y", -10)
 					.style("fill", d => d.margin >= 0 ? gopwincol : demwincol)
 					.style("font-size", 12)
-					.attr("font-weight", 400)
+					.attr("font-weight", "500")
 					.text(d => d.margin >= 0 ? "Trump +" + formatValue(d.margin) + "%" : "Democrat +" + formatValue(Math.abs(d.margin)) + "%")
 					.attr("text-anchor", "middle")
 
@@ -753,7 +753,7 @@
 					.attr("y", -10)
 					.style("fill", d => d.tippingpoint == 1 ? gopev >= 270 ? gopwincol : demwincol : "black")
 					.style("font-size", 15)
-					.attr("font-weight", 400)
+					.attr("font-weight", "500")
 					.text(d => d.indexev + d.electoralvotes)
 					.attr("text-anchor", "middle")
 
@@ -773,7 +773,7 @@
 					.attr("y", 1060)
 					.style("fill", "Black")
 					.style("font-size", 20)
-					.attr("font-weight", 400)
+					.attr("font-weight", "500")
 					.text("State")
 					.attr("text-anchor", "start")
 
@@ -783,7 +783,7 @@
 					.attr("y", 1060)
 					.style("fill", "Black")
 					.style("font-size", 15)
-					.attr("font-weight", 400)
+					.attr("font-weight", "500")
 					.text("Electoral Votes")
 					.attr("text-anchor", "middle")
 
@@ -793,7 +793,7 @@
 					.attr("y", 1060)
 					.style("fill", "Black")
 					.style("font-size", 12)
-					.attr("font-weight", 400)
+					.attr("font-weight", "500")
 					.text("Democrat ranked EVs")
 					.attr("text-anchor", "middle")
 
@@ -803,7 +803,7 @@
 					.attr("y", 1060)
 					.style("fill", "Black")
 					.style("font-size", 12)
-					.attr("font-weight", 400)
+					.attr("font-weight", "500")
 					.text("Democrat")
 					.attr("text-anchor", "middle")
 
@@ -813,7 +813,7 @@
 					.attr("y", 1060)
 					.style("fill", "Black")
 					.style("font-size", 12)
-					.attr("font-weight", 400)
+					.attr("font-weight", "500")
 					.text("Trump")
 					.attr("text-anchor", "middle")
 
@@ -823,7 +823,7 @@
 					.attr("y", 1060)
 					.style("fill", "Black")
 					.style("font-size", 12)
-					.attr("font-weight", 400)
+					.attr("font-weight", "500")
 					.text("3rd Party")
 					.attr("text-anchor", "middle")
 
@@ -833,7 +833,7 @@
 					.attr("y", 1060)
 					.style("fill", "Black")
 					.style("font-size", 20)
-					.attr("font-weight", 400)
+					.attr("font-weight", "500")
 					.text("Margin")
 					.attr("text-anchor", "middle")
 
@@ -871,7 +871,7 @@
 						.attr("y", 30)
 						.style("fill", gopwincol)
 						.style("font-size", 30)
-						.attr("font-weight", 400)
+						.attr("font-weight", "500")
 						.text(gopev)
 						.attr("text-anchor", "end")
 
@@ -880,7 +880,7 @@
 						.attr("y", -10)
 						.style("fill", gopwincol)
 						.style("font-size", 30)
-						.attr("font-weight", 400)
+						.attr("font-weight", "500")
 						.text("Trump")
 						.attr("text-anchor", "end")
 
@@ -889,7 +889,7 @@
 						.attr("y", 30)
 						.style("fill", demwincol)
 						.style("font-size", 30)
-						.attr("font-weight", 400)
+						.attr("font-weight", "500")
 						.text(demev)
 						.attr("text-anchor", "start")
 
@@ -898,7 +898,7 @@
 						.attr("y", -10)
 						.style("fill", demwincol)
 						.style("font-size", 30)
-						.attr("font-weight", 400)
+						.attr("font-weight", "500")
 						.text("Democrats")
 						.attr("text-anchor", "start")
 
@@ -908,7 +908,7 @@
 						.attr("y", 550)
 						.style("fill", "Black")
 						.style("font-size", 30)
-						.attr("font-weight", 400)
+						.attr("font-weight", "500")
 						.text("Popular Vote")
 						.attr("text-anchor", "middle")
 
@@ -917,7 +917,7 @@
 						.attr("y", 630)
 						.style("fill", gopwincol)
 						.style("font-size", 30)
-						.attr("font-weight", 400)
+						.attr("font-weight", "500")
 						.text(formatvalue(goppopvote) + "%")
 						.attr("text-anchor", "middle")
 
@@ -926,7 +926,7 @@
 						.attr("y", 590)
 						.style("fill", gopwincol)
 						.style("font-size", 30)
-						.attr("font-weight", 400)
+						.attr("font-weight", "500")
 						.text("Trump")
 						.attr("text-anchor", "middle")
 
@@ -935,7 +935,7 @@
 						.attr("y", 630)
 						.style("fill", demwincol)
 						.style("font-size", 30)
-						.attr("font-weight", 400)
+						.attr("font-weight", "500")
 						.text(formatvalue(dempopvote) + "%")
 						.attr("text-anchor", "start")
 
@@ -944,7 +944,7 @@
 						.attr("y", 590)
 						.style("fill", demwincol)
 						.style("font-size", 30)
-						.attr("font-weight", 400)
+						.attr("font-weight", "500")
 						.text("Democrats")
 						.attr("text-anchor", "start")
 
@@ -953,7 +953,7 @@
 						.attr("y", 630)
 						.style("fill", thirdwincol)
 						.style("font-size", 30)
-						.attr("font-weight", 400)
+						.attr("font-weight", "500")
 						.text(formatValue(thirdpopvote) + "%")
 						.attr("text-anchor", "end")
 
@@ -962,7 +962,7 @@
 						.attr("y", 590)
 						.style("fill", thirdwincol)
 						.style("font-size", 30)
-						.attr("font-weight", 400)
+						.attr("font-weight", "500")
 						.text("3rd Party")
 						.attr("text-anchor", "end")
 

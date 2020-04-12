@@ -83,35 +83,42 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
 
   var topline = d3.select("#topline")
     .append("svg")
-    .attr("viewBox", "0 0 1000 400")
+    .attr("viewBox", "0 0 1000 220")
 
+  topline
+    .append("line")
+    .attr("x1", 0)
+    .attr("x2", 1000)
+    .attr("y1", 50)
+    .attr("y2", 50)
+    .attr("stroke", "black")
 
   topline.append("text")
     .text("Chance of an upset is about the odds of...")
-    .attr("y", 100)
-    .attr("x", 750)
+    .attr("y", 80)
+    .attr("x", 500)
     .attr("fill", "black")
     .attr("text-anchor", "middle")
-    .attr("font-size", 25)
-    .attr("font-weight", 400)
+    .attr("font-size", 15)
+    .attr("font-weight", "500")
 
 
   topline.append("text")
     .text(events[Math.round(odds_scale(upset_odds))])
-    .attr("y", 150)
-    .attr("x", 750)
+    .attr("y", 110)
+    .attr("x", 500)
     .attr("fill", "black")
     .attr("text-anchor", "middle")
-    .attr("font-size", 45)
-    .attr("font-weight", 400)
+    .attr("font-size", 20)
+    .attr("font-weight", "500")
 
 
   topline.append("image")
     .attr("href", events[Math.round(odds_scale(upset_odds))] + ".svg")
-    .attr("x", 650)
-    .attr("y", 180)
-    .attr("height", 200)
-    .attr("width", 200)
+    .attr("x", 450)
+    .attr("y", 120)
+    .attr("height", 100)
+    .attr("width", 100)
 
 
   topline.append("text")
@@ -121,164 +128,85 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     .attr("fill", "black")
     .attr("text-anchor", "middle")
     .attr("font-size", 35)
-    .attr("font-weight", 400)
+    .attr("font-weight", "500")
 
 
   topline.append("text")
     .text(numberformat(gop_win) + "%")
-    .attr("y", 340)
-    .attr("x", 360)
+    .attr("y", 140)
+    .attr("x", 870)
     .attr("fill", colors[0])
-    .attr("text-anchor", "middle")
-    .attr("dominant-baseline", "middle")
-    .attr("font-size", 45)
-    .attr("font-weight", 400)
+    .attr("text-anchor", "end")
+    .attr("dominant-baseline", "bottom")
+    .attr("font-size", 30)
+    .attr("font-weight", "500")
+
+  topline.append("text")
+    .text("Donald Trump")
+    .attr("y", 100)
+    .attr("x", 870)
+    .attr("fill", "black")
+    .attr("text-anchor", "end")
+    .attr("dominant-baseline", "top")
+    .attr("font-size", 20)
+    .attr("font-weight", "500")
+
+  topline.append("text")
+    .text("Jospeh Biden")
+    .attr("y", 100)
+    .attr("x", 130)
+    .attr("fill", "black")
+    .attr("text-anchor", "start")
+    .attr("dominant-baseline", "top")
+    .attr("font-size", 20)
+    .attr("font-weight", "500")
 
 
 
   topline.append("text")
     .text(numberformat(dem_win) + "%")
-    .attr("y", 340)
-    .attr("x", 150)
+    .attr("y", 140)
+    .attr("x", 130)
     .attr("fill", colors[1])
-    .attr("text-anchor", "middle")
-    .attr("dominant-baseline", "middle")
-    .attr("font-size", 45)
-    .attr("font-weight", 400)
+    .attr("text-anchor", "start")
+    .attr("dominant-baseline", "bottom")
+    .attr("font-size", 30)
+    .attr("font-weight", "500")
 
 
 
   topline.append("image")
     .attr("href", "https://jhkforecasts.com/Trump-01.png")
-    .attr("x", 260)
-    .attr("y", 100)
-    .attr("height", 200)
-    .attr("width", 200)
+    .attr("x", 880)
+    .attr("y", 60)
+    .attr("height", 100)
+    .attr("width", 100)
 
   topline.append("image")
     .attr("href", "https://jhkforecasts.com/Biden-01.png")
-    .attr("x", 50)
-    .attr("y", 100)
-    .attr("height", 200)
-    .attr("width", 200)
+    .attr("x", 20)
+    .attr("y", 60)
+    .attr("height", 100)
+    .attr("width", 100)
 
 
 
 
 
-  var stdev = (today[0].proj_vote - today[0].p_10) / 1.28
-  var highest_curve = jStat.normal.pdf(+gop_proj_vote, +gop_proj_vote, stdev * .8)
 
-
-  var third_curve = jStat.beta.pdf(.4, 2, 3)
-  var y3 = d3.scaleLinear()
-    .domain([0, highest_curve])
-    .range([0, 60])
-
-  var t3 = d3.scaleLinear()
-    .domain([0, third_curve])
-    .range([0, 60])
-
-  var gopcurve = []
-  var demcurve = []
-  var thirdcurve = []
-
-  for (let l = 1; l < 1000; l++) {
-
-    var gq = jStat.normal.inv(l / 1000, +gop_proj_vote, stdev * .8)
-    var gp = jStat.normal.pdf(gq, +gop_proj_vote, stdev * .8)
-
-    var dq = jStat.normal.inv(l / 1000, +dem_proj_vote, stdev * .8)
-    var dp = jStat.normal.pdf(dq, +dem_proj_vote, stdev * .8)
-
-    var tq = ((l / 1000) / (2 / 5)) * third_proj_vote
-    var tp = jStat.beta.pdf((l / 1000), 2, 3)
-
-
-
-    var gopvalues = {
-      x: gq,
-      y: -y3(gp) + (gop_proj_vote > dem_proj_vote ? 100 : 180),
-      y2: (gop_proj_vote > dem_proj_vote ? 100 : 180)
-    }
-
-    var demvalues = {
-      x: dq,
-      y: -y3(dp) + (gop_proj_vote < dem_proj_vote ? 100 : 180),
-      y2: (gop_proj_vote < dem_proj_vote ? 100 : 180)
-    }
-
-    var thirdvalues = {
-      x: tq,
-      y: -t3(tp) + 260,
-      y2: 260
-    }
-
-
-    gopcurve.push(gopvalues)
-    demcurve.push(demvalues)
-    thirdcurve.push(thirdvalues)
-  }
 
   var vote = d3.select("#vote")
     .append("svg")
     .attr("viewBox", "0 0 1000 300")
 
-  var sd4 = {
-    gopvalues: gopcurve,
-    demvalues: demcurve,
-    thirdvalues: thirdcurve,
-  }
-
-
   var x3 = d3.scaleLinear()
     .domain([0, 100])
-    .range([150, 775])
+    .range([100, 980])
 
-  var area = d3.area()
-    .x0(d => x3(d.x))
-    .y0(d => d.y2)
-    .y1(d => d.y)
-
-  var line = d3.line()
-    .x(d => x3(d.x))
-    .y(d => d.y)
-
-  var curves = vote.selectAll(".cities")
-    .data(sd4)
-
-  var proj = [
-    { vote: gop_proj_vote, color: colors[0] },
-    { vote: dem_proj_vote, color: colors[1] },
-    { vote: third_proj_vote, color: colors[2] },
-  ]
-
-
-  proj.sort((a, b) => b.vote - a.vote)
   var pct = [0, 25, 50, 75, 100]
 
-  vote.append("text")
-    .text("Projected Vote")
-    .attr("x", 980)
-    .attr("y", 20)
-    .attr("fill", "black")
-    .attr("text-anchor", "end")
-    .attr("dominant-baseline", "middle")
-    .attr("font-size", 20)
-    .attr("font-weight", 400)
 
-  vote.selectAll("lines")
-    .data(proj)
-    .enter()
-    .append("text")
-    .text(d => numberformat(d.vote) + "%")
-    .attr("x", 980)
-    .attr("y", (d, i) => 237.5 - 160 + i * 75)
-    .attr("fill", d => d.color)
-    .attr("text-anchor", "end")
-    .attr("dominant-baseline", "middle")
-    .attr("font-size", 40)
-    .attr("font-weight", 400)
+
 
   vote.selectAll("lines")
     .data(pct)
@@ -300,7 +228,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     .attr("fill", "lightgray")
     .attr("text-anchor", "middle")
     .attr("font-size", 12)
-    .attr("font-weight", 400)
+    .attr("font-weight", "500")
 
 
 
@@ -312,86 +240,78 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     .attr("text-anchor", "middle")
     .attr("dominant-baseline", "middle")
     .attr("font-size", 60)
-    .attr("font-weight", 400)
+    .attr("font-weight", "500")
 
-  vote.append("path")
-    .attr("class", "line cities")
-    .style("stroke-width", 3)
-    .style("opacity", .4)
-    .style("fill", "lightgrey")
-    .attr("d", area(sd4.demvalues))
-    .style("stroke", (d, i) => "lightgrey")
-
-  vote.append("path")
-    .attr("class", "line cities")
-    .style("stroke-width", 3)
-    .style("opacity", .4)
-    .style("fill", "lightgrey")
-    .attr("d", d => area(sd4.gopvalues))
-    .style("stroke", (d, i) => "lightgrey")
-
-  vote.append("path")
-    .attr("class", "line cities")
-    .style("stroke-width", 3)
-    .style("opacity", .4)
-    .style("fill", "lightgrey")
-    .attr("d", d => area(sd4.thirdvalues))
-    .style("stroke", (d, i) => "lightgrey")
-
-
-
-  vote.append("path")
-    .attr("class", "line cities")
-    .style("opacity", .4)
-    .style("fill", "#FF6060")
-    .attr("d", d => area(sd4.gopvalues.filter((d, i) => i < 950 && i > 50)))
-    .style("stroke", (d, i) => "#FF6060")
-
-  vote.append("path")
-    .attr("class", "line cities")
-    .style("opacity", .4)
-    .style("fill", "#0091FF")
-    .attr("d", d => area(sd4.demvalues.filter((d, i) => i < 950 && i > 50)))
-    .style("stroke", (d, i) => "#0091FF")
-
-  vote.append("path")
-    .attr("class", "line cities")
-    .style("opacity", .4)
-    .style("fill", colors[2])
-    .attr("d", d => area(sd4.thirdvalues.filter((d, i) => i < 850 && i > 150)))
-    .style("stroke", (d, i) => colors[2])
-
+  var vote_dist = today
+  vote_dist.sort((a, b) => b.proj_vote - a.proj_vote)
   vote.append("image")
     .attr("href", "https://jhkforecasts.com/Trump-01.png")
     .attr("x", 20)
-    .attr("y", gop_proj_vote > dem_proj_vote ? 25 : 105)
-    .attr("height", 75)
-    .attr("width", 75)
+    .attr("y", gop_proj_vote > dem_proj_vote ? 35 : 115)
+    .attr("height", 70)
+    .attr("width", 70)
 
   vote.append("image")
     .attr("href", "https://jhkforecasts.com/Biden-01.png")
     .attr("x", 20)
-    .attr("y", gop_proj_vote < dem_proj_vote ? 25 : 105)
-    .attr("height", 75)
-    .attr("width", 75)
+    .attr("y", gop_proj_vote < dem_proj_vote ? 35 : 115)
+    .attr("height", 70)
+    .attr("width", 70)
 
-  vote.append("circle")
-    .attr("cx", x3(sd4.gopvalues[499].x))
-    .attr("cy", 30)
-    .attr("r", 6)
-    .attr("fill", colors[0])
+  vote.selectAll("rects")
+    .data(vote_dist)
+    .enter()
+    .append("rect")
+    .attr("fill", (d, i) => colors[i])
+    .attr("x", d => x3(d.p_10))
+    .attr("y", (d, i) => 30 + 80 * i)
+    .attr("height", 80)
+    .attr("width", d => x3(d.p_90) - x3(d.p_10))
+    .attr("opacity", .5)
+    .attr("ry", 10)
 
-  vote.append("circle")
-    .attr("cx", x3(sd4.demvalues[499].x))
-    .attr("cy", 30)
-    .attr("r", 6)
-    .attr("fill", colors[1])
+  vote.selectAll("rects")
+    .data(vote_dist)
+    .enter()
+    .append("text")
+    .attr("fill", (d, i) => "black")
+    .attr("x", d => x3(d.proj_vote)+5)
+    .attr("y", (d, i) => 70 + 80 * i)
+    .text(d => numberformat(d.proj_vote))
+    .attr("dominant-baseline","central")
 
-  vote.append("circle")
-    .attr("cx", x3(sd4.thirdvalues[499].x))
-    .attr("cy", 30)
-    .attr("r", 6)
-    .attr("fill", colors[2])
+
+
+
+  vote.selectAll("rects")
+    .data(vote_dist)
+    .enter()
+    .append("line")
+    .attr("stroke", (d, i) => colors[i])
+    .attr("stroke-width", 2)
+    .attr("x1", d => x3(d.proj_vote))
+    .attr("x2", d => x3(d.proj_vote))
+    .attr("y1", (d, i) => 30 + 80 * i)
+    .attr("y2", (d, i) => 110 + 80 * i)
+
+  vote.selectAll("rects")
+    .data(vote_dist)
+    .enter()
+    .append("line")
+    .attr("stroke", "black")
+    .attr("x1", d => x3(0))
+    .attr("x2", d => x3(100))
+    .attr("y1", (d, i) => 30 + 80 * i)
+    .attr("y2", (d, i) => 30 + 80 * i)
+
+  vote.append("line")
+    .attr("stroke", "black")
+    .attr("x1", d => x3(0))
+    .attr("x2", d => x3(100))
+    .attr("y1", (d, i) => 30 + 80 * 3)
+    .attr("y2", (d, i) => 30 + 80 * 3)
+
+
 
   var marginphone = { top: 20, right: 40, bottom: 30, left: 40 }
   var widthphone = 1000 - marginphone.left - marginphone.right
@@ -400,7 +320,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
 
   var time_data = data.filter(d => d.state == key_state)
 
-  var lol
+
   var data_length = time_data.filter(d => d.party == "gop").length
   var max_date = d3.max(time_data, d => d.forecast_date)
   var line_data = []
@@ -517,7 +437,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     .text("Nov. 3rd")
     .attr("x", x(new Date(2020, 10, 3)))
     .attr("y", 10)
-    .attr("font-weight", 400)
+    .attr("font-weight", "500")
 
 
 
@@ -739,7 +659,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     .attr("text-anchor", "start")
     .attr("dominant-baseline", "middle")
     .attr("font-size", 25)
-    .attr("font-weight", 400)
+    .attr("font-weight", "500")
 
 
   calc.selectAll("gop")
@@ -794,7 +714,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     .attr("text-anchor", "middle")
     .attr("dominant-baseline", "middle")
     .attr("font-size", 25)
-    .attr("font-weight", 400)
+    .attr("font-weight", "500")
 
   calc.append("text")
     .text(d => gop_data[4] - dem_data[4] > 0 ? "Trump +" + numberformat(gop_data[4] - dem_data[4]) : "Biden +" + -numberformat(gop_data[4] - dem_data[4]))
@@ -804,7 +724,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     .attr("text-anchor", "middle")
     .attr("dominant-baseline", "middle")
     .attr("font-size", 35)
-    .attr("font-weight", 400)
+    .attr("font-weight", "500")
 
 
   calc.append("text")
@@ -815,7 +735,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     .attr("text-anchor", "middle")
     .attr("dominant-baseline", "middle")
     .attr("font-size", 25)
-    .attr("font-weight", 400)
+    .attr("font-weight", "500")
 
 
   calc.append("text")
@@ -826,7 +746,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     .attr("text-anchor", "middle")
     .attr("dominant-baseline", "middle")
     .attr("font-size", 25)
-    .attr("font-weight", 400)
+    .attr("font-weight", "500")
 
   calc.append("text")
     .text("Margin")
@@ -836,7 +756,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     .attr("text-anchor", "middle")
     .attr("dominant-baseline", "middle")
     .attr("font-size", 25)
-    .attr("font-weight", 400)
+    .attr("font-weight", "500")
 
   calc.selectAll("gop")
     .data(dem_data)
@@ -849,7 +769,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     .attr("text-anchor", "middle")
     .attr("dominant-baseline", "middle")
     .attr("font-size", 25)
-    .attr("font-weight", 400)
+    .attr("font-weight", "500")
 
   calc.selectAll("gop")
     .data(margin_data)
@@ -862,7 +782,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     .attr("text-anchor", "middle")
     .attr("dominant-baseline", "middle")
     .attr("font-size", 25)
-    .attr("font-weight", 400)
+    .attr("font-weight", "500")
 
   calc.selectAll("gop")
     .data(third_data)
@@ -875,7 +795,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     .attr("text-anchor", "middle")
     .attr("dominant-baseline", "middle")
     .attr("font-size", 25)
-    .attr("font-weight", 400)
+    .attr("font-weight", "500")
 
 
   calc.selectAll("gop")
@@ -911,7 +831,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     .attr("text-anchor", "middle")
     .attr("dominant-baseline", "middle")
     .attr("font-size", 60)
-    .attr("font-weight", 400)
+    .attr("font-weight", "500")
 
 
   var candidates = ["Biden", "Sanders"]
@@ -1139,7 +1059,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
               .attr("text-decoration", "none")
           })
           .call(wrap, 250)
- 
+
 
 
         bottom.selectAll("cands")
