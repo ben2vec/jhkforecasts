@@ -21,8 +21,8 @@ var projection = d3.geoAlbersUsa()
   .translate([widthmap / 2, heightmap / 2])
   .scale([900]);
 var event_odds = [
-  { event: "Flipping a Coin", odds: 50 },
-  { event: "Getting a One Pair", odds: 43.8 },
+  { event: "hflipping a coin", odds: 50 },
+  { event: "getting a one pair", odds: 43.8 },
   { event: "NBA player makes a three", odds: 36 },
   { event: "MLB batter getting on base", odds: 30.8 },
   { event: "getting a two pair", odds: 23.5 },
@@ -941,7 +941,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
 
     var xbars = d3.scaleLinear()
       .range([50, 850])
-      .domain([0, max_evs]).nice()
+      .domain([0, max_evs])
 
 
 
@@ -953,11 +953,11 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
       .append("rect")
       .attr("x", d => xbars(d.indexev))
       .attr("y", gop_ev_bars < dem_ev_bars ? 200 : 100)
-      .attr("width", d => d.electoral_votes * (700 / max_evs))
+      .attr("width", d => d.electoral_votes * (800 / max_evs))
       .attr("height", 70)
       .attr("ry", 3)
       .attr("fill", d => color(d.gop_win))
-      .attr("stroke", "black")
+      .attr("stroke", colors[0])
       .attr("stroke-width", 1)
       .on('mouseover', function (d) {
 
@@ -1036,11 +1036,11 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
       .append("rect")
       .attr("x", d => xbars(d.indexev))
       .attr("y", gop_ev_bars > dem_ev_bars ? 200 : 100)
-      .attr("width", d => d.electoral_votes * (700 / max_evs))
+      .attr("width", d => d.electoral_votes * (800 / max_evs))
       .attr("height", 70)
       .attr("ry", 3)
       .attr("fill", d => color(d.gop_win))
-      .attr("stroke", "black")
+      .attr("stroke", colors[1])
       .attr("stroke-width", 1)
       .on('mouseover', function (d) {
 

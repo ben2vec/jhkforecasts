@@ -725,7 +725,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
 
     var xbarsphone = d3.scaleLinear()
       .range([20, 650])
-      .domain([0, max_evs]).nice()
+      .domain([0, max_evs])
 
 
 
@@ -739,7 +739,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
       .attr("width", 70)
       .attr("ry", 3)
       .attr("fill", d => color(d.gop_win))
-      .attr("stroke", "black")
+      .attr("stroke", colors[0])
       .attr("stroke-width", 1)
       .on('mouseover', function (d) {
 
@@ -820,7 +820,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
       .attr("width", 70)
       .attr("ry", 3)
       .attr("fill", d => color(d.gop_win))
-      .attr("stroke", "black")
+      .attr("stroke", colors[1])
       .attr("stroke-width", 1)
       .on('mouseover', function (d) {
 
