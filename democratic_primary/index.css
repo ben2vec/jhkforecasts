@@ -198,6 +198,7 @@ div.tooltip {
     display: inline;
   }
 }
+
 #bubblemap {
   width: 100%;
 }
@@ -227,8 +228,6 @@ div.tooltip {
   .phone {
     display: none;
   }
-  
-  
 }
 
 .pollline {
@@ -469,6 +468,7 @@ div.tooltip {
   cursor: pointer;
   opacity: 1;
 }
+
 #steyer-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
@@ -478,6 +478,7 @@ div.tooltip {
   cursor: pointer;
   opacity: 1;
 }
+
 #warren-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
@@ -494,11 +495,116 @@ div.sticky {
   top: 0;
   background-color: white;
 }
+
 div.banner {
- 
   top: 0;
   background-color: white;
   border-bottom: black solid 1px;
   margin-left: -8px;
   margin-right: -8px;
+}
+
+@font-face {
+  font-family: "sf-mono";
+  font-weight: 500;
+  font-style: normal;
+  src: url(https://jhkforecasts.com/fonts/SFMono-Regular.otf);
+}
+
+@font-face {
+  font-family: "decima-mono";
+  font-weight: 500;
+  font-style: normal;
+  src: url(https://jhkforecasts.com/decimamonopro-webfont.woff2);
+}
+
+@font-face {
+  font-family: "sf-mono";
+  font-weight: 500;
+  font-style: normal;
+  src: url(https://jhkforecasts.com/fonts/SFMono-Regular.otf);
+}
+
+@font-face {
+  font-family: "sf-compact";
+  font-weight: 200;
+  font-style: normal;
+  src: url(https://jhkforecasts.com/fonts/SF-Compact-Display-Light.otf);
+}
+
+@font-face {
+  font-family: "sf-compact";
+  font-weight: 200;
+  font-style: italic;
+  src: url(https://jhkforecasts.com/fonts/SF-Compact-Display-LightItalic.otf);
+}
+
+@font-face {
+  font-family: "sf-compact";
+  font-weight: 400;
+  font-style: normal;
+  src: url(https://jhkforecasts.com/fonts/SF-Compact-Display-Regular.otf);
+}
+
+@font-face {
+  font-family: "sf-compact";
+  font-weight: 400;
+  font-style: italic;
+  src: url(https://jhkforecasts.com/fonts/SF-Compact-Display-RegularItalic.otf);
+}
+
+@font-face {
+  font-family: "sf-compact";
+  font-weight: 500;
+  font-style: normal;
+  src: url(https://jhkforecasts.com/fonts/SF-Compact-Display-Medium.otf);
+}
+
+@font-face {
+  font-family: "sf-compact";
+  font-weight: 500;
+  font-style: italic;
+  src: url(https://jhkforecasts.com/fonts/SF-Compact-Display-MediumItalic.otf);
+}
+
+@font-face {
+  font-family: "sf-compact";
+  font-weight: 600;
+  font-style: normal;
+  src: url(https://jhkforecasts.com/fonts/SF-Compact-Display-Semibold.otf);
+}
+
+@font-face {
+  font-family: "sf-compact";
+  font-weight: 600;
+  font-style: italic;
+  src: url(https://jhkforecasts.com/fonts/SF-Compact-Display-SemiboldItalic.otf);
+}
+
+@font-face {
+  font-family: "sf-compact";
+  font-weight: 700;
+  font-style: normal;
+  src: url(https://jhkforecasts.com/fonts/SF-Compact-Display-Bold.otf);
+}
+
+@font-face {
+  font-family: "sf-compact";
+  font-weight: 700;
+  font-style: italic;
+  src: url(https://jhkforecasts.com/fonts/SF-Compact-Display-BoldItalic.otf);
+}
+
+@font-face {
+  font-family: "sf-compact";
+  font-weight: 800;
+  font-style: normal;
+  src: url(https://jhkforecasts.com/fonts/SF-Compact-Display-Heavy.otf);
+}
+
+@font-face {
+  font-family: "sf-compact";
+  font-weight: 800;
+  font-style: italic;
+  src: url(https://jhkforecasts.com/fonts/SF-Compact-Display-HeavyItalic.otf);
 }

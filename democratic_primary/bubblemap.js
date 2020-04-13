@@ -239,7 +239,7 @@ d3.csv("bubblemap.csv", function (error, data) {
     .attr("x", d => x(d.xValue))
     .attr("y", d => y(d.yValue) + 3)
     .attr("text-anchor", "middle")
-    .style("font-family", "source-code-pro")
+    .style("font-family", "sf-mono")
     .attr("font-weight", 400)
     .attr("font-size", "8")
     .attr("fill", d => d.completed == 1 ? colortwo(d.first) : "black")

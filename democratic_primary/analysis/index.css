@@ -31,7 +31,7 @@ h1{ font-family: brandon-grotesque, monospace;
    }
 
   text {
-    font-family: source-code-pro, monospace;
+    font-family: sf-mono, monospace;
    }
   body {
     font: 15px monospace;
@@ -370,4 +370,108 @@ div.tooltip {
 /* Gray */
 .default:hover {
   background: #ddd;
+}
+@font-face {
+  font-family: "sf-mono";
+  font-weight: 500;
+  font-style: normal;
+  src: url(https://jhkforecasts.com/fonts/SFMono-Regular.otf);
+}
+
+@font-face {
+  font-family: "decima-mono";
+  font-weight: 500;
+  font-style: normal;
+  src: url(https://jhkforecasts.com/decimamonopro-webfont.woff2);
+}
+
+@font-face {
+  font-family: "sf-mono";
+  font-weight: 500;
+  font-style: normal;
+  src: url(https://jhkforecasts.com/fonts/SFMono-Regular.otf);
+}
+
+@font-face {
+  font-family: "sf-compact";
+  font-weight: 200;
+  font-style: normal;
+  src: url(https://jhkforecasts.com/fonts/SF-Compact-Display-Light.otf);
+}
+
+@font-face {
+  font-family: "sf-compact";
+  font-weight: 200;
+  font-style: italic;
+  src: url(https://jhkforecasts.com/fonts/SF-Compact-Display-LightItalic.otf);
+}
+
+@font-face {
+  font-family: "sf-compact";
+  font-weight: 400;
+  font-style: normal;
+  src: url(https://jhkforecasts.com/fonts/SF-Compact-Display-Regular.otf);
+}
+
+@font-face {
+  font-family: "sf-compact";
+  font-weight: 400;
+  font-style: italic;
+  src: url(https://jhkforecasts.com/fonts/SF-Compact-Display-RegularItalic.otf);
+}
+
+@font-face {
+  font-family: "sf-compact";
+  font-weight: 500;
+  font-style: normal;
+  src: url(https://jhkforecasts.com/fonts/SF-Compact-Display-Medium.otf);
+}
+
+@font-face {
+  font-family: "sf-compact";
+  font-weight: 500;
+  font-style: italic;
+  src: url(https://jhkforecasts.com/fonts/SF-Compact-Display-MediumItalic.otf);
+}
+
+@font-face {
+  font-family: "sf-compact";
+  font-weight: 600;
+  font-style: normal;
+  src: url(https://jhkforecasts.com/fonts/SF-Compact-Display-Semibold.otf);
+}
+
+@font-face {
+  font-family: "sf-compact";
+  font-weight: 600;
+  font-style: italic;
+  src: url(https://jhkforecasts.com/fonts/SF-Compact-Display-SemiboldItalic.otf);
+}
+
+@font-face {
+  font-family: "sf-compact";
+  font-weight: 700;
+  font-style: normal;
+  src: url(https://jhkforecasts.com/fonts/SF-Compact-Display-Bold.otf);
+}
+
+@font-face {
+  font-family: "sf-compact";
+  font-weight: 700;
+  font-style: italic;
+  src: url(https://jhkforecasts.com/fonts/SF-Compact-Display-BoldItalic.otf);
+}
+
+@font-face {
+  font-family: "sf-compact";
+  font-weight: 800;
+  font-style: normal;
+  src: url(https://jhkforecasts.com/fonts/SF-Compact-Display-Heavy.otf);
+}
+
+@font-face {
+  font-family: "sf-compact";
+  font-weight: 800;
+  font-style: italic;
+  src: url(https://jhkforecasts.com/fonts/SF-Compact-Display-HeavyItalic.otf);
 }
