@@ -1215,9 +1215,9 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
         .attr("class", "line cities")
         .style("stroke-width", 3)
         .style("opacity", .4)
-        .style("fill", "lightgrey")
+        .style("fill", "#AFAFAF")
         .attr("d", d => area(d.marginvalues))
-        .style("stroke", (d, i) => "lightgrey")
+        .style("stroke", (d, i) => "#AFAFAF")
 
       curves.enter().insert("g", ".focus").append("path")
         .attr("class", "line cities")
@@ -1302,7 +1302,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
         .attr("x2", x3p(0))
         .attr("y1", 80)
         .attr("y2", 4530)
-        .attr("stroke", "lightgrey")
+        .attr("stroke", "#AFAFAF")
 
 
 

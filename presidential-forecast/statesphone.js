@@ -287,7 +287,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     .attr("x2", d => x3phone(d))
     .attr("y1", 30)
     .attr("y2", 430)
-    .attr("stroke", "lightgray")
+    .attr("stroke", "#AFAFAF")
 
   votephone.selectAll("lines")
     .data(pct)
@@ -296,7 +296,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     .text(d => d + "%")
     .attr("x", d => x3phone(d))
     .attr("y", 20)
-    .attr("fill", "lightgray")
+    .attr("fill", "#AFAFAF")
     .attr("text-anchor", "middle")
     .attr("font-size", 20)
     .attr("font-weight", "500")
@@ -317,25 +317,25 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     .attr("class", "line cities")
     .style("stroke-width", 3)
     .style("opacity", .4)
-    .style("fill", "lightgrey")
+    .style("fill", "#AFAFAF")
     .attr("d", area(sd4.demvalues))
-    .style("stroke", (d, i) => "lightgrey")
+    .style("stroke", (d, i) => "#AFAFAF")
 
   votephone.append("path")
     .attr("class", "line cities")
     .style("stroke-width", 3)
     .style("opacity", .4)
-    .style("fill", "lightgrey")
+    .style("fill", "#AFAFAF")
     .attr("d", d => area(sd4.gopvalues))
-    .style("stroke", (d, i) => "lightgrey")
+    .style("stroke", (d, i) => "#AFAFAF")
 
   votephone.append("path")
     .attr("class", "line cities")
     .style("stroke-width", 3)
     .style("opacity", .4)
-    .style("fill", "lightgrey")
+    .style("fill", "#AFAFAF")
     .attr("d", d => area(sd4.thirdvalues))
-    .style("stroke", (d, i) => "lightgrey")
+    .style("stroke", (d, i) => "#AFAFAF")
 
 
 
@@ -845,7 +845,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     .attr("x2", 900)
     .attr("y1", (d, i) => 110 + i * 60)
     .attr("y2", (d, i) => 110 + i * 60)
-    .attr("stroke", (d, i) => i == 4 ? "black" : "lightgrey")
+    .attr("stroke", (d, i) => i == 4 ? "black" : "#AFAFAF")
 
 
   calc.append("image")
@@ -1110,7 +1110,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
           .text(d => d.dem)
           .attr("y", (d, i) => 40 + i * 40)
           .attr("x", (d, i) => 600)
-          .attr("fill", d => d.margin < 0 ? "lightgrey" : "black")
+          .attr("fill", d => d.margin < 0 ? "#AFAFAF" : "black")
           .attr("font-weight", "500")
           .style("font-size", 15)
           .attr("text-anchor", "end")
@@ -1149,7 +1149,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
           .text(d => d.gop)
           .attr("y", (d, i) => 40 + i * 40)
           .attr("x", (d, i) => 800)
-          .attr("fill", d => d.margin > 0 ? "lightgrey" : "black")
+          .attr("fill", d => d.margin > 0 ? "#AFAFAF" : "black")
           .attr("font-weight", "500")
           .style("font-size", 15)
           .attr("text-anchor", "start")
@@ -1203,7 +1203,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
           .attr("x1", (d, i) => 0)
           .attr("y2", (d, i) => 26 + i * 40)
           .attr("x2", (d, i) => 1000)
-          .attr("stroke", "lightgrey")
+          .attr("stroke", "#AFAFAF")
           .attr("stroke-width", 1)
 
 

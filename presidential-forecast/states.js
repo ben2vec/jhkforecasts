@@ -216,7 +216,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     .attr("x2", d => x3(d))
     .attr("y1", 30)
     .attr("y2", 270)
-    .attr("stroke", "lightgray")
+    .attr("stroke", "#AFAFAF")
 
   vote.selectAll("lines")
     .data(pct)
@@ -225,7 +225,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     .text(d => d + "%")
     .attr("x", d => x3(d))
     .attr("y", 20)
-    .attr("fill", "lightgray")
+    .attr("fill", "#AFAFAF")
     .attr("text-anchor", "middle")
     .attr("font-size", 12)
     .attr("font-weight", "500")
@@ -494,8 +494,8 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
           .style("text-anchor", "right")
           .attr("y", 0)
           .attr('fill', 'black')
-          .attr('font-size', 15)
-          .attr('font-weight', 800)
+          .attr('font-size', 20)
+          .attr('font-weight', 500)
         g.selectAll("line")
           .attr("opacity", .2)
           .attr("stroke", "grey")
@@ -713,7 +713,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     .attr("fill", "black")
     .attr("text-anchor", "middle")
     .attr("dominant-baseline", "middle")
-    .attr("font-size", 25)
+    .attr("font-size", 20)
     .attr("font-weight", "500")
 
   calc.append("text")
@@ -723,7 +723,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     .attr("fill", d => gop_data[4] - dem_data[4] > 0 ? colors[0] : colors[1])
     .attr("text-anchor", "middle")
     .attr("dominant-baseline", "middle")
-    .attr("font-size", 35)
+    .attr("font-size", 25)
     .attr("font-weight", "500")
 
 
@@ -768,7 +768,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     .attr("fill", "black")
     .attr("text-anchor", "middle")
     .attr("dominant-baseline", "middle")
-    .attr("font-size", 25)
+    .attr("font-size", 20)
     .attr("font-weight", "500")
 
   calc.selectAll("gop")
@@ -781,7 +781,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     .attr("fill", d => d == 0 ? "black" : d > 0 ? colors[0] : colors[1])
     .attr("text-anchor", "middle")
     .attr("dominant-baseline", "middle")
-    .attr("font-size", 25)
+    .attr("font-size", 20)
     .attr("font-weight", "500")
 
   calc.selectAll("gop")
@@ -794,7 +794,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     .attr("fill", "black")
     .attr("text-anchor", "middle")
     .attr("dominant-baseline", "middle")
-    .attr("font-size", 25)
+    .attr("font-size", 20)
     .attr("font-weight", "500")
 
 
@@ -806,7 +806,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     .attr("x2", 900)
     .attr("y1", (d, i) => 110 + i * 60)
     .attr("y2", (d, i) => 110 + i * 60)
-    .attr("stroke", (d, i) => i == 4 ? "black" : "lightgrey")
+    .attr("stroke", (d, i) => i == 4 ? "black" : "#AFAFAF")
 
 
   calc.append("image")
@@ -1069,7 +1069,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
           .text(d => d.dem)
           .attr("y", (d, i) => 40 + i * 40)
           .attr("x", (d, i) => 600)
-          .attr("fill", d => d.margin < 0 ? "lightgrey" : "black")
+          .attr("fill", d => d.margin < 0 ? "#AFAFAF" : "black")
           .attr("font-weight", "500")
           .style("font-size", 15)
           .attr("text-anchor", "end")
@@ -1108,7 +1108,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
           .text(d => d.gop)
           .attr("y", (d, i) => 40 + i * 40)
           .attr("x", (d, i) => 800)
-          .attr("fill", d => d.margin > 0 ? "lightgrey" : "black")
+          .attr("fill", d => d.margin > 0 ? "#AFAFAF" : "black")
           .attr("font-weight", "500")
           .style("font-size", 15)
           .attr("text-anchor", "start")
@@ -1162,7 +1162,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
           .attr("x1", (d, i) => 0)
           .attr("y2", (d, i) => 26 + i * 40)
           .attr("x2", (d, i) => 1000)
-          .attr("stroke", "lightgrey")
+          .attr("stroke", "#AFAFAF")
           .attr("stroke-width", 1)
 
 

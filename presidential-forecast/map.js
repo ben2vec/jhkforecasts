@@ -93,7 +93,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
             .enter()
             .append("path")
             .attr("d", path)
-            .style("stroke", "lightgray")
+            .style("stroke", "#AFAFAF")
             .style("stroke-width", 1)
             .style("fill", d => "white")
 
@@ -103,7 +103,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
             .enter()
             .append("path")
             .attr("d", path)
-            .style("stroke", "lightgray")
+            .style("stroke", "#AFAFAF")
             .style("stroke-width", 1)
             .style("fill", d => color(d.properties.value))
 

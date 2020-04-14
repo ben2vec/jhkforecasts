@@ -822,7 +822,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/LT_Data.
                             .attr("y2", (d, i) => 80 + i * 40)
                             .attr("x1", (d, i) => 600)
                             .attr("x2", (d, i) => 950)
-                            .attr("stroke", (d, i) => i == stateData.length - 1 ? "black" : "lightgray")
+                            .attr("stroke", (d, i) => i == stateData.length - 1 ? "black" : "#AFAFAF")
                             .attr("stroke-width", (d, i) => i == stateData.length - 1 ? "2" : "1")
 
 
