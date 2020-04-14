@@ -93,7 +93,13 @@
    text-align: center;
    padding: 10%;
  }
-
+ @font-face {
+  font-family: 'brandon-grotesque';
+  weight: 500;
+  font-style: normal;
+  src: url(https://jhkforecasts.com/fonts/SFMono-Regular.otf);
+  unicode-range: U+30-39;
+}
  @font-face {
    font-family: "sf-mono";
    font-weight: 500;
