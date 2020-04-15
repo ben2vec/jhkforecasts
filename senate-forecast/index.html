@@ -6,9 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<style>
 
-	</style>
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@jhkforecast">
@@ -34,6 +32,20 @@
 	<link rel="stylesheet" href="https://use.typekit.net/htk2wjy.css">
 	<link rel="stylesheet" href="https://projects.jhkforecasts.com/presidential-forecast/index.css">
 	<script src="https:////cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script>
+	<style>
+		@media only screen and (max-width: width 600px) {
+			.test {
+				width: 100%;
+			}
+		}
+
+		@media only screen and (min-width:601px) {
+			.test {
+				width: 80%;
+				margin-left: 10%;
+			}
+		}
+	</style>
 </head>
 
 <body>
@@ -258,9 +270,11 @@
 	<script>
 		var state_index = "US"
 	</script>
-	<div class="computer">
+	<p style=" font-family: sf-mono;font-weight: 400;text-align: center;text-decoration: underline double;color:#AFAFAF" id="updated"></p>
+	<div class="test">
 		<div id="topline"></div>
 		<div id="usmap"></div>
+		<div id="histogram"></div>
 	</div>
 	<script src="national.js"></script>
 

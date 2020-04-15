@@ -5,11 +5,33 @@ var category = ["REP", "DEM", "LIB", "IND", "GREEN"]
 var cand_colors = d3.scaleOrdinal()
     .domain(category)
     .range(colors)
+var widthmap = 1020
+var heightmap = 500;
+var projection = d3.geoAlbersUsa()
+    .translate([widthmap / 2, heightmap / 2])
+    .scale([900]);
+var path = d3.geoPath()
+    .projection(projection);
+
+var color = d3.scaleLinear()
+    .domain([0, 50, 100])
+    .range(["#0091FF", "white", "#FF6060"]);
+
+var map = d3.select("#usmap")
+    .append("svg")
+    .attr("viewBox", '75 20 900 460');
+
+var tool_tip = d3.tip()
+    .attr("class", "d3-tip")
+    .offset([-200, -150])
+    .html("<div id='tipDiv'></div>");
+
+map.call(tool_tip);
 var tformat = d3.timeFormat("%m/%d/%Y")
 var timeformat = d3.timeFormat("%m/%d/%y")
 var dateparse = d3.timeParse("%m/%d/%y")
 var timeparse = d3.timeParse("%m/%d/%y %H:%M")
-var numberformat = d3.format(".1f")
+var nf = d3.format(".1f")
 var updated_format = d3.timeFormat("%b. %d %Y %I:%M %p")
 var widthmap = 1020
 var heightmap = 500;
@@ -45,17 +67,27 @@ var odds_scale = d3.scaleLinear()
 d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
 
     var states = input_data.map(d => {
-        return d.state
+        return {
+            state: d.state,
+            state_index: d.state_index
+        }
     })
-
+    states.forEach((d, i) => {
+        var state = d.state
+        var map_lab = map_labels.filter(d => d.state == state)[0]
+        d.label = map_lab.label
+        d.cx = map_lab.xValue
+        d.cy = map_lab.yValue
+    })
+    console.log(states)
     d3.csv("https://data.jhkforecasts.com/2020-senate.csv", data => {
         data.forEach((d, i) => {
             d.date = dateparse(d.forecast_date)
         })
         var today = data.filter(d => d.forecast_date == timeformat(d3.max(data, d => d.date)))
+        var updated = today[0].tipping_point
         console.log(today)
-
-
+        document.getElementById("updated").innerHTML = "UPDATED: " + updated
 
         var rep_win_senate = today[0].win
         var dem_win_senate = today[1].win
@@ -122,7 +154,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
 
 
         topline.append("text")
-            .text(numberformat(rep_win_senate) + "%")
+            .text(nf(rep_win_senate) + "%")
             .attr("x", 895)
             .attr("y", 60)
             .attr("dominant-baseline", "bottom")
@@ -132,7 +164,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
             .attr("font-weight", 500)
 
         topline.append("text")
-            .text(numberformat(dem_win_senate) + "%")
+            .text(nf(dem_win_senate) + "%")
             .attr("x", 105)
             .attr("y", 60)
             .attr("dominant-baseline", "bottom")
@@ -141,39 +173,22 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
             .attr("fill", colors[1])
             .attr("font-weight", 500)
 
-
-        ///map///
-
-
-        var widthmap = 1020
-        var heightmap = 500;
-        var projection = d3.geoAlbersUsa()
-            .translate([widthmap / 2, heightmap / 2])
-            .scale([900]);
-        var path = d3.geoPath()
-            .projection(projection);
-
-        var color = d3.scaleLinear()
-            .domain([0, 50, 100])
-            .range(["#0091FF", "white", "#FF6060"]);
-
-        var map = d3.select("#usmap")
-            .append("svg")
-            .attr("viewBox", '75 20 900 460');
-
-
         d3.json("https://projects.jhkforecasts.com/presidential_forecast/us-states.json", function (json) {
 
-            for (var i = 0; i < states.length-1 ; i++) {
+            for (var i = 0; i < states.length - 1; i++) {
 
-                var dataState = map_labels[i].state;
-                
-
+                var dataState = states[i].state;
+                var state_index = states[i].state_index
+                var cands = today.filter(d => d.state_index == state_index)
+                cands.sort((a, b) => b.vote - a.vote)
+                var tipping_point = +cands[0].tipping_point
                 for (var j = 0; j < json.features.length; j++) {
                     var jsonState = json.features[j].properties.name;
 
                     if (dataState == jsonState) {
-                        
+                        json.features[j].properties.tipping_point = tipping_point
+                        json.features[j].properties.cands = cands
+                        json.features[j].properties.state_index = state_index
                         break;
                     }
                 }
@@ -185,23 +200,148 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                 .append("path")
                 .attr("class", "states")
                 .attr("d", path)
-                .style("stroke", "white")
+                .style("stroke", "lightgrey")
                 .style("stroke-width", "1")
-                .style("fill", "#cdcdcd")
+                .style("fill", d => d.properties.cands == undefined ? "white" : color(d3.sum(d.properties.cands.filter(d => d.party == "REP"), d => d.win)))
 
             map.selectAll("label")
-                .data(map_labels)
+                .data(states)
                 .enter()
                 .append("text")
                 .text(d => d.label)
-                .attr("x", d => d.xValue)
-                .attr("y", d => d.yValue)
+                .attr("x", d => d.cx)
+                .attr("y", d => d.cy)
                 .style("font-family", "sf-mono")
                 .attr("font-size", "9")
                 .attr("fill", "black")
                 .attr("text-anchor", "middle")
                 .attr("font-weight", "500")
 
+            map.selectAll("path2")
+                .data(json.features)
+                .enter()
+                //.append("a")
+                //.attr("xlink:href", d => d.properties.name)
+                .append("path")
+                .attr("class", "statesover")
+                .attr("d", path)
+                .style("stroke", d => d.properties.tipping_point >= 3 ? "black" : "none")
+                .style("stroke-width", "1.5")
+                .on('mouseover', function (d) {
+
+
+                    d.properties.cands == undefined ? "" : tool_tip.show();
+                    var tipSVG = d3.select("#tipDiv")
+                        .append("svg")
+                        .attr("width", 300)
+                        .attr("height", 200)
+
+                    tipSVG.append("rect")
+                        .attr("y", 1.5)
+                        .attr("x", 1.5)
+                        .attr("width", 297)
+                        .attr("height", 197)
+                        .attr("rx", 8)
+                        .attr("fill", "white")
+                        .attr("stroke", "black")
+                        .attr("stroke-width", 2)
+
+                    tipSVG.append("text")
+                        .text(d.properties.name)
+                        .attr("y", 25)
+                        .attr("x", 150)
+                        .attr("fill", "black")
+                        .attr("font-weight", "700")
+                        .style("font-size", "20")
+                        .attr("text-anchor", "middle")
+
+                    tipSVG.append("text")
+                        .text("Candidate")
+                        .attr("y", 50)
+                        .attr("x", 10)
+                        .attr("fill", "black")
+                        .attr("font-weight", "500")
+                        .style("font-size", "18")
+                        .attr("text-anchor", "start")
+
+                    tipSVG.append("text")
+                        .text("Vote")
+                        .attr("y", 50)
+                        .attr("x", 220)
+                        .attr("fill", "black")
+                        .attr("font-weight", "500")
+                        .style("font-size", "18")
+                        .attr("text-anchor", "middle")
+
+                    tipSVG.append("text")
+                        .text("Win")
+                        .attr("y", 50)
+                        .attr("x", 270)
+                        .attr("fill", "black")
+                        .attr("font-weight", "500")
+                        .style("font-size", "18")
+                        .attr("text-anchor", "middle")
+
+                    tipSVG.selectAll("cands")
+                        .data(d.properties.cands)
+                        .enter()
+                        .append("text")
+                        .text(d => d.candidate + " (" + d.party.split("")[0] + ")")
+                        .attr("y", (d, i) => 80 + i * 40)
+                        .attr("x", 10)
+                        .attr("fill", d => cand_colors(d.party))
+                        .attr("font-weight", "500")
+                        .style("font-size", "18")
+                        .attr("text-anchor", "start")
+
+                    tipSVG.selectAll("cands")
+                        .data(d.properties.cands)
+                        .enter()
+                        .append("text")
+                        .text(d => nf(d.vote))
+                        .attr("y", (d, i) => 80 + i * 40)
+                        .attr("x", 220)
+                        .attr("fill", d => cand_colors(d.party))
+                        .attr("font-weight", "500")
+                        .style("font-size", "18")
+                        .attr("text-anchor", "middle")
+
+                    tipSVG.selectAll("cands")
+                        .data(d.properties.cands)
+                        .enter()
+                        .append("text")
+                        .text(d => d.win > 99 ? 100 : d.win < 1 ? 0 : nf(d.win))
+                        .attr("y", (d, i) => 80 + i * 40)
+                        .attr("x", 270)
+                        .attr("fill", d => cand_colors(d.party))
+                        .attr("font-weight", "500")
+                        .style("font-size", "18")
+                        .attr("text-anchor", "middle")
+
+                })
+                .on('mouseout',
+                    function (d) {
+
+
+                        tool_tip.hide()
+                    });
+            map.append("rect")
+                .attr("x", 880)
+                .attr("y", 420)
+                .attr("width", 20)
+                .attr("height", 20)
+                .style("stroke", "black")
+                .style("stroke-width", 2)
+                .attr("ry", "6")
+                .style("fill", "none");
+
+            map.append("text")
+                .text("Tipping Points")
+                .attr("x", 790)
+                .attr("y", 430)
+                .attr("fill", "black")
+                .style("font-weight", "500")
+                .style("font-size", "15");
             var pct = [60, 70, 80, 90, 100]
 
             map.selectAll("pct")
@@ -245,7 +385,164 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                 .attr("text-anchor", "middle")
                 .attr("font-size", 15)
                 .attr("font-weight", "500")
+            var width = 50,
+                height = 50;
+            var projection2 = d3.geoAlbers();
 
+            var path2 = d3.geoPath()
+                .projection(projection2);
+            d3.json("us-states.json", us => {
+
+                var state = us.features.filter(d => d.properties.name == "Georgia")[0];
+
+                projection2
+                    .scale(1)
+                    .translate([0, 0]);
+
+                var b = path2.bounds(state),
+                    s = .95 / Math.max((b[1][0] - b[0][0]) / width, (b[1][1] - b[0][1]) / height),
+                    t = [((width - s * (b[1][0] + b[0][0])) / 2), ((height - s * (b[1][1] + b[0][1])) / 2) + 50];
+
+                projection2
+                    .scale(s)
+                    .translate(t);
+                var ga_special = today.filter(d => d.state_index == "Georgia: Class III")
+                console.log(ga_special)
+
+                map.append("path")
+                    .datum(state)
+                    .attr("fill", color(d3.sum(ga_special.filter(d => d.party == "REP"), d => d.win)))
+                    .attr("d", path2)
+                    .style("stroke", "grey")
+                    .attr("transform", "translate(725,280)")
+
+                map.append("text")
+                    .text("GA*")
+                    .attr("x", 750)
+                    .attr("y", 360)
+                    .style("font-family", "sf-mono")
+                    .attr("font-size", "9")
+                    .attr("fill", "black")
+                    .attr("text-anchor", "middle")
+                    .attr("font-weight", "500")
+
+                map.append("path")
+                    .datum(state)
+                    .attr("class", "statesover")
+                    .attr("fill", "none")
+                    .attr("d", path2)
+                    .style("stroke", ga_special[0].tipping_point > 3 ? "black" : "grey")
+                    .attr("transform", "translate(725,280)").style("stroke-width", "1.5")
+                    .on('mouseover', function (d) {
+
+
+                        tool_tip
+                            .offset([-300, -150]).show()
+                        var tipSVG = d3.select("#tipDiv")
+                            .append("svg")
+                            .attr("width", 300)
+                            .attr("height", 250)
+
+
+
+                        tipSVG.append("rect")
+                            .attr("y", 1.5)
+                            .attr("x", 1.5)
+                            .attr("width", 297)
+                            .attr("height", 247)
+                            .attr("rx", 8)
+                            .attr("fill", "white")
+                            .attr("stroke", "black")
+                            .attr("stroke-width", 2)
+
+                        tipSVG.append("text")
+                            .text("Georgia*")
+                            .attr("y", 25)
+                            .attr("x", 150)
+                            .attr("fill", "black")
+                            .attr("font-weight", "700")
+                            .style("font-size", "20")
+                            .attr("text-anchor", "middle")
+
+                        tipSVG.append("text")
+                            .text("Candidate")
+                            .attr("y", 50)
+                            .attr("x", 10)
+                            .attr("fill", "black")
+                            .attr("font-weight", "500")
+                            .style("font-size", "18")
+                            .attr("text-anchor", "start")
+
+                        tipSVG.append("text")
+                            .text("Vote")
+                            .attr("y", 50)
+                            .attr("x", 220)
+                            .attr("fill", "black")
+                            .attr("font-weight", "500")
+                            .style("font-size", "18")
+                            .attr("text-anchor", "middle")
+
+                        tipSVG.append("text")
+                            .text("Win")
+                            .attr("y", 50)
+                            .attr("x", 270)
+                            .attr("fill", "black")
+                            .attr("font-weight", "500")
+                            .style("font-size", "18")
+                            .attr("text-anchor", "middle")
+
+                        tipSVG.selectAll("cands")
+                            .data(ga_special)
+                            .enter()
+                            .append("text")
+                            .text(d => d.candidate + " (" + d.party.split("")[0] + ")")
+                            .attr("y", (d, i) => 80 + i * 40)
+                            .attr("x", 10)
+                            .attr("fill", d => cand_colors(d.party))
+                            .attr("font-weight", "500")
+                            .style("font-size", "18")
+                            .attr("text-anchor", "start")
+
+                        tipSVG.selectAll("cands")
+                            .data(ga_special)
+                            .enter()
+                            .append("text")
+                            .text(d => nf(d.vote))
+                            .attr("y", (d, i) => 80 + i * 40)
+                            .attr("x", 220)
+                            .attr("fill", d => cand_colors(d.party))
+                            .attr("font-weight", "500")
+                            .style("font-size", "18")
+                            .attr("text-anchor", "middle")
+
+                        tipSVG.selectAll("cands")
+                            .data(ga_special)
+                            .enter()
+                            .append("text")
+                            .text(d => d.win > 99 ? 100 : d.win < 1 ? 0 : nf(d.win))
+                            .attr("y", (d, i) => 80 + i * 40)
+                            .attr("x", 270)
+                            .attr("fill", d => cand_colors(d.party))
+                            .attr("font-weight", "500")
+                            .style("font-size", "18")
+                            .attr("text-anchor", "middle")
+
+                    })
+                    .on('mouseout',
+                        function (d) {
+
+
+                            tool_tip.hide()
+                        });
+                var histogram = d3.select("#histogram")
+                    .append("svg")
+                    .attr("viewBox", '0 0 1000 500');
+
+                d3.csv("https://data.jhkforecasts.com/2020-senate-histogram.csv", hist => {
+                    console.log(hist)
+                })
+
+            })
         })
     })
 })
