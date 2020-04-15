@@ -31,18 +31,7 @@
 	<link rel="stylesheet" href="https://projects.jhkforecasts.com/presidential-forecast/index.css">
 	<script src="https:////cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script>
 	<style>
-		@media only screen and (max-width: width 600px) {
-			.test {
-				width: 100%;
-			}
-		}
 
-		@media only screen and (min-width:601px) {
-			.test {
-				width: 80%;
-				margin-left: 10%;
-			}
-		}
 	</style>
 </head>
 
@@ -266,11 +255,11 @@
 		Senate
 		Forecast </h1>
 	<script>
-		var state_index = "US"
+		  var key_state = "US"
 	</script>
 	<p style=" font-family: sf-mono;font-weight: 400;text-align: center;text-decoration: underline double;color:#AFAFAF"
 		id="updated"></p>
-	<div class="test">
+	<div class="computer">
 		<div id="topline"></div>
 		<div id="usmap"></div>
 		<h1 style="margin-left: 2%;font-weight: 900;">What the Chamber might look like.</h1>
@@ -283,10 +272,70 @@
 			times. The
 			distribution below shows the most likely senate compostions</p>
 		<div id="histogram"></div>
-		
+		<h1 style="margin-left: 2%;font-weight: 900;">The Ever-changing Race for the White House</h1>
+		<p style="margin-left: 5%;font-weight: 500;;font-size:20px">The race for the Presidency can change in an
+			instance, the chart below shows the zigs and zags of the race for the White House up until today.</p>
+		<table
+			style="margin-left:20%;border-collapse: collapse; border: none;margin-top: 20px;text-align: center;width: 60%;"
+			cellspacing="0">
+			<tbody>
+				<tr>
+					<td style="width: 33%; ">
+						<button class="btn default" id="winbutton">Win Senate</button>
+					</td>
+					<td style="width: 33%; ">
+						<button class="btn default" id="seatsbutton">Avg. Seats</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div id="time"></div>
+		<h1 style="margin-left: 2%;font-weight: 900;">The Races That Will Decide the Majority.</h1>
+		<p style="margin-left: 5%;font-weight: 400;font-size:20px">Most Senate Elections aren't really that competitive
+			and worth watching. Below shows the Senate Elections that will decide the election, along with the possible
+			outcomes in that state (80% confidence intervals).</p>
+		<div id="tippingpoint"></div>
+	</div>
+
+	<div class="phone">
+		<div id="toplinePhone"></div>
+		<div id="usmapPhone"></div>
+		<h1 style="margin-left: 2%;font-weight: 900;font-size: 25px;">What the Chamber might look like.</h1>
+		<p style="margin-left: 5%;font-weight: 400;font-size:15">The Senate Race is all about getting and building a
+			majority. The graphic below show which party is most likely to get a majority, and how strong the majority
+			is.</p>
+		<div id="congressPhone"></div>
+		<h1 style="margin-left: 2%;font-weight: 900;font-size: 25px;">The Uncertainty of the Race</h1>
+		<p style="margin-left: 5%;font-weight: 400;font-size:15px">The race for the Senate majority can be uncertain at
+			times. The
+			distribution below shows the most likely senate compostions</p>
+		<div id="histogramPhone"></div>
+		<h1 style="margin-left: 2%;font-weight: 900;">The Ever-changing Race for the White House</h1>
+		<p style="margin-left: 5%;font-weight: 500;;font-size:20px">The race for the Presidency can change in an
+			instance, the chart below shows the zigs and zags of the race for the White House up until today.</p>
+		<table
+			style="margin-left:20%;border-collapse: collapse; border: none;margin-top: 20px;text-align: center;width: 60%;"
+			cellspacing="0">
+			<tbody>
+				<tr>
+					<td style="width: 33%; ">
+						<button class="btn default" id="winbuttonPhone">Win Senate</button>
+					</td>
+					<td style="width: 33%; ">
+						<button class="btn default" id="seatsbuttonPhone">Avg. Seats</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div id="timePhone"></div>
+		<h1 style="margin-left: 2%;font-weight: 900;font-size: 25px;">The Races That Will Decide the Majority.</h1>
+		<p style="margin-left: 5%;font-weight: 400;font-size:15px">Most Senate Elections aren't really that competitive
+			and worth watching. Below shows the Senate Elections that will decide the election, along with the possible
+			outcomes in that state (80% confidence intervals).</p>
+		<div id="tippingpointPhone"></div>
 	</div>
 	<script src="national.js"></script>
-
 </body>
 
 </html>

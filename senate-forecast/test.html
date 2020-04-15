@@ -1,124 +1,65 @@
 <!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@jhkersting">
+    <meta name="twitter:creator" content="@jhkersting">
+    <meta name="twitter:title" content="2020 Senate Elections">
+    <meta name="twitter:description" content="Who is win the 2020 Senate Elections?">
+    <meta name="twitter:image" content="https://jhkforecasts.com/senate-forecast-04.png">
+    <title>2020 Senate Forecast</title>
+    <script data-ad-client="ca-pub-8025120308040073" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140782021-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-140782021-2');
+    </script>
+    <link rel="icon" href="https://jhkforecasts.com/LOGO-01.png">
     <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/htk2wjy.css">
+    <link rel="stylesheet" href="https://projects.jhkforecasts.com/presidential-forecast/index.css">
+    <script src="https:////cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script>
     <style>
-        body {
-            margin: 0;
-            position: fixed;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            text-align: center;
-        }
+
     </style>
 </head>
 
 <body>
     <script>
-
-        var map_states = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "District of Columbia", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"]
-        var map_labels = [{ "state": "Alabama", "label": "AL", "xValue": 637, "yValue": 338.6934 }, { "state": "Alaska", "label": "AK", "xValue": 245, "yValue": 400 }, { "state": "Arizona", "label": "AZ", "xValue": 315, "yValue": 306.5801 }, { "state": "Arkansas", "label": "AR", "xValue": 560, "yValue": 315.6387 }, { "state": "California", "label": "CA", "xValue": 223, "yValue": 253.9219 }, { "state": "Colorado", "label": "CO", "xValue": 400, "yValue": 245.5645 }, { "state": "Connecticut", "label": "CT", "xValue": -1000, "yValue": -1000 }, { "state": "Delaware", "label": "DE", "xValue": -1000, "yValue": -1000 }, { "state": "District of Columbia", "label": "DC", "xValue": -1000, "yValue": -1000 }, { "state": "Florida", "label": "FL", "xValue": 714, "yValue": 397.8154 }, { "state": "Georgia", "label": "GA", "xValue": 680.0117, "yValue": 335.2354 }, { "state": "Hawaii", "label": "HI", "xValue": 380, "yValue": 465 }, { "state": "Idaho", "label": "ID", "xValue": 310.1851, "yValue": 155 }, { "state": "Illinois", "label": "IL", "xValue": 596.6602, "yValue": 231.2954 }, { "state": "Indiana", "label": "IN", "xValue": 633.4111, "yValue": 228.4214 }, { "state": "Iowa", "label": "IA", "xValue": 545.8457, "yValue": 202.6782 }, { "state": "Kansas", "label": "KS", "xValue": 487, "yValue": 259.1592 }, { "state": "Kentucky", "label": "KY", "xValue": 655.1484, "yValue": 264.9658 }, { "state": "Louisiana", "label": "LA", "xValue": 561.4404, "yValue": 369.8135 }, { "state": "Maine", "label": "ME", "xValue": 807.3105, "yValue": 109.855 }, { "state": "Maryland", "label": "MD", "xValue": -1000, "yValue": -1000 }, { "state": "Massachusetts", "label": "MA", "xValue": -1000, "yValue": -1000 }, { "state": "Michigan", "label": "MI", "xValue": 645.6465, "yValue": 181.3647 }, { "state": "Minnesota", "label": "MN", "xValue": 530.8594, "yValue": 141.5874 }, { "state": "Mississippi", "label": "MS", "xValue": 598.6016, "yValue": 342.1514 }, { "state": "Missouri", "label": "MO", "xValue": 557, "yValue": 261.123 }, { "state": "Montana", "label": "MT", "xValue": 370.0981, "yValue": 112.7705 }, { "state": "Nebraska", "label": "NE", "xValue": 473.8364, "yValue": 210.0527 }, { "state": "Nevada", "label": "NV", "xValue": 267.8765, "yValue": 219.0957 }, { "state": "New Hampshire", "label": "NH", "xValue": -1000, "yValue": -1000 }, { "state": "New Jersey", "label": "NJ", "xValue": 785, "yValue": 210 }, { "state": "New Mexico", "label": "NM", "xValue": 385.3774, "yValue": 314.1035 }, { "state": "New York", "label": "NY", "xValue": 753.5781, "yValue": 163.2588 }, { "state": "North Carolina", "label": "NC", "xValue": 728.6084, "yValue": 284.5029 }, { "state": "North Dakota", "label": "ND", "xValue": 467.0742, "yValue": 117.3823 }, { "state": "Ohio", "label": "OH", "xValue": 670.7197, "yValue": 219.4883 }, { "state": "Oklahoma", "label": "OK", "xValue": 500.1963, "yValue": 306.418 }, { "state": "Oregon", "label": "OR", "xValue": 240.2783, "yValue": 139.5654 }, { "state": "Pennsylvania", "label": "PA", "xValue": 730.3535, "yValue": 200.856 }, { "state": "Rhode Island", "label": "RI", "xValue": -1000, "yValue": -1000 }, { "state": "South Carolina", "label": "SC", "xValue": 712.4395, "yValue": 315.6387 }, { "state": "South Dakota", "label": "SD", "xValue": 468.0742, "yValue": 163.5166 }, { "state": "Tennessee", "label": "TN", "xValue": 640.8594, "yValue": 290.8193 }, { "state": "Texas", "label": "TX", "xValue": 480.9902, "yValue": 374.2861 }, { "state": "Utah", "label": "UT", "xValue": 330.1084, "yValue": 234.978 }, { "state": "Vermont", "label": "VT", "xValue": -1000, "yValue": -1000 }, { "state": "Virginia", "label": "VA", "xValue": 731.0264, "yValue": 252.7842 }, { "state": "Washington", "label": "WA", "xValue": 256.9365, "yValue": 88.0762 }, { "state": "West Virginia", "label": "WV", "xValue": 701, "yValue": 243 }, { "state": "Wisconsin", "label": "WI", "xValue": 585.2529, "yValue": 163.2588 }, { "state": "Wyoming", "label": "WY", "xValue": 385.9287, "yValue": 179.6255 }]
-
-        d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
-
-            var states = input_data.map(d => {
-                return {
-                    state: d.state,
-                    state_index: d.state_index
-                }
-            })
-
-            states.forEach((d, i) => {
-                var state = d.state
-                var map_lab = map_labels.filter(d => d.state == state)[0]
-                d.label = map_lab.label
-                d.cx = map_lab.xValue
-                d.cy = map_lab.yValue
-            })
-            var color = d3.scaleLinear()
-                .domain([0, 50, 100])
-                .range(["#0091FF", "white", "#FF6060"]);
-            
-            var dateparse = d3.timeParse("%m/%d/%y")
-            var timeformat = d3.timeFormat("%m/%d/%y")
-
-            d3.csv("https://data.jhkforecasts.com/2020-senate.csv", data => {
-                data.forEach((d, i) => {
-                    d.date = dateparse(d.forecast_date)
-                })
-                var today = data.filter(d => d.forecast_date == timeformat(d3.max(data, d => d.date)))
-                //calcuting total manually
-                var svg = d3.select('body').append("svg")
-                .attr("viewBox", "0 0 1100 600")
-                .append("g")
-                .attr("transform", "translate(" + 550 + "," + 400 + ")");
-                var dem_seats = [{ state: "DEM", state_index: "", abbrev: "", win: 0, seats: 35 }]
-                var rep_seats = [{ state: "REP", state_index: "", abbrev: "", win: 100, seats: 30 }]
-                var seats = []
-                var elSeats = []
-                states.forEach((d, i) => {
-                    var state = d.state
-                    var abbrev = d.label
-                    var state_index = d.state_index
-                    var win = d3.sum(today.filter(d => d.state_index == state_index && d.party == "REP"), d => d.win)
-                    var ps = {
-                        state: state,
-                        state_index: state_index,
-                        abbrev: abbrev,
-                        win: win,
-                        seats: 1
-                    }
-                    elSeats.push(ps)
-                })
-                elSeats.sort((a, b) => a.win - b.win)
-                seats.push(dem_seats)
-                seats.push(elSeats)
-                seats.push(rep_seats)
-                var seats = seats.flat()
-
-                console.log(seats)
-
-                var arc = d3.arc()
-                    .outerRadius(300)
-                    .innerRadius(200)
-                    ;
-
-                var pie = d3.pie()
-                    .sort(null)
-                    .value(function (d) {
-                        return d.seats;
-                    })
-                    .startAngle(-2)
-                    .endAngle(2);
-
-
-
-                var g = svg.selectAll(".arc")
-                    .data(pie(seats))
-                    .enter().append("g");
-
-                g.append("path")
-                    .attr("d", arc)
-                    .style("fill", d => color(d.data.win))
-                    .attr("stroke", "white");
-
-                g.append("text")
-                    .attr("transform", function (d) {
-                        var _d = arc.centroid(d);
-                        _d[0] *= 1.3;
-                        _d[1] *= 1.3;
-                        var a = (d.startAngle + d.endAngle) * 90 / Math.PI - 90;
-                        return "translate(" + _d + ")rotate("+a+")";
-                    })
-                    .style("text-anchor", "middle")
-                    .style("dominant-baseline", "central")
-                    .text(d => d.data.abbrev);
-
-
-            })
-        })
+        var state_index = "US"
     </script>
+    <h1 style="margin-left: 2%;font-weight: 900;">The Ever-changing Race for the White House</h1>
+    <p style="margin-left: 5%;font-weight: 500;;font-size:20px">The race for the Presidency can change in an
+        instance, the chart below shows the zigs and zags of the race for the White House up until today.</p>
+    <table
+        style="margin-left:20%;border-collapse: collapse; border: none;margin-top: 20px;text-align: center;width: 60%;"
+        cellspacing="0">
+        <tbody>
+            <tr>
+                <td style="width: 33%; ">
+                    <button class="btn default" id="winbuttonPhone">Win Senate</button>
+                </td>
+                <td style="width: 33%; ">
+                    <button class="btn default" id="seatsbuttonPhone">Avg. Seats</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div id="timePhone"></div>
+    <script src="test.js"></script>
+
 </body>
+
+</html>
