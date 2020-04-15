@@ -79,14 +79,13 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
         d.cx = map_lab.xValue
         d.cy = map_lab.yValue
     })
-    console.log(states)
     d3.csv("https://data.jhkforecasts.com/2020-senate.csv", data => {
         data.forEach((d, i) => {
             d.date = dateparse(d.forecast_date)
         })
         var today = data.filter(d => d.forecast_date == timeformat(d3.max(data, d => d.date)))
         var updated = today[0].tipping_point
-        console.log(today)
+        var updated = updated.split(".")[0].toUpperCase() + updated.split(".")[1]
         document.getElementById("updated").innerHTML = "UPDATED: " + updated
 
         var rep_win_senate = today[0].win
@@ -193,7 +192,6 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                     }
                 }
             }
-            console.log(json.features)
             map.selectAll("path")
                 .data(json.features)
                 .enter()
@@ -230,17 +228,18 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                 .on('mouseover', function (d) {
 
 
-                    d.properties.cands == undefined ? "" : tool_tip.show();
+                    d.properties.cands == undefined ? "" : tool_tip
+                        .offset([-170, -150]).show()
                     var tipSVG = d3.select("#tipDiv")
                         .append("svg")
                         .attr("width", 300)
-                        .attr("height", 200)
+                        .attr("height", 170)
 
                     tipSVG.append("rect")
                         .attr("y", 1.5)
                         .attr("x", 1.5)
                         .attr("width", 297)
-                        .attr("height", 197)
+                        .attr("height", 167)
                         .attr("rx", 8)
                         .attr("fill", "white")
                         .attr("stroke", "black")
@@ -407,7 +406,6 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                     .scale(s)
                     .translate(t);
                 var ga_special = today.filter(d => d.state_index == "Georgia: Class III")
-                console.log(ga_special)
 
                 map.append("path")
                     .datum(state)
@@ -437,7 +435,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
 
 
                         tool_tip
-                            .offset([-300, -150]).show()
+                            .offset([-250, -150]).show()
                         var tipSVG = d3.select("#tipDiv")
                             .append("svg")
                             .attr("width", 300)
@@ -536,12 +534,233 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         });
                 var histogram = d3.select("#histogram")
                     .append("svg")
-                    .attr("viewBox", '0 0 1000 500');
+                    .attr("viewBox", '0 0 1000 670');
 
                 d3.csv("https://data.jhkforecasts.com/2020-senate-histogram.csv", hist => {
-                    console.log(hist)
-                })
 
+                    var hist = hist.slice(5, 26)
+                    console.log(hist)
+
+
+                    var rep_hist = d3.scaleLinear()
+                        .domain([40, 60])
+                        .range(["white", "#FF6060"]);
+
+                    var dem_hist = d3.scaleLinear()
+                        .domain([40, 60])
+                        .range(["white", "#0091FF"]);
+
+                    var hist_scale = d3.scaleLinear()
+                        .domain([0, 20])
+                        .range([0, 600]);
+
+                    var tie_length = hist_scale(hist[10].prob)
+                    var biden_win = +today[1].poll_avg * tie_length / 100
+                    console.log(tie_length)
+                    histogram.selectAll("seats")
+                        .data(hist)
+                        .enter()
+                        .append("rect")
+                        .attr("y", (d, i) => 60 + i * 25)
+                        .attr("x", 90)
+                        .attr("fill", d => rep_hist(d.rep_seats))
+                        .attr("height", 20)
+                        .attr("width", 20)
+
+                    histogram.selectAll("seats")
+                        .data(hist)
+                        .enter()
+                        .append("rect")
+                        .attr("y", (d, i) => 60 + i * 25)
+                        .attr("x", 140)
+                        .attr("fill", d => dem_hist(d.dem_seats))
+                        .attr("height", 20)
+                        .attr("width", 20)
+
+                    histogram.append("text")
+                        .text("GOP")
+                        .attr("y", 40)
+                        .attr("x", 100)
+                        .attr("fill", "black")
+                        .attr("font-weight", "500")
+                        .style("font-size", "15")
+                        .attr("text-anchor", "middle")
+                        .attr("dominant-baseline", "central")
+                        .style("font-family", "sf-mono")
+
+                    histogram.append("text")
+                        .text("DEM")
+                        .attr("y", 40)
+                        .attr("x", 150)
+                        .attr("fill", "black")
+                        .attr("font-weight", "500")
+                        .style("font-size", "15")
+                        .attr("text-anchor", "middle")
+                        .attr("dominant-baseline", "central")
+                        .style("font-family", "sf-mono")
+
+
+                    histogram.append("text")
+                        .text("Seats")
+                        .attr("y", 10)
+                        .attr("x", 125)
+                        .attr("fill", "black")
+                        .attr("font-weight", "500")
+                        .style("font-size", "18")
+                        .attr("text-anchor", "middle")
+                        .attr("dominant-baseline", "central")
+
+                    histogram.append("text")
+                        .text("Probability")
+                        .attr("y", 10)
+                        .attr("x", 250)
+                        .attr("fill", "black")
+                        .attr("font-weight", "500")
+                        .style("font-size", "18")
+                        .attr("text-anchor", "middle")
+                        .attr("dominant-baseline", "central")
+
+                    histogram.selectAll("seats")
+                        .data(hist)
+                        .enter()
+                        .append("text")
+                        .text(d => d.rep_seats)
+                        .attr("y", (d, i) => 70 + i * 25)
+                        .attr("x", 100)
+                        .attr("fill", "black")
+                        .attr("font-weight", "500")
+                        .style("font-size", "15")
+                        .attr("text-anchor", "middle")
+                        .attr("dominant-baseline", "central")
+
+                    histogram.selectAll("seats")
+                        .data(hist)
+                        .enter()
+                        .append("text")
+                        .text(d => d.dem_seats)
+                        .attr("y", (d, i) => 70 + i * 25)
+                        .attr("x", 150)
+                        .attr("fill", "black")
+                        .attr("font-weight", "500")
+                        .style("font-size", "15")
+                        .attr("text-anchor", "middle")
+                        .attr("dominant-baseline", "central")
+
+                    histogram.selectAll("seats")
+                        .data(hist)
+                        .enter()
+                        .append("text")
+                        .text(d => nf(d.prob))
+                        .attr("y", (d, i) => 70 + i * 25)
+                        .attr("x", 250)
+                        .attr("fill", "black")
+                        .attr("font-weight", "500")
+                        .style("font-size", "15")
+                        .attr("text-anchor", "middle")
+                        .attr("dominant-baseline", "central")
+
+                    histogram.selectAll("seats")
+                        .data(hist)
+                        .enter()
+                        .append("rect")
+                        .attr("y", (d, i) => 60 + i * 25)
+                        .attr("x", 350)
+                        .attr("fill", (d, i) => i > 10 ? colors[0] : colors[1])
+                        .attr("height", 20)
+                        .attr("width", d => hist_scale(d.prob))
+
+                    histogram.append("rect")
+                        .attr("y", 310)
+                        .attr("x", 350 + biden_win)
+                        .attr("fill", colors[0])
+                        .attr("height", 20)
+                        .attr("width", tie_length - biden_win)
+
+                    var pct = [0, 5, 10, 15, 20]
+
+                    histogram.selectAll("seats")
+                        .data(pct)
+                        .enter()
+                        .append("text")
+                        .text(d => d)
+                        .attr("y", 40)
+                        .attr("x", d => 350 + hist_scale(d))
+                        .attr("fill", "#afafaf")
+                        .attr("font-weight", "500")
+                        .style("font-size", "15")
+                        .attr("text-anchor", "middle")
+                        .attr("dominant-baseline", "central")
+
+                    var congress = d3.select('#congress').append("svg")
+                        .attr("viewBox", "0 0 1100 600")
+                        .append("g")
+                        .attr("transform", "translate(" + 550 + "," + 400 + ")");
+                    var dem_seats = [{ state: "DEM", state_index: "", abbrev: "", win: 0, seats: 35 }]
+                    var rep_seats = [{ state: "REP", state_index: "", abbrev: "", win: 100, seats: 30 }]
+                    var seats = []
+                    var elSeats = []
+                    states.forEach((d, i) => {
+                        var state = d.state
+                        var abbrev = d.label
+                        var state_index = d.state_index
+                        var win = d3.sum(today.filter(d => d.state_index == state_index && d.party == "REP"), d => d.win)
+                        var ps = {
+                            state: state,
+                            state_index: state_index,
+                            abbrev: abbrev,
+                            win: win,
+                            seats: 1
+                        }
+                        elSeats.push(ps)
+                    })
+                    elSeats.sort((a, b) => a.win - b.win)
+                    seats.push(dem_seats)
+                    seats.push(elSeats)
+                    seats.push(rep_seats)
+                    var seats = seats.flat()
+
+                    console.log(seats)
+
+                    var arc = d3.arc()
+                        .outerRadius(300)
+                        .innerRadius(200)
+                        ;
+
+                    var pie = d3.pie()
+                        .sort(null)
+                        .value(function (d) {
+                            return d.seats;
+                        })
+                        .startAngle(-2)
+                        .endAngle(2);
+
+
+
+
+
+                    congress.selectAll(".arc")
+                        .data(pie(seats))
+                        .enter().append("path")
+                        .attr("d", arc)
+                        .style("fill", d => color(d.data.win))
+                        .attr("stroke", "white");
+
+                    congress.selectAll(".arc")
+                        .data(pie(seats))
+                        .enter().append("text")
+                        .attr("transform", function (d) {
+                            var _d = arc.centroid(d);
+                            _d[0] *= 1.25;
+                            _d[1] *= 1.25;
+                            var a = (d.startAngle + d.endAngle) * 90 / Math.PI - 90;
+                            return "translate(" + _d + ")rotate(" + a + ")";
+                        })
+                        .style("text-anchor", "middle")
+                        .style("dominant-baseline", "central")
+                        .text(d => d.data.abbrev)
+                        .style("font-family", "sf-mono")
+                        .attr("font-size", 10);
+                })
             })
         })
     })
