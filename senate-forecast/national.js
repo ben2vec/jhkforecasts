@@ -79,6 +79,9 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
         d.cx = map_lab.xValue
         d.cy = map_lab.yValue
     })
+    states[34].label = "GA*"
+    states[34].cx = -1000
+    states[34].cy = -1000
     d3.csv("https://data.jhkforecasts.com/2020-senate.csv", data => {
         data.forEach((d, i) => {
             d.date = dateparse(d.forecast_date)
@@ -557,6 +560,28 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                     var tie_length = hist_scale(hist[10].prob)
                     var biden_win = +today[1].poll_avg * tie_length / 100
                     console.log(tie_length)
+                    var pct = [0, 5, 10, 15, 20]
+
+                    histogram.selectAll("seats")
+                        .data(pct)
+                        .enter()
+                        .append("line")
+                        .attr("x1", d => 350 + hist_scale(d))
+                        .attr("x2", d => 350 + hist_scale(d))
+                        .attr("y1", 57.5)
+                        .attr("y2", 57.5 + 525)
+                        .attr("stroke", "lightgrey")
+
+                    histogram.selectAll("seats")
+                        .data(hist)
+                        .enter()
+                        .append("line")
+                        .attr("x1", 80)
+                        .attr("x2", 950)
+                        .attr("y1", (d, i) => 57.5 + i * 25)
+                        .attr("y2", (d, i) => 57.5 + i * 25)
+                        .attr("stroke", "lightgrey")
+
                     histogram.selectAll("seats")
                         .data(hist)
                         .enter()
@@ -676,7 +701,6 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("height", 20)
                         .attr("width", tie_length - biden_win)
 
-                    var pct = [0, 5, 10, 15, 20]
 
                     histogram.selectAll("seats")
                         .data(pct)
@@ -691,10 +715,11 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("text-anchor", "middle")
                         .attr("dominant-baseline", "central")
 
+
                     var congress = d3.select('#congress').append("svg")
-                        .attr("viewBox", "0 0 1100 600")
+                        .attr("viewBox", "0 0 1100 550")
                         .append("g")
-                        .attr("transform", "translate(" + 550 + "," + 400 + ")");
+                        .attr("transform", "translate(" + 550 + "," + 350 + ")");
                     var dem_seats = [{ state: "DEM", state_index: "", abbrev: "", win: 0, seats: 35 }]
                     var rep_seats = [{ state: "REP", state_index: "", abbrev: "", win: 100, seats: 30 }]
                     var seats = []
@@ -731,10 +756,8 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .value(function (d) {
                             return d.seats;
                         })
-                        .startAngle(-2)
-                        .endAngle(2);
-
-
+                        .startAngle(-2.2)
+                        .endAngle(2.2);
 
 
 
@@ -750,16 +773,73 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .enter().append("text")
                         .attr("transform", function (d) {
                             var _d = arc.centroid(d);
-                            _d[0] *= 1.25;
-                            _d[1] *= 1.25;
+                            _d[0] *= 1.21;
+                            _d[1] *= 1.21;
                             var a = (d.startAngle + d.endAngle) * 90 / Math.PI - 90;
                             return "translate(" + _d + ")rotate(" + a + ")";
                         })
-                        .style("text-anchor", "middle")
+                        .style("text-anchor", "start")
                         .style("dominant-baseline", "central")
                         .text(d => d.data.abbrev)
                         .style("font-family", "sf-mono")
                         .attr("font-size", 10);
+
+                    congress.append("line")
+                        .attr("x1", 0)
+                        .attr("x2", 0)
+                        .attr("y1", -150)
+                        .attr("y2", -500)
+                        .attr("stroke", "black")
+
+                    congress.append("text")
+                        .text("50-50 SPLIT")
+                        .attr("y", -120)
+                        .attr("x", 0)
+                        .attr("fill", "black")
+                        .attr("font-weight", "500")
+                        .style("font-size", "18")
+                        .attr("text-anchor", "middle")
+                        .attr("dominant-baseline", "top")
+
+                        congress.append("text")
+                        .text("30 Repbulican Seats")
+                        .attr("y", -120)
+                        .attr("x", 400)
+                        .attr("fill", "black")
+                        .attr("font-weight", "500")
+                        .style("font-size", "18")
+                        .attr("text-anchor", "middle")
+                        .attr("dominant-baseline", "top")
+                        congress.append("text")
+                        .text("not up for Re-election")
+                        .attr("y", -120)
+                        .attr("x", 400)
+                        .attr("fill", "black")
+                        .attr("font-weight", "500")
+                        .style("font-size", "18")
+                        .attr("text-anchor", "middle")
+                        .attr("dominant-baseline", "top")
+                        .attr("dy","1em")
+
+                        congress.append("text")
+                        .text("35 Democrat Seats")
+                        .attr("y", -120)
+                        .attr("x", -400)
+                        .attr("fill", "black")
+                        .attr("font-weight", "500")
+                        .style("font-size", "18")
+                        .attr("text-anchor", "middle")
+                        .attr("dominant-baseline", "top")
+                        congress.append("text")
+                        .text("not up for Re-election")
+                        .attr("y", -120)
+                        .attr("x", -400)
+                        .attr("fill", "black")
+                        .attr("font-weight", "500")
+                        .style("font-size", "18")
+                        .attr("text-anchor", "middle")
+                        .attr("dominant-baseline", "top")
+                        .attr("dy","1em")
                 })
             })
         })
