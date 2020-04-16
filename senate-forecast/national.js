@@ -1464,9 +1464,9 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .append("path")
                         .attr("class", "states")
                         .attr("d", path)
-                        .style("stroke", "lightgrey")
+                        .style("stroke", "white")
                         .style("stroke-width", "1")
-                        .style("fill", d => d.properties.cands == undefined ? "white" : color(d3.sum(d.properties.cands.filter(d => d.party == "REP"), d => d.win)))
+                        .style("fill", d => d.properties.cands == undefined ? "#cfcfcf" : color(d3.sum(d.properties.cands.filter(d => d.party == "REP"), d => d.win)))
 
                     mapPhone.selectAll("label")
                         .data(states)
