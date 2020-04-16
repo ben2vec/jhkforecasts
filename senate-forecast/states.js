@@ -13,7 +13,7 @@ var timeparse = d3.timeParse("%m/%d/%y %H:%M")
 var nf = d3.format(".1f")
 var updated_format = d3.timeFormat("%b. %d %Y %I:%M %p")
 var event_odds = [
-    { event: "hflipping a coin", odds: 50 },
+    { event: "flipping a coin", odds: 50 },
     { event: "getting a one pair", odds: 43.8 },
     { event: "NBA player makes a three", odds: 36 },
     { event: "MLB batter getting on base", odds: 30.8 },
