@@ -11,8 +11,8 @@
 	<meta name="twitter:creator" content="@jhkersting">
 	<meta name="twitter:title" content="2020 Senate Elections">
 	<meta name="twitter:description" content="Who is win the 2020 Senate Elections?">
-	<meta name="twitter:image" content="https://jhkforecasts.com/senate-forecast-04.png">
-	<title>2020 Senate Forecast</title>
+	<meta name="twitter:image" content="https://jhkforecasts.com/senate-forecast-02.png">
+	<title>'20 Senate Forecast</title>
 	<script data-ad-client="ca-pub-8025120308040073" async
 		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -31,7 +31,22 @@
 	<link rel="stylesheet" href="https://projects.jhkforecasts.com/presidential-forecast/index.css">
 	<script src="https:////cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script>
 	<style>
+		#winbutton {
+			display: block
+		}
 
+		@media only screen and (max-width:600px) {
+			.special {
+				width: 100%
+			}
+		}
+
+		@media only screen and (min-width:601px) {
+			.special {
+				width: 85%;
+				margin-left: 7.5%;
+			}
+		}
 	</style>
 </head>
 
@@ -255,26 +270,58 @@
 		Senate
 		Forecast </h1>
 	<script>
-		  var key_state = "US"
+		var key_state = "US"
 	</script>
 	<p style=" font-family: sf-mono;font-weight: 400;text-align: center;text-decoration: underline double;color:#AFAFAF"
 		id="updated"></p>
+
+
 	<div class="computer">
 		<div id="topline"></div>
 		<div id="usmap"></div>
-		<h1 style="margin-left: 2%;font-weight: 900;">What the Chamber might look like.</h1>
-		<p style="margin-left: 5%;font-weight: 400;font-size:20px">The Senate Race is all about getting and building a
+		<h1 style="margin-left: 2%;font-weight: 900;font-size:3vw">What the Chamber might look like.</h1>
+		<p style="margin-left: 5%;font-weight: 400;font-size:2vw">The Senate Race is all about getting and building a
 			majority. The graphic below show which party is most likely to get a majority, and how strong the majority
 			is.</p>
 		<div id="congress"></div>
-		<h1 style="margin-left: 2%;font-weight: 900;">The Uncertainty of the Race</h1>
-		<p style="margin-left: 5%;font-weight: 400;font-size:20px">The race for the Senate majority can be uncertain at
+		<h1 style="margin-left: 2%;font-weight: 900;font-size:3vw">The Uncertainty of the Race</h1>
+		<p style="margin-left: 5%;font-weight: 400;font-size:2vw">The race for the Senate majority can be uncertain at
 			times. The
 			distribution below shows the most likely senate compostions</p>
 		<div id="histogram"></div>
-		<h1 style="margin-left: 2%;font-weight: 900;">The Ever-changing Race for the White House</h1>
-		<p style="margin-left: 5%;font-weight: 500;;font-size:20px">The race for the Presidency can change in an
-			instance, the chart below shows the zigs and zags of the race for the White House up until today.</p>
+	</div>
+
+
+	<div class="phone">
+		<div id="toplinePhone"></div>
+		<div id="usmapPhone"></div>
+		<h1 style="margin-left: 2%;font-weight: 900;font-size:3vw;">What the Chamber might look like.</h1>
+		<p style="margin-left: 5%;font-weight: 400;font-size:2vw">The Senate Race is all about getting and building a
+			majority. The graphic below show which party is most likely to get a majority, and how strong the
+			majority
+			is.</p>
+		<div id="congressPhone"></div>
+		<h1 style="margin-left: 2%;font-weight: 900;font-size:3vw;">The Uncertainty of the Race</h1>
+		<p style="margin-left: 5%;font-weight: 400;font-size:2vw">The race for the Senate majority can be uncertain
+			at
+			times. The
+			distribution below shows the most likely senate compostions</p>
+		<div id="histogramPhone"></div>
+	</div>
+
+	<div class="special">
+		<div style="text-align:center">
+			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<ins class="adsbygoogle" style="display:block;margin-right:auto;margin-left: auto" data-ad-format="fluid"
+				data-ad-layout-key="-h2+d+5c-9-3e" data-ad-client="ca-pub-8025120308040073"
+				data-ad-slot="8603820464"></ins>
+			<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</div>
+		<h1 style="margin-left: 2%;font-weight: 900;font-size:3vw">The Zigs and Zags of the Race</h1>
+		<p style="margin-left: 5%;font-weight: 400;font-size:2vw">The Senate race can change in an instant. Below shows
+			the change in each party's chance of winnning a majority have changed over time.</p>
 		<table
 			style="margin-left:20%;border-collapse: collapse; border: none;margin-top: 20px;text-align: center;width: 60%;"
 			cellspacing="0">
@@ -290,50 +337,47 @@
 			</tbody>
 		</table>
 
+
 		<div id="time"></div>
-		<h1 style="margin-left: 2%;font-weight: 900;">The Races That Will Decide the Majority.</h1>
-		<p style="margin-left: 5%;font-weight: 400;font-size:20px">Most Senate Elections aren't really that competitive
+	</div>
+
+
+	</div>
+	<div class="computer">
+		<h1 style="margin-left: 2%;font-weight: 900;font-size:3vw">The Races That Will Decide the Majority.</h1>
+		<p style="margin-left: 5%;font-weight: 400;font-size:2vw">Most Senate Elections aren't really that competitive
 			and worth watching. Below shows the Senate Elections that will decide the election, along with the possible
 			outcomes in that state (80% confidence intervals).</p>
 		<div id="tippingpoint"></div>
 	</div>
 
+
 	<div class="phone">
-		<div id="toplinePhone"></div>
-		<div id="usmapPhone"></div>
-		<h1 style="margin-left: 2%;font-weight: 900;font-size: 25px;">What the Chamber might look like.</h1>
-		<p style="margin-left: 5%;font-weight: 400;font-size:15">The Senate Race is all about getting and building a
-			majority. The graphic below show which party is most likely to get a majority, and how strong the majority
-			is.</p>
-		<div id="congressPhone"></div>
-		<h1 style="margin-left: 2%;font-weight: 900;font-size: 25px;">The Uncertainty of the Race</h1>
-		<p style="margin-left: 5%;font-weight: 400;font-size:15px">The race for the Senate majority can be uncertain at
-			times. The
-			distribution below shows the most likely senate compostions</p>
-		<div id="histogramPhone"></div>
-		<h1 style="margin-left: 2%;font-weight: 900;">The Ever-changing Race for the White House</h1>
-		<p style="margin-left: 5%;font-weight: 500;;font-size:20px">The race for the Presidency can change in an
-			instance, the chart below shows the zigs and zags of the race for the White House up until today.</p>
-		<table
-			style="margin-left:20%;border-collapse: collapse; border: none;margin-top: 20px;text-align: center;width: 60%;"
-			cellspacing="0">
-			<tbody>
-				<tr>
-					<td style="width: 33%; ">
-						<button class="btn default" id="winbuttonPhone">Win Senate</button>
-					</td>
-					<td style="width: 33%; ">
-						<button class="btn default" id="seatsbuttonPhone">Avg. Seats</button>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-		<div id="timePhone"></div>
-		<h1 style="margin-left: 2%;font-weight: 900;font-size: 25px;">The Races That Will Decide the Majority.</h1>
-		<p style="margin-left: 5%;font-weight: 400;font-size:15px">Most Senate Elections aren't really that competitive
+		<h1 style="margin-left: 2%;font-weight: 900;font-size:3vw;">The Races That Will Decide the Majority.</h1>
+		<p style="margin-left: 5%;font-weight: 400;font-size:2vw">Most Senate Elections aren't really that competitive
 			and worth watching. Below shows the Senate Elections that will decide the election, along with the possible
 			outcomes in that state (80% confidence intervals).</p>
 		<div id="tippingpointPhone"></div>
+	</div>
+	<div class="special">
+		<div style="text-align:center">
+			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<ins class="adsbygoogle" style="display:block;margin-right:auto;margin-left: auto" data-ad-format="fluid"
+				data-ad-layout-key="-h2+d+5c-9-3e" data-ad-client="ca-pub-8025120308040073"
+				data-ad-slot="8603820464"></ins>
+			<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</div>
+		<div style="text-align:center">
+			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<ins class="adsbygoogle" style="display:block;margin-right:auto;margin-left: auto" data-ad-format="fluid"
+				data-ad-layout-key="-h2+d+5c-9-3e" data-ad-client="ca-pub-8025120308040073"
+				data-ad-slot="8603820464"></ins>
+			<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</div>
 	</div>
 	<script src="national.js"></script>
 </body>
