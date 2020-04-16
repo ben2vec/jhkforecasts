@@ -16,6 +16,20 @@ var path = d3.geoPath()
 var color = d3.scaleLinear()
     .domain([0, 50, 100])
     .range(["#0091FF", "white", "#FF6060"]);
+d3.select("#topline").append("h1")
+    .text("Win Senate...")
+    .style("font-size", "2vw")
+    .style("font-weight", 900)
+    .style("margin-left", "2%")
+    .style("border-bottom", "solid black .2vw")
+
+d3.select("#toplinePhone").append("h1")
+    .text("Win Senate...")
+    .style("font-size", "2vw")
+    .style("font-weight", 900)
+    .style("margin-left", "2%")
+    .style("margin-left", "2%")
+    .style("border-bottom", "solid black .2vw")
 
 var mapPhone = d3.select("#usmap")
     .append("svg")
@@ -540,6 +554,91 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
 
                             tool_tipPhone.hide()
                         });
+
+                d3.select("#histogram").append("h1")
+                    .text("The Uncertainty of the Race")
+                    .style("font-size", "3vw")
+                    .style("font-weight", 900)
+                    .style("margin-left", "2%")
+
+                d3.select("#histogram").append("h1")
+                    .text("The race for the Senate majority can be uncertain at times. The distribution below shows the most likely senate compostions")
+                    .style("font-size", "2vw")
+                    .style("font-weight", 400)
+                    .style("margin-left", "5%")
+
+                d3.select("#histogramPhone").append("h1")
+                    .text("The Uncertainty of the Race")
+                    .style("font-size", "3vw")
+                    .style("font-weight", 900)
+                    .style("margin-left", "2%")
+
+                d3.select("#histogramPhone").append("h1")
+                    .text("The race for the Senate majority can be uncertain at times. The distribution below shows the most likely senate compostions")
+                    .style("font-size", "2vw")
+                    .style("font-weight", 400)
+                    .style("margin-left", "5%")
+
+                d3.select("#congress").append("h1")
+                    .text("What the Chamber might look like")
+                    .style("font-size", "3vw")
+                    .style("font-weight", 900)
+                    .style("margin-left", "2%")
+
+                d3.select("#congress").append("h1")
+                    .text("The Senate Race is all about getting and building a majority. The graphic below show which party is most likely to get a majority, and how strong the majority is.")
+                    .style("font-size", "2vw")
+                    .style("font-weight", 400)
+                    .style("margin-left", "5%")
+
+                d3.select("#congressPhone").append("h1")
+                    .text("What the Chamber might look like")
+                    .style("font-size", "3vw")
+                    .style("font-weight", 900)
+                    .style("margin-left", "2%")
+
+                d3.select("#congressPhone").append("h1")
+                    .text("The Senate Race is all about getting and building a majority. The graphic below show which party is most likely to get a majority, and how strong the majority is.")
+                    .style("font-size", "2vw")
+                    .style("font-weight", 400)
+                    .style("margin-left", "5%")
+
+                d3.select("#timeText").append("h1")
+                    .text("The Zigs and Zags of the Race")
+                    .style("font-size", "3vw")
+                    .style("font-weight", 900)
+                    .style("margin-left", "2%")
+
+                d3.select("#timeText").append("h1")
+                    .text("The Senate race can change in an instant. Below shows the change in each party's chance of winnning a majority have changed over time.")
+                    .style("font-size", "2vw")
+                    .style("font-weight", 400)
+                    .style("margin-left", "5%")
+
+                d3.select("#tippingpoint").append("h1")
+                    .text("The Races That Will Decide the Majority")
+                    .style("font-size", "3vw")
+                    .style("font-weight", 900)
+                    .style("margin-left", "2%")
+
+                d3.select("#tippingpoint").append("h1")
+                    .text("Most Senate Elections aren't really that competitive and worth watching. Below shows the Senate Elections that will decide the election, along with the possible outcomes in that state (80% confidence intervals).")
+                    .style("font-size", "2vw")
+                    .style("font-weight", 400)
+                    .style("margin-left", "5%")
+
+                d3.select("#tippingpointPhone").append("h1")
+                    .text("The Races That Will Decide the Majority")
+                    .style("font-size", "3vw")
+                    .style("font-weight", 900)
+                    .style("margin-left", "2%")
+
+                d3.select("#tippingpointPhone").append("h1")
+                    .text("Most Senate Elections aren't really that competitive and worth watching. Below shows the Senate Elections that will decide the election, along with the possible outcomes in that state (80% confidence intervals).")
+                    .style("font-size", "2vw")
+                    .style("font-weight", 400)
+                    .style("margin-left", "5%")
+
                 var histogram = d3.select("#histogram")
                     .append("svg")
                     .attr("viewBox", '0 0 1000 600');
