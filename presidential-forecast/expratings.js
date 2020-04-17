@@ -430,7 +430,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/LT_Data.
                             .attr("font-size", "20")
                             .attr("fill", color(100))
                             .attr("text-anchor", "middle")
-                            .style("font-weight", "700")
+                            .style("font-weight", "500")
                             .attr("dominant-baseline", "central")
 
                         map.append("text")
@@ -441,7 +441,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/LT_Data.
                             .attr("font-size", "20")
                             .attr("fill", color(0))
                             .attr("text-anchor", "middle")
-                            .style("font-weight", "700")
+                            .style("font-weight", "500")
                             .attr("dominant-baseline", "central")
 
                         map.selectAll("ratings")
@@ -465,7 +465,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/LT_Data.
                             .attr("font-size", "15")
                             .attr("fill", "black")
                             .attr("text-anchor", "end")
-                            .style("font-weight", "700")
+                            .style("font-weight", "500")
                             .attr("dominant-baseline", "central")
 
                         var ratingspct = [">95%", ">80%", ">60%", ">55%", "<55%", ">55%", ">60%", ">80%", ">95%"]
@@ -480,7 +480,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/LT_Data.
                             .attr("font-size", "15")
                             .attr("fill", "black")
                             .attr("text-anchor", "start")
-                            .style("font-weight", "700")
+                            .style("font-weight", "500")
                             .attr("dominant-baseline", "central")
 
                         map.selectAll("ratings")
@@ -494,7 +494,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/LT_Data.
                             .attr("font-size", "15")
                             .attr("fill", "black")
                             .attr("text-anchor", "start")
-                            .style("font-weight", "700")
+                            .style("font-weight", "500")
                             .attr("dominant-baseline", "central")
 
                         map.append("text")
@@ -505,7 +505,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/LT_Data.
                             .attr("font-size", "15")
                             .attr("fill", "black")
                             .attr("text-anchor", "start")
-                            .style("font-weight", "700")
+                            .style("font-weight", "500")
                             .attr("dominant-baseline", "central")
 
                         map.append("g")
@@ -676,6 +676,8 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/LT_Data.
                     .append("td")
                     .style("background-color", (d, i) => typeof d == "number" ? i == 1 ? "white" : color(d) : i > 2 ? colorsratings[ratings.indexOf(d)] : "none")
                     .text((d, i) => typeof d == "number" ? i == 1 ? d : wholeformat(Math.abs(d - 50) + 50) + "%" : i > 2 ? d.split(" ")[0] : d)
+                    .style("font-weight",500)
+                    .style("font-size","1.5vw")
 
                 //experts table
                 var extable = d3.select("#ex").append("table")
@@ -709,6 +711,9 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/LT_Data.
                     .append("td")
                     .style("background-color", (d, i) => typeof d == "number" ? i == 1 ? "white" : color(d) : i > 2 ? colorsratings[ratings.indexOf(d)] : "none")
                     .text((d, i) => typeof d == "number" ? i == 1 ? d : wholeformat(Math.abs(d - 50) + 50) + "%" : i > 2 ? d.split(" ")[0] : d)
+                    .style("font-weight",500)
+                    .style("font-size","1.5vw")
+
 
                 //newcomer table
                 var newtable = d3.select("#new").append("table")
@@ -741,8 +746,8 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/LT_Data.
                     .append("td")
                     .style("background-color", (d, i) => typeof d == "number" ? i == 1 ? "white" : color(d) : i > 2 ? colorsratings[ratings.indexOf(d)] : "none")
                     .text((d, i) => typeof d == "number" ? i == 1 ? d : wholeformat(Math.abs(d - 50) + 50) + "%" : i > 2 ? d.split(" ")[0] : d)
-
-
+                    .style("font-weight",500)
+                    .style("font-size","1.5vw")
 
 
                 var projection2 = d3.geoAlbers();
@@ -836,7 +841,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/LT_Data.
                             .attr("x", 900)
                             .attr("fill", "black")
                             .style("font-weight", "500")
-                            .style("font-size", 25)
+                            .style("font-size", 20)
                             .attr("text-anchor", "middle")
                             .attr("dominant-baseline", "central")
 
