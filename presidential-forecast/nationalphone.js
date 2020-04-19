@@ -46,6 +46,7 @@ var tool_tip = d3.tip()
 maphone.call(tool_tip);
 
 
+
 d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
 
   var updated = data[data.length - 1].experts_weight
@@ -83,7 +84,139 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
     finaldt.margin = finaldt.gop_vote - finaldt.dem_vote
     sd.push(finaldt)
   }
+  var boxstates = [sd[28], sd[44], sd[20], sd[38], sd[6], sd[7], sd[19], sd[50]]
 
+  maphone.append("rect")
+    .attr("x", 150)
+    .attr("y", -200)
+    .attr("width", 750)
+    .attr("height", 700)
+    .attr("fill", "white")
+    .on('click',
+      function (d) {
+
+
+        tool_tip.hide()
+      });
+
+  maphone.selectAll()
+    .data(boxstates)
+    .enter()
+    .append("rect")
+    .attr("x", 850)
+    .attr("y", (d, i) => 130 + 25 * i)
+    .attr("width", 30)
+    .attr("height", 25)
+    .attr("stroke", "white")
+    .attr("fill", d => color(d.gop_win))
+
+  maphone.selectAll()
+    .data(boxstates)
+    .enter()
+    .append("text")
+    .text(d => d.label)
+    .attr("x", 865)
+    .attr("y", (d, i) => 142.5 + 25 * i)
+    .style("font-family", "sf-mono")
+    .attr("font-size", "16")
+    .attr("fill", "black")
+    .attr("text-anchor", "middle")
+    .attr("font-weight", "500")
+    .attr("dominant-baseline", "central")
+
+  maphone.selectAll()
+    .data(boxstates)
+    .enter()
+    .append("a")
+    .attr("href", d => d.state)
+    .append("rect")
+    .attr("class", "statesover")
+    .attr("x", 850)
+    .attr("y", (d, i) => 130 + 25 * i)
+    .attr("width", 30)
+    .attr("height", 25)
+    .attr("fill", "none")
+    .on('mouseover', function (d) {
+
+
+      tool_tip.show();
+      var tipSVG = d3.select("#tipDiv")
+        .append("svg")
+        .attr("width", 175)
+        .attr("height", 175)
+        ;
+      tipSVG.append("rect")
+        .attr("y", 1.5)
+        .attr("x", 1.5)
+        .attr("width", 172)
+        .attr("height", 172)
+        .attr("rx", 8)
+        .attr("fill", "white")
+        .attr("stroke", "black")
+        .attr("stroke-width", 2)
+
+
+
+      tipSVG.append("text")
+        .text(d.state)
+        .attr("y", 20)
+        .attr("x", 87.5)
+        .attr("fill", "#black")
+        .attr("font-weight", "500")
+        .style("font-size", "20")
+        .attr("text-anchor", "middle")
+
+      tipSVG.append("text")
+        .text(d.electoral_votes + " Electoral Votes")
+        .attr("y", 40)
+        .attr("x", 87.5)
+        .attr("fill", "#black")
+        .style("font-weight", "500")
+        .style("font-size", "15")
+        .attr("text-anchor", "middle")
+
+      tipSVG.append("image")
+        .attr("xlink:href", d => "https://jhkforecasts.com/Trump-01.png")
+        .attr("x", 90)
+        .attr("y", 50)
+        .attr("width", 82)
+        .attr("height", 82)
+
+      tipSVG.append("image")
+        .attr("xlink:href", d => "https://jhkforecasts.com/Biden-01.png")
+        .attr("x", 3)
+        .attr("y", 50)
+        .attr("width", 82)
+        .attr("height", 82)
+
+      tipSVG.append("text")
+        .text(numberformat(d.gop_win) + "%")
+        .attr("y", 150)
+        .attr("x", 131.25)
+        .attr("fill", color(100))
+        .attr("font-weight", "500")
+        .style("font-size", 20)
+        .attr("text-anchor", "middle")
+
+      tipSVG.append("text")
+        .text(numberformat(d.dem_win) + "%")
+        .attr("y", 150)
+        .attr("x", 43.75)
+        .attr("fill", color(0))
+        .attr("font-weight", "500")
+        .style("font-size", 20)
+        .attr("text-anchor", "middle")
+
+
+
+
+    })
+    .on('mouseout',
+      function (d) {
+
+
+        tool_tip.hide()
+      });
 
   d3.json("https://projects.jhkforecasts.com/presidential_forecast/us-states.json", function (json) {
 
@@ -115,18 +248,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
       }
     }
 
-    maphone.append("rect")
-      .attr("x", 150)
-      .attr("y", -200)
-      .attr("width", 750)
-      .attr("height", 700)
-      .attr("fill", "white")
-      .on('click',
-        function (d) {
 
-
-          tool_tip.hide()
-        });
 
 
     maphone.append("text")
@@ -141,7 +263,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
 
     maphone.append("text")
       .text(numberformat(newest_data[168].win) + "%")
-      .attr("x", 700)
+      .attr("x", 740)
       .attr("y", -70)
       .attr("font-family", "brandon-grotesque")
       .attr("font-weight", "700")
@@ -161,7 +283,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
 
     maphone.append("image")
       .attr("xlink:href", d => "https://jhkforecasts.com/Trump-01.png")
-      .attr("x", 710)
+      .attr("x", 750)
       .attr("y", -150)
       .attr("width", 150)
       .attr("height", 150)
@@ -182,6 +304,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
       .style("stroke", "#fff")
       .style("stroke-width", "1")
       .style("fill", d => color(d.properties.gopWin))
+      .attr("transform", "translate(15,0)")
 
 
     maphone.selectAll("label")
@@ -195,6 +318,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
       .attr("font-size", 16)
       .attr("fill", "black")
       .attr("text-anchor", "middle")
+      .attr("transform", "translate(15,0)")
 
 
     maphone.selectAll("path2")
@@ -205,6 +329,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
       .attr("d", path)
       .style("stroke", d => d.properties.tippingPoint >= 3 ? "black" : "none")
       .style("stroke-width", "1.5")
+      .attr("transform", "translate(15,0)")
       .on('mouseover', function (d) {
 
 
@@ -286,23 +411,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
           tool_tip.hide()
         });
 
-    maphone.append("rect")
-      .attr("x", 850)
-      .attr("y", 350)
-      .attr("width", 20)
-      .attr("height", 20)
-      .style("stroke", "black")
-      .style("stroke-width", 2)
-      .attr("ry", "6")
-      .style("fill", "none");
 
-    maphone.append("text")
-      .text("Tipping Points")
-      .attr("x", 760)
-      .attr("y", 365)
-      .attr("fill", "black")
-      .style("font-weight", "500")
-      .style("font-size", "15");
 
 
 
