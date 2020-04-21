@@ -64,7 +64,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
 
   var sd = [];
   for (let k = 0; k < map_states.length; k++) {
-    var dt = newest_data.filter(d => d.state == states[k]);s
+    var dt = newest_data.filter(d => d.state == states[k]);
     
     var ml = map_labels.filter(d => d.state == states[k]);
     var finaldt = {
