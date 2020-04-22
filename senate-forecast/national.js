@@ -1,3 +1,146 @@
+//APPEND DOM FEATURES
+d3.select("#topline").append("h1")
+    .text("Win Senate...")
+    .style("font-size", "2vw")
+    .style("font-weight", 900)
+    .style("margin-left", "2%")
+    .style("border-bottom", "solid black .2vw")
+
+d3.select("#toplinePhone").append("h1")
+    .text("Win Senate...")
+    .style("font-size", "2vw")
+    .style("font-weight", 900)
+    .style("margin-left", "2%")
+    .style("margin-left", "2%")
+    .style("border-bottom", "solid black .2vw")
+
+d3.select("#histogram").append("h1")
+    .text("The Uncertainty of the Race")
+    .style("font-size", "3vw")
+    .style("font-weight", 900)
+    .style("margin-left", "2%")
+
+d3.select("#histogram").append("h1")
+    .text("The race for the Senate majority can be uncertain at times. The distribution below shows the most likely senate compostions")
+    .style("font-size", "2vw")
+    .style("font-weight", 400)
+    .style("margin-left", "5%")
+
+d3.select("#histogramPhone").append("h1")
+    .text("The Uncertainty of the Race")
+    .style("font-size", "3vw")
+    .style("font-weight", 900)
+    .style("margin-left", "2%")
+
+d3.select("#histogramPhone").append("h1")
+    .text("The race for the Senate majority can be uncertain at times. The distribution below shows the most likely senate compostions")
+    .style("font-size", "2vw")
+    .style("font-weight", 400)
+    .style("margin-left", "5%")
+
+d3.select("#congress").append("h1")
+    .text("What the Chamber might look like")
+    .style("font-size", "3vw")
+    .style("font-weight", 900)
+    .style("margin-left", "2%")
+
+d3.select("#congress").append("h1")
+    .text("The Senate Race is all about getting and building a majority. The graphic below show which party is most likely to get a majority, and how strong the majority is.")
+    .style("font-size", "2vw")
+    .style("font-weight", 400)
+    .style("margin-left", "5%")
+
+d3.select("#congressPhone").append("h1")
+    .text("What the Chamber might look like")
+    .style("font-size", "3vw")
+    .style("font-weight", 900)
+    .style("margin-left", "2%")
+
+d3.select("#congressPhone").append("h1")
+    .text("The Senate Race is all about getting and building a majority. The graphic below show which party is most likely to get a majority, and how strong the majority is.")
+    .style("font-size", "2vw")
+    .style("font-weight", 400)
+    .style("margin-left", "5%")
+
+d3.select("#timeText").append("h1")
+    .text("The Zigs and Zags of the Race")
+    .style("font-size", "3vw")
+    .style("font-weight", 900)
+    .style("margin-left", "2%")
+
+d3.select("#timeText").append("h1")
+    .text("The Senate race can change in an instant. Below shows the change in each party's chance of winnning a majority have changed over time.")
+    .style("font-size", "2vw")
+    .style("font-weight", 400)
+    .style("margin-left", "5%")
+
+d3.select("#tippingpoint").append("h1")
+    .text("The Races That Will Decide the Majority")
+    .style("font-size", "3vw")
+    .style("font-weight", 900)
+    .style("margin-left", "2%")
+
+d3.select("#tippingpoint").append("h1")
+    .text("Most Senate Elections aren't really that competitive and worth watching. Below shows the Senate Elections that will decide the election, along with the possible outcomes in that state (80% confidence intervals).")
+    .style("font-size", "2vw")
+    .style("font-weight", 400)
+    .style("margin-left", "5%")
+
+d3.select("#tippingpointPhone").append("h1")
+    .text("The Races That Will Decide the Majority")
+    .style("font-size", "3vw")
+    .style("font-weight", 900)
+    .style("margin-left", "2%")
+
+d3.select("#tippingpointPhone").append("h1")
+    .text("Most Senate Elections aren't really that competitive and worth watching. Below shows the Senate Elections that will decide the election, along with the possible outcomes in that state (80% confidence intervals).")
+    .style("font-size", "2vw")
+    .style("font-weight", 400)
+    .style("margin-left", "5%")
+
+var histogram = d3.select("#histogram")
+    .append("svg")
+    .attr("viewBox", '0 0 1000 600');
+
+var mapPhone = d3.select("#usmap")
+    .append("svg")
+    .attr("viewBox", '75 -40 900 500');
+
+var tool_tipPhone = d3.tip()
+    .attr("class", "d3-tip")
+    .offset([-200, -150])
+    .html("<div id='tipDiv'></div>");
+
+var margin = { top: 20, right: 40, bottom: 20, left: 20 }
+var width = 1400 - margin.left - margin.right
+var height = 600 - margin.top - margin.bottom
+var axisPad = 12
+var congress = d3.select('#congress').append("svg")
+    .attr("viewBox", "0 0 1100 550")
+    .append("g")
+    .attr("transform", "translate(" + 550 + "," + 350 + ")");
+var tip = d3.select('#tippingpoint').append("svg")
+    .attr("viewBox", "0 0 1000 1800")
+var time = d3.select("#time").append("svg")
+    .attr("viewBox", "0 0 1400 600")
+    .append('g')
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+var toplinePhone = d3.select("#toplinePhone").append("svg")
+    .attr("viewBox", "0 0 1000 100")
+
+var congressPhone = d3.select('#congressPhone').append("svg")
+    .attr("viewBox", "0 0 1100 550")
+    .append("g")
+    .attr("transform", "translate(" + 550 + "," + 550 + ")");
+var histogramPhone = d3.select("#histogramPhone")
+    .append("svg")
+    .attr("viewBox", '0 0 1000 685');
+var tipPhone = d3.select('#tippingpointPhone').append("svg")
+    .attr("viewBox", "0 0 1000 1800")
+
+
+mapPhone.call(tool_tipPhone);
+
 var colors = ["#FF6060", "#0091FF", "#FFE130", "#C473F6", "#31DE70"]
 
 var category = ["REP", "DEM", "LIB", "IND", "GREEN"]
@@ -20,31 +163,9 @@ var current_seats = d3.scaleLinear()
 var color = d3.scaleLinear()
     .domain([0, 50, 100])
     .range(["#0091FF", "white", "#FF6060"]);
-d3.select("#topline").append("h1")
-    .text("Win Senate...")
-    .style("font-size", "2vw")
-    .style("font-weight", 900)
-    .style("margin-left", "2%")
-    .style("border-bottom", "solid black .2vw")
 
-d3.select("#toplinePhone").append("h1")
-    .text("Win Senate...")
-    .style("font-size", "2vw")
-    .style("font-weight", 900)
-    .style("margin-left", "2%")
-    .style("margin-left", "2%")
-    .style("border-bottom", "solid black .2vw")
 
-var mapPhone = d3.select("#usmap")
-    .append("svg")
-    .attr("viewBox", '75 -40 900 500');
 
-var tool_tipPhone = d3.tip()
-    .attr("class", "d3-tip")
-    .offset([-200, -150])
-    .html("<div id='tipDiv'></div>");
-
-mapPhone.call(tool_tipPhone);
 var tformat = d3.timeFormat("%m/%d/%Y")
 var timeformat = d3.timeFormat("%m/%d/%y")
 var dateparse = d3.timeParse("%m/%d/%y")
@@ -118,88 +239,9 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
         var upset_odds = Math.min(rep_win_senate, dem_win_senate)
 
 
-        mapPhone.append("image")
-            .attr("href", "https://jhkforecasts.com/elephant-01.png")
-            .attr("x", 890)
-            .attr("y", -50)
-            .attr("height", 75)
-            .attr("width", 75)
-
-        mapPhone.append("image")
-            .attr("href", "https://jhkforecasts.com/donkey-01.png")
-            .attr("x", 85)
-            .attr("y", -50)
-            .attr("height", 75)
-            .attr("width", 75)
-
-        mapPhone.append("text")
-            .text("Democrats")
-            .attr("x", 165)
-            .attr("y", -30)
-            .attr("dominant-baseline", "central")
-            .attr("text-anchor", "start")
-            .attr("font-size", "23")
-
-        mapPhone.append("text")
-            .text("Republicans")
-            .attr("x", 885)
-            .attr("y", -30)
-            .attr("dominant-baseline", "central")
-            .attr("text-anchor", "end")
-            .attr("font-size", "23")
 
 
-        mapPhone.append("text")
-            .text(nf(rep_win_senate) + "%")
-            .attr("x", 885)
-            .attr("y", 0)
-            .attr("dominant-baseline", "central")
-            .attr("text-anchor", "end")
-            .attr("font-size", "23")
-            .attr("fill", colors[0])
-            .attr("font-weight", 500)
-
-        mapPhone.append("text")
-            .text(nf(rep_seats))
-            .attr("x", 560)
-            .attr("y", 0)
-            .attr("dominant-baseline", "central")
-            .attr("text-anchor", "start")
-            .attr("font-size", "23")
-            .attr("fill", colors[0])
-            .attr("font-weight", 500)
-
-        mapPhone.append("text")
-            .text("Seats")
-            .attr("x", 525)
-            .attr("y", 0)
-            .attr("dominant-baseline", "central")
-            .attr("text-anchor", "middle")
-            .attr("font-size", "23")
-            .attr("fill", "black")
-            .attr("font-weight", 500)
-
-        mapPhone.append("text")
-            .text(nf(dem_seats))
-            .attr("x", 490)
-            .attr("y", 0)
-            .attr("dominant-baseline", "central")
-            .attr("text-anchor", "end")
-            .attr("font-size", "23")
-            .attr("fill", colors[1])
-            .attr("font-weight", 500)
-
-        mapPhone.append("text")
-            .text(nf(dem_win_senate) + "%")
-            .attr("x", 165)
-            .attr("y", 0)
-            .attr("dominant-baseline", "central")
-            .attr("text-anchor", "start")
-            .attr("font-size", "23")
-            .attr("fill", colors[1])
-            .attr("font-weight", 500)
-
-        d3.json("https://projects.jhkforecasts.com/presidential_forecast/us-states.json", function (json) {
+        d3.json("us-states.json", function (json) {
 
             for (var i = 0; i < states.length - 1; i++) {
 
@@ -413,6 +455,88 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                 .attr("text-anchor", "middle")
                 .attr("font-size", 15)
                 .attr("font-weight", "500")
+
+            mapPhone.append("image")
+                .attr("href", "https://jhkforecasts.com/elephant-01.png")
+                .attr("x", 890)
+                .attr("y", -50)
+                .attr("height", 75)
+                .attr("width", 75)
+
+            mapPhone.append("image")
+                .attr("href", "https://jhkforecasts.com/donkey-01.png")
+                .attr("x", 85)
+                .attr("y", -50)
+                .attr("height", 75)
+                .attr("width", 75)
+
+            mapPhone.append("text")
+                .text("Democrats")
+                .attr("x", 165)
+                .attr("y", -30)
+                .attr("dominant-baseline", "central")
+                .attr("text-anchor", "start")
+                .attr("font-size", "23")
+
+            mapPhone.append("text")
+                .text("Republicans")
+                .attr("x", 885)
+                .attr("y", -30)
+                .attr("dominant-baseline", "central")
+                .attr("text-anchor", "end")
+                .attr("font-size", "23")
+
+
+            mapPhone.append("text")
+                .text(nf(rep_win_senate) + "%")
+                .attr("x", 885)
+                .attr("y", 0)
+                .attr("dominant-baseline", "central")
+                .attr("text-anchor", "end")
+                .attr("font-size", "23")
+                .attr("fill", colors[0])
+                .attr("font-weight", 500)
+
+            mapPhone.append("text")
+                .text(nf(rep_seats))
+                .attr("x", 560)
+                .attr("y", 0)
+                .attr("dominant-baseline", "central")
+                .attr("text-anchor", "start")
+                .attr("font-size", "23")
+                .attr("fill", colors[0])
+                .attr("font-weight", 500)
+
+            mapPhone.append("text")
+                .text("Seats")
+                .attr("x", 525)
+                .attr("y", 0)
+                .attr("dominant-baseline", "central")
+                .attr("text-anchor", "middle")
+                .attr("font-size", "23")
+                .attr("fill", "black")
+                .attr("font-weight", 500)
+
+            mapPhone.append("text")
+                .text(nf(dem_seats))
+                .attr("x", 490)
+                .attr("y", 0)
+                .attr("dominant-baseline", "central")
+                .attr("text-anchor", "end")
+                .attr("font-size", "23")
+                .attr("fill", colors[1])
+                .attr("font-weight", 500)
+
+            mapPhone.append("text")
+                .text(nf(dem_win_senate) + "%")
+                .attr("x", 165)
+                .attr("y", 0)
+                .attr("dominant-baseline", "central")
+                .attr("text-anchor", "start")
+                .attr("font-size", "23")
+                .attr("fill", colors[1])
+                .attr("font-weight", 500)
+
             var width = 50,
                 height = 50;
             var projection2 = d3.geoAlbers();
@@ -565,93 +689,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                             tool_tipPhone.hide()
                         });
 
-                d3.select("#histogram").append("h1")
-                    .text("The Uncertainty of the Race")
-                    .style("font-size", "3vw")
-                    .style("font-weight", 900)
-                    .style("margin-left", "2%")
 
-                d3.select("#histogram").append("h1")
-                    .text("The race for the Senate majority can be uncertain at times. The distribution below shows the most likely senate compostions")
-                    .style("font-size", "2vw")
-                    .style("font-weight", 400)
-                    .style("margin-left", "5%")
-
-                d3.select("#histogramPhone").append("h1")
-                    .text("The Uncertainty of the Race")
-                    .style("font-size", "3vw")
-                    .style("font-weight", 900)
-                    .style("margin-left", "2%")
-
-                d3.select("#histogramPhone").append("h1")
-                    .text("The race for the Senate majority can be uncertain at times. The distribution below shows the most likely senate compostions")
-                    .style("font-size", "2vw")
-                    .style("font-weight", 400)
-                    .style("margin-left", "5%")
-
-                d3.select("#congress").append("h1")
-                    .text("What the Chamber might look like")
-                    .style("font-size", "3vw")
-                    .style("font-weight", 900)
-                    .style("margin-left", "2%")
-
-                d3.select("#congress").append("h1")
-                    .text("The Senate Race is all about getting and building a majority. The graphic below show which party is most likely to get a majority, and how strong the majority is.")
-                    .style("font-size", "2vw")
-                    .style("font-weight", 400)
-                    .style("margin-left", "5%")
-
-                d3.select("#congressPhone").append("h1")
-                    .text("What the Chamber might look like")
-                    .style("font-size", "3vw")
-                    .style("font-weight", 900)
-                    .style("margin-left", "2%")
-
-                d3.select("#congressPhone").append("h1")
-                    .text("The Senate Race is all about getting and building a majority. The graphic below show which party is most likely to get a majority, and how strong the majority is.")
-                    .style("font-size", "2vw")
-                    .style("font-weight", 400)
-                    .style("margin-left", "5%")
-
-                d3.select("#timeText").append("h1")
-                    .text("The Zigs and Zags of the Race")
-                    .style("font-size", "3vw")
-                    .style("font-weight", 900)
-                    .style("margin-left", "2%")
-
-                d3.select("#timeText").append("h1")
-                    .text("The Senate race can change in an instant. Below shows the change in each party's chance of winnning a majority have changed over time.")
-                    .style("font-size", "2vw")
-                    .style("font-weight", 400)
-                    .style("margin-left", "5%")
-
-                d3.select("#tippingpoint").append("h1")
-                    .text("The Races That Will Decide the Majority")
-                    .style("font-size", "3vw")
-                    .style("font-weight", 900)
-                    .style("margin-left", "2%")
-
-                d3.select("#tippingpoint").append("h1")
-                    .text("Most Senate Elections aren't really that competitive and worth watching. Below shows the Senate Elections that will decide the election, along with the possible outcomes in that state (80% confidence intervals).")
-                    .style("font-size", "2vw")
-                    .style("font-weight", 400)
-                    .style("margin-left", "5%")
-
-                d3.select("#tippingpointPhone").append("h1")
-                    .text("The Races That Will Decide the Majority")
-                    .style("font-size", "3vw")
-                    .style("font-weight", 900)
-                    .style("margin-left", "2%")
-
-                d3.select("#tippingpointPhone").append("h1")
-                    .text("Most Senate Elections aren't really that competitive and worth watching. Below shows the Senate Elections that will decide the election, along with the possible outcomes in that state (80% confidence intervals).")
-                    .style("font-size", "2vw")
-                    .style("font-weight", 400)
-                    .style("margin-left", "5%")
-
-                var histogram = d3.select("#histogram")
-                    .append("svg")
-                    .attr("viewBox", '0 0 1000 600');
 
                 d3.csv("https://data.jhkforecasts.com/2020-senate-histogram.csv", hist => {
 
@@ -830,10 +868,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("dominant-baseline", "central")
 
 
-                    var congress = d3.select('#congress').append("svg")
-                        .attr("viewBox", "0 0 1100 550")
-                        .append("g")
-                        .attr("transform", "translate(" + 550 + "," + 350 + ")");
+
                     var dem_seats = [{ state: "DEM", state_index: "", abbrev: "", win: 0, seats: 35 }]
                     var rep_seats = [{ state: "REP", state_index: "", abbrev: "", win: 100, seats: 30 }]
                     var seats = []
@@ -955,8 +990,6 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("dominant-baseline", "top")
                         .attr("dy", "1em")
 
-                    var tip = d3.select('#tippingpoint').append("svg")
-                        .attr("viewBox", "0 0 1000 1800")
 
                     var bars = states.map((d, i) => {
                         return {
@@ -1122,10 +1155,8 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("ry", 3)
 
                     var time_data = data.filter(d => d.state == key_state)
-                    var margin = { top: 20, right: 40, bottom: 20, left: 20 }
-                    var width = 1400 - margin.left - margin.right
-                    var height = 600 - margin.top - margin.bottom
-                    var axisPad = 12
+
+
                     console.log(data)
                     var time_data = time_data.map((d, i) => {
                         return {
@@ -1158,11 +1189,6 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         bisectDate = d3.bisector(d => d.date).left,
                         wholevalue = d3.format(".0f"),
                         onevalue = d3.format(".1f")
-
-                    var time = d3.select("#time").append("svg")
-                        .attr("viewBox", "0 0 1400 600")
-                        .append('g')
-                        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 
                     var x = d3.scaleTime()
@@ -1397,8 +1423,6 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
 
                     }
                     //phone layouts
-                    var toplinePhone = d3.select("#toplinePhone").append("svg")
-                        .attr("viewBox", "0 0 1000 100")
 
 
 
@@ -1603,10 +1627,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .style("stroke", ga_special[0].tipping_point > 3 ? "black" : "grey")
                         .attr("transform", "translate(725,280)").style("stroke-width", "1.5")
 
-                    var congressPhone = d3.select('#congressPhone').append("svg")
-                        .attr("viewBox", "0 0 1100 550")
-                        .append("g")
-                        .attr("transform", "translate(" + 550 + "," + 550 + ")");
+
                     var arcPhone = d3.arc()
                         .outerRadius(500)
                         .innerRadius(300)
@@ -1703,9 +1724,6 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("dy", "1em")
 
 
-                    var histogramPhone = d3.select("#histogramPhone")
-                        .append("svg")
-                        .attr("viewBox", '0 0 1000 685');
                     var hist_scale = d3.scaleLinear()
                         .domain([0, 20])
                         .range([0, 600]);
@@ -1865,10 +1883,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("font-weight", "500")
                         .style("font-size", "15")
                         .attr("text-anchor", "middle")
-                        .attr("dominant-baseline", "central")
 
-                    var tipPhone = d3.select('#tippingpointPhone').append("svg")
-                        .attr("viewBox", "0 0 1000 1800")
 
                     var x2 = d3.scaleLinear()
                         .domain([-50, 50])
