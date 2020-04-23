@@ -46,16 +46,16 @@
 			cursor: pointer;
 			text-align: center;
 			font-family: brandon-grotesque;
-			font-size: 2vw;
+			font-size: 1.5vw;
 			font-style: normal;
 			font-weight: normal;
 			color: black;
 			vertical-align: middle;
-			font-weight: 700;
+			font-weight: 500;
 			background: white;
 			position: sticky;
 			top: 0;
-			border-bottom: 2px;
+			border-bottom: 2px black solid;
 			padding: 5px;
 		}
 
@@ -327,7 +327,8 @@
 	<h1 style="text-align: center;font-weight: 4s00;color: white;font-size: 5vw;background-color: steelblue;">Forecast
 		Comparison </h1>
 
-	<select style="margin-left: 35%;width:30%;margin-top: 0px;" class="selectbox" id="selectbox">
+		<div style="text-align:center;">
+	<select style="margin-top: 0px;" class="selectbox" id="selectbox">
 		<option value="jhk">JHK Forecasts</option>
 		<optgroup label="Experts">
 			<option value="cook">Cook Political Report</option>
@@ -342,6 +343,7 @@
 			<option value="pluralvote">Plural Vote</option>
 		</optgroup>
 	</select>
+		</div>
 	<div style="margin-top: 10px" id="usmap"></div>
 	<div style="text-align:center">
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -351,7 +353,8 @@
 			(adsbygoogle = window.adsbygoogle || []).push({});
 		</script>
 	</div>
-	<select class="selectbox" style="margin-left: 35%;width:30%;margin-top: 10px;margin-bottom: 10px;"
+	<div style="text-align:center;">
+	<select class="selectbox" width:30%;margin-top: 10px;margin-bottom: 10px;"
 	id="state-search">
 	<option value="Alabama">Alabama</option>
 	<option value="Alaska">Alaska</option>
@@ -405,15 +408,19 @@
 	<option value="Wisconsin">Wisconsin</option>
 	<option value="Wyoming">Wyoming</option>
 </select>
+</div>
 	<div id="state"></div>
 	
 	<hr>
+
 	<div id="bars"></div>
-	<select style="margin-left: 35%;width:30%;margin-top: 0px;" class="selectbox" id="selectbox2">
+	<div style="text-align:center;">
+		<select style=margin-top:10px;" class="selectbox" id="selectbox2">
 		<option value="all">ALL</option>
 		<option value="ex">Experts</option>
 		<option value="new">Newcomers</option>
 	</select>
+</div>
 	<h1 style="margin-left: 2%;font-weight: 900;"> Ratings Table </h1>
 	<div id="all"></div>
 	<div id="ex"></div>
