@@ -264,13 +264,16 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/LT_Data.
                 svg.selectAll("bars")
                     .data(bars)
                     .enter()
-                    .append("text")
+                    .append("a")
+                    .attr("href",id => forecasters.filter(d => d.shorthand == id.forecast)[0].link)
+                    .append("text",)
                     .text(id => forecasters.filter(d => d.shorthand == id.forecast)[0].label)
                     .attr("x", 10)
                     .attr("y", (d, i) => i * 100 + 100)
                     .attr("dominant-baseline", "central")
                     .attr("text-anchor", "start")
-                    .attr("font-size", 30);
+                    .attr("font-size", 30)
+                    
 
                 svg.append("text")
                     .text("Biden")
