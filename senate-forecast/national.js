@@ -112,9 +112,7 @@ var tool_tipPhone = d3.tip()
     .html("<div id='tipDiv'></div>");
 
 var margin = { top: 20, right: 40, bottom: 20, left: 20 }
-var width = 1400 - margin.left - margin.right
-var height = 600 - margin.top - margin.bottom
-var axisPad = 12
+
 var congress = d3.select('#congress').append("svg")
     .attr("viewBox", "0 0 1100 550")
     .append("g")
@@ -1183,6 +1181,9 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         line_data.push(ld)
                     }
                     console.log(line_data)
+                    var width = 1400 - margin.left - margin.right
+                    var height = 600 - margin.top - margin.bottom
+                    var axisPad = 12
                     var parseTime = d3.timeParse("%Y-%m-%d"),
                         formatDate = d3.timeFormat("%b - %d"),
                         formatMonth = d3.timeFormat("%Y-%m-%d"),
@@ -1196,7 +1197,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .domain([new Date(2020, 3, 1), new Date(2020, 10, 3)])
 
                     var y = d3.scaleLinear()
-                        .rangeRound([height - margin.bottom, margin.top]);
+                        .rangeRound([600 - margin.bottom, margin.top]);
 
 
                     var z = d3.scaleOrdinal()
@@ -1391,7 +1392,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                                     .attr("x", x(d.date))
                                     .attr("y", 0)
                                     .attr("text-anchor", "middle")
-                                    .style("font-size", 15)
+                                    .style("font-size", 18)
                                     .attr("font-weight", "500")
                                     .text(formatDate(d.date));
 
