@@ -4,55 +4,64 @@ var forecasters = [
         "forecast": "JHK Forecasts",
         "link": "https://projects.jhkforecasts.com/presidential-forecast/",
         "type": "",
-        "shorthand": "jhk"
+        "shorthand": "jhk",
+        "label": "JHK"
     },
     {
         "forecast": "Bitecofer/ Niskanen",
         "link": "https://www.niskanencenter.org/bitecofer-post-primary-update/",
         "type": "newcomer",
-        "shorthand": "bitecofer"
+        "shorthand": "bitecofer",
+        "label": "Bitecofer"
     },
     {
         "forecast": "Cook Political",
         "link": "https://cookpolitical.com/analysis/national/national-politics/introducing-cook-political-reports-2020-electoral-college",
         "type": "expert",
-        "shorthand": "cook"
+        "shorthand": "cook",
+        "label": "Cook"
     },
     {
         "forecast": "Inside Elections",
         "link": "https://insideelections.com/ratings/president",
         "type": "expert",
-        "shorthand": "inside"
+        "shorthand": "inside",
+        "label": "Inside"
     },
     {
         "forecast": "Politico",
         "link": "https://www.politico.com/2020-election/race-forecasts-and-predictions/president/",
         "type": "expert",
-        "shorthand": "politico"
+        "shorthand": "politico",
+        "label": "Politico"
     },
     {
         "forecast": "Sabato's Crystal Ball",
         "link": "http://centerforpolitics.org/crystalball/2020-president/",
         "type": "expert",
-        "shorthand": "sabato"
+        "shorthand": "sabato",
+        "label": "Sabato"
     },
     {
         "forecast": "CNalysis",
         "link": "https://www.cnalysiscom.website/forecasts/2020-president-governor-senate-house-ratings",
         "type": "newcomer",
-        "shorthand": "cnalysis"
+        "shorthand": "cnalysis",
+        "label": "CNalysis"
     },
     {
         "forecast": "Lean Tossup",
         "link": "https://leantossup.ca/us-presidency/",
         "type": "newcomer",
-        "shorthand": "leantoss"
+        "shorthand": "leantoss",
+        "label": "Lean Tossup"
     },
     {
         "forecast": "Plural Vote",
         "link": "http://www.pluralvote.com/article/2020-forecast/",
         "type": "newcomer",
-        "shorthand": "pluralvote"
+        "shorthand": "pluralvote",
+        "label": "Plural Vote"
     }
 ]
 var expert = forecasters.filter(d => d.type == "expert")
@@ -118,7 +127,6 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/LT_Data.
     var ltcds = [leantoss.splice(19, 2), leantoss.splice(27, 3)].flat()
     leantoss.push(ltcds)
     var leantoss = leantoss.flat()
-    console.log(leantoss)
 
 
     d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", jhk => {
@@ -149,7 +157,6 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/LT_Data.
             var pvcds = [pluralvote.splice(20, 2), pluralvote.splice(28, 3)].flat()
             pluralvote.push(pvcds)
             var pluralvote = pluralvote.flat()
-            console.log(pluralvote)
 
             d3.csv("https://data.jhkforecasts.com/2020-pres-input.csv", data => {
 
@@ -169,7 +176,6 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/LT_Data.
                         pluralvote: pluralvote[i].win
                     }
                 })
-                console.log(forecasts_rating)
                 var sd2 = forecasts_rating
                 var ratings_nested = []
                 var forecasts_ev = []
@@ -214,9 +220,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/LT_Data.
                                 d3.sum(datas.filter(d => d.rating > 95), d => d.ev)]
                         }
                     var aggregated = []
-                    map_labels.forEach((d, i) => {
 
-                    })
 
                     var dta = datas.slice(0, 51)
                     dta.forEach((d, i) => {
@@ -226,6 +230,141 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/LT_Data.
                     forecasts_ev.push(expev)
                     ratings_nested.push(dta)
                 }
+                var bars = []
+                forecasts_ev.forEach((d, i) => {
+                    var forecast = d
+                    var ev = forecast.values
+                    var t = []
+                    ev.forEach((d, i) => {
+                        var rating = ratings[i]
+                        var prev = ev.slice(0, i)
+                        var prevSum = d3.sum(prev)
+                        var en = d
+                        t.push({ rating: rating, evs: en, prev: prevSum })
+                    })
+                    bars.push({ forecast: forecast.expert, values: t, })
+                })
+                console.log(bars)
+
+                var x = d3.scaleLinear()
+                    .domain([0, 538])
+                    .range([0, 750])
+
+                d3.select("#bars").append("h1")
+                    .text("Race to 270")
+                    .style("font-weight", 900)
+                    .style("margin-left","2%")
+
+                var svg = d3.select("#bars")
+                    .append("svg")
+                    .attr("viewBox", '-100 0 1200 ' + (forecasters.length * 100 + 100));
+
+                svg.selectAll("bars")
+                    .data(bars)
+                    .enter()
+                    .append("text")
+                    .text(id => forecasters.filter(d => d.shorthand == id.forecast)[0].label)
+                    .attr("x", 10)
+                    .attr("y", (d, i) => i * 100 + 100)
+                    .attr("dominant-baseline", "central")
+                    .attr("text-anchor", "start")
+                    .attr("font-size", 30);
+
+                svg.append("text")
+                    .text("Biden")
+                    .attr("x", 200)
+                    .attr("y", 30)
+                    .attr("dominant-baseline", "bottom")
+                    .attr("text-anchor", "start")
+                    .style("font-weight", 400)
+                    .attr('fill', "Black")
+                    .attr("font-size", 30)
+
+                svg.append("text")
+                    .text("Trump")
+                    .attr("x", 950)
+                    .attr("y", 30)
+                    .attr("dominant-baseline", "bottom")
+                    .attr("text-anchor", "end")
+                    .style("font-weight", 400)
+                    .attr('fill', "Black")
+                    .attr("font-size", 30)
+                svg.append("text")
+                    .text("270")
+                    .attr("x", 200 + x(270))
+                    .attr("y", 50)
+                    .attr("dominant-baseline", "bottom")
+                    .attr("text-anchor", "middle")
+                    .style("font-weight", 500)
+                    .attr('fill', "Black")
+                    .attr("font-size", 15)
+
+                svg.append("line")
+                    .attr("x1", 200 + x(270))
+                    .attr("x2", 200 + x(270))
+                    .attr("y1", 60)
+                    .attr("y2", forecasters.length * 100 + 100)
+                    .attr("stroke", "grey")
+                    .attr("opacity", .6)
+
+
+                bars.forEach((a, b) => {
+                    var values = a.values
+                    console.log(values)
+
+                    svg.selectAll("bars")
+                        .data(values)
+                        .enter()
+                        .append("rect")
+                        .attr("x", (d, i) => 200 + x(d.prev))
+                        .attr("y", (d, i) => b * 100 + 70)
+                        .attr("width", d => x(d.evs))
+                        .attr("height", 60)
+                        .attr("fill", d => ratings_colors(d.rating))
+
+                    svg.selectAll("bars")
+                        .data(values)
+                        .enter()
+                        .append("text")
+                        .text(d => d.evs > 15 ? d.evs : "")
+                        .attr("x", (d, i) => 200 + x(d.prev) + (x(d.evs) / 2))
+                        .attr("y", (d, i) => b * 100 + 100)
+                        .attr("dominant-baseline", "central")
+                        .attr("text-anchor", "middle")
+                        .style("font-weight", 500);
+
+                    svg.selectAll("bars")
+                        .data(values)
+                        .enter()
+                        .append("text")
+                        .text(d3.sum(values.splice(6, 10), d => d.evs))
+                        .attr("x", 950)
+                        .attr("y", (d, i) => b * 100 + 65)
+                        .attr("dominant-baseline", "bottom")
+                        .attr("text-anchor", "end")
+                        .style("font-weight", 500)
+                        .attr('fill', color(100))
+                        .attr("font-size", 20);
+
+                    svg.selectAll("bars")
+                        .data(values)
+                        .enter()
+                        .append("text")
+                        .text(d3.sum(values.splice(0, 4), d => d.evs))
+                        .attr("x", 200)
+                        .attr("y", (d, i) => b * 100 + 65)
+                        .attr("dominant-baseline", "bottom")
+                        .attr("text-anchor", "start")
+                        .style("font-weight", 500)
+                        .attr('fill', color(00))
+                        .attr("font-size", 20)
+
+
+                })
+
+
+
+
                 var state_cand = ratings_nested.flat()
                 var national_cand = forecasts_ev.flat()
                 var map = d3.select("#usmap")
@@ -380,10 +519,10 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/LT_Data.
 
 
                                 tipSVG.append("text")
-                                    .text(typeof d.rating == "number" ? d.rating > 50 ? "WIN:" + wholeformat(d.rating) + "%" : "WIN:" + wholeformat(100 - d.rating) + "%" : d.rating)
+                                    .text(typeof d.rating == "number" ? d.rating > 50 ? "WIN: " + wholeformat(d.rating) + "%" : "WIN:" + wholeformat(100 - d.rating) + "%" : d.rating)
                                     .attr("y", 160)
                                     .attr("x", 87.5)
-                                    .attr("fill", "#black")
+                                    .attr("fill", typeof d.rating == "number" ? d.rating > 50 ? color(100) : color(0) : d.rating_value == 0 ? "black" : d.rating_value > 0 ? color(100) : color(0))
                                     .style("font-weight", "500")
                                     .style("font-size", "15")
                                     .attr("text-anchor", "middle")
@@ -676,8 +815,8 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/LT_Data.
                     .append("td")
                     .style("background-color", (d, i) => typeof d == "number" ? i == 1 ? "white" : color(d) : i > 2 ? colorsratings[ratings.indexOf(d)] : "none")
                     .text((d, i) => typeof d == "number" ? i == 1 ? d : wholeformat(Math.abs(d - 50) + 50) + "%" : i > 2 ? d.split(" ")[0] : d)
-                    .style("font-weight",500)
-                    .style("font-size","1.5vw")
+                    .style("font-weight", 500)
+                    .style("font-size", "1.5vw")
 
                 //experts table
                 var extable = d3.select("#ex").append("table")
@@ -711,8 +850,8 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/LT_Data.
                     .append("td")
                     .style("background-color", (d, i) => typeof d == "number" ? i == 1 ? "white" : color(d) : i > 2 ? colorsratings[ratings.indexOf(d)] : "none")
                     .text((d, i) => typeof d == "number" ? i == 1 ? d : wholeformat(Math.abs(d - 50) + 50) + "%" : i > 2 ? d.split(" ")[0] : d)
-                    .style("font-weight",500)
-                    .style("font-size","1.5vw")
+                    .style("font-weight", 500)
+                    .style("font-size", "1.5vw")
 
 
                 //newcomer table
@@ -746,8 +885,8 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/LT_Data.
                     .append("td")
                     .style("background-color", (d, i) => typeof d == "number" ? i == 1 ? "white" : color(d) : i > 2 ? colorsratings[ratings.indexOf(d)] : "none")
                     .text((d, i) => typeof d == "number" ? i == 1 ? d : wholeformat(Math.abs(d - 50) + 50) + "%" : i > 2 ? d.split(" ")[0] : d)
-                    .style("font-weight",500)
-                    .style("font-size","1.5vw")
+                    .style("font-weight", 500)
+                    .style("font-size", "1.5vw")
 
 
                 var projection2 = d3.geoAlbers();
