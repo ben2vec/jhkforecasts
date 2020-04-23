@@ -529,10 +529,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
       .attr("height", 75)
 
     var dateparse = d3.timeParse("%m/%d/%y")
-    var margin = { top: 20, right: 40, bottom: 20, left: 20 }
-    var width = 1400 - margin.left - margin.right
-    var height = 600 - margin.top - margin.bottom
-    var axisPad = 12
+   
 
     var time_data = data.filter(d => d.state == key_state)
 
@@ -556,8 +553,10 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
       }
       line_data.push(ld)
     }
-
-    var today = line_data[line_data.lenth - 1]
+    var margin = { top: 20, right: 40, bottom: 20, left: 20 }
+    var width = 1400 - margin.left - margin.right
+    var height = 600 - margin.top - margin.bottom
+    var axisPad = 12
     var parseTime = d3.timeParse("%Y-%m-%d"),
       formatDate = d3.timeFormat("%b - %d"),
       formatMonth = d3.timeFormat("%Y-%m-%d"),
