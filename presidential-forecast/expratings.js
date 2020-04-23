@@ -1,4 +1,6 @@
-
+var map = d3.select("#usmap")
+                    .append("svg")
+                    .attr("viewBox", '75 50 970 450');
 var forecasters = [
     {
         "forecast": "JHK Forecasts",
@@ -337,7 +339,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/LT_Data.
                         .data(values)
                         .enter()
                         .append("text")
-                        .text(d3.sum(values.splice(6, 10), d => d.evs))
+                        .text(d3.sum(values.splice(5, 10), d => d.evs))
                         .attr("x", 950)
                         .attr("y", (d, i) => b * 100 + 65)
                         .attr("dominant-baseline", "bottom")
@@ -367,9 +369,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/LT_Data.
 
                 var state_cand = ratings_nested.flat()
                 var national_cand = forecasts_ev.flat()
-                var map = d3.select("#usmap")
-                    .append("svg")
-                    .attr("viewBox", '75 50 970 450');
+                
 
                 var width3 = 1020;
                 var height3 = 500;
