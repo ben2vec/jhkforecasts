@@ -1,0 +1,436 @@
+﻿State,abbrev,Seat,id,incumbent,incumbentParty,pvi,win
+Alaska,AK,1,AK00,"Young, Don",(R),16.74,75.670
+Alabama,AL,1,AL01,"Byrne, Bradley",(R),32.23,96.424
+Alabama,AL,2,AL02,"Roby, Martha",(R),32.89,96.779
+Alabama,AL,3,AL03,"Rogers, Mike",(R),34.83,97.659
+Alabama,AL,4,AL04,"Aderholt, Rob",(R),64.99,99.998
+Alabama,AL,5,AL05,"Brooks, Mo",(R),33.8,97.221
+Alabama,AL,6,AL06,"Palmer, Gary",(R),47.53,99.810
+Alabama,AL,7,AL07,"Sewell, Terri",(D),-39.33,0.047
+Arkansas,AR,1,AR01,"Crawford, Rick",(R),39.61,99.008
+Arkansas,AR,2,AR02,"Hill, French",(R),13.72,68.439
+Arkansas,AR,3,AR03,"Womack, Steve",(R),36.09,98.114
+Arkansas,AR,4,AR04,"Westerman, Bruce",(R),37.21,98.453
+Arizona,AZ,1,AZ01,"O'Halleran, Tom",(D),2.83,38.291
+Arizona,AZ,2,AZ02,"Kirkpatrick, Ann",(D),-1.41,27.402
+Arizona,AZ,3,AZ03,"Grijalva, Raul",(D),-24.5,1.222
+Arizona,AZ,4,AZ04,"Gosar, Paul",(R),43.25,99.519
+Arizona,AZ,5,AZ05,"Biggs, Andy",(R),25.45,90.622
+Arizona,AZ,6,AZ06,"Schweikert, David",(R),15.42,72.622
+Arizona,AZ,7,AZ07,"Gallego, Ruben",(D),-46.25,0.007
+Arizona,AZ,8,AZ08,"Lesko, Debbie",(R),22.64,86.803
+Arizona,AZ,9,AZ09,"Stanton, Greg",(D),-12.66,8.012
+California,CA,1,CA01,"LaMalfa, Doug",(R),20.59,83.415
+California,CA,2,CA02,"Huffman, Jared",(D),-43.59,0.015
+California,CA,3,CA03,"Garamendi, John",(D),-9.31,12.201
+California,CA,4,CA04,"McClintock, Tom",(R),17.35,77.013
+California,CA,5,CA05,"Thompson, Mike",(D),-42.26,0.022
+California,CA,6,CA06,"Matsui, Doris",(D),-41.88,0.024
+California,CA,7,CA07,"Bera, Ami",(D),-6.04,17.582
+California,CA,8,CA08,"Cook, Paul",(R),17.26,76.818
+California,CA,9,CA09,"McNerney, Jerry",(D),-12.6,8.076
+California,CA,10,CA10,"Harder, Josh",(D),0.72,32.687
+California,CA,11,CA11,"DeSaulnier, Mark",(D),-43.3,0.016
+California,CA,12,CA12,"Pelosi, Nancy",(D),-71.54,0.000
+California,CA,13,CA13,"Lee, Barbara",(D),-77.72,0.000
+California,CA,14,CA14,"Speier, Jackie",(D),-53.6,0.001
+California,CA,15,CA15,"Swalwell, Eric",(D),-40.81,0.032
+California,CA,16,CA16,"Costa, Jim",(D),-15.18,5.656
+California,CA,17,CA17,"Khanna, Ro",(D),-47.66,0.005
+California,CA,18,CA18,"Eshoo, Anna",(D),-46.32,0.007
+California,CA,19,CA19,"Lofgren, Zoe",(D),-45.33,0.009
+California,CA,20,CA20,"Panetta, Jimmy",(D),-44.55,0.012
+California,CA,21,CA21,"Cox, TJ",(D),-6.42,16.889
+California,CA,22,CA22,"Nunes, Devin",(R),13.05,66.718
+California,CA,23,CA23,"McCarthy, Kevin",(R),28.19,93.493
+California,CA,24,CA24,"Carbajal, Salud",(D),-14.12,6.570
+California,CA,25,CA25,VACANT ,(D),-2.25,25.440
+California,CA,26,CA26,"Brownley, Julia",(D),-17.11,4.252
+California,CA,27,CA27,"Chu, Judy",(D),-34.32,0.158
+California,CA,28,CA28,"Schiff, Adam",(D),-47.07,0.006
+California,CA,29,CA29,"Cardenas, Tony",(D),-56.32,0.000
+California,CA,30,CA30,"Sherman, Brad",(D),-39.17,0.049
+California,CA,31,CA31,"Aguilar, Pete",(D),-15.34,5.528
+California,CA,32,CA32,"Napolitano, Grace",(D),-33.66,0.184
+California,CA,33,CA33,"Lieu, Ted",(D),-34.96,0.136
+California,CA,34,CA34,"Gomez, Jimmy",(D),-70.19,0.000
+California,CA,35,CA35,"Torres, Norma",(D),-35.57,0.118
+California,CA,36,CA36,"Ruiz, Raul",(D),-6.8,16.214
+California,CA,37,CA37,"Bass, Karen",(D),-72.11,0.000
+California,CA,38,CA38,"Sanchez, Linda",(D),-34.03,0.169
+California,CA,39,CA39,"Cisneros, Gil",(D),-1.49,27.212
+California,CA,40,CA40,"Roybal-Allard, Lucille",(D),-66.71,0.000
+California,CA,41,CA41,"Takano, Mark",(D),-24.09,1.319
+California,CA,42,CA42,"Calvert, Ken",(R),16.84,75.893
+California,CA,43,CA43,"Waters, Maxine",(D),-55.21,0.000
+California,CA,44,CA44,"Barragan, Nanette",(D),-68.49,0.000
+California,CA,45,CA45,"Porter, Katie",(D),0.94,33.256
+California,CA,46,CA46,"Correa, Lou",(D),-32.82,0.223
+California,CA,47,CA47,"Lowenthal, Alan",(D),-25.89,0.940
+California,CA,48,CA48,"Rouda, Harley",(D),2.25,36.720
+California,CA,49,CA49,"Levin, Mike",(D),-3.49,22.684
+California,CA,50,CA50,"Hunter, Duncan",(R),16.53,75.197
+California,CA,51,CA51,"Vargas, Juan",(D),-41.94,0.024
+California,CA,52,CA52,"Peters, Scott",(D),-18.22,3.582
+California,CA,53,CA53,"Davis, Susan",(D),-30.67,0.356
+Colorado,CO,1,CO01,"DeGette, Diana",(D),-42.51,0.020
+Colorado,CO,2,CO02,"Neguse, Joe",(D),-18.4,3.482
+Colorado,CO,3,CO03,"Tipton, Scott",(R),14.4,70.145
+Colorado,CO,4,CO04,"Buck, Ken",(R),26.38,91.686
+Colorado,CO,5,CO05,"Lamborn, Doug",(R),26.02,91.286
+Colorado,CO,6,CO06,"Crow, Jason",(D),-5.01,19.549
+Colorado,CO,7,CO07,"Perlmutter, Ed",(D),-11.95,8.794
+Connecticut,CT,1,CT01,"Larson, John",(D),-21.07,2.248
+Connecticut,CT,2,CT02,"Courtney, Joe",(D),-6.85,16.126
+Connecticut,CT,3,CT03,"DeLauro, Rosa",(D),-16.46,4.690
+Connecticut,CT,4,CT04,"Himes, Jim",(D),-17.4,4.068
+Connecticut,CT,5,CT05,"Hayes, Jahana",(D),-2.59,24.667
+Delaware,DE,1,DE00,"Blunt Rochester, Lisa",(D),-13.2,7.453
+Florida,FL,1,FL01,"Gaetz, Matt",(R),41.88,99.364
+Florida,FL,2,FL02,"Dunn, Neal",(R),39.12,98.911
+Florida,FL,3,FL03,"Yoho, Ted",(R),19.86,82.084
+Florida,FL,4,FL04,"Rutherford, John",(R),34.2,97.398
+Florida,FL,5,FL05,"Lawson, Al",(D),-23.91,1.363
+Florida,FL,6,FL06,"Waltz, Michael",(R),18.77,79.975
+Florida,FL,7,FL07,"Murphy, Stephanie",(D),-4.77,20.025
+Florida,FL,8,FL08,"Posey, Bill",(R),24.4,89.304
+Florida,FL,9,FL09,"Soto, Darren",(D),-9.56,11.843
+Florida,FL,10,FL10,"Demings, Val",(D),-24.16,1.302
+Florida,FL,11,FL11,"Webster, Dan",(R),34.64,97.583
+Florida,FL,12,FL12,"Bilirakis, Gus",(R),21.66,85.248
+Florida,FL,13,FL13,"Crist, Charlie",(D),-3.35,22.987
+Florida,FL,14,FL14,"Castor, Kathy",(D),-15.74,5.216
+Florida,FL,15,FL15,"Spano, Ross",(R),12.59,65.516
+Florida,FL,16,FL16,"Buchanan, Vern",(R),14.24,69.747
+Florida,FL,17,FL17,"Steube, Greg",(R),29.53,94.622
+Florida,FL,18,FL18,"Mast, Brian",(R),12.7,65.805
+Florida,FL,19,FL19,"Rooney, Francis",(R),27.02,92.364
+Florida,FL,20,FL20,"Hastings, Alcee",(D),-60.15,0.000
+Florida,FL,21,FL21,"Frankel, Lois",(D),-17.42,4.055
+Florida,FL,22,FL22,"Deutch, Ted",(D),-13.81,6.858
+Florida,FL,23,FL23,"Wasserman Schultz, Debbie",(D),-20.52,2.467
+Florida,FL,24,FL24,"Wilson, Frederica",(D),-65.56,0.000
+Florida,FL,25,FL25,"Diaz-Balart, Mario",(R),12.54,65.384
+Florida,FL,26,FL26,"Mucarsel-Powell, Debbie",(D),-7.24,15.454
+Florida,FL,27,FL27,"Shalala, Donna ",(D),-10,11.232
+Georgia,GA,1,GA01,"Carter, Buddy",(R),19.44,81.288
+Georgia,GA,2,GA02,"Bishop, Sanford",(D),-10.36,10.749
+Georgia,GA,3,GA03,"Ferguson, Drew",(R),35.72,97.989
+Georgia,GA,4,GA04,"Johnson, Hank",(D),-49.74,0.003
+Georgia,GA,5,GA05,"Lewis, John",(D),-70.24,0.000
+Georgia,GA,6,GA06,"McBath, Lucy",(D),7.13,50.370
+Georgia,GA,7,GA07,"Woodall, Rob",(R),10.23,59.123
+Georgia,GA,8,GA08,"Scott, Austin",(R),30.7,95.476
+Georgia,GA,9,GA09,"Collins, Doug",(R),62.79,99.997
+Georgia,GA,10,GA10,"Hice, Jody",(R),29.89,94.898
+Georgia,GA,11,GA11,"Loudermilk, Barry",(R),29.85,94.868
+Georgia,GA,12,GA12,"Allen, Rick",(R),20.8,83.786
+Georgia,GA,13,GA13,"Scott, David",(D),-42.05,0.023
+Georgia,GA,14,GA14,"Graves, Tom",(R),56.66,99.981
+Hawaii,HI,1,HI01,"Case, Ed",(D),-34.43,0.154
+Hawaii,HI,2,HI02,"Gabbard, Tulsi",(D),-35.76,0.113
+Iowa,IA,1,IA01,"Finkenauer, Abby",(D),3.43,39.936
+Iowa,IA,2,IA02,"Loebsack, David",(D),1.72,35.303
+Iowa,IA,3,IA03,"Axne, Cindy",(D),5.25,45.026
+Iowa,IA,4,IA04,"King, Steve",(R),22.47,86.542
+Idaho,ID,1,ID01,"Fulcher, Russ",(R),40.08,99.093
+Idaho,ID,2,ID02,"Simpson, Mike",(R),28.54,93.805
+Illinois,IL,1,IL01,"Rush, Bobby",(D),-50.18,0.002
+Illinois,IL,2,IL02,"Kelly, Robin",(D),-55.96,0.000
+Illinois,IL,3,IL03,"Lipinski, Dan",(D),-20.41,2.512
+Illinois,IL,4,IL04,"Garcia, Chuy",(D),-65.45,0.000
+Illinois,IL,5,IL05,"Quigley, Mike",(D),-43.17,0.017
+Illinois,IL,6,IL06,"Casten, Sean",(D),-1.31,27.640
+Illinois,IL,7,IL07,"Davis, Danny",(D),-72.82,0.000
+Illinois,IL,8,IL08,"Krishnamoorthi, Raja",(D),-20.04,2.672
+Illinois,IL,9,IL09,"Schakowsky, Jan",(D),-40.16,0.038
+Illinois,IL,10,IL10,"Schneider, Brad",(D),-24.41,1.243
+Illinois,IL,11,IL11,"Foster, Bill",(D),-19.9,2.734
+Illinois,IL,12,IL12,"Bost, Mike",(R),14.81,71.153
+Illinois,IL,13,IL13,"Davis, Rodney",(R),7.77,52.193
+Illinois,IL,14,IL14,"Underwood, Lauren",(D),6.07,47.352
+Illinois,IL,15,IL15,"Shimkus, John",(R),47.47,99.808
+Illinois,IL,16,IL16,"Kinzinger, Adam",(R),20.78,83.751
+Illinois,IL,17,IL17,"Bustos, Cheri",(D),-4.31,20.959
+Illinois,IL,18,IL18,"LaHood, Darin",(R),33.26,96.965
+Indiana,IN,1,IN01,"Visclosky, Pete",(D),-14.77,5.997
+Indiana,IN,2,IN02,"Walorski, Jackie",(R),22.43,86.480
+Indiana,IN,3,IN03,"Banks, Jim",(R),36.73,98.315
+Indiana,IN,4,IN04,"Baird, Jim",(R),35.52,97.918
+Indiana,IN,5,IN05,"Brooks, Susan",(R),17.04,76.336
+Indiana,IN,6,IN06,"Pence, Greg",(R),39.99,99.077
+Indiana,IN,7,IN07,"Carson, Andre",(D),-21.12,2.229
+Indiana,IN,8,IN08,"Bucshon, Larry",(R),34.97,97.713
+Indiana,IN,9,IN09,"Hollingsworth, Trey",(R),25.89,91.138
+Kansas,KS,1,KS01,"Marshall, Roger",(R),46.37,99.754
+Kansas,KS,2,KS02,"Watkins, Steve",(R),16.83,75.870
+Kansas,KS,3,KS03,"Davids, Sharice",(D),1.55,34.853
+Kansas,KS,4,KS04,"Estes, Ron",(R),28.74,93.977
+Kentucky,KY,1,KY01,"Comer, James",(R),47.89,99.825
+Kentucky,KY,2,KY02,"Guthrie, Brett",(R),41.67,99.336
+Kentucky,KY,3,KY03,"Yarmuth, John",(D),-13.71,6.953
+Kentucky,KY,4,KY04,"Massie, Thomas",(R),36.91,98.368
+Kentucky,KY,5,KY05,"Rogers, Hal",(R),64.04,99.998
+Kentucky,KY,6,KY06,"Barr, Andy",(R),15.73,73.355
+Louisiana,LA,1,LA01,"Scalise, Steve",(R),47.3,99.800
+Louisiana,LA,2,LA02,"Richmond, Cedric",(D),-50.27,0.002
+Louisiana,LA,3,LA03,"Higgins, Clay",(R),41.87,99.363
+Louisiana,LA,4,LA04,"Johnson, Mike",(R),29.74,94.784
+Louisiana,LA,5,LA05,"Abraham, Ralph",(R),35.15,97.782
+Louisiana,LA,6,LA06,"Graves, Garret",(R),40.19,99.112
+Massachusetts,MA,1,MA01,"Neal, Richard",(D),-19.2,3.064
+Massachusetts,MA,2,MA02,"McGovern, Jim",(D),-19.68,2.834
+Massachusetts,MA,3,MA03,"Trahan, Lori",(D),-19.58,2.881
+Massachusetts,MA,4,MA04,"Kennedy, Joe",(D),-20.94,2.298
+Massachusetts,MA,5,MA05,"Clark, Katherine",(D),-40.71,0.033
+Massachusetts,MA,6,MA06,"Moulton, Seth",(D),-17.73,3.866
+Massachusetts,MA,7,MA07,"Pressley, Ayanna",(D),-69.09,0.000
+Massachusetts,MA,8,MA08,"Lynch, Stephen",(D),-22.7,1.694
+Massachusetts,MA,9,MA09,"Keating, Bill",(D),-9.07,12.551
+Maryland,MD,1,MD01,"Harris, Andy",(R),30.23,95.147
+Maryland,MD,2,MD02,"Ruppersberger, Dutch",(D),-23.81,1.388
+Maryland,MD,3,MD03,"Sarbanes, John",(D),-28.7,0.539
+Maryland,MD,4,MD04,"Brown, Anthony",(D),-53.46,0.001
+Maryland,MD,5,MD05,"Hoyer, Steny",(D),-31.3,0.311
+Maryland,MD,6,MD06,"Trone, David",(D),-12.37,8.324
+Maryland,MD,7,MD07,VACANT ,(D),-51.08,0.002
+Maryland,MD,8,MD08,"Raskin, Jamie",(D),-30.41,0.377
+Maine,ME,1,ME01,"Pingree, Chellie",(D),-14.68,6.074
+Maine,ME,2,ME02,"Golden, Jared",(D),9.16,56.131
+Michigan,MI,1,MI01,"Bergman, Jack",(R),21.62,85.182
+Michigan,MI,2,MI02,"Huizenga, Bill",(R),19.77,81.915
+Michigan,MI,3,MI03,"Amash, Justin",(I),13.96,69.046
+Michigan,MI,4,MI04,"Moolenaar, John",(R),27.47,92.815
+Michigan,MI,5,MI05,"Kildee, Dan",(D),-7.61,14.834
+Michigan,MI,6,MI06,"Upton, Fred",(R),10.76,60.587
+Michigan,MI,7,MI07,"Walberg, Tim",(R),17.02,76.292
+Michigan,MI,8,MI08,"Slotkin, Elissa",(D),7.39,51.111
+Michigan,MI,9,MI09,"Levin, Andy",(D),-8.85,12.879
+Michigan,MI,10,MI10,"Mitchell, Paul",(R),32.3,96.463
+Michigan,MI,11,MI11,"Stevens, Haley",(D),5.4,45.451
+Michigan,MI,12,MI12,"Dingell, Debbie",(D),-26.65,0.812
+Michigan,MI,13,MI13,"Tlaib, Rashida",(D),-59.41,0.000
+Michigan,MI,14,MI14,"Lawrence, Brenda",(D),-57.63,0.000
+Minnesota,MN,1,MN01,"Hagedorn, Jim",(R),13.15,66.977
+Minnesota,MN,2,MN02,"Craig, Angie",(D),3.29,39.550
+Minnesota,MN,3,MN03,"Philips, Dean",(D),-4.91,19.746
+Minnesota,MN,4,MN04,"McCollum, Betty",(D),-27.9,0.634
+Minnesota,MN,5,MN05,"Omar, Ilhan",(D),-50.73,0.002
+Minnesota,MN,6,MN06,"Emmer, Tom",(R),27.84,93.170
+Minnesota,MN,7,MN07,"Peterson, Collin",(D),22.4,86.433
+Minnesota,MN,8,MN08,"Stauber, Pete",(R),14.69,70.860
+Missouri,MO,1,MO01,"Clay, Lacy",(D),-55.81,0.000
+Missouri,MO,2,MO02,"Wagner, Ann",(R),13.15,66.977
+Missouri,MO,3,MO03,"Luetkemeyer, Blaine",(R),39.88,99.058
+Missouri,MO,4,MO04,"Hartzler, Vicki",(R),37.94,98.645
+Missouri,MO,5,MO05,"Cleaver, Emanuel",(D),-13.65,7.011
+Missouri,MO,6,MO06,"Graves, Sam",(R),35.3,97.838
+Missouri,MO,7,MO07,"Long, Billy",(R),46.21,99.745
+Missouri,MO,8,MO08,"Smith, Jason",(R),54.75,99.968
+Mississippi,MS,1,MS01,"Kelly, Trent",(R),36.87,98.356
+Mississippi,MS,2,MS02,"Thompson, Bennie",(D),-26.68,0.807
+Mississippi,MS,3,MS03,"Guest, Michael ",(R),28.7,93.943
+Mississippi,MS,4,MS04,"Palazzo, Steven",(R),43.81,99.572
+Montana,MT,1,MT00,"Gianforte, Greg",(R),19.34,81.096
+North Carolina,NC,1,NC01,"Butterfield, G.K.",(D),-33.57,0.188
+North Carolina,NC,2,NC02,"Holding, George",(R),12.91,66.354
+North Carolina,NC,3,NC03,"Murphy, Greg",(R),25.43,90.598
+North Carolina,NC,4,NC04,"Price, David",(D),-37.32,0.077
+North Carolina,NC,5,NC05,"Foxx, Virginia",(R),20.41,83.093
+North Carolina,NC,6,NC06,"Walker, Mark",(R),18.22,78.856
+North Carolina,NC,7,NC07,"Rouzer, David",(R),19.93,82.215
+North Carolina,NC,8,NC08,"Hudson, Richard",(R),17.44,77.208
+North Carolina,NC,9,NC09,"Bishop, Dan",(R),12.44,65.120
+North Carolina,NC,10,NC10,"McHenry, Patrick",(R),26.38,91.686
+North Carolina,NC,11,NC11,"Meadows, Mark",(R),29.92,94.920
+North Carolina,NC,12,NC12,"Adams, Alma",(D),-37.28,0.078
+North Carolina,NC,13,NC13,"Budd, Ted",(R),12.35,64.882
+North Dakota,ND,1,ND00,"Armstrong, Kelly",(R),35.43,97.886
+Nebraska,NE,1,NE01,"Fortenberry, Jeff",(R),24.89,89.935
+Nebraska,NE,2,NE02,"Bacon, Don",(R),6.86,49.601
+Nebraska,NE,3,NE03,"Smith, Adrian",(R),57.43,99.984
+New Hampshire,NH,1,NH01,"Pappas, Chris",(D),2.45,37.259
+New Hampshire,NH,2,NH02,"Kuster, Annie",(D),-2.02,25.970
+New Jersey,NJ,1,NJ01,"Norcross, Donald",(D),-22.96,1.618
+New Jersey,NJ,2,NJ02,"Van Drew, Jeff",(D),3.87,41.155
+New Jersey,NJ,3,NJ03,"Kim, Andy",(D),7.1,50.285
+New Jersey,NJ,4,NJ04,"Smith, Chris",(R),17.75,77.871
+New Jersey,NJ,5,NJ05,"Gottheimer, Josh",(D),1.08,33.620
+New Jersey,NJ,6,NJ06,"Pallone, Frank",(D),-15.72,5.231
+New Jersey,NJ,7,NJ07,"Malinowski, Tom",(D),2.69,37.910
+New Jersey,NJ,8,NJ08,"Sires, Albio",(D),-51.86,0.001
+New Jersey,NJ,9,NJ09,"Pascrell, Bill",(D),-30.67,0.356
+New Jersey,NJ,10,NJ10,"Payne, Donald",(D),-70.1,0.000
+New Jersey,NJ,11,NJ11,"Sherrill, Mikie",(D),0.94,33.256
+New Jersey,NJ,12,NJ12,"Watson Coleman, Bonnie",(D),-30.32,0.384
+New Mexico,NM,1,NM01,"Haaland, Deb",(D),-14.08,6.607
+New Mexico,NM,2,NM02,"Torres Smalls, Xochitl",(D),10.46,59.760
+New Mexico,NM,3,NM03,"Lujan, Ben",(D),-16.37,4.753
+Nevada,NV,1,NV01,"Titus, Dina",(D),-27.08,0.746
+Nevada,NV,2,NV02,"Amodei, Mark",(R),17.34,76.992
+Nevada,NV,3,NV03,"Lee, Susie ",(D),2.02,36.103
+Nevada,NV,4,NV04,"Horsford, Stephen ",(D),-2.24,25.463
+New York,NY,1,NY01,"Zeldin, Lee",(R),12.79,66.041
+New York,NY,2,NY02,"King, Peter",(R),11.11,61.546
+New York,NY,3,NY03,"Suozzi, Tom",(D),-5.09,19.391
+New York,NY,4,NY04,"Rice, Kathleen",(D),-9.69,11.660
+New York,NY,5,NY05,"Meeks, Gregory",(D),-71.51,0.000
+New York,NY,6,NY06,"Meng, Grace",(D),-31.04,0.329
+New York,NY,7,NY07,"Velazquez, Nydia",(D),-74.26,0.000
+New York,NY,8,NY08,"Jeffries, Hakeem",(D),-69.54,0.000
+New York,NY,9,NY09,"Clarke, Yvette",(D),-68.11,0.000
+New York,NY,10,NY10,"Nadler, Jerrold",(D),-55.62,0.000
+New York,NY,11,NY11,"Rose, Max",(D),7.73,52.079
+New York,NY,12,NY12,"Maloney, Carolyn",(D),-65.48,0.000
+New York,NY,13,NY13,"Espaillat, Adriano",(D),-83.67,0.000
+New York,NY,14,NY14,"Ocasio-Cortez, Alexandria",(D),-56.13,0.000
+New York,NY,15,NY15,"Serrano, Jose",(D),-86.08,0.000
+New York,NY,16,NY16,"Engel, Eliot",(D),-49.76,0.003
+New York,NY,17,NY17,"Lowey, Nita",(D),-17.37,4.087
+New York,NY,18,NY18,"Maloney, Sean",(D),1.64,35.091
+New York,NY,19,NY19,"Delgado, Antonio",(D),6.13,47.522
+New York,NY,20,NY20,"Tonko, Paul",(D),-15.81,5.163
+New York,NY,21,NY21,"Stefanik, Elise",(R),16.07,74.146
+New York,NY,22,NY22,"Brindisi, Anthony",(D),13.03,66.666
+New York,NY,23,NY23,"Reed, Tom",(R),15.78,73.472
+New York,NY,24,NY24,"Katko, John",(R),2.04,36.156
+New York,NY,25,NY25,"Morelle, Joe",(D),-12.95,7.708
+New York,NY,26,NY26,"Higgins, Brian",(D),-24.5,1.222
+New York,NY,27,NY27,VACANT ,(R),20.29,82.876
+Ohio,OH,1,OH01,"Chabot, Steve",(R),10.12,58.818
+Ohio,OH,2,OH02,"Wenstrup, Brad",(R),19.88,82.121
+Ohio,OH,3,OH03,"Beatty, Joyce",(D),-37.08,0.082
+Ohio,OH,4,OH04,"Jordan, Jim",(R),34.94,97.702
+Ohio,OH,5,OH05,"Latta, Bob",(R),28.4,93.681
+Ohio,OH,6,OH06,"Johnson, Bill",(R),42.59,99.449
+Ohio,OH,7,OH07,"Gibbs, Bob",(R),28.25,93.547
+Ohio,OH,8,OH08,"Davidson, Warren",(R),37.41,98.508
+Ohio,OH,9,OH09,"Kaptur, Marcy",(D),-23.44,1.484
+Ohio,OH,10,OH10,"Turner, Michael",(R),12.91,66.354
+Ohio,OH,11,OH11,"Fudge, Marcia",(D),-59.84,0.000
+Ohio,OH,12,OH12,"Balderson, Troy",(R),13.32,67.416
+Ohio,OH,13,OH13,"Ryan, Tim",(D),-9.02,12.625
+Ohio,OH,14,OH14,"Joyce, David",(R),14.61,70.663
+Ohio,OH,15,OH15,"Stivers, Steve",(R),19.61,81.613
+Ohio,OH,16,OH16,"Gonzalez, Anthony",(R),19.09,80.609
+Oklahoma,OK,1,OK01,"Hern, Kevin",(R),30.19,95.118
+Oklahoma,OK,2,OK02,"Mullin, Markwayne",(R),48.32,99.842
+Oklahoma,OK,3,OK03,"Lucas, Frank",(R),54.94,99.969
+Oklahoma,OK,4,OK04,"Cole, Tom",(R),39.09,98.905
+Oklahoma,OK,5,OK05,"Horn, Kendra",(D),13.69,68.362
+Oregon,OR,1,OR01,"Bonamici, Suzanne",(D),-20.66,2.409
+Oregon,OR,2,OR02,"Walden, Greg",(R),22.99,87.330
+Oregon,OR,3,OR03,"Blumenauer, Earl",(D),-45.26,0.009
+Oregon,OR,4,OR04,"DeFazio, Peter",(D),-1.03,28.313
+Oregon,OR,5,OR05,"Schrader, Kurt",(D),-2.59,24.667
+Pennsylvania,PA,1,PA01,"Fitzpatrick, Brian",(R),3.62,40.461
+Pennsylvania,PA,2,PA02,"Boyle, Brendan",(D),-47.56,0.005
+Pennsylvania,PA,3,PA03,"Evans, Dwight",(D),-80.56,0.000
+Pennsylvania,PA,4,PA04,"Dean, Madeleine",(D),-16.81,4.450
+Pennsylvania,PA,5,PA05,"Gay Scanlon, Mary ",(D),-24.58,1.204
+Pennsylvania,PA,6,PA06,"Houlahan, Chrissy",(D),-7.01,15.848
+Pennsylvania,PA,7,PA07,"Wild, Susan",(D),-0.13,30.528
+Pennsylvania,PA,8,PA08,"Cartwright, Matt",(D),6.01,47.181
+Pennsylvania,PA,9,PA09,"Meuser, Dan",(R),32.08,96.339
+Pennsylvania,PA,10,PA10,"Perry, Scott",(R),11.01,61.273
+Pennsylvania,PA,11,PA11,"Smucker, Lloyd",(R),27.33,92.677
+Pennsylvania,PA,12,PA12,"Keller, Fred",(R),38.14,98.694
+Pennsylvania,PA,13,PA13,"Joyce, John",(R),47.4,99.805
+Pennsylvania,PA,14,PA14,"Reschenthaler, Guy",(R),28.14,93.448
+Pennsylvania,PA,15,PA15,"Thompson, Glenn",(R),43.61,99.554
+Pennsylvania,PA,16,PA16,"Kelly, Mike",(R),18,78.398
+Pennsylvania,PA,17,PA17,"Lamb, Conor",(D),2.49,37.367
+Pennsylvania,PA,18,PA18,"Doyle, Mike",(D),-25.09,1.095
+Rhode Island,RI,1,RI01,"Cicilline, David",(D),-24.64,1.191
+Rhode Island,RI,2,RI02,"Langevin, Jim",(D),-10.34,10.775
+South Carolina,SC,1,SC01,"Cunningham, Joe",(D),13.48,67.827
+South Carolina,SC,2,SC02,"Wilson, Joe",(R),20.96,84.065
+South Carolina,SC,3,SC03,"Duncan, Jeff",(R),41.13,99.261
+South Carolina,SC,4,SC04,"Timmons, William",(R),29.15,94.319
+South Carolina,SC,5,SC05,"Norman, Ralph",(R),21.13,84.358
+South Carolina,SC,6,SC06,"Clyburn, Jim",(D),-34.52,0.151
+South Carolina,SC,7,SC07,"Rice, Tom",(R),22.34,86.340
+South Dakota,SD,1,SD00,"Johnson, Dusty",(R),31.2,95.806
+Tennessee,TN,1,TN01,"Roe, Phil",(R),59.93,99.992
+Tennessee,TN,2,TN02,"Burchett, Tim",(R),38.98,98.882
+Tennessee,TN,3,TN03,"Fleischmann, Chuck",(R),36.93,98.374
+Tennessee,TN,4,TN04,"DesJarlais, Scott",(R),41.11,99.258
+Tennessee,TN,5,TN05,"Cooper, Jim",(D),-18.8,3.267
+Tennessee,TN,6,TN06,"Rose, John",(R),49.89,99.891
+Tennessee,TN,7,TN07,"Green, Mark",(R),41.5,99.314
+Tennessee,TN,8,TN08,"Kustoff, David",(R),40.16,99.107
+Tennessee,TN,9,TN09,"Cohen, Steve",(D),-54.38,0.001
+Texas,TX,1,TX01,"Gohmert, Louie",(R),50.55,99.907
+Texas,TX,2,TX02,"Crenshaw, Dan",(R),14.73,70.957
+Texas,TX,3,TX03,"Taylor, Van",(R),18.76,79.955
+Texas,TX,4,TX04,"Ratcliffe, John",(R),57.09,99.983
+Texas,TX,5,TX05,"Gooden, Lance",(R),31.72,96.128
+Texas,TX,6,TX06,"Wright, Ron",(R),15.6,73.049
+Texas,TX,7,TX07,"Fletcher, Lizzie",(D),3.99,41.488
+Texas,TX,8,TX08,"Brady, Kevin",(R),53.59,99.956
+Texas,TX,9,TX09,"Green, Al",(D),-58.55,0.000
+Texas,TX,10,TX10,"McCaul, Michael",(R),12.98,66.536
+Texas,TX,11,TX11,"Conaway, Michael",(R),63.92,99.998
+Texas,TX,12,TX12,"Granger, Kay",(R),34.95,97.706
+Texas,TX,13,TX13,"Thornberry, Mac",(R),67.58,99.999
+Texas,TX,14,TX14,"Weber, Randy",(R),24.06,88.850
+Texas,TX,15,TX15,"Gonzalez, Vicente",(D),-13.65,7.011
+Texas,TX,16,TX16,"Escobar, Veronica",(D),-35.61,0.117
+Texas,TX,17,TX17,"Flores, Bill",(R),21.65,85.232
+Texas,TX,18,TX18,"Jackson Lee, Sheila",(D),-51.35,0.002
+Texas,TX,19,TX19,"Arrington, Jodey",(R),53.61,99.956
+Texas,TX,20,TX20,"Castro, Joaquin",(D),-23.58,1.447
+Texas,TX,21,TX21,"Roy, Chip",(R),13.2,67.107
+Texas,TX,22,TX22,"Olson, Pete",(R),12.98,66.536
+Texas,TX,23,TX23,"Hurd, Will",(R),2.57,37.584
+Texas,TX,24,TX24,"Marchant, Kenny",(R),11.09,61.491
+Texas,TX,25,TX25,"Williams, Roger",(R),17.99,78.377
+Texas,TX,26,TX26,"Burgess, Michael",(R),29.91,94.913
+Texas,TX,27,TX27,"Cloud, Michael",(R),27.73,93.066
+Texas,TX,28,TX28,"Cuellar, Henry",(D),-17.67,3.902
+Texas,TX,29,TX29,"Garcia, Sylvia",(D),-41.84,0.024
+Texas,TX,30,TX30,"Johnson, E.B.",(D),-58.44,0.000
+Texas,TX,31,TX31,"Carter, John",(R),14.85,71.250
+Texas,TX,32,TX32,"Allred, Collin",(D),2.69,37.910
+Texas,TX,33,TX33,"Veasey, Marc",(D),-46.07,0.008
+Texas,TX,34,TX34,"Vela, Filemon",(D),-16.92,4.377
+Texas,TX,35,TX35,"Doggett, Lloyd",(D),-32.33,0.248
+Texas,TX,36,TX36,"Babin, Brian",(R),50.59,99.908
+Utah,UT,1,UT01,"Bishop, Rob",(R),37.32,98.483
+Utah,UT,2,UT02,"Stewart, Chris",(R),21.67,85.265
+Utah,UT,3,UT03,"Curtis, John",(R),36.51,98.248
+Utah,UT,4,UT04,"McAdams, Ben",(D),11.86,63.576
+Virginia,VA,1,VA01,"Wittman, Rob",(R),15.98,73.938
+Virginia,VA,2,VA02,"Luria, Elaine",(D),5.81,46.613
+Virginia,VA,3,VA03,"Scott, Bobby",(D),-29.82,0.427
+Virginia,VA,4,VA04,"McEachin, Donald",(D),-18.92,3.205
+Virginia,VA,5,VA05,"Riggleman, Denver ",(R),13.5,67.878
+Virginia,VA,6,VA06,"Cline, Ben ",(R),26.89,92.230
+Virginia,VA,7,VA07,"Spanberger, Abigail",(D),8.58,54.493
+Virginia,VA,8,VA08,"Beyer, Don",(D),-46.76,0.006
+Virginia,VA,9,VA09,"Griffith, Morgan",(R),41.07,99.252
+Virginia,VA,10,VA10,"Wexton, Jennifer",(D),-5.38,18.827
+Virginia,VA,11,VA11,"Connolly, Gerry",(D),-35.29,0.126
+Vermont,VT,1,VT01,#N/A,#N/A,-28.18,0.599
+Washington,WA,1,WA01,"DelBene, Suzan",(D),-12.21,8.501
+Washington,WA,2,WA02,"Larsen, Rick",(D),-19.73,2.811
+Washington,WA,3,WA03,"Herrera Beutler, Jaime",(R),10.43,59.677
+Washington,WA,4,WA04,"Newhouse, Dan",(R),27.77,93.104
+Washington,WA,5,WA05,"McMorris Rodgers, Cathy",(R),15.92,73.798
+Washington,WA,6,WA06,"Kilmer, Derek",(D),-12.98,7.677
+Washington,WA,7,WA07,"Jayapal, Pramila",(D),-63.98,0.000
+Washington,WA,8,WA08,"Schrier, Kim",(D),0.8,32.893
+Washington,WA,9,WA09,"Smith, Adam",(D),-44.04,0.013
+Washington,WA,10,WA10,"Heck, Denny",(D),-11.06,9.853
+Wisconsin,WI,1,WI01,"Steil, Bryan",(R),14.52,70.442
+Wisconsin,WI,2,WI02,"Pocan, Mark",(D),-34.47,0.153
+Wisconsin,WI,3,WI03,"Kind, Ron",(D),0.01,30.879
+Wisconsin,WI,4,WI04,"Moore, Gwen",(D),-48.47,0.004
+Wisconsin,WI,5,WI05,"Sensenbrenner, Jim",(R),25.82,91.057
+Wisconsin,WI,6,WI06,"Grothman, Glenn",(R),18.4,79.226
+Wisconsin,WI,7,WI07,VACANT ,(R),23.26,87.727
+Wisconsin,WI,8,WI08,"Gallagher, Mike",(R),23.38,87.900
+West Virginia,WV,1,WV01,"McKinley, David",(R),40.59,99.179
+West Virginia,WV,2,WV02,"Mooney, Alex",(R),31.57,96.037
+West Virginia,WV,3,WV03,"Miller, Carol ",(R),40.78,99.209
+Wyoming,WY,1,WY00,"Cheney, Liz",(R),47.05,99.789

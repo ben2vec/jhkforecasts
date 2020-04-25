@@ -1,74 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<meta charset="utf-8">
+<style>
 
-<head>
-	<link href="https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap" rel="stylesheet">
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<style>
-		#less {
-			display: none;
-		}
+path {
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
 
-		.btn {
-			border: none;
-			color: white;
-			padding: 10px 10px;
-			font-size: 16px;
-			font-family: brandon-grotesque;
-			border-radius: 10px;
-			cursor: pointer;
+.districts {
+  fill: #bbb;
+}
 
-		}
+.districts :hover {
+  fill: orange;
+}
 
-		.default {
-			background-color: #e7e7e7;
-			color: black;
-		}
+.district-boundaries {
+  pointer-events: none;
+  fill: none;
+  stroke: #fff;
+  stroke-width: .5px;
+}
 
-		.default:hover {
-			background: #ddd;
-		}
+.state-boundaries {
+  pointer-events: none;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
 
-		#lessphone {
-			display: none;
-		}
-	</style>
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:site" content="@jhkforecast">
-	<meta name="twitter:creator" content="@jhkersting">
-	<meta name="twitter:title" content="2020 Presidential Election">
-	<meta name="twitter:description" content="Who is win the 2020 Presidential Election?">
-	<meta name="twitter:image" content="https://jhkforecasts.com/Presidential-Forecast-04.png">
-	<title>2020 Presidential Forecast</title>
-	<script data-ad-client="ca-pub-8025120308040073" async
-		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140782021-2"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-
-		gtag('config', 'UA-140782021-2');
-	</script>
-	<link rel="icon" href="https://jhkforecasts.com/LOGO-01.png">
-	<script src="https://d3js.org/d3.v4.min.js"></script>
-	<script src="https://d3js.org/topojson.v2.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
-	<link rel="stylesheet" href="https://use.typekit.net/htk2wjy.css">
-	<link rel="stylesheet" href="index.css">
-	<script src="https:////cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script>
-</head>
-
+</style>
 <body>
+<script src="//d3js.org/d3.v3.min.js"></script>
+<script src="//d3js.org/queue.v1.min.js"></script>
+<script src="//d3js.org/topojson.v1.min.js"></script>
+<script>
 
-	<div id="usmap"></div>
-	<script src="test.js"></script>
+var width = 960,
+    height = 600;
 
+var projection = d3.geo.albersUsa()
+    .scale(1280)
+    .translate([width / 2, height / 2]);
 
-</body>
+var path = d3.geo.path()
+    .projection(projection);
 
-</html>
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+queue()
+    .defer(d3.json, "/mbostock/raw/4090846/us.json")
+    .defer(d3.json, "/mbostock/raw/4090846/us-congress-113.json")
+    .await(ready);
+
+function ready(error, us, congress) {
+  if (error) throw error;
+
+  svg.append("defs").append("path")
+      .attr("id", "land")
+      .datum(topojson.feature(us, us.objects.land))
+      .attr("d", path);
+
+  svg.append("clipPath")
+      .attr("id", "clip-land")
+    .append("use")
+      .attr("xlink:href", "#land");
+
+  svg.append("g")
+      .attr("class", "districts")
+      .attr("clip-path", "url(#clip-land)")
+    .selectAll("path")
+      .data(topojson.feature(congress, congress.objects.districts).features)
+    .enter().append("path")
+      .attr("d", path)
+    .append("title")
+      .text(function(d) { return d.id; });
+
+  svg.append("path")
+      .attr("class", "district-boundaries")
+      .datum(topojson.mesh(congress, congress.objects.districts, function(a, b) { return a !== b && (a.id / 1000 | 0) === (b.id / 1000 | 0); }))
+      .attr("d", path);
+
+  svg.append("path")
+      .attr("class", "state-boundaries")
+      .datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
+      .attr("d", path);
+}
+
+d3.select(self.frameElement).style("height", height + "px");
+
+</script>

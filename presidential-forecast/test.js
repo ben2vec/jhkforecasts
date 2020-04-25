@@ -16,47 +16,24 @@ var color = d3.scaleLinear()
     .domain([0, 50, 100])
     .range(["#0091FF", "white", "#FF6060"]);
 
-var svg = d3.select("#usmap")
+var map = d3.select("#usmap")
     .append("svg")
     .attr("viewBox", '75 -50 900 550');
 
-d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
-    var data = data.map((d, i) => {
-        return {
-            state: d.state,
-            party: d.party,
-            win: +d.win,
-        }
-    })
-    var data = data.splice(data.length - 171, data.length)
-    var data = data.filter(d=>d.party == "gop")
-    var states = data.map(d=>{
-        return d.state
-    })
-    var win_pct = data.map(d=>{
-        return d.win
-    })
-    
+d3.json("house.json", function (house) {
+    console.log(house)
 
-    console.log(data)
-    d3.json("us.json", function (us) {
-        for(let j=0;j<us.objects.states.geometries.length;j++){
-            var state = us.objects.states.geometries[j].properties.name
-            var win = win_pct[states.indexOf(state)]
-            us.objects.states.geometries[j].properties.win = win
-        }
-        console.log(topojson.feature(us, us.objects.states).features)
-
-        svg.selectAll("path")
-            .data(topojson.feature(us, us.objects.states).features)
-            .enter()
-            .append("path")
-            .attr("d", path)
-            .attr("fill",d=>color(d.properties.win))
-            .attr("stroke", "black")
-            .attr("stroke-width", .5);
-
-    })
+    map.selectAll("path")
+      .data(house.features)
+      .enter()
+      .append("path")
+      .attr("class", "states")
+      .attr("d", path)
+      .style("stroke", "white")
+      .style("stroke-width", ".5")
+      .attr("fill","lightgrey")
 
 
-});
+})
+
+
