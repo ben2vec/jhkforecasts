@@ -235,6 +235,7 @@ function ready(error, input_data, data, json) {
     })
     var maxDate = timeformat(d3.max(data, d => d.date))
     var today = data.filter(d => d.forecast_date == maxDate)
+    console.log(today)
     var updated = today[0].tipping_point
     var updated = updated.split(".")[0].toUpperCase() + updated.split(".")[1]
     document.getElementById("updated").innerHTML = "UPDATED: " + updated
