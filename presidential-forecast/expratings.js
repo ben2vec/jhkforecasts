@@ -217,7 +217,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/LT_Data.
                                 d3.sum(datas.filter(d => d.rating <= 45 && d.rating > 40), d => d.ev),
                                 d3.sum(datas.filter(d => d.rating <= 55 && d.rating > 45), d => d.ev),
                                 d3.sum(datas.filter(d => d.rating <= 60 && d.rating > 55), d => d.ev),
-                                d3.sum(datas.filter(d => d.rating <= 80 && d.rating > 60), d => d.ev),
+                                d3.sum(datas.filter(d => d.rating <= 75 && d.rating > 60), d => d.ev),
                                 d3.sum(datas.filter(d => d.rating <= 95 && d.rating > 75), d => d.ev),
                                 d3.sum(datas.filter(d => d.rating > 95), d => d.ev)]
                         }
