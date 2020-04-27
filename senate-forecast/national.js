@@ -210,6 +210,7 @@ queue()
 
 function ready(error, input_data, data, json) {
     if (error) throw error;
+    console.log(data)
     var state = json.features.filter(d => d.properties.name == "Georgia")[0];
     var states = input_data.map(d => {
         return {
