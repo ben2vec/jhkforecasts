@@ -236,7 +236,7 @@ function ready(error, input_data, data, json,cands) {
         d.date = dateparse(d.forecast_date)
     })
     var maxDate = timeformat(d3.max(data, d => d.date))
-    var today = data.splice(data.length - cands.length, data.length)
+    var today = data.splice(data.length - cands.length-2, data.length)
     console.log(today)
     var updated = today[0].tipping_point
     var updated = updated.split(".")[0].toUpperCase() + updated.split(".")[1]
@@ -1599,7 +1599,7 @@ function ready(error, input_data, data, json,cands) {
         var path2 = d3.geoPath()
             .projection(projection2);
 
-        var state = us.features.filter(d => d.properties.name == "Georgia")[0];
+        var state = json.features.filter(d => d.properties.name == "Georgia")[0];
 
         projection2
             .scale(1)
