@@ -1,6 +1,6 @@
 var map = d3.select("#usmap")
-                    .append("svg")
-                    .attr("viewBox", '75 50 970 450');
+    .append("svg")
+    .attr("viewBox", '75 50 970 450');
 var forecasters = [
     {
         "forecast": "JHK Forecasts",
@@ -255,7 +255,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/LT_Data.
                 d3.select("#bars").append("h1")
                     .text("Race to 270")
                     .style("font-weight", 900)
-                    .style("margin-left","2%")
+                    .style("margin-left", "2%")
 
                 var svg = d3.select("#bars")
                     .append("svg")
@@ -265,15 +265,15 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/LT_Data.
                     .data(bars)
                     .enter()
                     .append("a")
-                    .attr("href",id => forecasters.filter(d => d.shorthand == id.forecast)[0].link)
-                    .append("text",)
+                    .attr("href", id => forecasters.filter(d => d.shorthand == id.forecast)[0].link)
+                    .append("text")
                     .text(id => forecasters.filter(d => d.shorthand == id.forecast)[0].label)
                     .attr("x", 10)
                     .attr("y", (d, i) => i * 100 + 100)
                     .attr("dominant-baseline", "central")
                     .attr("text-anchor", "start")
                     .attr("font-size", 30)
-                    
+
 
                 svg.append("text")
                     .text("Biden")
@@ -372,7 +372,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/LT_Data.
 
                 var state_cand = ratings_nested.flat()
                 var national_cand = forecasts_ev.flat()
-                
+
 
                 var width3 = 1020;
                 var height3 = 500;
@@ -912,18 +912,18 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/LT_Data.
                     svg.attr("viewBox", "0 0 1000 " + (stateData.length * 40 + 150))
                     var width = 500,
                         height = stateData.length * 40 + 50;
-                    d3.json("us-states.json", us => {
-
-                        var state = us.features.filter(d => d.properties.name == input)[0];
-
+                        console.log(height)
+                    d3.json("us.json", us => {
+                        var state = topojson.feature(us, us.objects.states).features.filter(d => d.properties.name == input)[0]
+                        console.log(state)
                         projection2
                             .scale(1)
                             .translate([0, 0]);
-
-                        var b = path2.bounds(state),
-                            s = .95 / Math.max((b[1][0] - b[0][0]) / width, (b[1][1] - b[0][1]) / height),
-                            t = [((width - s * (b[1][0] + b[0][0])) / 2), ((height - s * (b[1][1] + b[0][1])) / 2) + 50];
-
+                        var b = path2.bounds(state)
+                        var s = .95 / Math.max((b[1][0] - b[0][0]) / width, (b[1][1] - b[0][1]) / height)
+                        var t = [((width - s * (b[1][0] + b[0][0])) / 2), ((height - s * (b[1][1] + b[0][1])) / 2) + 50]
+                        console.log(b)
+                        console.log(t)
                         projection2
                             .scale(s)
                             .translate(t);
@@ -933,6 +933,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/LT_Data.
                             .attr("height", stateData.length * 40 + 150)
                             .attr("width", 1000)
                             .attr("fill", "white")
+
                         svg.append("path")
                             .datum(state)
                             .attr("fill", color(state_proj))
