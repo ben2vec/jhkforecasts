@@ -1204,7 +1204,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .domain([new Date(2020, 3, 1), new Date(2020, 10, 3)])
 
                     var y = d3.scaleLinear()
-                        .rangeRound([600 - margin.bottom, margin.top]);
+                        .rangeRound([580, 20]);
 
 
                     var z = d3.scaleOrdinal()
@@ -1301,7 +1301,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         y.domain([
                             0,
                             100
-                        ]).nice();
+                        ]);
 
                         time.selectAll(".y-axis").transition()
                             .duration(speed)
@@ -1333,7 +1333,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         city.enter().insert("g", ".focus").append("path")
                             .attr("class", "line cities")
                             .style("stroke", (d, i) => cand_colors(d.party))
-                            .style("stroke-width", 5)
+                            .style("stroke-width", 4)
                             .style("opacity", .7)
                             .style("stroke-linecap", "round")
                             .style("stroke-linejoin", "round")
@@ -1429,7 +1429,15 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                                 update("seats", 500)
                             })
 
+
                     }
+                    time.append("rect")
+                        .attr("x", 00)
+                        .attr("y", 571)
+                        .attr("width", 20)
+                        .attr("height", 20)
+                        .style("fill", "white")
+                        .attr("ry", "6")
                     //phone layouts
 
 
