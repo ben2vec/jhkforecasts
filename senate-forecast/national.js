@@ -232,7 +232,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                     d.date = dateparse(d.forecast_date)
                 })
                 var maxDate = timeformat(d3.max(data, d => d.date))
-                var today = data.splice(data.length - cands.length - 2, data.length)
+                var today = data.slice(data.length - cands.length - 2, data.length)
                 console.log(today)
                 var updated = today[0].tipping_point
                 var updated = updated.split(".")[0].toUpperCase() + updated.split(".")[1]
@@ -1212,7 +1212,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         ;
 
                     var line = d3.line()
-                        .curve(d3.curveLinear)
+                        .curve(d3.curveCatmullRom)
                         .x(d => x(d.date))
                         .y(d => y(d.pct));
 
@@ -1333,10 +1333,10 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         city.enter().insert("g", ".focus").append("path")
                             .attr("class", "line cities")
                             .style("stroke", (d, i) => cand_colors(d.party))
-                            .style("stroke-width", 3)
-                            .style("opacity", .9)
+                            .style("stroke-width", 5)
+                            .style("opacity", .7)
                             .style("stroke-linecap", "round")
-                            .attr("stroke-linejoin", "round")
+                            .style("stroke-linejoin", "round")
                             .merge(city)
                             .transition().duration(speed)
                             .attr("d", d => line(d.values))
