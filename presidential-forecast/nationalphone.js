@@ -477,7 +477,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
       ;
 
     var line = d3.line()
-      .curve(d3.curveLinear)
+      .curve(d3.curveCatmullRom)
       .x(d => xphone(d.date))
       .y(d => yphone(d.pct));
 
@@ -598,8 +598,8 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
       city.enter().insert("g", ".focus").append("path")
         .attr("class", "line cities")
         .style("stroke", (d, i) => colors[i])
-        .style("stroke-width", 4)
-        .style("opacity", .9)
+        .style("stroke-width", 6)
+        .style("opacity", .7)
         .style("stroke-linecap", "round")
         .attr("stroke-linejoin", "round")
         .merge(city)
@@ -620,7 +620,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
 
         labels2.enter().append("text")
           .attr("class", "lineHoverText2")
-          .attr("font-size", 20)
+          .attr("font-size", 35)
           .style("fill", "white")
           .style("stroke", "white")
           .style("stroke-width", 10)
@@ -632,7 +632,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
         labels.enter().append("text")
           .attr("class", "lineHoverText")
           .attr("text-anchor", "middle")
-          .attr("font-size", 25)
+          .attr("font-size", 35)
           .merge(labels)
 
         var circles = focus.selectAll(".hoverCircle")
@@ -663,7 +663,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
             .attr("x", xphone(d.date))
             .attr("y", 2)
             .attr("text-anchor", "middle")
-            .style("font-size", 20)
+            .style("font-size", 25)
             .attr("font-weight", "500")
             .text(formatDate(d.date));
 
