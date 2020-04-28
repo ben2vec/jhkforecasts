@@ -507,7 +507,7 @@ d3.csv("https://data.jhkforecasts.com/senate-candidates.csv", candidates => {
                 ;
 
             var line = d3.line()
-                .curve(d3.curveLinear)
+                .curve(d3.curveCatmullRom)
                 .x(d => x(d.date))
                 .y(d => y(d.pct));
 
