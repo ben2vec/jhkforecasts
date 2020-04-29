@@ -357,6 +357,20 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                     .style("stroke-width", "1")
                     .style("fill", (d, i) => d.properties.cands == undefined ? "#cfcfcf" : color(d3.sum(d.properties.cands.filter(d => d.party == "REP"), d => d.win)))
 
+
+                mapPhone.selectAll("label")
+                    .data(map_labels)
+                    .enter()
+                    .append("text")
+                    .text(d => d.label)
+                    .attr("x", d => d.xValue)
+                    .attr("y", d => d.yValue)
+                    .style("font-family", "sf-mono")
+                    .attr("font-size", "9")
+                    .attr("fill", "white")
+                    .attr("text-anchor", "middle")
+                    .attr("font-weight", "500")
+
                 mapPhone.selectAll("label")
                     .data(states)
                     .enter()
@@ -1511,6 +1525,20 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .style("stroke", "white")
                         .style("stroke-width", "1")
                         .style("fill", d => d.properties.cands == undefined ? "#cfcfcf" : color(d3.sum(d.properties.cands.filter(d => d.party == "REP"), d => d.win)))
+
+
+                    mapPhone.selectAll("label")
+                        .data(map_labels)
+                        .enter()
+                        .append("text")
+                        .text(d => d.label)
+                        .attr("x", d => d.xValue)
+                        .attr("y", d => d.yValue)
+                        .style("font-family", "sf-mono")
+                        .attr("font-size", "16")
+                        .attr("fill", "white")
+                        .attr("text-anchor", "middle")
+                        .attr("font-weight", "500")
 
                     mapPhone.selectAll("label")
                         .data(states)
