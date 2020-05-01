@@ -1,3 +1,7 @@
+var map = d3.select("#usmap")
+                    .append("svg")
+                    .attr("viewBox", '60 -50 900 510')
+                    ;
 var forecasters = [
     {
         "forecaster": "JHK Forecasts",
@@ -12,7 +16,7 @@ var forecasters = [
         "link": "https://www.niskanencenter.org/negative-partisanship-and-the-2020-congressional-elections/"
     },
     {
-        "forecaster": "Cnalysis",
+        "forecaster": "CNalysis",
         "type": "newcomer",
         "shorthand": "cnalysis",
         "link": "https://www.cnalysiscom.website/forecasts/2020-president-governor-senate-house-ratings"
@@ -57,18 +61,18 @@ var color = d3.scaleLinear()
     .domain([0, 50, 100])
     .range(["#0091FF", "white", "#FF6060"]);
 var ratingScale = [
-    { rating: "Solid D", color: color(-5), rating_num: 0, opacity: 1 },
-    { rating: "Likely D", color: color(15), rating_num: 10, opacity: 1 },
-    { rating: "Lean D", color: color(30), rating_num: 25, opacity: 1 },
-    { rating: "Tilt D", color: color(40), rating_num: 40, opacity: 1 },
-    { rating: "Tossup", color: "white", rating_num: 50, opacity: 1 },
-    { rating: "Tilt R", color: color(60), rating_num: 60, opacity: 1 },
-    { rating: "Lean R", color: color(70), rating_num: 75, opacity: 3 },
-    { rating: "Likely R", color: color(85), rating_num: 90, opacity: 7 },
-    { rating: "Solid R", color: color(105), rating_num: 100, opacity: 1 },
+    { rating: "Solid D", color: color(-5), ratingNum: 0, opacity: 1 },
+    { rating: "Likely D", color: color(15), ratingNum: 10, opacity: 1 },
+    { rating: "Lean D", color: color(30), ratingNum: 25, opacity: 1 },
+    { rating: "Tilt D", color: color(40), ratingNum: 40, opacity: 1 },
+    { rating: "Tossup", color: "white", ratingNum: 50, opacity: 1 },
+    { rating: "Tilt R", color: color(60), ratingNum: 60, opacity: 1 },
+    { rating: "Lean R", color: color(70), ratingNum: 75, opacity: 3 },
+    { rating: "Likely R", color: color(85), ratingNum: 90, opacity: 7 },
+    { rating: "Solid R", color: color(105), ratingNum: 100, opacity: 1 },
 ]
 var ratingTypes = ratingScale.map(d => { return d.rating })
-
+var rVs = ratingScale.map(d => { return d.ratingNum })
 d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", data => {
     var data = data.map((d, i) => {
         return {
@@ -84,29 +88,142 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", data => {
             sabato: d.sabato
         }
     })
+    data[34].state = "Georgia Special"
     d3.csv("https://data.jhkforecasts.com/2020-senate.csv", jhk => {
-        d3.csv("", jhk => {
-        d3.csv("https://data.jhkforecasts.com/senate-candidates.csv", cands => {
-            var today = jhk.slice(jhk.length - cands.length - 2, jhk.length)
-            data.forEach((d, i) => {
-                var stateIndex = d.stateIndex
-                var stateData = today.filter(d => d.state_index == stateIndex)
-                d.jhk = d3.sum(stateData.filter(d => d.party == "REP"), d => d.win)
-            })
-
-            var forecastRatings = []
-            forecasters.forEach(id => {
-                var forecastID = id.shorthand
+        d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Sen_LT_Data.csv", leanTossup => {
+            var lS = leanTossup.map(d => { return d.state })
+            d3.csv("https://data.jhkforecasts.com/senate-candidates.csv", cands => {
+                var today = jhk.slice(jhk.length - cands.length - 2, jhk.length)
                 data.forEach((d, i) => {
-                    var rating = d[forecastID]
-                    var ratingValue = typeof rating == "number" ? rating : ratingScale[ratingTypes.indexOf(rating)]
-                    forecastRatings.push({ forecast: forecastID, rating: rating, ratingValue: ratingValue })
+                    var state = d.state
+                    var stateIndex = d.stateIndex
+                    var stateData = today.filter(d => d.state_index == stateIndex)
+                    d.jhk = d3.sum(stateData.filter(d => d.party == "REP"), d => d.win)
+                    d.leanTossup = +leanTossup[lS.indexOf(state)].gop_win
                 })
+
+                var forecastRatings = []
+                forecasters.forEach(id => {
+                    var forecastID = id.shorthand
+                    data.forEach((d, i) => {
+                        var rating = d[forecastID]
+                        var state = d.state
+                        var stateIndex = d.stateIndex
+                        var ratingValue = typeof rating == "number" ? rating : ratingScale[ratingTypes.indexOf(rating)].ratingNum
+                        forecastRatings.push({ forecast: forecastID, state: state, stateData: stateIndex, rating: rating, ratingValue: ratingValue })
+                    })
+
+                })
+                forecasters.forEach(d => {
+                    var shorthand = d.shorthand
+                    d.ratings = forecastRatings.filter(d => d.forecast == shorthand)
+                })
+                var selectBox1 = d3.select("#selectBox1")
+                var widthmap = 1020
+                var heightmap = 500;
+                var projection = d3.geoAlbersUsa()
+                    .translate([widthmap / 2, heightmap / 2])
+                    .scale([900]);
+                var path = d3.geoPath()
+                    .projection(projection);
+                
+
+                var toolTip = d3.tip()
+                    .attr("class", "d3-tip")
+                    .offset([-200, -150])
+                    .html("<div id='toolTip'></div>");
+
+                map.call(toolTip)
+                d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", json => {
+
+                
+
+                    update("jhk")
+                    function update(forecaster) {
+                        var forecastData = forecasters.filter(d => d.shorthand == forecaster)[0]
+                        var mapData = topojson.feature(json, json.objects.states).features
+                        console.log(forecastData)
+                        mapData.forEach((d, i) => {
+                            var state = d.properties.name
+                            var stateData = forecastData.ratings.filter(d => d.state == state)
+                            d.properties.rating = stateData.length == 0 ? "n/a" : stateData[0].ratingValue
+                            d.properties.election = stateData.length == 0 ? "no" : "yes"
+                            d.properties.abbrev = map_labels.filter(d => d.state == state).length == 0 ? "" : map_labels.filter(d => d.state == state)[0].label
+                            d.properties.cx = map_labels.filter(d => d.state == state).length == 0 ? "" : map_labels.filter(d => d.state == state)[0].xValue
+                            d.properties.cy = map_labels.filter(d => d.state == state).length == 0 ? "" : map_labels.filter(d => d.state == state)[0].yValue
+                        })
+                        console.log(mapData)
+
+                        map.append("rect")
+                        .attr("x",75)
+                        .attr("y",0)
+                        .attr("width",900)
+                        .attr("height",450)
+                        .attr("fill","white")
+
+                        map.selectAll("rt")
+                            .data(mapData)
+                            .enter()
+                            .append("path")
+                            .attr("class", "states")
+                            .attr("d", path)
+                            .style("stroke", "white")
+                            .style("stroke-width", ".8")
+                            .attr("fill", d => d.properties.election == "no" ? "lightgrey" : color(d.properties.rating))
+
+
+                        map.selectAll("s")
+                            .data(mapData)
+                            .enter()
+                            .append("text")
+                            .text(d => d.properties.abbrev)
+                            .attr("x", d => d.properties.cx)
+                            .attr("y", d => d.properties.cy - 5)
+                            .style("font-family", "sf-mono")
+                            .attr("dominant-baseline", "central")
+                            .attr("text-anchor", "middle")
+                            .attr("font-size", 10)
+                            .attr("fill", d => d.properties.election == "no" ? "white" : "black")
+
+                        map.selectAll("s")
+                            .data(mapData)
+                            .enter()
+                            .append("path")
+                            .attr("class", "statesover")
+                            .attr("d", path)
+                            .style("stroke", d => Math.abs(50 - d.properties.rating) < 10 ? "black" : "none")
+                            .style("stroke-width", "1")
+                            .attr("fill", "none")
+                        document.getElementById("dropbtn").innerHTML = forecastData.forecaster
+
+                    }
+
+
+
+
+                    var menu = d3.select("#dropdown-content")
+                    menu.selectAll("s")
+                        .data(forecasters)
+                        .enter()
+                        .append("h4")
+                        .text(d => d.forecaster)
+                        .style("font-size","1.5vw")
+                        .on("click", d => {
+                            update(d.shorthand)
+                            
+                            menu.style("display","none")
+                        
+                        })
+                    
+                    d3.select("#dropbtn")
+                    .on("click",d=>{
+                        menu.style("display","block")
+                    })
+
+                    //END JSON FUNCTION
+                })
+                //CSV FUCNTIONS 
             })
-
-
-
-            console.log(forecastRatings)
         })
     })
 })
