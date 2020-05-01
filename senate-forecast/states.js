@@ -44,7 +44,7 @@ d3.csv("https://data.jhkforecasts.com/senate-candidates.csv", candidates => {
                 d.date = dateparse(d.forecast_date)
             })
             var data = data.filter(d => d.state_index == key_state)
-            var state = key_state.split(":")[0]
+            var state = key_state == "Georgia: Class III"?"Georgia Special":  key_state.split(":")[0]
             document.getElementById("stateTitle").innerHTML = state
             document.getElementById("winbutton").innerHTML = "Win " + state
 
