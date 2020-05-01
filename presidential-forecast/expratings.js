@@ -119,7 +119,7 @@ var ratings_colors = d3.scaleOrdinal()
 var numberformat = d3.format(".1%");
 var numberFormat = d3.format(".0%");
 
-d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/LT_Data.csv", leantoss => {
+d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_Data.csv", leantoss => {
     leantoss.sort(function (a, b) {
         if (a.state < b.state) { return -1; }
         if (a.state > b.state) { return 1; }

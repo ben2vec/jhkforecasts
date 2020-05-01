@@ -4,7 +4,6 @@ d3.select("#topline").append("h1")
     .style("font-size", "2vw")
     .style("font-weight", 900)
     .style("margin-left", "2%")
-    .style("border-bottom", "solid black .2vw")
 
 d3.select("#toplinePhone").append("h1")
     .text("Win Senate...")
