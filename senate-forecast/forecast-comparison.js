@@ -1,7 +1,10 @@
 var map = d3.select("#usmap")
-                    .append("svg")
-                    .attr("viewBox", '60 -50 900 510')
-                    ;
+    .append("svg")
+    .attr("viewBox", '60 00 900 460')
+var congress = d3.select('#congress').append("svg")
+    .attr("viewBox", "0 0 1100 570")
+    .append("g")
+    .attr("transform", "translate(" + 550 + "," + 320 + ")");
 var forecasters = [
     {
         "forecaster": "JHK Forecasts",
@@ -88,7 +91,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", data => {
             sabato: d.sabato
         }
     })
-    data[34].state = "Georgia Special"
+
     d3.csv("https://data.jhkforecasts.com/2020-senate.csv", jhk => {
         d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Sen_LT_Data.csv", leanTossup => {
             var lS = leanTossup.map(d => { return d.state })
@@ -101,7 +104,13 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", data => {
                     d.jhk = d3.sum(stateData.filter(d => d.party == "REP"), d => d.win)
                     d.leanTossup = +leanTossup[lS.indexOf(state)].gop_win
                 })
-
+                data[34].state = "Georgia Special"
+                var states = data.map(d => {
+                    return {
+                        state: d.state,
+                        state_index: d.state_index
+                    }
+                })
                 var forecastRatings = []
                 forecasters.forEach(id => {
                     var forecastID = id.shorthand
@@ -126,7 +135,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", data => {
                     .scale([900]);
                 var path = d3.geoPath()
                     .projection(projection);
-                
+
 
                 var toolTip = d3.tip()
                     .attr("class", "d3-tip")
@@ -136,10 +145,11 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", data => {
                 map.call(toolTip)
                 d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", json => {
 
-                
+
 
                     update("jhk")
                     function update(forecaster) {
+                        console.log(forecaster)
                         var forecastData = forecasters.filter(d => d.shorthand == forecaster)[0]
                         var mapData = topojson.feature(json, json.objects.states).features
                         console.log(forecastData)
@@ -155,11 +165,11 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", data => {
                         console.log(mapData)
 
                         map.append("rect")
-                        .attr("x",75)
-                        .attr("y",0)
-                        .attr("width",900)
-                        .attr("height",450)
-                        .attr("fill","white")
+                            .attr("x", 75)
+                            .attr("y", 0)
+                            .attr("width", 900)
+                            .attr("height", 450)
+                            .attr("fill", "white")
 
                         map.selectAll("rt")
                             .data(mapData)
@@ -194,36 +204,128 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", data => {
                             .style("stroke", d => Math.abs(50 - d.properties.rating) < 10 ? "black" : "none")
                             .style("stroke-width", "1")
                             .attr("fill", "none")
-                        document.getElementById("dropbtn").innerHTML = forecastData.forecaster
 
                     }
 
-
-
-
-                    var menu = d3.select("#dropdown-content")
-                    menu.selectAll("s")
-                        .data(forecasters)
-                        .enter()
-                        .append("h4")
-                        .text(d => d.forecaster)
-                        .style("font-size","1.5vw")
-                        .on("click", d => {
-                            update(d.shorthand)
-                            
-                            menu.style("display","none")
-                        
+                    var selectbox1 = d3.select("#forecastSelect")
+                        .on("change", function () {
+                            update(this.value)
                         })
-                    
-                    d3.select("#dropbtn")
-                    .on("click",d=>{
-                        menu.style("display","block")
-                    })
+                    forecasters.forEach((id, jid) => {
+                        var forecast = id.shorthand
+                        var dem_seats = [{ state: "DEM", state_index: "", abbrev: "", win: 0, seats: 35 }]
+                        var rep_seats = [{ state: "REP", state_index: "", abbrev: "", win: 100, seats: 30 }]
+                        var seats = []
+                        var elSeats = []
+                        states.forEach((d, i) => {
+                            var state = d.state
+                            var abbrev = d.label
+                            var state_index = d.state_index
+                            var win = d3.sum(forecastRatings.filter(d => d.state == state && d.forecast == forecast), d => d.ratingValue)
+                            var ps = {
+                                state: state,
+                                state_index: state_index,
+                                abbrev: abbrev,
+                                win: win,
+                                seats: 1
+                            }
+                            elSeats.push(ps)
+                        })
+                        elSeats.sort((a, b) => a.win - b.win)
+                        console.log(elSeats)
+                        seats.push(dem_seats)
+                        seats.push(elSeats)
+                        seats.push(rep_seats)
+                        var seats = seats.flat()
 
-                    //END JSON FUNCTION
+                        console.log(seats)
+
+                        var arc = d3.arc()
+                            .outerRadius(130 + jid * 30)
+                            .innerRadius(100 + jid * 30)
+                            ;
+
+                        var pie = d3.pie()
+                            .sort(null)
+                            .value(function (d) {
+                                return d.seats;
+                            })
+                            .startAngle(-2.5)
+                            .endAngle(2.5);
+
+
+
+                        congress.selectAll(".arc")
+                            .data(pie(seats))
+                            .enter().append("path")
+                            .attr("d", arc)
+                            .style("fill", d => color(d.data.win))
+                            .attr("stroke", "white");
+
+                        congress.selectAll("p")
+
+
+                    })
+                    congress.append("line")
+                        .attr("x1", 0)
+                        .attr("x2", 0)
+                        .attr("y1", -20)
+                        .attr("y2", -500)
+                        .attr("stroke", "black")
+
+                    congress.append("text")
+                        .text("50-50 SPLIT")
+                        .attr("y",0)
+                        .attr("x", 0)
+                        .attr("fill", "black")
+                        .attr("font-weight", "500")
+                        .style("font-size", "18")
+                        .attr("text-anchor", "middle")
+                        .attr("dominant-baseline", "top")
+
+                    congress.append("text")
+                        .text("30 Repbulican Seats")
+                        .attr("y", -120)
+                        .attr("x", 400)
+                        .attr("fill", "black")
+                        .attr("font-weight", "500")
+                        .style("font-size", "18")
+                        .attr("text-anchor", "middle")
+                        .attr("dominant-baseline", "top")
+                    congress.append("text")
+                        .text("not up for Re-election")
+                        .attr("y", -120)
+                        .attr("x", 400)
+                        .attr("fill", "black")
+                        .attr("font-weight", "500")
+                        .style("font-size", "18")
+                        .attr("text-anchor", "middle")
+                        .attr("dominant-baseline", "top")
+                        .attr("dy", "1em")
+
+                    congress.append("text")
+                        .text("35 Democrat Seats")
+                        .attr("y", -120)
+                        .attr("x", -400)
+                        .attr("fill", "black")
+                        .attr("font-weight", "500")
+                        .style("font-size", "18")
+                        .attr("text-anchor", "middle")
+                        .attr("dominant-baseline", "top")
+                    congress.append("text")
+                        .text("not up for Re-election")
+                        .attr("y", -120)
+                        .attr("x", -400)
+                        .attr("fill", "black")
+                        .attr("font-weight", "500")
+                        .style("font-size", "18")
+                        .attr("text-anchor", "middle")
+                        .attr("dominant-baseline", "top")
+                        .attr("dy", "1em")
                 })
-                //CSV FUCNTIONS 
+                //END JSON FUNCTION
             })
+            //CSV FUCNTIONS 
         })
     })
 })
