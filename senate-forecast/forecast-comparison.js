@@ -554,7 +554,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", data => {
                                 .append("td")
                                 .style("background-color", typeof d[forecastID] == "number" ? color(d[forecastID]) : rCs[ratingTypes.indexOf(d[forecastID])])
                                 .append("h3")
-                                .text(typeof d[forecastID] == "number" ? wf(d[forecastID]) + "%" : d[forecastID].split(" ")[0])
+                                .text(typeof d[forecastID] == "number" ? wf(Math.abs(50-d[forecastID])+50) + "%" : d[forecastID].split(" ")[0])
                                 .style("font-size", "1.7vw")
                                 .style("text-align", "center")
                                 .style("font-weight", 500)
