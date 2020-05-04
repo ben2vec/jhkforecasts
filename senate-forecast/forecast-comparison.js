@@ -1,6 +1,16 @@
 var map = d3.select("#usmap")
     .append("svg")
     .attr("viewBox", '60 -40 900 500')
+
+d3.select('#congress').append("h1")
+    .text("How they stack up")
+    .style("font-weight", 700)
+    .style("font-size", "3.5vw")
+
+d3.select('#dataTable').append("h1")
+    .text("Ratings Table")
+    .style("font-weight", 700)
+    .style("font-size", "3.5vw")
 var congress = d3.select('#congress').append("svg")
     .attr("viewBox", "0 0 1100 650")
     .append("g")
@@ -13,7 +23,7 @@ var forecasters = [
         "link": "https://projects.jhkforecasts.com/senate-forecast/"
     },
     {
-        "forecaster": "Bitecofer/Niskanen",
+        "forecaster": "Bitecofer/ Niskanen",
         "type": "newcomer",
         "shorthand": "bitecofer",
         "link": "https://www.niskanencenter.org/negative-partisanship-and-the-2020-congressional-elections/"
@@ -142,14 +152,11 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", data => {
                     .scale([900]);
                 var path = d3.geoPath()
                     .projection(projection);
-
-
-                var toolTip = d3.tip()
+                var tool_tipPhone = d3.tip()
                     .attr("class", "d3-tip")
                     .offset([-200, -150])
-                    .html("<div id='toolTip'></div>");
-
-                map.call(toolTip)
+                    .html("<div id='tipDiv'></div>");
+                map.call(tool_tipPhone);
                 d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", json => {
 
 
@@ -163,11 +170,12 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", data => {
                         mapData.forEach((d, i) => {
                             var state = d.properties.name
                             var stateData = forecastData.ratings.filter(d => d.state == state)
-                            d.properties.rating = stateData.length == 0 ? "n/a" : stateData[0].ratingValue
+                            d.properties.ratingValue = stateData.length == 0 ? "n/a" : stateData[0].ratingValue
                             d.properties.election = stateData.length == 0 ? "no" : "yes"
                             d.properties.abbrev = map_labels.filter(d => d.state == state).length == 0 ? "" : map_labels.filter(d => d.state == state)[0].label
                             d.properties.cx = map_labels.filter(d => d.state == state).length == 0 ? "" : map_labels.filter(d => d.state == state)[0].xValue
                             d.properties.cy = map_labels.filter(d => d.state == state).length == 0 ? "" : map_labels.filter(d => d.state == state)[0].yValue
+                            d.properties.rating = stateData.length == 0 ? "" : stateData[0].rating
                         })
                         console.log(mapData)
 
@@ -239,7 +247,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", data => {
                             .attr("d", path)
                             .style("stroke", "white")
                             .style("stroke-width", ".8")
-                            .attr("fill", d => d.properties.election == "no" ? "lightgrey" : color(d.properties.rating))
+                            .attr("fill", d => d.properties.election == "no" ? "lightgrey" : color(d.properties.ratingValue))
 
 
                         map.selectAll("s")
@@ -263,7 +271,71 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", data => {
                             .attr("d", path)
                             .style("stroke", d => Math.abs(50 - d.properties.rating) < 10 ? "black" : "none")
                             .style("stroke-width", "1")
-                            .attr("fill", "none")
+                            .style("fill", "none")
+                            .on('mouseover', function (d) {
+
+
+                                d.properties.rating == "" ? tool_tipPhone.hide() : tool_tipPhone.offset([-150, -75]).show()
+                                var tipSVG = d3.select("#tipDiv")
+                                    .append("svg")
+                                    .attr("width", 150)
+                                    .attr("height", 150)
+
+                                tipSVG.append("rect")
+                                    .attr("y", 1.5)
+                                    .attr("x", 1.5)
+                                    .attr("width", 147)
+                                    .attr("height", 147)
+                                    .attr("rx", 8)
+                                    .attr("fill", "white")
+                                    .attr("stroke", "black")
+                                    .attr("stroke-width", 2)
+
+                                tipSVG.append("text")
+                                    .text(d.properties.name)
+                                    .attr("y", 25)
+                                    .attr("x", 75)
+                                    .attr("fill", "black")
+                                    .attr("font-weight", "700")
+                                    .style("font-size", "20")
+                                    .attr("text-anchor", "middle")
+
+
+                                tipSVG.append("image")
+                                    .attr("href", d.properties.ratingValue == 50 ? "https://jhkforecasts.com/No%20one-01.png" : d.properties.ratingValue > 50 ? "https://jhkforecasts.com/elephant-01.png" : "https://jhkforecasts.com/donkey-01.png")
+                                    .attr("y", 35)
+                                    .attr("x", 40)
+                                    .attr("width", 70)
+                                    .attr("height", 70)
+
+
+
+                                tipSVG.append("text")
+                                    .text(typeof d.properties.rating == "number" ? "Win" : "Rating")
+                                    .attr("y", 115)
+                                    .attr("x", 75)
+                                    .attr("fill", "black")
+                                    .attr("font-weight", "500")
+                                    .style("font-size", "18")
+                                    .attr("text-anchor", "middle")
+
+
+                                tipSVG.append("text")
+                                    .text(typeof d.properties.rating == "number" ? wf(d.properties.rating) : d.properties.rating)
+                                    .attr("y", 140)
+                                    .attr("x", 75)
+                                    .attr("fill", d.properties.ratingValue == 50 ? "black" : d.properties.ratingValue > 50 ? color(100) : color(0))
+                                    .attr("font-weight", "500")
+                                    .style("font-size", "18")
+                                    .attr("text-anchor", "middle")
+
+                            })
+                            .on('mouseout',
+                                function (d) {
+
+
+                                    tool_tipPhone.hide()
+                                });
 
                     }
 
@@ -421,7 +493,8 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", data => {
                         .append("tbody")
 
                     var tableHead = table.append("tr")
-                    
+                    .style("border-bottom","solid black 1px")
+
 
                     tableHead.append("th")
                         .style("width", "20%")
@@ -457,10 +530,11 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", data => {
                         tableHead.append("th")
                             .style("width", (80 / forecasters.length) + "%")
                             .append("a")
-                            .attr("href",forecasters[i].link)
-                            .attr("target","_blank")
+                            .attr("href", forecasters[i].link)
+                            .attr("target", "_blank")
                             .append("h3")
                             .text(forecasters[i].forecaster)
+                            .style("padding","5px")
                             .style("font-size", "1.5vw")
                             .style("font-weight", 500)
 

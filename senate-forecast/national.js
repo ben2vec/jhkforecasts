@@ -1023,7 +1023,6 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         d.stdev = (cands.filter(d => d.party == "REP")[0].vote - cands.filter(d => d.party == "REP")[0].p_10) * 2
                         d.tipping_point = +cands[0].tipping_point
                     })
-                    bars[34].stdev *= 1.5
                     bars.sort((a, b) => Math.abs(a.margin) - Math.abs(b.margin))
                     bars.sort((a, b) => b.tipping_point - a.tipping_point)
                     console.log(bars)
