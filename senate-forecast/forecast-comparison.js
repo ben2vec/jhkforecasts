@@ -21,9 +21,10 @@ var forecasters = [
         "type": "",
         "shorthand": "jhk",
         "link": "https://projects.jhkforecasts.com/senate-forecast/"
+        
     },
     {
-        "forecaster": "Bitecofer/ Niskanen",
+        "forecaster": "Bitecofer",
         "type": "newcomer",
         "shorthand": "bitecofer",
         "link": "https://www.niskanencenter.org/negative-partisanship-and-the-2020-congressional-elections/"
@@ -417,6 +418,8 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", data => {
                             .style("fill", "white")
                             .attr("stroke", "black");
 
+                       
+                        
                     })
 
                     congress.selectAll("p")
@@ -486,14 +489,14 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", data => {
                         .attr("dominant-baseline", "top")
                         .attr("dy", "1em")
 
-
+                    
                     var table = d3.select("#dataTable")
                         .append("table")
                         .style("width", "100%")
                         .append("tbody")
 
                     var tableHead = table.append("tr")
-                    .style("border-bottom","solid black 1px")
+                        .style("border-bottom", "solid black 1px")
 
 
                     tableHead.append("th")
@@ -534,7 +537,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", data => {
                             .attr("target", "_blank")
                             .append("h3")
                             .text(forecasters[i].forecaster)
-                            .style("padding","5px")
+                            .style("padding", "5px")
                             .style("font-size", "1.5vw")
                             .style("font-weight", 500)
 
