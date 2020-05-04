@@ -12,9 +12,9 @@ d3.select('#dataTable').append("h1")
     .style("font-weight", 700)
     .style("font-size", "3.5vw")
 var congress = d3.select('#congress').append("svg")
-    .attr("viewBox", "0 0 1100 650")
+    .attr("viewBox", "0 0 1200 700")
     .append("g")
-    .attr("transform", "translate(" + 550 + "," + 320 + ")");
+    .attr("transform", "translate(" + 600 + "," + 350 + ")");
 var forecasters = [
     {
         "forecaster": "JHK Forecasts",
@@ -58,6 +58,12 @@ var forecasters = [
         "type": "newcomer",
         "shorthand": "leanTossup",
         "link": "https://leantossup.ca/us-house/"
+    },
+    {
+        "forecaster": "Sabato's Crystal Ball",
+        "type": "expert",
+        "shorthand": "sabato",
+        "link": "http://centerforpolitics.org/crystalball/2020-senate/"
     }
 ]
 var tformat = d3.timeFormat("%m/%d/%Y")
