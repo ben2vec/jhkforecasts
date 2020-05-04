@@ -406,7 +406,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                     var dem_ev = evcats.slice(0, 4)
                     var gop_ev = evcats.slice(5, 10)
 
-                    d3.json("https://projects.jhkforecasts.com/presidential_forecast/us-states.json", function (json) {
+                    d3.json("https://projects.jhkforecasts.com/presidential-forecast/us-states.json", function (json) {
 
                         for (var i = 0; i < state.length; i++) {
 

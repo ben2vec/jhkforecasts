@@ -49,7 +49,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
         .html("<div id='tipDiv'></div>");
 
     map.call(tool_tip);
-    d3.json("https://projects.jhkforecasts.com/presidential_forecast/us-states.json", function (json) {
+    d3.json("https://projects.jhkforecasts.com/presidential-forecast/us-states.json", function (json) {
 
         for (var i = 0; i < sd.length; i++) {
 
