@@ -1,8 +1,8 @@
 var map = d3.select("#usmap")
     .append("svg")
-    .attr("viewBox", '60 00 900 460')
+    .attr("viewBox", '60 -40 900 500')
 var congress = d3.select('#congress').append("svg")
-    .attr("viewBox", "0 0 1100 570")
+    .attr("viewBox", "0 0 1100 650")
     .append("g")
     .attr("transform", "translate(" + 550 + "," + 320 + ")");
 var forecasters = [
@@ -54,6 +54,7 @@ var timeformat = d3.timeFormat("%m/%d/%y")
 var dateparse = d3.timeParse("%m/%d/%y")
 var timeparse = d3.timeParse("%m/%d/%y %H:%M")
 var nf = d3.format(".1f")
+var wf = d3.format(".0f")
 var updated_format = d3.timeFormat("%b. %d %Y %I:%M %p")
 var widthmap = 1020
 var heightmap = 500;
@@ -67,15 +68,16 @@ var ratingScale = [
     { rating: "Solid D", color: color(-5), ratingNum: 0, opacity: 1 },
     { rating: "Likely D", color: color(15), ratingNum: 10, opacity: 1 },
     { rating: "Lean D", color: color(30), ratingNum: 25, opacity: 1 },
-    { rating: "Tilt D", color: color(40), ratingNum: 40, opacity: 1 },
+    { rating: "Tilt D", color: color(45), ratingNum: 40, opacity: 1 },
     { rating: "Tossup", color: "white", ratingNum: 50, opacity: 1 },
-    { rating: "Tilt R", color: color(60), ratingNum: 60, opacity: 1 },
+    { rating: "Tilt R", color: color(55), ratingNum: 60, opacity: 1 },
     { rating: "Lean R", color: color(70), ratingNum: 75, opacity: 3 },
     { rating: "Likely R", color: color(85), ratingNum: 90, opacity: 7 },
     { rating: "Solid R", color: color(105), ratingNum: 100, opacity: 1 },
 ]
 var ratingTypes = ratingScale.map(d => { return d.rating })
 var rVs = ratingScale.map(d => { return d.ratingNum })
+var rCs = ratingScale.map(d => { return d.color })
 d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", data => {
     var data = data.map((d, i) => {
         return {
@@ -127,6 +129,11 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", data => {
                     var shorthand = d.shorthand
                     d.ratings = forecastRatings.filter(d => d.forecast == shorthand)
                 })
+                forecasters.forEach((d, i) => {
+                    d.forecastIndex = i + 1
+                    d.repSeats = d.ratings.filter(d => d.ratingValue > 55).length + 30
+                    d.demSeats = d.ratings.filter(d => d.ratingValue < 45).length + 35
+                })
                 var selectBox1 = d3.select("#selectBox1")
                 var widthmap = 1020
                 var heightmap = 500;
@@ -171,6 +178,59 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", data => {
                             .attr("height", 450)
                             .attr("fill", "white")
 
+                        map.append("image")
+                            .attr("href", "https://jhkforecasts.com/elephant-01.png")
+                            .attr("x", 870)
+                            .attr("y", -30)
+                            .attr("width", 80)
+                            .attr("height", 80)
+
+                        map.append("image")
+                            .attr("href", "https://jhkforecasts.com/donkey-01.png")
+                            .attr("x", 70)
+                            .attr("y", -30)
+                            .attr("width", 80)
+                            .attr("height", 80)
+
+                        map.append("text")
+                            .text("Republicans")
+                            .attr("x", 860)
+                            .attr("y", -10)
+                            .attr("text-anchor", "end")
+                            .attr("font-size", 25)
+
+                        map.append("text")
+                            .text("Democrats")
+                            .attr("x", 160)
+                            .attr("y", -10)
+                            .attr("text-anchor", "start")
+                            .attr("font-size", 25)
+
+                        map.append("text")
+                            .text(forecastData.demSeats)
+                            .attr("x", 160)
+                            .attr("y", 20)
+                            .attr("text-anchor", "start")
+                            .attr("font-size", 25)
+                            .attr("fill", color(0))
+
+                        map.append("text")
+                            .text(forecastData.repSeats)
+                            .attr("x", 860)
+                            .attr("y", 20)
+                            .attr("text-anchor", "end")
+                            .attr("font-size", 25)
+                            .attr("fill", color(100))
+
+                        map.append("text")
+                            .text("Seats")
+                            .attr("x", 510)
+                            .attr("y", 20)
+                            .attr("text-anchor", "middle")
+                            .attr("font-size", 25)
+                            .attr("fill", "Black")
+
+
                         map.selectAll("rt")
                             .data(mapData)
                             .enter()
@@ -211,6 +271,11 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", data => {
                         .on("change", function () {
                             update(this.value)
                         })
+
+
+                    forecasters.sort((a, b) => a.repSeats - b.repSeats)
+                    forecasters.sort((a, b) => b.demSeats - a.demSeats)
+
                     forecasters.forEach((id, jid) => {
                         var forecast = id.shorthand
                         var dem_seats = [{ state: "DEM", state_index: "", abbrev: "", win: 0, seats: 35 }]
@@ -250,8 +315,19 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", data => {
                             .value(function (d) {
                                 return d.seats;
                             })
-                            .startAngle(-2.5)
-                            .endAngle(2.5);
+                            .startAngle(-Math.PI)
+
+
+                        var arcTWO = d3.arc()
+                            .outerRadius(130 + jid * 30)
+                            .innerRadius(100 + jid * 30)
+                            ;
+
+                        var pieTWO = d3.pie()
+                            .sort(null)
+                            .value(1)
+                            .startAngle(2.5)
+                            .endAngle((Math.PI - 2.5) + Math.PI);
 
 
 
@@ -262,10 +338,25 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", data => {
                             .style("fill", d => color(d.data.win))
                             .attr("stroke", "white");
 
-                        congress.selectAll("p")
-
+                        congress.selectAll(".arc")
+                            .data(pieTWO(tformat))
+                            .enter().append("path")
+                            .attr("d", arcTWO)
+                            .style("fill", "white")
+                            .attr("stroke", "black");
 
                     })
+
+                    congress.selectAll("p")
+                        .data(forecasters)
+                        .enter()
+                        .append("text")
+                        .text(d => d.forecaster)
+                        .attr("x", 0)
+                        .attr("y", (d, i) => 110 + i * 30)
+                        .attr("text-anchor", "middle")
+                        .attr("dominant-baseline", "central")
+
                     congress.append("line")
                         .attr("x1", 0)
                         .attr("x2", 0)
@@ -275,7 +366,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", data => {
 
                     congress.append("text")
                         .text("50-50 SPLIT")
-                        .attr("y",0)
+                        .attr("y", 0)
                         .attr("x", 0)
                         .attr("fill", "black")
                         .attr("font-weight", "500")
@@ -322,6 +413,74 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", data => {
                         .attr("text-anchor", "middle")
                         .attr("dominant-baseline", "top")
                         .attr("dy", "1em")
+
+
+                    var table = d3.select("#dataTable")
+                        .append("table")
+                        .style("width", "100%")
+                        .append("tbody")
+
+                    var tableHead = table.append("tr")
+                    
+
+                    tableHead.append("th")
+                        .style("width", "20%")
+                        .append("h1")
+                        .text("State")
+                        .style("font-size", "2vw")
+                        .style("padding-left", "-2vw")
+                        .style("font-weight", 500)
+
+                    table.selectAll("s")
+                        .data(data)
+                        .enter()
+                        .append("tr")
+                        .attr("id", (d, i) => "row" + i)
+
+                    forecasters.sort((a, b) => a.forecastIndex - b.forecastIndex)
+                    data.sort((a, b) => b.jhk - a.jhk)
+                    data.forEach((d, i) => {
+                        var rowID = "row" + i
+
+                        d3.select("#" + rowID)
+                            .append("td")
+                            .append("h3")
+                            .text(d.state)
+                            .style("font-size", "1.7vw")
+                            .style("padding-left", "3vw")
+                            .style("font-weight", 500)
+
+
+                    })
+                    forecasters.forEach((d, i) => {
+                        var forecastID = d.shorthand
+                        tableHead.append("th")
+                            .style("width", (80 / forecasters.length) + "%")
+                            .append("a")
+                            .attr("href",forecasters[i].link)
+                            .attr("target","_blank")
+                            .append("h3")
+                            .text(forecasters[i].forecaster)
+                            .style("font-size", "1.5vw")
+                            .style("font-weight", 500)
+
+                        data.forEach((d, i) => {
+                            var rowID = "row" + i
+
+                            d3.select("#" + rowID)
+                                .append("td")
+                                .style("background-color", typeof d[forecastID] == "number" ? color(d[forecastID]) : rCs[ratingTypes.indexOf(d[forecastID])])
+                                .append("h3")
+                                .text(typeof d[forecastID] == "number" ? wf(d[forecastID]) + "%" : d[forecastID].split(" ")[0])
+                                .style("font-size", "1.7vw")
+                                .style("text-align", "center")
+                                .style("font-weight", 500)
+
+                        })
+
+                    })
+
+
                 })
                 //END JSON FUNCTION
             })
