@@ -16,49 +16,57 @@ var svg = d3.select("#usmap").append("svg")
 
 queue()
     .defer(d3.json, "us.json")
-    .defer(d3.json, "house.json")
+    .defer(d3.json, "test.json")
     .defer(d3.csv, "2020-house-input.csv")
     .await(ready);
 
 function ready(error, us, congress, data) {
     if (error) throw error;
-    console.log(data)
+    console.log(congress)
 
-    congress.objects.districts.geometries.forEach((d, i) => {
-        var district_id = d.properties.office_id
-        d.properties.win = +data.filter(d => d.id == district_id).length == 0 ?0: (+data.filter(d => d.id == district_id)[0].win)
-    });
-    console.log(topojson.feature(congress, congress.objects.districts).features)
 
-    svg.append("defs").append("path")
-        .attr("id", "land")
-        .datum(topojson.feature(us, us.objects.land))
-        .attr("d", path);
+    var districts = topojson.feature(congress, congress.objects.collection).features
+    districts.forEach((d, i) => {
+        var state = d.properties.state
+        var districtID = d.properties.geoID.split("")
+        var district = districtID[districtID.length - 2] + districtID[districtID.length - 1]
+        d.districtID = state + district
+        var districtID = d.districtID
+        d.properties.win = data.filter(d => d.id == districtID).length == 0 ? 50 : +data.filter(d => d.id == districtID)[0].win
+    })
 
-    svg.append("clipPath")
-        .attr("id", "clip-land")
-        .append("use")
-        .attr("xlink:href", "#land");
+    function compareStrings(a, b) {
+        // Assuming you want case-insensitive comparison
+        a = a.toLowerCase();
+        b = b.toLowerCase();
+
+        return (a < b) ? -1 : (a > b) ? 1 : 0;
+    }
+
+    districts.sort(function (a, b) {
+        return compareStrings(a.districtID, b.districtID
+            );
+    })
+    console.log(districts)
 
     svg.append("g")
-        .attr("class", "districts")
-        .attr("clip-path", "url(#clip-land)")
+        .attr("class", "district-boundaries")
         .selectAll("path")
-        .data(topojson.feature(congress, congress.objects.districts).features)
+        .data(districts)
         .enter().append("path")
         .attr("d", path)
         .style("fill", (d, i) => color(d.properties.win))
         .append("title")
         .text(function (d) { return d.id; });
 
-    svg.append("path")
-        .attr("class", "district-boundaries")
-        .datum(topojson.mesh(congress, congress.objects.districts, function (a, b) { return a !== b && (a.id / 1000 | 0) === (b.id / 1000 | 0); }))
-        .attr("d", path)
-        ;
-
-    svg.append("path")
+    svg.append("g")
         .attr("class", "state-boundaries")
-        .datum(topojson.mesh(us, us.objects.states, function (a, b) { return a !== b; }))
-        .attr("d", path);
+        .selectAll("path")
+        .data(topojson.feature(us, us.objects.states).features)
+        .enter().append("path")
+        .attr("d", path)
+        .style("")
+
+
+
 }

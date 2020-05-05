@@ -3,77 +3,116 @@
 
 <head>
     <meta charset="utf-8">
-   
-</head>
+    <style>
+        #less {
+            display: none;
+        }
 
-<body>
-    <script src="//d3js.org/d3.v4.min.js"></script>
-    <script src="//d3js.org/queue.v1.min.js"></script>
-    <script src="//d3js.org/topojson.v1.min.js"></script>
-    <div id="usmap"></div>
-    <script>
+        .btn {
+            border: none;
+            color: white;
+            padding: 10px 10px;
+            font-size: 16px;
+            font-family: brandon-grotesque;
+            border-radius: 10px;
+            cursor: pointer;
 
-        var mapWidth = 1000,
-            MapHeight = 600;
-        var color = d3.scaleLinear()
-            .domain([0, 50, 100])
-            .range(["#0091FF", "white", "#FF6060"])
-        var projection = d3.geoAlbersUsa()
-            .scale(1000)
-            .translate([mapWidth / 2,( MapHeight / 2)+50]);
+        }
 
-        var path = d3.geoPath()
-            .projection(projection);
+        .default {
+            background-color: #e7e7e7;
+            color: black;
+        }
 
-        var svg = d3.select("#usmap").append("svg")
-            .attr("viewBox","0 0 1000 600")
+        .default:hover {
+            background: #ddd;
+        }
 
-        queue()
-            .defer(d3.json, "us.json")
-            .defer(d3.json, "house.json")
-            .await(ready);
-
-        function ready(error, us, congress) {
-            if (error) throw error;
-            console.log(congress.objects.districts.geometries)
-            
-            congress.objects.districts.geometries.forEach((d,i) => {
-                d.district = d.properties.office_id
-            });
-            
-            svg.append("defs").append("path")
-                .attr("id", "land")
-                .datum(topojson.feature(us, us.objects.land))
-                .attr("d", path);
-
-            svg.append("clipPath")
-                .attr("id", "clip-land")
-                .append("use")
-                .attr("xlink:href", "#land");
-
-            svg.append("g")
-                .attr("class", "districts")
-                .attr("clip-path", "url(#clip-land)")
-                .selectAll("path")
-                .data(topojson.feature(congress, congress.objects.districts).features)
-                .enter().append("path")
-                .attr("d", path)
-                .style("fill", (d, i) =>color(i/5))
-                .append("title")
-                .text(function (d) { return d.id; });
-
-            svg.append("path")
-                .attr("class", "district-boundaries")
-                .datum(topojson.mesh(congress, congress.objects.districts, function (a, b) { return a !== b && (a.id / 1000 | 0) === (b.id / 1000 | 0); }))
-                .attr("d", path);
-
-            svg.append("path")
-                .attr("class", "state-boundaries")
-                .datum(topojson.mesh(us, us.objects.states, function (a, b) { return a !== b; }))
-                .attr("d", path);
+        path {
+            stroke-linejoin: round;
+            stroke-linecap: round;
         }
 
 
+
+        .districts {
+            pointer-events: none;
+            fill: black;
+            stroke: #fff;
+            stroke-width: .5px;
+        }
+
+        .state-boundaries {
+            pointer-events: none;
+            fill: none;
+            stroke: white;
+            stroke-width: 1.5px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <link rel="stylesheet" href="https://use.typekit.net/htk2wjy.css">
+    <link rel="stylesheet" href="//projects.jhkforecasts.com/presidential-forecast/index.css">
+    <script src="//d3js.org/d3.v4.min.js"></script>
+    <script src="//d3js.org/queue.v1.min.js"></script>
+    <script src="//d3js.org/topojson.v1.min.js"></script>
+    <div id="boxmap"></div>
+    <script>
+        var color = d3.scaleLinear()
+            .domain([0, 50, 100])
+            .range(["#0091FF", "white", "#FF6060"])
+        d3.csv("Book1.csv", data => {
+            d3.csv("2020-house-input.csv", input => {
+                console.log(data)
+                var keys = data.columns
+                console.log(keys)
+                var grid = []
+                data.forEach((d, i) => {
+                    var rowNumber = +d.index
+                    var row = d
+                    keys.forEach((d, i) => {
+                        var district = row[i]
+                        var columnNumber = i
+                        grid.push({ district: district, row: rowNumber, column: columnNumber })
+                    })
+                })
+                console.log(grid)
+
+                grid.forEach((d, i) => {
+                    var district = d.district
+                    d.win = input.filter(d => d.id == district).length == 0 ? 50 : +input.filter(d => d.id == district)[0].win
+                })
+
+                var svg = d3.select("#boxmap").append("svg")
+                    .attr("viewBox", "0 0 1000 500")
+
+                svg.selectAll("grid")
+                    .data(grid)
+                    .enter()
+                    .append("rect")
+                    .attr("x", d => (+d.column) * 20)
+                    .attr("y", d => (+d.row) * 20)
+                    .attr("width", 20)
+                    .attr("height", 20)
+                    .attr("stroke", d => d.district == "" || d.district == undefined ? "none" : "white")
+                    .attr("fill", d => d.district == "" || d.district == undefined ? "none" : color(d.win))
+
+                svg.selectAll("grid")
+                    .data(grid)
+                    .enter()
+                    .append("text")
+                    .text(d => d.district)
+                    .attr("x", d => (+d.column) * 20 + 10)
+                    .attr("y", d => (+d.row) * 20 + 10)
+                    .attr("dominant-baseline", "central")
+                    .attr("text-anchor", "middle")
+                    .attr("fill", "black")
+                    .style("font-family", "sf-mono")
+                    .attr("font-size", 6.5)
+            })
+        })
     </script>
 
 </html>

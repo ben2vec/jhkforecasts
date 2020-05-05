@@ -1,436 +1,436 @@
-﻿State,abbrev,Seat,id,incumbent,incumbentParty,pvi,win
-Alaska,AK,1,AK00,"Young, Don",(R),16.74,75.670
-Alabama,AL,1,AL01,"Byrne, Bradley",(R),32.23,96.424
-Alabama,AL,2,AL02,"Roby, Martha",(R),32.89,96.779
-Alabama,AL,3,AL03,"Rogers, Mike",(R),34.83,97.659
-Alabama,AL,4,AL04,"Aderholt, Rob",(R),64.99,99.998
-Alabama,AL,5,AL05,"Brooks, Mo",(R),33.8,97.221
-Alabama,AL,6,AL06,"Palmer, Gary",(R),47.53,99.810
-Alabama,AL,7,AL07,"Sewell, Terri",(D),-39.33,0.047
-Arkansas,AR,1,AR01,"Crawford, Rick",(R),39.61,99.008
-Arkansas,AR,2,AR02,"Hill, French",(R),13.72,68.439
-Arkansas,AR,3,AR03,"Womack, Steve",(R),36.09,98.114
-Arkansas,AR,4,AR04,"Westerman, Bruce",(R),37.21,98.453
-Arizona,AZ,1,AZ01,"O'Halleran, Tom",(D),2.83,38.291
-Arizona,AZ,2,AZ02,"Kirkpatrick, Ann",(D),-1.41,27.402
-Arizona,AZ,3,AZ03,"Grijalva, Raul",(D),-24.5,1.222
-Arizona,AZ,4,AZ04,"Gosar, Paul",(R),43.25,99.519
-Arizona,AZ,5,AZ05,"Biggs, Andy",(R),25.45,90.622
-Arizona,AZ,6,AZ06,"Schweikert, David",(R),15.42,72.622
-Arizona,AZ,7,AZ07,"Gallego, Ruben",(D),-46.25,0.007
-Arizona,AZ,8,AZ08,"Lesko, Debbie",(R),22.64,86.803
-Arizona,AZ,9,AZ09,"Stanton, Greg",(D),-12.66,8.012
-California,CA,1,CA01,"LaMalfa, Doug",(R),20.59,83.415
-California,CA,2,CA02,"Huffman, Jared",(D),-43.59,0.015
-California,CA,3,CA03,"Garamendi, John",(D),-9.31,12.201
-California,CA,4,CA04,"McClintock, Tom",(R),17.35,77.013
-California,CA,5,CA05,"Thompson, Mike",(D),-42.26,0.022
-California,CA,6,CA06,"Matsui, Doris",(D),-41.88,0.024
-California,CA,7,CA07,"Bera, Ami",(D),-6.04,17.582
-California,CA,8,CA08,"Cook, Paul",(R),17.26,76.818
-California,CA,9,CA09,"McNerney, Jerry",(D),-12.6,8.076
-California,CA,10,CA10,"Harder, Josh",(D),0.72,32.687
-California,CA,11,CA11,"DeSaulnier, Mark",(D),-43.3,0.016
-California,CA,12,CA12,"Pelosi, Nancy",(D),-71.54,0.000
-California,CA,13,CA13,"Lee, Barbara",(D),-77.72,0.000
-California,CA,14,CA14,"Speier, Jackie",(D),-53.6,0.001
-California,CA,15,CA15,"Swalwell, Eric",(D),-40.81,0.032
-California,CA,16,CA16,"Costa, Jim",(D),-15.18,5.656
-California,CA,17,CA17,"Khanna, Ro",(D),-47.66,0.005
-California,CA,18,CA18,"Eshoo, Anna",(D),-46.32,0.007
-California,CA,19,CA19,"Lofgren, Zoe",(D),-45.33,0.009
-California,CA,20,CA20,"Panetta, Jimmy",(D),-44.55,0.012
-California,CA,21,CA21,"Cox, TJ",(D),-6.42,16.889
-California,CA,22,CA22,"Nunes, Devin",(R),13.05,66.718
-California,CA,23,CA23,"McCarthy, Kevin",(R),28.19,93.493
-California,CA,24,CA24,"Carbajal, Salud",(D),-14.12,6.570
-California,CA,25,CA25,VACANT ,(D),-2.25,25.440
-California,CA,26,CA26,"Brownley, Julia",(D),-17.11,4.252
-California,CA,27,CA27,"Chu, Judy",(D),-34.32,0.158
-California,CA,28,CA28,"Schiff, Adam",(D),-47.07,0.006
-California,CA,29,CA29,"Cardenas, Tony",(D),-56.32,0.000
-California,CA,30,CA30,"Sherman, Brad",(D),-39.17,0.049
-California,CA,31,CA31,"Aguilar, Pete",(D),-15.34,5.528
-California,CA,32,CA32,"Napolitano, Grace",(D),-33.66,0.184
-California,CA,33,CA33,"Lieu, Ted",(D),-34.96,0.136
-California,CA,34,CA34,"Gomez, Jimmy",(D),-70.19,0.000
-California,CA,35,CA35,"Torres, Norma",(D),-35.57,0.118
-California,CA,36,CA36,"Ruiz, Raul",(D),-6.8,16.214
-California,CA,37,CA37,"Bass, Karen",(D),-72.11,0.000
-California,CA,38,CA38,"Sanchez, Linda",(D),-34.03,0.169
-California,CA,39,CA39,"Cisneros, Gil",(D),-1.49,27.212
-California,CA,40,CA40,"Roybal-Allard, Lucille",(D),-66.71,0.000
-California,CA,41,CA41,"Takano, Mark",(D),-24.09,1.319
-California,CA,42,CA42,"Calvert, Ken",(R),16.84,75.893
-California,CA,43,CA43,"Waters, Maxine",(D),-55.21,0.000
-California,CA,44,CA44,"Barragan, Nanette",(D),-68.49,0.000
-California,CA,45,CA45,"Porter, Katie",(D),0.94,33.256
-California,CA,46,CA46,"Correa, Lou",(D),-32.82,0.223
-California,CA,47,CA47,"Lowenthal, Alan",(D),-25.89,0.940
-California,CA,48,CA48,"Rouda, Harley",(D),2.25,36.720
-California,CA,49,CA49,"Levin, Mike",(D),-3.49,22.684
-California,CA,50,CA50,"Hunter, Duncan",(R),16.53,75.197
-California,CA,51,CA51,"Vargas, Juan",(D),-41.94,0.024
-California,CA,52,CA52,"Peters, Scott",(D),-18.22,3.582
-California,CA,53,CA53,"Davis, Susan",(D),-30.67,0.356
-Colorado,CO,1,CO01,"DeGette, Diana",(D),-42.51,0.020
-Colorado,CO,2,CO02,"Neguse, Joe",(D),-18.4,3.482
-Colorado,CO,3,CO03,"Tipton, Scott",(R),14.4,70.145
-Colorado,CO,4,CO04,"Buck, Ken",(R),26.38,91.686
-Colorado,CO,5,CO05,"Lamborn, Doug",(R),26.02,91.286
-Colorado,CO,6,CO06,"Crow, Jason",(D),-5.01,19.549
-Colorado,CO,7,CO07,"Perlmutter, Ed",(D),-11.95,8.794
-Connecticut,CT,1,CT01,"Larson, John",(D),-21.07,2.248
-Connecticut,CT,2,CT02,"Courtney, Joe",(D),-6.85,16.126
-Connecticut,CT,3,CT03,"DeLauro, Rosa",(D),-16.46,4.690
-Connecticut,CT,4,CT04,"Himes, Jim",(D),-17.4,4.068
-Connecticut,CT,5,CT05,"Hayes, Jahana",(D),-2.59,24.667
-Delaware,DE,1,DE00,"Blunt Rochester, Lisa",(D),-13.2,7.453
-Florida,FL,1,FL01,"Gaetz, Matt",(R),41.88,99.364
-Florida,FL,2,FL02,"Dunn, Neal",(R),39.12,98.911
-Florida,FL,3,FL03,"Yoho, Ted",(R),19.86,82.084
-Florida,FL,4,FL04,"Rutherford, John",(R),34.2,97.398
-Florida,FL,5,FL05,"Lawson, Al",(D),-23.91,1.363
-Florida,FL,6,FL06,"Waltz, Michael",(R),18.77,79.975
-Florida,FL,7,FL07,"Murphy, Stephanie",(D),-4.77,20.025
-Florida,FL,8,FL08,"Posey, Bill",(R),24.4,89.304
-Florida,FL,9,FL09,"Soto, Darren",(D),-9.56,11.843
-Florida,FL,10,FL10,"Demings, Val",(D),-24.16,1.302
-Florida,FL,11,FL11,"Webster, Dan",(R),34.64,97.583
-Florida,FL,12,FL12,"Bilirakis, Gus",(R),21.66,85.248
-Florida,FL,13,FL13,"Crist, Charlie",(D),-3.35,22.987
-Florida,FL,14,FL14,"Castor, Kathy",(D),-15.74,5.216
-Florida,FL,15,FL15,"Spano, Ross",(R),12.59,65.516
-Florida,FL,16,FL16,"Buchanan, Vern",(R),14.24,69.747
-Florida,FL,17,FL17,"Steube, Greg",(R),29.53,94.622
-Florida,FL,18,FL18,"Mast, Brian",(R),12.7,65.805
-Florida,FL,19,FL19,"Rooney, Francis",(R),27.02,92.364
-Florida,FL,20,FL20,"Hastings, Alcee",(D),-60.15,0.000
-Florida,FL,21,FL21,"Frankel, Lois",(D),-17.42,4.055
-Florida,FL,22,FL22,"Deutch, Ted",(D),-13.81,6.858
-Florida,FL,23,FL23,"Wasserman Schultz, Debbie",(D),-20.52,2.467
-Florida,FL,24,FL24,"Wilson, Frederica",(D),-65.56,0.000
-Florida,FL,25,FL25,"Diaz-Balart, Mario",(R),12.54,65.384
-Florida,FL,26,FL26,"Mucarsel-Powell, Debbie",(D),-7.24,15.454
-Florida,FL,27,FL27,"Shalala, Donna ",(D),-10,11.232
-Georgia,GA,1,GA01,"Carter, Buddy",(R),19.44,81.288
-Georgia,GA,2,GA02,"Bishop, Sanford",(D),-10.36,10.749
-Georgia,GA,3,GA03,"Ferguson, Drew",(R),35.72,97.989
-Georgia,GA,4,GA04,"Johnson, Hank",(D),-49.74,0.003
-Georgia,GA,5,GA05,"Lewis, John",(D),-70.24,0.000
-Georgia,GA,6,GA06,"McBath, Lucy",(D),7.13,50.370
-Georgia,GA,7,GA07,"Woodall, Rob",(R),10.23,59.123
-Georgia,GA,8,GA08,"Scott, Austin",(R),30.7,95.476
-Georgia,GA,9,GA09,"Collins, Doug",(R),62.79,99.997
-Georgia,GA,10,GA10,"Hice, Jody",(R),29.89,94.898
-Georgia,GA,11,GA11,"Loudermilk, Barry",(R),29.85,94.868
-Georgia,GA,12,GA12,"Allen, Rick",(R),20.8,83.786
-Georgia,GA,13,GA13,"Scott, David",(D),-42.05,0.023
-Georgia,GA,14,GA14,"Graves, Tom",(R),56.66,99.981
-Hawaii,HI,1,HI01,"Case, Ed",(D),-34.43,0.154
-Hawaii,HI,2,HI02,"Gabbard, Tulsi",(D),-35.76,0.113
-Iowa,IA,1,IA01,"Finkenauer, Abby",(D),3.43,39.936
-Iowa,IA,2,IA02,"Loebsack, David",(D),1.72,35.303
-Iowa,IA,3,IA03,"Axne, Cindy",(D),5.25,45.026
-Iowa,IA,4,IA04,"King, Steve",(R),22.47,86.542
-Idaho,ID,1,ID01,"Fulcher, Russ",(R),40.08,99.093
-Idaho,ID,2,ID02,"Simpson, Mike",(R),28.54,93.805
-Illinois,IL,1,IL01,"Rush, Bobby",(D),-50.18,0.002
-Illinois,IL,2,IL02,"Kelly, Robin",(D),-55.96,0.000
-Illinois,IL,3,IL03,"Lipinski, Dan",(D),-20.41,2.512
-Illinois,IL,4,IL04,"Garcia, Chuy",(D),-65.45,0.000
-Illinois,IL,5,IL05,"Quigley, Mike",(D),-43.17,0.017
-Illinois,IL,6,IL06,"Casten, Sean",(D),-1.31,27.640
-Illinois,IL,7,IL07,"Davis, Danny",(D),-72.82,0.000
-Illinois,IL,8,IL08,"Krishnamoorthi, Raja",(D),-20.04,2.672
-Illinois,IL,9,IL09,"Schakowsky, Jan",(D),-40.16,0.038
-Illinois,IL,10,IL10,"Schneider, Brad",(D),-24.41,1.243
-Illinois,IL,11,IL11,"Foster, Bill",(D),-19.9,2.734
-Illinois,IL,12,IL12,"Bost, Mike",(R),14.81,71.153
-Illinois,IL,13,IL13,"Davis, Rodney",(R),7.77,52.193
-Illinois,IL,14,IL14,"Underwood, Lauren",(D),6.07,47.352
-Illinois,IL,15,IL15,"Shimkus, John",(R),47.47,99.808
-Illinois,IL,16,IL16,"Kinzinger, Adam",(R),20.78,83.751
-Illinois,IL,17,IL17,"Bustos, Cheri",(D),-4.31,20.959
-Illinois,IL,18,IL18,"LaHood, Darin",(R),33.26,96.965
-Indiana,IN,1,IN01,"Visclosky, Pete",(D),-14.77,5.997
-Indiana,IN,2,IN02,"Walorski, Jackie",(R),22.43,86.480
-Indiana,IN,3,IN03,"Banks, Jim",(R),36.73,98.315
-Indiana,IN,4,IN04,"Baird, Jim",(R),35.52,97.918
-Indiana,IN,5,IN05,"Brooks, Susan",(R),17.04,76.336
-Indiana,IN,6,IN06,"Pence, Greg",(R),39.99,99.077
-Indiana,IN,7,IN07,"Carson, Andre",(D),-21.12,2.229
-Indiana,IN,8,IN08,"Bucshon, Larry",(R),34.97,97.713
-Indiana,IN,9,IN09,"Hollingsworth, Trey",(R),25.89,91.138
-Kansas,KS,1,KS01,"Marshall, Roger",(R),46.37,99.754
-Kansas,KS,2,KS02,"Watkins, Steve",(R),16.83,75.870
-Kansas,KS,3,KS03,"Davids, Sharice",(D),1.55,34.853
-Kansas,KS,4,KS04,"Estes, Ron",(R),28.74,93.977
-Kentucky,KY,1,KY01,"Comer, James",(R),47.89,99.825
-Kentucky,KY,2,KY02,"Guthrie, Brett",(R),41.67,99.336
-Kentucky,KY,3,KY03,"Yarmuth, John",(D),-13.71,6.953
-Kentucky,KY,4,KY04,"Massie, Thomas",(R),36.91,98.368
-Kentucky,KY,5,KY05,"Rogers, Hal",(R),64.04,99.998
-Kentucky,KY,6,KY06,"Barr, Andy",(R),15.73,73.355
-Louisiana,LA,1,LA01,"Scalise, Steve",(R),47.3,99.800
-Louisiana,LA,2,LA02,"Richmond, Cedric",(D),-50.27,0.002
-Louisiana,LA,3,LA03,"Higgins, Clay",(R),41.87,99.363
-Louisiana,LA,4,LA04,"Johnson, Mike",(R),29.74,94.784
-Louisiana,LA,5,LA05,"Abraham, Ralph",(R),35.15,97.782
-Louisiana,LA,6,LA06,"Graves, Garret",(R),40.19,99.112
-Massachusetts,MA,1,MA01,"Neal, Richard",(D),-19.2,3.064
-Massachusetts,MA,2,MA02,"McGovern, Jim",(D),-19.68,2.834
-Massachusetts,MA,3,MA03,"Trahan, Lori",(D),-19.58,2.881
-Massachusetts,MA,4,MA04,"Kennedy, Joe",(D),-20.94,2.298
-Massachusetts,MA,5,MA05,"Clark, Katherine",(D),-40.71,0.033
-Massachusetts,MA,6,MA06,"Moulton, Seth",(D),-17.73,3.866
-Massachusetts,MA,7,MA07,"Pressley, Ayanna",(D),-69.09,0.000
-Massachusetts,MA,8,MA08,"Lynch, Stephen",(D),-22.7,1.694
-Massachusetts,MA,9,MA09,"Keating, Bill",(D),-9.07,12.551
-Maryland,MD,1,MD01,"Harris, Andy",(R),30.23,95.147
-Maryland,MD,2,MD02,"Ruppersberger, Dutch",(D),-23.81,1.388
-Maryland,MD,3,MD03,"Sarbanes, John",(D),-28.7,0.539
-Maryland,MD,4,MD04,"Brown, Anthony",(D),-53.46,0.001
-Maryland,MD,5,MD05,"Hoyer, Steny",(D),-31.3,0.311
-Maryland,MD,6,MD06,"Trone, David",(D),-12.37,8.324
-Maryland,MD,7,MD07,VACANT ,(D),-51.08,0.002
-Maryland,MD,8,MD08,"Raskin, Jamie",(D),-30.41,0.377
-Maine,ME,1,ME01,"Pingree, Chellie",(D),-14.68,6.074
-Maine,ME,2,ME02,"Golden, Jared",(D),9.16,56.131
-Michigan,MI,1,MI01,"Bergman, Jack",(R),21.62,85.182
-Michigan,MI,2,MI02,"Huizenga, Bill",(R),19.77,81.915
-Michigan,MI,3,MI03,"Amash, Justin",(I),13.96,69.046
-Michigan,MI,4,MI04,"Moolenaar, John",(R),27.47,92.815
-Michigan,MI,5,MI05,"Kildee, Dan",(D),-7.61,14.834
-Michigan,MI,6,MI06,"Upton, Fred",(R),10.76,60.587
-Michigan,MI,7,MI07,"Walberg, Tim",(R),17.02,76.292
-Michigan,MI,8,MI08,"Slotkin, Elissa",(D),7.39,51.111
-Michigan,MI,9,MI09,"Levin, Andy",(D),-8.85,12.879
-Michigan,MI,10,MI10,"Mitchell, Paul",(R),32.3,96.463
-Michigan,MI,11,MI11,"Stevens, Haley",(D),5.4,45.451
-Michigan,MI,12,MI12,"Dingell, Debbie",(D),-26.65,0.812
-Michigan,MI,13,MI13,"Tlaib, Rashida",(D),-59.41,0.000
-Michigan,MI,14,MI14,"Lawrence, Brenda",(D),-57.63,0.000
-Minnesota,MN,1,MN01,"Hagedorn, Jim",(R),13.15,66.977
-Minnesota,MN,2,MN02,"Craig, Angie",(D),3.29,39.550
-Minnesota,MN,3,MN03,"Philips, Dean",(D),-4.91,19.746
-Minnesota,MN,4,MN04,"McCollum, Betty",(D),-27.9,0.634
-Minnesota,MN,5,MN05,"Omar, Ilhan",(D),-50.73,0.002
-Minnesota,MN,6,MN06,"Emmer, Tom",(R),27.84,93.170
-Minnesota,MN,7,MN07,"Peterson, Collin",(D),22.4,86.433
-Minnesota,MN,8,MN08,"Stauber, Pete",(R),14.69,70.860
-Missouri,MO,1,MO01,"Clay, Lacy",(D),-55.81,0.000
-Missouri,MO,2,MO02,"Wagner, Ann",(R),13.15,66.977
-Missouri,MO,3,MO03,"Luetkemeyer, Blaine",(R),39.88,99.058
-Missouri,MO,4,MO04,"Hartzler, Vicki",(R),37.94,98.645
-Missouri,MO,5,MO05,"Cleaver, Emanuel",(D),-13.65,7.011
-Missouri,MO,6,MO06,"Graves, Sam",(R),35.3,97.838
-Missouri,MO,7,MO07,"Long, Billy",(R),46.21,99.745
-Missouri,MO,8,MO08,"Smith, Jason",(R),54.75,99.968
-Mississippi,MS,1,MS01,"Kelly, Trent",(R),36.87,98.356
-Mississippi,MS,2,MS02,"Thompson, Bennie",(D),-26.68,0.807
-Mississippi,MS,3,MS03,"Guest, Michael ",(R),28.7,93.943
-Mississippi,MS,4,MS04,"Palazzo, Steven",(R),43.81,99.572
-Montana,MT,1,MT00,"Gianforte, Greg",(R),19.34,81.096
-North Carolina,NC,1,NC01,"Butterfield, G.K.",(D),-33.57,0.188
-North Carolina,NC,2,NC02,"Holding, George",(R),12.91,66.354
-North Carolina,NC,3,NC03,"Murphy, Greg",(R),25.43,90.598
-North Carolina,NC,4,NC04,"Price, David",(D),-37.32,0.077
-North Carolina,NC,5,NC05,"Foxx, Virginia",(R),20.41,83.093
-North Carolina,NC,6,NC06,"Walker, Mark",(R),18.22,78.856
-North Carolina,NC,7,NC07,"Rouzer, David",(R),19.93,82.215
-North Carolina,NC,8,NC08,"Hudson, Richard",(R),17.44,77.208
-North Carolina,NC,9,NC09,"Bishop, Dan",(R),12.44,65.120
-North Carolina,NC,10,NC10,"McHenry, Patrick",(R),26.38,91.686
-North Carolina,NC,11,NC11,"Meadows, Mark",(R),29.92,94.920
-North Carolina,NC,12,NC12,"Adams, Alma",(D),-37.28,0.078
-North Carolina,NC,13,NC13,"Budd, Ted",(R),12.35,64.882
-North Dakota,ND,1,ND00,"Armstrong, Kelly",(R),35.43,97.886
-Nebraska,NE,1,NE01,"Fortenberry, Jeff",(R),24.89,89.935
-Nebraska,NE,2,NE02,"Bacon, Don",(R),6.86,49.601
-Nebraska,NE,3,NE03,"Smith, Adrian",(R),57.43,99.984
-New Hampshire,NH,1,NH01,"Pappas, Chris",(D),2.45,37.259
-New Hampshire,NH,2,NH02,"Kuster, Annie",(D),-2.02,25.970
-New Jersey,NJ,1,NJ01,"Norcross, Donald",(D),-22.96,1.618
-New Jersey,NJ,2,NJ02,"Van Drew, Jeff",(D),3.87,41.155
-New Jersey,NJ,3,NJ03,"Kim, Andy",(D),7.1,50.285
-New Jersey,NJ,4,NJ04,"Smith, Chris",(R),17.75,77.871
-New Jersey,NJ,5,NJ05,"Gottheimer, Josh",(D),1.08,33.620
-New Jersey,NJ,6,NJ06,"Pallone, Frank",(D),-15.72,5.231
-New Jersey,NJ,7,NJ07,"Malinowski, Tom",(D),2.69,37.910
-New Jersey,NJ,8,NJ08,"Sires, Albio",(D),-51.86,0.001
-New Jersey,NJ,9,NJ09,"Pascrell, Bill",(D),-30.67,0.356
-New Jersey,NJ,10,NJ10,"Payne, Donald",(D),-70.1,0.000
-New Jersey,NJ,11,NJ11,"Sherrill, Mikie",(D),0.94,33.256
-New Jersey,NJ,12,NJ12,"Watson Coleman, Bonnie",(D),-30.32,0.384
-New Mexico,NM,1,NM01,"Haaland, Deb",(D),-14.08,6.607
-New Mexico,NM,2,NM02,"Torres Smalls, Xochitl",(D),10.46,59.760
-New Mexico,NM,3,NM03,"Lujan, Ben",(D),-16.37,4.753
-Nevada,NV,1,NV01,"Titus, Dina",(D),-27.08,0.746
-Nevada,NV,2,NV02,"Amodei, Mark",(R),17.34,76.992
-Nevada,NV,3,NV03,"Lee, Susie ",(D),2.02,36.103
-Nevada,NV,4,NV04,"Horsford, Stephen ",(D),-2.24,25.463
-New York,NY,1,NY01,"Zeldin, Lee",(R),12.79,66.041
-New York,NY,2,NY02,"King, Peter",(R),11.11,61.546
-New York,NY,3,NY03,"Suozzi, Tom",(D),-5.09,19.391
-New York,NY,4,NY04,"Rice, Kathleen",(D),-9.69,11.660
-New York,NY,5,NY05,"Meeks, Gregory",(D),-71.51,0.000
-New York,NY,6,NY06,"Meng, Grace",(D),-31.04,0.329
-New York,NY,7,NY07,"Velazquez, Nydia",(D),-74.26,0.000
-New York,NY,8,NY08,"Jeffries, Hakeem",(D),-69.54,0.000
-New York,NY,9,NY09,"Clarke, Yvette",(D),-68.11,0.000
-New York,NY,10,NY10,"Nadler, Jerrold",(D),-55.62,0.000
-New York,NY,11,NY11,"Rose, Max",(D),7.73,52.079
-New York,NY,12,NY12,"Maloney, Carolyn",(D),-65.48,0.000
-New York,NY,13,NY13,"Espaillat, Adriano",(D),-83.67,0.000
-New York,NY,14,NY14,"Ocasio-Cortez, Alexandria",(D),-56.13,0.000
-New York,NY,15,NY15,"Serrano, Jose",(D),-86.08,0.000
-New York,NY,16,NY16,"Engel, Eliot",(D),-49.76,0.003
-New York,NY,17,NY17,"Lowey, Nita",(D),-17.37,4.087
-New York,NY,18,NY18,"Maloney, Sean",(D),1.64,35.091
-New York,NY,19,NY19,"Delgado, Antonio",(D),6.13,47.522
-New York,NY,20,NY20,"Tonko, Paul",(D),-15.81,5.163
-New York,NY,21,NY21,"Stefanik, Elise",(R),16.07,74.146
-New York,NY,22,NY22,"Brindisi, Anthony",(D),13.03,66.666
-New York,NY,23,NY23,"Reed, Tom",(R),15.78,73.472
-New York,NY,24,NY24,"Katko, John",(R),2.04,36.156
-New York,NY,25,NY25,"Morelle, Joe",(D),-12.95,7.708
-New York,NY,26,NY26,"Higgins, Brian",(D),-24.5,1.222
-New York,NY,27,NY27,VACANT ,(R),20.29,82.876
-Ohio,OH,1,OH01,"Chabot, Steve",(R),10.12,58.818
-Ohio,OH,2,OH02,"Wenstrup, Brad",(R),19.88,82.121
-Ohio,OH,3,OH03,"Beatty, Joyce",(D),-37.08,0.082
-Ohio,OH,4,OH04,"Jordan, Jim",(R),34.94,97.702
-Ohio,OH,5,OH05,"Latta, Bob",(R),28.4,93.681
-Ohio,OH,6,OH06,"Johnson, Bill",(R),42.59,99.449
-Ohio,OH,7,OH07,"Gibbs, Bob",(R),28.25,93.547
-Ohio,OH,8,OH08,"Davidson, Warren",(R),37.41,98.508
-Ohio,OH,9,OH09,"Kaptur, Marcy",(D),-23.44,1.484
-Ohio,OH,10,OH10,"Turner, Michael",(R),12.91,66.354
-Ohio,OH,11,OH11,"Fudge, Marcia",(D),-59.84,0.000
-Ohio,OH,12,OH12,"Balderson, Troy",(R),13.32,67.416
-Ohio,OH,13,OH13,"Ryan, Tim",(D),-9.02,12.625
-Ohio,OH,14,OH14,"Joyce, David",(R),14.61,70.663
-Ohio,OH,15,OH15,"Stivers, Steve",(R),19.61,81.613
-Ohio,OH,16,OH16,"Gonzalez, Anthony",(R),19.09,80.609
-Oklahoma,OK,1,OK01,"Hern, Kevin",(R),30.19,95.118
-Oklahoma,OK,2,OK02,"Mullin, Markwayne",(R),48.32,99.842
-Oklahoma,OK,3,OK03,"Lucas, Frank",(R),54.94,99.969
-Oklahoma,OK,4,OK04,"Cole, Tom",(R),39.09,98.905
-Oklahoma,OK,5,OK05,"Horn, Kendra",(D),13.69,68.362
-Oregon,OR,1,OR01,"Bonamici, Suzanne",(D),-20.66,2.409
-Oregon,OR,2,OR02,"Walden, Greg",(R),22.99,87.330
-Oregon,OR,3,OR03,"Blumenauer, Earl",(D),-45.26,0.009
-Oregon,OR,4,OR04,"DeFazio, Peter",(D),-1.03,28.313
-Oregon,OR,5,OR05,"Schrader, Kurt",(D),-2.59,24.667
-Pennsylvania,PA,1,PA01,"Fitzpatrick, Brian",(R),3.62,40.461
-Pennsylvania,PA,2,PA02,"Boyle, Brendan",(D),-47.56,0.005
-Pennsylvania,PA,3,PA03,"Evans, Dwight",(D),-80.56,0.000
-Pennsylvania,PA,4,PA04,"Dean, Madeleine",(D),-16.81,4.450
-Pennsylvania,PA,5,PA05,"Gay Scanlon, Mary ",(D),-24.58,1.204
-Pennsylvania,PA,6,PA06,"Houlahan, Chrissy",(D),-7.01,15.848
-Pennsylvania,PA,7,PA07,"Wild, Susan",(D),-0.13,30.528
-Pennsylvania,PA,8,PA08,"Cartwright, Matt",(D),6.01,47.181
-Pennsylvania,PA,9,PA09,"Meuser, Dan",(R),32.08,96.339
-Pennsylvania,PA,10,PA10,"Perry, Scott",(R),11.01,61.273
-Pennsylvania,PA,11,PA11,"Smucker, Lloyd",(R),27.33,92.677
-Pennsylvania,PA,12,PA12,"Keller, Fred",(R),38.14,98.694
-Pennsylvania,PA,13,PA13,"Joyce, John",(R),47.4,99.805
-Pennsylvania,PA,14,PA14,"Reschenthaler, Guy",(R),28.14,93.448
-Pennsylvania,PA,15,PA15,"Thompson, Glenn",(R),43.61,99.554
-Pennsylvania,PA,16,PA16,"Kelly, Mike",(R),18,78.398
-Pennsylvania,PA,17,PA17,"Lamb, Conor",(D),2.49,37.367
-Pennsylvania,PA,18,PA18,"Doyle, Mike",(D),-25.09,1.095
-Rhode Island,RI,1,RI01,"Cicilline, David",(D),-24.64,1.191
-Rhode Island,RI,2,RI02,"Langevin, Jim",(D),-10.34,10.775
-South Carolina,SC,1,SC01,"Cunningham, Joe",(D),13.48,67.827
-South Carolina,SC,2,SC02,"Wilson, Joe",(R),20.96,84.065
-South Carolina,SC,3,SC03,"Duncan, Jeff",(R),41.13,99.261
-South Carolina,SC,4,SC04,"Timmons, William",(R),29.15,94.319
-South Carolina,SC,5,SC05,"Norman, Ralph",(R),21.13,84.358
-South Carolina,SC,6,SC06,"Clyburn, Jim",(D),-34.52,0.151
-South Carolina,SC,7,SC07,"Rice, Tom",(R),22.34,86.340
-South Dakota,SD,1,SD00,"Johnson, Dusty",(R),31.2,95.806
-Tennessee,TN,1,TN01,"Roe, Phil",(R),59.93,99.992
-Tennessee,TN,2,TN02,"Burchett, Tim",(R),38.98,98.882
-Tennessee,TN,3,TN03,"Fleischmann, Chuck",(R),36.93,98.374
-Tennessee,TN,4,TN04,"DesJarlais, Scott",(R),41.11,99.258
-Tennessee,TN,5,TN05,"Cooper, Jim",(D),-18.8,3.267
-Tennessee,TN,6,TN06,"Rose, John",(R),49.89,99.891
-Tennessee,TN,7,TN07,"Green, Mark",(R),41.5,99.314
-Tennessee,TN,8,TN08,"Kustoff, David",(R),40.16,99.107
-Tennessee,TN,9,TN09,"Cohen, Steve",(D),-54.38,0.001
-Texas,TX,1,TX01,"Gohmert, Louie",(R),50.55,99.907
-Texas,TX,2,TX02,"Crenshaw, Dan",(R),14.73,70.957
-Texas,TX,3,TX03,"Taylor, Van",(R),18.76,79.955
-Texas,TX,4,TX04,"Ratcliffe, John",(R),57.09,99.983
-Texas,TX,5,TX05,"Gooden, Lance",(R),31.72,96.128
-Texas,TX,6,TX06,"Wright, Ron",(R),15.6,73.049
-Texas,TX,7,TX07,"Fletcher, Lizzie",(D),3.99,41.488
-Texas,TX,8,TX08,"Brady, Kevin",(R),53.59,99.956
-Texas,TX,9,TX09,"Green, Al",(D),-58.55,0.000
-Texas,TX,10,TX10,"McCaul, Michael",(R),12.98,66.536
-Texas,TX,11,TX11,"Conaway, Michael",(R),63.92,99.998
-Texas,TX,12,TX12,"Granger, Kay",(R),34.95,97.706
-Texas,TX,13,TX13,"Thornberry, Mac",(R),67.58,99.999
-Texas,TX,14,TX14,"Weber, Randy",(R),24.06,88.850
-Texas,TX,15,TX15,"Gonzalez, Vicente",(D),-13.65,7.011
-Texas,TX,16,TX16,"Escobar, Veronica",(D),-35.61,0.117
-Texas,TX,17,TX17,"Flores, Bill",(R),21.65,85.232
-Texas,TX,18,TX18,"Jackson Lee, Sheila",(D),-51.35,0.002
-Texas,TX,19,TX19,"Arrington, Jodey",(R),53.61,99.956
-Texas,TX,20,TX20,"Castro, Joaquin",(D),-23.58,1.447
-Texas,TX,21,TX21,"Roy, Chip",(R),13.2,67.107
-Texas,TX,22,TX22,"Olson, Pete",(R),12.98,66.536
-Texas,TX,23,TX23,"Hurd, Will",(R),2.57,37.584
-Texas,TX,24,TX24,"Marchant, Kenny",(R),11.09,61.491
-Texas,TX,25,TX25,"Williams, Roger",(R),17.99,78.377
-Texas,TX,26,TX26,"Burgess, Michael",(R),29.91,94.913
-Texas,TX,27,TX27,"Cloud, Michael",(R),27.73,93.066
-Texas,TX,28,TX28,"Cuellar, Henry",(D),-17.67,3.902
-Texas,TX,29,TX29,"Garcia, Sylvia",(D),-41.84,0.024
-Texas,TX,30,TX30,"Johnson, E.B.",(D),-58.44,0.000
-Texas,TX,31,TX31,"Carter, John",(R),14.85,71.250
-Texas,TX,32,TX32,"Allred, Collin",(D),2.69,37.910
-Texas,TX,33,TX33,"Veasey, Marc",(D),-46.07,0.008
-Texas,TX,34,TX34,"Vela, Filemon",(D),-16.92,4.377
-Texas,TX,35,TX35,"Doggett, Lloyd",(D),-32.33,0.248
-Texas,TX,36,TX36,"Babin, Brian",(R),50.59,99.908
-Utah,UT,1,UT01,"Bishop, Rob",(R),37.32,98.483
-Utah,UT,2,UT02,"Stewart, Chris",(R),21.67,85.265
-Utah,UT,3,UT03,"Curtis, John",(R),36.51,98.248
-Utah,UT,4,UT04,"McAdams, Ben",(D),11.86,63.576
-Virginia,VA,1,VA01,"Wittman, Rob",(R),15.98,73.938
-Virginia,VA,2,VA02,"Luria, Elaine",(D),5.81,46.613
-Virginia,VA,3,VA03,"Scott, Bobby",(D),-29.82,0.427
-Virginia,VA,4,VA04,"McEachin, Donald",(D),-18.92,3.205
-Virginia,VA,5,VA05,"Riggleman, Denver ",(R),13.5,67.878
-Virginia,VA,6,VA06,"Cline, Ben ",(R),26.89,92.230
-Virginia,VA,7,VA07,"Spanberger, Abigail",(D),8.58,54.493
-Virginia,VA,8,VA08,"Beyer, Don",(D),-46.76,0.006
-Virginia,VA,9,VA09,"Griffith, Morgan",(R),41.07,99.252
-Virginia,VA,10,VA10,"Wexton, Jennifer",(D),-5.38,18.827
-Virginia,VA,11,VA11,"Connolly, Gerry",(D),-35.29,0.126
-Vermont,VT,1,VT01,#N/A,#N/A,-28.18,0.599
-Washington,WA,1,WA01,"DelBene, Suzan",(D),-12.21,8.501
-Washington,WA,2,WA02,"Larsen, Rick",(D),-19.73,2.811
-Washington,WA,3,WA03,"Herrera Beutler, Jaime",(R),10.43,59.677
-Washington,WA,4,WA04,"Newhouse, Dan",(R),27.77,93.104
-Washington,WA,5,WA05,"McMorris Rodgers, Cathy",(R),15.92,73.798
-Washington,WA,6,WA06,"Kilmer, Derek",(D),-12.98,7.677
-Washington,WA,7,WA07,"Jayapal, Pramila",(D),-63.98,0.000
-Washington,WA,8,WA08,"Schrier, Kim",(D),0.8,32.893
-Washington,WA,9,WA09,"Smith, Adam",(D),-44.04,0.013
-Washington,WA,10,WA10,"Heck, Denny",(D),-11.06,9.853
-Wisconsin,WI,1,WI01,"Steil, Bryan",(R),14.52,70.442
-Wisconsin,WI,2,WI02,"Pocan, Mark",(D),-34.47,0.153
-Wisconsin,WI,3,WI03,"Kind, Ron",(D),0.01,30.879
-Wisconsin,WI,4,WI04,"Moore, Gwen",(D),-48.47,0.004
-Wisconsin,WI,5,WI05,"Sensenbrenner, Jim",(R),25.82,91.057
-Wisconsin,WI,6,WI06,"Grothman, Glenn",(R),18.4,79.226
-Wisconsin,WI,7,WI07,VACANT ,(R),23.26,87.727
-Wisconsin,WI,8,WI08,"Gallagher, Mike",(R),23.38,87.900
-West Virginia,WV,1,WV01,"McKinley, David",(R),40.59,99.179
-West Virginia,WV,2,WV02,"Mooney, Alex",(R),31.57,96.037
-West Virginia,WV,3,WV03,"Miller, Carol ",(R),40.78,99.209
-Wyoming,WY,1,WY00,"Cheney, Liz",(R),47.05,99.789
+﻿State,abbrev,Seat,id,districtType,incumbent,incumbentParty,openRace,pvi,incumbencyBump,projMargin,win
+Alaska,AK,1,AK00,Pure rural,"Young, Don",(R),,16.43,3,12.33,79.45
+Alabama,AL,1,AL01,Rural-suburban mix,,(R),OPEN,32.76,0,25.66,95.64
+Alabama,AL,2,AL02,Pure rural,,(R),OPEN,32.52,0,25.42,95.49
+Alabama,AL,3,AL03,Pure rural,"Rogers, Mike",(R),,34.98,3,30.88,98.02
+Alabama,AL,4,AL04,Pure rural,"Aderholt, Rob",(R),,65.46,3,61.36,100.00
+Alabama,AL,5,AL05,Rural-suburban mix,"Brooks, Mo",(R),,33.08,3,28.98,97.33
+Alabama,AL,6,AL06,Rural-suburban mix,"Palmer, Gary",(R),,47.56,3,43.46,99.81
+Alabama,AL,7,AL07,Rural-suburban mix,"Sewell, Terri",(D),,-39.33,-3,-49.43,0.05
+Arkansas,AR,1,AR01,Pure rural,"Crawford, Rick",(R),,41.38,3,37.28,99.35
+Arkansas,AR,2,AR02,Rural-suburban mix,"Hill, French",(R),,14.04,3,9.94,74.62
+Arkansas,AR,3,AR03,Rural-suburban mix,"Womack, Steve",(R),,37.17,3,33.07,98.63
+Arkansas,AR,4,AR04,Pure rural,"Westerman, Bruce",(R),,38.58,3,34.48,98.92
+Arizona,AZ,1,AZ01,Pure rural,"O'Halleran, Tom",(D),,2.49,-3,-7.61,30.60
+Arizona,AZ,2,AZ02,Dense suburban,"Kirkpatrick, Ann",(D),,-1.13,-3,-11.23,22.70
+Arizona,AZ,3,AZ03,Dense suburban,"Grijalva, Raul",(D),,-23.21,-3,-33.31,1.32
+Arizona,AZ,4,AZ04,Rural-suburban mix,"Gosar, Paul",(R),,43.84,3,39.74,99.60
+Arizona,AZ,5,AZ05,Dense suburban,"Biggs, Andy",(R),,26.08,3,21.98,92.86
+Arizona,AZ,6,AZ06,Dense suburban,"Schweikert, David",(R),,16.46,3,12.36,79.50
+Arizona,AZ,7,AZ07,Urban-suburban mix,"Gallego, Ruben",(D),,-46.12,-3,-56.22,0.01
+Arizona,AZ,8,AZ08,Dense suburban,"Lesko, Debbie",(R),,22.09,3,17.99,88.48
+Arizona,AZ,9,AZ09,Urban-suburban mix,"Stanton, Greg",(D),,-12.57,-3,-22.67,6.54
+California,CA,1,CA01,Rural-suburban mix,"LaMalfa, Doug",(R),,20.07,3,15.97,85.65
+California,CA,2,CA02,Rural-suburban mix,"Huffman, Jared",(D),,-43.86,-3,-53.96,0.02
+California,CA,3,CA03,Rural-suburban mix,"Garamendi, John",(D),,-8.88,-3,-18.98,10.29
+California,CA,4,CA04,Rural-suburban mix,"McClintock, Tom",(R),,17.35,3,13.25,81.15
+California,CA,5,CA05,Dense suburban,"Thompson, Mike",(D),,-42.22,-3,-52.32,0.02
+California,CA,6,CA06,Urban-suburban mix,"Matsui, Doris",(D),,-41.76,-3,-51.86,0.03
+California,CA,7,CA07,Dense suburban,"Bera, Ami",(D),,-4.87,-3,-14.97,15.91
+California,CA,8,CA08,Rural-suburban mix,,(R),OPEN,17.26,0,10.16,75.09
+California,CA,9,CA09,Dense suburban,"McNerney, Jerry",(D),,-10.79,-3,-20.89,8.19
+California,CA,10,CA10,Dense suburban,"Harder, Josh",(D),,1.47,-3,-8.63,28.25
+California,CA,11,CA11,Urban-suburban mix,"DeSaulnier, Mark",(D),,-42.25,-3,-52.35,0.02
+California,CA,12,CA12,Pure urban,"Pelosi, Nancy",(D),,-70,-3,-80.1,0.00
+California,CA,13,CA13,Pure urban,"Lee, Barbara",(D),,-77.53,-3,-87.63,0.00
+California,CA,14,CA14,Urban-suburban mix,"Speier, Jackie",(D),,-52.6,-3,-62.7,0.00
+California,CA,15,CA15,Urban-suburban mix,"Swalwell, Eric",(D),,-39.88,-3,-49.98,0.04
+California,CA,16,CA16,Dense suburban,"Costa, Jim",(D),,-13.23,-3,-23.33,5.99
+California,CA,17,CA17,Pure urban,"Khanna, Ro",(D),,-46.28,-3,-56.38,0.01
+California,CA,18,CA18,Urban-suburban mix,"Eshoo, Anna",(D),,-44.72,-3,-54.82,0.01
+California,CA,19,CA19,Urban-suburban mix,"Lofgren, Zoe",(D),,-43.77,-3,-53.87,0.02
+California,CA,20,CA20,Urban-suburban mix,"Panetta, Jimmy",(D),,-44.49,-3,-54.59,0.01
+California,CA,21,CA21,Rural-suburban mix,"Cox, TJ",(D),,-3.24,-3,-13.34,18.69
+California,CA,22,CA22,Dense suburban,"Nunes, Devin",(R),,13.41,3,9.31,73.26
+California,CA,23,CA23,Dense suburban,"McCarthy, Kevin",(R),,29.98,3,25.88,95.78
+California,CA,24,CA24,Sparse suburban,"Carbajal, Salud",(D),,-12.68,-3,-22.78,6.44
+California,CA,25,CA25,Dense suburban,VACANT ,(D),,-1.59,-3,-11.69,21.79
+California,CA,26,CA26,Dense suburban,"Brownley, Julia",(D),,-16.44,-3,-26.54,3.84
+California,CA,27,CA27,Urban-suburban mix,"Chu, Judy",(D),,-34.32,-3,-44.42,0.15
+California,CA,28,CA28,Pure urban,"Schiff, Adam",(D),,-47.15,-3,-57.25,0.01
+California,CA,29,CA29,Pure urban,"Cardenas, Tony",(D),,-55.39,-3,-65.49,0.00
+California,CA,30,CA30,Urban-suburban mix,"Sherman, Brad",(D),,-38.71,-3,-48.81,0.06
+California,CA,31,CA31,Dense suburban,"Aguilar, Pete",(D),,-13.83,-3,-23.93,5.53
+California,CA,32,CA32,Urban-suburban mix,"Napolitano, Grace",(D),,-32.49,-3,-42.59,0.23
+California,CA,33,CA33,Urban-suburban mix,"Lieu, Ted",(D),,-33.81,-3,-43.91,0.17
+California,CA,34,CA34,Pure urban,"Gomez, Jimmy",(D),,-70.18,-3,-80.28,0.00
+California,CA,35,CA35,Urban-suburban mix,"Torres, Norma",(D),,-34.3,-3,-44.4,0.15
+California,CA,36,CA36,Dense suburban,"Ruiz, Raul",(D),,-7.22,-3,-17.32,12.41
+California,CA,37,CA37,Pure urban,"Bass, Karen",(D),,-71.45,-3,-81.55,0.00
+California,CA,38,CA38,Pure urban,"Sanchez, Linda",(D),,-32.77,-3,-42.87,0.21
+California,CA,39,CA39,Dense suburban,"Cisneros, Gil",(D),,0.31,-3,-9.79,25.70
+California,CA,40,CA40,Pure urban,"Roybal-Allard, Lucille",(D),,-66.73,-3,-76.83,0.00
+California,CA,41,CA41,Dense suburban,"Takano, Mark",(D),,-23.46,-3,-33.56,1.26
+California,CA,42,CA42,Sparse suburban,"Calvert, Ken",(R),,17.97,3,13.87,82.24
+California,CA,43,CA43,Pure urban,"Waters, Maxine",(D),,-53.29,-3,-63.39,0.00
+California,CA,44,CA44,Pure urban,"Barragan, Nanette",(D),,-68.51,-3,-78.61,0.00
+California,CA,45,CA45,Urban-suburban mix,"Porter, Katie",(D),,2.11,-3,-7.99,29.71
+California,CA,46,CA46,Pure urban,"Correa, Lou",(D),,-31.83,-3,-41.93,0.26
+California,CA,47,CA47,Pure urban,"Lowenthal, Alan",(D),,-24.63,-3,-34.73,1.03
+California,CA,48,CA48,Urban-suburban mix,"Rouda, Harley",(D),,2.42,-3,-7.68,30.43
+California,CA,49,CA49,Dense suburban,"Levin, Mike",(D),,-3.33,-3,-13.43,18.53
+California,CA,50,CA50,Dense suburban,"Hunter, Duncan",(R),,15.77,3,11.67,78.17
+California,CA,51,CA51,Urban-suburban mix,"Vargas, Juan",(D),,-39.98,-3,-50.08,0.04
+California,CA,52,CA52,Urban-suburban mix,"Peters, Scott",(D),,-18.03,-3,-28.13,3.04
+California,CA,53,CA53,Urban-suburban mix,,(D),OPEN,-30.19,0,-37.29,0.65
+Colorado,CO,1,CO01,Urban-suburban mix,"DeGette, Diana",(D),,-42.29,-3,-52.39,0.02
+Colorado,CO,2,CO02,Sparse suburban,"Neguse, Joe",(D),,-18.24,-3,-28.34,2.94
+Colorado,CO,3,CO03,Pure rural,"Tipton, Scott",(R),,14.76,3,10.66,76.14
+Colorado,CO,4,CO04,Rural-suburban mix,"Buck, Ken",(R),,27.07,3,22.97,93.72
+Colorado,CO,5,CO05,Dense suburban,"Lamborn, Doug",(R),,26.05,3,21.95,92.83
+Colorado,CO,6,CO06,Dense suburban,"Crow, Jason",(D),,-4.4,-3,-14.5,16.69
+Colorado,CO,7,CO07,Dense suburban,"Perlmutter, Ed",(D),,-12.93,-3,-23.03,6.24
+Connecticut,CT,1,CT01,Sparse suburban,"Larson, John",(D),,-20.97,-3,-31.07,1.92
+Connecticut,CT,2,CT02,Rural-suburban mix,"Courtney, Joe",(D),,-9.45,-3,-19.55,9.62
+Connecticut,CT,3,CT03,Sparse suburban,"DeLauro, Rosa",(D),,-17.54,-3,-27.64,3.27
+Connecticut,CT,4,CT04,Sparse suburban,"Himes, Jim",(D),,-16.34,-3,-26.44,3.90
+Connecticut,CT,5,CT05,Sparse suburban,"Hayes, Jahana",(D),,-2.77,-3,-12.87,19.54
+Delaware,DE,1,DE00,Sparse suburban,"Blunt Rochester, Lisa",(D),,-14.84,-3,-24.94,4.82
+Florida,FL,1,FL01,Rural-suburban mix,"Gaetz, Matt",(R),,42.08,3,37.98,99.43
+Florida,FL,2,FL02,Rural-suburban mix,"Dunn, Neal",(R),,39.99,3,35.89,99.16
+Florida,FL,3,FL03,Pure rural,,(R),OPEN,20.72,0,13.62,81.81
+Florida,FL,4,FL04,Sparse suburban,"Rutherford, John",(R),,35.9,3,31.8,98.30
+Florida,FL,5,FL05,Sparse suburban,"Lawson, Al",(D),,-24.17,-3,-34.27,1.12
+Florida,FL,6,FL06,Sparse suburban,"Waltz, Michael",(R),,19.09,3,14.99,84.12
+Florida,FL,7,FL07,Sparse suburban,"Murphy, Stephanie",(D),,-5.01,-3,-15.11,15.69
+Florida,FL,8,FL08,Sparse suburban,"Posey, Bill",(R),,25.42,3,21.32,92.24
+Florida,FL,9,FL09,Sparse suburban,"Soto, Darren",(D),,-9.07,-3,-19.17,10.06
+Florida,FL,10,FL10,Sparse suburban,"Demings, Val",(D),,-24.16,-3,-34.26,1.12
+Florida,FL,11,FL11,Rural-suburban mix,"Webster, Dan",(R),,35.32,3,31.22,98.13
+Florida,FL,12,FL12,Sparse suburban,"Bilirakis, Gus",(R),,22.61,3,18.51,89.14
+Florida,FL,13,FL13,Dense suburban,"Crist, Charlie",(D),,-4.19,-3,-14.29,17.04
+Florida,FL,14,FL14,Dense suburban,"Castor, Kathy",(D),,-15.74,-3,-25.84,4.25
+Florida,FL,15,FL15,Sparse suburban,"Spano, Ross",(R),,12.97,3,8.87,72.29
+Florida,FL,16,FL16,Sparse suburban,"Buchanan, Vern",(R),,14.98,3,10.88,76.59
+Florida,FL,17,FL17,Rural-suburban mix,"Steube, Greg",(R),,30.1,3,26,95.85
+Florida,FL,18,FL18,Sparse suburban,"Mast, Brian",(R),,13.59,3,9.49,73.65
+Florida,FL,19,FL19,Sparse suburban,,(R),OPEN,28.36,0,21.26,92.18
+Florida,FL,20,FL20,Urban-suburban mix,"Hastings, Alcee",(D),,-60.15,-3,-70.25,0.00
+Florida,FL,21,FL21,Dense suburban,"Frankel, Lois",(D),,-17.42,-3,-27.52,3.33
+Florida,FL,22,FL22,Dense suburban,"Deutch, Ted",(D),,-14.08,-3,-24.18,5.35
+Florida,FL,23,FL23,Urban-suburban mix,"Wasserman Schultz, Debbie",(D),,-19.01,-3,-29.11,2.61
+Florida,FL,24,FL24,Urban-suburban mix,"Wilson, Frederica",(D),,-65.52,-3,-75.62,0.00
+Florida,FL,25,FL25,Urban-suburban mix,"Diaz-Balart, Mario",(R),,16.38,3,12.28,79.35
+Florida,FL,26,FL26,Urban-suburban mix,"Mucarsel-Powell, Debbie",(D),,-4.09,-3,-14.19,17.21
+Florida,FL,27,FL27,Urban-suburban mix,"Shalala, Donna ",(D),,-6.99,-3,-17.09,12.73
+Georgia,GA,1,GA01,Rural-suburban mix,"Carter, Buddy",(R),,20.4,3,16.3,86.14
+Georgia,GA,2,GA02,Rural-suburban mix,"Bishop, Sanford",(D),,-10.53,-3,-20.63,8.45
+Georgia,GA,3,GA03,Rural-suburban mix,"Ferguson, Drew",(R),,36.62,3,32.52,98.49
+Georgia,GA,4,GA04,Sparse suburban,"Johnson, Hank",(D),,-49.46,-3,-59.56,0.00
+Georgia,GA,5,GA05,Dense suburban,"Lewis, John",(D),,-70.24,-3,-80.34,0.00
+Georgia,GA,6,GA06,Dense suburban,"McBath, Lucy",(D),,7.72,-3,-2.38,43.70
+Georgia,GA,7,GA07,Sparse suburban,,(R),OPEN,10.28,0,3.18,58.39
+Georgia,GA,8,GA08,Pure rural,"Scott, Austin",(R),,30.7,3,26.6,96.19
+Georgia,GA,9,GA09,Pure rural,,(R),OPEN,63.84,0,56.74,99.99
+Georgia,GA,10,GA10,Pure rural,"Hice, Jody",(R),,30.91,3,26.81,96.31
+Georgia,GA,11,GA11,Sparse suburban,"Loudermilk, Barry",(R),,30.62,3,26.52,96.15
+Georgia,GA,12,GA12,Pure rural,"Allen, Rick",(R),,22.18,3,18.08,88.60
+Georgia,GA,13,GA13,Sparse suburban,"Scott, David",(D),,-42.28,-3,-52.38,0.02
+Georgia,GA,14,GA14,Rural-suburban mix,,(R),OPEN,57.65,0,50.55,99.96
+Hawaii,HI,1,HI01,Urban-suburban mix,"Case, Ed",(D),,-36.08,-3,-46.18,0.10
+Hawaii,HI,2,HI02,Rural-suburban mix,,(D),OPEN,-38.24,0,-45.34,0.13
+Iowa,IA,1,IA01,Rural-suburban mix,"Finkenauer, Abby",(D),,4.1,-3,-6,34.46
+Iowa,IA,2,IA02,Rural-suburban mix,,(D),OPEN,0.5,0,-6.6,33.00
+Iowa,IA,3,IA03,Sparse suburban,"Axne, Cindy",(D),,6.57,-3,-3.53,40.70
+Iowa,IA,4,IA04,Pure rural,"King, Steve",(R),,19.83,3,15.73,85.28
+Idaho,ID,1,ID01,Rural-suburban mix,"Fulcher, Russ",(R),,40.11,3,36.01,99.18
+Idaho,ID,2,ID02,Rural-suburban mix,"Simpson, Mike",(R),,29.01,3,24.91,95.16
+Illinois,IL,1,IL01,Urban-suburban mix,"Rush, Bobby",(D),,-49.18,-3,-59.28,0.00
+Illinois,IL,2,IL02,Dense suburban,"Kelly, Robin",(D),,-55.47,-3,-65.57,0.00
+Illinois,IL,3,IL03,Urban-suburban mix,"Lipinski, Dan",(D),,-24.21,-3,-34.31,1.11
+Illinois,IL,4,IL04,Pure urban,"Garcia, Chuy",(D),,-65.12,-3,-75.22,0.00
+Illinois,IL,5,IL05,Pure urban,"Quigley, Mike",(D),,-43.22,-3,-53.32,0.02
+Illinois,IL,6,IL06,Sparse suburban,"Casten, Sean",(D),,-0.37,-3,-10.47,24.26
+Illinois,IL,7,IL07,Pure urban,"Davis, Danny",(D),,-71.41,-3,-81.51,0.00
+Illinois,IL,8,IL08,Dense suburban,"Krishnamoorthi, Raja",(D),,-20.61,-3,-30.71,2.03
+Illinois,IL,9,IL09,Urban-suburban mix,"Schakowsky, Jan",(D),,-39.46,-3,-49.56,0.05
+Illinois,IL,10,IL10,Sparse suburban,"Schneider, Brad",(D),,-23.71,-3,-33.81,1.21
+Illinois,IL,11,IL11,Dense suburban,"Foster, Bill",(D),,-19.56,-3,-29.66,2.40
+Illinois,IL,12,IL12,Rural-suburban mix,"Bost, Mike",(R),,14.5,3,10.4,75.59
+Illinois,IL,13,IL13,Rural-suburban mix,"Davis, Rodney",(R),,8.03,3,3.93,60.33
+Illinois,IL,14,IL14,Sparse suburban,"Underwood, Lauren",(D),,5.71,-3,-4.39,38.49
+Illinois,IL,15,IL15,Pure rural,,(R),OPEN,47.79,0,40.69,99.67
+Illinois,IL,16,IL16,Rural-suburban mix,"Kinzinger, Adam",(R),,21.91,3,17.81,88.25
+Illinois,IL,17,IL17,Rural-suburban mix,"Bustos, Cheri",(D),,-7.07,-3,-17.17,12.62
+Illinois,IL,18,IL18,Rural-suburban mix,"LaHood, Darin",(R),,35.3,3,31.2,98.12
+Indiana,IN,1,IN01,Sparse suburban,,(D),OPEN,-16.44,0,-23.54,5.83
+Indiana,IN,2,IN02,Rural-suburban mix,"Walorski, Jackie",(R),,21.37,3,17.27,87.52
+Indiana,IN,3,IN03,Rural-suburban mix,"Banks, Jim",(R),,36.87,3,32.77,98.55
+Indiana,IN,4,IN04,Rural-suburban mix,"Baird, Jim",(R),,35.6,3,31.5,98.21
+Indiana,IN,5,IN05,Sparse suburban,,(R),OPEN,18.27,0,11.17,77.18
+Indiana,IN,6,IN06,Pure rural,"Pence, Greg",(R),,39.56,3,35.46,99.10
+Indiana,IN,7,IN07,Dense suburban,"Carson, Andre",(D),,-21.18,-3,-31.28,1.85
+Indiana,IN,8,IN08,Rural-suburban mix,"Bucshon, Larry",(R),,35.21,3,31.11,98.10
+Indiana,IN,9,IN09,Rural-suburban mix,"Hollingsworth, Trey",(R),,24.77,3,20.67,91.59
+Kansas,KS,1,KS01,Pure rural,,(R),OPEN,46.04,0,38.94,99.53
+Kansas,KS,2,KS02,Pure rural,"Watkins, Steve",(R),,15.17,3,11.07,76.97
+Kansas,KS,3,KS03,Dense suburban,"Davids, Sharice",(D),,1.25,-3,-8.85,27.76
+Kansas,KS,4,KS04,Sparse suburban,"Estes, Ron",(R),,28.46,3,24.36,94.78
+Kentucky,KY,1,KY01,Pure rural,"Comer, James",(R),,47.16,3,43.06,99.80
+Kentucky,KY,2,KY02,Pure rural,"Guthrie, Brett",(R),,42,3,37.9,99.42
+Kentucky,KY,3,KY03,Dense suburban,"Yarmuth, John",(D),,-14.31,-3,-24.41,5.18
+Kentucky,KY,4,KY04,Rural-suburban mix,"Massie, Thomas",(R),,36.64,3,32.54,98.50
+Kentucky,KY,5,KY05,Pure rural,"Rogers, Hal",(R),,64.39,3,60.29,100.00
+Kentucky,KY,6,KY06,Rural-suburban mix,"Barr, Andy",(R),,14.89,3,10.79,76.40
+Louisiana,LA,1,LA01,Rural-suburban mix,"Scalise, Steve",(R),,48.71,3,44.61,99.85
+Louisiana,LA,2,LA02,Dense suburban,"Richmond, Cedric",(D),,-50.32,-3,-60.42,0.00
+Louisiana,LA,3,LA03,Rural-suburban mix,"Higgins, Clay",(R),,42.83,3,38.73,99.51
+Louisiana,LA,4,LA04,Pure rural,"Johnson, Mike",(R),,31.71,3,27.61,96.72
+Louisiana,LA,5,LA05,Pure rural,,(R),OPEN,37.19,0,30.09,97.76
+Louisiana,LA,6,LA06,Rural-suburban mix,"Graves, Garret",(R),,42.23,3,38.13,99.45
+Massachusetts,MA,1,MA01,Sparse suburban,"Neal, Richard",(D),,-19.14,-3,-29.24,2.56
+Massachusetts,MA,2,MA02,Rural-suburban mix,"McGovern, Jim",(D),,-20.96,-3,-31.06,1.92
+Massachusetts,MA,3,MA03,Sparse suburban,"Trahan, Lori",(D),,-19.48,-3,-29.58,2.43
+Massachusetts,MA,4,MA04,Sparse suburban,,(D),OPEN,-20.87,0,-27.97,3.11
+Massachusetts,MA,5,MA05,Urban-suburban mix,"Clark, Katherine",(D),,-40.98,-3,-51.08,0.03
+Massachusetts,MA,6,MA06,Sparse suburban,"Moulton, Seth",(D),,-19.14,-3,-29.24,2.56
+Massachusetts,MA,7,MA07,Pure urban,"Pressley, Ayanna",(D),,-68.94,-3,-79.04,0.00
+Massachusetts,MA,8,MA08,Dense suburban,"Lynch, Stephen",(D),,-22.64,-3,-32.74,1.45
+Massachusetts,MA,9,MA09,Sparse suburban,"Keating, Bill",(D),,-9.31,-3,-19.41,9.78
+Maryland,MD,1,MD01,Rural-suburban mix,"Harris, Andy",(R),,30.2,3,26.1,95.91
+Maryland,MD,2,MD02,Dense suburban,"Ruppersberger, Dutch",(D),,-24.47,-3,-34.57,1.06
+Maryland,MD,3,MD03,Dense suburban,"Sarbanes, John",(D),,-29.29,-3,-39.39,0.43
+Maryland,MD,4,MD04,Dense suburban,"Brown, Anthony",(D),,-52.59,-3,-62.69,0.00
+Maryland,MD,5,MD05,Sparse suburban,"Hoyer, Steny",(D),,-32.01,-3,-42.11,0.25
+Maryland,MD,6,MD06,Sparse suburban,"Trone, David",(D),,-12.28,-3,-22.38,6.78
+Maryland,MD,7,MD07,Urban-suburban mix,VACANT ,(D),,-50.05,-3,-60.15,0.00
+Maryland,MD,8,MD08,Dense suburban,"Raskin, Jamie",(D),,-29.98,-3,-40.08,0.38
+Maine,ME,1,ME01,Rural-suburban mix,"Pingree, Chellie",(D),,-15.43,-3,-25.53,4.44
+Maine,ME,2,ME02,Pure rural,"Golden, Jared",(D),,8.4,-3,-1.7,45.49
+Michigan,MI,1,MI01,Pure rural,"Bergman, Jack",(R),,21.29,3,17.19,87.41
+Michigan,MI,2,MI02,Rural-suburban mix,"Huizenga, Bill",(R),,19.95,3,15.85,85.47
+Michigan,MI,3,MI03,Rural-suburban mix,"Amash, Justin",(I),,15.21,-3,5.11,63.33
+Michigan,MI,4,MI04,Pure rural,"Moolenaar, John",(R),,28.51,3,24.41,94.82
+Michigan,MI,5,MI05,Sparse suburban,"Kildee, Dan",(D),,-9.55,-3,-19.65,9.51
+Michigan,MI,6,MI06,Rural-suburban mix,"Upton, Fred",(R),,11.15,3,7.05,68.08
+Michigan,MI,7,MI07,Pure rural,"Walberg, Tim",(R),,16.59,3,12.49,79.75
+Michigan,MI,8,MI08,Sparse suburban,"Slotkin, Elissa",(D),,6.78,-3,-3.32,41.24
+Michigan,MI,9,MI09,Dense suburban,"Levin, Andy",(D),,-10.14,-3,-20.24,8.86
+Michigan,MI,10,MI10,Rural-suburban mix,,(R),OPEN,32.24,0,25.14,95.31
+Michigan,MI,11,MI11,Sparse suburban,"Stevens, Haley",(D),,4.71,-3,-5.39,35.97
+Michigan,MI,12,MI12,Dense suburban,"Dingell, Debbie",(D),,-27.61,-3,-37.71,0.60
+Michigan,MI,13,MI13,Dense suburban,"Tlaib, Rashida",(D),,-59.4,-3,-69.5,0.00
+Michigan,MI,14,MI14,Dense suburban,"Lawrence, Brenda",(D),,-57.06,-3,-67.16,0.00
+Minnesota,MN,1,MN01,Rural-suburban mix,"Hagedorn, Jim",(R),,11.95,3,7.85,69.96
+Minnesota,MN,2,MN02,Sparse suburban,"Craig, Angie",(D),,3.26,-3,-6.84,32.42
+Minnesota,MN,3,MN03,Sparse suburban,"Philips, Dean",(D),,-4.24,-3,-14.34,16.95
+Minnesota,MN,4,MN04,Dense suburban,"McCollum, Betty",(D),,-27.74,-3,-37.84,0.58
+Minnesota,MN,5,MN05,Urban-suburban mix,"Omar, Ilhan",(D),,-49.92,-3,-60.02,0.00
+Minnesota,MN,6,MN06,Rural-suburban mix,"Emmer, Tom",(R),,28.31,3,24.21,94.67
+Minnesota,MN,7,MN07,Pure rural,"Peterson, Collin",(D),,18.11,-10,1.01,52.68
+Minnesota,MN,8,MN08,Pure rural,"Stauber, Pete",(R),,14.15,3,10.05,74.86
+Missouri,MO,1,MO01,Dense suburban,"Clay, Lacy",(D),,-55.62,-3,-65.72,0.00
+Missouri,MO,2,MO02,Dense suburban,"Wagner, Ann",(R),,13.17,3,9.07,72.73
+Missouri,MO,3,MO03,Rural-suburban mix,"Luetkemeyer, Blaine",(R),,39.84,3,35.74,99.14
+Missouri,MO,4,MO04,Pure rural,"Hartzler, Vicki",(R),,38.33,3,34.23,98.88
+Missouri,MO,5,MO05,Dense suburban,"Cleaver, Emanuel",(D),,-14.57,-3,-24.67,5.00
+Missouri,MO,6,MO06,Rural-suburban mix,"Graves, Sam",(R),,36.58,3,32.48,98.48
+Missouri,MO,7,MO07,Rural-suburban mix,"Long, Billy",(R),,45.75,3,41.65,99.73
+Missouri,MO,8,MO08,Pure rural,"Smith, Jason",(R),,54.81,3,50.71,99.96
+Mississippi,MS,1,MS01,Pure rural,"Kelly, Trent",(R),,38.07,3,33.97,98.82
+Mississippi,MS,2,MS02,Pure rural,"Thompson, Bennie",(D),,-26.67,-3,-36.77,0.71
+Mississippi,MS,3,MS03,Pure rural,"Guest, Michael ",(R),,29.84,3,25.74,95.69
+Mississippi,MS,4,MS04,Rural-suburban mix,"Palazzo, Steven",(R),,44.22,3,40.12,99.63
+Montana,MT,1,MT00,Pure rural,,(R),OPEN,17.92,0,10.82,76.46
+North Carolina,NC,1,NC01,Rural-suburban mix,"Butterfield, G.K.",(D),,-33,-3,-43.1,0.20
+North Carolina,NC,2,NC02,Rural-suburban mix,,(R),OPEN,13.26,0,6.16,65.93
+North Carolina,NC,3,NC03,Pure rural,"Murphy, Greg",(R),,25.49,3,21.39,92.31
+North Carolina,NC,4,NC04,Sparse suburban,"Price, David",(D),,-37.61,-3,-47.71,0.07
+North Carolina,NC,5,NC05,Rural-suburban mix,"Foxx, Virginia",(R),,20.85,3,16.75,86.79
+North Carolina,NC,6,NC06,Rural-suburban mix,,(R),OPEN,18.94,0,11.84,78.50
+North Carolina,NC,7,NC07,Pure rural,"Rouzer, David",(R),,20.16,3,16.06,85.78
+North Carolina,NC,8,NC08,Pure rural,"Hudson, Richard",(R),,17.76,3,13.66,81.88
+North Carolina,NC,9,NC09,Sparse suburban,"Bishop, Dan",(R),,11.72,3,7.62,69.43
+North Carolina,NC,10,NC10,Rural-suburban mix,"McHenry, Patrick",(R),,26.46,3,22.36,93.20
+North Carolina,NC,11,NC11,Pure rural,"Meadows, Mark",(R),,29.58,3,25.48,95.53
+North Carolina,NC,12,NC12,Sparse suburban,"Adams, Alma",(D),,-37.24,-3,-47.34,0.08
+North Carolina,NC,13,NC13,Rural-suburban mix,"Budd, Ted",(R),,12.82,3,8.72,71.95
+North Dakota,ND,1,ND00,Rural-suburban mix,"Armstrong, Kelly",(R),,34.64,3,30.54,97.91
+Nebraska,NE,1,NE01,Rural-suburban mix,"Fortenberry, Jeff",(R),,25.78,3,21.68,92.58
+Nebraska,NE,2,NE02,Dense suburban,"Bacon, Don",(R),,7.81,3,3.71,59.77
+Nebraska,NE,3,NE03,Pure rural,"Smith, Adrian",(R),,58.18,3,54.08,99.98
+New Hampshire,NH,1,NH01,Rural-suburban mix,"Pappas, Chris",(D),,1.9,-3,-8.2,29.23
+New Hampshire,NH,2,NH02,Pure rural,"Kuster, Annie",(D),,-2.61,-3,-12.71,19.84
+New Jersey,NJ,1,NJ01,Dense suburban,"Norcross, Donald",(D),,-22.99,-3,-33.09,1.37
+New Jersey,NJ,2,NJ02,Rural-suburban mix,"Van Drew, Jeff",(D),,3,-3,-7.1,31.80
+New Jersey,NJ,3,NJ03,Sparse suburban,"Kim, Andy",(D),,6.95,-3,-3.15,41.68
+New Jersey,NJ,4,NJ04,Sparse suburban,"Smith, Chris",(R),,18.35,3,14.25,82.89
+New Jersey,NJ,5,NJ05,Dense suburban,"Gottheimer, Josh",(D),,-0.17,-3,-10.27,24.68
+New Jersey,NJ,6,NJ06,Dense suburban,"Pallone, Frank",(D),,-16.5,-3,-26.6,3.81
+New Jersey,NJ,7,NJ07,Sparse suburban,"Malinowski, Tom",(D),,3.08,-3,-7.02,31.99
+New Jersey,NJ,8,NJ08,Pure urban,"Sires, Albio",(D),,-51.67,-3,-61.77,0.00
+New Jersey,NJ,9,NJ09,Pure urban,"Pascrell, Bill",(D),,-31.23,-3,-41.33,0.29
+New Jersey,NJ,10,NJ10,Pure urban,"Payne, Donald",(D),,-69.89,-3,-79.99,0.00
+New Jersey,NJ,11,NJ11,Sparse suburban,"Sherrill, Mikie",(D),,-0.43,-3,-10.53,24.13
+New Jersey,NJ,12,NJ12,Dense suburban,"Watson Coleman, Bonnie",(D),,-29.98,-3,-40.08,0.38
+New Mexico,NM,1,NM01,Dense suburban,"Haaland, Deb",(D),,-14.05,-3,-24.15,5.37
+New Mexico,NM,2,NM02,Rural-suburban mix,"Torres Smalls, Xochitl",(D),,9.62,-3,-0.48,48.72
+New Mexico,NM,3,NM03,Pure rural,,(D),OPEN,-17.96,0,-25.06,4.74
+Nevada,NV,1,NV01,Urban-suburban mix,"Titus, Dina",(D),,-27.05,-3,-37.15,0.66
+Nevada,NV,2,NV02,Rural-suburban mix,"Amodei, Mark",(R),,18.93,3,14.83,83.86
+Nevada,NV,3,NV03,Urban-suburban mix,"Lee, Susie ",(D),,1.48,-3,-8.62,28.28
+Nevada,NV,4,NV04,Urban-suburban mix,"Horsford, Stephen ",(D),,-1.76,-3,-11.86,21.46
+New York,NY,1,NY01,Sparse suburban,"Zeldin, Lee",(R),,12.54,3,8.44,71.32
+New York,NY,2,NY02,Dense suburban,,(R),OPEN,11.65,0,4.55,61.92
+New York,NY,3,NY03,Dense suburban,"Suozzi, Tom",(D),,-5.9,-3,-16,14.31
+New York,NY,4,NY04,Urban-suburban mix,"Rice, Kathleen",(D),,-10.68,-3,-20.78,8.30
+New York,NY,5,NY05,Pure urban,"Meeks, Gregory",(D),,-71.48,-3,-81.58,0.00
+New York,NY,6,NY06,Pure urban,"Meng, Grace",(D),,-31.01,-3,-41.11,0.31
+New York,NY,7,NY07,Pure urban,"Velazquez, Nydia",(D),,-74.2,-3,-84.3,0.00
+New York,NY,8,NY08,Pure urban,"Jeffries, Hakeem",(D),,-69.5,-3,-79.6,0.00
+New York,NY,9,NY09,Pure urban,"Clarke, Yvette",(D),,-68.64,-3,-78.74,0.00
+New York,NY,10,NY10,Pure urban,"Nadler, Jerrold",(D),,-55.37,-3,-65.47,0.00
+New York,NY,11,NY11,Pure urban,"Rose, Max",(D),,6.26,-3,-3.84,39.90
+New York,NY,12,NY12,Pure urban,"Maloney, Carolyn",(D),,-65.18,-3,-75.28,0.00
+New York,NY,13,NY13,Pure urban,"Espaillat, Adriano",(D),,-83.04,-3,-93.14,0.00
+New York,NY,14,NY14,Pure urban,"Ocasio-Cortez, Alexandria",(D),,-56.16,-3,-66.26,0.00
+New York,NY,15,NY15,Pure urban,,(D),OPEN,-85.57,0,-92.67,0.00
+New York,NY,16,NY16,Pure urban,"Engel, Eliot",(D),,-49.7,-3,-59.8,0.00
+New York,NY,17,NY17,Sparse suburban,,(D),OPEN,-17.34,0,-24.44,5.16
+New York,NY,18,NY18,Rural-suburban mix,"Maloney, Sean",(D),,0.68,-3,-9.42,26.50
+New York,NY,19,NY19,Pure rural,"Delgado, Antonio",(D),,5.31,-3,-4.79,37.47
+New York,NY,20,NY20,Sparse suburban,"Tonko, Paul",(D),,-17.76,-3,-27.86,3.16
+New York,NY,21,NY21,Pure rural,"Stefanik, Elise",(R),,17.02,3,12.92,80.55
+New York,NY,22,NY22,Rural-suburban mix,"Brindisi, Anthony",(D),,11.41,-3,1.31,53.48
+New York,NY,23,NY23,Pure rural,"Reed, Tom",(R),,15.81,3,11.71,78.25
+New York,NY,24,NY24,Rural-suburban mix,"Katko, John",(R),,4.34,3,0.24,50.64
+New York,NY,25,NY25,Sparse suburban,"Morelle, Joe",(D),,-12.22,-3,-22.32,6.84
+New York,NY,26,NY26,Urban-suburban mix,"Higgins, Brian",(D),,-27.59,-3,-37.69,0.60
+New York,NY,27,NY27,Pure rural,VACANT ,(R),,17.65,3,13.55,81.68
+Ohio,OH,1,OH01,Sparse suburban,"Chabot, Steve",(R),,10.77,3,6.67,67.17
+Ohio,OH,2,OH02,Rural-suburban mix,"Wenstrup, Brad",(R),,20.89,3,16.79,86.85
+Ohio,OH,3,OH03,Dense suburban,"Beatty, Joyce",(D),,-37.44,-3,-47.54,0.08
+Ohio,OH,4,OH04,Rural-suburban mix,"Jordan, Jim",(R),,35.45,3,31.35,98.17
+Ohio,OH,5,OH05,Rural-suburban mix,"Latta, Bob",(R),,29.68,3,25.58,95.59
+Ohio,OH,6,OH06,Pure rural,"Johnson, Bill",(R),,42.95,3,38.85,99.52
+Ohio,OH,7,OH07,Rural-suburban mix,"Gibbs, Bob",(R),,27.4,3,23.3,93.98
+Ohio,OH,8,OH08,Rural-suburban mix,"Davidson, Warren",(R),,38.18,3,34.08,98.85
+Ohio,OH,9,OH09,Dense suburban,"Kaptur, Marcy",(D),,-24.48,-3,-34.58,1.06
+Ohio,OH,10,OH10,Sparse suburban,"Turner, Michael",(R),,14.85,3,10.75,76.32
+Ohio,OH,11,OH11,Urban-suburban mix,"Fudge, Marcia",(D),,-59.02,-3,-69.12,0.00
+Ohio,OH,12,OH12,Sparse suburban,"Balderson, Troy",(R),,13.23,3,9.13,72.86
+Ohio,OH,13,OH13,Sparse suburban,"Ryan, Tim",(D),,-10.37,-3,-20.47,8.62
+Ohio,OH,14,OH14,Sparse suburban,"Joyce, David",(R),,15.44,3,11.34,77.52
+Ohio,OH,15,OH15,Rural-suburban mix,"Stivers, Steve",(R),,21.07,3,16.97,87.10
+Ohio,OH,16,OH16,Sparse suburban,"Gonzalez, Anthony",(R),,19.57,3,15.47,84.88
+Oklahoma,OK,1,OK01,Sparse suburban,"Hern, Kevin",(R),,29.65,3,25.55,95.57
+Oklahoma,OK,2,OK02,Pure rural,"Mullin, Markwayne",(R),,47.02,3,42.92,99.79
+Oklahoma,OK,3,OK03,Pure rural,"Lucas, Frank",(R),,55.17,3,51.07,99.97
+Oklahoma,OK,4,OK04,Rural-suburban mix,"Cole, Tom",(R),,38.96,3,34.86,98.99
+Oklahoma,OK,5,OK05,Dense suburban,"Horn, Kendra",(D),,12.45,-3,2.35,56.22
+Oregon,OR,1,OR01,Dense suburban,"Bonamici, Suzanne",(D),,-21.01,-3,-31.11,1.90
+Oregon,OR,2,OR02,Rural-suburban mix,,(R),OPEN,23.49,0,16.39,86.27
+Oregon,OR,3,OR03,Urban-suburban mix,"Blumenauer, Earl",(D),,-44.98,-3,-55.08,0.01
+Oregon,OR,4,OR04,Rural-suburban mix,"DeFazio, Peter",(D),,-2.31,-3,-12.41,20.40
+Oregon,OR,5,OR05,Dense suburban,"Schrader, Kurt",(D),,-2.97,-3,-13.07,19.18
+Pennsylvania,PA,1,PA01,Sparse suburban,"Fitzpatrick, Brian",(R),,5.27,3,1.17,53.11
+Pennsylvania,PA,2,PA02,Pure urban,"Boyle, Brendan",(D),,-48.1,-3,-58.2,0.01
+Pennsylvania,PA,3,PA03,Pure urban,"Evans, Dwight",(D),,-80.02,-3,-90.12,0.00
+Pennsylvania,PA,4,PA04,Sparse suburban,"Dean, Madeleine",(D),,-17.01,-3,-27.11,3.54
+Pennsylvania,PA,5,PA05,Urban-suburban mix,"Gay Scanlon, Mary ",(D),,-23.94,-3,-34.04,1.16
+Pennsylvania,PA,6,PA06,Sparse suburban,"Houlahan, Chrissy",(D),,-7.31,-3,-17.41,12.29
+Pennsylvania,PA,7,PA07,Sparse suburban,"Wild, Susan",(D),,-0.49,-3,-10.59,24.01
+Pennsylvania,PA,8,PA08,Rural-suburban mix,"Cartwright, Matt",(D),,4.15,-3,-5.95,34.58
+Pennsylvania,PA,9,PA09,Pure rural,"Meuser, Dan",(R),,30.88,3,26.78,96.29
+Pennsylvania,PA,10,PA10,Sparse suburban,"Perry, Scott",(R),,11.04,3,6.94,67.82
+Pennsylvania,PA,11,PA11,Sparse suburban,"Smucker, Lloyd",(R),,27.12,3,23.02,93.76
+Pennsylvania,PA,12,PA12,Pure rural,"Keller, Fred",(R),,38.46,3,34.36,98.90
+Pennsylvania,PA,13,PA13,Pure rural,"Joyce, John",(R),,47.67,3,43.57,99.82
+Pennsylvania,PA,14,PA14,Rural-suburban mix,"Reschenthaler, Guy",(R),,27.14,3,23.04,93.77
+Pennsylvania,PA,15,PA15,Pure rural,"Thompson, Glenn",(R),,43.45,3,39.35,99.56
+Pennsylvania,PA,16,PA16,Rural-suburban mix,"Kelly, Mike",(R),,16.62,3,12.52,79.80
+Pennsylvania,PA,17,PA17,Sparse suburban,"Lamb, Conor",(D),,1.2,-3,-8.9,27.65
+Pennsylvania,PA,18,PA18,Urban-suburban mix,"Doyle, Mike",(D),,-24.99,-3,-35.09,0.97
+Rhode Island,RI,1,RI01,Urban-suburban mix,"Cicilline, David",(D),,-24.88,-3,-34.98,0.99
+Rhode Island,RI,2,RI02,Sparse suburban,"Langevin, Jim",(D),,-12.38,-3,-22.48,6.70
+South Carolina,SC,1,SC01,Sparse suburban,"Cunningham, Joe",(D),,12.28,-3,2.18,55.78
+South Carolina,SC,2,SC02,Rural-suburban mix,"Wilson, Joe",(R),,21.35,3,17.25,87.49
+South Carolina,SC,3,SC03,Pure rural,"Duncan, Jeff",(R),,41.93,3,37.83,99.42
+South Carolina,SC,4,SC04,Sparse suburban,"Timmons, William",(R),,29.72,3,25.62,95.62
+South Carolina,SC,5,SC05,Pure rural,"Norman, Ralph",(R),,21.66,3,17.56,87.91
+South Carolina,SC,6,SC06,Pure rural,"Clyburn, Jim",(D),,-34.36,-3,-44.46,0.15
+South Carolina,SC,7,SC07,Rural-suburban mix,"Rice, Tom",(R),,23.36,3,19.26,90.04
+South Dakota,SD,1,SD00,Pure rural,"Johnson, Dusty",(R),,31.35,3,27.25,96.54
+Tennessee,TN,1,TN01,Rural-suburban mix,,(R),OPEN,60.76,0,53.66,99.98
+Tennessee,TN,2,TN02,Rural-suburban mix,"Burchett, Tim",(R),,39.58,3,35.48,99.10
+Tennessee,TN,3,TN03,Rural-suburban mix,"Fleischmann, Chuck",(R),,37.01,3,32.91,98.59
+Tennessee,TN,4,TN04,Rural-suburban mix,"DesJarlais, Scott",(R),,40.38,3,36.28,99.22
+Tennessee,TN,5,TN05,Sparse suburban,"Cooper, Jim",(D),,-20.44,-3,-30.54,2.09
+Tennessee,TN,6,TN06,Pure rural,"Rose, John",(R),,49.71,3,45.61,99.88
+Tennessee,TN,7,TN07,Pure rural,"Green, Mark",(R),,41.79,3,37.69,99.40
+Tennessee,TN,8,TN08,Rural-suburban mix,"Kustoff, David",(R),,41.42,3,37.32,99.36
+Tennessee,TN,9,TN09,Dense suburban,"Cohen, Steve",(D),,-53.87,-3,-63.97,0.00
+Texas,TX,1,TX01,Pure rural,"Gohmert, Louie",(R),,51.38,3,47.28,99.92
+Texas,TX,2,TX02,Dense suburban,"Crenshaw, Dan",(R),,15.41,3,11.31,77.46
+Texas,TX,3,TX03,Dense suburban,"Taylor, Van",(R),,19.11,3,15.01,84.15
+Texas,TX,4,TX04,Pure rural,"Ratcliffe, John",(R),,57.92,3,53.82,99.98
+Texas,TX,5,TX05,Rural-suburban mix,"Gooden, Lance",(R),,32.16,3,28.06,96.93
+Texas,TX,6,TX06,Dense suburban,"Wright, Ron",(R),,15.87,3,11.77,78.37
+Texas,TX,7,TX07,Urban-suburban mix,"Fletcher, Lizzie",(D),,4.41,-3,-5.69,35.22
+Texas,TX,8,TX08,Rural-suburban mix,"Brady, Kevin",(R),,54.52,3,50.42,99.96
+Texas,TX,9,TX09,Urban-suburban mix,"Green, Al",(D),,-58.54,-3,-68.64,0.00
+Texas,TX,10,TX10,Rural-suburban mix,"McCaul, Michael",(R),,13.22,3,9.12,72.84
+Texas,TX,11,TX11,Rural-suburban mix,"Conaway, Michael",(R),,65.35,3,61.25,100.00
+Texas,TX,12,TX12,Sparse suburban,"Granger, Kay",(R),,35.94,3,31.84,98.31
+Texas,TX,13,TX13,Rural-suburban mix,"Thornberry, Mac",(R),,68.8,3,64.7,100.00
+Texas,TX,14,TX14,Sparse suburban,"Weber, Randy",(R),,25.05,3,20.95,91.87
+Texas,TX,15,TX15,Sparse suburban,"Gonzalez, Vicente",(D),,-13.31,-3,-23.41,5.93
+Texas,TX,16,TX16,Dense suburban,"Escobar, Veronica",(D),,-34.76,-3,-44.86,0.14
+Texas,TX,17,TX17,Rural-suburban mix,"Flores, Bill",(R),,22.33,3,18.23,88.79
+Texas,TX,18,TX18,Dense suburban,"Jackson Lee, Sheila",(D),,-50.08,-3,-60.18,0.00
+Texas,TX,19,TX19,Rural-suburban mix,"Arrington, Jodey",(R),,54.8,3,50.7,99.96
+Texas,TX,20,TX20,Dense suburban,"Castro, Joaquin",(D),,-23.54,-3,-33.64,1.25
+Texas,TX,21,TX21,Dense suburban,"Roy, Chip",(R),,13.07,3,8.97,72.51
+Texas,TX,22,TX22,Sparse suburban,,(R),OPEN,13.51,0,6.41,66.54
+Texas,TX,23,TX23,Rural-suburban mix,,(R),OPEN,4.12,0,-2.98,42.13
+Texas,TX,24,TX24,Dense suburban,,(R),OPEN,11.59,0,4.49,61.77
+Texas,TX,25,TX25,Rural-suburban mix,"Williams, Roger",(R),,18.04,3,13.94,82.36
+Texas,TX,26,TX26,Sparse suburban,"Burgess, Michael",(R),,29.96,3,25.86,95.76
+Texas,TX,27,TX27,Rural-suburban mix,"Cloud, Michael",(R),,28.72,3,24.62,94.96
+Texas,TX,28,TX28,Sparse suburban,"Cuellar, Henry",(D),,-17.66,-3,-27.76,3.21
+Texas,TX,29,TX29,Dense suburban,"Garcia, Sylvia",(D),,-41.69,-3,-51.79,0.03
+Texas,TX,30,TX30,Dense suburban,"Johnson, E.B.",(D),,-58.44,-3,-68.54,0.00
+Texas,TX,31,TX31,Sparse suburban,"Carter, John",(R),,14.36,3,10.26,75.30
+Texas,TX,32,TX32,Dense suburban,"Allred, Collin",(D),,2.98,-3,-7.12,31.75
+Texas,TX,33,TX33,Dense suburban,"Veasey, Marc",(D),,-45.86,-3,-55.96,0.01
+Texas,TX,34,TX34,Rural-suburban mix,"Vela, Filemon",(D),,-15.72,-3,-25.82,4.26
+Texas,TX,35,TX35,Dense suburban,"Doggett, Lloyd",(D),,-33.1,-3,-43.2,0.20
+Texas,TX,36,TX36,Rural-suburban mix,"Babin, Brian",(R),,51.31,3,47.21,99.92
+Utah,UT,1,UT01,Sparse suburban,,(R),OPEN,39.71,0,32.61,98.51
+Utah,UT,2,UT02,Rural-suburban mix,"Stewart, Chris",(R),,23.13,3,19.03,89.77
+Utah,UT,3,UT03,Sparse suburban,"Curtis, John",(R),,39.93,3,35.83,99.15
+Utah,UT,4,UT04,Dense suburban,"McAdams, Ben",(D),,11.79,-3,1.69,54.49
+Virginia,VA,1,VA01,Rural-suburban mix,"Wittman, Rob",(R),,16.66,3,12.56,79.88
+Virginia,VA,2,VA02,Dense suburban,"Luria, Elaine",(D),,5.93,-3,-4.17,39.05
+Virginia,VA,3,VA03,Dense suburban,"Scott, Bobby",(D),,-29.79,-3,-39.89,0.39
+Virginia,VA,4,VA04,Rural-suburban mix,"McEachin, Donald",(D),,-18.71,-3,-28.81,2.74
+Virginia,VA,5,VA05,Pure rural,"Riggleman, Denver ",(R),,13.79,3,9.69,74.09
+Virginia,VA,6,VA06,Rural-suburban mix,"Cline, Ben ",(R),,27.07,3,22.97,93.72
+Virginia,VA,7,VA07,Rural-suburban mix,"Spanberger, Abigail",(D),,8.28,-3,-1.82,45.17
+Virginia,VA,8,VA08,Urban-suburban mix,"Beyer, Don",(D),,-45.77,-3,-55.87,0.01
+Virginia,VA,9,VA09,Pure rural,"Griffith, Morgan",(R),,40.38,3,36.28,99.22
+Virginia,VA,10,VA10,Sparse suburban,"Wexton, Jennifer",(D),,-4.77,-3,-14.87,16.08
+Virginia,VA,11,VA11,Dense suburban,"Connolly, Gerry",(D),,-35.04,-3,-45.14,0.13
+Vermont,VT,1,VT00,Pure rural,"Welch, Peter",(D),,-29.74,-3,-39.84,0.40
+Washington,WA,1,WA01,Sparse suburban,"DelBene, Suzan",(D),,-11.58,-3,-21.68,7.42
+Washington,WA,2,WA02,Dense suburban,"Larsen, Rick",(D),,-19.73,-3,-29.83,2.34
+Washington,WA,3,WA03,Rural-suburban mix,"Herrera Beutler, Jaime",(R),,11.09,3,6.99,67.94
+Washington,WA,4,WA04,Rural-suburban mix,"Newhouse, Dan",(R),,29.17,3,25.07,95.27
+Washington,WA,5,WA05,Rural-suburban mix,"McMorris Rodgers, Cathy",(R),,16.36,3,12.26,79.31
+Washington,WA,6,WA06,Rural-suburban mix,"Kilmer, Derek",(D),,-14.33,-3,-24.43,5.17
+Washington,WA,7,WA07,Urban-suburban mix,"Jayapal, Pramila",(D),,-62.6,-3,-72.7,0.00
+Washington,WA,8,WA08,Sparse suburban,"Schrier, Kim",(D),,1.49,-3,-8.61,28.30
+Washington,WA,9,WA09,Dense suburban,"Smith, Adam",(D),,-44.03,-3,-54.13,0.02
+Washington,WA,10,WA10,Dense suburban,,(D),OPEN,-11.84,0,-18.94,10.34
+Wisconsin,WI,1,WI01,Sparse suburban,"Steil, Bryan",(R),,15.8,3,11.7,78.23
+Wisconsin,WI,2,WI02,Rural-suburban mix,"Pocan, Mark",(D),,-34.4,-3,-44.5,0.15
+Wisconsin,WI,3,WI03,Pure rural,"Kind, Ron",(D),,-2.6,-3,-12.7,19.86
+Wisconsin,WI,4,WI04,Urban-suburban mix,"Moore, Gwen",(D),,-47.78,-3,-57.88,0.01
+Wisconsin,WI,5,WI05,Sparse suburban,,(R),OPEN,27.37,0,20.27,91.17
+Wisconsin,WI,6,WI06,Rural-suburban mix,"Grothman, Glenn",(R),,18.49,3,14.39,83.13
+Wisconsin,WI,7,WI07,Pure rural,,(R),OPEN,24.42,0,17.32,87.59
+Wisconsin,WI,8,WI08,Rural-suburban mix,"Gallagher, Mike",(R),,25.83,3,21.73,92.63
+West Virginia,WV,1,WV01,Pure rural,"McKinley, David",(R),,39.69,3,35.59,99.12
+West Virginia,WV,2,WV02,Pure rural,"Mooney, Alex",(R),,28.74,3,24.64,94.98
+West Virginia,WV,3,WV03,Pure rural,"Miller, Carol ",(R),,36.28,3,32.18,98.40
+Wyoming,WY,1,WY00,Pure rural,"Cheney, Liz",(R),,45.96,3,41.86,99.74
