@@ -58,59 +58,124 @@
     <script src="//d3js.org/d3.v4.min.js"></script>
     <script src="//d3js.org/queue.v1.min.js"></script>
     <script src="//d3js.org/topojson.v1.min.js"></script>
-    <div id="boxmap"></div>
+    <div class="computer" id="boxmap"></div>
+    <div id="csv"></div>
     <script>
         var color = d3.scaleLinear()
             .domain([0, 50, 100])
             .range(["#0091FF", "white", "#FF6060"])
-        d3.csv("Book1.csv", data => {
+        d3.csv("grid-map.csv", data => {
             d3.csv("2020-house-input.csv", input => {
-                console.log(data)
-                var keys = data.columns
-                console.log(keys)
-                var grid = []
+
+
+
+
                 data.forEach((d, i) => {
-                    var rowNumber = +d.index
-                    var row = d
-                    keys.forEach((d, i) => {
-                        var district = row[i]
-                        var columnNumber = i
-                        grid.push({ district: district, row: rowNumber, column: columnNumber })
-                    })
-                })
-                console.log(grid)
-
-                grid.forEach((d, i) => {
                     var district = d.district
-                    d.win = input.filter(d => d.id == district).length == 0 ? 50 : +input.filter(d => d.id == district)[0].win
+                    d.win = input.filter(d => d.id == district).length == 0 ? 0 : +input.filter(d => d.id == district)[0].win
                 })
 
-                var svg = d3.select("#boxmap").append("svg")
-                    .attr("viewBox", "0 0 1000 500")
 
-                svg.selectAll("grid")
-                    .data(grid)
+                var boxmap = d3.select("#boxmap").append("svg")
+                    .attr("viewBox", "0 0 1110 700")
+
+                var pct = [50, 60, 70, 80, 90, 100]
+
+
+                boxmap.selectAll("grid")
+                    .data(pct)
+                    .enter()
+                    .append("rect")
+                    .attr("x", (d, i) => i * 20 + 900)
+                    .attr("y", (d, i) => 500)
+                    .attr("width", 20)
+                    .attr("height", 20)
+                    .attr("ry", 5)
+                    .attr("stroke", "white")
+                    .attr("fill", d => color(d))
+
+                boxmap.selectAll("grid")
+                    .data(pct)
+                    .enter()
+                    .append("rect")
+                    .attr("x", (d, i) => i * 20 + 900)
+                    .attr("y", (d, i) => 520)
+                    .attr("width", 20)
+                    .attr("height", 20)
+                    .attr("ry", 5)
+                    .attr("stroke", "white")
+                    .attr("fill", d => color(100 - d))
+
+                boxmap.selectAll("grid")
+                    .data(pct)
+                    .enter()
+                    .append("text")
+                    .text(d => d)
+                    .attr("x", (d, i) => i * 20 + 910)
+                    .attr("y", (d, i) => 490)
+                    .attr("dominant-baseline", "central")
+                    .attr("text-anchor", "middle")
+                    .attr("fill", "black")
+                    .style("font-family", "sf-mono")
+                    .attr("font-size", 12)
+
+                boxmap.append("text")
+                    .text("REP")
+                    .attr("x", (d, i) => 1025)
+                    .attr("y", (d, i) => 510)
+                    .attr("dominant-baseline", "central")
+                    .attr("text-anchor", "start")
+                    .attr("fill", "black")
+                    .style("font-family", "sf-mono")
+                    .attr("font-size", 15)
+
+                boxmap.append("text")
+                    .text("DEM")
+                    .attr("x", (d, i) => 1025)
+                    .attr("y", (d, i) => 530)
+                    .attr("dominant-baseline", "central")
+                    .attr("text-anchor", "start")
+                    .attr("fill", "black")
+                    .style("font-family", "sf-mono")
+                    .attr("font-size", 15)
+
+                boxmap.selectAll("grid")
+                    .data(data)
                     .enter()
                     .append("rect")
                     .attr("x", d => (+d.column) * 20)
                     .attr("y", d => (+d.row) * 20)
                     .attr("width", 20)
                     .attr("height", 20)
+                    .attr("ry", 5)
                     .attr("stroke", d => d.district == "" || d.district == undefined ? "none" : "white")
-                    .attr("fill", d => d.district == "" || d.district == undefined ? "none" : color(d.win))
+                    .attr("fill", d => d.label == "" ? color(d.win) : "none")
 
-                svg.selectAll("grid")
-                    .data(grid)
+                boxmap.selectAll("grid")
+                    .data(data)
                     .enter()
                     .append("text")
-                    .text(d => d.district)
+                    .text(d => d.label)
                     .attr("x", d => (+d.column) * 20 + 10)
                     .attr("y", d => (+d.row) * 20 + 10)
                     .attr("dominant-baseline", "central")
                     .attr("text-anchor", "middle")
                     .attr("fill", "black")
                     .style("font-family", "sf-mono")
-                    .attr("font-size", 6.5)
+                    .attr("font-size", 15)
+
+                boxmap.selectAll("grid")
+                    .data(data)
+                    .enter()
+                    .append("rect")
+                    .attr("class", "statesover")
+                    .attr("x", d => (+d.column) * 20)
+                    .attr("y", d => (+d.row) * 20)
+                    .attr("width", 20)
+                    .attr("height", 20)
+                    .attr("ry", 5)
+                    .attr("stroke", d => Math.abs(d.win - 50) < 25 ? "black" : "none")
+                    .attr("stroke-width", 1.5)
             })
         })
     </script>
