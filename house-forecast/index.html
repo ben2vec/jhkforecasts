@@ -37,14 +37,15 @@
                 }
 
                 #searchBar {
-                        width:30%;
+                        width: 30%;
                         text-align: center;
                         margin-left: 35%;
-                        height: 30px;
+                        height: 5vw;
                         font-family: sf-mono;
-                        font-size: 1vw;
+                        font-size: 1.3vw;
                         color: black;
                         text-transform: uppercase;
+                        margin-bottom: .5px;
                 }
 
                 .district-boundaries {
@@ -62,6 +63,8 @@
                 #tipDiv {
                         fill: none;
                 }
+
+               
         </style>
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="twitter:card" content="summary_large_image">
@@ -306,7 +309,9 @@
                 </script>
         </div>
         <div class="special" id="finaldiv">
-                <input id="searchBar" type="text" placeholder="TYPE DISTRICT ex. IDA00 or TX32">
+                <div style="top:0;position:sticky;background-color: white;"> <input id="searchBar" type="text"
+                                placeholder="TYPE DISTRICT ex. IDA00 or TX32">
+                </div>
                 <div id="dataTable"></div>
         </div>
         <div class="special">

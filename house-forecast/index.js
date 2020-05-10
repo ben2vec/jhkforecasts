@@ -961,6 +961,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
     var headData = ["State", "Seat", "Win", "Dem Vote", "Rep Vote"]
 
     var header = table.append("tr")
+    
     var demScale = d3.scaleLinear()
         .domain([0, 100])
         .range(["white", color(0)])
@@ -1126,7 +1127,9 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
     .on("change",d=>{
         var inputvalue = d3.select("#searchBar").property("value").toUpperCase()
         console.log(inputvalue)
-        window.location.replace("#districts"+inputvalue)
+        window.location.replace("#district"+inputvalue)
+        window.scrollBy(0,-100)
+        
     })
 
 }
