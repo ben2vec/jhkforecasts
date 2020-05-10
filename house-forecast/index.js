@@ -1038,7 +1038,6 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
         var district = d.districtID
         var incumbent = inputData.filter(d => d.id == district)[0].incumbentParty
         d.margin = d.repVote-d.demVote
-        console.log(incumbent)
         table.append("tr")
             .attr("id", "district" + district)
 
@@ -1125,8 +1124,9 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
 
     var searchBar = d3.select("#searchBar")
     .on("change",d=>{
-        var inputvalue = $("#searchBar").val()
-        window.location.replace("https://projects.jhkforecasts.com/house-forecast/#"+inputvalue)
+        var inputvalue = d3.select("#searchBar").property("value").toUpperCase()
+        console.log(inputvalue)
+        window.location.replace("#districts"+inputvalue)
     })
 
 }
