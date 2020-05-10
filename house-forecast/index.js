@@ -171,7 +171,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
         .attr("class", "district-boundaries")
         .selectAll("path")
         .data(districts)
-        .enter().append("path")
+        .enter().append("a").attr("href",d=>"#district"+d.districtID).append("path")
         .attr("d", path)
         .style("fill", (d, i) => color(d.properties.repWin))
         .on('mouseover', function (d) {
@@ -393,6 +393,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
     boxmap.selectAll("grid")
         .data(grid)
         .enter()
+        .append("a").attr("href",d=>"#district"+d.district)
         .append("rect")
         .attr("class", "statesover")
         .attr("x", d => (+d.column) * 20)
