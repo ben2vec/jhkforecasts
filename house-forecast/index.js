@@ -74,7 +74,9 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
     if (error) throw error;
 
     var today = data.slice(data.length - 436, data.length)
-
+    console.log(data[data.length-1])
+    var updated = data[data.length-1].seat
+    document.getElementById("updated").innerText = updated
     var districts = topojson.feature(congress, congress.objects.collection).features
     districts.forEach((d, i) => {
         var state = d.properties.state
