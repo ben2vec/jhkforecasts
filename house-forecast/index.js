@@ -169,7 +169,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
         .attr("class", "district-boundaries")
         .selectAll("path")
         .data(districts)
-        .enter().append("a").attr("href",d=>"#district"+d.districtID).append("path")
+        .enter().append("a").attr("href", d => "districts?district=" + d.districtID).append("path")
         .attr("d", path)
         .style("fill", (d, i) => color(d.properties.repWin))
         .on('mouseover', function (d) {
@@ -391,7 +391,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
     boxmap.selectAll("grid")
         .data(grid)
         .enter()
-        .append("a").attr("href",d=>"#district"+d.district)
+        .append("a").attr("href", d => "districts?district=" + d.district)
         .append("rect")
         .attr("class", "statesover")
         .attr("x", d => (+d.column) * 20)
@@ -960,7 +960,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
     var headData = ["State", "Seat", "Win", "Dem Vote", "Rep Vote"]
 
     var header = table.append("tr")
-    
+
     var demScale = d3.scaleLinear()
         .domain([0, 100])
         .range(["white", color(0)])
@@ -971,18 +971,19 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
 
     header.append("th")
         .style("text-align", "left")
-        .style("width", "30%")
+        .style("width", "40%")
         .append("h1")
         .text("STATE")
         .style("font-size", "1.5vw")
         .style("font-weight", 100)
         .style("font-family", "sf-mono")
 
+
     header.append("th")
         .style("text-align", "center")
-        .style("width", "10%")
+        .style("width", "5%")
         .append("h1")
-        .text("SEAT")
+        .text("(I)")
         .style("font-size", "1.5vw")
         .style("font-weight", 100)
         .style("font-family", "sf-mono")
@@ -991,7 +992,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
         .style("text-align", "center")
         .style("width", "5%")
         .append("h1")
-        .text("(I)")
+        .text("FLIP?")
         .style("font-size", "1.5vw")
         .style("font-weight", 100)
         .style("font-family", "sf-mono")
@@ -1037,7 +1038,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
     districtData.forEach((d, i) => {
         var district = d.districtID
         var incumbent = inputData.filter(d => d.id == district)[0].incumbentParty
-        d.margin = d.repVote-d.demVote
+        d.margin = d.repVote - d.demVote
         table.append("tr")
             .attr("id", "district" + district)
 
@@ -1046,22 +1047,21 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
             .style("text-align", "left")
             .style("width", "30%")
             .append("h1")
-            .text(d.state.toUpperCase() +"  "+ ordinal(d.seat).toUpperCase())
+            .text(d.state.toUpperCase() + "  " + ordinal(d.seat).toUpperCase())
             .style("font-size", "1.5vw")
             .style("font-weight", 100)
             .style("font-family", "sf-mono")
-
 
         d3.select("#" + "district" + district)
             .append("td")
             .style("text-align", "center")
-            .style("width", "10%")
+            .style("width", "5%")
             .append("h1")
-            .text(d.seat == 0 ? "AL" : d.seat)
+            .text(incumbent == "(R)"? (d.repWin>50?"":"R->D"):(d.repWin<50?"":"D->R"))
+            .style("color", incumbent == "(R)" ? color(0) : color(100))
             .style("font-size", "1.5vw")
-            .style("font-weight", 100)
+            .style("font-weight", 500)
             .style("font-family", "sf-mono")
-
 
         d3.select("#" + "district" + district)
             .append("td")
@@ -1113,9 +1113,9 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
             .append("td")
             .style("text-align", "center")
             .style("width", "10%")
-            .style("background-color", color(50+d.margin))
+            .style("background-color", color(50 + d.margin))
             .append("h1")
-            .text(d.repWin > 50 ? "R+"+nf(d.margin) : "D+"+nf(-d.margin))
+            .text(d.repWin > 50 ? "R+" + nf(d.margin) : "D+" + nf(-d.margin))
             .style("font-size", "1.5vw")
             .style("font-weight", 100)
             .style("font-family", "sf-mono")
@@ -1123,12 +1123,12 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
     })
 
     var searchBar = d3.select("#searchBar")
-    .on("change",d=>{
-        var inputvalue = d3.select("#searchBar").property("value").toUpperCase()
-        console.log(inputvalue)
-        window.location.replace("#district"+inputvalue)
-        window.scrollBy(0,-100)
-        
-    })
+        .on("change", d => {
+            var inputvalue = d3.select("#searchBar").property("value").toUpperCase()
+            console.log(inputvalue)
+            window.location.replace("#district" + inputvalue)
+            window.scrollBy(0, -100)
+
+        })
 
 }
