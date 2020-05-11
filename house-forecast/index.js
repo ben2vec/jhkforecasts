@@ -1046,11 +1046,12 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
             .append("td")
             .style("text-align", "left")
             .style("width", "30%")
-            .append("h1")
+            .append("a").attr("href", d => "districts?district=" + district).append("path")
             .text(d.state.toUpperCase() + "  " + ordinal(d.seat).toUpperCase())
             .style("font-size", "1.5vw")
             .style("font-weight", 100)
             .style("font-family", "sf-mono")
+            
 
         d3.select("#" + "district" + district)
             .append("td")
