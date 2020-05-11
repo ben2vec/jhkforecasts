@@ -1048,7 +1048,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
             .style("text-align", "left")
             .style("width", "30%")
             .append("h1")
-            .text(d.state.toUpperCase())
+            .text(d.state.toUpperCase() +"  "+ ordinal(d.seat).toUpperCase())
             .style("font-size", "1.5vw")
             .style("font-weight", 100)
             .style("font-family", "sf-mono")

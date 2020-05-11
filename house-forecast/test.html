@@ -1,183 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="utf-8">
-    <style>
-        #less {
-            display: none;
-        }
+<title>Sort a HTML Table Numerically</title>
+<style>
+table {
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
 
-        .btn {
-            border: none;
-            color: white;
-            padding: 10px 10px;
-            font-size: 16px;
-            font-family: brandon-grotesque;
-            border-radius: 10px;
-            cursor: pointer;
+th, td {
+  text-align: left;
+  padding: 16px;
+}
 
-        }
-
-        .default {
-            background-color: #e7e7e7;
-            color: black;
-        }
-
-        .default:hover {
-            background: #ddd;
-        }
-
-        path {
-            stroke-linejoin: round;
-            stroke-linecap: round;
-        }
-
-
-
-        .districts {
-            pointer-events: none;
-            fill: black;
-            stroke: #fff;
-            stroke-width: .5px;
-        }
-
-        .state-boundaries {
-            pointer-events: none;
-            fill: none;
-            stroke: white;
-            stroke-width: 1.5px;
-        }
-    </style>
+tr:nth-child(even) {
+  background-color: #f2f2f2
+}
+</style>
 </head>
-
-
 <body>
-    <link rel="stylesheet" href="https://use.typekit.net/htk2wjy.css">
-    <link rel="stylesheet" href="//projects.jhkforecasts.com/presidential-forecast/index.css">
-    <script src="//d3js.org/d3.v4.min.js"></script>
-    <script src="//d3js.org/queue.v1.min.js"></script>
-    <script src="//d3js.org/topojson.v1.min.js"></script>
-    <div class="computer" id="boxmap"></div>
-    <div id="csv"></div>
-    <script>
-        var color = d3.scaleLinear()
-            .domain([0, 50, 100])
-            .range(["#0091FF", "white", "#FF6060"])
-        d3.csv("grid-map.csv", data => {
-            d3.csv("2020-house-input.csv", input => {
 
+<p>Click the button to sort the table numerically:</p>
+<p><button onclick="sortTable()">Sort</button></p>
 
+<table id="myTable">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>Berglunds snabbkop</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>North/South</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>Alfreds Futterkiste</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Koniglich Essen</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Magazzini Alimentari Riuniti</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>Paris specialites</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>Island Trading</td>
+  </tr>
+ 
+</table>
 
+<script>
+function sortTable() {
+  var table, rows, switching, i, x, y, shouldSwitch;
+  table = document.getElementById("myTable");
+  switching = true;
+  /*Make a loop that will continue until
+  no switching has been done:*/
+  while (switching) {
+    //start by saying: no switching is done:
+    console.log(table)
+    switching = false;
+    rows = table.rows;
+    /*Loop through all table rows (except the
+    first, which contains table headers):*/
+    for (i = 1; i < (rows.length - 1); i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+      x = rows[i].getElementsByTagName("TD")[0];
+      y = rows[i + 1].getElementsByTagName("TD")[0];
+      //check if the two rows should switch place:
+      if (Number(x.innerHTML) > Number(y.innerHTML)) {
+        //if so, mark as a switch and break the loop:
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      /*If a switch has been marked, make the switch
+      and mark that a switch has been done:*/
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+    }
+  }
+}
+</script>
 
-                data.forEach((d, i) => {
-                    var district = d.district
-                    d.win = input.filter(d => d.id == district).length == 0 ? 0 : +input.filter(d => d.id == district)[0].win
-                })
-
-
-                var boxmap = d3.select("#boxmap").append("svg")
-                    .attr("viewBox", "0 0 1110 700")
-
-                var pct = [50, 60, 70, 80, 90, 100]
-
-
-                boxmap.selectAll("grid")
-                    .data(pct)
-                    .enter()
-                    .append("rect")
-                    .attr("x", (d, i) => i * 20 + 900)
-                    .attr("y", (d, i) => 500)
-                    .attr("width", 20)
-                    .attr("height", 20)
-                    .attr("ry", 5)
-                    .attr("stroke", "white")
-                    .attr("fill", d => color(d))
-
-                boxmap.selectAll("grid")
-                    .data(pct)
-                    .enter()
-                    .append("rect")
-                    .attr("x", (d, i) => i * 20 + 900)
-                    .attr("y", (d, i) => 520)
-                    .attr("width", 20)
-                    .attr("height", 20)
-                    .attr("ry", 5)
-                    .attr("stroke", "white")
-                    .attr("fill", d => color(100 - d))
-
-                boxmap.selectAll("grid")
-                    .data(pct)
-                    .enter()
-                    .append("text")
-                    .text(d => d)
-                    .attr("x", (d, i) => i * 20 + 910)
-                    .attr("y", (d, i) => 490)
-                    .attr("dominant-baseline", "central")
-                    .attr("text-anchor", "middle")
-                    .attr("fill", "black")
-                    .style("font-family", "sf-mono")
-                    .attr("font-size", 12)
-
-                boxmap.append("text")
-                    .text("REP")
-                    .attr("x", (d, i) => 1025)
-                    .attr("y", (d, i) => 510)
-                    .attr("dominant-baseline", "central")
-                    .attr("text-anchor", "start")
-                    .attr("fill", "black")
-                    .style("font-family", "sf-mono")
-                    .attr("font-size", 15)
-
-                boxmap.append("text")
-                    .text("DEM")
-                    .attr("x", (d, i) => 1025)
-                    .attr("y", (d, i) => 530)
-                    .attr("dominant-baseline", "central")
-                    .attr("text-anchor", "start")
-                    .attr("fill", "black")
-                    .style("font-family", "sf-mono")
-                    .attr("font-size", 15)
-
-                boxmap.selectAll("grid")
-                    .data(data)
-                    .enter()
-                    .append("rect")
-                    .attr("x", d => (+d.column) * 20)
-                    .attr("y", d => (+d.row) * 20)
-                    .attr("width", 20)
-                    .attr("height", 20)
-                    .attr("ry", 5)
-                    .attr("stroke", d => d.district == "" || d.district == undefined ? "none" : "white")
-                    .attr("fill", d => d.label == "" ? color(d.win) : "none")
-
-                boxmap.selectAll("grid")
-                    .data(data)
-                    .enter()
-                    .append("text")
-                    .text(d => d.label)
-                    .attr("x", d => (+d.column) * 20 + 10)
-                    .attr("y", d => (+d.row) * 20 + 10)
-                    .attr("dominant-baseline", "central")
-                    .attr("text-anchor", "middle")
-                    .attr("fill", "black")
-                    .style("font-family", "sf-mono")
-                    .attr("font-size", 15)
-
-                boxmap.selectAll("grid")
-                    .data(data)
-                    .enter()
-                    .append("rect")
-                    .attr("class", "statesover")
-                    .attr("x", d => (+d.column) * 20)
-                    .attr("y", d => (+d.row) * 20)
-                    .attr("width", 20)
-                    .attr("height", 20)
-                    .attr("ry", 5)
-                    .attr("stroke", d => Math.abs(d.win - 50) < 25 ? "black" : "none")
-                    .attr("stroke-width", 1.5)
-            })
-        })
-    </script>
-
+</body>
 </html>
