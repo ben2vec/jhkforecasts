@@ -15,9 +15,7 @@ d3.select("#time").append("h1")
     .style("font-size", "3vw")
     .style("font-weight", "700")
 
-const queryString = window.location.search
-const urlParams = new URLSearchParams(queryString)
-const district = urlParams.get("district")
+
 
 var hist = d3.select("#histogram").append("svg")
     .attr("viewBox", "0 0 1000 300")
