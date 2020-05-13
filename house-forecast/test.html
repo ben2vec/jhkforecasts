@@ -1,102 +1,1514 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Sort a HTML Table Numerically</title>
-<style>
-table {
-  border-spacing: 0;
-  width: 100%;
-  border: 1px solid #ddd;
-}
+  <title>Sort a HTML Table Numerically</title>
+  <style>
 
-th, td {
-  text-align: left;
-  padding: 16px;
-}
-
-tr:nth-child(even) {
-  background-color: #f2f2f2
-}
-</style>
+  </style>
 </head>
+
 <body>
-
-<p>Click the button to sort the table numerically:</p>
-<p><button onclick="sortTable()">Sort</button></p>
-
-<table id="myTable">
-  <tr>
-    <th>ID</th>
-    <th>Name</th>
-  </tr>
-  <tr>
-    <td>5</td>
-    <td>Berglunds snabbkop</td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>North/South</td>
-  </tr>
-  <tr>
-    <td>6</td>
-    <td>Alfreds Futterkiste</td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>Koniglich Essen</td>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>Magazzini Alimentari Riuniti</td>
-  </tr>
-  <tr>
-    <td>7</td>
-    <td>Paris specialites</td>
-  </tr>
-  <tr>
-    <td>4</td>
-    <td>Island Trading</td>
-  </tr>
- 
-</table>
-
-<script>
-function sortTable() {
-  var table, rows, switching, i, x, y, shouldSwitch;
-  table = document.getElementById("myTable");
-  switching = true;
-  /*Make a loop that will continue until
-  no switching has been done:*/
-  while (switching) {
-    //start by saying: no switching is done:
-    console.log(table)
-    switching = false;
-    rows = table.rows;
-    /*Loop through all table rows (except the
-    first, which contains table headers):*/
-    for (i = 1; i < (rows.length - 1); i++) {
-      //start by saying there should be no switching:
-      shouldSwitch = false;
-      /*Get the two elements you want to compare,
-      one from current row and one from the next:*/
-      x = rows[i].getElementsByTagName("TD")[0];
-      y = rows[i + 1].getElementsByTagName("TD")[0];
-      //check if the two rows should switch place:
-      if (Number(x.innerHTML) > Number(y.innerHTML)) {
-        //if so, mark as a switch and break the loop:
-        shouldSwitch = true;
-        break;
-      }
-    }
-    if (shouldSwitch) {
-      /*If a switch has been marked, make the switch
-      and mark that a switch has been done:*/
-      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-      switching = true;
-    }
-  }
-}
-</script>
+  <table style='width:100%;border-collapse:collapse'>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-bottom:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>STATE</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-bottom:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>GOP SEATS</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-bottom:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>PROJ. GOP SEATS</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-bottom:
+  solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>CHANGE</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-bottom:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>CLOSE RACES</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>TEXAS</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>23</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>21.37</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;background:#2FA4FF;
+  padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>D+1.63</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-bottom:solid #D9D9D9 1.0pt;background:#63BE7B;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>7</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>CALIFORNIA</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>7</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>8.10</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#FDA7A8;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>R+1.10</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  background:#79C78E;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>6</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>NEW YORK</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>6</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>6.50</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#FCD6D8;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>R+0.50</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#79C78E;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>6</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>MICHIGAN</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>6</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>6.99</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#FDB0B1;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>R+0.99</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#A5D9B4;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>4</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>PENNSYLVANIA</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>9</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>8.91</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#F1F7FF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>D+0.09</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#A5D9B4;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>4</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>IOWA</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>1</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>2.02</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#FDADAE;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>R+1.02</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#BBE2C7;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>3</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>MINNESOTA</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>3</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>3.52</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#FCD4D6;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>R+0.52</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#BBE2C7;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>3</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>NEW JERSEY</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>2</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>2.40</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#FCDEE0;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>R+0.40</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#BBE2C7;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>3</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>VIRGINIA</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>4</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>4.64</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#FCCACC;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>R+0.64</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#D1EBDA;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>2</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>ILLINOIS</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>5</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>5.07</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#FCF7FA;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>R+0.07</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#D1EBDA;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>2</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>GEORGIA</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>9</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>8.97</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#F7FAFF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>D+0.03</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#D1EBDA;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>2</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>OKLAHOMA</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>4</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>4.58</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#FCCFD1;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>R+0.58</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#E7F4ED;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>1</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>SOUTH CAROLINA</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>5</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>5.51</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#FCD5D7;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>R+0.51</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#E7F4ED;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>1</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>NEW MEXICO</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>0</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>0.50</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#FCD5D8;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>R+0.50</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#E7F4ED;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>1</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>UTAH</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>3</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>3.48</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#FCD7D9;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>R+0.48</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#E7F4ED;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>1</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>MAINE</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>0</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>0.47</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#FCD8DA;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>R+0.47</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#E7F4ED;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>1</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>NEW HAMPSHIRE</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>0</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>0.30</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#FCE5E8;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>R+0.30</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#E7F4ED;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>1</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>NEVADA</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>1</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>1.27</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#FCE8EA;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>R+0.27</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#E7F4ED;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>1</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>ARIZONA</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>4</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>4.17</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#FCEFF2;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>R+0.17</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#E7F4ED;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>1</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>KANSAS</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>3</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>3.10</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#FCF4F7;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>R+0.10</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#E7F4ED;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>1</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>WASHINGTON</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>3</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>2.93</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#F3F8FF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>D+0.07</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#E7F4ED;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>1</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>MISSOURI</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>6</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>5.82</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#E4F2FF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>D+0.18</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#E7F4ED;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>1</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>FLORIDA</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>14</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>13.73</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#D9EDFF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>D+0.27</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#E7F4ED;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>1</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>NEBRASKA</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>3</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>2.65</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#D0E9FF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>D+0.35</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#E7F4ED;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>1</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>OHIO</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>12</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>11.39</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#AFDBFF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>D+0.61</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#E7F4ED;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>1</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>NORTH CAROLINA</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>10</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>7.60</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#0091FF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>D+2.40</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#E7F4ED;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>1</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>OREGON</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>1</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>1.11</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#FCF4F7;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>R+0.11</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#FCFCFF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>0</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>CONNECTICUT</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>0</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>0.10</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#FCF5F8;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>R+0.10</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#FCFCFF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>0</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>MASSACHUSETTS</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>0</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>0.03</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#FCFAFD;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>R+0.03</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#FCFCFF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>0</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>RHODE ISLAND</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>0</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>0.01</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#FCFBFE;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>R+0.01</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#FCFCFF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>0</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>MARYLAND</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>1</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>1.01</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#FCFCFF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>R+0.01</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#FCFCFF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>0</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>DELAWARE</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>0</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>0.01</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#FCFCFF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>R+0.01</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#FCFCFF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>0</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>TENNESSEE</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>7</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>7.00</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#FCFCFF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>R+0.00</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#FCFCFF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>0</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>VERMONT</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>0</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>0.00</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#FCFCFF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>R+0.00</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#FCFCFF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>0</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>HAWAII</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>0</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>0.00</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#FCFCFF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>-</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#FCFCFF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>0</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>WYOMING</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>1</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>1.00</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#FBFBFF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>D+0.00</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#FCFCFF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>0</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>NORTH DAKOTA</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>1</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>1.00</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#FBFBFF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>D+0.00</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#FCFCFF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>0</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>SOUTH DAKOTA</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>1</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>1.00</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#FBFBFF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>D+0.00</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#FCFCFF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>0</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>LOUISIANA</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>5</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>5.00</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#FBFBFF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>D+0.00</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#FCFCFF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>0</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>MISSISSIPPI</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>3</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>3.00</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#FBFBFF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>D+0.00</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#FCFCFF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>0</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>IDAHO</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>2</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>1.99</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#FBFBFF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>D+0.01</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#FCFCFF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>0</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>WEST VIRGINIA</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>3</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>2.99</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#FBFBFF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>D+0.01</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#FCFCFF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>0</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>ALABAMA</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>6</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>5.99</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#FAFBFF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>D+0.01</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#FCFCFF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>0</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>COLORADO</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>3</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>2.96</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#F6F9FF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>D+0.04</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#FCFCFF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>0</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>WISCONSIN</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>5</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>4.93</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#F3F8FF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>D+0.07</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#FCFCFF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>0</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>ALASKA</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>1</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>0.92</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#F1F7FF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>D+0.08</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#FCFCFF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>0</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>KENTUCKY</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>5</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>4.91</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#F0F7FF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>D+0.09</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#FCFCFF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>0</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>ARKANSAS</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>4</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>3.91</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#F0F6FF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>D+0.09</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#FCFCFF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>0</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>MONTANA</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>1</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>0.90</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#EFF6FF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>D+0.10</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#FCFCFF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>0</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=160 nowrap valign=bottom style='width:120.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>INDIANA</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>7</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>6.83</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;background:#E6F2FF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>D+0.17</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;background:#FCFCFF;padding:0in 5.4pt 0in 5.4pt;
+  height:10pt'>
+        <p class=MsoNormal align=right style='text-align:right'><span
+            style='font-size:10.0pt;font-family:"";color:black'>0</span></p>
+      </td>
+    </tr>
+    <tr style='height:10pt'>
+      <td width=300 nowrap colspan=2 valign=bottom style='width:225.0pt;border:
+  none;border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>*CLOSE RACE &lt;85% WIN</span></p>
+      </td>
+      <td width=140 nowrap valign=bottom style='width:105.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>&nbsp;</span></p>
+      </td>
+      <td width=73 nowrap valign=bottom style='width:55.0pt;border:none;border-top:
+  solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>&nbsp;</span></p>
+      </td>
+      <td width=109 nowrap valign=bottom style='width:82.0pt;border:none;
+  border-top:solid #D9D9D9 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:10pt'>
+        <p class=MsoNormal><span style='font-size:10.0pt;font-family:"";
+  color:black'>&nbsp;</span></p>
+      </td>
+    </tr>
+  </table>
 
 </body>
+
 </html>
