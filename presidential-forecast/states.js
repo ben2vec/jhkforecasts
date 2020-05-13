@@ -245,6 +245,11 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
 
   var vote_dist = today
   vote_dist.sort((a, b) => b.proj_vote - a.proj_vote)
+  vote_dist.forEach((d, i) => {
+    var stdev = (+d.proj_vote - +d.p_10) / 1.3
+    d.p_10 = +d.proj_vote - stdev
+    d.p_90 = +d.proj_vote + stdev
+  })
   console.log(vote_dist)
   vote.append("image")
     .attr("href", "https://jhkforecasts.com/Trump-01.png")
