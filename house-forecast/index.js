@@ -74,8 +74,8 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
     if (error) throw error;
 
     var today = data.slice(data.length - 436, data.length)
-    console.log(data[data.length-1])
-    var updated = data[data.length-1].seat
+    console.log(data[data.length - 1])
+    var updated = data[data.length - 1].seat
     document.getElementById("updated").innerText = updated
     var districts = topojson.feature(congress, congress.objects.collection).features
     districts.forEach((d, i) => {
@@ -955,14 +955,12 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
 
     var table = d3.select("#dataTable")
         .append("table")
+        .attr("class", "sortable")
         .style("width", "100%")
-        .append("tbody")
 
 
-    var headData = ["State", "Seat", "Win", "Dem Vote", "Rep Vote"]
 
-    var header = table.append("tr")
-
+    var header = table.append("thead").append("tr")
     var demScale = d3.scaleLinear()
         .domain([0, 100])
         .range(["white", color(0)])
@@ -972,6 +970,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
         .range(["white", color(100)])
 
     header.append("th")
+        .attr("class", "")
         .style("text-align", "left")
         .style("width", "40%")
         .append("h1")
@@ -982,6 +981,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
 
 
     header.append("th")
+        .attr("class", "")
         .style("text-align", "center")
         .style("width", "5%")
         .append("h1")
@@ -991,6 +991,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
         .style("font-family", "sf-mono")
 
     header.append("th")
+        .attr("class", "")
         .style("text-align", "center")
         .style("width", "5%")
         .append("h1")
@@ -999,6 +1000,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
         .style("font-weight", 100)
         .style("font-family", "sf-mono")
     header.append("th")
+        .attr("class", "")
         .style("text-align", "center")
         .style("width", "10%")
         .append("h1")
@@ -1009,6 +1011,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
 
 
     header.append("th")
+        .attr("class", "")
         .style("text-align", "center")
         .style("width", "10%")
         .append("h1")
@@ -1019,6 +1022,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
 
 
     header.append("th")
+        .attr("class", "")
         .style("text-align", "center")
         .style("width", "10%")
         .append("h1")
@@ -1028,6 +1032,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
         .style("font-family", "sf-mono")
 
     header.append("th")
+        .attr("class", "")
         .style("text-align", "center")
         .style("width", "10%")
         .append("h1")
@@ -1035,13 +1040,13 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
         .style("font-size", "1.5vw")
         .style("font-weight", 100)
         .style("font-family", "sf-mono")
-
+    var tbody = table.append("tbody")
 
     districtData.forEach((d, i) => {
         var district = d.districtID
         var incumbent = inputData.filter(d => d.id == district)[0].incumbentParty
         d.margin = d.repVote - d.demVote
-        table.append("tr")
+        tbody.append("tr")
             .attr("id", "district" + district)
 
         d3.select("#" + "district" + district)
@@ -1053,14 +1058,14 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
             .style("font-size", "1.5vw")
             .style("font-weight", 100)
             .style("font-family", "sf-mono")
-            
+
 
         d3.select("#" + "district" + district)
             .append("td")
             .style("text-align", "center")
             .style("width", "5%")
             .append("h1")
-            .text(incumbent == "(R)"? (d.repWin>50?"":"R->D"):(d.repWin<50?"":"D->R"))
+            .text(incumbent == "(R)" ? (d.repWin > 50 ? "" : "R->D") : (d.repWin < 50 ? "" : "D->R"))
             .style("color", incumbent == "(R)" ? color(0) : color(100))
             .style("font-size", "1.5vw")
             .style("font-weight", 500)
