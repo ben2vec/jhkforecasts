@@ -464,7 +464,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                             .text(d => d.label)
                             .attr("x", 790)
                             .attr("y", (d, i) => 137.5 + 17.5 * i)
-                            .style("font-family", "source-code-pro")
+                            .style("font-family", "sf-mono")
                             .attr("font-size", "10")
                             .attr("fill", "black")
                             .attr("text-anchor", "middle")
@@ -669,7 +669,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                             .text(d => d.properties.label)
                             .attr("x", d => d.properties.xv)
                             .attr("y", d => d.properties.yv)
-                            .style("font-family", "source-code-pro")
+                            .style("font-family", "sf-mono")
                             .attr("font-size", "10")
                             .attr("fill", "black")
                             .attr("text-anchor", "middle")
@@ -801,6 +801,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                     .attr("href", (d, i) => i > 1 ? forecasters.map(d => { return d.link })[i - 2] : "").text(function (d) {
                         return d
                     })
+                    .style("font-family","sf-mono")
 
                 var alltBody = alltable.append("tbody");
 
@@ -817,9 +818,11 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                     .enter()
                     .append("td")
                     .style("background-color", (d, i) => typeof d == "number" ? i == 1 ? "white" : color(d) : i > 2 ? colorsratings[ratings.indexOf(d)] : "none")
-                    .text((d, i) => typeof d == "number" ? i == 1 ? d : wholeformat(Math.abs(d - 50) + 50) + "%" : i > 2 ? d.split(" ")[0] : d)
+                    .text((d, i) => typeof d == "number" ? i == 1 ? d : wholeformat(Math.abs(d - 50) + 50) + "%" : i > 2 ? d.split(" ")[0].toUpperCase() : d.toUpperCase())
                     .style("font-weight", 500)
                     .style("font-size", "1.5vw")
+                    .style("font-family","sf-mono")
+                    .style("text-align",(d,i)=>i==0?"left":"center")
 
                 //experts table
                 var extable = d3.select("#ex").append("table")
@@ -836,6 +839,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                     .attr("href", (d, i) => i > 1 ? expert.map(d => { return d.link })[i - 2] : "").text(function (d) {
                         return d
                     })
+                    .style("font-family","sf-mono")
 
                 var extBody = extable.append("tbody");
 
@@ -852,9 +856,11 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                     .enter()
                     .append("td")
                     .style("background-color", (d, i) => typeof d == "number" ? i == 1 ? "white" : color(d) : i > 2 ? colorsratings[ratings.indexOf(d)] : "none")
-                    .text((d, i) => typeof d == "number" ? i == 1 ? d : wholeformat(Math.abs(d - 50) + 50) + "%" : i > 2 ? d.split(" ")[0] : d)
+                    .text((d, i) => typeof d == "number" ? i == 1 ? d : wholeformat(Math.abs(d - 50) + 50) + "%" : i > 2 ? d.split(" ")[0].toUpperCase() : d.toUpperCase())
                     .style("font-weight", 500)
                     .style("font-size", "1.5vw")
+                    .style("font-family","sf-mono")
+                    .style("text-align",(d,i)=>i==0?"left":"center")
 
 
                 //newcomer table
@@ -872,6 +878,8 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                     .attr("href", (d, i) => i > 1 ? newcomer.map(d => { return d.link })[i - 2] : "").text(function (d) {
                         return d
                     })
+                    .style("font-family","sf-mono")
+
 
                 var newtBody = newtable.append("tbody");
 
@@ -887,9 +895,11 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                     .enter()
                     .append("td")
                     .style("background-color", (d, i) => typeof d == "number" ? i == 1 ? "white" : color(d) : i > 2 ? colorsratings[ratings.indexOf(d)] : "none")
-                    .text((d, i) => typeof d == "number" ? i == 1 ? d : wholeformat(Math.abs(d - 50) + 50) + "%" : i > 2 ? d.split(" ")[0] : d)
+                    .text((d, i) => typeof d == "number" ? i == 1 ? d : wholeformat(Math.abs(d - 50) + 50) + "%" : i > 2 ? d.split(" ")[0].toUpperCase() : d.toUpperCase())
                     .style("font-weight", 500)
                     .style("font-size", "1.5vw")
+                    .style("font-family","sf-mono")
+                    .style("text-align",(d,i)=>i==0?"left":"center")
 
 
                 var projection2 = d3.geoAlbers();
