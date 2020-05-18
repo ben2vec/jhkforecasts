@@ -76,7 +76,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
     var today = data.slice(data.length - 436, data.length)
     console.log(data[data.length - 1])
     var updated = data[data.length - 1].seat
-    document.getElementById("updated").innerText = updated
+    document.getElementById("updated").innerText = "UPDATED:"+ updated
     var districts = topojson.feature(congress, congress.objects.collection).features
     districts.forEach((d, i) => {
         var state = d.properties.state
@@ -280,8 +280,6 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
         d.seat = today.filter(d => d.districtID == districtID).length == 0 ? "" : today.filter(d => d.districtID == districtID)[0].seat
         d.margin = today.filter(d => d.districtID == districtID).length == 0 ? "" : today.filter(d => d.districtID == districtID)[0].margin
     })
-
-
 
     var pct = [50, 60, 70, 80, 90, 100]
 
@@ -951,14 +949,10 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
     console.log(today)
     var districtData = today.slice(0, today.length - 1)
 
-
-
     var table = d3.select("#dataTable")
         .append("table")
         .attr("class", "sortable")
         .style("width", "100%")
-
-
 
     var header = table.append("thead").append("tr")
     var demScale = d3.scaleLinear()
