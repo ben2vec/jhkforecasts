@@ -153,7 +153,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     .attr("font-weight", "500")
 
   topline.append("text")
-    .text("Jospeh Biden")
+    .text("Joseph Biden")
     .attr("y", 100)
     .attr("x", 130)
     .attr("fill", "black")
