@@ -174,6 +174,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
         .enter().append("a").attr("href", d => "districts?district=" + d.districtID).append("path")
         .attr("d", path)
         .style("fill", (d, i) => color(d.properties.repWin))
+        .style("stroke","white")
         .on('mouseover', function (d) {
 
 

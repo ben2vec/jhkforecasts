@@ -1,6 +1,6 @@
 const queryString = window.location.search
 const urlParams = new URLSearchParams(queryString)
-const districtID = urlParams.get("district")
+const districtID = urlParams.get("district").toUpperCase()
 console.log(districtID)
 var color = d3.scaleLinear()
     .domain([0, 50, 100])
@@ -212,16 +212,32 @@ function ready(error, inputData, data) {
 
 
     vote.append("rect")
-        .attr("x", xScale(+today.rep10 - 2))
+        .attr("x", function (d) {
+            var startRep
+            +today.repVote == xScale(0) ? startRep = xScale(0) :
+                +today.repVote == 100 ? startRep = xScale(100) :
+                    +today.rep10 < 0 ? startRep = xScale(0) :
+                        +today.rep90 > 100 ? startRep = xScale(100) :
+                            startRep = xScale(+today.rep10 - 2)
+            return startRep
+        })
         .attr("y", districtRepWin > 50 ? 50 : 150)
         .attr("height", 100)
-        .attr("width", xScale(+today.rep90 + 2) - xScale(+today.rep10 - 2))
+        .attr("width", function (d) {
+            var widthRep
+            +today.repVote == 0 ? widthRep = 0 :
+                +today.repVote == 100 ? widthRep = 0 :
+                    +today.rep10 < 0 ? widthRep = xScale(+today.rep90 + 2) - xScale(0) :
+                        +today.rep90 > 100 ? widthRep = xScale(100) - xScale(+today.rep10 - 2) :
+                            widthRep = xScale(+today.rep90 + 2) - xScale(+today.rep10 - 2)
+            return widthRep
+        })
         .attr("ry", 7)
         .attr("fill", color(100))
         .attr("opacity", .5)
 
     vote.append("rect")
-        .attr("x", xScale(today.repVote) - 7.5)
+        .attr("x", xScale(today.repVote) - 5)
         .attr("y", districtRepWin > 50 ? 95 : 195)
         .attr("height", 10)
         .attr("width", 10)
@@ -232,16 +248,32 @@ function ready(error, inputData, data) {
 
 
     vote.append("rect")
-        .attr("x", xScale(+today.dem10 - 2))
+        .attr("x", function (d) {
+            var startdem
+            +today.demVote == xScale(0) ? startdem = xScale(0) :
+                +today.demVote == 100 ? startdem = xScale(100) :
+                    +today.dem10 < 0 ? startdem = xScale(0) :
+                        +today.dem90 > 100 ? startdem = xScale(100) :
+                            startdem = xScale(+today.dem10 - 2)
+            return startdem
+        })
         .attr("y", districtRepWin < 50 ? 50 : 150)
         .attr("height", 100)
-        .attr("width", xScale(+today.dem90 + 2) - xScale(+today.dem10 - 2))
+        .attr("width", function (d) {
+            var widthdem
+            +today.demVote == 0 ? widthdem = 0 :
+                +today.demVote == 100 ? widthdem = 0 :
+                    +today.dem10 < 0 ? widthdem = xScale(+today.dem90 + 2) - xScale(0) :
+                        +today.dem90 > 100 ? widthdem = xScale(100) - xScale(+today.dem10 - 2) :
+                            widthdem = xScale(+today.dem90 + 2) - xScale(+today.dem10 - 2)
+            return widthdem
+        })
         .attr("ry", 7)
         .attr("fill", color(0))
         .attr("opacity", .5)
 
     vote.append("rect")
-        .attr("x", xScale(today.demVote) - 7.5)
+        .attr("x", xScale(today.demVote) - 5)
         .attr("y", districtRepWin < 50 ? 95 : 195)
         .attr("height", 10)
         .attr("width", 10)
@@ -523,7 +555,7 @@ function ready(error, inputData, data) {
             }
         }
 
-        
+
 
         time.append("text")
             .text("Win Majority")
