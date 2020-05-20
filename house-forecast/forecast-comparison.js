@@ -162,16 +162,16 @@ function ready(error, inputData, grid, data, leanTossup) {
     function update(input) {
         var forecast = forecasters.filter(d => d.shorthand == input)[0]
         var forecastRatings = forecast.ratings
-        console.log(forecastRatings)
-        var gridNew = grid.slice(0,484)
-        gridNew.forEach((d, i) => {
-            var districtID = d.district
-            d.rating = forecastRatings.filter(d => d.district == districtID).length == 0 ? 50 : forecastRatings.filter(d => d.district == districtID)[0].rating
-            d.state = forecastRatings.filter(d => d.district == districtID).length == 0 ? 50 : forecastRatings.filter(d => d.district == districtID)[0].state
-            d.seat = forecastRatings.filter(d => d.district == districtID).length == 0 ? 50 : forecastRatings.filter(d => d.district == districtID)[0].seat
-            d.ratingValue = forecastRatings.filter(d => d.district == districtID).length == 0 ? 50 : forecastRatings.filter(d => d.district == districtID)[0].ratingValue
+        console.log(grid)
+        var forecastMap = forecastRatings
+        var stateLabels = grid.filter(d => d.label != "")
+        forecastMap.forEach((d, i) => {
+            var district = d.district
+            console.log(district)
+            d.column = +grid.filter(d => d.district == district)[0].column
+            d.row = +grid.filter(d => d.district == district)[0].row
         })
-        console.log(gridNew)
+        console.log(forecastMap)
 
         boxmap.append("rect")
             .attr("x", 0)
@@ -280,21 +280,21 @@ function ready(error, inputData, grid, data, leanTossup) {
 
 
         boxmap.selectAll("grid")
-            .data(gridNew)
+            .data(forecastMap)
             .enter()
             .append("rect")
             .attr("class", "gridDistricts")
             .attr("id", d => d.district + "grid")
-            .attr("x", d => (+d.column) * 20)
-            .attr("y", d => (+d.row) * 20)
+            .attr("x", d => (d.column) * 20)
+            .attr("y", d => (d.row) * 20)
             .attr("width", 20)
             .attr("height", 20)
             .attr("ry", 5)
-            .attr("stroke", d => d.district == "" || d.district == undefined ? "none" : "white")
-            .attr("fill", d => d.label == "" ? typeof d.rating == "number" ? color(d.rating) : colorsratings[ratings.indexOf(d.rating)] : "none")
+            .attr("stroke", "white")
+            .attr("fill", d => typeof d.rating == "number" ? color(d.rating) : colorsratings[ratings.indexOf(d.rating)])
 
         boxmap.selectAll("grid")
-            .data(gridNew)
+            .data(stateLabels)
             .enter()
             .append("text")
             .attr("class", "gridLabels")
@@ -308,7 +308,7 @@ function ready(error, inputData, grid, data, leanTossup) {
             .attr("font-size", 15)
 
         boxmap.selectAll("grid")
-            .data(gridNew)
+            .data(forecastMap)
             .enter()
             .append("rect")
             .attr("class", "statesover")
@@ -317,21 +317,27 @@ function ready(error, inputData, grid, data, leanTossup) {
             .attr("width", 20)
             .attr("height", 20)
             .attr("ry", 5)
-            .attr("stroke", d => d.label == "" ? typeof d.rating == "number" ? (Math.abs(d.rating - 50) < 25 ? "black" : "none") : (d.rating == "Lean R" || d.rating == "Tilt R" || d.rating == "Tossup" || d.rating == "Lean D" || d.rating == "Tilt D") : "none")
+            .attr("stroke", d => Math.abs(d.ratingValue - 50) < 25 ? "black" : "none")
             .attr("stroke-width", 1.5)
+            .on("click", d => {
+                var inputvalue = d.district
+                console.log(inputvalue)
+                window.location.replace("#district" + inputvalue)
+                window.scrollBy(0, -100)
+            })
             .on('mouseover', function (d) {
 
 
 
 
                 d3.select(this)
-                    .attr("stroke", d.label == "" ? "black" : "none")
+                    .attr("stroke", "black")
                     .attr("opacity", 1)
 
 
 
 
-                d.label == "" ? tool_tip.show().offset([-210, -87.5]) : tool_tip.hide();
+                tool_tip.show().offset([-210, -87.5]);
                 var tipSVG = d3.select("#tipDiv")
                     .append("svg")
                     .attr("width", 175)
@@ -369,19 +375,19 @@ function ready(error, inputData, grid, data, leanTossup) {
                     .style("font-family", "sf-mono")
 
                 tipSVG.append("image")
-                    .attr("xlink:href",d.ratingValue == 50 ? "https://jhkforecasts.com/No%20one-01.png" ? d.ratingValue > 50 : "https://jhkforecasts.com/elephant-01.png" : "https://jhkforecasts.com/donkey-01.png")
+                    .attr("xlink:href", d.ratingValue == 50 ? "https://jhkforecasts.com/No%20one-01.png" : d.ratingValue > 50 ? "https://jhkforecasts.com/elephant-01.png" : "https://jhkforecasts.com/donkey-01.png")
                     .attr("x", 37.5)
                     .attr("y", 50)
                     .attr("width", 100)
                     .attr("height", 100)
 
-                
+
 
                 tipSVG.append("text")
-                    .text(typeof d.rating == "number" ? nf(Math.abs(d.rating-50)+50) : d.rating)
+                    .text(typeof d.rating == "number" ? "Win:" + nf(Math.abs(d.rating - 50) + 50) + "%" : d.rating)
                     .attr("y", 175)
                     .attr("x", 87.5)
-                    .attr("fill", d.ratingValue == 50 ? "black" ? d.ratingValue > 50 : color(100) : color(0))
+                    .attr("fill", d.ratingValue == 50 ? "black" : d.ratingValue > 50 ? color(100) : color(0))
                     .attr("font-weight", "500")
                     .style("font-size", 20)
                     .attr("text-anchor", "middle")
@@ -393,17 +399,97 @@ function ready(error, inputData, grid, data, leanTossup) {
                 function (d) {
 
                     d3.select(this)
-                        .attr("stroke", d => d.label == "" ? typeof d.rating == "number" ? (Math.abs(d.rating - 50) < 25 ? "black" : "none") : (d.rating == "Lean R" || d.rating == "Tilt R" || d.rating == "Tossup" || d.rating == "Lean D" || d.rating == "Tilt D") : "none")
+                        .attr("stroke", d => Math.abs(d.ratingValue - 50) < 25 ? "black" : "none")
                     tool_tip.hide()
 
 
                 });
 
+
+
     }
+
+
+    var table = d3.select("#dataTable")
+        .append("table")
+        .attr("class", "sortable")
+        .style("width", "100%")
+
+    var header = table.append("thead").append("tr")
+    var demScale = d3.scaleLinear()
+        .domain([0, 100])
+        .range(["white", color(0)])
+
+    var repScale = d3.scaleLinear()
+        .domain([0, 100])
+        .range(["white", color(100)])
+
+    header.append("th")
+        .attr("class", "backTop")
+        .style("text-align", "left")
+        .style("width", "30%")
+        .append("a")
+        .attr("href","#dataTable")
+        .append("h1")
+        .text("DISTRICT (BACK TO TOP)")
+        .style("font-size", "1.5vw")
+        .style("font-weight", 100)
+        .style("font-family", "sf-mono")
+
+    header.selectAll("h")
+        .data(forecasters)
+        .enter()
+        .append("th")
+        .attr("class", "hoverBox")
+        .style("text-align", "center")
+        .style("width", (60 / forecasters.length) + "%")
+        .style("padding", "7px")
+        .append("a")
+        .attr("href", d => d.link)
+        .append("h1")
+        .attr("class", "hoverText")
+        .text(d => d.forecast.toUpperCase())
+        .style("font-size", "1.5vw")
+        .style("font-weight", 100)
+        .style("font-family", "sf-mono")
+
+    var tbody = table.append("tbody")
+
+    inputData.forEach((d, i) => {
+        var district = d.id
+        tbody.append("tr")
+            .attr("id", "district" + district)
+
+        d3.select("#" + "district" + district)
+            .append("td")
+            .style("text-align", "left")
+            .style("width", "30%")
+            .text(d.state.toUpperCase() + "  " + ordinal(d.seat).toUpperCase())
+            .style("font-size", "1.5vw")
+            .style("font-weight", 100)
+            .style("font-family", "sf-mono")
+
+        forecasters.forEach((id) => {
+            var shorthand = id.shorthand
+            d3.select("#" + "district" + district)
+                .append("td")
+                .style("text-align", "center")
+                .style("width", (60 / forecasters.length) + "%")
+                .style("background-color", typeof d[shorthand] == "number" ? color(d[shorthand]) : "white")
+                .text(typeof d[shorthand] == "number" ? nf(d[shorthand]) : d[shorthand].split(" ")[0].toUpperCase())
+                .style("font-size", "1.5vw")
+                .style("font-weight", 100)
+                .style("font-family", "sf-mono")
+        })
+
+    })
+
     var selectbox = d3.select("#selectbox")
         .on("change", function () {
             update(this.value)
         })
+
+
 
 }
 

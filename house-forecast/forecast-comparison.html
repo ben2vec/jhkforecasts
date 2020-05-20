@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.typekit.net/htk2wjy.css">
+    <link rel="stylesheet" href="//projects.jhkforecasts.com/presidential-forecast/index.css">
     <style>
         #less {
             display: none;
@@ -62,7 +64,37 @@
         #tipDiv {
             fill: none;
         }
-        
+
+
+
+        .hoverText {
+            text-align: center;
+        }
+
+        .hoverText:hover {
+            text-align: right;
+        }
+
+        .hoverBox:hover {
+            text-decoration: underline solid;
+            text-align: right;
+            vertical-align: top;
+        }
+
+        th {
+            background: white;
+            position: sticky;
+            top: 0;
+        }
+
+        .backTop:hover {
+            text-decoration: underline solid;
+        }
+
+        td {
+            height: 4vw;
+            vertical-align: middle;
+        }
     </style>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="twitter:card" content="summary_large_image">
@@ -88,8 +120,7 @@
     <script src="//d3js.org/queue.v1.min.js"></script>
     <script src="//d3js.org/topojson.v1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
-    <link rel="stylesheet" href="https://use.typekit.net/htk2wjy.css">
-    <link rel="stylesheet" href="//projects.jhkforecasts.com/presidential-forecast/index.css">
+
     <script src="https:////cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script>
 </head>
 
@@ -266,6 +297,13 @@
         style="text-align: center;font-weight: 900;color: black;font-size: 5vw;background-color: white;border: black solid;">
         House
         Forecast Comparison </h1>
+    <div class="special">
+        <a href="https://twitter.com/jhkersting">
+            <h2 style="font-weight: 500;color: dodgerblue;text-decoration: underline;font-size: 2vw;">
+                Created by Jack Kersting
+            </h2>
+        </a>
+    </div>
     <div style="text-align:center;">
         <select style="margin-top: 0px;padding-left: 5px;" class="selectbox" id="selectbox">
             <option value="jhk">JHK Forecasts</option>
@@ -282,15 +320,9 @@
             </optgroup>
         </select>
     </div>
-    <div class="special" id="boxmap">
-    <div class="special">
-        <a href="https://twitter.com/jhkersting">
-            <h2 style="font-weight: 500;color: dodgerblue;text-decoration: underline;font-size: 2vw;">
-                Created by Jack Kersting
-            </h2>
-        </a>
-    </div>
+    <div class="special" id="boxmap"></div>
 
+    <div class="special" id="dataTable"></div>
     <script src="forecast-comparison.js"></script>
 
 </body>
