@@ -475,7 +475,7 @@ function ready(error, inputData, grid, data, leanTossup) {
                 .append("td")
                 .style("text-align", "center")
                 .style("width", (60 / forecasters.length) + "%")
-                .style("background-color", typeof d[shorthand] == "number" ? color(d[shorthand]) : "white")
+                .style("background-color", typeof d[shorthand] == "number" ? color(d[shorthand]) : colorsratings[ratings.indexOf(d[shorthand])])
                 .text(typeof d[shorthand] == "number" ? nf(d[shorthand]) : d[shorthand].split(" ")[0].toUpperCase())
                 .style("font-size", "1.5vw")
                 .style("font-weight", 100)
