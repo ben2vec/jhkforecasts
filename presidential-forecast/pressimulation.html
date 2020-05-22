@@ -67,9 +67,11 @@
 			.special {
 				width: 100%
 			}
+
 			th {
 				font-size: 1vw;
 			}
+
 			td {
 				font-size: 1vw;
 			}
@@ -281,8 +283,8 @@
 		Election Simulator </h1>
 	<div style="text-align:center">
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-		<ins class="adsbygoogle" style="display:block;width: 80%;margin-left: 10%;" data-ad-format="fluid" data-ad-layout-key="-h2+d+5c-9-3e"
-			data-ad-client="ca-pub-8025120308040073" data-ad-slot="8603820464"></ins>
+		<ins class="adsbygoogle" style="display:block;width: 80%;margin-left: 10%;" data-ad-format="fluid"
+			data-ad-layout-key="-h2+d+5c-9-3e" data-ad-client="ca-pub-8025120308040073" data-ad-slot="8603820464"></ins>
 		<script>
 			(adsbygoogle = window.adsbygoogle || []).push({});
 		</script>
@@ -380,7 +382,8 @@
 		var formatValue = d3.format(".1f");
 		var formatvalue = d3.format(".1f");
 
-		var simulation = Math.random()
+		var gopSimulation = Math.random()
+		var demSimulation = Math.random()
 		var thirdSimulation = Math.random()
 
 		d3.csv("https://data.jhkforecasts.com/2020-pres-input.csv", inputData => {
@@ -412,8 +415,8 @@
 				})
 
 				data.forEach((d, i) => {
-					d.gopSim = jStat.normal.inv((Math.random() + (simulation * 3)) / 4, d.gopVote, d.variance)
-					d.demSim = jStat.normal.inv((Math.random() + ((1 - simulation) * 3)) / 4, d.demVote, d.variance)
+					d.gopSim = jStat.normal.inv((Math.random() + (gopSimulation * 1.5)) / 2.5, d.gopVote, d.variance )
+					d.demSim = jStat.normal.inv((Math.random() + ((demSimulation) * 1.5)) / 2.5, d.demVote, d.variance)
 					d.thirdSim = jStat.normal.inv((Math.random() + ((thirdSimulation) * 2)) / 3, d.thirdVote, d.thirdVote / 3)
 					d.sum = d.gopSim + d.demSim + d.thirdSim
 					d.gopvote = d.gopSim / (d.sum / 100)
@@ -421,9 +424,9 @@
 					d.thirdvote = d.thirdSim / (d.sum / 100)
 					d.margin = d.gopvote - d.demvote
 					d.gopev = d.gopvote > d.demvote ? d.electoralVotes : 0
-					d.gopvoteperc = d.gopSim * d.pctVote
-					d.demvoteperc = d.demSim * d.pctVote
-					d.thirdvoteperc = d.thirdSim * d.pctVote
+					d.gopvoteperc = d.gopvote * d.pctVote
+					d.demvoteperc = d.demvote * d.pctVote
+					d.thirdvoteperc = d.thirdvote * d.pctVote
 					d.absmargin = Math.abs(d.margin)
 					d.height = d.absmargin > 50 ? 300 : d.absmargin * 6
 				})
@@ -442,7 +445,6 @@
 					return d;
 				})
 
-				console.log(data)
 
 
 				var gopev = d3.sum(data, d => d.gopev)
@@ -538,7 +540,7 @@
 						.style("stroke-width", "1")
 						.on("mouseover", function (d) {
 
-							tool_tip.show();
+							tool_tip.show().offset([-150, -30]);
 							var tipSVG = d3.select("#tipDiv")
 								.append("svg")
 								.attr("width", 175)
@@ -644,7 +646,7 @@
 
 
 							tipSVG.append("text")
-								.text(d.properties.gopvote > d.properties.demvote ? "Trump +" + formatValue(Math.abs(d.properties.margin)) + " %" : "Biden +" + formatValue(Math.abs(d.properties.margin)) + " %")
+								.text(d.properties.gopvote > d.properties.demvote ? "R+" + formatValue(Math.abs(d.properties.margin)) : "D+" + formatValue(Math.abs(d.properties.margin)))
 								.attr("y", 140)
 								.attr("x", 87.5)
 								.attr("fill", d.properties.gopvote > d.properties.demvote ? gopwincol : demwincol)
@@ -827,9 +829,9 @@
 					data.forEach((d, i) => {
 
 						table.append("tr")
-							.attr("id", d.state + "row")
+							.attr("id","row"+i)
 
-						d3.select("#" + d.state + "row")
+						d3.select("#" +"row"+i)
 							.append("td")
 							.append("h1")
 							.text(d.state)
@@ -838,14 +840,14 @@
 							.style("text-align", "left")
 
 
-						d3.select("#" + d.state + "row")
+						d3.select("#" +"row"+i)
 							.append("td")
 							.append("h1")
 							.text(d.electoralVotes)
 							.style("font-family", "sf-mono")
 							.style("font-weight", 100)
 
-						d3.select("#" + d.state + "row")
+						d3.select("#" + "row"+i)
 							.append("td")
 							.style("background-color", d.margin < 0 ? demwincol : "white")
 							.append("h1")
@@ -853,7 +855,7 @@
 							.style("font-family", "sf-mono")
 							.style("font-weight", 100)
 
-						d3.select("#" + d.state + "row")
+						d3.select("#" + "row"+i)
 							.append("td")
 							.style("background-color", d.margin > 0 ? gopwincol : "white")
 							.append("h1")
@@ -861,7 +863,7 @@
 							.style("font-family", "sf-mono")
 							.style("font-weight", 100)
 
-						d3.select("#" + d.state + "row")
+						d3.select("#" +"row"+i)
 							.append("td")
 							.append("h1")
 							.text(formatvalue(d.thirdvote))
@@ -869,7 +871,7 @@
 							.style("font-weight", 100)
 
 
-						d3.select("#" + d.state + "row")
+						d3.select("#" +"row"+i)
 							.append("td")
 							.append("h1")
 							.text(d.margin > 0 ? "R+" + formatvalue(d.margin) : "D+" + formatvalue(-d.margin))
