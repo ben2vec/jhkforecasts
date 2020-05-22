@@ -1031,32 +1031,20 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .domain([-50, 50])
                         .range([0, 600]);
 
-                    tip.append("text")
-                        .text("Margin")
-                        .attr("x", 880)
-                        .attr("y", 20)
-                        .attr("dominant-baseline", "central")
-                        .attr("text-anchor", "middle")
-                        .attr("font-weight", 500)
-                        .attr("font-size", 15)
+                    
 
                     tip.append("text")
-                        .text("Tipping Point")
+                        .text("TIPPING POINT")
                         .attr("x", 990)
                         .attr("y", 20)
                         .attr("dominant-baseline", "central")
                         .attr("text-anchor", "end")
                         .attr("font-weight", 500)
-                        .attr("font-size", 15)
+                        .attr("font-size", 12)
+                        .attr("font-weight", 100)
+                        .style("font-family","sf-mono")
 
-                    tip.append("text")
-                        .text("Proj. Margin")
-                        .attr("x", 500)
-                        .attr("y", 20)
-                        .attr("dominant-baseline", "central")
-                        .attr("text-anchor", "middle")
-                        .attr("font-weight", 500)
-                        .attr("font-size", 20)
+                    
 
 
                     var pct = [-50, -25, 0, 25, 50]
@@ -1093,6 +1081,8 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .style("font-size", "15")
                         .attr("text-anchor", "middle")
                         .attr("dominant-baseline", "central")
+                        .style("font-weight", 100)
+                        .style("font-family","sf-mono")
 
                     tip.selectAll("bars")
                         .data(bars)
@@ -1100,12 +1090,14 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .append("a")
                         .attr("xlink:href", d => d.state == "Georgia*" ? "Georgia-Special" : d.state)
                         .append("text")
-                        .text(d => d.state)
+                        .text(d => d.state.toUpperCase())
                         .attr("x", 10)
                         .attr("y", (d, i) => 75 + i * 50)
                         .attr("dominant-baseline", "central")
                         .attr("text-amchor", "middle")
-                        .attr("font-weight", 500)
+                        .attr("font-weight", 100)
+                        .style("font-family","sf-mono")
+                    
 
                     tip.selectAll("bars")
                         .data(bars)
@@ -1146,6 +1138,8 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("text-anchor", "middle")
                         .attr("font-weight", 500)
                         .attr("fill", d => d.margin == 0 ? "#afafaf" : d.margin > 0 ? colors[0] : colors[1])
+                        .attr("font-weight", 100)
+                        .style("font-family","sf-mono")
 
                     tip.selectAll("bars")
                         .data(bars)
