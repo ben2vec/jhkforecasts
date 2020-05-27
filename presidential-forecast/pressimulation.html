@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	
+
 	<link rel="stylesheet" href="https://use.typekit.net/htk2wjy.css">
 	<link rel="stylesheet" href="index.css">
 	<style>
@@ -290,9 +290,7 @@
 			(adsbygoogle = window.adsbygoogle || []).push({});
 		</script>
 	</div>
-	<script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
-	<div style="text-align: center;">
-	<a  href="https://www.patreon.com/bePatron?u=36104274" data-patreon-widget-type="become-patron-button">Become a Patron!</a></div>
+
 	<div style="text-align:center ;margin-top: 20px;">
 		<table style="border-collapse: collapse; border: none;margin-left: 25%;" cellspacing="0" cellpadding="0"
 			width="50%">
@@ -419,7 +417,7 @@
 				})
 
 				data.forEach((d, i) => {
-					d.gopSim = jStat.normal.inv((Math.random() + (gopSimulation * 1.5)) / 2.5, d.gopVote, d.variance )
+					d.gopSim = jStat.normal.inv((Math.random() + (gopSimulation * 1.5)) / 2.5, d.gopVote, d.variance)
 					d.demSim = jStat.normal.inv((Math.random() + ((demSimulation) * 1.5)) / 2.5, d.demVote, d.variance)
 					d.thirdSim = jStat.normal.inv((Math.random() + ((thirdSimulation) * 2)) / 3, d.thirdVote, d.thirdVote / 3)
 					d.sum = d.gopSim + d.demSim + d.thirdSim
@@ -833,9 +831,9 @@
 					data.forEach((d, i) => {
 
 						table.append("tr")
-							.attr("id","row"+i)
+							.attr("id", "row" + i)
 
-						d3.select("#" +"row"+i)
+						d3.select("#" + "row" + i)
 							.append("td")
 							.append("h1")
 							.text(d.state)
@@ -844,14 +842,14 @@
 							.style("text-align", "left")
 
 
-						d3.select("#" +"row"+i)
+						d3.select("#" + "row" + i)
 							.append("td")
 							.append("h1")
 							.text(d.electoralVotes)
 							.style("font-family", "sf-mono")
 							.style("font-weight", 100)
 
-						d3.select("#" + "row"+i)
+						d3.select("#" + "row" + i)
 							.append("td")
 							.style("background-color", d.margin < 0 ? demwincol : "white")
 							.append("h1")
@@ -859,7 +857,7 @@
 							.style("font-family", "sf-mono")
 							.style("font-weight", 100)
 
-						d3.select("#" + "row"+i)
+						d3.select("#" + "row" + i)
 							.append("td")
 							.style("background-color", d.margin > 0 ? gopwincol : "white")
 							.append("h1")
@@ -867,7 +865,7 @@
 							.style("font-family", "sf-mono")
 							.style("font-weight", 100)
 
-						d3.select("#" +"row"+i)
+						d3.select("#" + "row" + i)
 							.append("td")
 							.append("h1")
 							.text(formatvalue(d.thirdvote))
@@ -875,7 +873,7 @@
 							.style("font-weight", 100)
 
 
-						d3.select("#" +"row"+i)
+						d3.select("#" + "row" + i)
 							.append("td")
 							.append("h1")
 							.text(d.margin > 0 ? "R+" + formatvalue(d.margin) : "D+" + formatvalue(-d.margin))
@@ -996,6 +994,10 @@
 				});
 			});
 		})</script>
+	<script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
+	<div style="text-align: center;">
+		<a href="https://www.patreon.com/bePatron?u=36104274" data-patreon-widget-type="become-patron-button">Become a
+			Patron!</a></div>
 	<div style="text-align:center">
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 		<ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-h2+d+5c-9-3e"
