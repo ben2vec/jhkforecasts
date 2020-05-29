@@ -101,9 +101,13 @@ var histogram = d3.select("#histogram")
     .append("svg")
     .attr("viewBox", '0 0 1000 600');
 
-var mapPhone = d3.select("#usmap")
+var map = d3.select("#usmap")
     .append("svg")
     .attr("viewBox", '75 -40 900 500');
+
+    var mapPhone = d3.select("#usmapPhone")
+                        .append("svg")
+                        .attr("viewBox", '75 20 900 460');
 
 var tool_tipPhone = d3.tip()
     .attr("class", "d3-tip")
@@ -136,7 +140,7 @@ var tipPhone = d3.select('#tippingpointPhone').append("svg")
     .attr("viewBox", "0 0 1000 1800")
 
 
-mapPhone.call(tool_tipPhone);
+map.call(tool_tipPhone);
 
 var colors = ["#FF6060", "#0091FF", "#FFE130", "#C473F6", "#31DE70"]
 
@@ -243,21 +247,21 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                 var dem_win_senate = today[1].win
                 var upset_odds = Math.min(rep_win_senate, dem_win_senate)
 
-                mapPhone.append("image")
+                map.append("image")
                     .attr("href", "https://jhkforecasts.com/elephant-01.png")
                     .attr("x", 890)
                     .attr("y", -50)
                     .attr("height", 75)
                     .attr("width", 75)
 
-                mapPhone.append("image")
+                    map.append("image")
                     .attr("href", "https://jhkforecasts.com/donkey-01.png")
                     .attr("x", 85)
                     .attr("y", -50)
                     .attr("height", 75)
                     .attr("width", 75)
 
-                mapPhone.append("text")
+                    map.append("text")
                     .text("Democrats")
                     .attr("x", 165)
                     .attr("y", -30)
@@ -265,7 +269,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                     .attr("text-anchor", "start")
                     .attr("font-size", "23")
 
-                mapPhone.append("text")
+                    map.append("text")
                     .text("Republicans")
                     .attr("x", 885)
                     .attr("y", -30)
@@ -274,7 +278,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                     .attr("font-size", "23")
 
 
-                mapPhone.append("text")
+                    map.append("text")
                     .text(nf(rep_win_senate) + "%")
                     .attr("x", 885)
                     .attr("y", 0)
@@ -284,7 +288,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                     .attr("fill", colors[0])
                     .attr("font-weight", 500)
 
-                mapPhone.append("text")
+                    map.append("text")
                     .text(nf(rep_seats))
                     .attr("x", 560)
                     .attr("y", 0)
@@ -294,7 +298,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                     .attr("fill", colors[0])
                     .attr("font-weight", 500)
 
-                mapPhone.append("text")
+                    map.append("text")
                     .text("Seats")
                     .attr("x", 525)
                     .attr("y", 0)
@@ -304,7 +308,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                     .attr("fill", "black")
                     .attr("font-weight", 500)
 
-                mapPhone.append("text")
+                    map.append("text")
                     .text(nf(dem_seats))
                     .attr("x", 490)
                     .attr("y", 0)
@@ -314,7 +318,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                     .attr("fill", colors[1])
                     .attr("font-weight", 500)
 
-                mapPhone.append("text")
+                    map.append("text")
                     .text(nf(dem_win_senate) + "%")
                     .attr("x", 165)
                     .attr("y", 0)
@@ -346,7 +350,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         }
                     }
                 }
-                mapPhone.selectAll("path")
+                map.selectAll("path")
                     .data(json.features)
                     .enter()
                     .append("path")
@@ -357,7 +361,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                     .style("fill", (d, i) => d.properties.cands == undefined ? "#cfcfcf" : color(d3.sum(d.properties.cands.filter(d => d.party == "REP"), d => d.win)))
 
 
-                mapPhone.selectAll("label")
+                    map.selectAll("label")
                     .data(map_labels)
                     .enter()
                     .append("text")
@@ -370,7 +374,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                     .attr("text-anchor", "middle")
                     .attr("font-weight", "500")
 
-                mapPhone.selectAll("label")
+                    map.selectAll("label")
                     .data(states)
                     .enter()
                     .append("text")
@@ -383,7 +387,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                     .attr("text-anchor", "middle")
                     .attr("font-weight", "500")
 
-                mapPhone.selectAll("path2")
+                    map.selectAll("path2")
                     .data(json.features)
                     .enter()
                     .append("a")
@@ -492,7 +496,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
 
                             tool_tipPhone.hide()
                         });
-                mapPhone.append("rect")
+                        map.append("rect")
                     .attr("x", 880)
                     .attr("y", 420)
                     .attr("width", 20)
@@ -502,7 +506,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                     .attr("ry", "6")
                     .style("fill", "none");
 
-                mapPhone.append("text")
+                    map.append("text")
                     .text("Tipping Points")
                     .attr("x", 790)
                     .attr("y", 430)
@@ -511,7 +515,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                     .style("font-size", "15");
                 var pct = [60, 70, 80, 90, 100]
 
-                mapPhone.selectAll("pct")
+                map.selectAll("pct")
                     .data(pct)
                     .enter()
                     .append("circle")
@@ -521,7 +525,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                     .attr("fill", d => color(d))
 
 
-                mapPhone.selectAll("pct")
+                    map.selectAll("pct")
                     .data(pct)
                     .enter()
                     .append("circle")
@@ -531,7 +535,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                     .attr("fill", d => color(100 - d))
 
 
-                mapPhone.selectAll("pct")
+                    map.selectAll("pct")
                     .data(pct)
                     .enter()
                     .append("text")
@@ -544,7 +548,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                     .attr("font-weight", "500")
 
 
-                mapPhone.append("text")
+                    map.append("text")
                     .text("Win State")
                     .attr("y", 310)
                     .attr("x", 850)
@@ -578,14 +582,14 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                     .translate(t);
                 var ga_special = today.filter(d => d.state_index == "Georgia: Class III")
 
-                mapPhone.append("path")
+                map.append("path")
                     .datum(state)
                     .attr("fill", color(d3.sum(ga_special.filter(d => d.party == "REP"), d => d.win)))
                     .attr("d", path2)
                     .style("stroke", "grey")
                     .attr("transform", "translate(725,280)")
 
-                mapPhone.append("text")
+                    map.append("text")
                     .text("GA*")
                     .attr("x", 750)
                     .attr("y", 360)
@@ -595,7 +599,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                     .attr("text-anchor", "middle")
                     .attr("font-weight", "500")
 
-                mapPhone
+                    map
                     .append("a")
                     .attr("xlink:href", "Georgia-Special")
                     .append("path")
@@ -710,10 +714,8 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
 
 
                 d3.csv("https://data.jhkforecasts.com/2020-senate-histogram.csv", hist => {
-
+                    
                     var hist = hist.slice(5, 26)
-                    console.log(hist)
-
 
                     var rep_hist = d3.scaleLinear()
                         .domain([40, 60])
@@ -1108,7 +1110,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("height", 40)
                         .attr("width", d =>
                             d.margin - d.stdev < 0 ? d.margin + d.stdev < 0 ?
-                                x2(d.margin + d.stdev) - x2(d.margin - d.stdev) : x2(0) - x2(d.margin - d.stdev) : 0
+                                x2(d.margin + d.stdev) - x2(d.margin - d.stdev) : x2(0) - x2(d.margin - d.stdev) : .1
                         )
                         .attr("fill", colors[1])
                         .attr("opacity", .5)
@@ -1121,8 +1123,8 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("y", (d, i) => 55 + i * 50)
                         .attr("height", 40)
                         .attr("width", d =>
-                            d.margin > 0 ? d.margin - d.stdev > 0 ?
-                                x2(d.margin + d.stdev) - x2(d.margin - d.stdev) : x2(d.margin + d.stdev) - x2(0) : x2(d.margin + d.stdev) - x2(0)
+                            +d.margin > 0 ? +d.margin - +d.stdev > 0 ?
+                                x2(+d.margin + +d.stdev) - x2(+d.margin - +d.stdev) : x2(+d.margin + +d.stdev) - x2(0) : Math.abs(x2(d.margin + d.stdev) - x2(0))
                         )
                         .attr("fill", colors[0])
                         .attr("opacity", .5)
@@ -1498,9 +1500,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("font-size", "35")
                         .attr("fill", colors[1])
                         .attr("font-weight", 500)
-                    var mapPhone = d3.select("#usmapPhone")
-                        .append("svg")
-                        .attr("viewBox", '75 20 900 460');
+                    
 
                     var tool_tipPhone = d3.tip()
                         .attr("class", "d3-tip")
@@ -2024,7 +2024,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("height", 40)
                         .attr("width", d =>
                             d.margin > 0 ? d.margin - d.stdev > 0 ?
-                                x2(d.margin + d.stdev) - x2(d.margin - d.stdev) : x2(d.margin + d.stdev) - x2(0) : x2(d.margin + d.stdev) - x2(0)
+                                x2(d.margin + d.stdev) - x2(d.margin - d.stdev) : x2(d.margin + d.stdev) - x2(0) : Math.abs(x2(d.margin + d.stdev) - x2(0))
                         )
                         .attr("fill", colors[0])
                         .attr("opacity", .5)
