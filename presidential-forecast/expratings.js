@@ -7,63 +7,63 @@ var forecasters = [
         "link": "https://projects.jhkforecasts.com/presidential-forecast/",
         "type": "",
         "shorthand": "jhk",
-        "label": "JHK"
+        "forecastLabel": "JHK Forecasts"
     },
     {
         "forecast": "Bitecofer/ Niskanen",
         "link": "https://www.niskanencenter.org/bitecofer-post-primary-update/",
         "type": "newcomer",
         "shorthand": "bitecofer",
-        "label": "Bitecofer"
+        "forecastLabel": "Bitecofer"
     },
     {
         "forecast": "Cook Political",
         "link": "https://cookpolitical.com/analysis/national/national-politics/introducing-cook-political-reports-2020-electoral-college",
         "type": "expert",
         "shorthand": "cook",
-        "label": "Cook"
+        "forecastLabel": "Cook Political"
     },
     {
         "forecast": "Inside Elections",
         "link": "https://insideelections.com/ratings/president",
         "type": "expert",
         "shorthand": "inside",
-        "label": "Inside"
+        "forecastLabel": "Inside Elections"
     },
     {
         "forecast": "Politico",
         "link": "https://www.politico.com/2020-election/race-forecasts-and-predictions/president/",
         "type": "expert",
         "shorthand": "politico",
-        "label": "Politico"
+        "forecastLabel": "Politico"
     },
     {
         "forecast": "Sabato's Crystal Ball",
         "link": "http://centerforpolitics.org/crystalball/2020-president/",
         "type": "expert",
         "shorthand": "sabato",
-        "label": "Sabato"
+        "forecastLabel": "Sabato"
     },
     {
         "forecast": "CNalysis",
         "link": "https://www.cnalysiscom.website/forecasts/2020-president-governor-senate-house-ratings",
         "type": "newcomer",
         "shorthand": "cnalysis",
-        "label": "CNalysis"
+        "forecastLabel": "CNalysis"
     },
     {
         "forecast": "Lean Tossup",
         "link": "https://leantossup.ca/us-presidency/",
         "type": "newcomer",
         "shorthand": "leantoss",
-        "label": "Lean Tossup"
+        "forecastLabel": "Lean Tossup"
     },
     {
         "forecast": "Plural Vote",
         "link": "http://www.pluralvote.com/article/2020-forecast/",
         "type": "newcomer",
         "shorthand": "pluralvote",
-        "label": "Plural Vote"
+        "forecastLabel": "Plural Vote"
     }
 ]
 var expert = forecasters.filter(d => d.type == "expert")
@@ -191,8 +191,8 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                             rating: d[forecasts[j]],
                             rating_value: typeof d[forecasts[j]] == "string" ? rating_value[ratings.indexOf(d[forecasts[j]])] : d[forecasts[j]],
                             opacity: rating_opacity[ratings.indexOf(d[forecasts[j]])],
-                            full_forecast: forecasters[j].forecast
-
+                            full_forecast: forecasters[j].forecast,
+                            forecastLabel:forecasters[j].forecastLabel
                         }
                     })
 
@@ -267,12 +267,12 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                     .append("a")
                     .attr("href", id => forecasters.filter(d => d.shorthand == id.forecast)[0].link)
                     .append("text")
-                    .text(id => forecasters.filter(d => d.shorthand == id.forecast)[0].label)
-                    .attr("x", 10)
+                    .text(id => forecasters.filter(d => d.shorthand == id.forecast)[0].forecastLabel)
+                    .attr("x", 0)
                     .attr("y", (d, i) => i * 100 + 100)
                     .attr("dominant-baseline", "central")
                     .attr("text-anchor", "start")
-                    .attr("font-size", 30)
+                    .attr("font-size", 18)
 
 
                 svg.append("text")
@@ -336,7 +336,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                         .attr("y", (d, i) => b * 100 + 100)
                         .attr("dominant-baseline", "central")
                         .attr("text-anchor", "middle")
-                        .style("font-weight", 500);
+                        .style("font-weight", 100);
 
                     svg.selectAll("bars")
                         .data(values)
@@ -347,7 +347,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                         .attr("y", (d, i) => b * 100 + 65)
                         .attr("dominant-baseline", "bottom")
                         .attr("text-anchor", "end")
-                        .style("font-weight", 500)
+                        .style("font-weight", 100)
                         .attr('fill', color(100))
                         .attr("font-size", 20);
 
@@ -360,7 +360,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                         .attr("y", (d, i) => b * 100 + 65)
                         .attr("dominant-baseline", "bottom")
                         .attr("text-anchor", "start")
-                        .style("font-weight", 500)
+                        .style("font-weight", 100)
                         .attr('fill', color(00))
                         .attr("font-size", 20)
 
@@ -468,7 +468,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                             .attr("font-size", "10")
                             .attr("fill", "black")
                             .attr("text-anchor", "middle")
-                            .style("font-weight", "500")
+                            .style("font-weight", "100")
                             .attr("dominant-baseline", "central")
 
                         map.selectAll()
@@ -505,20 +505,20 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                                     .attr("y", 20)
                                     .attr("x", 87.5)
                                     .attr("fill", "#black")
-                                    .attr("font-weight", "500")
+                                    .attr("font-weight", "100")
                                     .style("font-size", "15")
                                     .attr("text-anchor", "middle")
-                                    .style("font-family", "brandon-grotesque")
+                                    .style("font-family", "sf-mono")
 
                                 tipSVG.append("text")
                                     .text(d.ev + " ELECTORAL VOTES")
                                     .attr("y", 40)
                                     .attr("x", 87.5)
                                     .attr("fill", "#black")
-                                    .style("font-weight", "500")
+                                    .style("font-weight", "100")
                                     .style("font-size", "14")
                                     .attr("text-anchor", "middle")
-                                    .style("font-family", "brandon-grotesque")
+                                    .style("font-family", "sf-mono")
 
 
                                 tipSVG.append("text")
@@ -526,10 +526,10 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                                     .attr("y", 160)
                                     .attr("x", 87.5)
                                     .attr("fill", typeof d.rating == "number" ? d.rating > 50 ? color(100) : color(0) : d.rating_value == 0 ? "black" : d.rating_value > 0 ? color(100) : color(0))
-                                    .style("font-weight", "500")
+                                    .style("font-weight", "100")
                                     .style("font-size", "15")
                                     .attr("text-anchor", "middle")
-                                    .style("font-family", "brandon-grotesque")
+                                    .style("font-family", "sf-mono")
 
 
                                 tipSVG.append("image")
@@ -568,22 +568,22 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                             .attr("x", 965)
                             .text(d3.sum(gop_ev))
                             .attr("y", 150)
-                            .style("font-family", "brandon-grotesque")
+                            .style("font-family", "sf-mono")
                             .attr("font-size", "20")
                             .attr("fill", color(100))
                             .attr("text-anchor", "middle")
-                            .style("font-weight", "500")
+                            .style("font-weight", "100")
                             .attr("dominant-baseline", "central")
 
                         map.append("text")
                             .attr("x", 885)
                             .text(d3.sum(dem_ev))
                             .attr("y", 150)
-                            .style("font-family", "brandon-grotesque")
+                            .style("font-family", "sf-mono")
                             .attr("font-size", "20")
                             .attr("fill", color(0))
                             .attr("text-anchor", "middle")
-                            .style("font-weight", "500")
+                            .style("font-weight", "100")
                             .attr("dominant-baseline", "central")
 
                         map.selectAll("ratings")
@@ -603,11 +603,11 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                             .attr("x", 900)
                             .text(d => d)
                             .attr("y", (d, i) => 200 + i * 30)
-                            .style("font-family", "brandon-grotesque")
+                            .style("font-family", "sf-mono")
                             .attr("font-size", "15")
                             .attr("fill", "black")
                             .attr("text-anchor", "end")
-                            .style("font-weight", "500")
+                            .style("font-weight", "100")
                             .attr("dominant-baseline", "central")
 
                         var ratingspct = [">95%", ">80%", ">60%", ">55%", "<55%", ">55%", ">60%", ">80%", ">95%"]
@@ -618,11 +618,11 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                             .attr("x", 950)
                             .text(d => d)
                             .attr("y", (d, i) => 200 + i * 30)
-                            .style("font-family", "brandon-grotesque")
+                            .style("font-family", "sf-mono")
                             .attr("font-size", "15")
                             .attr("fill", "black")
                             .attr("text-anchor", "start")
-                            .style("font-weight", "500")
+                            .style("font-weight", "100")
                             .attr("dominant-baseline", "central")
 
                         map.selectAll("ratings")
@@ -632,22 +632,22 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                             .attr("x", 1000)
                             .text(d => typeof json.features[0].properties.rating == "number" ? d : "")
                             .attr("y", (d, i) => 200 + i * 30)
-                            .style("font-family", "brandon-grotesque")
+                            .style("font-family", "sf-mono")
                             .attr("font-size", "15")
                             .attr("fill", "black")
                             .attr("text-anchor", "start")
-                            .style("font-weight", "500")
+                            .style("font-weight", "100")
                             .attr("dominant-baseline", "central")
 
                         map.append("text")
                             .attr("x", 1000)
-                            .text(typeof json.features[0].properties.rating == "number" ? "Win %" : "")
+                            .text(typeof json.features[0].properties.rating == "number" ? "Win%" : "")
                             .attr("y", (d, i) => 170)
-                            .style("font-family", "brandon-grotesque")
+                            .style("font-family", "sf-mono")
                             .attr("font-size", "15")
                             .attr("fill", "black")
                             .attr("text-anchor", "start")
-                            .style("font-weight", "500")
+                            .style("font-weight", "100")
                             .attr("dominant-baseline", "central")
 
                         map.append("g")
@@ -673,7 +673,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                             .attr("font-size", "10")
                             .attr("fill", "black")
                             .attr("text-anchor", "middle")
-                            .style("font-weight", "500")
+                            .style("font-weight", "100")
                             .attr("transform", "translate(-50,0)")
 
 
@@ -712,20 +712,20 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                                     .attr("y", 20)
                                     .attr("x", 87.5)
                                     .attr("fill", "#black")
-                                    .attr("font-weight", "500")
+                                    .attr("font-weight", "100")
                                     .style("font-size", "15")
                                     .attr("text-anchor", "middle")
-                                    .style("font-family", "brandon-grotesque")
+                                    .style("font-family", "sf-mono")
 
                                 tipSVG.append("text")
                                     .text(d.properties.ev + " ELECTORAL VOTES")
                                     .attr("y", 40)
                                     .attr("x", 87.5)
                                     .attr("fill", "black")
-                                    .style("font-weight", "500")
+                                    .style("font-weight", "100")
                                     .style("font-size", "14")
                                     .attr("text-anchor", "middle")
-                                    .style("font-family", "brandon-grotesque")
+                                    .style("font-family", "sf-mono")
 
 
                                 tipSVG.append("text")
@@ -733,10 +733,10 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                                     .attr("y", 160)
                                     .attr("x", 87.5)
                                     .attr("fill", "black")
-                                    .style("font-weight", "500")
+                                    .style("font-weight", "100")
                                     .style("font-size", "15")
                                     .attr("text-anchor", "middle")
-                                    .style("font-family", "brandon-grotesque")
+                                    .style("font-family", "sf-mono")
 
 
                                 tipSVG.append("image")
@@ -917,8 +917,9 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                 function stateproj(input) {
                     var stateData = state_cand.filter(d => d.state == input)
                     var state_proj = d3.mean(stateData, d => d.rating_value)
+                    console.log(stateData)
                     console.log(state_proj)
-                    stateData.push({ rating: state_proj, full_forecast: "Aggregated Projection" })
+                    stateData.push({ rating: state_proj, forecastLabel: "Aggregated Projection" })
                     svg.attr("viewBox", "0 0 1000 " + (stateData.length * 40 + 150))
                     var width = 500,
                         height = stateData.length * 40 + 50;
@@ -957,9 +958,10 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                             .attr("y", 50)
                             .attr("x", 250)
                             .attr("fill", "black")
-                            .style("font-weight", "500")
+                            .style("font-weight", "100")
                             .style("font-size", 40)
                             .attr("text-anchor", "middle")
+
 
                         svg.selectAll("states")
                             .data(stateData)
@@ -993,8 +995,8 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                             .attr("y", (d, i) => 100 + i * 40)
                             .attr("x", 900)
                             .attr("fill", "black")
-                            .style("font-weight", "500")
-                            .style("font-size", 20)
+                            .style("font-weight", "100")
+                            .style("font-size", 18)
                             .attr("text-anchor", "middle")
                             .attr("dominant-baseline", "central")
 
@@ -1003,12 +1005,12 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                             .data(stateData)
                             .enter()
                             .append("text")
-                            .text(d => d.full_forecast)
+                            .text(d => d.forecastLabel)
                             .attr("y", (d, i) => 100 + i * 40)
                             .attr("x", 600)
                             .attr("fill", "black")
-                            .style("font-weight", "500")
-                            .style("font-size", 25)
+                            .style("font-weight", "100")
+                            .style("font-size", 18)
                             .attr("text-anchor", "start")
                             .attr("dominant-baseline", "central")
 

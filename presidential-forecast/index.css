@@ -370,11 +370,11 @@
  }
 
  .selectbox {
-   font-family: brandon-grotesque;
-   font-weight: 400;
+   font-family: sf-mono;
+   font-weight: 100;
    font-size: 2vw;
    text-align: center;
-   padding: 10%;
+   text-transform: uppercase;
  }
 
  hr {
