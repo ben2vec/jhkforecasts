@@ -65,7 +65,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
   var sd = [];
   for (let k = 0; k < map_states.length; k++) {
     var dt = newest_data.filter(d => d.state == states[k]);
-    
+
     var ml = map_labels.filter(d => d.state == states[k]);
     var finaldt = {
       state: states[k],
@@ -1072,7 +1072,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
 
     var bubblemapphone = d3.select("#bubblemapphone")
       .append("svg")
-      .attr("viewBox", '0 0 750 450')
+      .attr("viewBox", '20 0 650 550')
 
     var tool_tipbm = d3.tip()
       .attr("class", "d3-tip")
@@ -1081,6 +1081,15 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
 
     bubblemapphone.call(tool_tipbm);
 
+    bubblemapphone.append("rect")
+    .attr("x",20)
+    .attr("y",0)
+    .attr("width",650)
+    .attr("height",550)
+    .attr("fill","white")
+    .on("click",d=>{
+      tool_tipbm.hide();
+    })
 
     bubblemapphone.selectAll("circ")
       .data(sd3)
@@ -1107,7 +1116,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
       .attr("fill", "black")
       .attr("text-anchor", "middle")
       .attr("dominant-baseline", "middle")
-      .attr("font-size", 13)
+      .attr("font-size", 12)
       .style("font-family", "sf-mono")
 
 
@@ -1197,9 +1206,10 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
       .enter()
       .append("circle")
       .attr("r", 20)
-      .attr("cy", (d, i) => 300)
-      .attr("cx", (d, i) => 600 + i * 25)
+      .attr("cy", (d, i) => 500)
+      .attr("cx", (d, i) => 375 + i * 25)
       .attr("fill", d => color(d))
+
 
 
     bubblemapphone.selectAll("key")
@@ -1207,9 +1217,10 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
       .enter()
       .append("circle")
       .attr("r", 20)
-      .attr("cy", (d, i) => 350)
-      .attr("cx", (d, i) => 600 + i * 25)
+      .attr("cy", (d, i) => 500)
+      .attr("cx", (d, i) => 325 + i * -25)
       .attr("fill", d => color(100 - d))
+
 
 
     bubblemapphone.selectAll("key")
@@ -1217,8 +1228,20 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
       .enter()
       .append("text")
       .text(d => d)
-      .attr("y", 260)
-      .attr("x", (d, i) => 600 + i * 25)
+      .attr("y", 470)
+      .attr("x", (d, i) => 375 + i * 25)
+      .attr("fill", "black")
+      .attr("text-anchor", "middle")
+      .attr("font-size", 12)
+      .attr("font-weight", "500")
+
+    bubblemapphone.selectAll("key")
+      .data(pct)
+      .enter()
+      .append("text")
+      .text(d => d)
+      .attr("y", 470)
+      .attr("x", (d, i) => 325 + i * -25)
       .attr("fill", "black")
       .attr("text-anchor", "middle")
       .attr("font-size", 12)
@@ -1226,13 +1249,25 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
 
 
     bubblemapphone.append("text")
-      .text("Win State")
-      .attr("y", 230)
-      .attr("x", 650)
+      .text("TRUMP")
+      .attr("y", 450)
+      .attr("x", 425)
       .attr("fill", "black")
       .attr("text-anchor", "middle")
       .attr("font-size", 15)
       .attr("font-weight", "500")
+      .style("font-family", "sf-mono")
+
+      bubblemapphone.append("text")
+      .text("BIDEN")
+      .attr("y", 450)
+      .attr("x", 275)
+      .attr("fill", "black")
+      .attr("text-anchor", "middle")
+      .attr("font-size", 15)
+      .attr("font-weight", "500")
+      .style("font-family", "sf-mono")
+
 
 
 
