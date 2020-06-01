@@ -801,7 +801,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
 
     var barsphone = d3.select("#barsphone")
       .append("svg")
-      .attr("viewBox", '0 0 400 800')
+      .attr("viewBox", '-50 0 500 800')
 
     var tool_tip2 = d3.tip()
       .attr("class", "d3-tip")
@@ -1108,7 +1108,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
       .attr("text-anchor", "middle")
       .attr("dominant-baseline", "middle")
       .attr("font-size", 13)
-      .style("font-family", "source-code-pro")
+      .style("font-family", "sf-mono")
 
 
 
