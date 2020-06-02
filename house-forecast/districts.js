@@ -107,15 +107,15 @@ function ready(error, inputData, data) {
         .text("Democrats")
         .attr("y", 30)
         .attr("x", 105)
-        .style("font-size", "30")
-        .style("font-weight", "500")
+        .style("font-size", "20")
+        .style("font-weight", "100")
 
     topline.append("text")
         .text(nf(100 - districtRepWin) + "%")
         .attr("y", 70)
         .attr("x", 105)
         .style("font-size", "30")
-        .style("font-weight", "500")
+        .style("font-weight", "100")
         .style("fill", color(0))
 
     topline.append("text")
@@ -123,7 +123,7 @@ function ready(error, inputData, data) {
         .attr("y", 70)
         .attr("x", 895)
         .style("font-size", "30")
-        .style("font-weight", "500")
+        .style("font-weight", "100")
         .style("fill", color(100))
         .style("text-anchor", "end")
 
@@ -132,8 +132,8 @@ function ready(error, inputData, data) {
         .text("Republicans")
         .attr("y", 30)
         .attr("x", 895)
-        .style("font-size", "30")
-        .style("font-weight", "500")
+        .style("font-size", "20")
+        .style("font-weight", "100")
         .style("text-anchor", "end")
 
 
@@ -144,7 +144,7 @@ function ready(error, inputData, data) {
         .attr("fill", "black")
         .attr("text-anchor", "middle")
         .attr("font-size", 15)
-        .attr("font-weight", "500")
+        .style("font-weight", "100")
 
 
     topline.append("text")
@@ -154,7 +154,9 @@ function ready(error, inputData, data) {
         .attr("fill", "black")
         .attr("text-anchor", "middle")
         .attr("font-size", 20)
-        .attr("font-weight", "500")
+        .style("font-weight", "100")
+        
+
 
 
     topline.append("image")
@@ -373,7 +375,7 @@ function ready(error, inputData, data) {
         .text("NOV. 3RD")
         .attr("x", x(new Date(2020, 10, 3)) + 3)
         .attr("y", 80)
-        .attr("font-weight", "500")
+        .style("font-weight", "100")
         .attr("font-size", 12)
         .style("font-family", "sf-mono")
 
@@ -525,7 +527,7 @@ function ready(error, inputData, data) {
                     .attr("y", 50)
                     .attr("text-anchor", "middle")
                     .style("font-size", 20)
-                    .attr("font-weight", "500")
+                    .style("font-weight", "100")
                     .text(formatDate(d.date).toUpperCase())
                     .style("font-family", "sf-mono");
 
@@ -534,7 +536,7 @@ function ready(error, inputData, data) {
                     .attr("cx", x(d.date));
 
                 focus.selectAll(".lineHoverText2")
-                    .attr("font-weight", "500")
+                    .style("font-weight", "100")
                     .attr("x", x(d.date) + 10)
                     .text((e, i) => input == "margin" ? "D +" + onevalue(-d[e]) : i == 1 ? ("DEM " + onevalue(d[e])) : i == 0 ? "REP " + onevalue(d[e]) : "Third " + onevalue(d[e]))
                     .attr("y", e => d[e] == d["rep" + input] ? y(d["rep" + input]) > y(d["dem" + input]) ? y(d["rep" + input]) + 15 : y(d["rep" + input]) - 15 : d[e] == d["dem" + input] ? y(d["dem" + input]) > y(d["rep" + input]) ? y(d["dem" + input]) + 15 : y(d["dem" + input]) - 15 : y(d[e]) - 15)
@@ -544,7 +546,7 @@ function ready(error, inputData, data) {
 
 
                 focus.selectAll(".lineHoverText")
-                    .attr("font-weight", "500")
+                    .style("font-weight", "100")
                     .attr("x", x(d.date) + 10)
                     .text((e, i) => input == "margin" ? "D +" + onevalue(-d[e]) : i == 1 ? ("DEM " + onevalue(d[e])) : i == 0 ? "REP " + onevalue(d[e]) : "Third " + onevalue(d[e]))
                     .attr("fill", (e, i) => input == "margin" ? color(0) : colors[i])
@@ -561,7 +563,7 @@ function ready(error, inputData, data) {
             .text("Win Majority")
             .attr("x", 350)
             .attr("y", 25)
-            .attr("font-weight", "500")
+            .style("font-weight", "100")
             .attr("font-size", 25)
             .attr("fill", input == "Win" ? "black" : "lightgray")
             .on("mouseover", function (d) {
@@ -583,7 +585,7 @@ function ready(error, inputData, data) {
             .text("Projected Vote")
             .attr("x", 700)
             .attr("y", 25)
-            .attr("font-weight", "500")
+            .style("font-weight", "100")
             .attr("font-size", 25)
             .attr("fill", input == "Vote" ? "black" : "lightgray")
             .on("mouseover", function (d) {

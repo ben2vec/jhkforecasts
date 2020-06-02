@@ -111,16 +111,16 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
         .text("Democrats")
         .attr("y", 30)
         .attr("x", 115)
-        .style("font-size", "30")
-        .style("font-weight", "500")
+        .style("font-size", "20")
+        .style("font-weight", "100")
 
     map.append("text")
         .text("Republicans")
         .attr("y", 30)
         .attr("x", 885)
         .attr("text-anchor", "end")
-        .style("font-size", "30")
-        .style("font-weight", "500")
+        .style("font-size", "20")
+        .style("font-weight", "100")
 
     map.append("text")
         .text("Seats")
@@ -128,14 +128,14 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
         .attr("x", 500)
         .attr("text-anchor", "middle")
         .style("font-size", "25")
-        .style("font-weight", "500")
+        .style("font-weight", "100")
 
     map.append("text")
         .text(nf(today[435].demWin) + "%")
         .attr("y", 70)
         .attr("x", 115)
         .style("font-size", "30")
-        .style("font-weight", "500")
+        .style("font-weight", "100")
         .style("fill", color(0))
 
     map.append("text")
@@ -144,7 +144,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
         .attr("x", 885)
         .attr("text-anchor", "end")
         .style("font-size", "30")
-        .style("font-weight", "500")
+        .style("font-weight", "100")
         .style("fill", color(100))
 
     map.append("text")
@@ -152,7 +152,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
         .attr("y", 70)
         .attr("x", 400)
         .style("font-size", "20")
-        .style("font-weight", "500")
+        .style("font-weight", "100")
         .style("fill", color(0))
         .attr("text-anchor", "middle")
 
@@ -162,7 +162,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
         .attr("y", 70)
         .attr("x", 600)
         .style("font-size", "20")
-        .style("font-weight", "500")
+        .style("font-weight", "100")
         .style("fill", color(100))
         .attr("text-anchor", "middle")
 
@@ -201,7 +201,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
                 .attr("y", 20)
                 .attr("x", 87.5)
                 .attr("fill", "black")
-                .attr("font-weight", "500")
+                .style("font-weight", "100")
                 .style("font-size", "20")
                 .attr("text-anchor", "middle")
 
@@ -210,7 +210,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
                 .attr("y", 40)
                 .attr("x", 87.5)
                 .attr("fill", "black")
-                .style("font-weight", "500")
+                .style("font-weight", "100")
                 .style("font-size", "15")
                 .attr("text-anchor", "middle")
                 .style("font-family", "sf-mono")
@@ -235,7 +235,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
                 .attr("y", 150)
                 .attr("x", 131.25)
                 .attr("fill", color(100))
-                .attr("font-weight", "500")
+                .style("font-weight", "100")
                 .style("font-size", 20)
                 .attr("text-anchor", "middle")
 
@@ -244,7 +244,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
                 .attr("y", 150)
                 .attr("x", 43.75)
                 .attr("fill", color(0))
-                .attr("font-weight", "500")
+                .style("font-weight", "100")
                 .style("font-size", 20)
                 .attr("text-anchor", "middle")
 
@@ -253,7 +253,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
                 .attr("y", 185)
                 .attr("x", 87.5)
                 .attr("fill", d.properties.margin > 0 ? color(100) : color(0))
-                .attr("font-weight", "500")
+                .style("font-weight", "100")
                 .style("font-size", 25)
                 .attr("text-anchor", "middle")
         })
@@ -444,7 +444,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
                 .attr("y", 20)
                 .attr("x", 87.5)
                 .attr("fill", "black")
-                .attr("font-weight", "500")
+                .style("font-weight", "100")
                 .style("font-size", "20")
                 .attr("text-anchor", "middle")
 
@@ -453,7 +453,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
                 .attr("y", 40)
                 .attr("x", 87.5)
                 .attr("fill", "black")
-                .style("font-weight", "500")
+                .style("font-weight", "100")
                 .style("font-size", "15")
                 .attr("text-anchor", "middle")
                 .style("font-family", "sf-mono")
@@ -477,7 +477,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
                 .attr("y", 150)
                 .attr("x", 131.25)
                 .attr("fill", color(100))
-                .attr("font-weight", "500")
+                .style("font-weight", "100")
                 .style("font-size", 20)
                 .attr("text-anchor", "middle")
 
@@ -486,7 +486,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
                 .attr("y", 150)
                 .attr("x", 43.75)
                 .attr("fill", color(0))
-                .attr("font-weight", "500")
+                .style("font-weight", "100")
                 .style("font-size", 20)
                 .attr("text-anchor", "middle")
 
@@ -495,7 +495,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
                 .attr("y", 185)
                 .attr("x", 87.5)
                 .attr("fill", d.margin > 0 ? color(100) : color(0))
-                .attr("font-weight", "500")
+                .style("font-weight", "100")
                 .style("font-size", 25)
                 .attr("text-anchor", "middle")
         })
@@ -536,7 +536,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
         .attr("x", (d, i) => (d - 165) * barWidth + barWidth / 2)
         .attr("y", 270)
         .attr("fill", color(100))
-        .attr("font-weight", "500")
+        .style("font-weight", "100")
         .style("font-size", 15)
         .attr("text-anchor", "middle")
 
@@ -551,7 +551,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
         .attr("x", (d, i) => (d - 165) * barWidth + barWidth / 2)
         .attr("y", 290)
         .attr("fill", color(0))
-        .attr("font-weight", "500")
+        .style("font-weight", "100")
         .style("font-size", 15)
         .attr("text-anchor", "middle")
 
@@ -582,8 +582,8 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
                 .text(nf(d.occ) + "%")
                 .attr("y", 20)
                 .attr("x", 50)
-                .attr("font-weight", "500")
-                .style("font-size", "1.3vw")
+                .style("font-weight", "500")
+                .style("font-size", "20")
                 .attr("text-anchor", "middle")
                 .attr("fill", "black")
 
@@ -591,8 +591,8 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
                 .text("R " + d.rep)
                 .attr("y", 40)
                 .attr("x", 50)
-                .attr("font-weight", "500")
-                .style("font-size", "1.3vw")
+                .style("font-weight", "500")
+                .style("font-size", "20")
                 .attr("text-anchor", "middle")
                 .attr("fill", color(100))
 
@@ -600,8 +600,8 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
                 .text("D " + d.dem)
                 .attr("y", 60)
                 .attr("x", 50)
-                .attr("font-weight", "500")
-                .style("font-size", "1.3vw")
+                .style("font-weight", "500")
+                .style("font-size", "20")
                 .attr("text-anchor", "middle")
                 .attr("fill", color(0))
 
@@ -700,7 +700,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
         .text("NOV. 3RD")
         .attr("x", x(new Date(2020, 10, 3)) + 3)
         .attr("y", 80)
-        .attr("font-weight", "500")
+        .style("font-weight", "100")
         .attr("font-size", 12)
         .style("font-family", "sf-mono")
 
@@ -852,7 +852,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
                     .attr("y", 50)
                     .attr("text-anchor", "middle")
                     .style("font-size", 20)
-                    .attr("font-weight", "500")
+                    .style("font-weight", "100")
                     .text(formatDate(d.date).toUpperCase())
                     .style("font-family", "sf-mono");
 
@@ -861,7 +861,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
                     .attr("cx", x(d.date));
 
                 focus.selectAll(".lineHoverText2")
-                    .attr("font-weight", "500")
+                    .style("font-weight", "100")
                     .attr("x", x(d.date) + 10)
                     .text((e, i) => input == "margin" ? "D +" + onevalue(-d[e]) : i == 1 ? ("DEM " + onevalue(d[e])) : i == 0 ? "REP " + onevalue(d[e]) : "Third " + onevalue(d[e]))
                     .attr("y", e => d[e] == d["rep" + input] ? y(d["rep" + input]) > y(d["dem" + input]) ? y(d["rep" + input]) + 15 : y(d["rep" + input]) - 15 : d[e] == d["dem" + input] ? y(d["dem" + input]) > y(d["rep" + input]) ? y(d["dem" + input]) + 15 : y(d["dem" + input]) - 15 : y(d[e]) - 15)
@@ -871,7 +871,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
 
 
                 focus.selectAll(".lineHoverText")
-                    .attr("font-weight", "500")
+                    .style("font-weight", "100")
                     .attr("x", x(d.date) + 10)
                     .text((e, i) => input == "margin" ? "D +" + onevalue(-d[e]) : i == 1 ? ("DEM " + onevalue(d[e])) : i == 0 ? "REP " + onevalue(d[e]) : "Third " + onevalue(d[e]))
                     .attr("fill", (e, i) => input == "margin" ? color(0) : colors[i])
@@ -886,7 +886,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
             .text("General Ballot")
             .attr("x", 1000)
             .attr("y", 25)
-            .attr("font-weight", "500")
+            .style("font-weight", "100")
             .attr("font-size", 25)
             .attr("fill", input == "margin" ? "black" : "lightgray")
             .on("mouseover", function (d) {
@@ -907,7 +907,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
             .text("Win Majority")
             .attr("x", 350)
             .attr("y", 25)
-            .attr("font-weight", "500")
+            .style("font-weight", "100")
             .attr("font-size", 25)
             .attr("fill", input == "Win" ? "black" : "lightgray")
             .on("mouseover", function (d) {
@@ -929,7 +929,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
             .text("Avg. Seats")
             .attr("x", 700)
             .attr("y", 25)
-            .attr("font-weight", "500")
+            .style("font-weight", "100")
             .attr("font-size", 25)
             .attr("fill", input == "Vote" ? "black" : "lightgray")
             .on("mouseover", function (d) {
