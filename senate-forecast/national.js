@@ -105,9 +105,9 @@ var map = d3.select("#usmap")
     .append("svg")
     .attr("viewBox", '75 -40 900 500');
 
-    var mapPhone = d3.select("#usmapPhone")
-                        .append("svg")
-                        .attr("viewBox", '75 20 900 460');
+var mapPhone = d3.select("#usmapPhone")
+    .append("svg")
+    .attr("viewBox", '75 20 900 460');
 
 var tool_tipPhone = d3.tip()
     .attr("class", "d3-tip")
@@ -254,14 +254,14 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                     .attr("height", 75)
                     .attr("width", 75)
 
-                    map.append("image")
+                map.append("image")
                     .attr("href", "https://jhkforecasts.com/donkey-01.png")
                     .attr("x", 85)
                     .attr("y", -50)
                     .attr("height", 75)
                     .attr("width", 75)
 
-                    map.append("text")
+                map.append("text")
                     .text("Democrats")
                     .attr("x", 165)
                     .attr("y", -30)
@@ -269,7 +269,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                     .attr("text-anchor", "start")
                     .attr("font-size", "23")
 
-                    map.append("text")
+                map.append("text")
                     .text("Republicans")
                     .attr("x", 885)
                     .attr("y", -30)
@@ -278,7 +278,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                     .attr("font-size", "23")
 
 
-                    map.append("text")
+                map.append("text")
                     .text(nf(rep_win_senate) + "%")
                     .attr("x", 885)
                     .attr("y", 0)
@@ -288,7 +288,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                     .attr("fill", colors[0])
                     .attr("font-weight", 500)
 
-                    map.append("text")
+                map.append("text")
                     .text(nf(rep_seats))
                     .attr("x", 560)
                     .attr("y", 0)
@@ -298,7 +298,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                     .attr("fill", colors[0])
                     .attr("font-weight", 500)
 
-                    map.append("text")
+                map.append("text")
                     .text("Seats")
                     .attr("x", 525)
                     .attr("y", 0)
@@ -308,7 +308,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                     .attr("fill", "black")
                     .attr("font-weight", 500)
 
-                    map.append("text")
+                map.append("text")
                     .text(nf(dem_seats))
                     .attr("x", 490)
                     .attr("y", 0)
@@ -318,7 +318,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                     .attr("fill", colors[1])
                     .attr("font-weight", 500)
 
-                    map.append("text")
+                map.append("text")
                     .text(nf(dem_win_senate) + "%")
                     .attr("x", 165)
                     .attr("y", 0)
@@ -361,7 +361,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                     .style("fill", (d, i) => d.properties.cands == undefined ? "#cfcfcf" : color(d3.sum(d.properties.cands.filter(d => d.party == "REP"), d => d.win)))
 
 
-                    map.selectAll("label")
+                map.selectAll("label")
                     .data(map_labels)
                     .enter()
                     .append("text")
@@ -372,9 +372,9 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                     .attr("font-size", "9")
                     .attr("fill", "white")
                     .attr("text-anchor", "middle")
-                    .attr("font-weight", "500")
+                    .style("font-weight", "100")
 
-                    map.selectAll("label")
+                map.selectAll("label")
                     .data(states)
                     .enter()
                     .append("text")
@@ -385,9 +385,9 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                     .attr("font-size", "9")
                     .attr("fill", "black")
                     .attr("text-anchor", "middle")
-                    .attr("font-weight", "500")
+                    .style("font-weight", "100")
 
-                    map.selectAll("path2")
+                map.selectAll("path2")
                     .data(json.features)
                     .enter()
                     .append("a")
@@ -401,93 +401,76 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
 
 
                         d.properties.cands == undefined ? "" : tool_tipPhone
-                            .offset([-170, -150]).show()
+                            .offset([-180, -90]).show()
                         var tipSVG = d3.select("#tipDiv")
                             .append("svg")
-                            .attr("width", 300)
-                            .attr("height", 170)
+                            .attr("width", 180)
+                            .attr("height", 180)
 
                         tipSVG.append("rect")
                             .attr("y", 1.5)
                             .attr("x", 1.5)
-                            .attr("width", 297)
-                            .attr("height", 167)
+                            .attr("width", 177)
+                            .attr("height", 177)
                             .attr("rx", 8)
                             .attr("fill", "white")
                             .attr("stroke", "black")
                             .attr("stroke-width", 2)
 
-                        tipSVG.append("text")
-                            .text(d.properties.name)
-                            .attr("y", 25)
-                            .attr("x", 150)
+                        tipSVG.append("image")
+                            .attr("href", "https://jhkforecasts.com/donkey-01.png")
+                            .attr("y", 40)
+                            .attr("x", 2.5)
                             .attr("fill", "black")
                             .attr("font-weight", "700")
                             .style("font-size", "20")
                             .attr("text-anchor", "middle")
+                            .attr("width", 85)
+                            .attr("height", 85)
+
+                        tipSVG.append("image")
+                            .attr("href", "https://jhkforecasts.com/elephant-01.png")
+                            .attr("y", 40)
+                            .attr("x", 92.5)
+                            .attr("fill", "black")
+                            .attr("font-weight", "700")
+                            .style("font-size", "20")
+                            .attr("text-anchor", "middle")
+                            .attr("width", 85)
+                            .attr("height", 85)
+
+
 
                         tipSVG.append("text")
-                            .text("Candidate")
-                            .attr("y", 50)
-                            .attr("x", 10)
+                            .text(d.properties.name)
+                            .attr("y", 20)
+                            .attr("x", 90)
                             .attr("fill", "black")
-                            .attr("font-weight", "500")
-                            .style("font-size", "18")
-                            .attr("text-anchor", "start")
-
-                        tipSVG.append("text")
-                            .text("Vote")
-                            .attr("y", 50)
-                            .attr("x", 220)
-                            .attr("fill", "black")
-                            .attr("font-weight", "500")
-                            .style("font-size", "18")
+                            .style("font-weight", "100")
+                            .style("font-size", "20")
                             .attr("text-anchor", "middle")
 
                         tipSVG.append("text")
-                            .text("Win")
-                            .attr("y", 50)
-                            .attr("x", 270)
-                            .attr("fill", "black")
-                            .attr("font-weight", "500")
-                            .style("font-size", "18")
+                            .text(nf(100 - d3.sum(d.properties.cands.filter(d => d.party == "REP"), d => d.win)) + "%")
+                            .attr("y", 150)
+                            .attr("x", 45)
+                            .attr("fill", color(0))
+                            .style("font-weight", "100")
+                            .style("font-size", "20")
                             .attr("text-anchor", "middle")
 
-                        tipSVG.selectAll("cands")
-                            .data(d.properties.cands)
-                            .enter()
-                            .append("text")
-                            .text(d => d.candidate + " (" + d.party.split("")[0] + ")")
-                            .attr("y", (d, i) => 80 + i * 40)
-                            .attr("x", 10)
-                            .attr("fill", d => cand_colors(d.party))
-                            .attr("font-weight", "500")
-                            .style("font-size", "18")
-                            .attr("text-anchor", "start")
 
-                        tipSVG.selectAll("cands")
-                            .data(d.properties.cands)
-                            .enter()
-                            .append("text")
-                            .text(d => nf(d.vote))
-                            .attr("y", (d, i) => 80 + i * 40)
-                            .attr("x", 220)
-                            .attr("fill", d => cand_colors(d.party))
-                            .attr("font-weight", "500")
-                            .style("font-size", "18")
+                        tipSVG.append("text")
+                            .text(nf(d3.sum(d.properties.cands.filter(d => d.party == "REP"), d => d.win)) + "%")
+                            .attr("y", 150)
+                            .attr("x", 135)
+                            .attr("fill", color(100))
+                            .style("font-weight", "100")
+                            .style("font-size", "20")
                             .attr("text-anchor", "middle")
 
-                        tipSVG.selectAll("cands")
-                            .data(d.properties.cands)
-                            .enter()
-                            .append("text")
-                            .text(d => d.win > 99 ? 100 : d.win < 1 ? 0 : nf(d.win))
-                            .attr("y", (d, i) => 80 + i * 40)
-                            .attr("x", 270)
-                            .attr("fill", d => cand_colors(d.party))
-                            .attr("font-weight", "500")
-                            .style("font-size", "18")
-                            .attr("text-anchor", "middle")
+
+
 
                     })
                     .on('mouseout',
@@ -496,7 +479,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
 
                             tool_tipPhone.hide()
                         });
-                        map.append("rect")
+                map.append("rect")
                     .attr("x", 880)
                     .attr("y", 420)
                     .attr("width", 20)
@@ -506,13 +489,13 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                     .attr("ry", "6")
                     .style("fill", "none");
 
-                    map.append("text")
+                map.append("text")
                     .text("Tipping Points")
                     .attr("x", 790)
                     .attr("y", 430)
                     .attr("fill", "black")
-                    .style("font-weight", "500")
-                    .style("font-size", "15");
+                    .style("font-weight", "100")
+                    .style("font-size", "10");
                 var pct = [60, 70, 80, 90, 100]
 
                 map.selectAll("pct")
@@ -525,7 +508,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                     .attr("fill", d => color(d))
 
 
-                    map.selectAll("pct")
+                map.selectAll("pct")
                     .data(pct)
                     .enter()
                     .append("circle")
@@ -535,7 +518,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                     .attr("fill", d => color(100 - d))
 
 
-                    map.selectAll("pct")
+                map.selectAll("pct")
                     .data(pct)
                     .enter()
                     .append("text")
@@ -545,17 +528,17 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                     .attr("fill", "black")
                     .attr("text-anchor", "middle")
                     .attr("font-size", 12)
-                    .attr("font-weight", "500")
+                    .style("font-weight", "100")
 
 
-                    map.append("text")
+                map.append("text")
                     .text("Win State")
                     .attr("y", 310)
                     .attr("x", 850)
                     .attr("fill", "black")
                     .attr("text-anchor", "middle")
                     .attr("font-size", 15)
-                    .attr("font-weight", "500")
+                    .style("font-weight", "100")
 
 
 
@@ -589,7 +572,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                     .style("stroke", "grey")
                     .attr("transform", "translate(725,280)")
 
-                    map.append("text")
+                map.append("text")
                     .text("GA*")
                     .attr("x", 750)
                     .attr("y", 360)
@@ -597,9 +580,9 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                     .attr("font-size", "9")
                     .attr("fill", "black")
                     .attr("text-anchor", "middle")
-                    .attr("font-weight", "500")
+                    .style("font-weight", "100")
 
-                    map
+                map
                     .append("a")
                     .attr("xlink:href", "Georgia-Special")
                     .append("path")
@@ -621,86 +604,73 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
 
 
 
+                        d.properties.cands == undefined ? "" : tool_tipPhone
+                            .offset([-180, -90]).show()
+                        var tipSVG = d3.select("#tipDiv")
+                            .append("svg")
+                            .attr("width", 180)
+                            .attr("height", 180)
+
                         tipSVG.append("rect")
                             .attr("y", 1.5)
                             .attr("x", 1.5)
-                            .attr("width", 297)
-                            .attr("height", 247)
+                            .attr("width", 177)
+                            .attr("height", 177)
                             .attr("rx", 8)
                             .attr("fill", "white")
                             .attr("stroke", "black")
                             .attr("stroke-width", 2)
 
-                        tipSVG.append("text")
-                            .text("Georgia*")
-                            .attr("y", 25)
-                            .attr("x", 150)
+                        tipSVG.append("image")
+                            .attr("href", "https://jhkforecasts.com/donkey-01.png")
+                            .attr("y", 40)
+                            .attr("x", 2.5)
                             .attr("fill", "black")
                             .attr("font-weight", "700")
                             .style("font-size", "20")
                             .attr("text-anchor", "middle")
+                            .attr("width", 85)
+                            .attr("height", 85)
+
+                        tipSVG.append("image")
+                            .attr("href", "https://jhkforecasts.com/elephant-01.png")
+                            .attr("y", 40)
+                            .attr("x", 92.5)
+                            .attr("fill", "black")
+                            .attr("font-weight", "700")
+                            .style("font-size", "20")
+                            .attr("text-anchor", "middle")
+                            .attr("width", 85)
+                            .attr("height", 85)
+
+
 
                         tipSVG.append("text")
-                            .text("Candidate")
-                            .attr("y", 50)
-                            .attr("x", 10)
+                            .text("Georgia*")
+                            .attr("y", 20)
+                            .attr("x", 90)
                             .attr("fill", "black")
-                            .attr("font-weight", "500")
-                            .style("font-size", "18")
-                            .attr("text-anchor", "start")
-
-                        tipSVG.append("text")
-                            .text("Vote")
-                            .attr("y", 50)
-                            .attr("x", 220)
-                            .attr("fill", "black")
-                            .attr("font-weight", "500")
-                            .style("font-size", "18")
+                            .style("font-weight", "100")
+                            .style("font-size", "20")
                             .attr("text-anchor", "middle")
 
                         tipSVG.append("text")
-                            .text("Win")
-                            .attr("y", 50)
-                            .attr("x", 270)
-                            .attr("fill", "black")
-                            .attr("font-weight", "500")
-                            .style("font-size", "18")
+                            .text(nf(100 - d3.sum(ga_special.filter(d => d.party == "REP"), d => d.win)) + "%")
+                            .attr("y", 150)
+                            .attr("x", 45)
+                            .attr("fill", color(0))
+                            .style("font-weight", "100")
+                            .style("font-size", "20")
                             .attr("text-anchor", "middle")
 
-                        tipSVG.selectAll("cands")
-                            .data(ga_special)
-                            .enter()
-                            .append("text")
-                            .text(d => d.candidate + " (" + d.party.split("")[0] + ")")
-                            .attr("y", (d, i) => 80 + i * 40)
-                            .attr("x", 10)
-                            .attr("fill", d => cand_colors(d.party))
-                            .attr("font-weight", "500")
-                            .style("font-size", "18")
-                            .attr("text-anchor", "start")
 
-                        tipSVG.selectAll("cands")
-                            .data(ga_special)
-                            .enter()
-                            .append("text")
-                            .text(d => nf(d.vote))
-                            .attr("y", (d, i) => 80 + i * 40)
-                            .attr("x", 220)
-                            .attr("fill", d => cand_colors(d.party))
-                            .attr("font-weight", "500")
-                            .style("font-size", "18")
-                            .attr("text-anchor", "middle")
-
-                        tipSVG.selectAll("cands")
-                            .data(ga_special)
-                            .enter()
-                            .append("text")
-                            .text(d => d.win > 99 ? 100 : d.win < 1 ? 0 : nf(d.win))
-                            .attr("y", (d, i) => 80 + i * 40)
-                            .attr("x", 270)
-                            .attr("fill", d => cand_colors(d.party))
-                            .attr("font-weight", "500")
-                            .style("font-size", "18")
+                        tipSVG.append("text")
+                            .text(nf(d3.sum(ga_special.filter(d => d.party == "REP"), d => d.win)) + "%")
+                            .attr("y", 150)
+                            .attr("x", 135)
+                            .attr("fill", color(100))
+                            .style("font-weight", "100")
+                            .style("font-size", "20")
                             .attr("text-anchor", "middle")
 
                     })
@@ -714,7 +684,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
 
 
                 d3.csv("https://data.jhkforecasts.com/2020-senate-histogram.csv", hist => {
-                    
+
                     var hist = hist.slice(5, 26)
 
                     var rep_hist = d3.scaleLinear()
@@ -779,7 +749,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("y", 40)
                         .attr("x", 70)
                         .attr("fill", "black")
-                        .attr("font-weight", "500")
+                        .style("font-weight", "100")
                         .style("font-size", "15")
                         .attr("text-anchor", "middle")
                         .attr("dominant-baseline", "central")
@@ -790,7 +760,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("y", 40)
                         .attr("x", 150)
                         .attr("fill", "black")
-                        .attr("font-weight", "500")
+                        .style("font-weight", "100")
                         .style("font-size", "15")
                         .attr("text-anchor", "middle")
                         .attr("dominant-baseline", "central")
@@ -802,7 +772,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("y", 10)
                         .attr("x", 115)
                         .attr("fill", "black")
-                        .attr("font-weight", "500")
+                        .style("font-weight", "100")
                         .style("font-size", "18")
                         .attr("text-anchor", "middle")
                         .attr("dominant-baseline", "central")
@@ -812,7 +782,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("y", 10)
                         .attr("x", 250)
                         .attr("fill", "black")
-                        .attr("font-weight", "500")
+                        .style("font-weight", "100")
                         .style("font-size", "18")
                         .attr("text-anchor", "middle")
                         .attr("dominant-baseline", "central")
@@ -825,7 +795,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("y", (d, i) => 70 + i * 25)
                         .attr("x", 70)
                         .attr("fill", "black")
-                        .attr("font-weight", "500")
+                        .style("font-weight", "100")
                         .style("font-size", "15")
                         .attr("text-anchor", "middle")
                         .attr("dominant-baseline", "central")
@@ -838,7 +808,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("y", (d, i) => 70 + i * 25)
                         .attr("x", 150)
                         .attr("fill", "black")
-                        .attr("font-weight", "500")
+                        .style("font-weight", "100")
                         .style("font-size", "15")
                         .attr("text-anchor", "middle")
                         .attr("dominant-baseline", "central")
@@ -851,7 +821,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("y", (d, i) => 70 + i * 25)
                         .attr("x", 250)
                         .attr("fill", "black")
-                        .attr("font-weight", "500")
+                        .style("font-weight", "100")
                         .style("font-size", "15")
                         .attr("text-anchor", "middle")
                         .attr("dominant-baseline", "central")
@@ -882,7 +852,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("y", 40)
                         .attr("x", d => 350 + hist_scale(d))
                         .attr("fill", "#afafaf")
-                        .attr("font-weight", "500")
+                        .style("font-weight", "100")
                         .style("font-size", "15")
                         .attr("text-anchor", "middle")
                         .attr("dominant-baseline", "central")
@@ -965,17 +935,17 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("y", -120)
                         .attr("x", 0)
                         .attr("fill", "black")
-                        .attr("font-weight", "500")
+                        .style("font-weight", "100")
                         .style("font-size", "18")
                         .attr("text-anchor", "middle")
                         .attr("dominant-baseline", "top")
 
                     congress.append("text")
-                        .text("30 Repbulican Seats")
+                        .text("30 Republican Seats")
                         .attr("y", -120)
                         .attr("x", 400)
                         .attr("fill", "black")
-                        .attr("font-weight", "500")
+                        .style("font-weight", "100")
                         .style("font-size", "18")
                         .attr("text-anchor", "middle")
                         .attr("dominant-baseline", "top")
@@ -984,7 +954,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("y", -120)
                         .attr("x", 400)
                         .attr("fill", "black")
-                        .attr("font-weight", "500")
+                        .style("font-weight", "100")
                         .style("font-size", "18")
                         .attr("text-anchor", "middle")
                         .attr("dominant-baseline", "top")
@@ -995,7 +965,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("y", -120)
                         .attr("x", -400)
                         .attr("fill", "black")
-                        .attr("font-weight", "500")
+                        .style("font-weight", "100")
                         .style("font-size", "18")
                         .attr("text-anchor", "middle")
                         .attr("dominant-baseline", "top")
@@ -1004,7 +974,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("y", -120)
                         .attr("x", -400)
                         .attr("fill", "black")
-                        .attr("font-weight", "500")
+                        .style("font-weight", "100")
                         .style("font-size", "18")
                         .attr("text-anchor", "middle")
                         .attr("dominant-baseline", "top")
@@ -1033,7 +1003,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .domain([-50, 50])
                         .range([0, 600]);
 
-                    
+
 
                     tip.append("text")
                         .text("TIPPING POINT")
@@ -1044,9 +1014,9 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("font-weight", 500)
                         .attr("font-size", 12)
                         .attr("font-weight", 100)
-                        .style("font-family","sf-mono")
+                        .style("font-family", "sf-mono")
 
-                    
+
 
 
                     var pct = [-50, -25, 0, 25, 50]
@@ -1079,12 +1049,12 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("y", 40)
                         .attr("x", d => 200 + x2(d))
                         .attr("fill", d => d == 0 ? "#afafaf" : d > 0 ? colors[0] : colors[1])
-                        .attr("font-weight", "500")
+                        .style("font-weight", "100")
                         .style("font-size", "15")
                         .attr("text-anchor", "middle")
                         .attr("dominant-baseline", "central")
                         .style("font-weight", 100)
-                        .style("font-family","sf-mono")
+                        .style("font-family", "sf-mono")
 
                     tip.selectAll("bars")
                         .data(bars)
@@ -1098,8 +1068,8 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("dominant-baseline", "central")
                         .attr("text-amchor", "middle")
                         .attr("font-weight", 100)
-                        .style("font-family","sf-mono")
-                    
+                        .style("font-family", "sf-mono")
+
 
                     tip.selectAll("bars")
                         .data(bars)
@@ -1141,7 +1111,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("font-weight", 500)
                         .attr("fill", d => d.margin == 0 ? "#afafaf" : d.margin > 0 ? colors[0] : colors[1])
                         .attr("font-weight", 100)
-                        .style("font-family","sf-mono")
+                        .style("font-family", "sf-mono")
 
                     tip.selectAll("bars")
                         .data(bars)
@@ -1261,7 +1231,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .text("Nov. 3rd")
                         .attr("x", x(new Date(2020, 10, 3)))
                         .attr("y", 10)
-                        .attr("font-weight", "500")
+                        .style("font-weight", "100")
                         .attr("font-size", 20)
 
 
@@ -1408,7 +1378,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                                     .attr("y", 0)
                                     .attr("text-anchor", "middle")
                                     .style("font-size", 18)
-                                    .attr("font-weight", "500")
+                                    .style("font-weight", "100")
                                     .text(formatDate(d.date));
 
                                 focus.selectAll(".hoverCircle")
@@ -1418,7 +1388,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
 
 
                                 focus.selectAll(".lineHoverText")
-                                    .attr("font-weight", "500")
+                                    .style("font-weight", "100")
                                     .attr("x", x(d.date) + 10)
                                     .text((e, i) => i == 0 ? "REP " + nf(d[e]) : "DEM " + nf(d[e]))
                                     .attr("fill", (e, i) => colors[i])
@@ -1500,7 +1470,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("font-size", "35")
                         .attr("fill", colors[1])
                         .attr("font-weight", 500)
-                    
+
 
                     var tool_tipPhone = d3.tip()
                         .attr("class", "d3-tip")
@@ -1530,7 +1500,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("font-size", "16")
                         .attr("fill", "white")
                         .attr("text-anchor", "middle")
-                        .attr("font-weight", "500")
+                        .style("font-weight", "100")
 
                     mapPhone.selectAll("label")
                         .data(states)
@@ -1543,7 +1513,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("font-size", "16")
                         .attr("fill", "black")
                         .attr("text-anchor", "middle")
-                        .attr("font-weight", "500")
+                        .style("font-weight", "100")
 
                     mapPhone.selectAll("path2")
                         .data(json.features)
@@ -1571,7 +1541,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("x", 790)
                         .attr("y", 430)
                         .attr("fill", "black")
-                        .style("font-weight", "500")
+                        .style("font-weight", "100")
                         .style("font-size", "15");
                     var pct = [60, 70, 80, 90, 100]
 
@@ -1605,7 +1575,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("fill", "black")
                         .attr("text-anchor", "middle")
                         .attr("font-size", 12)
-                        .attr("font-weight", "500")
+                        .style("font-weight", "100")
 
 
                     mapPhone.append("text")
@@ -1615,7 +1585,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("fill", "black")
                         .attr("text-anchor", "middle")
                         .attr("font-size", 15)
-                        .attr("font-weight", "500")
+                        .style("font-weight", "100")
                     var width = 50,
                         height = 50;
                     var projection2 = d3.geoAlbers();
@@ -1653,7 +1623,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("font-size", "16")
                         .attr("fill", "black")
                         .attr("text-anchor", "middle")
-                        .attr("font-weight", "500")
+                        .style("font-weight", "100")
 
                     mapPhone.append("path")
                         .datum(state)
@@ -1714,17 +1684,17 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("y", -120)
                         .attr("x", 0)
                         .attr("fill", "black")
-                        .attr("font-weight", "500")
+                        .style("font-weight", "100")
                         .style("font-size", "18")
                         .attr("text-anchor", "middle")
                         .attr("dominant-baseline", "top")
 
                     congressPhone.append("text")
-                        .text("30 Repbulican Seats")
+                        .text("30 Republican Seats")
                         .attr("y", -100)
                         .attr("x", 400)
                         .attr("fill", "black")
-                        .attr("font-weight", "500")
+                        .style("font-weight", "100")
                         .style("font-size", "18")
                         .attr("text-anchor", "middle")
                         .attr("dominant-baseline", "top")
@@ -1733,7 +1703,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("y", -100)
                         .attr("x", 400)
                         .attr("fill", "black")
-                        .attr("font-weight", "500")
+                        .style("font-weight", "100")
                         .style("font-size", "18")
                         .attr("text-anchor", "middle")
                         .attr("dominant-baseline", "top")
@@ -1744,7 +1714,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("y", -120)
                         .attr("x", -400)
                         .attr("fill", "black")
-                        .attr("font-weight", "500")
+                        .style("font-weight", "100")
                         .style("font-size", "18")
                         .attr("text-anchor", "middle")
                         .attr("dominant-baseline", "top")
@@ -1753,7 +1723,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("y", -120)
                         .attr("x", -400)
                         .attr("fill", "black")
-                        .attr("font-weight", "500")
+                        .style("font-weight", "100")
                         .style("font-size", "18")
                         .attr("text-anchor", "middle")
                         .attr("dominant-baseline", "top")
@@ -1813,7 +1783,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("y", 40)
                         .attr("x", 70)
                         .attr("fill", "black")
-                        .attr("font-weight", "500")
+                        .style("font-weight", "100")
                         .style("font-size", "20")
                         .attr("text-anchor", "middle")
                         .attr("dominant-baseline", "central")
@@ -1824,7 +1794,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("y", 40)
                         .attr("x", 150)
                         .attr("fill", "black")
-                        .attr("font-weight", "500")
+                        .style("font-weight", "100")
                         .style("font-size", "20")
                         .attr("text-anchor", "middle")
                         .attr("dominant-baseline", "central")
@@ -1836,7 +1806,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("y", 10)
                         .attr("x", 115)
                         .attr("fill", "black")
-                        .attr("font-weight", "500")
+                        .style("font-weight", "100")
                         .style("font-size", "25")
                         .attr("text-anchor", "middle")
                         .attr("dominant-baseline", "central")
@@ -1846,7 +1816,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("y", 10)
                         .attr("x", 250)
                         .attr("fill", "black")
-                        .attr("font-weight", "500")
+                        .style("font-weight", "100")
                         .style("font-size", "25")
                         .attr("text-anchor", "middle")
                         .attr("dominant-baseline", "central")
@@ -1859,7 +1829,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("y", (d, i) => 72.5 + i * 30)
                         .attr("x", 70)
                         .attr("fill", "black")
-                        .attr("font-weight", "500")
+                        .style("font-weight", "100")
                         .style("font-size", "18")
                         .attr("text-anchor", "middle")
                         .attr("dominant-baseline", "central")
@@ -1872,7 +1842,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("y", (d, i) => 72.5 + i * 30)
                         .attr("x", 150)
                         .attr("fill", "black")
-                        .attr("font-weight", "500")
+                        .style("font-weight", "100")
                         .style("font-size", "18")
                         .attr("text-anchor", "middle")
                         .attr("dominant-baseline", "central")
@@ -1885,7 +1855,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("y", (d, i) => 70 + i * 30)
                         .attr("x", 250)
                         .attr("fill", "black")
-                        .attr("font-weight", "500")
+                        .style("font-weight", "100")
                         .style("font-size", "15")
                         .attr("text-anchor", "middle")
                         .attr("dominant-baseline", "central")
@@ -1916,7 +1886,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("y", 40)
                         .attr("x", d => 350 + hist_scale(d))
                         .attr("fill", "#afafaf")
-                        .attr("font-weight", "500")
+                        .style("font-weight", "100")
                         .style("font-size", "15")
                         .attr("text-anchor", "middle")
 
@@ -1983,7 +1953,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("y", 40)
                         .attr("x", d => 200 + x2(d))
                         .attr("fill", d => d == 0 ? "#afafaf" : d > 0 ? colors[0] : colors[1])
-                        .attr("font-weight", "500")
+                        .style("font-weight", "100")
                         .style("font-size", "15")
                         .attr("text-anchor", "middle")
                         .attr("dominant-baseline", "central")
