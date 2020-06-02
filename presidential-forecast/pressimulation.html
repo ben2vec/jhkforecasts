@@ -333,7 +333,7 @@
 		const queryString = window.location.search
 		const urlParams = new URLSearchParams(queryString)
 		console.log(urlParams)
-		const mapType = urlParams.get("mapType") 
+		const mapType = urlParams.get("mapType")
 
 
 
@@ -418,8 +418,9 @@
 				})
 
 				data.forEach((d, i) => {
-					d.gopSim = jStat.normal.inv((Math.random()), d.gopVote, 2) + nationalSwing / 2
-					d.demSim = jStat.normal.inv((Math.random()), d.demVote, 2) - nationalSwing / 2
+					var simNum = (Math.random())
+					d.gopSim = jStat.normal.inv(simNum, d.gopVote, 2) + nationalSwing / 2
+					d.demSim = jStat.normal.inv(simNum, d.demVote, 2) - nationalSwing / 2
 					d.thirdSim = jStat.normal.inv((Math.random() + ((thirdSimulation) * 2)) / 3, d.thirdVote, d.thirdVote / 3)
 					d.sum = d.gopSim + d.demSim + d.thirdSim
 					d.gopvote = d.gopSim / (d.sum / 100)
@@ -695,7 +696,7 @@
 							.style("display", "block")
 					}
 
-					mapType == "margin" ? marginM() : winnerM()
+					mapType == "margin"||mapType  == null ? marginM() : winnerM()
 
 					svg.append("rect")
 						.attr("x", 850)
