@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-	<link href="https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.typekit.net/htk2wjy.css">
+	<link rel="stylesheet" href="index.css">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -11,25 +12,6 @@
 			display: none;
 		}
 
-		.btn {
-			border: none;
-			color: white;
-			padding: 10px 10px;
-			font-size: 16px;
-			font-family: brandon-grotesque;
-			border-radius: 10px;
-			cursor: pointer;
-
-		}
-
-		.default {
-			background-color: #e7e7e7;
-			color: black;
-		}
-
-		.default:hover {
-			background: #ddd;
-		}
 
 		#lessphone {
 			display: none;
@@ -58,8 +40,6 @@
 	<script src="https://d3js.org/d3.v4.min.js"></script>
 	<script src="//d3js.org/topojson.v1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
-	<link rel="stylesheet" href="https://use.typekit.net/htk2wjy.css">
-	<link rel="stylesheet" href="index.css">
 	<script src="https:////cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script>
 </head>
 
@@ -237,7 +217,7 @@
 		var key_state = "US"
 	</script>
 
-	<p style=" font-family: sf-mono;font-weight: 400;text-align: center;text-decoration: underline double;color:#AFAFAF"
+	<p style=" font-family: sf-mono;font-weight: 400;text-align: center;text-decoration: underline double;color:#AFAFAF;text-transform: uppercase;font-size: 1vw;"
 		id="updated"></p>
 	<div class="computer">
 		<div id="usmap"></div>
@@ -246,24 +226,23 @@
 		<h1 style="margin-left: 2%;font-weight: 900;">The Ever-changing Race for the White House</h1>
 		<p style="margin-left: 5%;font-weight: 500;;font-size:20px">The race for the Presidency can change in an
 			instance, the chart below shows the zigs and zags of the race for the White House up until today.</p>
-		<table
-			style="margin-left:20%;border-collapse: collapse; border: none;margin-top: 20px;text-align: center;width: 60%;"
-			cellspacing="0">
-			<tbody>
-				<tr>
-					<td style="width: 33%; ">
-						<button class="btn default" id="winbutton">Win White House</button>
-					</td>
-					<td style="width: 33%; ">
-						<button class="btn default" id="votebutton">Popular Vote</button>
-					</td>
-					<td style="width: 33%;">
-						<button class="btn default" id="evbutton">Electoral Votes</button>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-
+		<div style="text-align:center">
+			<table style="border-collapse: collapse; border: none;margin-top: 20px;width:60%;margin-left: 20%;" cellspacing="0">
+				<tbody>
+					<tr>
+						<td style="width: 33%; ">
+							<button class="btn default" id="winbutton">Win White House</button>
+						</td>
+						<td style="width: 33%; ">
+							<button class="btn default" id="votebutton">Popular Vote</button>
+						</td>
+						<td style="width: 33%;">
+							<button class="btn default" id="evbutton">Electoral Votes</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 		<div id="time"></div>
 		<div style="text-align:center">
 			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -412,7 +391,8 @@
 	<hr>
 	<script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
 	<div style="text-align: center;">
-	<a  href="https://www.patreon.com/bePatron?u=36104274" data-patreon-widget-type="become-patron-button">Become a Patron!</a></div>
+		<a href="https://www.patreon.com/bePatron?u=36104274" data-patreon-widget-type="become-patron-button">Become a
+			Patron!</a></div>
 	<div style="text-align:center">
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 		<ins class="adsbygoogle" style="display:block;margin-right:auto;margin-left: auto" data-ad-format="fluid"

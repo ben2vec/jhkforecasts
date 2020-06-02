@@ -84,7 +84,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
 
   var topline = d3.select("#topline")
     .append("svg")
-    .attr("viewBox", "0 0 1000 220")
+    .attr("viewBox", "0 60 1000 160")
 
   topline
     .append("line")
