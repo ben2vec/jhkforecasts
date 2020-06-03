@@ -353,7 +353,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
           .attr("x", 87.5)
           .attr("fill", "#black")
           .attr("font-weight", "100")
-          .style("font-size", "20")
+          .style("font-size", "16")
           .attr("text-anchor", "middle")
 
         tipSVG.append("text")
@@ -995,7 +995,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
           .attr("x", 87.5)
           .attr("fill", "#black")
           .attr("font-weight", "100")
-          .style("font-size", "20")
+          .style("font-size", "16")
           .attr("text-anchor", "middle")
 
         tipSVG.append("text")
@@ -1004,7 +1004,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
           .attr("x", 87.5)
           .attr("fill", "#black")
           .attr("font-weight", "100")
-          .style("font-size", "17")
+          .style("font-size", "15")
           .attr("text-anchor", "middle")
 
 
