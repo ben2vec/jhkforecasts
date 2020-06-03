@@ -127,7 +127,7 @@ d3.csv("https://data.jhkforecasts.com/senate-candidates.csv", candidates => {
                 .attr("text-anchor", "end")
                 .attr("font-size", "23")
                 .attr("fill", colors[0])
-                .attr("font-weight", 500)
+                .style("font-weight", 100)
 
             topline.append("text")
                 .text(nf(dem_win) + "%")
@@ -137,7 +137,7 @@ d3.csv("https://data.jhkforecasts.com/senate-candidates.csv", candidates => {
                 .attr("text-anchor", "start")
                 .attr("font-size", "23")
                 .attr("fill", colors[1])
-                .attr("font-weight", 500)
+                .style("font-weight", 100)
 
             var vote = d3.select("#vote").append("svg")
                 .attr("viewBox", "0 0 1000 " + (cands.length * 100 + 50))
@@ -172,13 +172,13 @@ d3.csv("https://data.jhkforecasts.com/senate-candidates.csv", candidates => {
 
             vote.append("text")
                 .text("Win")
-                .attr("x", 295)
+                .attr("x", 305)
                 .attr("y", 10)
                 .attr("dominant-baseline", "central")
                 .attr("text-anchor", "end")
                 .attr("font-size", "18")
                 .attr("fill", "black")
-                .attr("font-weight", 500)
+                .style("font-weight", 100)
 
             vote.append("text")
                 .text("Candidate")
@@ -188,7 +188,7 @@ d3.csv("https://data.jhkforecasts.com/senate-candidates.csv", candidates => {
                 .attr("text-anchor", "start")
                 .attr("font-size", "18")
                 .attr("fill", "black")
-                .attr("font-weight", 500)
+                .style("font-weight", 100)
 
             vote.append("text")
                 .text("Projected Vote")
@@ -198,7 +198,7 @@ d3.csv("https://data.jhkforecasts.com/senate-candidates.csv", candidates => {
                 .attr("text-anchor", "middle")
                 .attr("font-size", "18")
                 .attr("fill", "black")
-                .attr("font-weight", 500)
+                .style("font-weight", 100)
 
             vote.selectAll("bars")
                 .data(today)
@@ -237,20 +237,20 @@ d3.csv("https://data.jhkforecasts.com/senate-candidates.csv", candidates => {
                 .attr("text-anchor", "middle")
                 .attr("font-size", "15")
                 .attr("fill", "black")
-                .attr("font-weight", 500)
+                .style("font-weight", 100)
 
             vote.selectAll("vote")
                 .data(today)
                 .enter()
                 .append("text")
                 .text(d => nf(d.win))
-                .attr("x", 295)
+                .attr("x", 305)
                 .attr("y", (d, i) => i * 100 + 100)
                 .attr("dominant-baseline", "central")
                 .attr("text-anchor", "end")
-                .attr("font-size", "20")
+                .attr("font-size", "15")
                 .attr("fill", d => cand_colors(d.party))
-                .attr("font-weight", 500)
+                .style("font-weight", 100)
 
             vote.selectAll("vote")
                 .data(today)
@@ -261,9 +261,9 @@ d3.csv("https://data.jhkforecasts.com/senate-candidates.csv", candidates => {
                 .attr("y", (d, i) => i * 100 + 100)
                 .attr("dominant-baseline", "central")
                 .attr("text-anchor", "start")
-                .attr("font-size", "20")
+                .attr("font-size", "15")
                 .attr("fill", d => cand_colors(d.party))
-                .attr("font-weight", 500)
+                .style("font-weight", 100)
 
             var voteCalc = d3.select("#voteCalc").append("svg")
                 .attr("viewBox", "0 0 1000 500")
@@ -299,7 +299,7 @@ d3.csv("https://data.jhkforecasts.com/senate-candidates.csv", candidates => {
                 .attr("text-anchor", "start")
                 .attr("font-size", "25")
                 .attr("fill", "black")
-                .attr("font-weight", 500)
+                .style("font-weight", 100)
 
             voteCalc.selectAll("vote")
                 .data(margins)
@@ -312,7 +312,7 @@ d3.csv("https://data.jhkforecasts.com/senate-candidates.csv", candidates => {
                 .attr("text-anchor", "middle")
                 .attr("font-size", "20")
                 .attr("fill", d => d == 0 ? "black" : d > 0 ? colors[0] : colors[1])
-                .attr("font-weight", 500)
+                .style("font-weight", 100)
 
 
             voteCalc.selectAll("vote")
@@ -324,9 +324,9 @@ d3.csv("https://data.jhkforecasts.com/senate-candidates.csv", candidates => {
                 .attr("x", (d, i) => i * 100 + startX + 50)
                 .attr("dominant-baseline", "central")
                 .attr("text-anchor", "middle")
-                .attr("font-size", "20")
+                .attr("font-size", "15")
                 .attr("fill", "black")
-                .attr("font-weight", 500)
+                .style("font-weight", 100)
 
             voteCalc.selectAll("vote")
                 .data(today)
@@ -384,7 +384,7 @@ d3.csv("https://data.jhkforecasts.com/senate-candidates.csv", candidates => {
                 .attr("text-anchor", "middle")
                 .attr("font-size", "25")
                 .attr("fill", "black")
-                .attr("font-weight", 500)
+                .style("font-weight", 100)
 
 
             voteCalc.selectAll("vote")
@@ -398,7 +398,7 @@ d3.csv("https://data.jhkforecasts.com/senate-candidates.csv", candidates => {
                 .attr("text-anchor", "middle")
                 .attr("font-size", "25")
                 .attr("fill", "black")
-                .attr("font-weight", 500)
+                .style("font-weight", 100)
 
             voteCalc.selectAll("vote")
                 .data(today)
@@ -411,7 +411,7 @@ d3.csv("https://data.jhkforecasts.com/senate-candidates.csv", candidates => {
                 .attr("text-anchor", "middle")
                 .attr("font-size", "25")
                 .attr("fill", "black")
-                .attr("font-weight", 500)
+                .style("font-weight", 100)
 
             voteCalc.selectAll("vote")
                 .data(today)
@@ -424,7 +424,7 @@ d3.csv("https://data.jhkforecasts.com/senate-candidates.csv", candidates => {
                 .attr("text-anchor", "middle")
                 .attr("font-size", "25")
                 .attr("fill", "black")
-                .attr("font-weight", 500)
+                .style("font-weight", 100)
 
             voteCalc.selectAll('vote')
                 .data(category)
