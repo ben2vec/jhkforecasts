@@ -7,7 +7,7 @@ var cand_colors = d3.scaleOrdinal()
   .range(["#FF6060", "#0091FF", "#FFE130"])
 
 var tformat = d3.timeFormat("%m/%d/%Y")
-var dateparse = d3.timeParse("%m/%d/%y")
+var dp = d3.timeParse("%m/%d/%y")
 var timeparse = d3.timeParse("%m/%d/%y %H:%M")
 var numberformat = d3.format(".1f")
 var updated_format = d3.timeFormat("%b. %d %Y %I:%M %p")
@@ -67,198 +67,202 @@ var tool_tip = d3.tip()
 
 map.call(tool_tip);
 
-
-d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
-  console.log(data)
-  var updated = data[data.length - 1].experts_weight
-  data.forEach((d, i) => {
-    d.forecast_date = dateparse(d.forecast_date)
-    return d
-  })
-
-  var newest_update = d3.max(data, d => d.forecast_date)
-
-  document.getElementById("updated").innerHTML = "Updated: " + updated
-
-  var newest_data = data.slice(data.length - 171, data.length)
-  var upset_odds = newest_data[168].win > newest_data[169].win ? newest_data[169].win : newest_data[168].win
-
-  map.append("text")
-    .text("Chance of an upset is about the odds of...")
-    .attr("y", -40)
-    .attr("x", 525)
-    .attr("fill", "black")
-    .attr("text-anchor", "middle")
-    .attr("font-size", 12)
-    .attr("font-weight", "100")
+d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", function (us) {
 
 
-  map.append("text")
-    .text(events[Math.round(odds_scale(upset_odds))])
-    .attr("y", -20)
-    .attr("x", 525)
-    .attr("fill", "black")
-    .attr("text-anchor", "middle")
-    .attr("font-size", 15)
-    .attr("font-weight", "100")
-
-
-  map.append("image")
-    .attr("href", events[Math.round(odds_scale(upset_odds))] + ".svg")
-    .attr("x", 487.5)
-    .attr("y", -10)
-    .attr("height", 75)
-    .attr("width", 75)
-
-  var sd = []
-  for (let k = 0; k < map_states.length; k++) {
-    var dt = newest_data.filter(d => d.state == states[k])
-    var ml = map_labels.filter(d => d.state == states[k])
-    var finaldt = {
-      state: states[k],
-      electoral_votes: +dt[0].electoral_vote,
-      gop_win: +dt[0].win,
-      dem_win: +dt[1].win,
-      third_win: +dt[2].win,
-      gop_vote: +dt[0].proj_vote,
-      dem_vote: +dt[1].proj_vote,
-      third_vote: +dt[2].proj_vote,
-      tipping_point: +dt[0].tipping_point,
-      x_value: ml[0].xValue,
-      y_value: ml[0].yValue,
-      label: ml[0].label,
-
-    }
-    finaldt.margin = finaldt.gop_vote - finaldt.dem_vote
-    sd.push(finaldt)
-  }
-
-
-
-  var boxstates = [sd[28], sd[44], sd[20], sd[38], sd[6], sd[7], sd[19], sd[50]]
-
-
-  map.selectAll()
-    .data(boxstates)
-    .enter()
-    .append("rect")
-    .attr("x", 825)
-    .attr("y", (d, i) => 130 + 15 * i)
-    .attr("width", 30)
-    .attr("height", 15)
-    .attr("stroke", "white")
-    .attr("fill", d => color(d.gop_win))
-
-  map.selectAll()
-    .data(boxstates)
-    .enter()
-    .append("text")
-    .text(d => d.label)
-    .attr("x", 840)
-    .attr("y", (d, i) => 137.5 + 15 * i)
-    .style("font-family", "sf-mono")
-    .attr("font-size", "9")
-    .attr("fill", "black")
-    .attr("text-anchor", "middle")
-    .attr("font-weight", "100")
-    .attr("dominant-baseline", "central")
-
-  map.selectAll()
-    .data(boxstates)
-    .enter()
-    .append("a")
-    .attr("href", d => d.state)
-    .append("rect")
-    .attr("class", "statesover")
-    .attr("x", 825)
-    .attr("y", (d, i) => 130 + 15 * i)
-    .attr("width", 30)
-    .attr("height", 15)
-    .attr("fill", "none")
-    .on('mouseover', function (d) {
-
-
-      tool_tip.show();
-      var tipSVG = d3.select("#tipDiv")
-        .append("svg")
-        .attr("width", 175)
-        .attr("height", 175)
-        ;
-      tipSVG.append("rect")
-        .attr("y", 1.5)
-        .attr("x", 1.5)
-        .attr("width", 172)
-        .attr("height", 172)
-        .attr("rx", 8)
-        .attr("fill", "white")
-        .attr("stroke", "black")
-        .attr("stroke-width", 2)
-
-
-
-      tipSVG.append("text")
-        .text(d.state)
-        .attr("y", 20)
-        .attr("x", 87.5)
-        .attr("fill", "#black")
-        .attr("font-weight", "100")
-        .style("font-size", "20")
-        .attr("text-anchor", "middle")
-
-      tipSVG.append("text")
-        .text(d.electoral_votes + " Electoral Votes")
-        .attr("y", 40)
-        .attr("x", 87.5)
-        .attr("fill", "#black")
-        .attr("font-weight", "100")
-        .style("font-size", "15")
-        .attr("text-anchor", "middle")
-
-      tipSVG.append("image")
-        .attr("xlink:href", d => "https://jhkforecasts.com/Trump-01.png")
-        .attr("x", 90)
-        .attr("y", 50)
-        .attr("width", 82)
-        .attr("height", 82)
-
-      tipSVG.append("image")
-        .attr("xlink:href", d => "https://jhkforecasts.com/Biden-01.png")
-        .attr("x", 3)
-        .attr("y", 50)
-        .attr("width", 82)
-        .attr("height", 82)
-
-      tipSVG.append("text")
-        .text(numberformat(d.gop_win) + "%")
-        .attr("y", 150)
-        .attr("x", 131.25)
-        .attr("fill", color(100))
-        .attr("font-weight", "100")
-        .style("font-size", 20)
-        .attr("text-anchor", "middle")
-
-      tipSVG.append("text")
-        .text(numberformat(d.dem_win) + "%")
-        .attr("y", 150)
-        .attr("x", 43.75)
-        .attr("fill", color(0))
-        .attr("font-weight", "100")
-        .style("font-size", 20)
-        .attr("text-anchor", "middle")
-
-
-
-
+  d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
+    console.log(data)
+    var updated = data[data.length - 1].experts_weight
+    data.forEach((d, i) => {
+      d.forecast_date = dp(d.forecast_date)
+      return d
     })
-    .on('mouseout',
-      function (d) {
+
+    var newest_update = d3.max(data, d => d.forecast_date)
+
+    document.getElementById("updated").innerHTML = "Updated: " + updated
+
+    var newest_data = data.slice(data.length - 171, data.length)
+    var upset_odds = newest_data[168].win > newest_data[169].win ? newest_data[169].win : newest_data[168].win
+
+    map.append("text")
+      .text("Chance of an upset is about the odds of...")
+      .attr("y", -40)
+      .attr("x", 525)
+      .attr("fill", "black")
+      .attr("text-anchor", "middle")
+      .attr("font-size", 12)
+      .attr("font-weight", "100")
 
 
-        tool_tip.hide()
-      });
+    map.append("text")
+      .text(events[Math.round(odds_scale(upset_odds))])
+      .attr("y", -20)
+      .attr("x", 525)
+      .attr("fill", "black")
+      .attr("text-anchor", "middle")
+      .attr("font-size", 15)
+      .attr("font-weight", "100")
 
-  d3.json("https://projects.jhkforecasts.com/presidential-forecast/us-states.json", function (json) {
 
+    map.append("image")
+      .attr("href", events[Math.round(odds_scale(upset_odds))] + ".svg")
+      .attr("x", 487.5)
+      .attr("y", -10)
+      .attr("height", 75)
+      .attr("width", 75)
+
+    var sd = []
+    for (let k = 0; k < map_states.length; k++) {
+      var dt = newest_data.filter(d => d.state == states[k])
+      var ml = map_labels.filter(d => d.state == states[k])
+      var finaldt = {
+        state: states[k],
+        electoral_votes: +dt[0].electoral_vote,
+        gop_win: +dt[0].win,
+        dem_win: +dt[1].win,
+        third_win: +dt[2].win,
+        gop_vote: +dt[0].proj_vote,
+        dem_vote: +dt[1].proj_vote,
+        third_vote: +dt[2].proj_vote,
+        tipping_point: +dt[0].tipping_point,
+        x_value: ml[0].xValue,
+        y_value: ml[0].yValue,
+        label: ml[0].label,
+
+      }
+      finaldt.margin = finaldt.gop_vote - finaldt.dem_vote
+      sd.push(finaldt)
+    }
+
+
+
+    var boxstates = [sd[28], sd[44], sd[20], sd[38], sd[6], sd[7], sd[19], sd[50]]
+
+
+    map.selectAll()
+      .data(boxstates)
+      .enter()
+      .append("rect")
+      .attr("x", 825)
+      .attr("y", (d, i) => 130 + 15 * i)
+      .attr("width", 30)
+      .attr("height", 15)
+      .attr("stroke", "white")
+      .attr("fill", d => color(d.gop_win))
+
+    map.selectAll()
+      .data(boxstates)
+      .enter()
+      .append("text")
+      .text(d => d.label)
+      .attr("x", 840)
+      .attr("y", (d, i) => 137.5 + 15 * i)
+      .style("font-family", "sf-mono")
+      .attr("font-size", "9")
+      .attr("fill", "black")
+      .attr("text-anchor", "middle")
+      .attr("font-weight", "100")
+      .attr("dominant-baseline", "central")
+
+    map.selectAll()
+      .data(boxstates)
+      .enter()
+      .append("a")
+      .attr("href", d => d.state)
+      .append("rect")
+      .attr("class", "statesover")
+      .attr("x", 825)
+      .attr("y", (d, i) => 130 + 15 * i)
+      .attr("width", 30)
+      .attr("height", 15)
+      .attr("fill", "none")
+      .on('mouseover', function (d) {
+
+
+        tool_tip.show();
+        var tipSVG = d3.select("#tipDiv")
+          .append("svg")
+          .attr("width", 175)
+          .attr("height", 175)
+          ;
+        tipSVG.append("rect")
+          .attr("y", 1.5)
+          .attr("x", 1.5)
+          .attr("width", 172)
+          .attr("height", 172)
+          .attr("rx", 8)
+          .attr("fill", "white")
+          .attr("stroke", "black")
+          .attr("stroke-width", 2)
+
+
+
+        tipSVG.append("text")
+          .text(d.state)
+          .attr("y", 20)
+          .attr("x", 87.5)
+          .attr("fill", "#black")
+          .attr("font-weight", "100")
+          .style("font-size", "20")
+          .attr("text-anchor", "middle")
+
+        tipSVG.append("text")
+          .text(d.electoral_votes + " Electoral Votes")
+          .attr("y", 40)
+          .attr("x", 87.5)
+          .attr("fill", "#black")
+          .attr("font-weight", "100")
+          .style("font-size", "15")
+          .attr("text-anchor", "middle")
+
+        tipSVG.append("image")
+          .attr("xlink:href", d => "https://jhkforecasts.com/Trump-01.png")
+          .attr("x", 90)
+          .attr("y", 50)
+          .attr("width", 82)
+          .attr("height", 82)
+
+        tipSVG.append("image")
+          .attr("xlink:href", d => "https://jhkforecasts.com/Biden-01.png")
+          .attr("x", 3)
+          .attr("y", 50)
+          .attr("width", 82)
+          .attr("height", 82)
+
+        tipSVG.append("text")
+          .text(numberformat(d.gop_win) + "%")
+          .attr("y", 150)
+          .attr("x", 131.25)
+          .attr("fill", color(100))
+          .attr("font-weight", "100")
+          .style("font-size", 20)
+          .attr("text-anchor", "middle")
+
+        tipSVG.append("text")
+          .text(numberformat(d.dem_win) + "%")
+          .attr("y", 150)
+          .attr("x", 43.75)
+          .attr("fill", color(0))
+          .attr("font-weight", "100")
+          .style("font-size", 20)
+          .attr("text-anchor", "middle")
+
+
+
+
+      })
+      .on('mouseout',
+        function (d) {
+
+
+          tool_tip.hide()
+        });
+
+
+
+    var json = topojson.feature(us, us.objects.states)
+    console.log(json)
     for (var i = 0; i < sd.length; i++) {
 
       var dataState = sd[i].state;
@@ -423,7 +427,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
       .attr("y", 430)
       .attr("fill", "black")
       .attr("font-weight", "100")
-      .style("font-size", "15");
+      .style("font-size", "10");
 
     var pct = [60, 70, 80, 90, 100]
 
@@ -672,7 +676,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
         return {
           id: id,
           values: line_data.map(d => { return { date: d.date, pct: +d[id] } }),
-          conf: line_data.map(d => { return { date: d.date, top: +d[id] + (input =="ev"? +d.evar:3), bottom: +d[id] - (input =="ev"? +d.evar:3) } })
+          conf: line_data.map(d => { return { date: d.date, top: +d[id] + (input == "ev" ? +d.evar : 3), bottom: +d[id] - (input == "ev" ? +d.evar : 3) } })
         };
       });
       console.log(cities)
@@ -707,7 +711,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
         .data(cities);
 
       city.exit().remove();
-      
+
 
       city.enter().insert("g", ".focus").append("path")
         .attr("class", "line cities")
