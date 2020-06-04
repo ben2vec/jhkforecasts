@@ -1,3 +1,7 @@
+var scle = d3.scaleLinear()
+.range([-5,105])
+.domain([0,100])
+
 var map = d3.select("#usmap")
     .append("svg")
     .attr("viewBox", '75 50 970 450');
@@ -406,8 +410,9 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                     var dem_ev = evcats.slice(0, 4)
                     var gop_ev = evcats.slice(5, 10)
 
-                    d3.json("https://projects.jhkforecasts.com/presidential-forecast/us-states.json", function (json) {
+                    d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", function (us) {
 
+                        var json = topojson.feature(us, us.objects.states)
                         for (var i = 0; i < state.length; i++) {
 
                             var dataState = state[i].state;
@@ -790,7 +795,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                 var alltable = d3.select("#all").append("table")
                 var allheader = alltable.append("thead").append("tr")
 
-
+               
                 allheader
                     .selectAll("th")
                     .data(allnames)
@@ -818,7 +823,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                     })
                     .enter()
                     .append("td")
-                    .style("background-color", (d, i) => typeof d == "number" ? i == 1 ? "white" : color(d) : i > 2 ? colorsratings[ratings.indexOf(d)] : "none")
+                    .style("background-color", (d, i) => typeof d == "number" ? i == 1 ? "white" : color(scle(d)) : i > 2 ? colorsratings[ratings.indexOf(d)] : "none")
                     .text((d, i) => typeof d == "number" ? i == 1 ? d : wholeformat(Math.abs(d - 50) + 50) + "%" : i > 2 ? d.split(" ")[0].toUpperCase() : d.toUpperCase())
                     .style("font-weight", 100)
                     .style("font-size", "1.5vw")
@@ -856,7 +861,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                     })
                     .enter()
                     .append("td")
-                    .style("background-color", (d, i) => typeof d == "number" ? i == 1 ? "white" : color(d) : i > 2 ? colorsratings[ratings.indexOf(d)] : "none")
+                    .style("background-color", (d, i) => typeof d == "number" ? i == 1 ? "white" : color(scle(d)) : i > 2 ? colorsratings[ratings.indexOf(d)] : "none")
                     .text((d, i) => typeof d == "number" ? i == 1 ? d : wholeformat(Math.abs(d - 50) + 50) + "%" : i > 2 ? d.split(" ")[0].toUpperCase() : d.toUpperCase())
                     .style("font-weight", 100)
                     .style("font-size", "1.5vw")
@@ -895,7 +900,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                     })
                     .enter()
                     .append("td")
-                    .style("background-color", (d, i) => typeof d == "number" ? i == 1 ? "white" : color(d) : i > 2 ? colorsratings[ratings.indexOf(d)] : "none")
+                    .style("background-color", (d, i) => typeof d == "number" ? i == 1 ? "white" : color(scle(d)) : i > 2 ? colorsratings[ratings.indexOf(d)] : "none")
                     .text((d, i) => typeof d == "number" ? i == 1 ? d : wholeformat(Math.abs(d - 50) + 50) + "%" : i > 2 ? d.split(" ")[0].toUpperCase() : d.toUpperCase())
                     .style("font-weight", 100)
                     .style("font-size", "1.5vw")
@@ -972,7 +977,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                             .attr("x", 850)
                             .attr("height", 40)
                             .attr("width", 100)
-                            .style("fill", (d, i) => typeof d.rating == "number" ? color(d.rating) : colorsratings[ratings.indexOf(d.rating)])
+                            .style("fill", (d, i) => typeof d.rating == "number" ? color(scle(d.rating)) : colorsratings[ratings.indexOf(d.rating)])
 
 
                         svg.selectAll("states")
