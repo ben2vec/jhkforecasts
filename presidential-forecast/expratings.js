@@ -1,6 +1,6 @@
 var scle = d3.scaleLinear()
-.range([-5,105])
-.domain([0,100])
+    .range([-5, 105])
+    .domain([0, 100])
 
 var map = d3.select("#usmap")
     .append("svg")
@@ -196,7 +196,8 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                             rating_value: typeof d[forecasts[j]] == "string" ? rating_value[ratings.indexOf(d[forecasts[j]])] : d[forecasts[j]],
                             opacity: rating_opacity[ratings.indexOf(d[forecasts[j]])],
                             full_forecast: forecasters[j].forecast,
-                            forecastLabel:forecasters[j].forecastLabel
+                            forecastLabel: forecasters[j].forecastLabel,
+                            link: forecasters[j].link
                         }
                     })
 
@@ -376,7 +377,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
 
                 var state_cand = ratings_nested.flat()
                 var national_cand = forecasts_ev.flat()
-
+                console.log(state_cand)
 
                 var width3 = 1020;
                 var height3 = 500;
@@ -444,17 +445,20 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                         }
                         var mapdata = json.features
 
-                        map.append("rect")
-                            .attr("x", 100)
-                            .attr("y", 50)
-                            .attr("width", 1000)
-                            .attr("height", 1000)
-                            .attr("fill", "white")
+                        //map.append("rect")
+                        //.attr("x", 100)
+                        // .attr("y", 50)
+                        // .attr("width", 1000)
+                        // .attr("height", 1000)
+                        // .attr("fill", "white")
 
-                        map.selectAll()
-                            .data(boxstates)
+                        d3.selectAll(".maps").remove();
+
+
+                        map.selectAll(".maps").data(boxstates)
                             .enter()
                             .append("rect")
+                            .attr("class", "maps")
                             .attr("x", 775)
                             .attr("y", (d, i) => 130 + 17.5 * i)
                             .attr("width", 30)
@@ -462,10 +466,10 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                             .attr("stroke", d => typeof d.rating == "number" ? Math.abs(d.rating - 50) < 5 ? "black" : "white" : d.rating == "Tossup" ? "black" : "white")
                             .attr("fill", d => typeof d.rating == "number" ? color(d.rating) : ratings_colors(d.rating))
 
-                        map.selectAll()
-                            .data(boxstates)
+                        map.selectAll("f").data(boxstates)
                             .enter()
                             .append("text")
+                            .attr("class", "maps")
                             .text(d => d.label)
                             .attr("x", 790)
                             .attr("y", (d, i) => 137.5 + 17.5 * i)
@@ -476,8 +480,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                             .style("font-weight", "100")
                             .attr("dominant-baseline", "central")
 
-                        map.selectAll()
-                            .data(boxstates)
+                        map.selectAll("f").data(boxstates)
                             .enter()
                             .append("a")
                             .attr("href", "#state-search")
@@ -556,12 +559,14 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
 
 
                         map.append("image")
+                            .attr("class", "maps")
                             .attr("xlink:href", "https://jhkforecasts.com/Biden-01.png")
                             .attr("x", 850)
                             .attr("y", 50)
                             .attr("width", 70)
                             .attr("height", 70)
                         map.append("image")
+                            .attr("class", "maps")
                             .attr("xlink:href", "https://jhkforecasts.com/Trump-01.png")
                             .attr("x", 930)
                             .attr("y", 50)
@@ -570,6 +575,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
 
 
                         map.append("text")
+                            .attr("class", "maps")
                             .attr("x", 965)
                             .text(d3.sum(gop_ev))
                             .attr("y", 150)
@@ -581,6 +587,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                             .attr("dominant-baseline", "central")
 
                         map.append("text")
+                            .attr("class", "maps")
                             .attr("x", 885)
                             .text(d3.sum(dem_ev))
                             .attr("y", 150)
@@ -591,20 +598,20 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                             .style("font-weight", "100")
                             .attr("dominant-baseline", "central")
 
-                        map.selectAll("ratings")
-                            .data(rating_opacity)
+                        map.selectAll("f").data(rating_opacity)
                             .enter()
                             .append("circle")
+                            .attr("class", "maps")
                             .attr("cx", 925)
                             .attr("cy", (d, i) => 200 + i * 30)
                             .attr("r", 10)
                             .attr("fill", (d, i) => colorsratings[i])
                             .attr("stroke", (d, i) => i == 4 ? "black" : "white")
 
-                        map.selectAll("ratings")
-                            .data(ratings)
+                        map.selectAll("f").data(ratings)
                             .enter()
                             .append("text")
+                            .attr("class", "maps")
                             .attr("x", 900)
                             .text(d => d)
                             .attr("y", (d, i) => 200 + i * 30)
@@ -616,10 +623,12 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                             .attr("dominant-baseline", "central")
 
                         var ratingspct = [">95%", ">80%", ">60%", ">55%", "<55%", ">55%", ">60%", ">80%", ">95%"]
-                        map.selectAll("ratings")
-                            .data(evcats)
+
+
+                        map.selectAll("f").data(evcats)
                             .enter()
                             .append("text")
+                            .attr("class", "maps")
                             .attr("x", 950)
                             .text(d => d)
                             .attr("y", (d, i) => 200 + i * 30)
@@ -630,10 +639,10 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                             .style("font-weight", "100")
                             .attr("dominant-baseline", "central")
 
-                        map.selectAll("ratings")
-                            .data(ratingspct)
+                        map.selectAll("f").data(ratingspct)
                             .enter()
                             .append("text")
+                            .attr("class", "maps")
                             .attr("x", 1000)
                             .text(d => typeof json.features[0].properties.rating == "number" ? d : "")
                             .attr("y", (d, i) => 200 + i * 30)
@@ -644,8 +653,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                             .style("font-weight", "100")
                             .attr("dominant-baseline", "central")
 
-                        map.append("text")
-                            .attr("x", 1000)
+                        map.selectAll("f").append("text").attr("x", 1000)
                             .text(typeof json.features[0].properties.rating == "number" ? "Win%" : "")
                             .attr("y", (d, i) => 170)
                             .style("font-family", "sf-mono")
@@ -655,11 +663,10 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                             .style("font-weight", "100")
                             .attr("dominant-baseline", "central")
 
-                        map.append("g")
-                            .selectAll("path2")
-                            .data(mapdata)
+                        map.selectAll("f").data(mapdata)
                             .enter()
                             .append("path")
+                            .attr("class", "maps")
                             .attr("d", path)
                             .style("stroke", "white")
                             .style("stroke-width", 1)
@@ -667,10 +674,10 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                             .style("opacity", d => d.properties.opacity)
                             .attr("transform", "translate(-50,0)")
 
-                        map.selectAll("label")
-                            .data(mapdata)
+                        map.selectAll("f").data(mapdata)
                             .enter()
                             .append("text")
+                            .attr("class", "maps")
                             .text(d => d.properties.label)
                             .attr("x", d => d.properties.xv)
                             .attr("y", d => d.properties.yv)
@@ -682,14 +689,12 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                             .attr("transform", "translate(-50,0)")
 
 
-                        map.append("g")
-                            .selectAll("path2")
-                            .data(mapdata)
+                        map.selectAll("f").data(mapdata)
                             .enter()
                             .append("a")
                             .attr("href", "#state-search")
                             .append("path")
-                            .attr("class", "statesover")
+                            .attr("class", "statesover maps")
                             .attr("d", path)
                             .attr("stroke", d => typeof d.properties.rating == "number" ? d.properties.rating > 45 ? d.properties.rating < 55 ? "black" : "none" : "none" : d.properties.rating == "Tossup" ? "black" : "none")
                             .attr("stroke-width", d => 1.5)
@@ -795,19 +800,19 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                 var alltable = d3.select("#all").append("table")
                 var allheader = alltable.append("thead").append("tr")
 
-               
+
                 allheader
                     .selectAll("th")
                     .data(allnames)
                     .enter()
                     .append("th")
-                    .attr("class",(d, i) => i > 1 ?"rightAlignHover":"")
+                    .attr("class", (d, i) => i > 1 ? "rightAlignHover" : "")
                     .style("width", (d, i) => i == 0 ? "20%" : i == 1 ? "5%" : allwidth + "%")
                     .append("a")
                     .attr("href", (d, i) => i > 1 ? forecasters.map(d => { return d.link })[i - 2] : "").text(function (d) {
                         return d
                     })
-                    .style("font-family","sf-mono")
+                    .style("font-family", "sf-mono")
 
                 var alltBody = alltable.append("tbody");
 
@@ -827,8 +832,8 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                     .text((d, i) => typeof d == "number" ? i == 1 ? d : wholeformat(Math.abs(d - 50) + 50) + "%" : i > 2 ? d.split(" ")[0].toUpperCase() : d.toUpperCase())
                     .style("font-weight", 100)
                     .style("font-size", "1.5vw")
-                    .style("font-family","sf-mono")
-                    .style("text-align",(d,i)=>i==0?"left":"center")
+                    .style("font-family", "sf-mono")
+                    .style("text-align", (d, i) => i == 0 ? "left" : "center")
 
                 //experts table
                 var extable = d3.select("#ex").append("table")
@@ -845,7 +850,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                     .attr("href", (d, i) => i > 1 ? expert.map(d => { return d.link })[i - 2] : "").text(function (d) {
                         return d
                     })
-                    .style("font-family","sf-mono")
+                    .style("font-family", "sf-mono")
 
                 var extBody = extable.append("tbody");
 
@@ -865,8 +870,8 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                     .text((d, i) => typeof d == "number" ? i == 1 ? d : wholeformat(Math.abs(d - 50) + 50) + "%" : i > 2 ? d.split(" ")[0].toUpperCase() : d.toUpperCase())
                     .style("font-weight", 100)
                     .style("font-size", "1.5vw")
-                    .style("font-family","sf-mono")
-                    .style("text-align",(d,i)=>i==0?"left":"center")
+                    .style("font-family", "sf-mono")
+                    .style("text-align", (d, i) => i == 0 ? "left" : "center")
 
 
                 //newcomer table
@@ -884,7 +889,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                     .attr("href", (d, i) => i > 1 ? newcomer.map(d => { return d.link })[i - 2] : "").text(function (d) {
                         return d
                     })
-                    .style("font-family","sf-mono")
+                    .style("font-family", "sf-mono")
 
 
                 var newtBody = newtable.append("tbody");
@@ -904,8 +909,8 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                     .text((d, i) => typeof d == "number" ? i == 1 ? d : wholeformat(Math.abs(d - 50) + 50) + "%" : i > 2 ? d.split(" ")[0].toUpperCase() : d.toUpperCase())
                     .style("font-weight", 100)
                     .style("font-size", "1.5vw")
-                    .style("font-family","sf-mono")
-                    .style("text-align",(d,i)=>i==0?"left":"center")
+                    .style("font-family", "sf-mono")
+                    .style("text-align", (d, i) => i == 0 ? "left" : "center")
 
 
                 var projection2 = d3.geoAlbers();
@@ -929,7 +934,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                     svg.attr("viewBox", "0 0 1000 " + (stateData.length * 40 + 150))
                     var width = 500,
                         height = stateData.length * 40 + 50;
-                        console.log(height)
+                    console.log(height)
                     d3.json("us.json", us => {
                         var state = topojson.feature(us, us.objects.states).features.filter(d => d.properties.name == input)[0]
                         console.log(state)
@@ -1011,14 +1016,42 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                             .data(stateData)
                             .enter()
                             .append("text")
-                            .text(d => d.forecastLabel)
+                            .text(d => d.full_forecast)
+                            .attr("id",(d,i)=>"forec"+i)
                             .attr("y", (d, i) => 100 + i * 40)
                             .attr("x", 600)
-                            .attr("fill", "black")
                             .style("font-weight", "100")
                             .style("font-size", 18)
                             .attr("text-anchor", "start")
                             .attr("dominant-baseline", "central")
+                        
+                        svg.selectAll("states")
+                            .data(stateData)
+                            .enter()
+                            .append("a")
+                            .attr("href", d => d.link)
+                            .append("rect")
+                            .attr("fill", "white")
+                            .attr("opacity",0)
+                            .attr("y", (d, i) => 80 + i * 40)
+                            .attr("x", 600)
+                            .attr("height", 40)
+                            .attr("width", 250)
+                            .on("mouseover", function (d, i) {
+                                d3.select("#"+"forec"+i)
+                                    .attr("y", 100 + i * 40)
+                                    .attr("x", 850)
+                                    .attr("text-anchor", "end")
+                                    .attr("text-decoration", "underline")
+                                    .attr("cursor", "pointer")
+                            })
+                            .on("mouseout", function (d, i) {
+                                d3.select("#"+"forec"+i)
+                                    .attr("y", 100 + i * 40)
+                                    .attr("x", 600)
+                                    .attr("text-anchor", "start")
+                                    .attr("text-decoration", "none")
+                            })
 
 
 

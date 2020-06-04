@@ -2,32 +2,96 @@
 <html lang="en">
 
 <head>
-	<link rel="stylesheet" href="https://use.typekit.net/htk2wjy.css">
-	<link rel="stylesheet" href="index.css">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<link rel="stylesheet" href="https://use.typekit.net/htk2wjy.css">
+	<link rel="stylesheet" href="index.css">
 	<style>
-		#less {
-			display: none;
+
+
+		.btn {
+			border: none;
+			color: white;
+			padding: 10px 10px;
+			font-size: 1.5vw;
+			font-family: sf-mono;
+			border-radius: 10px;
+			cursor: pointer;
+			text-transform: uppercase;
 		}
 
+		.default {
+			background-color: #e7e7e7;
+			color: black;
+			font-family: sf-mono;
+			font-weight: 100;
+		}
 
-		#lessphone {
-			display: none;
+		/* Gray */
+		.default:hover {
+			background: rgb(164, 163, 163);
+		}
+
+		text {
+			font-family: sf-mono;
+			font-weight: 100;
+			text-transform: uppercase;
+		}
+
+		td {
+			font-family: sf-mono;
+			font-weight: 100;
+			text-transform: uppercase;
+			font-size: .75vw;
+			padding: 5px;
+			text-align: center;
+			height: 1vw
+		}
+
+		th {
+			font-family: sf-mono;
+			font-weight: 100;
+			text-transform: uppercase;
+			font-size: .75vw;
+			padding: 5px;
+			text-align: center;
+			height: 2vw;
+			border-bottom: black solid .5pt;
+		}
+
+		@media only screen and (max-width:600px) {
+
+			.special {
+				width: 100%
+			}
+
+			th {
+				font-size: 1vw;
+			}
+
+			td {
+				font-size: 1vw;
+			}
+		}
+
+		@media only screen and (min-width:601px) {
+
+			.special {
+				margin-left: 10%;
+				width: 80%
+			}
 		}
 	</style>
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:site" content="@jhkforecast">
-	<meta name="twitter:creator" content="@jhkersting">
-	<meta name="twitter:title" content="2020 Presidential Election">
-	<meta name="twitter:description" content="Who is win the 2020 Presidential Election?">
-	<meta name="twitter:image" content="https://jhkforecasts.com/Presidential-Forecast-04.png">
-	<title>2020 Presidential Forecast</title>
+	<title>2020 Presidential Simulator</title>
+</head>
+
+<head>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script data-ad-client="ca-pub-8025120308040073" async
 		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140782021-2"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
@@ -38,13 +102,16 @@
 	</script>
 	<link rel="icon" href="https://jhkforecasts.com/LOGO-01.png">
 	<script src="https://d3js.org/d3.v4.min.js"></script>
-	<script src="//d3js.org/topojson.v1.min.js"></script>
 	<script src="//d3js.org/queue.v1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+
 	<script src="https:////cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script>
-</head>
+
+
+
 
 <body>
+
 
 	<div class="banner">
 		<?xml version="1.0" encoding="utf-8"?>
@@ -184,7 +251,7 @@
 						c-3.1,0-5.16-1.68-5.34-4.37H1301.98z" />
 				<path d="M1324.06,66.13h-8.95V50.57h8.95v1.34h-7.47v5.6h7.08v1.32h-7.08v5.98h7.47V66.13z" />
 			</g>
-			<a xlink:href="https://projects.jhkforecasts.com/democratic_primary/">
+			<a xlink:href="https://projects.jhkforecasts.com/Bidenic_primary/">
 				<rect x="799.33" y="32.05" class="st4" pointer-events="all" width="155.34" height="51.95" />
 			</a>
 			<g>
@@ -213,197 +280,54 @@
 	<h1
 		style="text-align: center;font-weight: 900;color: black;font-size: 5vw;background-color: white;border: black solid;">
 		Presidential
-		Forecast </h1>
-	<script>
-		var key_state = "US"
-	</script>
-
-	<p style=" font-family: sf-mono;font-weight: 400;text-align: center;text-decoration: underline double;color:#AFAFAF;text-transform: uppercase;"
-		id="updated"></p>
-	<div class="computer">
-		<div id="usmap"></div>
-		<div id="overview"></div>
-
-		<h1 style="margin-left: 2%;font-weight: 900;">The Ever-changing Race for the White House</h1>
-		<p style="margin-left: 5%;font-weight: 500;;font-size:20px">The race for the Presidency can change in an
-			instance, the chart below shows the zigs and zags of the race for the White House up until today.</p>
-		<div style="text-align:center">
-			<table style="border-collapse: collapse; border: none;margin-top: 20px;width:60%;margin-left: 20%;" cellspacing="0">
-				<tbody>
-					<tr>
-						<td style="width: 33%; ">
-							<button class="btn default" id="winbutton">Win White House</button>
-						</td>
-						<td style="width: 33%; ">
-							<button class="btn default" id="votebutton">Popular Vote</button>
-						</td>
-						<td style="width: 33%;">
-							<button class="btn default" id="evbutton">Electoral Votes</button>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		<div id="time"></div>
-		<div style="text-align:center">
-			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-			<ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-h2+d+5c-9-3e"
-				data-ad-client="ca-pub-8025120308040073" data-ad-slot="8603820464"></ins>
-			<script>
-					(adsbygoogle = window.adsbygoogle || []).push({});
-			</script>
-		</div>
-		<h1 style="margin-left: 2%;font-weight: 900;">The Race to 270</h1>
-		<p style="margin-left: 5%;font-weight: 500;;font-size:20px">The race for the Presidency is all about one thing,
-			getting 270
-			electoral votes. The bars below represent each state, with the width determined by the electoral votes for
-			that
-			.</p>
-		<div id="bars"></div>
-
-		<h1 style="margin-left: 2%;font-weight: 900;">A Better Way to Look at it</h1>
-		<p style="margin-left: 5%;font-weight: 500;;font-size:20px">Normal maps can be confusing when it comes to the
-			electoral college. The
-			map below shows each state, sized based on the electoral votes it get, and colored by each candidates chance
-			of
-			winning.</p>
-		<div id="bubblemap"></div>
-		<h1 style="margin-left: 2%;font-weight: 900;">The Tipping Points</h1>
-		<p style="margin-left: 5%;font-weight: 500;;font-size:20px">The election always comes down to a few states. The
-			chart below shows which states are the closest, and which ones will decide the election. The tipping point
-			measure is defined as the state that gets the eventual winner to 270.</p>
-		<div id="dist"></div>
-		<button style="width: 30%;margin-left: 35%;" class="btn default" id="more">Show more</button>
-		<button style="width: 30%;margin-left: 35%;" class="btn default" id="less">Show less</button>
-	</div>
-	<div class="phone">
-		<div id="usmapphone"></div>
-		<div id="overviewphone"></div>
-
-		<h1 style="margin-left: 2%;font-weight: 900;">The Ever-changing Race for the White House</h1>
-		<p style="margin-left: 5%;font-weight: 500;">The race for the Presidency can change in an
-			instance, the chart below shows the zigs and zags of the race for the White House up until today.</p>
-		<table
-			style="margin-left:10%;border-collapse: collapse; border: none;margin-top: 20px;text-align: center;width: 80%;"
-			cellspacing="0">
-			<tbody>
-				<tr>
-					<td style="width: 33%; ">
-						<button class="btn other" id="winbuttonphone">Win White House</button>
-					</td>
-					<td style="width: 33%; ">
-						<button class="btn other" id="votebuttonphone">Popular Vote</button>
-					</td>
-					<td style="width: 33%;">
-						<button class="btn other" id="evbuttonphone">Electoral Votes</button>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-
-		<div id="timephone"></div>
-		<h1 style="margin-left: 2%;font-weight: 900;">The Race to 270</h1>
-		<p style="margin-left: 5%;font-weight: 500;">The race for the Presidency is all about one thing,
-			getting 270
-			electoral votes. The bars below represent each state, with the width determined by the electoral votes for
-			that
-			state, and the height the projected margin.</p>
-		<div id="barsphone"></div>
-		<h1 style="margin-left: 2%;font-weight: 900;">A Better Way to Look at it</h1>
-		<p style="margin-left: 5%;font-weight: 500;">Normal maps can be confusing when it comes to the
-			electoral college. The
-			map below shows each state, sized based on the electoral votes it get, and colored by each candidates chance
-			of
-			winning.</p>
-		<div id="bubblemapphone"></div>
-
-		<h1 style="margin-left: 2%;font-weight: 900;">The Tipping Points</h1>
-		<p style="margin-left: 5%;font-weight: 500;">The election always comes down to a few states. The
-			chart below shows which states are the closest, and which ones will decide the election. The tipping point
-			measure is defined as the state that gets the eventual winner to 270.</p>
-		<div id="distphone"></div>
-		<button style="width: 30%;margin-left: 35%;" class="btn default" id="morephone">Show more</button>
-		<button style="width: 30%;margin-left: 35%;" class="btn default" id="lessphone">Show less</button>
-	</div>
-	<hr>
-	<div>
-
-		<h1 style="text-align: center;font-weight: 700;font-size: 2vw;"><span
-				style="color: black;">Interactives/Projects</span>
-			<table style="border-collapse: collapse; border: none;margin-top: 20px;width:100%" cellspacing="0"
-				cellpadding="0" width="100%">
-				<tbody>
-					<tr>
-						<td style="width: 33%; border-right: solid grey 1.0pt; " valign="top" width="35%">
-							<h1
-								style="text-align: center;font-weight: 700;font-size: 2vw;text-decoration: solid underline;color: #0077FF;">
-								<a href="https://politicalpolls.jhkforecasts.com/general_election" target="_blank">Who
-									Beats Trump?</a>
-								</>
-						</td>
-						<td style="width: 33%; border-right: solid grey 1.0pt; " valign="top" width="35%">
-							<h1
-								style="text-align: center;font-weight: 700;font-size: 2vw;text-decoration: solid underline;color: #0077FF;">
-								<a href="https://projects.jhkforecasts.com/presidential-forecast/pressimulation"
-									target="_blank">Simulator</a>
-							</h1>
-						</td>
-						<td style="width: 33%; border-right: solid grey 1.0pt; " valign="top" width="35%">
-							<h1
-								style="text-align: center;font-weight: 700;font-size: 2vw;text-decoration: solid underline;color: #0077FF;">
-								<a href="experts_ratings" target="_blank">Forecast Comparisons</a>
-							</h1>
-						</td>
-
-					</tr>
-					<tr>
-						<td style="width: 33%; border-right: solid grey 1.0pt;padding: 5px; " valign="top" width="35%">
-							<p style="text-align: center;font-weight: 700;font-size: 1.5vw;">See how each candidate
-								fares against Trump.</p>
-						</td>
-						<td style="width: 33%; border-right: solid grey 1.0pt; border-left: none;padding: 5px "
-							valign="top" width="30%">
-							<p style="text-align: center;font-weight: 700;font-size: 1.5vw;">Simulates the general
-								election once based the forecast.</p>
-						</td>
-						<td style="width: 33%; border-right: solid grey 1.0pt; border-left: none;padding: 5px "
-							valign="top" width="30%">
-							<p style="text-align: center;font-weight: 700;font-size: 1.5vw;">What are other forecasts
-								predicting in 2020?</p>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-	</div>
-	<hr>
-
-	<a href="https://twitter.com/jhkersting">
-		<h2 style="font-weight: 500;color: dodgerblue;text-decoration: underline;font-size: 2vw;">Created by Jack
-			Kersting
-		</h2>
-	</a>
-	<a href="forecast_methodology">
-		<h2 style="font-weight: 500;color: dodgerblue;text-decoration: underline;font-size: 2vw;">How the model works
-		</h2>
-	</a>
-	<a href="https://data.jhkforecasts.com/2020-presidential.csv">
-		<h2 style="font-weight: 500;color: dodgerblue;text-decoration: underline;font-size: 2vw;">Download Data</h2>
-	</a>
-	<hr>
-	<script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
-	<div style="text-align: center;">
-		<a href="https://www.patreon.com/bePatron?u=36104274" data-patreon-widget-type="become-patron-button">Become a
-			Patron!</a></div>
+		Election Simulator </h1>
 	<div style="text-align:center">
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-		<ins class="adsbygoogle" style="display:block;margin-right:auto;margin-left: auto" data-ad-format="fluid"
+		<ins class="adsbygoogle" style="display:block;width: 80%;margin-left: 10%;" data-ad-format="fluid"
 			data-ad-layout-key="-h2+d+5c-9-3e" data-ad-client="ca-pub-8025120308040073" data-ad-slot="8603820464"></ins>
 		<script>
 			(adsbygoogle = window.adsbygoogle || []).push({});
 		</script>
 	</div>
-	<script src="national.js"></script>
-	<script src="nationalphone.js"></script>
+
+	<div style="text-align:center ;margin-top: 20px;position: sticky;top: 0;width:100%;">
+		<table style="border-collapse: collapse; border: none;width:100%;background-color: white;font-weight: 100;">
+			<tr>
+				<td style="width: 35%;" valign="top" width="35%">
+					<button class="btn default" id="newSim">New Simulation</button>
+				</td>
+				<td style="width: 35%;" valign="top" width="35%">
+					<button class="btn default" onclick="winnerfunc()" id="winnerbutton">SHOW WINNER</button>
+				</td>
+				<td id="P" style="width: 35%;">
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="special"style="background-color: white;">
+		<img style="height: 7vw;float: left;" src="https://jhkforecasts.com/Biden-01.png">
+		<h1 style="font-family: sf-mono;float: left;padding: 20px;font-size: 3vw;background-color: white;font-weight: 100"
+			id="B"></h1>
+		<img style="height: 7vw;float: right;" src="https://jhkforecasts.com/Trump-01.png">
+		<h1 style="font-family: sf-mono;float: right;padding: 20px;font-size: 3vw;background-color: white;font-weight: 100"
+			id="C"></h1>
+	</div>
+
+
+	<div class="special" style="margin-top: 10px;" id="usmap"></div>
+	<div class="special" id="states"></div>
+	<div class="special" id="table"></div>
+	<script src="presidential-simulation.js"></script>
+
+	<div style="text-align:center">
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-h2+d+5c-9-3e"
+			data-ad-client="ca-pub-8025120308040073" data-ad-slot="8603820464"></ins>
+		<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+
 
 
 </body>
