@@ -285,7 +285,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                     .attr("y", 30)
                     .attr("dominant-baseline", "bottom")
                     .attr("text-anchor", "start")
-                    .style("font-weight", 400)
+                    .style("font-weight", 100)
                     .attr('fill', "Black")
                     .attr("font-size", 30)
 
@@ -295,7 +295,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                     .attr("y", 30)
                     .attr("dominant-baseline", "bottom")
                     .attr("text-anchor", "end")
-                    .style("font-weight", 400)
+                    .style("font-weight", 100)
                     .attr('fill', "Black")
                     .attr("font-size", 30)
                 svg.append("text")
