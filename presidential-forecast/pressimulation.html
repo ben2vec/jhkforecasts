@@ -385,7 +385,7 @@
 
 		var formatValue = d3.format(".1f");
 		var formatvalue = d3.format(".1f");
-		var nationalSwing = jStat.normal.inv((Math.random()), 0, 4)
+		var nationalSwing = jStat.normal.inv((Math.random()), 0, 4.5)
 		var thirdSimulation = Math.random()
 		d3.csv("https://data.jhkforecasts.com/2020-pres-input.csv", inputData => {
 			d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", dataInput => {
@@ -417,8 +417,8 @@
 
 				data.forEach((d, i) => {
 					var simNum = (Math.random())
-					d.gopSim = jStat.normal.inv(simNum, d.gopVote, 3.5) + nationalSwing / 2
-					d.demSim = jStat.normal.inv(simNum, d.demVote, 3.5) - nationalSwing / 2
+					d.gopSim = jStat.normal.inv(Math.random(), d.gopVote, 2) + nationalSwing / 2
+					d.demSim = jStat.normal.inv(Math.random(), d.demVote, 2) - nationalSwing / 2
 					d.thirdSim = jStat.normal.inv((Math.random() + ((thirdSimulation) * 2)) / 3, d.thirdVote, d.thirdVote / 3)
 					d.sum = d.gopSim + d.demSim + d.thirdSim
 					d.gopvote = d.gopSim / (d.sum / 100)
