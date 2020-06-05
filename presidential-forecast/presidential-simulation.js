@@ -148,10 +148,10 @@ function ready(error, json, inputData, dataInput) {
 			var data = input
 			var swings = {
 				national: jStat.normal.inv((Math.random()), 0, 5),
-				south: jStat.normal.inv((Math.random()), 0, 3),
-				midwest: jStat.normal.inv((Math.random()), 0, 3),
-				northeast: jStat.normal.inv((Math.random()), 0, 3),
-				west: jStat.normal.inv((Math.random()), 0, 3),
+				south: jStat.normal.inv((Math.random()), 0, 2),
+				midwest: jStat.normal.inv((Math.random()), 0, 2),
+				northeast: jStat.normal.inv((Math.random()), 0, 2),
+				west: jStat.normal.inv((Math.random()), 0, 2),
 				third: Math.random()
 			}
 			console.log(swings["south"])
@@ -159,7 +159,7 @@ function ready(error, json, inputData, dataInput) {
 				var simNum = (Math.random())
 				d.gopSim = jStat.normal.inv(Math.random(), d.gopVote, 3 * d.variance) + (swings.national * d.variance) / 2 + swings[d.region] / 2
 				d.demSim = jStat.normal.inv(Math.random(), d.demVote, 3 * d.variance) - (swings.national * d.variance) / 2 - swings[d.region] / 2
-				d.thirdSim = jStat.normal.inv((Math.random() + ((swings.third) * 2)) / 3, d.thirdVote, swings.third > .5 ? d.thirdVote / 2 : d.thirdVote / 2)
+				d.thirdSim = jStat.normal.inv((Math.random() + ((swings.third) * 2)) / 3, d.thirdVote, swings.third > .5 ? d.thirdVote : d.thirdVote / 2)
 				d.sum = d.gopSim + d.demSim + d.thirdSim
 				d.gopSim = d.gopSim < 0 ? .5 : d.gopSim
 				d.demSim = d.demSim < 0 ? .5 : d.demSim
@@ -534,116 +534,6 @@ function ready(error, json, inputData, dataInput) {
 			var dataabs = data
 			var dataabs = dataabs.sort((a, b) => Math.abs(a.margin) - Math.abs(b.margin))
 
-
-			var table = d3.select("#table")
-				.append("table")
-				.attr("class", "change")
-				.style("width", "100%")
-
-			var header = table.append("tr")
-
-			header.append("th")
-				.attr("width", "30%")
-				.append("h1")
-				.text("STATE")
-				.style("font-family", "sf-mono")
-				.style("font-weight", 100)
-				.style("text-align", "left")
-
-			header.append("th")
-				.attr("width", "10%")
-				.append("h1")
-				.text("EVs")
-				.style("font-family", "sf-mono")
-				.style("font-weight", 100)
-
-			header.append("th")
-				.attr("width", "10%")
-				.append("h1")
-				.text("Biden")
-				.style("font-family", "sf-mono")
-				.style("font-weight", 100)
-
-			header.append("th")
-				.attr("width", "10%")
-				.append("h1")
-				.text("Trump")
-				.style("font-family", "sf-mono")
-				.style("font-weight", 100)
-
-			header.append("th")
-				.attr("width", "5%")
-				.append("h1")
-				.text("other")
-				.style("font-family", "sf-mono")
-				.style("font-weight", 100)
-
-			header.append("th")
-				.attr("width", "10%")
-				.append("h1")
-				.text("Margin")
-				.style("font-family", "sf-mono")
-				.style("font-weight", 100)
-
-			data.forEach((d, i) => {
-
-				table.append("tr")
-					.attr("id", "row" + i)
-					.style("heigh", "1vw")
-
-				d3.select("#" + "row" + i)
-					.append("td")
-					.append("h1")
-					.text(d.state)
-					.style("font-family", "sf-mono")
-					.style("font-weight", 100)
-					.style("text-align", "left")
-
-
-				d3.select("#" + "row" + i)
-					.append("td")
-					.append("h1")
-					.text(d.electoralVotes)
-					.style("font-family", "sf-mono")
-					.style("font-weight", 100)
-
-				d3.select("#" + "row" + i)
-					.append("td")
-					.style("background-color", d.margin < 0 ? demwincol : "white")
-					.append("h1")
-					.text(formatvalue(d.demvote))
-					.style("font-family", "sf-mono")
-					.style("font-weight", 100)
-
-				d3.select("#" + "row" + i)
-					.append("td")
-					.style("background-color", d.margin > 0 ? gopwincol : "white")
-					.append("h1")
-					.text(formatvalue(d.gopvote))
-					.style("font-family", "sf-mono")
-					.style("font-weight", 100)
-
-				d3.select("#" + "row" + i)
-					.append("td")
-					.append("h1")
-					.text(formatvalue(d.thirdvote))
-					.style("font-family", "sf-mono")
-					.style("font-weight", 100)
-
-
-				d3.select("#" + "row" + i)
-					.append("td")
-					.append("h1")
-					.text(d.margin > 0 ? "R+" + formatvalue(d.margin) : "D+" + formatvalue(-d.margin))
-					.style("font-family", "sf-mono")
-					.style("font-weight", 100)
-					.style("color", d.margin > 0 ? gopwincol : demwincol)
-
-
-
-
-			})
-
 			svg.append("text")
 				.attr("class", "change")
 				.attr("x", 880)
@@ -762,6 +652,29 @@ function ready(error, json, inputData, dataInput) {
 				.attr("font-weight", "100")
 				.text(d => d)
 				.attr("text-anchor", "middle")
+
+			dist.selectAll("pct")
+				.data(pct)
+				.enter()
+				.append("line")
+				.attr("class", "change")
+				.attr("x1", d => d * 12 + 200)
+				.attr("x2", d => d * 12 + 200)
+				.attr("y1", 60)
+				.attr("y2", 210)
+				.style("stroke", "lightgray")
+
+
+				dist.selectAll("pct")
+				.data(evs)
+				.enter()
+				.append("line")
+				.attr("class", "change")
+				.attr("x1", d => d * 1.5 + 200)
+				.attr("x2", d => d * 1.5 + 200)
+				.attr("y1", 260)
+				.attr("y2", 360)
+				.style("stroke",d=>d==270?"black": "lightgray")
 
 
 			dist.selectAll("pct")
@@ -951,6 +864,48 @@ function ready(error, json, inputData, dataInput) {
 				.text(d => formatvalue(d3.mean(avgs, d => d.gopvote)))
 				.attr("text-anchor", "middle")
 
+			dist.append("line")
+				.attr("class", "change")
+				.attr("x1", d => d3.mean(avgs, d => d.gopvote) * 12 + 200)
+				.attr("x2", d => d3.mean(avgs, d => d.gopvote) * 12 + 200)
+				.attr("y1", 95)
+				.attr("y2", 105)
+				.style("stroke", "black")
+
+			dist.append("line")
+				.attr("class", "change")
+				.attr("x1", d => d3.mean(avgs, d => d.demvote) * 12 + 200)
+				.attr("x2", d => d3.mean(avgs, d => d.demvote) * 12 + 200)
+				.attr("y1", 145)
+				.attr("y2", 155)
+				.style("stroke", "black")
+
+
+			dist.append("line")
+				.attr("class", "change")
+				.attr("x1", d => d3.mean(avgs, d => d.thirdvote) * 12 + 200)
+				.attr("x2", d => d3.mean(avgs, d => d.thirdvote) * 12 + 200)
+				.attr("y1", 195)
+				.attr("y2", 205)
+				.style("stroke", "black")
+
+			dist.append("line")
+				.attr("class", "change")
+				.attr("x1", d => d3.mean(avgs, d => d.gopev) * 1.5 + 200)
+				.attr("x2", d => d3.mean(avgs, d => d.gopev) * 1.5 + 200)
+				.attr("y1", 295)
+				.attr("y2", 305)
+				.style("stroke", "black")
+
+			dist.append("line")
+				.attr("class", "change")
+				.attr("x1", d => d3.mean(avgs, d => d.demev) * 1.5 + 200)
+				.attr("x2", d => d3.mean(avgs, d => d.demev) * 1.5 + 200)
+				.attr("y1", 345)
+				.attr("y2", 355)
+				.style("stroke", "black")
+
+
 
 			dist.append("text")
 				.attr("class", "change")
@@ -960,6 +915,38 @@ function ready(error, json, inputData, dataInput) {
 				.style("font-size", 13)
 				.attr("font-weight", "100")
 				.text(d => formatvalue(d3.mean(avgs, d => d.demvote)))
+				.attr("text-anchor", "middle")
+
+			dist.append("text")
+				.attr("class", "change")
+				.attr("x", d => d3.mean(avgs, d => d.thirdvote) * 12 + 200)
+				.attr("y", 185)
+				.style("fill", "black")
+				.style("font-size", 13)
+				.attr("font-weight", "100")
+				.text(d => formatvalue(d3.mean(avgs, d => d.thirdvote)))
+				.attr("text-anchor", "middle")
+
+
+			dist.append("text")
+				.attr("class", "change")
+				.attr("x", d => d3.mean(avgs, d => d.gopev) * 1.5 + 200)
+				.attr("y", 285)
+				.style("fill", "black")
+				.style("font-size", 13)
+				.attr("font-weight", "100")
+				.text(d => formatvalue(d3.mean(avgs, d => d.gopev)))
+				.attr("text-anchor", "middle")
+
+
+			dist.append("text")
+				.attr("class", "change")
+				.attr("x", d => d3.mean(avgs, d => d.demev) * 1.5 + 200)
+				.attr("y", 335)
+				.style("fill", "black")
+				.style("font-size", 13)
+				.attr("font-weight", "100")
+				.text(d => formatvalue(d3.mean(avgs, d => d.demev)))
 				.attr("text-anchor", "middle")
 
 			d3.select("#p").remove()
@@ -1136,7 +1123,7 @@ function ready(error, json, inputData, dataInput) {
 
 	d3.select("#newSim")
 		.on("click", d => {
-			update(data, avgs, mapType,1)
+			update(data, avgs, mapType, 1)
 		})
 
 }
