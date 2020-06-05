@@ -81,6 +81,16 @@ d3.select("#states").append("h1")
 var st = d3.select("#states")
 	.append("svg")
 	.attr("viewBox", '0 0 1000 2300');
+var pct = [-75, -50, -25, 0, 25, 50, 75]
+st.selectAll("pct")
+	.data(pct)
+	.enter()
+	.append("line")
+	.attr("x1", d => d * 5.33 + 500)
+	.attr("x2", d => d * 5.33 + 500)
+	.attr("y1", 60)
+	.attr("y2", 2300)
+	.style("stroke", "lightgray")
 
 var tool_tip1 = d3.tip()
 	.attr("class", "d3-tip")
@@ -665,7 +675,7 @@ function ready(error, json, inputData, dataInput) {
 				.style("stroke", "lightgray")
 
 
-				dist.selectAll("pct")
+			dist.selectAll("pct")
 				.data(evs)
 				.enter()
 				.append("line")
@@ -674,7 +684,7 @@ function ready(error, json, inputData, dataInput) {
 				.attr("x2", d => d * 1.5 + 200)
 				.attr("y1", 260)
 				.attr("y2", 360)
-				.style("stroke",d=>d==270?"black": "lightgray")
+				.style("stroke", d => d == 270 ? "black" : "lightgray")
 
 
 			dist.selectAll("pct")
@@ -1001,6 +1011,17 @@ function ready(error, json, inputData, dataInput) {
 			stateInfo.sort((a, b) => b.tippingPoint - a.tippingPoint)
 			console.log(stateInfo)
 			var pct = [-75, -50, -25, 0, 25, 50, 75]
+			st.selectAll("pct")
+				.data(pct)
+				.enter()
+				.append("line")
+				.attr("class", "change")
+				.attr("x1", d => d * 5.33 + 500)
+				.attr("x2", d => d * 5.33 + 500)
+				.attr("y1", 60)
+				.attr("y2", 2300)
+				.style("stroke", "lightgray")
+
 			st.selectAll("w")
 				.data(stateInfo)
 				.enter()
@@ -1098,7 +1119,7 @@ function ready(error, json, inputData, dataInput) {
 				.enter()
 				.append("text")
 				.attr("class", "change")
-				.text(d => d == 0 ? "-" : d > 0 ? "R+" + formatvalue(d) : "D+" + formatvalue(-d))
+				.text(d => d == 0 ? "EVEN" : d > 0 ? "R+" + formatvalue(d) : "D+" + formatvalue(-d))
 				.attr("x", d => d * 5.33 + 500)
 				.attr("y", (d, i) => 45)
 				.style("fill", "black")
