@@ -2,44 +2,43 @@
 
 <head>
   <style>
-
-    text{
+    text {
       font-family: sf-mono;
     }
   </style>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@jhkforecast">
-    <meta name="twitter:creator" content="@jhkersting">
-    <meta name="twitter:title" content="Pollster & Forecaster Accuracy ">
-    
-    <meta name="twitter:description" content="Who Best Predicted the Democratic Primary?">
-    <meta name="twitter:image" content="https://jhkforecasts.com/democratic_primary-02.png">
-    <title>Pollster & Forecaster Ratings</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@jhkforecast">
+  <meta name="twitter:creator" content="@jhkersting">
+  <meta name="twitter:title" content="Pollster & Forecaster Accuracy ">
 
-    <link rel="icon" href="https://jkstats76.files.wordpress.com/2019/02/cropped-site-icon.png?w=32" sizes="32x32">
-    <link rel="icon" href="https://jkstats76.files.wordpress.com/2019/02/cropped-site-icon.png?w=192" sizes="192x192">
+  <meta name="twitter:description" content="Who Best Predicted the Democratic Primary?">
+  <meta name="twitter:image" content="https://jhkforecasts.com/democratic_primary-02.png">
+  <title>Pollster & Forecaster Ratings</title>
 
-    <script src="https://d3js.org/d3.v4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
-    <link rel="stylesheet" href="https://use.typekit.net/htk2wjy.css">
-    <link rel="stylesheet" href="index.css">
-    <script src="test.js"></script>
-    <script>
-        var key_state = "US"
-    </script>
+  <link rel="icon" href="https://jkstats76.files.wordpress.com/2019/02/cropped-site-icon.png?w=32" sizes="32x32">
+  <link rel="icon" href="https://jkstats76.files.wordpress.com/2019/02/cropped-site-icon.png?w=192" sizes="192x192">
+
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+  <link rel="stylesheet" href="https://use.typekit.net/htk2wjy.css">
+  <link rel="stylesheet" href="index.css">
+  <script src="test.js"></script>
+  <script>
+    var key_state = "US"
+  </script>
 </head>
 
 <body>
-    <!-- <a class="computer" href="https://jhkforecasts.com"><img  style="height: 75px;margin-left: auto;display: block;margin-right: auto;"src="https://raw.githubusercontent.com/jhkersting/jhkforecasts/master/jhk%20forecasts%20logo-01.jpg"/></a>
+  <!-- <a class="computer" href="https://jhkforecasts.com"><img  style="height: 75px;margin-left: auto;display: block;margin-right: auto;"src="https://raw.githubusercontent.com/jhkersting/jhkforecasts/master/jhk%20forecasts%20logo-01.jpg"/></a>
       <a class="phone" href="https://jhkforecasts.com"><img  style="height: 50px;margin-left: auto;display: block;margin-right: auto;"src="https://jkstats76.files.wordpress.com/2019/02/cropped-site-icon.png"/></a>
       <hr>-->
-  
+
   <div id="bigmenu">
-    <table style="border-collapse: collapse; border: none;margin-top: 20px;" cellspacing="0" cellpadding="0" width="100%"
-      height=100px>
+    <table style="border-collapse: collapse; border: none;margin-top: 20px;" cellspacing="0" cellpadding="0"
+      width="100%" height=100px>
       <tbody>
         <tr>
           <td style="width: 33%; border-right: solid grey 1.0pt; " valign="middle" width="33%">
@@ -58,13 +57,14 @@
         </tr>
       </tbody>
     </table>
-  
-  
+
+
   </div>
-  
-  
+
+
   <div id="smallmenu">
-    <table style="border-collapse: collapse; border: none;margin-top: 20px;" cellspacing="0" cellpadding="0" width="100%">
+    <table style="border-collapse: collapse; border: none;margin-top: 20px;" cellspacing="0" cellpadding="0"
+      width="100%">
       <tbody>
         <tr>
           <td style="width: 35%; border-right: solid grey 1.0pt; " valign="top" width="35%">
@@ -86,25 +86,34 @@
       </tbody>
     </table>
   </div>
-  <h1 style="font-weight: 400;border: black solid 2pt;text-align: center;width: 90%;margin-left: 5%;font-family: sf-mono;background-color:steelblue;color: white;">QUALIFYING POLLSTERS</h1>
+  <h1
+    style="font-weight: 400;border: black solid 2pt;text-align: center;width: 90%;margin-left: 5%;font-family: sf-mono;background-color:steelblue;color: white;">
+    QUALIFYING POLLSTERS</h1>
   <div style="width: 90%;margin-left: 5%;" id="qualpollsters"></div>
-  <h1 style="font-weight: 400;border: black solid 2pt;text-align: center;width: 90%;margin-left: 5%;font-family: sf-mono;background-color:steelblue;color: white;">FORECASTS</h1>
-    <div style="width: 90%;margin-left: 5%;" id="nationalforecasts"></div>
-    <h1 style="font-weight: 400;border: black solid 2pt;text-align: center;width: 90%;margin-left: 5%;font-family: sf-mono;background-color:steelblue;color: white;">STATE ACCURACY</h1>
-    <div id="state"></div>
-    <h1 style="font-weight: 400;border: black solid 2pt;text-align: center;width: 90%;margin-left: 5%;font-family: sf-mono;background-color:steelblue;color: white;">ALL POLLSTER</h1>
-    <div style="width: 90%;margin-left: 5%;" id="allpollsters"></div>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-format="fluid"
-         data-ad-layout-key="-h2+d+5c-9-3e"
-         data-ad-client="ca-pub-8025120308040073"
-         data-ad-slot="8603820464"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-    
+  <h1
+    style="font-weight: 400;border: black solid 2pt;text-align: center;width: 90%;margin-left: 5%;font-family: sf-mono;background-color:steelblue;color: white;">
+    FORECASTS</h1>
+  <div style="width: 90%;margin-left: 5%;" id="nationalforecasts"></div>
+  <p style="width: 90%;margin-left: 5%;font-family: sf-mono;font-size: 1VW;">*RMSE = ROOT MEAN SQUARE ERROR. JUST
+    ANOTHER WAY TO CALCULATE ERROR. BIGGER MISSES HAVE MORE WEIGHT THAN SMALLER ONES.</p>
+  <p style="width: 90%;margin-left: 5%;font-family: sf-mono;font-size: 1VW">*MEAN REVERTED ERROR IS THE DIFFERENCE
+    BETWEEN THE MODELS RMSE AND THE AVERAGE RMSE FOR THAT STATE. SO FOR EXAMPLE JHK FORECASTS HAS AN RMSE OF 3.1 IN A
+    STATE AND THE AVERAGE FOR ALL FORECASTS IN THAT STATE IS 4.7, MEAN REVERTED RMSE IS -1.7. MEAN-REVERTED ERROR IS A BETTER WAY TO AVERAGE ERRORS FROM DIFFERENT EVENTS.</p>
+  <h1
+    style="font-weight: 400;border: black solid 2pt;text-align: center;width: 90%;margin-left: 5%;font-family: sf-mono;background-color:steelblue;color: white;">
+    STATE ACCURACY</h1>
+  <div id="state"></div>
+  <h1
+    style="font-weight: 400;border: black solid 2pt;text-align: center;width: 90%;margin-left: 5%;font-family: sf-mono;background-color:steelblue;color: white;">
+    ALL POLLSTER</h1>
+  <div style="width: 90%;margin-left: 5%;" id="allpollsters"></div>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-h2+d+5c-9-3e"
+    data-ad-client="ca-pub-8025120308040073" data-ad-slot="8603820464"></ins>
+  <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
 </body>
 
 </html>

@@ -224,7 +224,7 @@ d3.csv("results.csv", results => {
                 return {
                     forecast: d.forecaster,
                     rmse: Math.sqrt(d3.sum(forecasts_data.filter(j => j.forecaster == d.forecaster), d => Math.pow(d.rmse, 2)) / flength[i]),
-                    mr_error: Math.sqrt(d3.sum(forecasts_data.filter(j => j.forecaster == d.forecaster), d => Math.pow(d.mean_reverted_error, 2)) / flength[i]),
+                    mr_error: d3.sum(forecasts_data.filter(j => j.forecaster == d.forecaster), d => d.mean_reverted_error) / flength[i],
                 }
             })
 
@@ -591,7 +591,7 @@ d3.csv("results.csv", results => {
                 .style("font-family", "sf-mono")
 
                 fore.append("text")
-                .text("ERROR")
+                .text("RMSE")
                 .attr("x", 600)
                 .attr("y", 20)
                 .attr("font-size", 12)
