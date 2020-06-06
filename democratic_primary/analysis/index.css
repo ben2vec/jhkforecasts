@@ -475,3 +475,9 @@ div.tooltip {
   font-style: italic;
   src: url(https://jhkforecasts.com/fonts/SF-Compact-Display-HeavyItalic.otf);
 }
+
+text{
+  text-transform: uppercase;
+  font-family: sf-mono;
+  font-weight: 100;
+}

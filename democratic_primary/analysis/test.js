@@ -227,9 +227,9 @@ d3.csv("results.csv", results => {
                     mr_error: Math.sqrt(d3.sum(forecasts_data.filter(j => j.forecaster == d.forecaster), d => Math.pow(d.mean_reverted_error, 2)) / flength[i]),
                 }
             })
-           
+
             pollsters_avg_rmse.sort((a, b) => a.mr_error - b.mr_error)
-            forecasts_avg_rmse.sort((a, b) => a.rmse - b.rmse)
+            forecasts_avg_rmse.sort((a, b) => a.mr_error - b.mr_error)
             console.log(forecasts_avg_rmse)
             var qual_polls = pollsters_avg_rmse.filter(d => d.polls >= num_qual_polls)
 
@@ -269,7 +269,7 @@ d3.csv("results.csv", results => {
                 .range(["white", "#FD363F"])
 
             var mr = d3.scaleLinear()
-                .domain(d3.extent(pollsters_avg_rmse, d => d.mr_error))
+                .domain(d3.extent(forecasts_avg_rmse, d => d.mr_error))
                 .range(["white", "#FD363F"])
 
             var height = qual_polls.length * 50 + 30
@@ -309,7 +309,7 @@ d3.csv("results.csv", results => {
                 .attr("text-anchor", "middle")
                 .attr("font-weight", 400)
                 .attr("dominant-baseline", "middle")
-                .style("font-family","sf-mono")
+                .style("font-family", "sf-mono")
 
 
             qual.selectAll("topline")
@@ -324,7 +324,7 @@ d3.csv("results.csv", results => {
                 .attr("text-anchor", "middle")
                 .attr("font-weight", 400)
                 .attr("dominant-baseline", "middle")
-                .style("font-family","sf-mono")
+                .style("font-family", "sf-mono")
 
             qual.selectAll("topline")
                 .data(qual_polls)
@@ -338,7 +338,7 @@ d3.csv("results.csv", results => {
                 .attr("text-anchor", "start")
                 .attr("font-weight", 400)
                 .attr("dominant-baseline", "middle")
-                .style("font-family","sf-mono")
+                .style("font-family", "sf-mono")
 
             qual.selectAll("topline")
                 .data(qual_polls)
@@ -352,7 +352,7 @@ d3.csv("results.csv", results => {
                 .attr("text-anchor", "middle")
                 .attr("font-weight", 400)
                 .attr("dominant-baseline", "middle")
-                .style("font-family","sf-mono")
+                .style("font-family", "sf-mono")
 
 
             qual.selectAll("topline")
@@ -378,19 +378,19 @@ d3.csv("results.csv", results => {
                 .attr("text-anchor", "middle")
                 .attr("font-weight", 400)
                 .attr("dominant-baseline", "middle")
-                .style("font-family","sf-mono")
+                .style("font-family", "sf-mono")
 
 
             qual.append("text")
                 .text("Rank")
                 .attr("x", 50)
                 .attr("y", 15)
-                .attr("font-size", 15 )
+                .attr("font-size", 15)
                 .attr("fill", "black")
                 .attr("text-anchor", "middle")
                 .attr("font-weight", 400)
                 .attr("dominant-baseline", "middle")
-                .style("font-family","sf-mono")
+                .style("font-family", "sf-mono")
 
             qual.append("text")
                 .text("Pollster")
@@ -401,7 +401,7 @@ d3.csv("results.csv", results => {
                 .attr("text-anchor", "start")
                 .attr("font-weight", 400)
                 .attr("dominant-baseline", "middle")
-                .style("font-family","sf-mono")
+                .style("font-family", "sf-mono")
 
 
             qual.append("text")
@@ -413,7 +413,7 @@ d3.csv("results.csv", results => {
                 .attr("text-anchor", "middle")
                 .attr("font-weight", 400)
                 .attr("dominant-baseline", "middle")
-                .style("font-family","sf-mono")
+                .style("font-family", "sf-mono")
 
             qual.append("text")
                 .text("Error")
@@ -424,7 +424,7 @@ d3.csv("results.csv", results => {
                 .attr("text-anchor", "middle")
                 .attr("font-weight", 400)
                 .attr("dominant-baseline", "middle")
-                .style("font-family","sf-mono")
+                .style("font-family", "sf-mono")
 
             qual.append("text")
                 .text("RMSE")
@@ -435,7 +435,7 @@ d3.csv("results.csv", results => {
                 .attr("text-anchor", "middle")
                 .attr("font-weight", 400)
                 .attr("dominant-baseline", "middle")
-                .style("font-family","sf-mono")
+                .style("font-family", "sf-mono")
 
             qual.append("text")
                 .text("# of Polls")
@@ -446,7 +446,7 @@ d3.csv("results.csv", results => {
                 .attr("text-anchor", "middle")
                 .attr("font-weight", 400)
                 .attr("dominant-baseline", "middle")
-                .style("font-family","sf-mono")
+                .style("font-family", "sf-mono")
 
             qual.append("line")
                 .attr("x1", 1000)
@@ -471,6 +471,17 @@ d3.csv("results.csv", results => {
                 .attr("height", 50);
 
 
+            fore.selectAll("refct")
+                .data(forecasts_avg_rmse)
+                .enter()
+                .append("rect")
+                .attr("fill", d => mr(d.mr_error))
+                .attr("x", 550)
+                .attr("y", (d, i) => i * 50 + 30)
+                .attr("width", 100)
+                .attr("height", 50);
+
+
 
             fore.selectAll("topline")
                 .data(forecasts_avg_rmse)
@@ -484,7 +495,22 @@ d3.csv("results.csv", results => {
                 .attr("text-anchor", "middle")
                 .attr("font-weight", 400)
                 .attr("dominant-baseline", "middle")
-                .style("font-family","sf-mono")
+                .style("font-family", "sf-mono")
+
+
+            fore.selectAll("topline")
+                .data(forecasts_avg_rmse)
+                .enter()
+                .append("text")
+                .text(d => numberformat(d.mr_error))
+                .attr("x", 600)
+                .attr("y", (d, i) => i * 50 + 55)
+                .attr("font-size", 15)
+                .attr("fill", "black")
+                .attr("text-anchor", "middle")
+                .attr("font-weight", 400)
+                .attr("dominant-baseline", "middle")
+                .style("font-family", "sf-mono")
 
 
 
@@ -504,7 +530,7 @@ d3.csv("results.csv", results => {
                 .attr("font-weight", 400)
                 .attr("dominant-baseline", "middle")
                 .attr("text-decoration", "underline")
-                .style("font-family","sf-mono")
+                .style("font-family", "sf-mono")
 
             fore.selectAll("topline")
                 .data(forecasts_avg_rmse)
@@ -518,7 +544,7 @@ d3.csv("results.csv", results => {
                 .attr("text-anchor", "middle")
                 .attr("font-weight", 400)
                 .attr("dominant-baseline", "middle")
-                .style("font-family","sf-mono")
+                .style("font-family", "sf-mono")
 
 
             fore.selectAll("topline")
@@ -540,7 +566,7 @@ d3.csv("results.csv", results => {
                 .attr("text-anchor", "middle")
                 .attr("font-weight", 400)
                 .attr("dominant-baseline", "middle")
-                .style("font-family","sf-mono")
+                .style("font-family", "sf-mono")
 
             fore.append("text")
                 .text("Pollster")
@@ -551,10 +577,29 @@ d3.csv("results.csv", results => {
                 .attr("text-anchor", "start")
                 .attr("font-weight", 400)
                 .attr("dominant-baseline", "middle")
-                .style("font-family","sf-mono")
+                .style("font-family", "sf-mono")
 
+            fore.append("text")
+                .text("MEAN-REVERTED")
+                .attr("x", 600)
+                .attr("y", 8)
+                .attr("font-size", 12)
+                .attr("fill", "black")
+                .attr("text-anchor", "middle")
+                .attr("font-weight", 400)
+                .attr("dominant-baseline", "middle")
+                .style("font-family", "sf-mono")
 
-
+                fore.append("text")
+                .text("ERROR")
+                .attr("x", 600)
+                .attr("y", 20)
+                .attr("font-size", 12)
+                .attr("fill", "black")
+                .attr("text-anchor", "middle")
+                .attr("font-weight", 400)
+                .attr("dominant-baseline", "middle")
+                .style("font-family", "sf-mono")
 
             fore.append("text")
                 .text("RMSE")
@@ -565,7 +610,7 @@ d3.csv("results.csv", results => {
                 .attr("text-anchor", "middle")
                 .attr("font-weight", 400)
                 .attr("dominant-baseline", "middle")
-                .style("font-family","sf-mono")
+                .style("font-family", "sf-mono")
 
 
 
@@ -616,7 +661,7 @@ d3.csv("results.csv", results => {
                 .attr("text-anchor", "middle")
                 .attr("font-weight", 400)
                 .attr("dominant-baseline", "middle")
-                .style("font-family","sf-mono")
+                .style("font-family", "sf-mono")
 
 
 
@@ -632,14 +677,14 @@ d3.csv("results.csv", results => {
                 .attr("text-anchor", "middle")
                 .attr("font-weight", 400)
                 .attr("dominant-baseline", "middle")
-                .style("font-family","sf-mono")
+                .style("font-family", "sf-mono")
 
 
             all.selectAll("topline")
                 .data(pollsters_avg_rmse)
                 .enter()
                 .append("text")
-                .text(d => d.pollster.toUpperCase())
+                .text(d => d.pollster.split("/")[0])
                 .attr("x", 100)
                 .attr("y", (d, i) => i * 50 + 55)
                 .attr("font-size", 15)
@@ -647,7 +692,7 @@ d3.csv("results.csv", results => {
                 .attr("text-anchor", "start")
                 .attr("font-weight", 400)
                 .attr("dominant-baseline", "middle")
-                .style("font-family","sf-mono")
+                .style("font-family", "sf-mono")
 
 
             all.selectAll("topline")
@@ -662,7 +707,7 @@ d3.csv("results.csv", results => {
                 .attr("text-anchor", "middle")
                 .attr("font-weight", 400)
                 .attr("dominant-baseline", "middle")
-                .style("font-family","sf-mono")
+                .style("font-family", "sf-mono")
 
 
 
@@ -700,7 +745,7 @@ d3.csv("results.csv", results => {
                 .attr("text-anchor", "middle")
                 .attr("font-weight", 400)
                 .attr("dominant-baseline", "middle")
-                .style("font-family","sf-mono")
+                .style("font-family", "sf-mono")
 
 
             all.append("text")
@@ -712,7 +757,7 @@ d3.csv("results.csv", results => {
                 .attr("text-anchor", "start")
                 .attr("font-weight", 400)
                 .attr("dominant-baseline", "middle")
-                .style("font-family","sf-mono")
+                .style("font-family", "sf-mono")
 
 
 
@@ -725,7 +770,7 @@ d3.csv("results.csv", results => {
                 .attr("text-anchor", "middle")
                 .attr("font-weight", 400)
                 .attr("dominant-baseline", "middle")
-                .style("font-family","sf-mono")
+                .style("font-family", "sf-mono")
 
 
             all.append("text")
@@ -737,7 +782,7 @@ d3.csv("results.csv", results => {
                 .attr("text-anchor", "middle")
                 .attr("font-weight", 400)
                 .attr("dominant-baseline", "middle")
-                .style("font-family","sf-mono")
+                .style("font-family", "sf-mono")
 
 
             all.append("text")
@@ -749,8 +794,8 @@ d3.csv("results.csv", results => {
                 .attr("text-anchor", "middle")
                 .attr("font-weight", 400)
                 .attr("dominant-baseline", "middle")
-                .style("font-family","sf-mono")
-                
+                .style("font-family", "sf-mono")
+
 
             all.append("text")
                 .text("# of Polls")
@@ -761,7 +806,7 @@ d3.csv("results.csv", results => {
                 .attr("text-anchor", "middle")
                 .attr("font-weight", 400)
                 .attr("dominant-baseline", "middle")
-                .style("font-family","sf-mono")
+                .style("font-family", "sf-mono")
 
 
             all.append("line")
@@ -812,10 +857,10 @@ d3.csv("results.csv", results => {
                 .attr("font-weight", 300)
                 .attr("dominant-baseline", "middle")
                 .attr("font-weight", 300)
-                .style("font-family","interstate-mono")
+                .style("font-family", "interstate-mono")
                 .attr("font-weight", 400)
-                .style("font-family","sf-mono")
-                
+                .style("font-family", "sf-mono")
+
 
 
 
@@ -832,9 +877,9 @@ d3.csv("results.csv", results => {
                 .attr("font-weight", 400)
                 .attr("dominant-baseline", "middle")
                 .attr("font-weight", 300)
-                .style("font-family","interstate-mono")
+                .style("font-family", "interstate-mono")
                 .attr("font-weight", 400)
-                .style("font-family","sf-mono")
+                .style("font-family", "sf-mono")
 
 
             stp.selectAll("topline")
@@ -850,7 +895,7 @@ d3.csv("results.csv", results => {
                 .attr("font-weight", 400)
                 .attr("dominant-baseline", "middle")
                 .attr("font-weight", 400)
-                .style("font-family","sf-mono")
+                .style("font-family", "sf-mono")
 
 
             stp.selectAll("topline")
@@ -874,7 +919,7 @@ d3.csv("results.csv", results => {
                 .attr("text-anchor", "start")
                 .attr("font-weight", 400)
                 .attr("dominant-baseline", "middle")
-                
+
 
 
             stp.append("text")
@@ -1062,7 +1107,7 @@ d3.csv("results.csv", results => {
                 .attr("text-anchor", "start")
                 .attr("font-weight", 400)
                 .attr("dominant-baseline", "middle")
-                .style("font-family","sf-mono")
+                .style("font-family", "sf-mono")
                 .on('mouseover', function (d) {
 
                     d3.select(this)
@@ -1090,7 +1135,7 @@ d3.csv("results.csv", results => {
                 .attr("text-anchor", "start")
                 .attr("font-weight", 400)
                 .attr("dominant-baseline", "middle")
-                .style("font-family","sf-mono")
+                .style("font-family", "sf-mono")
 
             st.selectAll("rect")
                 .data(states_results)
@@ -1106,7 +1151,7 @@ d3.csv("results.csv", results => {
                 .attr("text-anchor", "middle")
                 .attr("font-weight", 400)
                 .attr("dominant-baseline", "middle")
-                .style("font-family","sf-mono")
+                .style("font-family", "sf-mono")
 
 
             st.selectAll("rect")
@@ -1121,7 +1166,7 @@ d3.csv("results.csv", results => {
                 .attr("text-anchor", "middle")
                 .attr("font-weight", 400)
                 .attr("dominant-baseline", "middle")
-                .style("font-family","sf-mono")
+                .style("font-family", "sf-mono")
 
 
             st.append("text")
@@ -1133,7 +1178,7 @@ d3.csv("results.csv", results => {
                 .attr("text-anchor", "middle")
                 .attr("font-weight", 400)
                 .attr("dominant-baseline", "middle")
-                .style("font-family","sf-mono")
+                .style("font-family", "sf-mono")
 
             st.append("text")
                 .text("BEST FORECAST")
@@ -1144,7 +1189,7 @@ d3.csv("results.csv", results => {
                 .attr("text-anchor", "middle")
                 .attr("font-weight", 400)
                 .attr("dominant-baseline", "middle")
-                .style("font-family","sf-mono")
+                .style("font-family", "sf-mono")
 
             st.append("text")
                 .text("STATE")
@@ -1155,9 +1200,9 @@ d3.csv("results.csv", results => {
                 .attr("text-anchor", "start")
                 .attr("font-weight", 400)
                 .attr("dominant-baseline", "middle")
-                .style("font-family","sf-mono")
-            
-                st.append("line")
+                .style("font-family", "sf-mono")
+
+            st.append("line")
                 .attr("x1", 1000)
                 .attr("x2", 000)
                 .attr("y1", 30)
