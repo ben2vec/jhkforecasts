@@ -76,7 +76,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
     var today = data.slice(data.length - 436, data.length)
     console.log(data[data.length - 1])
     var updated = data[data.length - 1].seat
-    document.getElementById("updated").innerText = "UPDATED:"+ updated
+    document.getElementById("updated").innerText = "UPDATED:" + updated
     var districts = topojson.feature(congress, congress.objects.collection).features
     districts.forEach((d, i) => {
         var state = d.properties.state
@@ -174,7 +174,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
         .enter().append("a").attr("href", d => "districts?district=" + d.districtID).append("path")
         .attr("d", path)
         .style("fill", (d, i) => color(d.properties.repWin))
-        .style("stroke","white")
+        .style("stroke", "white")
         .on('mouseover', function (d) {
 
 
@@ -949,182 +949,207 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
 
     console.log(today)
     var districtData = today.slice(0, today.length - 1)
+    tableFunction("alpha")
+    function tableFunction(sortType) {
+        d3.select("#table1").remove()
+        sortType == "none" ? districtData == districtData :
+            sortType == "marginRep" ? districtData.sort((a, b) => b.margin - a.margin) :
+                sortType == "marginDem" ? districtData.sort((a, b) => a.margin - b.margin) :
+                    sortType == "marginComp" ? districtData.sort((a, b) => Math.abs(a.margin) - Math.abs(b.margin)) :
+                        districtData.sort(function (a, b) {
+                            a = a.districtID.toLowerCase();
+                            b = b.districtID.toLowerCase();
 
-    var table = d3.select("#dataTable")
-        .append("table")
-        .attr("class", "sortable")
-        .style("width", "100%")
+                            return a < b ? -1 : a > b ? 1 : 0;
+                        });
 
-    var header = table.append("thead").append("tr")
-    var demScale = d3.scaleLinear()
-        .domain([0, 100])
-        .range(["white", color(0)])
+        var table = d3.select("#dataTable")
+            .append("table")
+            .attr("id", "table1")
+            .attr("class", "collapse")
+            .style("width", "100%")
 
-    var repScale = d3.scaleLinear()
-        .domain([0, 100])
-        .range(["white", color(100)])
+        var header = table.append("thead").append("tr")
+        var demScale = d3.scaleLinear()
+            .domain([0, 100])
+            .range(["white", color(0)])
 
-    header.append("th")
-        .attr("class", "")
-        .style("text-align", "left")
-        .style("width", "40%")
-        .append("h1")
-        .text("STATE")
-        .style("font-size", "1.5vw")
-        .style("font-weight", 100)
-        .style("font-family", "sf-mono")
+        var repScale = d3.scaleLinear()
+            .domain([0, 100])
+            .range(["white", color(100)])
 
-
-    header.append("th")
-        .attr("class", "")
-        .style("text-align", "center")
-        .style("width", "5%")
-        .append("h1")
-        .text("(I)")
-        .style("font-size", "1.5vw")
-        .style("font-weight", 100)
-        .style("font-family", "sf-mono")
-
-    header.append("th")
-        .attr("class", "")
-        .style("text-align", "center")
-        .style("width", "5%")
-        .append("h1")
-        .text("FLIP?")
-        .style("font-size", "1.5vw")
-        .style("font-weight", 100)
-        .style("font-family", "sf-mono")
-    header.append("th")
-        .attr("class", "")
-        .style("text-align", "center")
-        .style("width", "10%")
-        .append("h1")
-        .text("WIN")
-        .style("font-size", "1.5vw")
-        .style("font-weight", 100)
-        .style("font-family", "sf-mono")
-
-
-    header.append("th")
-        .attr("class", "")
-        .style("text-align", "center")
-        .style("width", "10%")
-        .append("h1")
-        .text("REP VOTE")
-        .style("font-size", "1.5vw")
-        .style("font-weight", 100)
-        .style("font-family", "sf-mono")
-
-
-    header.append("th")
-        .attr("class", "")
-        .style("text-align", "center")
-        .style("width", "10%")
-        .append("h1")
-        .text("DEM VOTE")
-        .style("font-size", "1.5vw")
-        .style("font-weight", 100)
-        .style("font-family", "sf-mono")
-
-    header.append("th")
-        .attr("class", "")
-        .style("text-align", "center")
-        .style("width", "10%")
-        .append("h1")
-        .text("MARGIN")
-        .style("font-size", "1.5vw")
-        .style("font-weight", 100)
-        .style("font-family", "sf-mono")
-    var tbody = table.append("tbody")
-
-    districtData.forEach((d, i) => {
-        var district = d.districtID
-        var incumbent = inputData.filter(d => d.id == district)[0].incumbentParty
-        d.margin = d.repVote - d.demVote
-        tbody.append("tr")
-            .attr("id", "district" + district)
-
-        d3.select("#" + "district" + district)
-            .append("td")
+        header.append("th")
+            .attr("class", "hover")
             .style("text-align", "left")
-            .style("width", "30%")
-            .append("a").attr("href", d => "districts?district=" + district).append("path")
-            .text(d.state.toUpperCase() + "  " + ordinal(d.seat).toUpperCase())
+            .style("width", "40%")
+            .append("h1")
+            .text("STATE")
             .style("font-size", "1.5vw")
             .style("font-weight", 100)
             .style("font-family", "sf-mono")
+            .on("click",d=>{
+                tableFunction("alpha")
+            })
 
-
-        d3.select("#" + "district" + district)
-            .append("td")
+        header.append("th")
+            .attr("class", "")
             .style("text-align", "center")
             .style("width", "5%")
             .append("h1")
-            .text(incumbent == "(R)" ? (d.repWin > 50 ? "" : "R->D") : (d.repWin < 50 ? "" : "D->R"))
-            .style("color", incumbent == "(R)" ? color(0) : color(100))
+            .text("FLIP?")
             .style("font-size", "1.5vw")
-            .style("font-weight", 500)
+            .style("font-weight", 100)
             .style("font-family", "sf-mono")
 
-        d3.select("#" + "district" + district)
-            .append("td")
+        header.append("th")
+            .attr("class", "")
             .style("text-align", "center")
             .style("width", "5%")
             .append("h1")
-            .text(incumbent)
-            .style("color", incumbent == "(R)" ? color(100) : color(0))
+            .text("(I)")
             .style("font-size", "1.5vw")
             .style("font-weight", 100)
             .style("font-family", "sf-mono")
 
 
-
-        d3.select("#" + "district" + district)
-            .append("td")
-            .style("text-align", "center")
-            .style("width", "10%")
-            .style("background-color", color(d.repWin))
-            .append("h1")
-            .text(d.repWin > 50 ? nf(d.repWin) : nf(d.demWin))
-            .style("font-size", "1.5vw")
-            .style("font-weight", 100)
-            .style("font-family", "sf-mono")
-
-
-        d3.select("#" + "district" + district)
-            .append("td")
+        header.append("th")
+            .attr("class", "")
             .style("text-align", "center")
             .style("width", "10%")
             .append("h1")
-            .text(nf(d.repVote))
+            .text("WIN")
             .style("font-size", "1.5vw")
             .style("font-weight", 100)
             .style("font-family", "sf-mono")
 
 
-        d3.select("#" + "district" + district)
-            .append("td")
+        header.append("th")
+            .attr("class", "")
             .style("text-align", "center")
             .style("width", "10%")
             .append("h1")
-            .text(nf(d.demVote))
+            .text("REP VOTE")
             .style("font-size", "1.5vw")
             .style("font-weight", 100)
             .style("font-family", "sf-mono")
 
-        d3.select("#" + "district" + district)
-            .append("td")
+
+        header.append("th")
+            .attr("class", "")
             .style("text-align", "center")
             .style("width", "10%")
-            .style("background-color", color(50 + d.margin))
             .append("h1")
-            .text(d.repWin > 50 ? "R+" + nf(d.margin) : "D+" + nf(-d.margin))
+            .text("DEM VOTE")
             .style("font-size", "1.5vw")
             .style("font-weight", 100)
             .style("font-family", "sf-mono")
 
-    })
+        header.append("th")
+            .attr("class", "hover")
+            .style("text-align", "center")
+            .style("width", "10%")
+            .append("h1")
+            .text("MARGIN")
+            .style("font-size", "1.5vw")
+            .style("font-weight", 100)
+            .style("font-family", "sf-mono")
+            .on("click", d => {
 
+                sortType == "marginComp" ? tableFunction("marginRep") :
+                    sortType == "marginRep" ? tableFunction("marginDem") : tableFunction("marginComp")
+            })
+
+        var tbody = table.append("tbody")
+
+        districtData.forEach((d, i) => {
+            var district = d.districtID
+            var incumbent = inputData.filter(d => d.id == district)[0].incumbentParty
+            d.margin = d.repVote - d.demVote
+            tbody.append("tr")
+                .attr("id", "district" + district)
+
+            d3.select("#" + "district" + district)
+                .append("td")
+                .attr("class", "hover")
+                .style("text-align", "left")
+                .style("width", "30%")
+                .append("a").attr("href", d => "districts?district=" + district).append("path")
+                .text(d.state.toUpperCase() + "  " + ordinal(d.seat).toUpperCase())
+                .style("font-size", "1.5vw")
+                .style("font-weight", 100)
+                .style("font-family", "sf-mono")
+
+
+            d3.select("#" + "district" + district)
+                .append("td")
+                .style("text-align", "center")
+                .style("width", "5%")
+                .append("h1")
+                .text(incumbent == "(R)" ? (d.repWin > 50 ? "" : "R->D") : (d.repWin < 50 ? "" : "D->R"))
+                .style("color", incumbent == "(R)" ? color(0) : color(100))
+                .style("font-size", "1.5vw")
+                .style("font-weight", 500)
+                .style("font-family", "sf-mono")
+
+            d3.select("#" + "district" + district)
+                .append("td")
+                .style("text-align", "center")
+                .style("width", "5%")
+                .append("h1")
+                .text(incumbent)
+                .style("color", incumbent == "(R)" ? color(100) : color(0))
+                .style("font-size", "1.5vw")
+                .style("font-weight", 100)
+                .style("font-family", "sf-mono")
+
+
+
+            d3.select("#" + "district" + district)
+                .append("td")
+                .style("text-align", "center")
+                .style("width", "10%")
+                .style("background-color", color(d.repWin))
+                .append("h1")
+                .text(d.repWin > 50 ? nf(d.repWin) : nf(d.demWin))
+                .style("font-size", "1.5vw")
+                .style("font-weight", 100)
+                .style("font-family", "sf-mono")
+
+
+            d3.select("#" + "district" + district)
+                .append("td")
+                .style("text-align", "center")
+                .style("width", "10%")
+                .append("h1")
+                .text(nf(d.repVote))
+                .style("font-size", "1.5vw")
+                .style("font-weight", 100)
+                .style("font-family", "sf-mono")
+
+
+            d3.select("#" + "district" + district)
+                .append("td")
+                .style("text-align", "center")
+                .style("width", "10%")
+                .append("h1")
+                .text(nf(d.demVote))
+                .style("font-size", "1.5vw")
+                .style("font-weight", 100)
+                .style("font-family", "sf-mono")
+
+            d3.select("#" + "district" + district)
+                .append("td")
+                .style("text-align", "center")
+                .style("width", "10%")
+                .style("background-color", color(50 + d.margin))
+                .append("h1")
+                .text(d.repWin > 50 ? "R+" + nf(d.margin) : "D+" + nf(-d.margin))
+                .style("font-size", "1.5vw")
+                .style("font-weight", 100)
+                .style("font-family", "sf-mono")
+
+        })
+    }
     var searchBar = d3.select("#searchBar")
         .on("change", d => {
             var inputvalue = d3.select("#searchBar").property("value").toUpperCase()
