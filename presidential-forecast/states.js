@@ -1,3 +1,6 @@
+var windowWidth = window.innerWidth
+console.log(windowWidth)
+windowWidth > 600 ? d3.select("body").style("width", "85%").style("margin-left", "7.5%") : d3.select("body").style("width", "99%").style("margin-left", "0.5%")
 var colors = ["#FF0660", "#0091FF", "#FFE130"]
 var wf = d3.format(".0f")
 
