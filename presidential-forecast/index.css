@@ -292,6 +292,9 @@
    .special {
      display: block;
    }
+   .tableFont {
+     font-size: 2.5vw;
+   }
  }
 
  @media only screen and (min-width:601px) {
@@ -302,7 +305,9 @@
      display: none;
    }
    .computer {
-     display: block;
+    margin-left: 7.5%;
+    width: 80%;
+    display:block;
    }
    .special {
      margin-left: 7.5%;
@@ -322,6 +327,9 @@
    }
    #votebutton {
      display: block;
+   }
+   .tableFont {
+     font-size: 1.5vw;
    }
  }
 
@@ -427,7 +435,7 @@
    height: 7vw;
    width: 100%;
    margin: auto;
-  border-bottom: black solid  1px;
+   border-bottom: black solid 1px;
  }
 
  /* Style the links inside the navigation bar */
@@ -451,9 +459,9 @@
  }
 
  .topnav h1:hover {
-  background-color: #ddd;
-  color: black;
-}
+   background-color: #ddd;
+   color: black;
+ }
 
  /* Add a color to the active/current link */
 
@@ -461,3 +469,18 @@
    background-color: #4CAF50;
    color: white;
  }
+
+.pollth{
+  border-bottom: black solid 1px;
+  padding: 5px;
+}
+.pollTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: sf-mono;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+.polltd{
+  padding: 5px;
+}

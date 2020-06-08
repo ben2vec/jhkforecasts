@@ -876,8 +876,8 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
 
   d3.csv("https://data.jhkforecasts.com/pollster-ratings.csv", pollster_ratings => {
 
-    var pollster_names = pollster_ratings.map((d, i) => {
-      return d.Pollster
+    var pollsterID = pollster_ratings.map((d, i) => {
+      return +d.PollsterRatingID
     })
 
     var pollster_grade = pollster_ratings.map((d, i) => {
@@ -888,12 +888,12 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     })
     var grade_scale = [
       { Grade: "A+", Value: 1.5 },
-      { Grade: "A", Value: 1.35 },
-      { Grade: "A-", Value: 1.2 },
-      { Grade: "A/B", Value: 1.1 },
-      { Grade: "B+", Value: 1 },
-      { Grade: "B", Value: .925 },
-      { Grade: "B-", Value: .85 },
+      { Grade: "A", Value: 1.4 },
+      { Grade: "A-", Value: 1.3 },
+      { Grade: "A/B", Value: 1.2 },
+      { Grade: "B+", Value: 1.1 },
+      { Grade: "B", Value: 1 },
+      { Grade: "B-", Value: .9 },
       { Grade: "B/C", Value: .8 },
       { Grade: "C+", Value: .7 },
       { Grade: "C", Value: .65 },
@@ -902,7 +902,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
       { Grade: "D+", Value: .4 },
       { Grade: "D", Value: .3 },
       { Grade: "D-", Value: .2 },
-      { Grade: "", Value: .7 },
+      { Grade: "-", Value: .7 },
     ]
     var pollster_grade_letter = grade_scale.map((d) => {
       return d.Grade
@@ -936,201 +936,172 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
           poll_id: +datanew[i][0].poll_id,
           state: datanew[i][0].state == "" ? "US" : datanew[i][0].state,
           pollster: datanew[i][0].pollster,
-          id: +datanew[i][0].pollster_id,
+          id: +datanew[i][0].pollster_rating_id,
           url: datanew[i][0].url,
           sponsors: datanew[i][0].sponsors,
           n: datanew[i][0].sample_size,
           date: date2parse(datanew[i][0].end_date),
           population: datanew[i][0].population,
-          grade: pollster_grade[pollster_names.indexOf(datanew[i][0].pollster)] == undefined ? "-" : pollster_grade[pollster_names.indexOf(datanew[i][0].pollster)],
-          bias: pollster_bias[pollster_names.indexOf(datanew[i][0].pollster)] == undefined ? 0 : pollster_bias[pollster_names.indexOf(datanew[i][0].pollster)],
+          grade: pollster_grade[pollsterID.indexOf(+datanew[i][0].pollster_rating_id)] == undefined ? "-" : pollster_grade[pollsterID.indexOf(+datanew[i][0].pollster_rating_id)],
+          bias: pollster_bias[pollsterID.indexOf(+datanew[i][0].pollster_rating_id)] == undefined ? 0 : pollster_bias[pollsterID.indexOf(+datanew[i][0].pollster_rating_id)],
           dem: datanew[i][0].answer,
           gop: datanew[i][1].answer,
           dem_pct: +datanew[i][0].pct,
           gop_pct: +datanew[i][1].pct,
-          poll_index: datanew[i][0].state == "" ? "US" + datanew[i][0].pollster : datanew[i][0].state + datanew[i][0].pollster,
+          poll_index: datanew[i][0].state == "" ? "US" + +datanew[i][0].pollster_rating_id : datanew[i][0].state + +datanew[i][0].pollster_rating_id,
           margin: wf(+datanew[i][0].pct) - wf(+datanew[i][1].pct)
         }
       })
+      data_new.forEach((d) => {
+        var grade = d.grade
+        d.gradeValue = grade_scale.filter(d => d.Grade == grade)[0].Value
+      })
       var data_new = data_new.filter(d => d.gop == "Trump")
+      var data_new = data_new.filter(d => d.dem == "Biden")
 
 
-      var bottom = d3.select("#bottom")
-        .append("svg")
 
+      var gradeColor = d3.scaleLinear()
+        .domain([0.2, .85, 1.1, 1.5])
+        .range(["#F0474E", "#FCDD26", "#37B76E", "#2079FF"])
       t(key_state, "Biden");
       function t(state, candidate) {
         var datanew = state == "All" ? data_new.slice(0, 100) : data_new.filter(d => d.state == state)
 
         var finaldata = candidate == "All" ? datanew : datanew.filter(d => d.dem == candidate)
+        console.log(finaldata)
+        var table = d3.select("#bottom")
+          .append("table")
+          .attr("class", "pollTable")
+
+        var header = table.append("thead")
 
 
-
-        var height = finaldata.length * 40 + 25
-
-        bottom.attr("viewBox", '0 0 1000 ' + height)
-
-        bottom.append("rect")
-          .attr("fill", "white")
-          .attr("x", 0)
-          .attr("y", 0)
-          .attr("width", 1000)
-          .attr("height", height)
-
-        bottom.selectAll("states")
-          .data(finaldata)
-          .enter()
-          .append("rect")
-          .attr("y", (d, i) => 25 + i * 40)
-          .attr("x", 610)
-          .attr("height", 40)
-          .attr("width", 80)
-          .attr("fill", d => demscale(d.dem_pct))
-
-        bottom.selectAll("states")
-          .data(finaldata)
-          .enter()
-          .append("rect")
-          .attr("y", (d, i) => 25 + i * 40)
-          .attr("x", 710)
-          .attr("height", 40)
-          .attr("width", 80)
-          .attr("fill", d => gopscale(d.gop_pct))
-
-
-
-        bottom.selectAll("cands")
-          .data(finaldata)
-          .enter()
-          .append("a")
-          .attr("href", d => d.url)
-          .append("text")
-          .text(d => d.pollster)
-          .attr("y", (d, i) => d.pollster.length > 40 ? 38 + i * 40 : 45 + i * 40)
-          .attr("x", (d, i) => 50)
-          .attr("fill", "black")
-          .style("font-weight", "100")
-          .style("font-size", 15)
-          .attr("text-anchor", "start")
-          .attr("dominant-baseline", "central")
-          .on("mouseover", function (d) {
-            d3.select(this)
-              .attr("text-decoration", "underline")
-          })
-          .on("mouseout", function (d) {
-            d3.select(this)
-              .attr("text-decoration", "none")
-          })
-          .call(wrap, 300)
+        header.append("th").attr("class", "pollth")
+          .style("width", "35%")
+          .append("h1")
+          .text("Pollster")
           .style("font-family", "sf-mono")
+          .style("font-weight", 100)
+          .style("text-align", "left")
+          .attr("class", "tableFont")
 
 
-
-        bottom.selectAll("cands")
-          .data(finaldata)
-          .enter()
-          .append("text")
-          .text(d => wf(d.dem_pct))
-          .attr("y", (d, i) => 45 + i * 40)
-          .attr("x", (d, i) => 650)
-          .attr("fill", "black")
-          .style("font-weight", "100")
-          .style("font-size", 18)
-          .attr("text-anchor", "middle")
-          .attr("dominant-baseline", "central")
+        header.append("th").attr("class", "pollth")
+          .style("width", "5%")
+          .append("h1")
+          .text("Grade")
           .style("font-family", "sf-mono")
+          .style("font-weight", 100)
+          .style("text-align", "center")
+          .attr("class", "tableFont")
 
-        bottom.selectAll("cands")
-          .data(finaldata)
-          .enter()
-          .append("text")
-          .text(d => wf(d.gop_pct))
-          .attr("y", (d, i) => 45 + i * 40)
-          .attr("x", (d, i) => 750)
-          .attr("fill", "black")
-          .style("font-weight", "100")
-          .style("font-size", 18)
-          .attr("text-anchor", "middle")
-          .attr("dominant-baseline", "central")
+        header.append("th").attr("class", "pollth")
+          .style("width", "10%")
+          .append("h1")
+          .text("Date")
+          .style("font-family", "sf-mono")
+          .style("font-weight", 100)
+          .style("text-align", "center")
+          .attr("class", "tableFont")
 
-
-
-        bottom.selectAll("cands")
-          .data(finaldata)
-          .enter()
-          .append("text")
-          .text(d => d.margin == 0 ? "Even" : d.margin > 0 ? "D +" + pollformat(d.margin) : "R +" + pollformat(Math.abs(d.margin)))
-          .attr("y", (d, i) => 45 + i * 40)
-          .attr("x", (d, i) => 950)
-          .attr("fill", d => d.margin == 0 ? "black" : d.margin > 0 ? demwincol : gopwincol)
-          .style("font-weight", "100")
-          .style("font-size", 15)
-          .attr("text-anchor", "middle")
-          .attr("dominant-baseline", "central")
+        header.append("th").attr("class", "pollth")
+          .style("width", "10%")
+          .append("h1")
+          .text("Biden")
+          .style("font-family", "sf-mono")
+          .style("font-weight", 100)
+          .style("text-align", "center")
+          .attr("class", "tableFont")
 
 
+        header.append("th").attr("class", "pollth")
+          .style("width", "10%")
+          .append("h1")
+          .text("Trump")
+          .style("font-family", "sf-mono")
+          .style("font-weight", 100)
+          .style("text-align", "center")
+          .attr("class", "tableFont")
 
-        bottom.selectAll("cands")
-          .data(finaldata)
-          .enter()
-          .append("line")
-          .attr("y1", (d, i) => 25 + i * 40)
-          .attr("x1", (d, i) => 0)
-          .attr("y2", (d, i) => 25 + i * 40)
-          .attr("x2", (d, i) => 1000)
-          .attr("stroke", "#AFAFAF")
-          .attr("stroke-width", 1)
-
-
-        bottom.selectAll("cands")
-          .data(finaldata)
-          .enter()
-          .append("text")
-          .text(d => tf(d.date))
-          .attr("y", (d, i) => 45 + i * 40)
-          .attr("x", (d, i) => 450)
-          .attr("fill", "grey")
-          .style("font-weight", "100")
-          .style("font-size", 15)
-          .attr("text-anchor", "start")
-          .attr("dominant-baseline", "central")
+        header.append("th").attr("class", "pollth")
+          .style("width", "5%")
+          .append("h1")
+          .text("")
+          .style("font-family", "sf-mono")
+          .style("font-weight", 100)
+          .style("text-align", "center")
+          .attr("class", "tableFont")
 
 
 
+        finaldata.forEach((d, i) => {
+          table.append("tr")
+            .attr("id", "row" + i)
 
-        function wrap(text, width) {
-          text.each(function () {
-            var text = d3.select(this),
-              words = text.text().split(/\s+/).reverse(),
-              word,
-              line = [],
-              lineNumber = 0,
-              lineHeight = 1.1, // ems
-              x = text.attr("x"),
-              y = text.attr("y"),
-              dy = 0, //parseFloat(text.attr("dy")),
-              tspan = text.text(null)
-                .append("tspan")
-                .attr("x", x)
-                .attr("y", y)
-                .attr("dy", dy + "em");
-            while (word = words.pop()) {
-              line.push(word);
-              tspan.text(line.join(" "));
-              if (tspan.node().getComputedTextLength() > width) {
-                line.pop();
-                tspan.text(line.join(" "));
-                line = [word];
-                tspan = text.append("tspan")
-                  .attr("x", x)
-                  .attr("y", y)
-                  .attr("dy", ++lineNumber * lineHeight + dy + "em")
-                  .text(word);
-              }
-            }
-          });
-        }
+          d3.select("#" + "row" + i)
+            .append("td")
+            .append("h1")
+            .text(d.pollster)
+            .style("font-family", "sf-mono")
+            .style("font-weight", 100)
+            .style("text-align", "left")
+            .attr("class", "tableFont")
 
+
+          d3.select("#" + "row" + i)
+            .append("td")
+            .append("h1")
+            .text(d.grade)
+            .style("color", d.grade == "-" ? "black" : gradeColor(d.gradeValue))
+            .style("font-family", "sf-mono")
+            .style("font-weight", 500)
+            .style("text-align", "right")
+            .attr("class", "tableFont")
+
+          d3.select("#" + "row" + i)
+            .append("td")
+            .append("h1")
+            .text(timeformat(d.date))
+            .style("color", "#afafaf")
+            .style("font-family", "sf-mono")
+            .style("font-weight", 500)
+            .style("text-align", "center")
+            .attr("class", "tableFont")
+
+          d3.select("#" + "row" + i)
+            .append("td")
+            .style("background-color", demscale(d.dem_pct))
+            .append("h1")
+            .text(wf(d.dem_pct))
+            .style("font-family", "sf-mono")
+            .style("font-weight", 100)
+            .style("text-align", "center")
+            .attr("class", "tableFont")
+
+
+          d3.select("#" + "row" + i)
+            .append("td")
+            .style("padding", "5px")
+            .style("background-color", gopscale(d.gop_pct))
+            .append("h1")
+            .text(wf(d.gop_pct))
+            .style("font-family", "sf-mono")
+            .style("font-weight", 100)
+            .style("text-align", "center")
+            .attr("class", "tableFont")
+
+          d3.select("#" + "row" + i)
+            .append("td")
+            .style("padding", "5px")
+            .append("h1")
+            .text(d.margin == 0 ? "EVEN" : d.margin > 0 ? "D+" + wf(d.margin) : "R+" + wf(-d.margin))
+            .style("color", d.margin == 0 ? "black" : d.margin > 0 ? demwincol : gopwincol)
+            .style("font-family", "sf-mono")
+            .style("font-weight", 100)
+            .style("text-align", "center")
+            .attr("class", "tableFont")
+        })
       }
 
 
