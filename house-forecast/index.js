@@ -172,6 +172,86 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
         .style("fill", color(100))
         .attr("text-anchor", "middle")
 
+    var pct = [50, 60, 70, 80, 90, 100]
+
+
+    map.selectAll("grid")
+        .data(pct)
+        .enter()
+        .append("rect")
+        .attr("x", (d, i) => i * 20 + 800)
+        .attr("y", (d, i) => 400)
+        .attr("width", 20)
+        .attr("height", 20)
+        .attr("ry", 5)
+        .attr("stroke", "white")
+        .attr("fill", d => color(d))
+
+
+    map.append("rect")
+        .attr("x", 800)
+        .attr("y", 470)
+        .attr("width", 20)
+        .attr("height", 20)
+        .attr("ry", 5)
+        .attr("stroke", "black")
+        .attr("fill", "white")
+
+    map.append("text")
+        .text("Close Race")
+        .attr("x", 800)
+        .attr("y", 500)
+        .attr("dominant-baseline", "central")
+        .attr("text-anchor", "start")
+        .attr("fill", "black")
+        .style("font-family", "sf-mono")
+        .attr("font-size", 15)
+
+    map.selectAll("grid")
+        .data(pct)
+        .enter()
+        .append("rect")
+        .attr("x", (d, i) => i * 20 + 800)
+        .attr("y", (d, i) => 420)
+        .attr("width", 20)
+        .attr("height", 20)
+        .attr("ry", 5)
+        .attr("stroke", "white")
+        .attr("fill", d => color(100 - d))
+
+    map.selectAll("grid")
+        .data(pct)
+        .enter()
+        .append("text")
+        .text(d => d)
+        .attr("x", (d, i) => i * 20 + 810)
+        .attr("y", (d, i) => 390)
+        .attr("dominant-baseline", "central")
+        .attr("text-anchor", "middle")
+        .attr("fill", "black")
+        .style("font-family", "sf-mono")
+        .attr("font-size", 12)
+
+    map.append("text")
+        .text("REP")
+        .attr("x", (d, i) => 925)
+        .attr("y", (d, i) => 410)
+        .attr("dominant-baseline", "central")
+        .attr("text-anchor", "start")
+        .attr("fill", "black")
+        .style("font-family", "sf-mono")
+        .attr("font-size", 15)
+
+    map.append("text")
+        .text("DEM")
+        .attr("x", (d, i) => 925)
+        .attr("y", (d, i) => 430)
+        .attr("dominant-baseline", "central")
+        .attr("text-anchor", "start")
+        .attr("fill", "black")
+        .style("font-family", "sf-mono")
+        .attr("font-size", 15)
+
 
     map.append("g")
         .attr("class", "district-boundaries")
@@ -180,7 +260,26 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
         .enter().append("a").attr("href", d => "districts?district=" + d.districtID).append("path")
         .attr("d", path)
         .style("fill", (d, i) => color(d.properties.repWin))
-        .style("stroke", "white")
+        .style("stroke", (d, i) => Math.abs(d.properties.repWin - 50) < 30 ? "black" : "white")
+
+
+
+    map.append("g")
+        .attr("class", "state-boundaries")
+        .selectAll("path")
+        .data(topojson.feature(us, us.objects.states).features)
+        .enter().append("path")
+        .attr("d", path)
+
+    map.append("g")
+        .attr("class", "state-boundaries")
+        .selectAll("path")
+        .data(districts)
+        .enter().append("a").attr("href", d => "districts?district=" + d.districtID).append("path")
+        .attr("d", path)
+        .style("fill", (d, i) => "none")
+        .attr("pointer-events", "all")
+        .style("stroke", (d, i) => Math.abs(d.properties.repWin - 50) < 30 ? "black" : "none")
         .on('mouseover', function (d) {
 
 
@@ -270,14 +369,6 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
 
                 tool_tip.hide()
             });
-
-
-    map.append("g")
-        .attr("class", "state-boundaries")
-        .selectAll("path")
-        .data(topojson.feature(us, us.objects.states).features)
-        .enter().append("path")
-        .attr("d", path)
 
     grid.forEach((d, i) => {
         var districtID = d.district
@@ -406,7 +497,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
         .attr("width", 20)
         .attr("height", 20)
         .attr("ry", 5)
-        .attr("stroke", d => d.label == "" ? Math.abs(d.repWin - 50) < 25 ? "black" : "none" : "none")
+        .attr("stroke", d => d.label == "" ? Math.abs(d.repWin - 50) < 30 ? "black" : "none" : "none")
         .attr("stroke-width", 1.5)
         .on('mouseover', function (d) {
 
@@ -533,25 +624,25 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
 
     var histMarker = [180, 195, 210, 225]
 
-    for(let a=1;a<10;a++){
+    for (let a = 1; a < 10; a++) {
 
         hist.append("text")
-        .attr("class","histDisappear")
-        .text(a==4?a+"%":a)
-        .attr("y",243-yHistogram(a))
-        .attr("x",20)
-        .style("fill","grey")
-        .style("font-weight", "100")
-        .style("font-size", 15)
-        .attr("text-anchor", "end")
+            .attr("class", "histDisappear")
+            .text(a == 4 ? a + "%" : a)
+            .attr("y", 243 - yHistogram(a))
+            .attr("x", 20)
+            .style("fill", "grey")
+            .style("font-weight", "100")
+            .style("font-size", 15)
+            .attr("text-anchor", "end")
 
         hist.append("line")
-        .attr("class","histDisappear")
-        .attr("y1",250-yHistogram(a))
-        .attr("y2",250-yHistogram(a))
-        .attr("x1",25)
-        .attr("x2",975)
-        .style("stroke","grey")
+            .attr("class", "histDisappear")
+            .attr("y1", 250 - yHistogram(a))
+            .attr("y2", 250 - yHistogram(a))
+            .attr("x1", 25)
+            .attr("x2", 975)
+            .style("stroke", "grey")
     }
 
     hist.selectAll("re")
@@ -563,7 +654,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
         .attr("x", (d, i) => (d - 165) * barWidth + barWidth / 2)
         .attr("y", 270)
         .attr("fill", color(100))
-        .style("font-weight", "100")
+        .style("font-weight", "500")
         .style("font-size", 15)
         .attr("text-anchor", "middle")
 
@@ -578,7 +669,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
         .attr("x", (d, i) => (d - 165) * barWidth + barWidth / 2)
         .attr("y", 290)
         .attr("fill", color(0))
-        .style("font-weight", "100")
+        .style("font-weight", "500")
         .style("font-size", 15)
         .attr("text-anchor", "middle")
 
@@ -592,6 +683,26 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
         .attr("height", d => yHistogram(d.occ))
         .attr("stroke", "white")
         .attr("fill", d => d.rep > 217 ? color(100) : color(0))
+
+    hist.append("rect")
+        .attr("class", "histDisappear")
+        .attr("x", (d, i) => (histogram[67].rep - 165) * barWidth)
+        .attr("y", d => 250 - yHistogram(histogram[67].occ))
+        .attr("width", barWidth)
+        .attr("height", d => yHistogram(histogram[67].occ))
+        .attr("stroke", "black")
+        .attr("fill", "none")
+
+
+    hist.append("text")
+        .text("CURRENt")
+        .attr("class", "histDisappear")
+        .attr("x", (d, i) => (histogram[67].rep - 165) * barWidth + barWidth / 2)
+        .attr("y", d => 270)
+        .attr("width", barWidth)
+        .attr("height", d => yHistogram(histogram[67].occ))
+        .attr("text-anchor", "middle")
+        .attr("font-size", 15)
 
     hist.selectAll("re")
         .data(histogram)
@@ -656,7 +767,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
         .attr("class", "histDisappear")
         .attr("x1", (218 - 165) * barWidth)
         .attr("x2", (218 - 165) * barWidth)
-        .attr("y1", 250-yHistogram(4))
+        .attr("y1", 250 - yHistogram(4))
         .attr("y2", 260)
         .attr("stroke", "black")
 
