@@ -15,6 +15,12 @@ d3.select("#time").append("h1")
     .style("font-size", "3vw")
     .style("font-weight", "700")
 
+d3.select("#beeSwarm").append("h1")
+    .text("How Many Competitive Races are There?")
+    .style("font-size", "3vw")
+    .style("font-weight", "700")
+
+
 
 
 var hist = d3.select("#histogram").append("svg")
@@ -987,7 +993,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
             .style("font-size", "1.5vw")
             .style("font-weight", 100)
             .style("font-family", "sf-mono")
-            .on("click",d=>{
+            .on("click", d => {
                 tableFunction("alpha")
             })
 
