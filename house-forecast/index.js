@@ -24,7 +24,7 @@ d3.select("#beeSwarm").append("h1")
 
 
 var hist = d3.select("#histogram").append("svg")
-    .attr("viewBox", "0 0 1000 300")
+    .attr("viewBox", "0 -50 1000 350")
 
 var boxmap = d3.select("#boxmap").append("svg")
     .attr("viewBox", "50 0 1210 650")
@@ -533,11 +533,32 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
 
     var histMarker = [180, 195, 210, 225]
 
+    for(let a=1;a<10;a++){
+
+        hist.append("text")
+        .attr("class","histDisappear")
+        .text(a==4?a+"%":a)
+        .attr("y",243-yHistogram(a))
+        .attr("x",20)
+        .style("fill","grey")
+        .style("font-weight", "100")
+        .style("font-size", 15)
+        .attr("text-anchor", "end")
+
+        hist.append("line")
+        .attr("class","histDisappear")
+        .attr("y1",250-yHistogram(a))
+        .attr("y2",250-yHistogram(a))
+        .attr("x1",25)
+        .attr("x2",975)
+        .style("stroke","grey")
+    }
+
     hist.selectAll("re")
         .data(histMarker)
         .enter()
         .append("text")
-        .attr("class", "hist-markers")
+        .attr("class", "histDisappear")
         .text(d => "R " + d)
         .attr("x", (d, i) => (d - 165) * barWidth + barWidth / 2)
         .attr("y", 270)
@@ -552,7 +573,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
         .data(histMarker)
         .enter()
         .append("text")
-        .attr("class", "hist-markers")
+        .attr("class", "histDisappear")
         .text(d => "D " + (435 - d))
         .attr("x", (d, i) => (d - 165) * barWidth + barWidth / 2)
         .attr("y", 290)
@@ -571,61 +592,71 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
         .attr("height", d => yHistogram(d.occ))
         .attr("stroke", "white")
         .attr("fill", d => d.rep > 217 ? color(100) : color(0))
+
+    hist.selectAll("re")
+        .data(histogram)
+        .enter()
+        .append("rect")
+        .attr("x", (d, i) => (d.rep - 165) * barWidth)
+        .attr("y", 0)
+        .attr("width", barWidth)
+        .attr("height", 250)
+        .style("fill", "none")
+        .style("pointer-events", "all")
         .on('mouseover', function (d) {
 
-            d3.selectAll(".hist-markers").style("display", "none");
-            d3.selectAll(".line218").attr("display", "none")
+            d3.selectAll(".histDisappear").style("display", "none");
 
-            tool_tip.show()
-                .offset([-100, -50]);
-            var tipSVG = d3.select("#tipDiv")
-                .append("svg")
-                .attr("width", 100)
-                .attr("height", 100)
-                ;
 
-            tipSVG.append("text")
+
+            hist.append("text")
+                .attr("class", "histData")
                 .text(nf(d.occ) + "%")
-                .attr("y", 20)
-                .attr("x", 50)
+                .attr("x", (d.rep - 165) * barWidth)
+                .attr("y", 0)
                 .style("font-weight", "500")
                 .style("font-size", "20")
                 .attr("text-anchor", "middle")
                 .attr("fill", "black")
 
-            tipSVG.append("text")
-                .text("R " + d.rep)
-                .attr("y", 40)
-                .attr("x", 50)
+            hist.append("text")
+                .attr("class", "histData")
+                .text(d.rep)
+                .attr("x", (d.rep - 165) * barWidth)
+                .attr("y", d.rep > 217 ? 20 : 40)
                 .style("font-weight", "500")
                 .style("font-size", "20")
                 .attr("text-anchor", "middle")
                 .attr("fill", color(100))
 
-            tipSVG.append("text")
-                .text("D " + d.dem)
-                .attr("y", 60)
-                .attr("x", 50)
+            hist.append("text")
+                .attr("class", "histData")
+                .text(d.dem)
+                .attr("x", (d.rep - 165) * barWidth)
+                .attr("y", d.dem > 217 ? 20 : 40)
                 .style("font-weight", "500")
                 .style("font-size", "20")
                 .attr("text-anchor", "middle")
                 .attr("fill", color(0))
 
 
+
+
         })
         .on('mouseout',
             function (d) {
-                d3.selectAll(".hist-markers").style("display", "block")
+                d3.selectAll(".histDisappear").style("display", "block")
+                d3.selectAll(".histData").remove()
 
 
                 tool_tip.hide()
             });
 
     hist.append("line")
-        .attr("class", "line218")
+        .attr("class", "histDisappear")
         .attr("x1", (218 - 165) * barWidth)
         .attr("x2", (218 - 165) * barWidth)
-        .attr("y1", 40)
+        .attr("y1", 250-yHistogram(4))
         .attr("y2", 260)
         .attr("stroke", "black")
 
