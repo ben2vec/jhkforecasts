@@ -42,10 +42,11 @@ var forecasters = [
         "label": "CNalysis"
     },
 ]
+var windowWidth = window.innerWidth
 var boxmap = d3.select("#boxmap").append("svg")
-    .attr("viewBox", "50 0 1210 650")
+    .attr("viewBox", windowWidth > 600 ? "0 0 1310 750" : "0 0 1110 750")
     .append("g")
-    .attr("transform", "translate(100,-50)")
+    .attr("transform", windowWidth > 600 ? "translate(100,50)" : "translate(00,50)")
 
 var tool_tip = d3.tip()
     .offset([-200, -87.5])
@@ -56,13 +57,14 @@ boxmap.call(tool_tip);
 var color = d3.scaleLinear()
     .domain([0, 50, 100])
     .range(["#0091FF", "white", "#FF6060"])
-
+var colorSpecial = d3.scaleLinear()
+    .domain([0, 100])
+    .range([-5, 105])
 var colors = [color(100), color(0)]
-
+var wf = d3.format(".0f")
 var nf = d3.format(".1f")
 var dp = d3.timeParse("%m/%d/%y")
 var ratings_colors = [
-    { rating: "Uncontested D", color: color(-5), rating_num: 0, opacity: 1 },
     { rating: "Solid D", color: color(-5), rating_num: 0, opacity: 1 },
     { rating: "Likely D", color: color(15), rating_num: 15, opacity: 1 },
     { rating: "Lean D", color: color(30), rating_num: 30, opacity: 1 },
@@ -72,8 +74,8 @@ var ratings_colors = [
     { rating: "Lean R", color: color(70), rating_num: 70, opacity: 3 },
     { rating: "Likely R", color: color(85), rating_num: 85, opacity: 7 },
     { rating: "Solid R", color: color(105), rating_num: 100, opacity: 1 },
-    { rating: "Uncontested R", color: color(105), rating_num: 100, opacity: 1 },
 ]
+console.log(ratings_colors)
 var ratings = ratings_colors.map(d => {
     return d.rating
 })
@@ -152,35 +154,94 @@ function ready(error, inputData, grid, data, leanTossup) {
         inputData.forEach((d, i) => {
             var rating = d[shorthand]
             var ratingValue = typeof rating == "number" ? rating : ratingValueScale[ratings.indexOf(rating)]
-            ratingS.push({ state: d.state, seat: d.seat, district: d.id, rating: rating, ratingValue: ratingValue })
+            var ratingType = typeof rating == "string" ? rating : rating > 90 ? "Solid R" : rating > 80 ? "Likely R" : rating > 60 ? "Lean R" : rating > 55 ? "Tilt R" : rating > 45 ? "Tossup" : rating > 40 ? "Tilt D" : rating > 20 ? "Lean D" : rating > 10 ? "Likely D" : "Solid D"
+            ratingS.push({ state: d.state, seat: d.seat, district: d.id, rating: rating, ratingValue: ratingValue, ratingType: ratingType })
         })
         d.ratings = ratingS
     })
+    forecasters.forEach((d, i) => {
+        var ratingS = d.ratings
+        var seats = []
+        ratings.forEach((d, i) => {
+            var rating = d
+            var seatsN = ratingS.filter(d => d.ratingType == rating).length
+            seats.push({ rating: rating, seats: seatsN })
+        })
+        seats.forEach((d, i) => {
+            d.prevseats = i == 0 ? 0 : i == 1 ? seats[i - 1].seats : (seats[i - 1].seats + seats[i - 1].prevseats)
+        })
+        d.seats = seats
+    })
+
 
     console.log(forecasters)
     update("jhk")
     function update(input) {
         var forecast = forecasters.filter(d => d.shorthand == input)[0]
         var forecastRatings = forecast.ratings
-        console.log(grid)
+        var forecastSeats = forecast.seats
         var forecastMap = forecastRatings
+        var gopSeats = d3.sum(forecastSeats.slice(5, 9), d => d.seats)
+        var demSeats = d3.sum(forecastSeats.slice(0, 4), d => d.seats)
         var stateLabels = grid.filter(d => d.label != "")
         forecastMap.forEach((d, i) => {
             var district = d.district
-            console.log(district)
             d.column = +grid.filter(d => d.district == district)[0].column
             d.row = +grid.filter(d => d.district == district)[0].row
         })
-        console.log(forecastMap)
+        console.log(demSeats)
 
-        boxmap.append("rect")
+        d3.selectAll(".change").remove()
+
+        boxmap.append("line")
+            .attr("class", "change")
+            .attr("x1", d => (1110 / 435) * 217.5)
+            .attr("x2", d => (1110 / 435) * 217.5)
+            .attr("y1", 0)
+            .attr("y2", 60)
+            .attr("stroke", "gray")
+
+        boxmap.selectAll("g")
+            .data(forecastSeats)
+            .enter()
+            .append("rect")
+            .attr("class", "change")
+            .attr("x", d => (1110 / 435) * d.prevseats)
+            .attr("y", 10)
+            .attr("width", d => (1110 / 435) * d.seats)
+            .attr("height", 40)
+            .attr("fill", (d, i) => ratings_colors(d.rating))
+
+        boxmap.selectAll("g")
+            .data(forecastSeats)
+            .enter()
+            .append("text")
+            .attr("class", "change")
+            .text(d => d.seats > 5 ? d.seats : "")
+            .attr("x", d => (1110 / 435) * d.prevseats + (((1110 / 435) * d.seats) / 2))
+            .attr("y", 30)
+            .attr("dominant-baseline", "central")
+            .attr("text-anchor", "middle")
+
+
+
+        boxmap.append("text")
+            .attr("class", "change")
+            .text("Gop " + gopSeats)
+            .attr("x", 1110)
+            .attr("y", -5)
+            .attr("dominant-baseline", "central")
+            .attr("text-anchor", "end")
+            .attr("font-size", 30)
+
+        boxmap.append("text")
+            .attr("class", "change")
+            .text("DEM " + demSeats)
             .attr("x", 0)
-            .attr("y", 0)
-            .attr("width", 1000)
-            .attr("height", 1000)
-            .attr("ry", 5)
-            .attr("stroke", "white")
-            .attr("fill", "white")
+            .attr("y", -5)
+            .attr("dominant-baseline", "central")
+            .attr("text-anchor", "start")
+            .attr("font-size", 30)
 
         var pct = [50, 60, 70, 80, 90, 100]
 
@@ -189,6 +250,7 @@ function ready(error, inputData, grid, data, leanTossup) {
             .data(pct)
             .enter()
             .append("rect")
+            .attr("class", "change")
             .attr("x", (d, i) => i * 20 + 900)
             .attr("y", (d, i) => 500)
             .attr("width", 20)
@@ -197,13 +259,12 @@ function ready(error, inputData, grid, data, leanTossup) {
             .attr("stroke", "white")
             .attr("fill", d => color(d))
 
-        var pct = [50, 60, 70, 80, 90, 100]
-
 
         boxmap.selectAll("grid")
             .data(pct)
             .enter()
             .append("rect")
+            .attr("class", "change")
             .attr("x", (d, i) => i * 20 + 900)
             .attr("y", (d, i) => 500)
             .attr("width", 20)
@@ -214,6 +275,7 @@ function ready(error, inputData, grid, data, leanTossup) {
 
 
         boxmap.append("rect")
+            .attr("class", "change")
             .attr("x", 900)
             .attr("y", 570)
             .attr("width", 20)
@@ -222,7 +284,9 @@ function ready(error, inputData, grid, data, leanTossup) {
             .attr("stroke", "black")
             .attr("fill", "white")
 
+
         boxmap.append("text")
+            .attr("class", "change")
             .text("Close Race")
             .attr("x", 900)
             .attr("y", 600)
@@ -236,6 +300,7 @@ function ready(error, inputData, grid, data, leanTossup) {
             .data(pct)
             .enter()
             .append("rect")
+            .attr("class", "change")
             .attr("x", (d, i) => i * 20 + 900)
             .attr("y", (d, i) => 520)
             .attr("width", 20)
@@ -248,6 +313,7 @@ function ready(error, inputData, grid, data, leanTossup) {
             .data(pct)
             .enter()
             .append("text")
+            .attr("class", "change")
             .text(d => d)
             .attr("x", (d, i) => i * 20 + 910)
             .attr("y", (d, i) => 490)
@@ -259,6 +325,7 @@ function ready(error, inputData, grid, data, leanTossup) {
 
         boxmap.append("text")
             .text("REP")
+            .attr("class", "change")
             .attr("x", (d, i) => 1025)
             .attr("y", (d, i) => 510)
             .attr("dominant-baseline", "central")
@@ -269,6 +336,7 @@ function ready(error, inputData, grid, data, leanTossup) {
 
         boxmap.append("text")
             .text("DEM")
+            .attr("class", "change")
             .attr("x", (d, i) => 1025)
             .attr("y", (d, i) => 530)
             .attr("dominant-baseline", "central")
@@ -283,7 +351,7 @@ function ready(error, inputData, grid, data, leanTossup) {
             .data(forecastMap)
             .enter()
             .append("rect")
-            .attr("class", "gridDistricts")
+            .attr("class", "gridDistricts change")
             .attr("id", d => d.district + "grid")
             .attr("x", d => (d.column) * 20)
             .attr("y", d => (d.row) * 20)
@@ -297,7 +365,7 @@ function ready(error, inputData, grid, data, leanTossup) {
             .data(stateLabels)
             .enter()
             .append("text")
-            .attr("class", "gridLabels")
+            .attr("class", "gridLabels change")
             .text(d => d.label)
             .attr("x", d => (+d.column) * 20 + 10)
             .attr("y", d => (+d.row) * 20 + 10)
@@ -311,13 +379,13 @@ function ready(error, inputData, grid, data, leanTossup) {
             .data(forecastMap)
             .enter()
             .append("rect")
-            .attr("class", "statesover")
+            .attr("class", "statesover change")
             .attr("x", d => (+d.column) * 20)
             .attr("y", d => (+d.row) * 20)
             .attr("width", 20)
             .attr("height", 20)
             .attr("ry", 5)
-            .attr("stroke", d => Math.abs(d.ratingValue - 50) < 25 ? "black" : "none")
+            .attr("stroke", d => Math.abs(d.ratingValue - 50) < 30 ? "black" : "none")
             .attr("stroke-width", 1.5)
             .on("click", d => {
                 var inputvalue = d.district
@@ -416,6 +484,8 @@ function ready(error, inputData, grid, data, leanTossup) {
         .style("width", "100%")
 
     var header = table.append("thead").append("tr")
+        .style("border-bottom", "black 1px solid")
+
     var demScale = d3.scaleLinear()
         .domain([0, 100])
         .range(["white", color(0)])
@@ -429,7 +499,7 @@ function ready(error, inputData, grid, data, leanTossup) {
         .style("text-align", "left")
         .style("width", "30%")
         .append("a")
-        .attr("href","#dataTable")
+        .attr("href", "#finaldiv")
         .append("h1")
         .text("DISTRICT (BACK TO TOP)")
         .style("font-size", "1.5vw")
@@ -454,11 +524,12 @@ function ready(error, inputData, grid, data, leanTossup) {
         .style("font-family", "sf-mono")
 
     var tbody = table.append("tbody")
-
+    inputData.sort((a, b) => Math.abs(a.jhk - 50) - Math.abs(b.jhk - 50))
     inputData.forEach((d, i) => {
         var district = d.id
         tbody.append("tr")
             .attr("id", "district" + district)
+            .style("border-bottom", "lightgray 1px solid")
 
         d3.select("#" + "district" + district)
             .append("td")
@@ -475,8 +546,8 @@ function ready(error, inputData, grid, data, leanTossup) {
                 .append("td")
                 .style("text-align", "center")
                 .style("width", (60 / forecasters.length) + "%")
-                .style("background-color", typeof d[shorthand] == "number" ? color(d[shorthand]) : colorsratings[ratings.indexOf(d[shorthand])])
-                .text(typeof d[shorthand] == "number" ? nf(d[shorthand]) : d[shorthand].split(" ")[0].toUpperCase())
+                .style("background-color", typeof d[shorthand] == "number" ? color(colorSpecial(d[shorthand])) : colorsratings[ratings.indexOf(d[shorthand])])
+                .text(typeof d[shorthand] == "number" ? wf(Math.abs(d[shorthand] - 50) + 50) : d[shorthand].split(" ")[0].toUpperCase())
                 .style("font-size", "1.5vw")
                 .style("font-weight", 100)
                 .style("font-family", "sf-mono")
@@ -484,9 +555,91 @@ function ready(error, inputData, grid, data, leanTossup) {
 
     })
 
+    var fct = d3.select("#fct").append("svg").attr("viewBox", "0 -50 1000 700")
+    fct.append("text")
+    .text("218")
+    .attr("x", 500)
+    .attr("y", 70)
+    .attr("dominant-baseline", "central")
+    .attr("text-anchor", "middle")
+    .style("font-weight",100)
+
+    forecasters.forEach((d, j) => {
+        var forecast = d
+        var forecastRatings = forecast.ratings
+        var forecastSeats = forecast.seats
+        var gopSeats = d3.sum(forecastSeats.slice(5, 9), d => d.seats)
+        var demSeats = d3.sum(forecastSeats.slice(0, 4), d => d.seats)
+        fct.append("line")
+            .attr("x1", d => (1000 / 435) * 217.5)
+            .attr("x2", d => (1000 / 435) * 217.5)
+            .attr("y1", 10 + j * 100)
+            .attr("y2", 60 + j * 100)
+            .attr("stroke", "gray")
+
+        fct.selectAll("g")
+            .data(forecastSeats)
+            .enter()
+            .append("rect")
+            .attr("x", d => (1000 / 435) * d.prevseats)
+            .attr("y", 10 + j * 100)
+            .attr("width", d => (1000 / 435) * d.seats)
+            .attr("height", 40)
+            .attr("fill", (d, i) => ratings_colors(d.rating))
+
+        fct.selectAll("g")
+            .data(forecastSeats)
+            .enter()
+            .append("text")
+            .text(d => d.seats > 5 ? d.seats : "")
+            .attr("x", d => (1000 / 435) * d.prevseats + (((1000 / 435) * d.seats) / 2))
+            .attr("y", 30 + j * 100)
+            .attr("dominant-baseline", "central")
+            .attr("text-anchor", "middle")
+
+
+
+        fct.append("text")
+            .text("Gop " + gopSeats)
+            .attr("x", 1000)
+            .attr("y", -5 + j * 100)
+            .attr("dominant-baseline", "central")
+            .attr("text-anchor", "end")
+            .attr("font-size", 25)
+            .style("font-weight",100)
+
+            fct.append("text")
+            .text(forecast.forecast)
+            .attr("x", 500)
+            .attr("y", -5 + j * 100)
+            .attr("dominant-baseline", "central")
+            .attr("text-anchor", "middle")
+            .attr("font-size", 17)
+            .style("font-weight",100)
+
+
+        fct.append("text")
+            .text("DEM " + demSeats)
+            .attr("x", 0)
+            .attr("y", -5 + j * 100)
+            .attr("dominant-baseline", "central")
+            .attr("text-anchor", "start")
+            .attr("font-size", 25)
+            .style("font-weight",100)
+
+    })
     var selectbox = d3.select("#selectbox")
         .on("change", function () {
             update(this.value)
+        })
+
+    var searchBar = d3.select("#searchBar")
+        .on("change", d => {
+            var inputvalue = d3.select("#searchBar").property("value").toUpperCase()
+            console.log(inputvalue)
+            window.location.replace("#district" + inputvalue)
+            window.scrollBy(0, -125)
+
         })
 
 

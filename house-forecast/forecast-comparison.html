@@ -84,6 +84,7 @@
             background: white;
             position: sticky;
             top: 0;
+            border-bottom: black solid 1px;
         }
 
         .backTop:hover {
@@ -93,6 +94,10 @@
         td {
             height: 4vw;
             vertical-align: middle;
+        }
+
+        table {
+            border-collapse: collapse;
         }
     </style>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -304,7 +309,9 @@
         </a>
     </div>
     <div style="text-align:center;">
-        <select style="margin-top: 0px;padding-left: 5px;" class="selectbox" id="selectbox">
+        <select
+            style="margin-top: 0px;padding: 5px;font-size: 2vw;font-family: sf-mono;text-transform: uppercase;font-weight: 100;"
+            id="selectbox">
             <option value="jhk">JHK Forecasts</option>
             <optgroup label="Experts">
                 <option value="cook">Cook Political Report</option>
@@ -320,16 +327,25 @@
         </select>
     </div>
     <div class="special" id="boxmap"></div>
+
+
+    <div class="special" id="fct"></div>
     <div class="special" style="text-align:center">
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <ins class="adsbygoogle" style="display:block;margin-right:auto;margin-left: auto" data-ad-format="fluid"
-            data-ad-layout-key="-h2+d+5c-9-3e" data-ad-client="ca-pub-8025120308040073" data-ad-slot="8603820464"></ins>
+        <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-gw-3+1f-3d+2z"
+            data-ad-client="ca-pub-8025120308040073" data-ad-slot="6591392802"></ins>
         <script>
             (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
     </div>
-    <div class="special" id="dataTable"></div>
-    <script src="forecast-comparison.js"></script>
+    <div class="special" id="finaldiv">
+        <div style="top:0;position:sticky;background-color: white;"> <input id="searchBar" type="text"
+                placeholder="TYPE DISTRICT ex. IDA00 or TX32">
+
+            <div id="dataTable"></div>
+        </div>
+
+        <script src="forecast-comparison.js"></script>
 
 </body>
 
