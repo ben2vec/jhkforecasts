@@ -267,11 +267,7 @@ permalink: /404.html
 
 
 		}
-		var rect = cant.append("rect")
-		.attr("x",width*.2)
-		.attr("y",height*.5)
-		.attr("width",450)
-		.attr("height",height*.1)
+		
 		repeat()
 		function repeat() {
 			background.style("background-color", "#060245")
@@ -282,30 +278,19 @@ permalink: /404.html
 				.duration(10000)
 				.style("background-color", "#060245")
 				.on("end", repeat)
-				rect.style("fill", "#060245")
-				.transition()
-				.duration(10000)
-				.style("fill", "#180245")
-				.transition()
-				.duration(10000)
-				.style("fill", "#060245")
-				.on("end", repeat)
+				
 		}
 		cant.append("text")
 		.text("Nothing to see here")
-		.attr("x",width*.25)
-		.attr("y",height*.55)
+		.attr("x",4)
+		.attr("y",height*.45)
 		.attr("fill","white")
 		.style("font-family","sf-mono")
-		.style("font-size",30)
-		.style("stroke","white")
+		.style("font-size","7vw")
+		.style("stroke","#180245")
+        .style("font-weight",500)
+        .style("stroke-width","2")
 
-		cant.append("image")
-		.attr("href","rocket-01.svg")
-		.attr("height",200)
-		.attr("width",100)
-		.attr("x",width*.8)
-		.attr("y",height*.6)
 
 	</script>
 
