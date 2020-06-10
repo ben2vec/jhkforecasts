@@ -529,7 +529,7 @@ function ready(error, inputData, grid, data, leanTossup) {
         var district = d.id
         tbody.append("tr")
             .attr("id", "district" + district)
-            .style("border-bottom", "lightgray 1px solid")
+            .style("border-bottom", "lightgray .01vw solid")
 
         d3.select("#" + "district" + district)
             .append("td")
