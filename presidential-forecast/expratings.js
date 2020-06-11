@@ -68,6 +68,13 @@ var forecasters = [
         "type": "newcomer",
         "shorthand": "pluralvote",
         "forecastLabel": "Plural Vote"
+    },
+    {
+        "forecast": "CNN",
+        "link": "https://www.cnn.com/election/2020/electoral-college-interactive-maps",
+        "type": "expert",
+        "shorthand": "cnn",
+        "forecastLabel": "CNN"
     }
 ]
 var expert = forecasters.filter(d => d.type == "expert")
@@ -179,7 +186,8 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                         sabato: d.sabato,
                         cnalysis: d.cnanalysis,
                         leantoss: +leantoss[i].gop_win,
-                        pluralvote: pluralvote[i].win
+                        pluralvote: pluralvote[i].win,
+                        cnn:d.cnn
                     }
                 })
                 var sd2 = forecasts_rating
