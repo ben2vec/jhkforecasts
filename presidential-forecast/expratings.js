@@ -783,8 +783,8 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                 var ex = []
                 var New = []
                 tabledata.forEach(function (d, i) {
-                    all.push([d.state, d.ev, d.jhk, d.bitecofer, d.cook, d.inside, d.politico, d.sabato, d.cnalysis, d.leantoss, d.pluralvote]);
-                    ex.push([d.state, d.ev, d.jhk, d.cook, d.inside, d.politico, d.sabato]);
+                    all.push([d.state, d.ev, d.jhk, d.bitecofer, d.cook, d.inside, d.politico, d.sabato, d.cnalysis, d.leantoss, d.pluralvote,d.cnn]);
+                    ex.push([d.state, d.ev, d.jhk, d.cook, d.inside, d.politico, d.sabato,d.cnn]);
                     New.push([d.state, d.ev, d.jhk, d.bitecofer, d.cnalysis, d.leantoss, d.pluralvote]);
                 })
                 var allnames = ["State", "Electoral Votes"]
