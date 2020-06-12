@@ -826,15 +826,20 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
         .on("click", function () {
           update("win", 500)
         })
+        .style("cursor","pointer")
 
       var votebutton = d3.select("#votebu")
         .on("click", function () {
           update("vote", 500)
         })
+        .style("cursor","pointer")
+
       var evbutton = d3.select("#evbutton")
         .on("click", function () {
           update("ev", 500)
         })
+        .style("cursor","pointer")
+
     }
 
     var overview_data = newest_data.filter(d => d.state == "US")
@@ -1608,6 +1613,8 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
           show_more(2900, marginSort, tippingPointSort)
 
         })
+        .style("cursor","pointer")
+
 
       var less = d3.select("#less")
         .on("click", function (d, i) {
@@ -1616,6 +1623,8 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
           document.getElementById("less").style.display = "none"
           show_more(975, marginSort, tippingPointSort)
         })
+        .style("cursor","pointer")
+
     }
 
 
