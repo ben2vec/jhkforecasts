@@ -260,26 +260,6 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
         .enter().append("a").attr("href", d => "districts?district=" + d.districtID).append("path")
         .attr("d", path)
         .style("fill", (d, i) => color(d.properties.repWin))
-        .style("stroke", (d, i) => Math.abs(d.properties.repWin - 50) < 30 ? "black" : "white")
-
-
-
-    map.append("g")
-        .attr("class", "state-boundaries")
-        .selectAll("path")
-        .data(topojson.feature(us, us.objects.states).features)
-        .enter().append("path")
-        .attr("d", path)
-
-    map.append("g")
-        .attr("class", "state-boundaries")
-        .selectAll("path")
-        .data(districts)
-        .enter().append("a").attr("href", d => "districts?district=" + d.districtID).append("path")
-        .attr("d", path)
-        .style("fill", (d, i) => "none")
-        .attr("pointer-events", "all")
-        .style("stroke", (d, i) => Math.abs(d.properties.repWin - 50) < 30 ? "black" : "none")
         .on('mouseover', function (d) {
 
 
@@ -369,6 +349,18 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
 
                 tool_tip.hide()
             });
+
+
+
+    map.append("g")
+        .attr("class", "state-boundaries")
+        .selectAll("path")
+        .data(topojson.feature(us, us.objects.states).features)
+        .enter().append("path")
+        .attr("d", path)
+
+    
+        
 
     grid.forEach((d, i) => {
         var districtID = d.district
