@@ -648,7 +648,8 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       .attr("x", x(new Date(2020, 10, 3)))
       .attr("y", 10)
       .attr("font-weight", "100")
-      .attr("font-size", 20)
+      .attr("font-size", 15)
+      .attr("text-anchor","end")
 
 
 
@@ -821,12 +822,12 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
             .attr("dominant-baseline", "middle")
         }
       }
-      var winbutton = d3.select("#winbutton")
+      var winbutton = d3.select("#winbu")
         .on("click", function () {
           update("win", 500)
         })
 
-      var votebutton = d3.select("#votebutton")
+      var votebutton = d3.select("#votebu")
         .on("click", function () {
           update("vote", 500)
         })
