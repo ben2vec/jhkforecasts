@@ -21,7 +21,7 @@ var projection = d3.geoAlbersUsa()
   .translate([widthmap / 2, heightmap / 2])
   .scale([900]);
 var event_odds = [
-  { event: "hflipping a coin", odds: 50 },
+  { event: "flipping a coin", odds: 50 },
   { event: "getting a one pair", odds: 43.8 },
   { event: "NBA player makes a three", odds: 36 },
   { event: "MLB batter getting on base", odds: 31.8 },
