@@ -78,6 +78,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       d.forecast_date = dp(d.forecast_date)
       return d
     })
+    data.sort((a,b)=>a.forecast_date-b.forecast_date)
 
     var newest_update = d3.max(data, d => d.forecast_date)
 
