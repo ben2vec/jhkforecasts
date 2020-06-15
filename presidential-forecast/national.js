@@ -201,7 +201,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
 
 
         tipSVG.append("text")
-          .text(d.state)
+          .text(d.state== "District of Columbia" ? "DC" : d.state)
           .attr("y", 20)
           .attr("x", 87.5)
           .attr("fill", "#black")
@@ -366,7 +366,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
 
 
         tipSVG.append("text")
-          .text(d.properties.name)
+          .text(d.properties.name== "District of Columbia" ? "DC" : d.properties.name)
           .attr("y", 20)
           .attr("x", 87.5)
           .attr("fill", "#black")
@@ -1014,7 +1014,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
 
 
         tipSVG.append("text")
-          .text(d.state)
+          .text(d.state== "District of Columbia" ? "DC" : d.state)
           .attr("y", 20)
           .attr("x", 87.5)
           .attr("fill", "#black")
@@ -1097,7 +1097,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
 
 
         tipSVG.append("text")
-          .text(d.state)
+          .text(d.state== "District of Columbia" ? "DC" : d.state)
           .attr("y", 20)
           .attr("x", 87.5)
           .attr("fill", "#black")
@@ -1268,7 +1268,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
 
 
         tipSVG.append("text")
-          .text(d.state)
+          .text(d.state== "District of Columbia" ? "DC" : d.state)
           .attr("y", 20)
           .attr("x", 87.5)
           .attr("fill", "#black")

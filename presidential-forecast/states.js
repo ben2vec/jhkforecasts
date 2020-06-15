@@ -1,6 +1,5 @@
 var windowWidth = window.innerWidth
 console.log(windowWidth)
-windowWidth > 600 ? d3.select("body").style("width", "85%").style("margin-left", "7.5%") : d3.select("body").style("width", "99%").style("margin-left", "0.5%")
 var colors = ["#FF0660", "#0091FF", "#FFE130"]
 var wf = d3.format(".0f")
 
@@ -74,6 +73,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
   var third_proj_vote = today[2].proj_vote
   var gop_win = today[0].win
   var dem_win = today[1].win
+  var evs = today[1].electoral_vote +" Electoral Votes"
 
 
   var odds_scale = d3.scaleLinear()
@@ -82,8 +82,9 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
 
   var upset_odds = dem_win > gop_win ? gop_win : dem_win
 
-  document.getElementById("state").innerHTML = key_state
-  document.getElementById("state").style.backgroundColor = gop_win > dem_win ? colors[0] : colors[1]
+  document.getElementById("stateComp").innerHTML = key_state
+  document.getElementById("stateComp").style.color = gop_win > dem_win ? colors[0] : colors[1]
+  document.getElementById("evComp").innerHTML = evs
 
 
   var topline = d3.select("#topline")
@@ -146,6 +147,8 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     .attr("font-size", 30)
     .style("font-weight", "100")
 
+
+
   topline.append("text")
     .text("Donald Trump")
     .attr("y", 100)
@@ -206,7 +209,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
 
   var x3 = d3.scaleLinear()
     .domain([0, 100])
-    .range([100, 980])
+    .range([300, 980])
 
   var pct = [0, 25, 50, 75, 100]
 
@@ -222,52 +225,55 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     .attr("y1", 30)
     .attr("y2", 270)
     .attr("stroke", "#AFAFAF")
+    .attr("opacity", .5)
 
   vote.selectAll("lines")
     .data(pct)
     .enter()
     .append("text")
-    .text(d => d + "%")
+    .text(d => d)
     .attr("x", d => x3(d))
     .attr("y", 20)
-    .attr("fill", "#AFAFAF")
+    .attr("fill", "grey")
     .attr("text-anchor", "middle")
-    .attr("font-size", 12)
+    .attr("font-size", 14)
     .style("font-weight", "100")
 
 
 
-  vote.append("text")
-    .text(d => "?")
-    .attr("x", 57.5)
-    .attr("y", 237.5)
-    .attr("fill", colors[2])
-    .attr("text-anchor", "middle")
-    .attr("dominant-baseline", "central")
-    .attr("font-size", 60)
-    .style("font-weight", "100")
+
 
   var vote_dist = today
   vote_dist.sort((a, b) => b.proj_vote - a.proj_vote)
-  vote_dist.forEach((d, i) => {
-    var stdev = (+d.proj_vote - +d.p_10) / 1.3
-    d.p_10 = +d.proj_vote - stdev
-    d.p_90 = +d.proj_vote + stdev
-  })
+  
   console.log(vote_dist)
-  vote.append("image")
-    .attr("href", "https://jhkforecasts.com/Trump-01.png")
+  vote.append("text")
+    .text("Donald Trump")
     .attr("x", 20)
-    .attr("y", gop_proj_vote >= dem_proj_vote ? 35 : 115)
-    .attr("height", 70)
-    .attr("width", 70)
+    .attr("y", gop_proj_vote >= dem_proj_vote ? 70 : 150)
+    .attr("text-anchor", "start")
+    .attr("dominant-baseline", "central")
+    .attr("font-size", 20)
+    .style("font-weight", "100")
 
-  vote.append("image")
-    .attr("href", "https://jhkforecasts.com/Biden-01.png")
+  vote.append("text")
+    .text("other")
     .attr("x", 20)
-    .attr("y", gop_proj_vote <= dem_proj_vote ? 35 : 115)
-    .attr("height", 70)
-    .attr("width", 70)
+    .attr("y", 237.5)
+    .attr("text-anchor", "start")
+    .attr("dominant-baseline", "central")
+    .attr("font-size", 20)
+    .style("font-weight", "100")
+
+
+  vote.append("text")
+    .text("Joseph Biden")
+    .attr("x", 20)
+    .attr("y", gop_proj_vote <= dem_proj_vote ? 70 : 150)
+    .attr("text-anchor", "start")
+    .attr("dominant-baseline", "central")
+    .attr("font-size", 20)
+    .style("font-weight", "100")
 
   vote.selectAll("rects")
     .data(vote_dist)
@@ -278,19 +284,32 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     .attr("y", (d, i) => 30 + 80 * i)
     .attr("height", 80)
     .attr("width", d => x3(d.p_90) - x3(d.p_10))
-    .attr("opacity", .5)
+    .attr("opacity", .4)
     .attr("ry", 10)
+
+  vote.append("text")
+    .attr("fill", gop_proj_vote <= dem_proj_vote?colors[1]:colors[0])
+    .attr("x", d => 290)
+    .attr("y", (d, i) => 70 + 80 * i)
+    .text(d => (gop_proj_vote <= dem_proj_vote?"D+":"R+")+ nf(vote_dist[0].proj_vote-vote_dist[1].proj_vote))
+    .attr("dominant-baseline", "central")
+    .style("font-weight", 500)
+    .attr("text-anchor", "end")
+    .style("font-size", 20)
+
+  
 
   vote.selectAll("rects")
     .data(vote_dist)
     .enter()
     .append("text")
     .attr("fill", (d, i) => "black")
-    .attr("x", d => x3(d.proj_vote) + 5)
-    .attr("y", (d, i) => 70 + 80 * i)
+    .attr("x", d => x3(d.proj_vote))
+    .attr("y", (d, i) => 55 + 80 * i)
     .text(d => nf(d.proj_vote))
     .attr("dominant-baseline", "central")
-    .attr("font-weight", 500)
+    .style("font-weight", 100)
+    .attr("text-anchor", "middle")
 
 
 
@@ -298,30 +317,19 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
   vote.selectAll("rects")
     .data(vote_dist)
     .enter()
-    .append("line")
-    .attr("stroke", (d, i) => cand_colors(d.party))
-    .attr("stroke-width", 2)
-    .attr("x1", d => x3(d.proj_vote))
-    .attr("x2", d => x3(d.proj_vote))
-    .attr("y1", (d, i) => 30 + 80 * i)
-    .attr("y2", (d, i) => 110 + 80 * i)
+    .append("rect")
+    .attr("fill", (d, i) => cand_colors(d.party))
+    .attr("stroke", "white")
+    .attr("stroke-width", 1)
+    .attr("x", d => x3(d.proj_vote) - 4)
+    .attr("y", (d, i) => 66 + 80 * i)
+    .attr("height", 8)
+    .attr("width", 8)
+    .attr("ry", 2)
 
-  vote.selectAll("rects")
-    .data(vote_dist)
-    .enter()
-    .append("line")
-    .attr("stroke", "black")
-    .attr("x1", d => x3(0))
-    .attr("x2", d => x3(100))
-    .attr("y1", (d, i) => 30 + 80 * i)
-    .attr("y2", (d, i) => 30 + 80 * i)
 
-  vote.append("line")
-    .attr("stroke", "black")
-    .attr("x1", d => x3(0))
-    .attr("x2", d => x3(100))
-    .attr("y1", (d, i) => 30 + 80 * 3)
-    .attr("y2", (d, i) => 30 + 80 * 3)
+
+
 
 
 
@@ -449,7 +457,8 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     .text("Nov. 3rd")
     .attr("x", x(new Date(2020, 10, 3)))
     .attr("y", 10)
-    .style("font-weight", "100")
+    .style("font-weight", "500")
+    .attr("text-anchor", "end")
 
 
 
@@ -479,7 +488,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     .attr("width", x(max_date) - margin.left)
     .attr("height", height)
 
-  var keys = ["gopwin", "demwin", "thirdwin", "gopvote", "demvote", "thirdvote", "gopev", "demev", "thirdev"]
+  var keys = ["gopwin", "demwin", "thirdwin", "gopvote", "demvote", "thirdvote"]
   update("win", 0);
 
 
@@ -618,18 +627,22 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
           .text(formatDate(d.date));
       }
     }
-    var winbutton = d3.select("#winbutton")
-      .on("click", function () {
-        update("win", 500)
-      })
 
-    var votebutton = d3.select("#votebutton")
-      .on("click", function () {
-        update("vote", 500)
-      })
-    document.getElementById("winbutton").innerHTML = "Win " + key_state
 
   }
+
+  var winB = d3.select("#winB")
+  .on("click",d=>{
+    update("win",500)
+  })
+  .text("Win "+ key_state)
+  .attr("class","button")
+
+  var voteB = d3.select("#voteB")
+  .on("click",d=>{
+    update("vote",500)
+  })
+  
 
   var keys2 = ["Fundamentals", "Polling Average", "State Similarity", "Experts Ratings"]
   var calc = d3.select("#calculation")
@@ -755,10 +768,10 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
 
   calc.append("text")
     .text("Projected Vote")
-    .attr("x", 500)
+    .attr("x", 600)
     .attr("y", 380)
     .attr("fill", "black")
-    .attr("text-anchor", "middle")
+    .attr("text-anchor", "end")
     .attr("dominant-baseline", "central")
     .attr("font-size", 25)
     .style("font-weight", "100")
@@ -997,7 +1010,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
           .text("Grade")
           .style("font-family", "sf-mono")
           .style("font-weight", 100)
-          .style("text-align", "center")
+          .style("text-align", "right")
           .attr("class", "tableFont")
 
         header.append("th").attr("class", "pollth")
@@ -1010,7 +1023,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
           .attr("class", "tableFont")
 
         header.append("th").attr("class", "pollth")
-          .style("width", "10%")
+          .style("width", "5%")
           .append("h1")
           .text("Biden")
           .style("font-family", "sf-mono")
@@ -1020,7 +1033,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
 
 
         header.append("th").attr("class", "pollth")
-          .style("width", "10%")
+          .style("width", "5%")
           .append("h1")
           .text("Trump")
           .style("font-family", "sf-mono")
@@ -1042,6 +1055,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
         finaldata.forEach((d, i) => {
           table.append("tr")
             .attr("id", "row" + i)
+            .style("height","6vw")
 
           d3.select("#" + "row" + i)
             .append("td")
@@ -1067,9 +1081,9 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
             .append("td")
             .append("h1")
             .text(timeformat(d.date))
-            .style("color", "#afafaf")
+            .style("color", "gray")
             .style("font-family", "sf-mono")
-            .style("font-weight", 500)
+            .style("font-weight", 100)
             .style("text-align", "center")
             .attr("class", "tableFont")
 
@@ -1094,6 +1108,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
             .style("font-weight", 100)
             .style("text-align", "center")
             .attr("class", "tableFont")
+            
 
           d3.select("#" + "row" + i)
             .append("td")

@@ -214,7 +214,7 @@
 	</div>
 
 
-	<h1 style="text-align: center;font-weight: 900;color: white;font-size: 5vw;" id="state"> </h1>
+	
 	<script>
 		var key_state = "Nebraska-2"
 
@@ -222,79 +222,82 @@
 
 
 
+	
+
+<div class="computer">
+	<h1 style="text-align: center;font-weight: 900;color: white;font-size: 4vw;border-bottom: black solid;float: left;"
+		v-align="bottom" id="stateComp"> </h1>
+	<h1 style="text-align: center;font-weight: 900;font-size: 4vw;border-bottom: black solid;float: right;"
+		v-align="bottom" id="evComp"> </h1>
 	<div id="topline"></div>
 	<a href="https://projects.jhkforecasts.com/presidential-forecast/">
-		<p style="font-size: 2vw;font-weight:700;text-align: center;text-decoration: underline;">Back to National
-			Forecast</p>
+		<p style="font-size: 2vw;font-weight:700;text-align: center;text-decoration: underline;">
+			<< Back to National Forecast <<</p>
 	</a>
 	<h1 style="margin-left: 2%;font-weight: 900;">Projected Vote</h1>
 	<p style="margin-left: 5%;font-weight: 500;">(80% Confidence Interval)</p>
-	<div  id="vote"></div>
-	<h1 style="margin-left: 2%;font-weight: 900;">Time Changes </h1>
-
-	<table
-	class="computer"	style="margin-left:20%;border-collapse: collapse; border: none;margin-top: 20px;text-align: center;width: 60%;margin-bottom: 20px;"
-		cellspacing="0">
-		<tbody>
-			<tr>
-				<td style="width: 33%; ">
-					<button class="btn default" style="font-size: 2vw;" id="winbutton">Win</button>
-				</td>
-				<td style="width: 33%; ">
-					<button class="btn default" style="font-size: 2vw;" id="votebutton">Projected Vote</button>
-				</td>
-
-			</tr>
-		</tbody>
-	</table>
-
-	<table
-	class="phone"	style="margin-left:20%;border-collapse: collapse; border: none;margin-top: 20px;text-align: center;width: 60%;margin-bottom: 20px;"
-		cellspacing="0">
-		<tbody>
-			<tr>
-				<td style="width: 33%; ">
-					<button class="btn default" style="font-size: 2vw;"id="winbuttonphone">Win</button>
-				</td>
-				<td style="width: 33%; ">
-					<button class="btn default"style="font-size: 2vw;" id="votebuttonphone">Projected Vote</button>
-				</td>
-
-			</tr>
-		</tbody>
-	</table><div class="computer" style="margin-top: 20px;" id="time"></div>
-	<div class="phone" style="margin-top: 20px;" id="timephone"></div>
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<ins class="adsbygoogle" style="display:block;margin-right:auto;margin-left: auto" data-ad-format="fluid"
-		data-ad-layout-key="-h2+d+5c-9-3e" data-ad-client="ca-pub-8025120308040073" data-ad-slot="8603820464"></ins>
-	<script>
-			(adsbygoogle = window.adsbygoogle || []).push({});
-	</script>
-	<h1 style="margin-left: 2%;font-weight: 900;">Vote Calculations</h1>
+	<div id="vote"></div>
 	<div style="text-align:center">
-
-		<div id="calculation"></div>
-		<h1 style="margin-left: 2%;font-weight: 900;">Recent Polls </h1>
-		<div id="bottom"></div>           
-<hr>
-		<div style="text-align:center">
-			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-			<ins class="adsbygoogle" style="display:block;margin-right:auto;margin-left: auto" data-ad-format="fluid"
-				data-ad-layout-key="-h2+d+5c-9-3e" data-ad-client="ca-pub-8025120308040073"
-				data-ad-slot="8603820464"></ins>
-			<script>
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<ins class="adsbygoogle" style="display:block;margin-right:auto;margin-left: auto" data-ad-format="fluid"
+			data-ad-layout-key="-h2+d+5c-9-3e" data-ad-client="ca-pub-8025120308040073"
+			data-ad-slot="8603820464"></ins>
+		<script>
 				(adsbygoogle = window.adsbygoogle || []).push({});
-			</script>
-			<div style="text-align:center">
-				<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-				<ins class="adsbygoogle" style="display:block;margin-right:auto;margin-left: auto"
-					data-ad-format="fluid" data-ad-layout-key="-h2+d+5c-9-3e" data-ad-client="ca-pub-8025120308040073"
-					data-ad-slot="8603820464"></ins>
-				<script>
-					(adsbygoogle = window.adsbygoogle || []).push({});
-				</script>
-				<script src="states.js"></script>
-				<script src="statesphone.js"></script>
+		</script>
+	</div>
+	<h1 style="margin-left: 2%;font-weight: 900;">Time Changes </h1>
+	<div style="text-align:center">
+		<table style="border-collapse: collapse;margin-top: 20px;margin-left: 5%;">
+			<tbody>
+				<tr>
+					<td style="border: black solid 1px;" id="winB">
+						<h1 class="button"></h1>
+					</td>
+					<td style="border: black solid 1px;" id="voteB">
+						<h1 class="button">Projected Vote</h1>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div style="margin-top: 20px;" id="time"></div>
+	<h1 style="margin-left: 2%;font-weight: 900;">Projected Vote</h1>
+	<div id="calculation"></div>
+	<h1 style="margin-left: 2%;font-weight: 900;">Recent Polls </h1>
+	<div id="bottom"></div>
+</div>
+<div class="phone">
+	<h1 style="text-align: center;font-weight: 900;color: white;font-size: 8vw;border-bottom: black solid 1px;"
+		id="statePhone"></h1>
+	<h2 style="text-align: center;font-size:5vw;font-weight: 500;" id="evPhone"> </h2>
+	<div id="toplinephone"></div>
+	<h1 style="margin-left: 2%;font-weight: 900;">Projected Vote</h1>
+	<p style="margin-left: 5%;font-weight: 500;">(80% Confidence Interval)</p>
+	<div id="votephone"></div>
+	<div style="text-align:center">
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<ins class="adsbygoogle" style="display:block;margin-right:auto;margin-left: auto;width: 80%;margin-left: 10%;" data-ad-format="fluid"
+			data-ad-layout-key="-h2+d+5c-9-3e" data-ad-client="ca-pub-8025120308040073"
+			data-ad-slot="8603820464"></ins>
+		<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+	<div id="timephone"></div>
+	<h1 style="margin-left: 2%;font-weight: 900;">Vote Calculations</h1>
+	<div id="calcPhone"></div>
+	<div id="bottomPhone"></div>
+</div>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block;margin-right:auto;margin-left: auto;width: 80%;margin-left: 10%;" data-ad-format="fluid"
+	data-ad-layout-key="-h2+d+5c-9-3e" data-ad-client="ca-pub-8025120308040073"
+	data-ad-slot="8603820464"></ins>
+<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script src="states.js"></script>
+<script src="statesphone.js"></script>
 </body>
 
 </html>
