@@ -1093,8 +1093,9 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", input_data => {
                         .attr("y", (d, i) => 55 + i * 50)
                         .attr("height", 40)
                         .attr("width", d =>
-                            +d.margin > 0 ? +d.margin - +d.stdev > 0 ?
-                                x2(+d.margin + +d.stdev) - x2(+d.margin - +d.stdev) : x2(+d.margin + +d.stdev) - x2(0) : Math.abs(x2(d.margin + d.stdev) - x2(0))
+                            +d.margin > 0 ? 
+                            (+d.margin - +d.stdev > 0 ? x2(+d.margin + +d.stdev) - x2(+d.margin - +d.stdev) : x2(+d.margin + +d.stdev) - x2(0)) 
+                            : +d.margin + +d.stdev > 0 ?Math.abs(x2(d.margin + d.stdev) - x2(0)):0
                         )
                         .attr("fill", colors[0])
                         .attr("opacity", .5)
