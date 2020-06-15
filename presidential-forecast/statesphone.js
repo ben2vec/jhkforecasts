@@ -203,7 +203,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     .style("font-size", 35)
     .style("font-weight", 500)
     .style("text-anchor", "middle")
-    .style("fill", (today[0].party == "dem" ? colors[1] : colors[2]))
+    .style("fill", (today[0].party == "dem" ? colors[1] : colors[0]))
 
   votePhone.selectAll("c")
     .data(today)
@@ -283,7 +283,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
 
     d3.select("#timephone").append("h1").text("Time Changes").style("font-weight",900).style("margin-left","2%")
 
-  var tableButton = d3.select("#timephone").append("table").style("border-collapse","collapse")
+  var tableButton = d3.select("#timephone").append("table").style("border-collapse","collapse").style("margin-bottom","10px")
 
   tableButton.append("tr").attr("id","phoneTimeButtons")
 
@@ -642,7 +642,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     .data(dem_data)
     .enter()
     .append("text")
-    .text((d, i) => d - gop_data[i] == 0 ? "-" : d - gop_data[i] > 0 ? "D+" + nf(d - gop_data[i]) : "R+" + nf(-d - gop_data[i]))
+    .text((d, i) => d - gop_data[i] == 0 ? "-" : d - gop_data[i] > 0 ? "D+" + nf(d - gop_data[i]) : "R+" + -nf(d - gop_data[i]))
     .attr("x", 875)
     .attr("y", (d, i) => 262.5 + i * 125)
     .attr("fill",(d,i)=> d - gop_data[i] == 0 ? "black" : d - gop_data[i] > 0 ? colors[1] : colors[0])
