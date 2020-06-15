@@ -281,6 +281,26 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     wholevalue = d3.format(".0f"),
     onevalue = d3.format(".1f")
 
+    d3.select("#timephone").append("h1").text("Time Changes").style("font-weight",900).style("margin-left","2%")
+
+  var tableButton = d3.select("#timephone").append("table").style("border-collapse","collapse")
+
+  tableButton.append("tr").attr("id","phoneTimeButtons")
+
+  d3.select("#phoneTimeButtons").append("td")
+  .attr("id","stateWinButtonPhone")
+  .style("border","black solid 1px")
+  .append("h1")
+  .attr("class","button")
+  .text("win "+key_state)
+
+  d3.select("#phoneTimeButtons").append("td")
+  .attr("id","stateVoteButtonPhone")
+  .style("border","black solid 1px")
+  .append("h1")
+  .attr("class","button")
+  .text("Projected Vote")
+
   var timephone = d3.select("#timephone").append("svg")
     .attr("viewBox", "0 0 1100 800")
     .append('g')
@@ -368,10 +388,10 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     .attr("height", heightphone)
 
   var keys = ["gopwin", "demwin", "thirdwin", "gopvote", "demvote", "thirdvote", "gopev", "demev", "thirdev"]
-  update("win", 0);
+  updatePhone("win", 0);
 
 
-  function update(input, speed) {
+  function updatePhone(input, speed) {
 
     var copy = keys.filter(f => f.includes(input))
     var cities = copy.map(function (id) {
@@ -506,12 +526,26 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
           .attr("y", 10)
           .style("font-size", 35)
           .style("font-weight", "100")
-          .style("text-anchor", "middle")
+          .style("text-anchor", "end")
           .text(formatDate(d.date));
       }
     }
 
   }
+
+  var windbj = d3.select("#stateWinButtonPhone")
+  .style("cursor","pointer")
+  .on("click",()=>{
+    updatePhone("win",500)
+  })
+
+  var windbjd = d3.select("#stateVoteButtonPhone")
+  .style("cursor","pointer")
+  .on("click",()=>{
+    updatePhone("vote",500)
+  })
+
+
 
   var keystwo = ["Fundamentals", "Polling Average", "State Similarity", "Experts Ratings", "Projected Vote"]
   var calc = d3.select("#calcPhone")
