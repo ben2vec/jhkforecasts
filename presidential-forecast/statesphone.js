@@ -68,7 +68,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
   var third_proj_vote = today[2].proj_vote
   var gop_win = today[0].win
   var dem_win = today[1].win
-  var evs = today[1].electoral_vote + " Elecoral Votes"
+  var evs = today[1].electoral_vote + " Electoral Votes"
 
   console.log(today)
   var odds_scale = d3.scaleLinear()
@@ -281,6 +281,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     wholevalue = d3.format(".0f"),
     onevalue = d3.format(".1f")
 
+    d3.select("#timephone").append("h1").text("<<Back To National Forecast<<").style("font-weight",900).style("text-align","center")
     d3.select("#timephone").append("h1").text("Time Changes").style("font-weight",900).style("margin-left","2%")
 
   var tableButton = d3.select("#timephone").append("table").style("border-collapse","collapse").style("margin-bottom","10px")
