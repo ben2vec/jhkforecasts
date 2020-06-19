@@ -246,6 +246,11 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
   var vote_dist = today
   vote_dist.sort((a, b) => b.proj_vote - a.proj_vote)
   
+  vote_dist.forEach((d,i)=>{
+    d.p_10 = d.proj_vote - ((d.proj_vote-d.p_10)*.85)
+    d.p_90 = d.proj_vote - ((d.proj_vote-d.p_90)*.85)
+  })
+
   console.log(vote_dist)
   vote.append("text")
     .text("Donald Trump")
