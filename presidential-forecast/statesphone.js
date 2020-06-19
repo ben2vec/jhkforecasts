@@ -281,7 +281,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     wholevalue = d3.format(".0f"),
     onevalue = d3.format(".1f")
 
-    d3.select("#timephone").append("h1").text("<<Back To National Forecast<<").style("font-weight",900).style("text-align","center")
+    d3.select("#timephone").append("a").attr("href","https://projects.jhkforecasts.com/presidential-forecast/").append("h1").text("<<Back To National Forecast<<").style("font-weight",900).style("text-align","center")
     d3.select("#timephone").append("h1").text("Time Changes").style("font-weight",900).style("margin-left","2%")
 
   var tableButton = d3.select("#timephone").append("table").style("border-collapse","collapse").style("margin-bottom","10px")

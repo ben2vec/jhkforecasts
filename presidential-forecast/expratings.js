@@ -1053,21 +1053,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                             .attr("x", 600)
                             .attr("height", 40)
                             .attr("width", 250)
-                            .on("mouseover", function (d, i) {
-                                d3.select("#"+"forec"+i)
-                                    .attr("y", 100 + i * 40)
-                                    .attr("x", 850)
-                                    .attr("text-anchor", "end")
-                                    .attr("text-decoration", "underline")
-                                    .attr("cursor", "pointer")
-                            })
-                            .on("mouseout", function (d, i) {
-                                d3.select("#"+"forec"+i)
-                                    .attr("y", 100 + i * 40)
-                                    .attr("x", 600)
-                                    .attr("text-anchor", "start")
-                                    .attr("text-decoration", "none")
-                            })
+                            
 
 
 
