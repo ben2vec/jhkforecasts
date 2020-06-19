@@ -75,6 +75,13 @@ var forecasters = [
         "type": "expert",
         "shorthand": "cnn",
         "forecastLabel": "CNN"
+    },
+    {
+        "forecast": "NPR",
+        "link": "https://www.npr.org/2020/06/17/877951588/2020-electoral-map-ratings-biden-has-an-edge-over-trump-with-5-months-to-go",
+        "type": "expert",
+        "shorthand": "npr",
+        "forecastLabel": "NPR"
     }
 ]
 var expert = forecasters.filter(d => d.type == "expert")
@@ -187,7 +194,8 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                         cnalysis: d.cnanalysis,
                         leantoss: +leantoss[i].gop_win,
                         pluralvote: pluralvote[i].win,
-                        cnn:d.cnn
+                        cnn:d.cnn,
+                        npr:d.npr
                     }
                 })
                 var sd2 = forecasts_rating
@@ -547,7 +555,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                                     .attr("text-anchor", "middle")
                                     .style("font-family", "sf-mono")
 
-
+                                
                                 tipSVG.append("image")
                                     .attr("xlink:href", typeof d.rating == "number" ? d.rating > 50 ? "https://jhkforecasts.com/Trump-01.png" : "https://jhkforecasts.com/Biden-01.png" : d.rating_value == 0 ? "https://jhkforecasts.com/No%20one-01.png" : d.rating_value > 0 ? "https://jhkforecasts.com/Trump-01.png" : "https://jhkforecasts.com/Biden-01.png")
                                     .attr("x", 45)
@@ -756,9 +764,9 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                                     .attr("text-anchor", "middle")
                                     .style("font-family", "sf-mono")
 
-
+                                    console.log(d.properties.rating_value)
                                 tipSVG.append("image")
-                                    .attr("xlink:href", typeof d.properties.rating == "number" ? d.properties.rating > 50 ? "https://jhkforecasts.com/Trump-01.png" : "https://jhkforecasts.com/Biden-01.png" : d.properties.rating_value == 0 ? "https://jhkforecasts.com/No%20one-01.png" : d.properties.rating_value > 0 ? "https://jhkforecasts.com/Trump-01.png" : "https://jhkforecasts.com/Biden-01.png")
+                                    .attr("xlink:href", typeof d.properties.rating == "number" ? (d.properties.rating > 50 ? "https://jhkforecasts.com/Trump-01.png" : "https://jhkforecasts.com/Biden-01.png") : d.properties.rating_value == 50 ? "https://jhkforecasts.com/No%20one-01.png" : d.properties.rating_value > 50 ? "https://jhkforecasts.com/Trump-01.png" : "https://jhkforecasts.com/Biden-01.png")
                                     .attr("x", 45)
                                     .attr("y", 50)
                                     .attr("width", 90)
@@ -783,8 +791,8 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                 var ex = []
                 var New = []
                 tabledata.forEach(function (d, i) {
-                    all.push([d.state, d.ev, d.jhk, d.bitecofer, d.cook, d.inside, d.politico, d.sabato, d.cnalysis, d.leantoss, d.pluralvote,d.cnn]);
-                    ex.push([d.state, d.ev, d.jhk, d.cook, d.inside, d.politico, d.sabato,d.cnn]);
+                    all.push([d.state, d.ev, d.jhk, d.bitecofer, d.cook, d.inside, d.politico, d.sabato, d.cnalysis, d.leantoss, d.pluralvote,d.cnn,d.npr]);
+                    ex.push([d.state, d.ev, d.jhk, d.cook, d.inside, d.politico, d.sabato,d.cnn,d.npr]);
                     New.push([d.state, d.ev, d.jhk, d.bitecofer, d.cnalysis, d.leantoss, d.pluralvote]);
                 })
                 var allnames = ["State", "Electoral Votes"]
@@ -939,9 +947,9 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                     console.log(stateData)
                     console.log(state_proj)
                     stateData.push({ rating: state_proj, forecastLabel: "Aggregated Projection" })
-                    svg.attr("viewBox", "0 0 1000 " + (stateData.length * 40 + 150))
+                    svg.attr("viewBox", "0 0 1000 " + (stateData.length * 40 + 90))
                     var width = 500,
-                        height = stateData.length * 40 + 50;
+                        height = stateData.length * 40 -10;
                     console.log(height)
                     d3.json("us.json", us => {
                         var state = topojson.feature(us, us.objects.states).features.filter(d => d.properties.name == input)[0]
@@ -986,7 +994,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                             .data(stateData)
                             .enter()
                             .append("rect")
-                            .attr("y", (d, i) => 80 + i * 40)
+                            .attr("y", (d, i) => 20 + i * 40)
                             .attr("x", 850)
                             .attr("height", 40)
                             .attr("width", 100)
@@ -997,8 +1005,8 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                             .data(stateData)
                             .enter()
                             .append("line")
-                            .attr("y1", (d, i) => 80 + i * 40)
-                            .attr("y2", (d, i) => 80 + i * 40)
+                            .attr("y1", (d, i) => 20 + i * 40)
+                            .attr("y2", (d, i) => 20 + i * 40)
                             .attr("x1", (d, i) => 600)
                             .attr("x2", (d, i) => 950)
                             .attr("stroke", (d, i) => i == stateData.length - 1 ? "black" : "#AFAFAF")
@@ -1011,7 +1019,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                             .enter()
                             .append("text")
                             .text(d => typeof d.rating == "number" ? wholeformat(Math.abs(d.rating - 50) + 50) + "%" : d.rating)
-                            .attr("y", (d, i) => 100 + i * 40)
+                            .attr("y", (d, i) => 40 + i * 40)
                             .attr("x", 900)
                             .attr("fill", "black")
                             .style("font-weight", "100")
@@ -1026,7 +1034,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                             .append("text")
                             .text(d => d.full_forecast)
                             .attr("id",(d,i)=>"forec"+i)
-                            .attr("y", (d, i) => 100 + i * 40)
+                            .attr("y", (d, i) => 40 + i * 40)
                             .attr("x", 600)
                             .style("font-weight", "100")
                             .style("font-size", 18)
@@ -1041,7 +1049,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                             .append("rect")
                             .attr("fill", "white")
                             .attr("opacity",0)
-                            .attr("y", (d, i) => 80 + i * 40)
+                            .attr("y", (d, i) => 20 + i * 40)
                             .attr("x", 600)
                             .attr("height", 40)
                             .attr("width", 250)
