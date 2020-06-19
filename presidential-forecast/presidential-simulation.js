@@ -157,7 +157,7 @@ function ready(error, json, inputData, dataInput) {
 
 			var data = input
 			var swings = {
-				national: jStat.normal.inv((Math.random()), 0, 5),
+				national: jStat.normal.inv((Math.random()), 0, 3.5),
 				south: jStat.normal.inv((Math.random()), 0, 2),
 				midwest: jStat.normal.inv((Math.random()), 0, 2),
 				northeast: jStat.normal.inv((Math.random()), 0, 2),
@@ -165,10 +165,11 @@ function ready(error, json, inputData, dataInput) {
 				third: Math.random()
 			}
 			console.log(swings["south"])
+			console.log(data)
 			data.forEach((d, i) => {
 				var simNum = (Math.random())
-				d.gopSim = jStat.normal.inv(Math.random(), d.gopVote, 3 * d.variance) + (swings.national * d.variance) / 2 + swings[d.region] / 2
-				d.demSim = jStat.normal.inv(Math.random(), d.demVote, 3 * d.variance) - (swings.national * d.variance) / 2 - swings[d.region] / 2
+				d.gopSim = jStat.normal.inv(Math.random(), d.gopVote, 1 * d.variance) + (swings.national * d.variance) / 2 + swings[d.region] / 2
+				d.demSim = jStat.normal.inv(Math.random(), d.demVote, 1 * d.variance) - (swings.national * d.variance) / 2 - swings[d.region] / 2
 				d.thirdSim = jStat.normal.inv((Math.random() + ((swings.third) * 2)) / 3, d.thirdVote, swings.third > .5 ? d.thirdVote : d.thirdVote / 2)
 				d.sum = d.gopSim + d.demSim + d.thirdSim
 				d.gopSim = d.gopSim < 0 ? .5 : d.gopSim
