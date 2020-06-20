@@ -247,8 +247,8 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
   vote_dist.sort((a, b) => b.proj_vote - a.proj_vote)
   
   vote_dist.forEach((d,i)=>{
-    d.p_10 = d.proj_vote - ((d.proj_vote-d.p_10)*.7)
-    d.p_90 = d.proj_vote - ((d.proj_vote-d.p_90)*.7)
+    d.p_10 = d.proj_vote - ((d.proj_vote-d.p_10)*.75)
+    d.p_90 = d.proj_vote - ((d.proj_vote-d.p_90)*.75)
   })
 
   console.log(vote_dist)
