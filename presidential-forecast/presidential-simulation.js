@@ -157,11 +157,11 @@ function ready(error, json, inputData, dataInput) {
 
 			var data = input
 			var swings = {
-				national: jStat.normal.inv((Math.random()), 0, 4.5),
-				south: jStat.normal.inv((Math.random()), 0, 1.2),
-				midwest: jStat.normal.inv((Math.random()), 0, 1.2),
-				northeast: jStat.normal.inv((Math.random()), 0, 1.2),
-				west: jStat.normal.inv((Math.random()), 0, 1.2),
+				national: jStat.normal.inv((Math.random()), 0, 5),
+				south: jStat.normal.inv((Math.random()), 0, 1),
+				midwest: jStat.normal.inv((Math.random()), 0, 1),
+				northeast: jStat.normal.inv((Math.random()), 0, 1),
+				west: jStat.normal.inv((Math.random()), 0, 1),
 				third: Math.random()
 			}
 			console.log(swings["south"])
