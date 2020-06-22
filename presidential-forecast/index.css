@@ -95,13 +95,19 @@
    padding: 10%;
  }
 
- 
-
  @font-face {
    font-family: "sf-mono";
    font-weight: 500;
    font-style: normal;
    src: url(https://jhkforecasts.com/fonts/SFMono-Regular.otf);
+ }
+
+ @font-face {
+   font-display: fallback;
+   font-family: "fs-industrie";
+   font-style: regular;
+   src: url("//sports.cbsimg.net/fonts/fs-industrie/variable/narrow/FSIndustrieVFNw.woff2") format("woff2");
+   font-weight: 100 900
  }
 
  @font-face {
@@ -299,9 +305,9 @@
      display: none;
    }
    .computer {
-    margin-left: 7.5%;
-    width: 80%;
-    display:block;
+     margin-left: 7.5%;
+     width: 80%;
+     display: block;
    }
    .special {
      margin-left: 7.5%;
@@ -464,27 +470,30 @@
    color: white;
  }
 
-.pollth{
-  border-bottom: black solid 1px;
-  padding: 5px;
-}
-.pollTable {
-  width: 100%;
-  border-collapse: collapse;
-  font-family: sf-mono;
-  font-weight: 100;
-  text-transform: uppercase;
-}
-.polltd{
-  padding: 5px;
-}
-.button {
-  background-color: white;
-  font-size: 16px;
-  font-family: sf-mono;
-  font-weight: 100;
-  text-transform: uppercase;
-  border: none;
-  padding: 5px;
-  vertical-align: middle;
-}
+ .pollth {
+   border-bottom: black solid 1px;
+   padding: 5px;
+ }
+
+ .pollTable {
+   width: 100%;
+   border-collapse: collapse;
+   font-family: sf-mono;
+   font-weight: 100;
+   text-transform: uppercase;
+ }
+
+ .polltd {
+   padding: 5px;
+ }
+
+ .button {
+   background-color: white;
+   font-size: 16px;
+   font-family: sf-mono;
+   font-weight: 100;
+   text-transform: uppercase;
+   border: none;
+   padding: 5px;
+   vertical-align: middle;
+ }

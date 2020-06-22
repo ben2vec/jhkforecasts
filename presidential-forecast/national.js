@@ -73,6 +73,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
 
   d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
     console.log(data)
+    document.getElementById("topBanner").style.backgroundColor = color(data[data.length-3].win)
     var updated = data[data.length - 1].experts_weight
     data.forEach((d, i) => {
       d.forecast_date = dp(d.forecast_date)
