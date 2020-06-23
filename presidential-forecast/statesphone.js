@@ -25,8 +25,10 @@ var event_odds = [
   { event: "flipping a coin", odds: 50 },
   { event: "getting a one pair", odds: 43.8 },
   { event: "NBA player makes a three", odds: 36 },
-  { event: "MLB batter getting on base", odds: 30.8 },
+  { event: "MLB batter getting on base", odds: 31.8 },
+  { event: "the dealer busts in blackjack", odds: 28.3 },
   { event: "getting a two pair", odds: 23.5 },
+  { event: "mlb batter striking out", odds: 20 },
   { event: "rolling a six on a die", odds: 16.666 },
   { event: "picking a random digit", odds: 10 },
   { event: "picking an ace", odds: 7.69 },
@@ -43,7 +45,9 @@ var events = event_odds.map((d, i) => {
 var odds = event_odds.map((d, i) => {
   return d.odds
 })
-
+var odds_scale = d3.scaleLinear()
+  .domain(odds)
+  .range([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,13])
 var color = d3.scaleLinear()
   .domain([0, 50, 100])
   .range(["#0091FF", "white", "#FF6060"]);
@@ -71,9 +75,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
   var evs = today[1].electoral_vote + " Electoral Votes"
 
   console.log(today)
-  var odds_scale = d3.scaleLinear()
-    .domain(odds)
-    .range([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
+ 
 
   var upset_odds = dem_win > gop_win ? gop_win : dem_win
 
