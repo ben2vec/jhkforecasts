@@ -27,6 +27,7 @@ var event_odds = [
   { event: "MLB batter getting on base", odds: 31.8 },
   { event: "the dealer busts in blackjack", odds: 28.3 },
   { event: "getting a two pair", odds: 23.5 },
+  { event: "mlb batter striking out", odds: 20 },
   { event: "rolling a six on a die", odds: 16.666 },
   { event: "picking a random digit", odds: 10 },
   { event: "picking an ace", odds: 7.69 },
