@@ -60,7 +60,7 @@ var map = d3.select("#usmap")
   .attr("viewBox", '75 -50 900 550');
 var overview = d3.select("#overview")
   .append("svg")
-  .attr("viewBox", '0 0 1000 400');
+  .attr("viewBox", '0 0 1000 340');
 
 var tool_tip = d3.tip()
   .attr("class", "d3-tip")
