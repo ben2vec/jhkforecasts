@@ -46,7 +46,7 @@ var odds = event_odds.map((d, i) => {
 })
 var odds_scale = d3.scaleLinear()
   .domain(odds)
-  .range([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,13])
+  .range([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13])
 var path = d3.geoPath()
   .projection(projection);
 
@@ -58,9 +58,13 @@ var color = d3.scaleLinear()
 var map = d3.select("#usmap")
   .append("svg")
   .attr("viewBox", '75 -50 900 550');
+
+d3.select("#overview").append("h1")
+  .text("National Overview")
+  .style("font-weight", 900)
 var overview = d3.select("#overview")
   .append("svg")
-  .attr("viewBox", '0 0 1000 340');
+  .attr("viewBox", '0 0 1000 200');
 
 var tool_tip = d3.tip()
   .attr("class", "d3-tip")
@@ -74,13 +78,13 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
 
   d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
     console.log(data)
-    document.getElementById("topBanner").style.backgroundColor = color(data[data.length-3].win)
+    document.getElementById("topBanner").style.backgroundColor = color(data[data.length - 3].win)
     var updated = data[data.length - 1].experts_weight
     data.forEach((d, i) => {
       d.forecast_date = dp(d.forecast_date)
       return d
     })
-    data.sort((a,b)=>a.forecast_date-b.forecast_date)
+    data.sort((a, b) => a.forecast_date - b.forecast_date)
 
     var newest_update = d3.max(data, d => d.forecast_date)
 
@@ -203,7 +207,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
 
 
         tipSVG.append("text")
-          .text(d.state== "District of Columbia" ? "DC" : d.state)
+          .text(d.state == "District of Columbia" ? "DC" : d.state)
           .attr("y", 20)
           .attr("x", 87.5)
           .attr("fill", "#black")
@@ -317,9 +321,9 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       .attr("x", d => d.properties.xv)
       .attr("y", d => d.properties.yv)
       .style("font-family", "sf-mono")
-      .style("font-size",9)
+      .style("font-size", 9)
       .attr("fill", "black")
-      .attr("dominant-baseline","central")
+      .attr("dominant-baseline", "central")
       .attr("text-anchor", "middle")
       .style("font-weight", 500)
 
@@ -333,7 +337,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       .attr("height", 14)
       .style('fill', "none")
       .style('stroke', d => d.properties.tippingPoint >= 3 ? "black" : "none")
-      .attr("ry",2)
+      .attr("ry", 2)
 
 
 
@@ -368,7 +372,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
 
 
         tipSVG.append("text")
-          .text(d.properties.name== "District of Columbia" ? "DC" : d.properties.name)
+          .text(d.properties.name == "District of Columbia" ? "DC" : d.properties.name)
           .attr("y", 20)
           .attr("x", 87.5)
           .attr("fill", "#black")
@@ -652,7 +656,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       .attr("y", 10)
       .style("font-weight", "100")
       .attr("font-size", 15)
-      .attr("text-anchor","end")
+      .attr("text-anchor", "end")
 
 
 
@@ -829,19 +833,19 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
         .on("click", function () {
           update("win", 500)
         })
-        .style("cursor","pointer")
+        .style("cursor", "pointer")
 
       var votebutton = d3.select("#votebu")
         .on("click", function () {
           update("vote", 500)
         })
-        .style("cursor","pointer")
+        .style("cursor", "pointer")
 
       var evbutton = d3.select("#evbutton")
         .on("click", function () {
           update("ev", 500)
         })
-        .style("cursor","pointer")
+        .style("cursor", "pointer")
 
     }
 
@@ -852,70 +856,96 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       .data(overview_data)
       .enter()
       .append("text")
-      .text(d => onevalue(d.electoral_vote))
-      .attr("y", (d, i) => 100 + i * 100)
-      .attr("x", 450)
-      .attr("fill", (d, i) => cand_colors(d.party))
+      .text(d => d.candidate)
+      .attr("y", (d, i) => 70 + i * 50)
+      .attr("x", 50)
+      .attr("fill", "black")
       .style("font-weight", "100")
-      .style("font-size", 25)
-      .attr("text-anchor", "middle")
+      .style("font-size", 20)
+      .attr("text-anchor", "start")
+      .attr("dominant-baseline", "central")
+
+    overview
+      .append("text")
+      .text("Candidate")
+      .attr("y", 20)
+      .attr("x", 50)
+      .attr("fill", "black")
+      .style("font-weight", "100")
+      .style("font-size", 16)
+      .attr("text-anchor", "start")
+      .attr("dominant-baseline", "central")
+
+    overview
+      .append("text")
+      .text("avg. electoral votes")
+      .attr("y", 20)
+      .attr("x", 250)
+      .attr("fill", "black")
+      .style("font-weight", "100")
+      .style("font-size", 16)
+      .attr("text-anchor", "start")
+      .attr("dominant-baseline", "central")
+
+    overview
+      .append("text")
+      .text("popular vote")
+      .attr("y", 20)
+      .attr("x", 600)
+      .attr("fill", "black")
+      .style("font-weight", "100")
+      .style("font-size", 16)
+      .attr("text-anchor", "start")
+      .attr("dominant-baseline", "central")
+
+    overview.selectAll()
+      .data(overview_data)
+      .enter().append("rect")
+      .attr("x", 250)
+      .attr("y", (d, i) => 47.5 + i * 50)
+      .attr("width", d => (d.electoral_vote / 538) * 358)
+      .attr("height", 45)
+      .attr("fill", d => cand_colors(d.party))
+      .attr("opacity", .7)
+
+    overview.selectAll()
+      .data(overview_data)
+      .enter().append("rect")
+      .attr("x", 600)
+      .attr("y", (d, i) => 47.5 + i * 50)
+      .attr("width", d => (d.proj_vote) * 5)
+      .attr("height", 45)
+      .attr("fill", d => cand_colors(d.party))
+      .attr("opacity", .7)
+
 
     overview.selectAll()
       .data(overview_data)
       .enter()
       .append("text")
-      .text(d => onevalue(d.proj_vote) + "%")
-      .attr("y", (d, i) => 100 + i * 100)
-      .attr("x", 850)
-      .attr("fill", (d, i) => cand_colors(d.party))
-      .style("font-weight", "100")
-      .style("font-size", 25)
-      .attr("text-anchor", "middle")
-      .attr("dominant-baseline", "middle")
-
-    overview.append("image")
-      .attr("xlink:href", d => "https://jhkforecasts.com/Trump-01.png")
-      .attr("x", 100)
-      .attr("y", overview_data[0].party == "gop" ? 55 : 155)
-      .attr("width", 90)
-      .attr("height", 90)
-    overview.append("image")
-      .attr("xlink:href", d => "https://jhkforecasts.com/Biden-01.png")
-      .attr("x", 100)
-      .attr("y", overview_data[0].party == "gop" ? 155 : 55)
-      .attr("width", 90)
-      .attr("height", 90)
-
-
-    overview.append("text")
-      .text("?")
-      .attr("y", 300)
-      .attr("x", 145)
-      .attr("fill", cand_colors("third"))
-      .style("font-weight", "100")
-      .style("font-size", 50)
-      .attr("text-anchor", "middle")
-      .attr("dominant-baseline", "middle")
-
-
-    overview.append("text")
-      .text("Avg Electoral Votes")
-      .attr("y", 30)
-      .attr("x", 450)
-      .attr("fill", "Black")
+      .text(d => numberformat(d.electoral_vote))
+      .attr("y", (d, i) => 70 + i * 50)
+      .attr("x", 255)
+      .attr("fill", "black")
       .style("font-weight", "100")
       .style("font-size", 20)
-      .attr("text-anchor", "middle")
-      .attr("dominant-baseline", "middle")
-    overview.append("text")
-      .text("Popular Vote")
-      .attr("y", 30)
-      .attr("x", 850)
-      .attr("fill", "Black")
+      .attr("text-anchor", "start")
+      .attr("dominant-baseline", "central")
+
+    overview.selectAll()
+      .data(overview_data)
+      .enter()
+      .append("text")
+      .text(d => numberformat(d.proj_vote) + "%")
+      .attr("y", (d, i) => 70 + i * 50)
+      .attr("x", 605)
+      .attr("fill", "black")
       .style("font-weight", "100")
       .style("font-size", 20)
-      .attr("text-anchor", "middle")
-      .attr("dominant-baseline", "middle")
+      .attr("text-anchor", "start")
+      .attr("dominant-baseline", "central")
+
+
 
 
     var sdbars = []
@@ -978,6 +1008,12 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       .range([50, 850])
       .domain([0, max_evs])
 
+    bars.append("line")
+      .attr("x1", xbars(270))
+      .attr("x2", xbars(270))
+      .attr("y1", 80)
+      .attr("y2", 290)
+      .attr("stroke", "lightgray")
 
 
     bars.selectAll("bars")
@@ -1016,7 +1052,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
 
 
         tipSVG.append("text")
-          .text(d.state== "District of Columbia" ? "DC" : d.state)
+          .text(d.state == "District of Columbia" ? "DC" : d.state)
           .attr("y", 20)
           .attr("x", 87.5)
           .attr("fill", "#black")
@@ -1099,7 +1135,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
 
 
         tipSVG.append("text")
-          .text(d.state== "District of Columbia" ? "DC" : d.state)
+          .text(d.state == "District of Columbia" ? "DC" : d.state)
           .attr("y", 20)
           .attr("x", 87.5)
           .attr("fill", "#black")
@@ -1145,12 +1181,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
           tool_tip2.hide()
         });
 
-    bars.append("image")
-      .attr("xlink:href", d => "https://jhkforecasts.com/Biden-01.png")
-      .attr("x", xbars(dem_ev_bars) + 10)
-      .attr("y", gop_ev_bars > dem_ev_bars ? 200 : 100)
-      .attr("width", 75)
-      .attr("height", 75)
+
 
 
     bars.append("text")
@@ -1173,6 +1204,19 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       .attr("text-anchor", "start")
       .attr("dominant-baseline", "middle")
 
+    bars.append("line")
+      .attr("x1", xbars(270))
+      .attr("x2", xbars(270))
+      .attr("y1", 80)
+      .attr("y2", 290)
+      .attr("stroke", "gray")
+
+    bars.append("image")
+      .attr("xlink:href", d => "https://jhkforecasts.com/Biden-01.png")
+      .attr("x", xbars(dem_ev_bars) + 10)
+      .attr("y", gop_ev_bars > dem_ev_bars ? 200 : 100)
+      .attr("width", 75)
+      .attr("height", 75)
 
     bars.append("image")
       .attr("xlink:href", d => "https://jhkforecasts.com/Trump-01.png")
@@ -1270,7 +1314,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
 
 
         tipSVG.append("text")
-          .text(d.state== "District of Columbia" ? "DC" : d.state)
+          .text(d.state == "District of Columbia" ? "DC" : d.state)
           .attr("y", 20)
           .attr("x", 87.5)
           .attr("fill", "#black")
@@ -1616,7 +1660,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
           show_more(2900, marginSort, tippingPointSort)
 
         })
-        .style("cursor","pointer")
+        .style("cursor", "pointer")
 
 
       var less = d3.select("#less")
@@ -1626,7 +1670,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
           document.getElementById("less").style.display = "none"
           show_more(975, marginSort, tippingPointSort)
         })
-        .style("cursor","pointer")
+        .style("cursor", "pointer")
 
     }
 
