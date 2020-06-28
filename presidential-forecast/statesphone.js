@@ -524,7 +524,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
 
 
 
-  var keystwo = ["Fundamentals", "Polling Average", "State Similarity", "Experts Ratings", "Projected Vote"]
+  var keystwo = ["Fundamentals", "Adj. Polling Avg.", "State Similarity", "Experts Ratings", "Projected Vote"]
   var calc = d3.select("#calcPhone")
     .append("svg")
     .attr("viewBox", '0 0 1000 850')
