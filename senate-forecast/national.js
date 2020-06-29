@@ -144,33 +144,6 @@ var bubble_info = [{ "state": "Alabama", "abbrev": "AL", "radius": 16.43, "x": 4
 var map_states = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "District of Columbia", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"]
 var map_labels = [{ "state": "Alabama", "label": "AL", "xValue": 637, "yValue": 338.6934 }, { "state": "Alaska", "label": "AK", "xValue": 245, "yValue": 400 }, { "state": "Arizona", "label": "AZ", "xValue": 315, "yValue": 306.5801 }, { "state": "Arkansas", "label": "AR", "xValue": 560, "yValue": 315.6387 }, { "state": "California", "label": "CA", "xValue": 223, "yValue": 245.9219 }, { "state": "Colorado", "label": "CO", "xValue": 400, "yValue": 240.5645 }, { "state": "Connecticut", "label": "CT", "xValue": -1000, "yValue": -1000 }, { "state": "Delaware", "label": "DE", "xValue": -1000, "yValue": -1000 }, { "state": "District of Columbia", "label": "DC", "xValue": -1000, "yValue": -1000 }, { "state": "Florida", "label": "FL", "xValue": 714, "yValue": 397.8154 }, { "state": "Georgia", "label": "GA", "xValue": 680.0117, "yValue": 335.2354 }, { "state": "Hawaii", "label": "HI", "xValue": 380, "yValue": 465 }, { "state": "Idaho", "label": "ID", "xValue": 310.1851, "yValue": 155 }, { "state": "Illinois", "label": "IL", "xValue": 596.6602, "yValue": 225.2954 }, { "state": "Indiana", "label": "IN", "xValue": 633.4111, "yValue": 223.4214 }, { "state": "Iowa", "label": "IA", "xValue": 545.8457, "yValue": 198.6782 }, { "state": "Kansas", "label": "KS", "xValue": 487, "yValue": 255.1592 }, { "state": "Kentucky", "label": "KY", "xValue": 655.1484, "yValue": 262.9658 }, { "state": "Louisiana", "label": "LA", "xValue": 561.4404, "yValue": 369.8135 }, { "state": "Maine", "label": "ME", "xValue": 807.3105, "yValue": 109.855 }, { "state": "Maryland", "label": "MD", "xValue": -1000, "yValue": -1000 }, { "state": "Massachusetts", "label": "MA", "xValue": -1000, "yValue": -1000 }, { "state": "Michigan", "label": "MI", "xValue": 645.6465, "yValue": 181.3647 }, { "state": "Minnesota", "label": "MN", "xValue": 530.8594, "yValue": 141.5874 }, { "state": "Mississippi", "label": "MS", "xValue": 598.6016, "yValue": 342.1514 }, { "state": "Missouri", "label": "MO", "xValue": 557, "yValue": 255.123 }, { "state": "Montana", "label": "MT", "xValue": 370.0981, "yValue": 112.7705 }, { "state": "Nebraska", "label": "NE", "xValue": 473.8364, "yValue": 210.0527 }, { "state": "Nevada", "label": "NV", "xValue": 267.8765, "yValue": 219.0957 }, { "state": "New Hampshire", "label": "NH", "xValue": -1000, "yValue": -1000 }, { "state": "New Jersey", "label": "NJ", "xValue": 785, "yValue": 210 }, { "state": "New Mexico", "label": "NM", "xValue": 385.3774, "yValue": 314.1035 }, { "state": "New York", "label": "NY", "xValue": 753.5781, "yValue": 160.2588 }, { "state": "North Carolina", "label": "NC", "xValue": 728.6084, "yValue": 280.5029 }, { "state": "North Dakota", "label": "ND", "xValue": 467.0742, "yValue": 112.3823 }, { "state": "Ohio", "label": "OH", "xValue": 670.7197, "yValue": 215.4883 }, { "state": "Oklahoma", "label": "OK", "xValue": 500.1963, "yValue": 306.418 }, { "state": "Oregon", "label": "OR", "xValue": 240.2783, "yValue": 139.5654 }, { "state": "Pennsylvania", "label": "PA", "xValue": 730.3535, "yValue": 195.856 }, { "state": "Rhode Island", "label": "RI", "xValue": -1000, "yValue": -1000 }, { "state": "South Carolina", "label": "SC", "xValue": 712.4395, "yValue": 310.6387 }, { "state": "South Dakota", "label": "SD", "xValue": 468.0742, "yValue": 158.5166 }, { "state": "Tennessee", "label": "TN", "xValue": 640.8594, "yValue": 290.8193 }, { "state": "Texas", "label": "TX", "xValue": 480.9902, "yValue": 368.2861 }, { "state": "Utah", "label": "UT", "xValue": 330.1084, "yValue": 230.978 }, { "state": "Vermont", "label": "VT", "xValue": -1000, "yValue": -1000 }, { "state": "Virginia", "label": "VA", "xValue": 731.0264, "yValue": 250.7842 }, { "state": "Washington", "label": "WA", "xValue": 256.9365, "yValue": 88.0762 }, { "state": "West Virginia", "label": "WV", "xValue": 701, "yValue": 243 }, { "state": "Wisconsin", "label": "WI", "xValue": 585.2529, "yValue": 163.2588 }, { "state": "Wyoming", "label": "WY", "xValue": 385.9287, "yValue": 175.6255 }]
 var state_boxes = [{ "candidate": "Alexander, Lamar (R-TN)", "state": "Tennessee", "class": "Class II", "state_index": "Tennessee: Class II", "election": "UP" }, { "candidate": "Baldwin, Tammy (D-WI)", "state": "Wisconsin", "class": "Class III", "state_index": "Wisconsin: Class III", "election": "DEM" }, { "candidate": "Barrasso, John (R-WY)", "state": "Wyoming", "class": "Class III", "state_index": "Wyoming: Class III", "election": "REP" }, { "candidate": "Bennet, Michael F. (D-CO)", "state": "Colorado", "class": "Class III", "state_index": "Colorado: Class III", "election": "DEM" }, { "candidate": "Blackburn, Marsha (R-TN)", "state": "Tennessee", "class": "Class III", "state_index": "Tennessee: Class III", "election": "REP" }, { "candidate": "Blumenthal, Richard (D-CT)", "state": "Connecticut", "class": "Class III", "state_index": "Connecticut: Class III", "election": "DEM" }, { "candidate": "Blunt, Roy (R-MO)", "state": "Missouri", "class": "Class III", "state_index": "Missouri: Class III", "election": "REP" }, { "candidate": "Booker, Cory A. (D-NJ)", "state": "New Jersey", "class": "Class II", "state_index": "New Jersey: Class II", "election": "UP" }, { "candidate": "Boozman, John (R-AR)", "state": "Arkansas", "class": "Class III", "state_index": "Arkansas: Class III", "election": "REP" }, { "candidate": "Braun, Mike (R-IN)", "state": "Indiana", "class": "Class III", "state_index": "Indiana: Class III", "election": "REP" }, { "candidate": "Brown, Sherrod (D-OH)", "state": "Ohio", "class": "Class III", "state_index": "Ohio: Class III", "election": "DEM" }, { "candidate": "Burr, Richard (R-NC)", "state": "North Carolina", "class": "Class III", "state_index": "North Carolina: Class III", "election": "REP" }, { "candidate": "Cantwell, Maria (D-WA)", "state": "Washington", "class": "Class III", "state_index": "Washington: Class III", "election": "DEM" }, { "candidate": "Capito, Shelley Moore (R-WV)", "state": "West Virginia", "class": "Class II", "state_index": "West Virginia: Class II", "election": "UP" }, { "candidate": "Cardin, Benjamin L. (D-MD)", "state": "Maryland", "class": "Class III", "state_index": "Maryland: Class III", "election": "DEM" }, { "candidate": "Carper, Thomas R. (D-DE)", "state": "Delaware", "class": "Class III", "state_index": "Delaware: Class III", "election": "DEM" }, { "candidate": "Casey, Robert P., Jr. (D-PA)", "state": "Pennsylvania", "class": "Class III", "state_index": "Pennsylvania: Class III", "election": "DEM" }, { "candidate": "Cassidy, Bill (R-LA)", "state": "Louisiana", "class": "Class II", "state_index": "Louisiana: Class II", "election": "UP" }, { "candidate": "Collins, Susan M. (R-ME)", "state": "Maine", "class": "Class II", "state_index": "Maine: Class II", "election": "UP" }, { "candidate": "Coons, Christopher A. (D-DE)", "state": "Delaware", "class": "Class II", "state_index": "Delaware: Class II", "election": "UP" }, { "candidate": "Cornyn, John (R-TX)", "state": "Texas", "class": "Class II", "state_index": "Texas: Class II", "election": "UP" }, { "candidate": "Cortez Masto, Catherine (D-NV)", "state": "Nevada", "class": "Class III", "state_index": "Nevada: Class III", "election": "DEM" }, { "candidate": "Cotton, Tom (R-AR)", "state": "Arkansas", "class": "Class II", "state_index": "Arkansas: Class II", "election": "UP" }, { "candidate": "Cramer, Kevin (R-ND)", "state": "North Dakota", "class": "Class III", "state_index": "North Dakota: Class III", "election": "REP" }, { "candidate": "Crapo, Mike (R-ID)", "state": "Idaho", "class": "Class III", "state_index": "Idaho: Class III", "election": "REP" }, { "candidate": "Cruz, Ted (R-TX)", "state": "Texas", "class": "Class III", "state_index": "Texas: Class III", "election": "REP" }, { "candidate": "Daines, Steve (R-MT)", "state": "Montana", "class": "Class II", "state_index": "Montana: Class II", "election": "UP" }, { "candidate": "Duckworth, Tammy (D-IL)", "state": "Illinois", "class": "Class III", "state_index": "Illinois: Class III", "election": "DEM" }, { "candidate": "Durbin, Richard J. (D-IL)", "state": "Illinois", "class": "Class II", "state_index": "Illinois: Class II", "election": "UP" }, { "candidate": "Enzi, Michael B. (R-WY)", "state": "Wyoming", "class": "Class II", "state_index": "Wyoming: Class II", "election": "UP" }, { "candidate": "Ernst, Joni (R-IA)", "state": "Iowa", "class": "Class II", "state_index": "Iowa: Class II", "election": "UP" }, { "candidate": "Feinstein, Dianne (D-CA)", "state": "California", "class": "Class III", "state_index": "California: Class III", "election": "DEM" }, { "candidate": "Fischer, Deb (R-NE)", "state": "Nebraska", "class": "Class III", "state_index": "Nebraska: Class III", "election": "REP" }, { "candidate": "Gardner, Cory (R-CO)", "state": "Colorado", "class": "Class II", "state_index": "Colorado: Class II", "election": "UP" }, { "candidate": "Gillibrand, Kirsten E. (D-NY)", "state": "New York", "class": "Class III", "state_index": "New York: Class III", "election": "DEM" }, { "candidate": "Graham, Lindsey (R-SC)", "state": "South Carolina", "class": "Class II", "state_index": "South Carolina: Class II", "election": "UP" }, { "candidate": "Grassley, Chuck (R-IA)", "state": "Iowa", "class": "Class III", "state_index": "Iowa: Class III", "election": "REP" }, { "candidate": "Harris, Kamala D. (D-CA)", "state": "California", "class": "Class III", "state_index": "California: Class III", "election": "DEM" }, { "candidate": "Hassan, Margaret Wood (D-NH)", "state": "New Hampshire", "class": "Class III", "state_index": "New Hampshire: Class III", "election": "DEM" }, { "candidate": "Hawley, Josh (R-MO)", "state": "Missouri", "class": "Class III", "state_index": "Missouri: Class III", "election": "REP" }, { "candidate": "Heinrich, Martin (D-NM)", "state": "New Mexico", "class": "Class III", "state_index": "New Mexico: Class III", "election": "DEM" }, { "candidate": "Hirono, Mazie K. (D-HI)", "state": "Hawaii", "class": "Class III", "state_index": "Hawaii: Class III", "election": "DEM" }, { "candidate": "Hoeven, John (R-ND)", "state": "North Dakota", "class": "Class III", "state_index": "North Dakota: Class III", "election": "REP" }, { "candidate": "Hyde-Smith, Cindy (R-MS)", "state": "Mississippi", "class": "Class II", "state_index": "Mississippi: Class II", "election": "UP" }, { "candidate": "Inhofe, James M. (R-OK)", "state": "Oklahoma", "class": "Class II", "state_index": "Oklahoma: Class II", "election": "UP" }, { "candidate": "Johnson, Ron (R-WI)", "state": "Wisconsin", "class": "Class III", "state_index": "Wisconsin: Class III", "election": "REP" }, { "candidate": "Jones, Doug (D-AL)", "state": "Alabama", "class": "Class II", "state_index": "Alabama: Class II", "election": "UP" }, { "candidate": "Kaine, Tim (D-VA)", "state": "Virginia", "class": "Class III", "state_index": "Virginia: Class III", "election": "DEM" }, { "candidate": "Kennedy, John (R-LA)", "state": "Louisiana", "class": "Class III", "state_index": "Louisiana: Class III", "election": "REP" }, { "candidate": "King, Angus S., Jr. (I-ME)", "state": "Maine", "class": "Class III", "state_index": "Maine: Class III", "election": "DEM" }, { "candidate": "Klobuchar, Amy (D-MN)", "state": "Minnesota", "class": "Class III", "state_index": "Minnesota: Class III", "election": "DEM" }, { "candidate": "Lankford, James (R-OK)", "state": "Oklahoma", "class": "Class III", "state_index": "Oklahoma: Class III", "election": "REP" }, { "candidate": "Leahy, Patrick J. (D-VT)", "state": "Vermont", "class": "Class III", "state_index": "Vermont: Class III", "election": "DEM" }, { "candidate": "Lee, Mike (R-UT)", "state": "Utah", "class": "Class III", "state_index": "Utah: Class III", "election": "REP" }, { "candidate": "Loeffler, Kelly (R-GA)", "state": "Georgia", "class": "Class III", "state_index": "Georgia: Class III", "election": "UP" }, { "candidate": "Manchin, Joe, III (D-WV)", "state": "West Virginia", "class": "Class III", "state_index": "West Virginia: Class III", "election": "DEM" }, { "candidate": "Markey, Edward J. (D-MA)", "state": "Massachusetts", "class": "Class II", "state_index": "Massachusetts: Class II", "election": "UP" }, { "candidate": "McConnell, Mitch (R-KY)", "state": "Kentucky", "class": "Class II", "state_index": "Kentucky: Class II", "election": "UP" }, { "candidate": "McSally, Martha (R-AZ)", "state": "Arizona", "class": "Class III", "state_index": "Arizona: Class III", "election": "UP" }, { "candidate": "Menendez, Robert (D-NJ)", "state": "New Jersey", "class": "Class III", "state_index": "New Jersey: Class III", "election": "DEM" }, { "candidate": "Merkley, Jeff (D-OR)", "state": "Oregon", "class": "Class II", "state_index": "Oregon: Class II", "election": "UP" }, { "candidate": "Moran, Jerry (R-KS)", "state": "Kansas", "class": "Class III", "state_index": "Kansas: Class III", "election": "REP" }, { "candidate": "Murkowski, Lisa (R-AK)", "state": "Alaska", "class": "Class III", "state_index": "Alaska: Class III", "election": "REP" }, { "candidate": "Murphy, Christopher (D-CT)", "state": "Connecticut", "class": "Class III", "state_index": "Connecticut: Class III", "election": "DEM" }, { "candidate": "Murray, Patty (D-WA)", "state": "Washington", "class": "Class III", "state_index": "Washington: Class III", "election": "DEM" }, { "candidate": "Paul, Rand (R-KY)", "state": "Kentucky", "class": "Class III", "state_index": "Kentucky: Class III", "election": "REP" }, { "candidate": "Perdue, David (R-GA)", "state": "Georgia", "class": "Class II", "state_index": "Georgia: Class II", "election": "UP" }, { "candidate": "Peters, Gary C. (D-MI)", "state": "Michigan", "class": "Class II", "state_index": "Michigan: Class II", "election": "UP" }, { "candidate": "Portman, Rob (R-OH)", "state": "Ohio", "class": "Class III", "state_index": "Ohio: Class III", "election": "REP" }, { "candidate": "Reed, Jack (D-RI)", "state": "Rhode Island", "class": "Class II", "state_index": "Rhode Island: Class II", "election": "UP" }, { "candidate": "Risch, James E. (R-ID)", "state": "Idaho", "class": "Class II", "state_index": "Idaho: Class II", "election": "UP" }, { "candidate": "Roberts, Pat (R-KS)", "state": "Kansas", "class": "Class II", "state_index": "Kansas: Class II", "election": "UP" }, { "candidate": "Romney, Mitt (R-UT)", "state": "Utah", "class": "Class III", "state_index": "Utah: Class III", "election": "REP" }, { "candidate": "Rosen, Jacky (D-NV)", "state": "Nevada", "class": "Class III", "state_index": "Nevada: Class III", "election": "DEM" }, { "candidate": "Rounds, Mike (R-SD)", "state": "South Dakota", "class": "Class II", "state_index": "South Dakota: Class II", "election": "UP" }, { "candidate": "Rubio, Marco (R-FL)", "state": "Florida", "class": "Class III", "state_index": "Florida: Class III", "election": "REP" }, { "candidate": "Sanders, Bernard (I-VT)", "state": "Vermont", "class": "Class III", "state_index": "Vermont: Class III", "election": "DEM" }, { "candidate": "Sasse, Ben (R-NE)", "state": "Nebraska", "class": "Class II", "state_index": "Nebraska: Class II", "election": "UP" }, { "candidate": "Schatz, Brian (D-HI)", "state": "Hawaii", "class": "Class III", "state_index": "Hawaii: Class III", "election": "DEM" }, { "candidate": "Schumer, Charles E. (D-NY)", "state": "New York", "class": "Class III", "state_index": "New York: Class III", "election": "DEM" }, { "candidate": "Scott, Rick (R-FL)", "state": "Florida", "class": "Class III", "state_index": "Florida: Class III", "election": "REP" }, { "candidate": "Scott, Tim (R-SC)", "state": "South Carolina", "class": "Class III", "state_index": "South Carolina: Class III", "election": "REP" }, { "candidate": "Shaheen, Jeanne (D-NH)", "state": "New Hampshire", "class": "Class II", "state_index": "New Hampshire: Class II", "election": "UP" }, { "candidate": "Shelby, Richard C. (R-AL)", "state": "Alabama", "class": "Class III", "state_index": "Alabama: Class III", "election": "REP" }, { "candidate": "Sinema, Kyrsten (D-AZ)", "state": "Arizona", "class": "Class III", "state_index": "Arizona: Class III", "election": "UP" }, { "candidate": "Smith, Tina (D-MN)", "state": "Minnesota", "class": "Class II", "state_index": "Minnesota: Class II", "election": "UP" }, { "candidate": "Stabenow, Debbie (D-MI)", "state": "Michigan", "class": "Class III", "state_index": "Michigan: Class III", "election": "DEM" }, { "candidate": "Sullivan, Dan (R-AK)", "state": "Alaska", "class": "Class II", "state_index": "Alaska: Class II", "election": "UP" }, { "candidate": "Tester, Jon (D-MT)", "state": "Montana", "class": "Class III", "state_index": "Montana: Class III", "election": "DEM" }, { "candidate": "Thune, John (R-SD)", "state": "South Dakota", "class": "Class III", "state_index": "South Dakota: Class III", "election": "REP" }, { "candidate": "Tillis, Thom (R-NC)", "state": "North Carolina", "class": "Class II", "state_index": "North Carolina: Class II", "election": "UP" }, { "candidate": "Toomey, Patrick J. (R-PA)", "state": "Pennsylvania", "class": "Class III", "state_index": "Pennsylvania: Class III", "election": "REP" }, { "candidate": "Udall, Tom (D-NM)", "state": "New Mexico", "class": "Class II", "state_index": "New Mexico: Class II", "election": "UP" }, { "candidate": "Van Hollen, Chris (D-MD)", "state": "Maryland", "class": "Class III", "state_index": "Maryland: Class III", "election": "DEM" }, { "candidate": "Warner, Mark R. (D-VA)", "state": "Virginia", "class": "Class II", "state_index": "Virginia: Class II", "election": "UP" }, { "candidate": "Warren, Elizabeth (D-MA)", "state": "Massachusetts", "class": "Class III", "state_index": "Massachusetts: Class III", "election": "DEM" }, { "candidate": "Whitehouse, Sheldon (D-RI)", "state": "Rhode Island", "class": "Class III", "state_index": "Rhode Island: Class III", "election": "DEM" }, { "candidate": "Wicker, Roger F. (R-MS)", "state": "Mississippi", "class": "Class III", "state_index": "Mississippi: Class III", "election": "REP" }, { "candidate": "Wyden, Ron (D-OR)", "state": "Oregon", "class": "Class III", "state_index": "Oregon: Class III", "election": "DEM" }, { "candidate": "Young, Todd (R-IN)", "state": "Indiana", "class": "Class III", "state_index": "Indiana: Class III", "election": "REP" }]
-var event_odds = [
-    { event: "flipping a coin", odds: 50 },
-    { event: "getting a one pair", odds: 43.8 },
-    { event: "NBA player makes a three", odds: 36 },
-    { event: "MLB batter getting on base", odds: 31.8 },
-    { event: "the dealer busts in blackjack", odds: 28.3 },
-    { event: "getting a two pair", odds: 23.5 },
-    { event: "mlb batter striking out", odds: 20 },
-    { event: "rolling a six on a die", odds: 16.666 },
-    { event: "picking a random digit", odds: 10 },
-    { event: "picking an ace", odds: 7.69 },
-    { event: "getting a blackjack", odds: 4.8 },
-    { event: "getting a full house", odds: 2.8 },
-    { event: "getting a four of a kind", odds: 0.168 },
-    { event: "getting a royal flush", odds: 0 },
-  ]
-  
-  var events = event_odds.map((d, i) => {
-    return d.event
-  })
-  
-  var odds = event_odds.map((d, i) => {
-    return d.odds
-  })
-  var odds_scale = d3.scaleLinear()
-    .domain(odds)
-    .range([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,13])
 
 queue()
     .defer(d3.json, "https://projects.jhkforecasts.com/presidential-forecast/us.json")
@@ -418,27 +391,37 @@ function ready(error, us, inputData, cands, data, hist) {
                 .attr("stroke", "black")
                 .attr("stroke-width", 2)
 
-            tipSVG.append("image")
-                .attr("href", "https://jhkforecasts.com/donkey-01.png")
-                .attr("y", 40)
-                .attr("x", 2.5)
+            tipSVG.append("text")
+                .text("GOP")
+                .attr("y", d3.sum(d.properties.cands.filter(d => d.party == "REP"), d => d.win) >= 50 ? 90 : 140)
+                .attr("x", 20)
                 .attr("fill", "black")
-                .attr("font-weight", "700")
+                .style("font-weight", "100")
                 .style("font-size", "20")
-                .attr("text-anchor", "middle")
-                .attr("width", 85)
-                .attr("height", 85)
+                .attr("text-anchor", "start")
 
-            tipSVG.append("image")
-                .attr("href", "https://jhkforecasts.com/elephant-01.png")
-                .attr("y", 40)
-                .attr("x", 92.5)
+            tipSVG.append("rect")
+                .attr("x", 20)
+                .attr("y", d3.sum(d.properties.cands.filter(d => d.party == "REP"), d => d.win) >= 50 ? 100 : 150)
+                .attr("height", 15)
+                .attr("width", d3.sum(d.properties.cands.filter(d => d.party == "REP"), d => d.win) * 1.4)
+                .attr("fill", color(100))
+
+                tipSVG.append("rect")
+                .attr("x", 20)
+                .attr("y", d3.sum(d.properties.cands.filter(d => d.party == "REP"), d => d.win) >= 50 ? 150 : 100)
+                .attr("height", 15)
+                .attr("width", (100-d3.sum(d.properties.cands.filter(d => d.party == "REP"), d => d.win)) * 1.4)
+                .attr("fill", color(00))
+
+            tipSVG.append("text")
+                .text("DEM")
+                .attr("y", d3.sum(d.properties.cands.filter(d => d.party == "REP"), d => d.win) >= 50 ? 140 : 90)
+                .attr("x", 20)
                 .attr("fill", "black")
-                .attr("font-weight", "700")
+                .style("font-weight", "100")
                 .style("font-size", "20")
-                .attr("text-anchor", "middle")
-                .attr("width", 85)
-                .attr("height", 85)
+                .attr("text-anchor", "start")
 
 
 
@@ -448,22 +431,31 @@ function ready(error, us, inputData, cands, data, hist) {
                 .attr("x", 90)
                 .attr("fill", "black")
                 .style("font-weight", "100")
-                .style("font-size", "20")
+                .style("font-size", "16")
+                .attr("text-anchor", "middle")
+
+            tipSVG.append("text")
+                .text("WIN")
+                .attr("y", 50)
+                .attr("x", 90)
+                .attr("fill", "black")
+                .style("font-weight", "100")
+                .style("font-size", "16")
                 .attr("text-anchor", "middle")
 
             tipSVG.append("text")
                 .text(nf(100 - d3.sum(d.properties.cands.filter(d => d.party == "REP"), d => d.win)) + "%")
-                .attr("y", 150)
-                .attr("x", 45)
+                .attr("y", d3.sum(d.properties.cands.filter(d => d.party == "REP"), d => d.win) >= 50 ? 140 : 90)
+                .attr("x", 160)
                 .attr("fill", color(0))
                 .style("font-weight", "100")
                 .style("font-size", "20")
-                .attr("text-anchor", "middle")
+                .attr("text-anchor", "end")
 
 
             tipSVG.append("text")
                 .text(nf(d3.sum(d.properties.cands.filter(d => d.party == "REP"), d => d.win)) + "%")
-                .attr("y", 150)
+                .attr("y", d3.sum(d.properties.cands.filter(d => d.party == "REP"), d => d.win) >= 50 ? 90 : 140)
                 .attr("x", 135)
                 .attr("fill", color(100))
                 .style("font-weight", "100")
@@ -583,16 +575,16 @@ function ready(error, us, inputData, cands, data, hist) {
         .attr("fill", "black")
         .attr("text-anchor", "middle")
         .style("font-weight", "500")
-        .style("dominant-baseline","central")
+        .style("dominant-baseline", "central")
 
     mapG.append("rect")
         .attr("x", 738)
         .attr("y", 348)
         .attr("fill", "none")
-        .attr("stroke",ga_special[0].tipping_point > 3 ? "black" : "grey")
-        .attr("width",24)
-        .attr("height",16)
-        .attr("ry","4")
+        .attr("stroke", ga_special[0].tipping_point > 3 ? "black" : "grey")
+        .attr("width", 24)
+        .attr("height", 16)
+        .attr("ry", "4")
 
     mapG.append("a")
         .attr("xlink:href", "Georgia-Special")
@@ -630,52 +622,71 @@ function ready(error, us, inputData, cands, data, hist) {
                 .attr("stroke", "black")
                 .attr("stroke-width", 2)
 
-            tipSVG.append("image")
-                .attr("href", "https://jhkforecasts.com/donkey-01.png")
-                .attr("y", 40)
-                .attr("x", 2.5)
+            tipSVG.append("text")
+                .text("GOP")
+                .attr("y", d3.sum(ga_special.filter(d => d.party == "REP"), d => d.win) >= 50 ? 90 : 140)
+                .attr("x", 20)
                 .attr("fill", "black")
-                .attr("font-weight", "700")
+                .style("font-weight", "100")
                 .style("font-size", "20")
-                .attr("text-anchor", "middle")
-                .attr("width", 85)
-                .attr("height", 85)
+                .attr("text-anchor", "start")
 
-            tipSVG.append("image")
-                .attr("href", "https://jhkforecasts.com/elephant-01.png")
-                .attr("y", 40)
-                .attr("x", 92.5)
+            tipSVG.append("rect")
+                .attr("x", 20)
+                .attr("y", d3.sum(ga_special.filter(d => d.party == "REP"), d => d.win) >= 50 ? 100 : 150)
+                .attr("height", 15)
+                .attr("width", d3.sum(ga_special.filter(d => d.party == "REP"), d => d.win) * 1.4)
+                .attr("fill", color(100))
+
+                tipSVG.append("rect")
+                .attr("x", 20)
+                .attr("y", d3.sum(ga_special.filter(d => d.party == "REP"), d => d.win) >= 50 ? 150 : 100)
+                .attr("height", 15)
+                .attr("width", (100-d3.sum(ga_special.filter(d => d.party == "REP"), d => d.win)) * 1.4)
+                .attr("fill", color(00))
+
+            tipSVG.append("text")
+                .text("DEM")
+                .attr("y", d3.sum(ga_special.filter(d => d.party == "REP"), d => d.win) >= 50 ? 140 : 90)
+                .attr("x", 20)
                 .attr("fill", "black")
-                .attr("font-weight", "700")
+                .style("font-weight", "100")
                 .style("font-size", "20")
-                .attr("text-anchor", "middle")
-                .attr("width", 85)
-                .attr("height", 85)
+                .attr("text-anchor", "start")
 
 
 
             tipSVG.append("text")
-                .text("Georgia*")
+                .text("Georgia *")
                 .attr("y", 20)
                 .attr("x", 90)
                 .attr("fill", "black")
                 .style("font-weight", "100")
-                .style("font-size", "20")
+                .style("font-size", "16")
+                .attr("text-anchor", "middle")
+
+            tipSVG.append("text")
+                .text("WIN")
+                .attr("y", 50)
+                .attr("x", 90)
+                .attr("fill", "black")
+                .style("font-weight", "100")
+                .style("font-size", "16")
                 .attr("text-anchor", "middle")
 
             tipSVG.append("text")
                 .text(nf(100 - d3.sum(ga_special.filter(d => d.party == "REP"), d => d.win)) + "%")
-                .attr("y", 150)
-                .attr("x", 45)
+                .attr("y", d3.sum(ga_special.filter(d => d.party == "REP"), d => d.win) >= 50 ? 140 : 90)
+                .attr("x", 160)
                 .attr("fill", color(0))
                 .style("font-weight", "100")
                 .style("font-size", "20")
-                .attr("text-anchor", "middle")
+                .attr("text-anchor", "end")
 
 
             tipSVG.append("text")
                 .text(nf(d3.sum(ga_special.filter(d => d.party == "REP"), d => d.win)) + "%")
-                .attr("y", 150)
+                .attr("y", d3.sum(ga_special.filter(d => d.party == "REP"), d => d.win) >= 50 ? 90 : 140)
                 .attr("x", 135)
                 .attr("fill", color(100))
                 .style("font-weight", "100")
@@ -1031,11 +1042,12 @@ function ready(error, us, inputData, cands, data, hist) {
 
     bars.forEach((d, i) => {
         var state = d.state
+        
         var candState = d.cands
         var tipB = tip.append("g")
             .attr("transform", "translate(0," + i * 50 + ")")
         tipB.append("a")
-            .attr("href", d.state)
+            .attr("href", d.state=="Georgia*"?"Georgia-Special":d.state)
             .append("text")
             .text(state)
             .attr("y", 95)
