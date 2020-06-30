@@ -142,7 +142,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       .attr("y", (d, i) => 137.5 + 15 * i)
       .style("font-family", "sf-mono")
       .attr("font-size", "9")
-      .attr("fill", "black")
+      .attr("fill", "white")
       .attr("text-anchor", "middle")
       .style("font-weight", "100")
       .attr("dominant-baseline", "central")
@@ -296,7 +296,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       .attr("y", d => d.properties.yv)
       .style("font-family", "sf-mono")
       .style("font-size", 9)
-      .attr("fill", "black")
+      .attr("fill", d => Math.abs(50 - d.properties.gopWin) < 15 ? "black" : "white")
       .attr("dominant-baseline", "central")
       .attr("text-anchor", "middle")
       .style("font-weight", 500)
@@ -791,7 +791,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
             .text((e, i) => i == 1 ? ("Biden " + onevalue(d[e]) + "%") : i == 0 ? "Trump " + onevalue(d[e]) + "%" : "Third " + onevalue(d[e]) + "%")
             .attr("y", e => d[e] == d["gop" + input] ? y(d["gop" + input]) > y(d["dem" + input]) ? y(d["gop" + input]) + 15 : y(d["gop" + input]) - 15 : d[e] == d["dem" + input] ? y(d["dem" + input]) > y(d["gop" + input]) ? y(d["dem" + input]) + 15 : y(d["dem" + input]) - 15 : y(d[e]) - 15)
             .attr("text-anchor", (e, i) => i == 2 ? "end" : "start")
-            .attr("dominant-baseline", "middle")
+            .attr("dominant-baseline", "central")
 
           focus.selectAll(".lineHoverText")
             .style("font-weight", "100")
@@ -800,7 +800,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
             .attr("fill", (e, i) => colors[i])
             .attr("y", e => d[e] == d["gop" + input] ? y(d["gop" + input]) > y(d["dem" + input]) ? y(d["gop" + input]) + 15 : y(d["gop" + input]) - 15 : d[e] == d["dem" + input] ? y(d["dem" + input]) > y(d["gop" + input]) ? y(d["dem" + input]) + 15 : y(d["dem" + input]) - 15 : y(d[e]) - 15)
             .attr("text-anchor", (e, i) => i == 2 ? "end" : "start")
-            .attr("dominant-baseline", "middle")
+            .attr("dominant-baseline", "central")
         }
       }
       var winbutton = d3.select("#winbu")
@@ -986,7 +986,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       .attr("x1", xbars(270))
       .attr("x2", xbars(270))
       .attr("y1", 80)
-      .attr("y2", 290)
+      .attr("y2", 120)
       .attr("stroke", "lightgray")
 
 
@@ -1166,7 +1166,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       .style("font-weight", "100")
       .style("font-size", "25")
       .attr("text-anchor", "start")
-      .attr("dominant-baseline", "middle")
+      .attr("dominant-baseline", "central")
 
     bars.append("text")
       .text(gop_ev_bars)
@@ -1176,14 +1176,23 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       .style("font-weight", "100")
       .style("font-size", "25")
       .attr("text-anchor", "start")
-      .attr("dominant-baseline", "middle")
+      .attr("dominant-baseline", "central")
+
+    bars.append("text")
+      .text("270")
+      .attr("x", xbars(270))
+      .attr("y", 70)
+      .attr("fill", "black")
+      .style("font-weight", "100")
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "central")
 
     bars.append("line")
       .attr("x1", xbars(270))
       .attr("x2", xbars(270))
       .attr("y1", 80)
-      .attr("y2", 290)
-      .attr("stroke", "gray")
+      .attr("y2", 120)
+      .attr("stroke", "black")
 
     bars.append("image")
       .attr("xlink:href", d => "https://jhkforecasts.com/Biden-01.png")
@@ -1248,11 +1257,11 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       .text(d => d.label)
       .attr("x", d => d.x)
       .attr("y", d => d.y)
-      .attr("fill", "black")
+      .attr("fill", d => Math.abs(50 - d.gop_win) > 15 ? "white" : "black")
       .attr("text-anchor", "middle")
       .attr("dominant-baseline", "central")
       .attr("font-size", 8)
-      .style("font-weight", "100")
+      .style("font-weight", "500")
       .style("font-family", "sf-mono")
 
 
@@ -1345,8 +1354,27 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       .append("circle")
       .attr("r", 20)
       .attr("cy", (d, i) => 300)
-      .attr("cx", (d, i) => 600 + i * 25)
+      .attr("cx", (d, i) => 610 + i * 20)
       .attr("fill", d => color(d))
+
+    bubblemap
+      .append("circle")
+      .attr("stroke", "black")
+      .attr("r", 10)
+      .attr("cy", (d, i) => 255)
+      .attr("cx", (d, i) => 610 + i * 20)
+      .attr("fill", "none")
+
+    bubblemap
+      .append("text")
+      .text("Tipping Point")
+      .attr("y", 255)
+      .attr("x", (d, i) => 625)
+      .attr("fill", "black")
+      .attr("text-anchor", "start")
+      .attr("font-size", 10)
+      .style("font-weight", "100")
+      .style("dominant-baseline", "central")
 
 
     bubblemap.selectAll("key")
@@ -1355,8 +1383,44 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       .append("circle")
       .attr("r", 20)
       .attr("cy", (d, i) => 350)
-      .attr("cx", (d, i) => 600 + i * 25)
+      .attr("cx", (d, i) => 610 + i * 20)
       .attr("fill", d => color(100 - d))
+
+    bubblemap.selectAll("key")
+      .data(pct)
+      .enter()
+      .append("text")
+      .text(d => d)
+      .attr("y", 300)
+      .attr("x", (d, i) => 592 + i * 20)
+      .attr("fill", "black")
+      .attr("text-anchor", "start")
+      .attr("font-size", 10)
+      .style("font-weight", "100")
+      .style("dominant-baseline", "central")
+
+
+    bubblemap
+      .append("text")
+      .text("Trump")
+      .attr("y", 300)
+      .attr("x", (d, i) => 585 + i * 20)
+      .attr("fill", "black")
+      .attr("text-anchor", "end")
+      .attr("font-size", 10)
+      .style("font-weight", "100")
+      .style("dominant-baseline", "central")
+
+    bubblemap
+      .append("text")
+      .text("Biden")
+      .attr("y", 350)
+      .attr("x", (d, i) => 585 + i * 20)
+      .attr("fill", "black")
+      .attr("text-anchor", "end")
+      .attr("font-size", 10)
+      .style("font-weight", "100")
+      .style("dominant-baseline", "central")
 
 
     bubblemap.selectAll("key")
@@ -1364,12 +1428,13 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       .enter()
       .append("text")
       .text(d => d)
-      .attr("y", 260)
-      .attr("x", (d, i) => 600 + i * 25)
+      .attr("y", 350)
+      .attr("x", (d, i) => 590 + i * 20)
       .attr("fill", "black")
-      .attr("text-anchor", "middle")
-      .attr("font-size", 12)
+      .attr("text-anchor", "start")
+      .attr("font-size", 10)
       .style("font-weight", "100")
+      .style("dominant-baseline", "central")
 
 
     bubblemap.append("text")
