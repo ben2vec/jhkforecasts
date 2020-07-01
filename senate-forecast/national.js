@@ -294,6 +294,7 @@ function ready(error, us, inputData, cands, data, hist) {
         d.properties.label = map_labels.filter(d => d.state == state).length == 0 ? "" : map_labels.filter(d => d.state == state)[0].label
         d.properties.y = map_labels.filter(d => d.state == state).length == 0 ? "" : map_labels.filter(d => d.state == state)[0].yValue
         d.properties.x = map_labels.filter(d => d.state == state).length == 0 ? "" : map_labels.filter(d => d.state == state)[0].xValue
+        d.properties.gopWin = d3.sum(d.properties.cands.filter(d => d.party == "REP"), d => d.win)
     })
 
     var jsonElection = []
@@ -344,7 +345,7 @@ function ready(error, us, inputData, cands, data, hist) {
         .attr("y", d => d.properties.y)
         .style("font-family", "sf-mono")
         .attr("font-size", "10")
-        .attr("fill", "black")
+        .attr("fill", d => Math.abs(d.properties.gopWin - 50) > 15 ? "white" : "black")
         .attr("text-anchor", "middle")
         .attr("dominant-baseline", "central")
         .style("font-weight", "500")
@@ -407,11 +408,11 @@ function ready(error, us, inputData, cands, data, hist) {
                 .attr("width", d3.sum(d.properties.cands.filter(d => d.party == "REP"), d => d.win) * 1.4)
                 .attr("fill", color(100))
 
-                tipSVG.append("rect")
+            tipSVG.append("rect")
                 .attr("x", 20)
                 .attr("y", d3.sum(d.properties.cands.filter(d => d.party == "REP"), d => d.win) >= 50 ? 150 : 100)
                 .attr("height", 15)
-                .attr("width", (100-d3.sum(d.properties.cands.filter(d => d.party == "REP"), d => d.win)) * 1.4)
+                .attr("width", (100 - d3.sum(d.properties.cands.filter(d => d.party == "REP"), d => d.win)) * 1.4)
                 .attr("fill", color(00))
 
             tipSVG.append("text")
@@ -572,7 +573,7 @@ function ready(error, us, inputData, cands, data, hist) {
         .attr("y", 356)
         .style("font-family", "sf-mono")
         .attr("font-size", "10")
-        .attr("fill", "black")
+        .attr("fill", Math.abs(d3.sum(ga_special.filter(d => d.party == "REP"), d => d.win)) - 50 > 15 ? "white" : "black")
         .attr("text-anchor", "middle")
         .style("font-weight", "500")
         .style("dominant-baseline", "central")
@@ -638,11 +639,11 @@ function ready(error, us, inputData, cands, data, hist) {
                 .attr("width", d3.sum(ga_special.filter(d => d.party == "REP"), d => d.win) * 1.4)
                 .attr("fill", color(100))
 
-                tipSVG.append("rect")
+            tipSVG.append("rect")
                 .attr("x", 20)
                 .attr("y", d3.sum(ga_special.filter(d => d.party == "REP"), d => d.win) >= 50 ? 150 : 100)
                 .attr("height", 15)
-                .attr("width", (100-d3.sum(ga_special.filter(d => d.party == "REP"), d => d.win)) * 1.4)
+                .attr("width", (100 - d3.sum(ga_special.filter(d => d.party == "REP"), d => d.win)) * 1.4)
                 .attr("fill", color(00))
 
             tipSVG.append("text")
@@ -1042,12 +1043,12 @@ function ready(error, us, inputData, cands, data, hist) {
 
     bars.forEach((d, i) => {
         var state = d.state
-        
+
         var candState = d.cands
         var tipB = tip.append("g")
             .attr("transform", "translate(0," + i * 50 + ")")
         tipB.append("a")
-            .attr("href", d.state=="Georgia*"?"Georgia-Special":d.state)
+            .attr("href", d.state == "Georgia*" ? "Georgia-Special" : d.state)
             .append("text")
             .text(state)
             .attr("y", 95)
@@ -1218,9 +1219,9 @@ function ready(error, us, inputData, cands, data, hist) {
         .style("stroke", "#999")
         .attr("stroke-width", 1)
         .style("shape-rendering", "crispEdges")
-        .style("opacity", 0)
+        .style("opacity", 0.5)
         .attr("y1", -height)
-        .attr("y2", -40);
+        .attr("y2", 0);
 
     focus.append("text").attr("class", "lineHoverDate")
         .attr("text-anchor", "middle")
@@ -1280,8 +1281,8 @@ function ready(error, us, inputData, cands, data, hist) {
         city.enter().insert("g", ".focus").append("path")
             .attr("class", "line cities")
             .style("stroke", (d, i) => cand_colors(d.party))
-            .style("stroke-width", 6)
-            .style("opacity", .6)
+            .style("stroke-width", 3)
+            .style("opacity", .9)
             .style("stroke-linecap", "round")
             .style("stroke-linejoin", "round")
             .merge(city)
@@ -1303,10 +1304,10 @@ function ready(error, us, inputData, cands, data, hist) {
 
             labels2.enter().append("text")
                 .attr("class", "lineHoverText2")
-                .attr("font-size", 25)
+                .attr("font-size", 30)
                 .style("fill", "white")
                 .style("stroke", "white")
-                .style("stroke-width", 5)
+                .style("stroke-width", 10)
                 .merge(labels2)
 
             var labels = focus.selectAll(".lineHoverText")
@@ -1318,14 +1319,6 @@ function ready(error, us, inputData, cands, data, hist) {
                 .attr("font-size", 30)
                 .merge(labels)
 
-
-            var labels2 = focus.selectAll(".lineHoverText2")
-                .data(copy)
-
-            labels2.enter().append("text")
-                .attr("class", "lineHoverText")
-                .attr("font-size", 30)
-                .merge(labels2)
 
             var circles = focus.selectAll(".hoverCircle")
                 .data(copy)
@@ -1359,14 +1352,13 @@ function ready(error, us, inputData, cands, data, hist) {
                     .style("font-weight", "100")
                     .text(formatDate(d.date));
 
-                focus.selectAll(".hoverCircle")
-                    .attr("cy", e => y(d[e]))
-                    .attr("cx", x(d.date));
+                
 
-
+                focus.select(".lineHover")
+                    .attr("transform", "translate(" + x(d.date) + "," + height + ")");
 
                 focus.selectAll(".lineHoverText")
-                    .style("font-weight", "500")
+                    .style("font-weight", "100")
                     .attr("x", x(d.date) + 10)
                     .text((e, i) => i == 0 ? "REP " + nf(d[e]) : "DEM " + nf(d[e]))
                     .attr("fill", (e, i) => colors[i])
@@ -1374,7 +1366,17 @@ function ready(error, us, inputData, cands, data, hist) {
                     .attr("text-anchor", (e, i) => i == 2 ? "end" : "start")
                     .attr("dominant-baseline", "middle")
 
+                focus.selectAll(".lineHoverText2")
+                    .style("font-weight", "500")
+                    .attr("x", x(d.date) + 10)
+                    .text((e, i) => i == 0 ? "REP " + nf(d[e]) : "DEM " + nf(d[e]))
+                    .attr("fill", "white")
+                    .attr("stroke", "white")
+                    .attr("y", e => d[e] == d["rep" + input] ? y(d["rep" + input]) > y(d["dem" + input]) ? y(d["rep" + input]) + 15 : y(d["rep" + input]) - 15 : d[e] == d["dem" + input] ? y(d["dem" + input]) >= y(d["rep" + input]) ? y(d["dem" + input]) + 15 : y(d["dem" + input]) - 15 : y(d[e]) - 15)
+                    .attr("text-anchor", (e, i) => i == 2 ? "end" : "start")
+                    .attr("dominant-baseline", "middle")
 
+                
             }
         }
         var winbutton = d3.select("#winbut")
