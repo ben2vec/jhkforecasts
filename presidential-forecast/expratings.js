@@ -234,13 +234,13 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                             expert: forecasts[j],
                             values:
                                 [d3.sum(datas.filter(d => d.rating <= 5), d => d.ev),
-                                d3.sum(datas.filter(d => d.rating <= 20 && d.rating > 5), d => d.ev),
-                                d3.sum(datas.filter(d => d.rating <= 40 && d.rating > 20), d => d.ev),
+                                d3.sum(datas.filter(d => d.rating <= 15 && d.rating > 5), d => d.ev),
+                                d3.sum(datas.filter(d => d.rating <= 40 && d.rating > 15), d => d.ev),
                                 d3.sum(datas.filter(d => d.rating <= 45 && d.rating > 40), d => d.ev),
                                 d3.sum(datas.filter(d => d.rating <= 55 && d.rating > 45), d => d.ev),
                                 d3.sum(datas.filter(d => d.rating <= 60 && d.rating > 55), d => d.ev),
-                                d3.sum(datas.filter(d => d.rating <= 75 && d.rating > 60), d => d.ev),
-                                d3.sum(datas.filter(d => d.rating <= 95 && d.rating > 75), d => d.ev),
+                                d3.sum(datas.filter(d => d.rating <= 85 && d.rating > 60), d => d.ev),
+                                d3.sum(datas.filter(d => d.rating <= 95 && d.rating > 85), d => d.ev),
                                 d3.sum(datas.filter(d => d.rating > 95), d => d.ev)]
                         }
                     var aggregated = []
@@ -639,7 +639,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                             .style("font-weight", "100")
                             .attr("dominant-baseline", "central")
 
-                        var ratingspct = [">95%", ">80%", ">60%", ">55%", "<55%", ">55%", ">60%", ">80%", ">95%"]
+                        var ratingspct = [">95%", ">85%", ">60%", ">55%", "<55%", ">55%", ">60%", ">85%", ">95%"]
 
 
                         map.selectAll("f").data(evcats)
