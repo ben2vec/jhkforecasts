@@ -160,7 +160,8 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
         var jhkforecasts = newest_data.map((d, i) => {
             return d.win
         })
-        d3.csv("https://raw.githubusercontent.com/seanelevan/pluralvote/master/web/article/2020-forecast/statebystateprob.csv?token=AIYCOI3LWILZQWFAUIU33X26QKW26", pluralvote => {
+        d3.csv("https://raw.githubusercontent.com/seanelevan/Plural-Vote/master/statebystateprob.csv", (pluralvote) => {
+
 
             var pluralvote = pluralvote.map((d, i) => {
                 return {
