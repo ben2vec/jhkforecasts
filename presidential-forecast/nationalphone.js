@@ -552,11 +552,11 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
 
     focus.append("line").attr("class", "lineHover")
       .style("stroke", "#999")
-      .attr("stroke-width", 1)
+      .attr("stroke-width", 1.5)
       .style("shape-rendering", "crispEdges")
-      .style("opacity", 0)
+      .style("opacity", 0.5)
       .attr("y1", -heightphone)
-      .attr("y2", -40);
+      .attr("y2", 0);
 
     focus.append("text").attr("class", "lineHoverDate")
       .attr("text-anchor", "middle")
@@ -656,13 +656,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
         var circles = focus.selectAll(".hoverCircle")
           .data(copy)
 
-        circles.enter().append("circle")
-          .attr("class", "hoverCircle")
-          .style("stroke", "white")
-          .style("stroke-width", 3)
-          .style("fill", d => zphone(d))
-          .attr("r", 4)
-          .merge(circles);
+        
 
         timephone.selectAll(".overlay")
           .on("mouseover", () => focus.style("display", null))
@@ -685,9 +679,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
             .attr("font-weight", "100")
             .text(formatDate(d.date));
 
-          focus.selectAll(".hoverCircle")
-            .attr("cy", e => yphone(d[e]))
-            .attr("cx", xphone(d.date));
+          
 
           focus.selectAll(".lineHoverText2")
             .attr("font-weight", "100")
@@ -705,6 +697,8 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
             .attr("y", e => d[e] == d["gop" + input] ? yphone(d["gop" + input]) > yphone(d["dem" + input]) ? yphone(d["gop" + input]) + 15 : yphone(d["gop" + input]) - 15 : d[e] == d["dem" + input] ? yphone(d["dem" + input]) > yphone(d["gop" + input]) ? yphone(d["dem" + input]) + 15 : yphone(d["dem" + input]) - 15 : yphone(d[e]) - 15)
             .attr("text-anchor", (e, i) => i == 2 ? "end" : "start")
             .attr("dominant-baseline", "middle")
+          focus.select(".lineHover")
+            .attr("transform", "translate(" + xphone(d.date) + "," + heightphone + ")");
         }
       }
       var winbuttonp = d3.select("#winphone")
@@ -1156,7 +1150,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
       .attr("fill", d => Math.abs(d.gop_win - 50) > 15 ? "white" : "black")
       .attr("text-anchor", "middle")
       .attr("dominant-baseline", "middle")
-      .attr("font-size",d=> d.electoral_votes<3?9:12)
+      .attr("font-size", d => d.electoral_votes < 3 ? 9 : 12)
       .style("font-family", "sf-mono")
 
 

@@ -644,11 +644,11 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
 
     focus.append("line").attr("class", "lineHover")
       .style("stroke", "#999")
-      .attr("stroke-width", 1)
+      .attr("stroke-width", 1.5)
       .style("shape-rendering", "crispEdges")
-      .style("opacity", 0)
+      .style("opacity", 0.5)
       .attr("y1", -height)
-      .attr("y2", -40);
+      .attr("y2", 0);
 
     focus.append("text").attr("class", "lineHoverDate")
       .attr("text-anchor", "middle")
@@ -752,13 +752,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
         var circles = focus.selectAll(".hoverCircle")
           .data(copy)
 
-        circles.enter().append("circle")
-          .attr("class", "hoverCircle")
-          .style("stroke", d => z(d))
-          .style("stroke-width", 3)
-          .style("fill", "white")
-          .attr("r", 3)
-          .merge(circles);
+        
 
         time.selectAll(".overlay")
           .on("mouseover", () => focus.style("display", null))
@@ -781,9 +775,10 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
             .style("font-weight", "100")
             .text(formatDate(d.date));
 
-          focus.selectAll(".hoverCircle")
-            .attr("cy", e => y(d[e]))
-            .attr("cx", x(d.date));
+          
+
+          focus.select(".lineHover")
+            .attr("transform", "translate(" + x(d.date) + "," + height + ")");
 
           focus.selectAll(".lineHoverText2")
             .style("font-weight", "100")
