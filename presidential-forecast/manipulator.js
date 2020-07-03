@@ -201,7 +201,6 @@ function ready(error, us, data, input) {
             .append("path")
             .attr("class", "statesover changing")
             .attr("d", path)
-            .style("stroke", "#fff")
             .style("stroke-width", "1")
             .style("fill", "none")
             .on("click", function (d, i) {
@@ -223,7 +222,6 @@ function ready(error, us, data, input) {
             .append("path")
             .attr("class", "statesover changing")
             .attr("d", path)
-            .style("stroke", "#fff")
             .style("stroke-width", "1")
             .style("fill", "none")
             .on("click", function (d, i) {
