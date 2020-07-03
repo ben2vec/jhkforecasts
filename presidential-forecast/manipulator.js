@@ -48,6 +48,11 @@ function ready(error, us, data, input) {
         return d.label
 
     })
+
+    var Stateslabels = bubble_info.map(d => {
+        return d.state
+
+    })
     var states = map_labels.map((d, i) => {
         return {
             state: d.state,
@@ -58,7 +63,6 @@ function ready(error, us, data, input) {
             original: data.filter(d => d[map_labels[i].label] == "gop").length * 100 / 20000
         }
     })
-    console.log()
     var simulationsPrev = 20000
     var simNum = []
     update(states, "yes")
@@ -74,7 +78,6 @@ function ready(error, us, data, input) {
             dataNew = change == "none" ? dataNew : dataNew.filter(d => d[label] == change)
         })
         simNum.push([0])
-        console.log(simNum)
         var simulations = dataNew.length
         states.forEach(d => {
             var label = d.label
@@ -82,7 +85,6 @@ function ready(error, us, data, input) {
             d.win = dataNew.filter(d => d[label] == "gop").length * 100 / simulations
         })
         var gopEvAvg = d3.mean(dataNew, d => d.gopEV)
-        console.log(gopEvAvg)
         var json = topojson.feature(us, us.objects.states)
         states.forEach(d => {
             var state = d.state
@@ -428,14 +430,14 @@ function ready(error, us, data, input) {
             .attr("cursor", "pointer")
             .on("click", function (d, i) {
                 d.change == "none" ?
-                    (states[labels.indexOf(d.label)].change = "gop") &&
-                    update(states) :
+                    (states[Stateslabels.indexOf(d.state)].change = "gop") &&
+                    (update(states)) :
                     d.change == "gop" ?
-                        (states[labels.indexOf(d.label)].change = "dem") &&
+                        (states[Stateslabels.indexOf(d.state)].change = "dem") &&
                         update(states) :
                         d.change == "dem" ?
-                            (states[labels.indexOf(d.label)].change = "none") &&
-                            update(states) : (states[labels.indexOf(d.label)].change = "none") &&
+                            (states[Stateslabels.indexOf(d.state)].change = "none") &&
+                            update(states) : (states[Stateslabels.indexOf(d.state)].change = "none") &&
                             update(states)
             });
         sbs.selectAll("at")
