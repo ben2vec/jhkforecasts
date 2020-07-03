@@ -34,7 +34,7 @@ var overview = d3.select("#overview")
     .attr("viewBox", '75 -50 900 100');
 var sbs = d3.select("#states")
     .append("svg")
-    .attr("viewBox", '0 0 500 2000');
+    .attr("viewBox", '0 0 500 680');
 
 queue()
     .defer(d3.json, "https://projects.jhkforecasts.com/presidential-forecast/us.json")
@@ -63,6 +63,7 @@ function ready(error, us, data, input) {
     var simNum = []
     update(states, "yes")
     function update(input, hardReset) {
+        var topBanner = d3.select("#topBanner")
         var dataNew = data
         hardReset == "yes" ? simNum = [] : ""
         var reset = simNum.length == 0 ? "yes" : "no"
@@ -90,6 +91,13 @@ function ready(error, us, data, input) {
             d.id = json.features.filter(d => state == d.properties.name).length == 0 ? "" : json.features.filter(d => state == d.properties.name)[0].id
 
         })
+
+        topBanner
+            .style("background-color", reset == "yes" ? color(states[56].win) : color(states[56].prev))
+            .transition()
+            .duration(500)
+            .style("background-color", simulations == 0 ? "white" : color(states[56].win))
+
         d3.selectAll(".changing").remove()
         d3.selectAll(".labels").remove()
         console.log(reset)
@@ -122,6 +130,19 @@ function ready(error, us, data, input) {
             .attr("text-anchor", "middle")
             .style("font-weight", 500)
 
+        map.selectAll("label")
+            .data(states)
+            .enter()
+            .append("rect")
+            .attr("class", "changing")
+            .attr("x", d => d.xv - 8)
+            .attr("y", d => d.yv - 8)
+            .style("width", 16)
+            .style("height", 16)
+            .style("fill", "none")
+            .attr("stroke", d => d.change == "none" ? "none" : "black")
+            .attr("ry", 3)
+
         map.selectAll("map2")
             .data(states)
             .enter()
@@ -145,10 +166,10 @@ function ready(error, us, data, input) {
             });
 
 
-            overview.append("text")
+        overview.append("text")
             .attr("class", "changing")
             .text("Simulations where this occurs: " + nf(simulations / 200) + "%")
-            .attr("y", 0)
+            .attr("y", -10)
             .attr("x", 525)
             .style("font-family", "sf-mono")
             .style("font-size", 15)
@@ -157,10 +178,10 @@ function ready(error, us, data, input) {
             .attr("text-anchor", "middle")
             .style("font-weight", 500)
 
-            overview.append("text")
+        overview.append("text")
             .attr("class", "changing")
             .text("(" + simulations + " out of " + 20000 + ")")
-            .attr("y", 20)
+            .attr("y", 10)
             .attr("x", 525)
             .style("font-family", "sf-mono")
             .style("font-size", 15)
@@ -169,7 +190,7 @@ function ready(error, us, data, input) {
             .attr("text-anchor", "middle")
             .style("font-weight", 500)
 
-            overview.append("text").attr("class", "changing")
+        overview.append("text").attr("class", "changing")
             .text("Donald Trump")
             .attr("x", 850)
             .attr("y", -30)
@@ -180,18 +201,50 @@ function ready(error, us, data, input) {
             .attr("text-anchor", "end")
 
 
-            overview.append("text").attr("class", "changing")
+        overview.append("text").attr("class", "changing")
             .text(simulations == 0 ? 'ツ' : nf(states[states.length - 1].win) + "%")
             .attr("x", 850)
-            .attr("y", 0)
+            .attr("y", 00)
             .attr("font-family", "sf-mono")
             .style("font-weight", "100")
             .attr("font-size", "25")
             .attr("fill", colors[0])
             .attr("text-anchor", "end")
 
+        overview.append("text")
+            .attr("class", "changing")
+            .text("Avg. Electoral Votes")
+            .attr("y", 45)
+            .attr("x", 525)
+            .style("font-family", "sf-mono")
+            .style("font-size", 12)
+            .style("fill", "black")
+            .attr("text-anchor", "middle")
+            .style("font-weight", 500)
 
-            overview.append("text").attr("class", "changing")
+        overview.append("text").attr("class", "changing")
+            .text(simulations == 0 ? '' : nf(gopEvAvg))
+            .attr("x", 620)
+            .attr("y", 45)
+            .attr("font-family", "sf-mono")
+            .style("font-weight", "500")
+            .attr("font-size", "15")
+            .attr("fill", colors[0])
+            .attr("text-anchor", "start")
+
+
+        overview.append("text").attr("class", "changing")
+            .text(simulations == 0 ? '' : nf(538 - gopEvAvg))
+            .attr("x", 430)
+            .attr("y", 45)
+            .attr("font-family", "sf-mono")
+            .style("font-weight", "500")
+            .attr("font-size", "15")
+            .attr("fill", colors[1])
+            .attr("text-anchor", "end")
+
+
+        overview.append("text").attr("class", "changing")
             .text(simulations == 0 ? 'ツ' : nf(100 - states[states.length - 1].win) + "%")
             .attr("x", 200)
             .attr("y", 0)
@@ -201,7 +254,7 @@ function ready(error, us, data, input) {
             .attr("fill", colors[1])
             .attr("text-anchor", "start")
 
-            overview.append("text").attr("class", "changing")
+        overview.append("text").attr("class", "changing")
             .text("Joseph Biden")
             .attr("x", 200)
             .attr("y", -30)
@@ -211,24 +264,24 @@ function ready(error, us, data, input) {
             .attr("fill", "black")
             .attr("text-anchor", "start")
 
-            overview.append("image").attr("class", "changing")
+        overview.append("image").attr("class", "changing")
             .attr("xlink:href", d => "https://jhkforecasts.com/Trump-01.png")
             .attr("x", 875)
             .attr("y", -40)
             .attr("width", 75)
             .attr("height", 75)
 
-            overview.append("image").attr("class", "changing")
+        overview.append("image").attr("class", "changing")
             .attr("xlink:href", d => "https://jhkforecasts.com/Biden-01.png")
             .attr("x", 100)
             .attr("y", -40)
             .attr("width", 75)
             .attr("height", 75)
 
-            overview.append("text")
+        overview.append("text")
             .attr("class", "changing")
             .text("Click Here to restart")
-            .attr("y", -30)
+            .attr("y", -39)
             .attr("x", 525)
             .style("font-family", "sf-mono")
             .style("font-size", 15)
@@ -267,16 +320,18 @@ function ready(error, us, data, input) {
             .attr("fill", d => color(d))
 
         bubblemap
-            .append("circle").attr("class", "mapLegend")
+            .append("rect").attr("class", "mapLegend")
             .attr("stroke", "black")
-            .attr("r", 10)
-            .attr("cy", (d, i) => 255)
-            .attr("cx", (d, i) => 610 + i * 20)
+            .attr("ry", 3)
+            .attr("y", (d, i) => 247)
+            .attr("x", (d, i) => 602 + i * 20)
+            .attr("width", 16)
+            .attr("height", 16)
             .attr("fill", "none")
 
         bubblemap
             .append("text")
-            .text("Tipping Point").attr("class", "mapLegend")
+            .text("Changed").attr("class", "mapLegend")
             .attr("y", 255)
             .attr("x", (d, i) => 625)
             .attr("fill", "black")
@@ -366,11 +421,34 @@ function ready(error, us, data, input) {
             .text(d => d.state == "District of Columbia" ? "DC" : d.state)
             .attr("x", (d, i) => i % 5 * 100 + 50)
             .attr("y", (d, i) => Math.floor(i / 5) * 55 + 20)
-            .style("font-weight", 100)
+            .style("font-weight", d => d.change == "none" ? 100 : 500)
             .attr("font-size", "10")
-            .attr("fill", "black")
+            .attr("fill", d => d.change == "gop" ? colors[0] : d.change == "dem" ? colors[1] : "black")
             .attr("text-anchor", "middle")
-
+            .attr("cursor", "pointer")
+            .on("click", function (d, i) {
+                d.change == "none" ?
+                    (states[labels.indexOf(d.label)].change = "gop") &&
+                    update(states) :
+                    d.change == "gop" ?
+                        (states[labels.indexOf(d.label)].change = "dem") &&
+                        update(states) :
+                        d.change == "dem" ?
+                            (states[labels.indexOf(d.label)].change = "none") &&
+                            update(states) : (states[labels.indexOf(d.label)].change = "none") &&
+                            update(states)
+            });
+        sbs.selectAll("at")
+            .data(statebars)
+            .enter()
+            .append("text").attr("class", "changing")
+            .text(d => d.win > 50 ? "Trump " + nf(d.win) + "%" : "Biden " + nf(100 - d.win) + "%")
+            .attr("x", (d, i) => i % 5 * 100 + 50)
+            .attr("y", (d, i) => Math.floor(i / 5) * 55 + 60)
+            .style("font-weight", d => d.change == "none" ? 100 : 500)
+            .attr("font-size", "8")
+            .attr("fill", d => d.change == "gop" ? colors[0] : d.change == "dem" ? colors[1] : "black")
+            .attr("text-anchor", "middle")
 
 
 
@@ -447,6 +525,7 @@ function ready(error, us, data, input) {
             .attr("fill", "black")
             .attr("text-anchor", "middle")
             .attr("dominant-baseline", "central")
+
         sbs.append("text").attr("class", "changing")
             .text(reset == "yes" ? "" : "updated")
             .attr("x", (d, i) => i % 5 * 100 + 50)
