@@ -1,11 +1,10 @@
 var widthmap = 1020
 var heightmap = 500
-var bubble_info = [{ "state": "Alabama", "label": "AL", "radius": 16.43, "x": 413, "y": 332 }, { "state": "Alaska", "label": "AK", "radius": 9.49, "x": 41, "y": 19 }, { "state": "Arizona", "label": "AZ", "radius": 18.17, "x": 172, "y": 282 }, { "state": "Arkansas", "label": "AR", "radius": 13.42, "x": 325, "y": 290 }, { "state": "California", "label": "CA", "radius": 40.62, "x": 103, "y": 237 }, { "state": "Colorado", "label": "CO", "radius": 16.43, "x": 224, "y": 249 }, { "state": "Connecticut", "label": "CT", "radius": 14.49, "x": 586, "y": 128 }, { "state": "Delaware", "label": "DE", "radius": 9.49, "x": 557, "y": 183 }, { "state": "District of Columbia", "label": "DC", "radius": 9.49, "x": 536, "y": 193 }, { "state": "Florida", "label": "FL", "radius": 29.5, "x": 483, "y": 380 }, { "state": "Georgia", "label": "GA", "radius": 21.91, "x": 443, "y": 298 }, { "state": "Hawaii", "label": "HI", "radius": 10.95, "x": 88, "y": 372 }, { "state": "Idaho", "label": "ID", "radius": 10.95, "x": 188, "y": 173 }, { "state": "Illinois", "label": "IL", "radius": 24.49, "x": 359, "y": 207 }, { "state": "Indiana", "label": "IN", "radius": 18.17, "x": 413, "y": 207 }, { "state": "Iowa", "label": "IA", "radius": 13.42, "x": 306, "y": 195 }, { "state": "Kansas", "label": "KS", "radius": 13.42, "x": 266, "y": 248 }, { "state": "Kentucky", "label": "KY", "radius": 15.49, "x": 411, "y": 251 }, { "state": "Louisiana", "label": "LA", "radius": 15.49, "x": 326, "y": 335 }, { "state": "Maine", "label": "ME", "radius": 7.75, "x": 628, "y": 26 }, { "state": "Maryland", "label": "MD", "radius": 17.32, "x": 505, "y": 185 }, { "state": "Massachusetts", "label": "MA", "radius": 18.17, "x": 607, "y": 89 }, { "state": "Michigan", "label": "MI", "radius": 21.91, "x": 418, "y": 149 }, { "state": "Minnesota", "label": "MN", "radius": 17.32, "x": 304, "y": 142 }, { "state": "Mississippi", "label": "MS", "radius": 13.42, "x": 373, "y": 324 }, { "state": "Missouri", "label": "MO", "radius": 17.32, "x": 329, "y": 251 }, { "state": "Montana", "label": "MT", "radius": 9.49, "x": 206, "y": 131 }, { "state": "Nebraska", "label": "NE", "radius": 7.75, "x": 258, "y": 209 }, { "state": "Nevada", "label": "NV", "radius": 13.42, "x": 167, "y": 220 }, { "state": "New Hampshire", "label": "NH", "radius": 10.95, "x": 612, "y": 54 }, { "state": "New Jersey", "label": "NJ", "radius": 20.49, "x": 551, "y": 147 }, { "state": "New Mexico", "label": "NM", "radius": 12.25, "x": 215, "y": 303 }, { "state": "New York", "label": "NY", "radius": 29.5, "x": 548, "y": 81 }, { "state": "North Carolina", "label": "NC", "radius": 21.21, "x": 499, "y": 278 }, { "state": "North Dakota", "label": "ND", "radius": 9.49, "x": 257, "y": 136 }, { "state": "Ohio", "label": "OH", "radius": 23.24, "x": 459, "y": 191 }, { "state": "Oklahoma", "label": "OK", "radius": 14.49, "x": 270, "y": 294 }, { "state": "Oregon", "label": "OR", "radius": 14.49, "x": 124, "y": 176 }, { "state": "Pennsylvania", "label": "PA", "radius": 24.49, "x": 498, "y": 132 }, { "state": "Rhode Island", "label": "RI", "radius": 10.95, "x": 619, "y": 126 }, { "state": "South Carolina", "label": "SC", "radius": 16.43, "x": 487, "y": 322 }, { "state": "South Dakota", "label": "SD", "radius": 9.49, "x": 257, "y": 167 }, { "state": "Tennessee", "label": "TN", "radius": 18.17, "x": 379, "y": 284 }, { "state": "Texas", "label": "TX", "radius": 33.76, "x": 271, "y": 355 }, { "state": "Utah", "label": "UT", "radius": 13.42, "x": 204, "y": 218 }, { "state": "Vermont", "label": "VT", "radius": 9.49, "x": 585, "y": 47 }, { "state": "Virginia", "label": "VA", "radius": 19.75, "x": 508, "y": 229 }, { "state": "Washington", "label": "WA", "radius": 18.97, "x": 154, "y": 131 }, { "state": "West Virginia", "label": "WV", "radius": 12.25, "x": 451, "y": 242 }, { "state": "Wisconsin", "label": "WI", "radius": 17.32, "x": 359, "y": 146 }, { "state": "Wyoming", "label": "WY", "radius": 9.49, "x": 214, "y": 177 }, { "state": "Maine-1", "label": "NE1", "radius": 5.48, "x": 612, "y": 26 }, { "state": "Maine-2", "label": "NE2", "radius": 5.48, "x": 644, "y": 26 }, { "state": "Nebraska-1", "label": "NE1", "radius": 5.48, "x": 242, "y": 209 }, { "state": "Nebraska-2", "label": "NE2", "radius": 5.48, "x": 258, "y": 193 }, { "state": "Nebraska-3", "label": "NE3", "radius": 5.48, "x": 274, "y": 209 }, { "state": "US", "label": "US", "radius": 5.48, "x": 274, "y": 209 }]
+var bubble_info = [{ "state": "Alabama", "label": "AL", "radius": 16.43, "x": 413, "y": 332 }, { "state": "Alaska", "label": "AK", "radius": 9.49, "x": 41, "y": 19 }, { "state": "Arizona", "label": "AZ", "radius": 18.17, "x": 172, "y": 282 }, { "state": "Arkansas", "label": "AR", "radius": 13.42, "x": 325, "y": 290 }, { "state": "California", "label": "CA", "radius": 40.62, "x": 103, "y": 237 }, { "state": "Colorado", "label": "CO", "radius": 16.43, "x": 224, "y": 249 }, { "state": "Connecticut", "label": "CT", "radius": 14.49, "x": 586, "y": 128 }, { "state": "Delaware", "label": "DE", "radius": 9.49, "x": 557, "y": 183 }, { "state": "District of Columbia", "label": "DC", "radius": 9.49, "x": 536, "y": 193 }, { "state": "Florida", "label": "FL", "radius": 29.5, "x": 483, "y": 380 }, { "state": "Georgia", "label": "GA", "radius": 21.91, "x": 443, "y": 298 }, { "state": "Hawaii", "label": "HI", "radius": 10.95, "x": 88, "y": 372 }, { "state": "Idaho", "label": "ID", "radius": 10.95, "x": 188, "y": 173 }, { "state": "Illinois", "label": "IL", "radius": 24.49, "x": 359, "y": 207 }, { "state": "Indiana", "label": "IN", "radius": 18.17, "x": 413, "y": 207 }, { "state": "Iowa", "label": "IA", "radius": 13.42, "x": 306, "y": 195 }, { "state": "Kansas", "label": "KS", "radius": 13.42, "x": 266, "y": 248 }, { "state": "Kentucky", "label": "KY", "radius": 15.49, "x": 411, "y": 251 }, { "state": "Louisiana", "label": "LA", "radius": 15.49, "x": 326, "y": 335 }, { "state": "Maine", "label": "ME", "radius": 7.75, "x": 628, "y": 26 }, { "state": "Maryland", "label": "MD", "radius": 17.32, "x": 505, "y": 185 }, { "state": "Massachusetts", "label": "MA", "radius": 18.17, "x": 607, "y": 89 }, { "state": "Michigan", "label": "MI", "radius": 21.91, "x": 418, "y": 149 }, { "state": "Minnesota", "label": "MN", "radius": 17.32, "x": 304, "y": 142 }, { "state": "Mississippi", "label": "MS", "radius": 13.42, "x": 373, "y": 324 }, { "state": "Missouri", "label": "MO", "radius": 17.32, "x": 329, "y": 251 }, { "state": "Montana", "label": "MT", "radius": 9.49, "x": 206, "y": 131 }, { "state": "Nebraska", "label": "NE", "radius": 7.75, "x": 258, "y": 209 }, { "state": "Nevada", "label": "NV", "radius": 13.42, "x": 167, "y": 220 }, { "state": "New Hampshire", "label": "NH", "radius": 10.95, "x": 612, "y": 54 }, { "state": "New Jersey", "label": "NJ", "radius": 20.49, "x": 551, "y": 147 }, { "state": "New Mexico", "label": "NM", "radius": 12.25, "x": 215, "y": 303 }, { "state": "New York", "label": "NY", "radius": 29.5, "x": 548, "y": 81 }, { "state": "North Carolina", "label": "NC", "radius": 21.21, "x": 499, "y": 278 }, { "state": "North Dakota", "label": "ND", "radius": 9.49, "x": 257, "y": 136 }, { "state": "Ohio", "label": "OH", "radius": 23.24, "x": 459, "y": 191 }, { "state": "Oklahoma", "label": "OK", "radius": 14.49, "x": 270, "y": 294 }, { "state": "Oregon", "label": "OR", "radius": 14.49, "x": 124, "y": 176 }, { "state": "Pennsylvania", "label": "PA", "radius": 24.49, "x": 498, "y": 132 }, { "state": "Rhode Island", "label": "RI", "radius": 10.95, "x": 619, "y": 126 }, { "state": "South Carolina", "label": "SC", "radius": 16.43, "x": 487, "y": 322 }, { "state": "South Dakota", "label": "SD", "radius": 9.49, "x": 257, "y": 167 }, { "state": "Tennessee", "label": "TN", "radius": 18.17, "x": 379, "y": 284 }, { "state": "Texas", "label": "TX", "radius": 33.76, "x": 271, "y": 355 }, { "state": "Utah", "label": "UT", "radius": 13.42, "x": 204, "y": 218 }, { "state": "Vermont", "label": "VT", "radius": 9.49, "x": 585, "y": 47 }, { "state": "Virginia", "label": "VA", "radius": 19.75, "x": 508, "y": 229 }, { "state": "Washington", "label": "WA", "radius": 18.97, "x": 154, "y": 131 }, { "state": "West Virginia", "label": "WV", "radius": 12.25, "x": 451, "y": 242 }, { "state": "Wisconsin", "label": "WI", "radius": 17.32, "x": 359, "y": 146 }, { "state": "Wyoming", "label": "WY", "radius": 9.49, "x": 214, "y": 177 }, { "state": "Maine-1", "label": "NE-1", "radius": 5.48, "x": 612, "y": 26 }, { "state": "Maine-2", "label": "NE-2", "radius": 5.48, "x": 644, "y": 26 }, { "state": "Nebraska-1", "label": "NE-1", "radius": 5.48, "x": 242, "y": 209 }, { "state": "Nebraska-2", "label": "NE-2", "radius": 5.48, "x": 258, "y": 193 }, { "state": "Nebraska-3", "label": "NE-3", "radius": 5.48, "x": 274, "y": 209 }, { "state": "US", "label": "US", "radius": 5.48, "x": 274, "y": 209 }]
 var states = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "District of Columbia", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming", "Maine-1", "Maine-2", "Nebraska-1", "Nebraska-2", "Nebraska-3", "US"]
 var map_states = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "District of Columbia", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"]
-var map_labels = [{ "state": "Alabama", "label": "AL", "xValue": 637, "yValue": 338.6934 }, { "state": "Alaska", "label": "AK", "xValue": 245, "yValue": 400 }, { "state": "Arizona", "label": "AZ", "xValue": 315, "yValue": 306.5801 }, { "state": "Arkansas", "label": "AR", "xValue": 560, "yValue": 315.6387 }, { "state": "California", "label": "CA", "xValue": 223, "yValue": 245.9219 }, { "state": "Colorado", "label": "CO", "xValue": 400, "yValue": 240.5645 }, { "state": "Connecticut", "label": "CT", "xValue": -1000, "yValue": -1000 }, { "state": "Delaware", "label": "DE", "xValue": -1000, "yValue": -1000 }, { "state": "District of Columbia", "label": "DC", "xValue": -1000, "yValue": -1000 }, { "state": "Florida", "label": "FL", "xValue": 714, "yValue": 397.8154 }, { "state": "Georgia", "label": "GA", "xValue": 680.0117, "yValue": 335.2354 }, { "state": "Hawaii", "label": "HI", "xValue": 380, "yValue": 465 }, { "state": "Idaho", "label": "ID", "xValue": 310.1851, "yValue": 155 }, { "state": "Illinois", "label": "IL", "xValue": 596.6602, "yValue": 225.2954 }, { "state": "Indiana", "label": "IN", "xValue": 633.4111, "yValue": 223.4214 }, { "state": "Iowa", "label": "IA", "xValue": 545.8457, "yValue": 198.6782 }, { "state": "Kansas", "label": "KS", "xValue": 487, "yValue": 255.1592 }, { "state": "Kentucky", "label": "KY", "xValue": 655.1484, "yValue": 264.9658 }, { "state": "Louisiana", "label": "LA", "xValue": 561.4404, "yValue": 369.8135 }, { "state": "Maine", "label": "ME", "xValue": 807.3105, "yValue": 109.855 }, { "state": "Maryland", "label": "MD", "xValue": -1000, "yValue": -1000 }, { "state": "Massachusetts", "label": "MA", "xValue": -1000, "yValue": -1000 }, { "state": "Michigan", "label": "MI", "xValue": 645.6465, "yValue": 181.3647 }, { "state": "Minnesota", "label": "MN", "xValue": 530.8594, "yValue": 141.5874 }, { "state": "Mississippi", "label": "MS", "xValue": 598.6016, "yValue": 342.1514 }, { "state": "Missouri", "label": "MO", "xValue": 557, "yValue": 255.123 }, { "state": "Montana", "label": "MT", "xValue": 370.0981, "yValue": 112.7705 }, { "state": "Nebraska", "label": "NE", "xValue": 473.8364, "yValue": 210.0527 }, { "state": "Nevada", "label": "NV", "xValue": 267.8765, "yValue": 219.0957 }, { "state": "New Hampshire", "label": "NH", "xValue": -1000, "yValue": -1000 }, { "state": "New Jersey", "label": "NJ", "xValue": 785, "yValue": 210 }, { "state": "New Mexico", "label": "NM", "xValue": 385.3774, "yValue": 314.1035 }, { "state": "New York", "label": "NY", "xValue": 753.5781, "yValue": 160.2588 }, { "state": "North Carolina", "label": "NC", "xValue": 728.6084, "yValue": 280.5029 }, { "state": "North Dakota", "label": "ND", "xValue": 467.0742, "yValue": 112.3823 }, { "state": "Ohio", "label": "OH", "xValue": 670.7197, "yValue": 215.4883 }, { "state": "Oklahoma", "label": "OK", "xValue": 500.1963, "yValue": 306.418 }, { "state": "Oregon", "label": "OR", "xValue": 240.2783, "yValue": 139.5654 }, { "state": "Pennsylvania", "label": "PA", "xValue": 730.3535, "yValue": 195.856 }, { "state": "Rhode Island", "label": "RI", "xValue": -1000, "yValue": -1000 }, { "state": "South Carolina", "label": "SC", "xValue": 712.4395, "yValue": 310.6387 }, { "state": "South Dakota", "label": "SD", "xValue": 468.0742, "yValue": 158.5166 }, { "state": "Tennessee", "label": "TN", "xValue": 640.8594, "yValue": 290.8193 }, { "state": "Texas", "label": "TX", "xValue": 480.9902, "yValue": 368.2861 }, { "state": "Utah", "label": "UT", "xValue": 330.1084, "yValue": 230.978 }, { "state": "Vermont", "label": "VT", "xValue": -1000, "yValue": -1000 }, { "state": "Virginia", "label": "VA", "xValue": 731.0264, "yValue": 252.7842 }, { "state": "Washington", "label": "WA", "xValue": 256.9365, "yValue": 88.0762 }, { "state": "West Virginia", "label": "WV", "xValue": 701, "yValue": 243 }, { "state": "Wisconsin", "label": "WI", "xValue": 585.2529, "yValue": 163.2588 }, { "state": "Wyoming", "label": "WY", "xValue": 385.9287, "yValue": 175.6255 }, { "state": "Maine-1", "label": "ME1", "xValue": -1000, "yValue": -1000 }, { "state": "Maine-2", "label": "ME2", "xValue": -1000, "yValue": -1000 }, { "state": "Nebraska-1", "label": "NE1", "xValue": -1000, "yValue": -1000 }, { "state": "Nebraska-2", "label": "NE2", "xValue": -1000, "yValue": -1000 }, { "state": "Nebraska-3", "label": "NE3", "xValue": -1000, "yValue": -1000 }, { "state": "US", "label": "US", "xValue": -1000, "yValue": -1000 }]
+var map_labels = [{ "state": "Alabama", "label": "AL", "xValue": 637, "yValue": 338.6934 }, { "state": "Alaska", "label": "AK", "xValue": 245, "yValue": 400 }, { "state": "Arizona", "label": "AZ", "xValue": 315, "yValue": 306.5801 }, { "state": "Arkansas", "label": "AR", "xValue": 560, "yValue": 315.6387 }, { "state": "California", "label": "CA", "xValue": 223, "yValue": 245.9219 }, { "state": "Colorado", "label": "CO", "xValue": 400, "yValue": 240.5645 }, { "state": "Connecticut", "label": "CT", "xValue": -1000, "yValue": -1000 }, { "state": "Delaware", "label": "DE", "xValue": -1000, "yValue": -1000 }, { "state": "District of Columbia", "label": "DC", "xValue": -1000, "yValue": -1000 }, { "state": "Florida", "label": "FL", "xValue": 714, "yValue": 397.8154 }, { "state": "Georgia", "label": "GA", "xValue": 680.0117, "yValue": 335.2354 }, { "state": "Hawaii", "label": "HI", "xValue": 380, "yValue": 465 }, { "state": "Idaho", "label": "ID", "xValue": 310.1851, "yValue": 155 }, { "state": "Illinois", "label": "IL", "xValue": 596.6602, "yValue": 225.2954 }, { "state": "Indiana", "label": "IN", "xValue": 633.4111, "yValue": 223.4214 }, { "state": "Iowa", "label": "IA", "xValue": 545.8457, "yValue": 198.6782 }, { "state": "Kansas", "label": "KS", "xValue": 487, "yValue": 255.1592 }, { "state": "Kentucky", "label": "KY", "xValue": 655.1484, "yValue": 264.9658 }, { "state": "Louisiana", "label": "LA", "xValue": 561.4404, "yValue": 369.8135 }, { "state": "Maine", "label": "ME", "xValue": 807.3105, "yValue": 109.855 }, { "state": "Maryland", "label": "MD", "xValue": -1000, "yValue": -1000 }, { "state": "Massachusetts", "label": "MA", "xValue": -1000, "yValue": -1000 }, { "state": "Michigan", "label": "MI", "xValue": 645.6465, "yValue": 181.3647 }, { "state": "Minnesota", "label": "MN", "xValue": 530.8594, "yValue": 141.5874 }, { "state": "Mississippi", "label": "MS", "xValue": 598.6016, "yValue": 342.1514 }, { "state": "Missouri", "label": "MO", "xValue": 557, "yValue": 255.123 }, { "state": "Montana", "label": "MT", "xValue": 370.0981, "yValue": 112.7705 }, { "state": "Nebraska", "label": "NE", "xValue": 473.8364, "yValue": 210.0527 }, { "state": "Nevada", "label": "NV", "xValue": 267.8765, "yValue": 219.0957 }, { "state": "New Hampshire", "label": "NH", "xValue": -1000, "yValue": -1000 }, { "state": "New Jersey", "label": "NJ", "xValue": 785, "yValue": 210 }, { "state": "New Mexico", "label": "NM", "xValue": 385.3774, "yValue": 314.1035 }, { "state": "New York", "label": "NY", "xValue": 753.5781, "yValue": 160.2588 }, { "state": "North Carolina", "label": "NC", "xValue": 728.6084, "yValue": 280.5029 }, { "state": "North Dakota", "label": "ND", "xValue": 467.0742, "yValue": 112.3823 }, { "state": "Ohio", "label": "OH", "xValue": 670.7197, "yValue": 215.4883 }, { "state": "Oklahoma", "label": "OK", "xValue": 500.1963, "yValue": 306.418 }, { "state": "Oregon", "label": "OR", "xValue": 240.2783, "yValue": 139.5654 }, { "state": "Pennsylvania", "label": "PA", "xValue": 730.3535, "yValue": 195.856 }, { "state": "Rhode Island", "label": "RI", "xValue": -1000, "yValue": -1000 }, { "state": "South Carolina", "label": "SC", "xValue": 712.4395, "yValue": 310.6387 }, { "state": "South Dakota", "label": "SD", "xValue": 468.0742, "yValue": 158.5166 }, { "state": "Tennessee", "label": "TN", "xValue": 640.8594, "yValue": 290.8193 }, { "state": "Texas", "label": "TX", "xValue": 480.9902, "yValue": 368.2861 }, { "state": "Utah", "label": "UT", "xValue": 330.1084, "yValue": 230.978 }, { "state": "Vermont", "label": "VT", "xValue": -1000, "yValue": -1000 }, { "state": "Virginia", "label": "VA", "xValue": 731.0264, "yValue": 252.7842 }, { "state": "Washington", "label": "WA", "xValue": 256.9365, "yValue": 88.0762 }, { "state": "West Virginia", "label": "WV", "xValue": 701, "yValue": 243 }, { "state": "Wisconsin", "label": "WI", "xValue": 585.2529, "yValue": 163.2588 }, { "state": "Wyoming", "label": "WY", "xValue": 385.9287, "yValue": 175.6255 }, { "state": "Maine-1", "label": "ME-1", "xValue": -1000, "yValue": -1000 }, { "state": "Maine-2", "label": "ME-2", "xValue": -1000, "yValue": -1000 }, { "state": "Nebraska-1", "label": "NE-1", "xValue": -1000, "yValue": -1000 }, { "state": "Nebraska-2", "label": "NE-2", "xValue": -1000, "yValue": -1000 }, { "state": "Nebraska-3", "label": "NE-3", "xValue": -1000, "yValue": -1000 }, { "state": "US", "label": "US", "xValue": -1000, "yValue": -1000 }]
 var nf = d3.format(".1f")
-var wf = d3.format(".0f")
 var colors = ["#FF6060", "#0091FF", "#FFE130"]
 
 var category = ["gop", "dem", "third"]
@@ -43,7 +42,7 @@ var overviewPhone = d3.select("#overviewPhone")
     .attr("viewBox", '75 -50 900 200');
 var sbs = d3.select("#states")
     .append("svg")
-    .attr("viewBox", '0 0 250 2000');
+    .attr("viewBox", '0 0 500 680');
 
 queue()
     .defer(d3.json, "https://projects.jhkforecasts.com/presidential-forecast/us-states.json")
@@ -363,7 +362,7 @@ function ready(error, us, data, input) {
             .attr("text-anchor", "end")
 
 
-        overviewPhone.append("text")
+            overviewPhone.append("text")
             .attr("class", "changing")
             .text("Avg. Electoral Votes")
             .attr("y", 125)
@@ -406,7 +405,7 @@ function ready(error, us, data, input) {
             .attr("fill", colors[1])
             .attr("text-anchor", "start")
 
-        overviewPhone.append("text").attr("class", "changing")
+            overviewPhone.append("text").attr("class", "changing")
             .text(simulations == 0 ? 'ツ' : nf(100 - states[states.length - 1].win) + "%")
             .attr("x", 255)
             .attr("y", 0)
@@ -426,7 +425,7 @@ function ready(error, us, data, input) {
             .attr("fill", "black")
             .attr("text-anchor", "start")
 
-        overviewPhone.append("text").attr("class", "changing")
+            overviewPhone.append("text").attr("class", "changing")
             .text("Joseph Biden")
             .attr("x", 255)
             .attr("y", -30)
@@ -491,7 +490,7 @@ function ready(error, us, data, input) {
                 update(states, "yes")
             })
 
-        overviewPhone.append("text")
+            overviewPhone.append("text")
             .attr("class", "changing")
             .text("Click Here to restart")
             .attr("y", -10)
@@ -626,20 +625,19 @@ function ready(error, us, data, input) {
 
         var statebars = states.slice(0, states.length - 1)
         console.log(statebars)
-        statebars.sort((a,b)=>Math.abs(50-a.win)-Math.abs(50-b.win))
+
         sbs.selectAll("at")
             .data(statebars)
             .enter()
             .append("text").attr("class", "changing")
-            .text(d => d.label)
-            .attr("x", (d, i) => 20)
-            .attr("y", (d, i) => i * 40 + 60)
+            .text(d => d.state == "District of Columbia" ? "DC" : d.state)
+            .attr("x", (d, i) => i % 5 * 100 + 50)
+            .attr("y", (d, i) => Math.floor(i / 5) * 55 + 20)
             .style("font-weight", d => d.change == "none" ? 100 : 500)
-            .attr("font-size", "20")
+            .attr("font-size", "10")
             .attr("fill", d => d.change == "gop" ? colors[0] : d.change == "dem" ? colors[1] : "black")
             .attr("text-anchor", "middle")
             .attr("cursor", "pointer")
-            .attr("dominant-baseline", "central")
             .on("click", function (d, i) {
                 d.change == "none" ?
                     (states[Stateslabels.indexOf(d.state)].change = "gop") &&
@@ -652,77 +650,105 @@ function ready(error, us, data, input) {
                             update(states) : (states[Stateslabels.indexOf(d.state)].change = "none") &&
                             update(states)
             });
+        sbs.selectAll("at")
+            .data(statebars)
+            .enter()
+            .append("text").attr("class", "changing")
+            .text(d => d.win > 50 ? "Trump " + nf(d.win) + "%" : "Biden " + nf(100 - d.win) + "%")
+            .attr("x", (d, i) => i % 5 * 100 + 50)
+            .attr("y", (d, i) => Math.floor(i / 5) * 55 + 60)
+            .style("font-weight", d => d.change == "none" ? 100 : 500)
+            .attr("font-size", "8")
+            .attr("fill", d => d.change == "gop" ? colors[0] : d.change == "dem" ? colors[1] : "black")
+            .attr("text-anchor", "middle")
+
+
 
         sbs.selectAll("at")
             .data(statebars)
             .enter()
             .append("rect").attr("class", "changing")
-            .attr("x", (d, i) => 60)
-            .attr("y", (d, i) => i * 40 + 45)
-            .attr("height", "30")
-            .attr("width", "80")
-            .attr("fill", d => color(d.original))
-
+            .attr("x", (d, i) => i % 5 * 100 + 10)
+            .attr("y", (d, i) => Math.floor(i / 5) * 55 + 25)
+            .style("font-weight", 100)
+            .attr("font-size", "10")
+            .attr("fill", color(20))
+            .attr("width", 80)
+            .attr("height", 10)
+            .attr("stroke", "white")
+            .attr("stroke-width", .5)
 
         sbs.selectAll("at")
             .data(statebars)
             .enter()
             .append("rect").attr("class", "changing")
-            .attr("x", (d, i) => 160)
-            .attr("y", (d, i) => i * 40 + 45)
-            .attr("height", "30")
-            .attr("width", "80")
-            .style("fill", d => reset == "yes" ? "none" : simNum == 1 ? "white" : simulationsPrev == 0 ? "white" : color(d.prev))
+            .attr("x", (d, i) => i % 5 * 100 + 10)
+            .attr("y", (d, i) => Math.floor(i / 5) * 55 + 35)
+            .style("font-weight", 100)
+            .attr("font-size", "10")
+            .attr("fill", color(20))
+            .attr("width", hardReset == "yes" ? 0 : simNum.length == 2 ? 0 : simulationsPrev == 0 ? 0 : 80)
+            .attr("height", 10)
+            .attr("stroke", "white")
+            .attr("stroke-width", .5)
             .transition()
             .duration(500)
-            .style("fill", d => reset == "yes" ? "none" : simulations == 0 ? "none" : color(d.win))
-
-        sbs.selectAll("at")
-            .data(statebars)
-            .enter()
-            .append("text").attr("class", "changing")
-            .text(d => (d.original > 50 ? wf(d.original) : wf(100 - d.original)) + "%")
-            .attr("x", (d, i) => 100)
-            .attr("y", (d, i) => i * 40 + 60)
-            .style("font-weight", 500)
-            .attr("font-size", "15")
-            .attr("fill", d => Math.abs(50 - d.original) > 20 ? "white" : 'Black')
-            .attr("text-anchor", "middle")
-            .attr("dominant-baseline", "central")
+            .attr("width", d => hardReset == "yes" ? 0 : simulations == 0 ? 0 : 80)
 
 
         sbs.selectAll("at")
             .data(statebars)
             .enter()
+            .append("rect").attr("class", "changing")
+            .attr("x", (d, i) => i % 5 * 100 + 10)
+            .attr("y", (d, i) => Math.floor(i / 5) * 55 + 25)
+            .style("font-weight", 100)
+            .attr("font-size", "10")
+            .attr("fill", color(80))
+            .attr("width", d => d.original * .8)
+            .attr("height", 10)
+            .attr("stroke", "white")
+            .attr("stroke-width", .5)
+
+        sbs.selectAll("at")
+            .data(statebars)
+            .enter()
+            .append("rect").attr("class", "changing")
+            .attr("x", (d, i) => i % 5 * 100 + 10)
+            .attr("y", (d, i) => Math.floor(i / 5) * 55 + 35)
+            .style("font-weight", 100)
+            .attr("font-size", "10")
+            .attr("fill", color(80))
+            .attr("width", d => hardReset == "yes" ? 0 : simNum.length == 2 ? 0 : simulationsPrev == 0 ? 0 : d.prev * .8)
+            .attr("height", 10)
+            .attr("stroke", "white")
+            .attr("stroke-width", .5)
+            .transition()
+            .duration(500)
+            .attr("width", d => hardReset == "yes" ? 0 : simulations == 0 ? 0 : d.win * .8)
+
+        sbs
             .append("text").attr("class", "changing")
-            .text(d => reset == "yes" ? "" : simulations == 0 ? "" : (d.win > 50 ? wf(d.win) : wf(100 - d.win)) + "%")
-            .attr("x", (d, i) => 200)
-            .attr("y", (d, i) => i * 40 + 60)
-            .style("font-weight", 500)
-            .attr("font-size", "15")
-            .attr("fill", d => Math.abs(50 - d.win) > 20 ? "white" : 'Black')
+            .text("starting")
+            .attr("x", (d, i) => i % 5 * 100 + 50)
+            .attr("y", (d, i) => Math.floor(i / 5) * 55 + 30)
+            .style("font-weight", 100)
+            .attr("font-size", "8")
+            .attr("fill", "black")
             .attr("text-anchor", "middle")
             .attr("dominant-baseline", "central")
 
         sbs.append("text").attr("class", "changing")
-            .text("Updated")
-            .attr("x", (d, i) => 200)
-            .attr("y", (d, i) => i * 40 + 20)
-            .style("font-weight", 500)
-            .attr("font-size", "15")
-            .attr("fill", 'Black')
+            .text(reset == "yes" ? "" : "updated")
+            .attr("x", (d, i) => i % 5 * 100 + 50)
+            .attr("y", (d, i) => 40)
+            .style("font-weight", 100)
+            .attr("font-size", "8")
+            .attr("fill", "black")
             .attr("text-anchor", "middle")
             .attr("dominant-baseline", "central")
 
-        sbs.append("text").attr("class", "changing")
-            .text("Forecasted")
-            .attr("x", (d, i) => 100)
-            .attr("y", (d, i) => i * 40 + 20)
-            .style("font-weight", 500)
-            .attr("font-size", "15")
-            .attr("fill", 'Black')
-            .attr("text-anchor", "middle")
-            .attr("dominant-baseline", "central")
+
 
         simulations < 20 ?
             d3.selectAll(".mapLegend").remove() &&

@@ -27,78 +27,17 @@
       padding: 5px;
       vertical-align: middle;
     }
-
-    /*#overview {
-      top: 0;
-      position: sticky;
-      background-color: white;
-      border-bottom: black solid 1px;
-    }*/
-
-    #overviewPhone {
+    #overview{
       top: 0;
       position: sticky;
       background-color: white;
       border-bottom: black solid 1px;
     }
-
-    .row,
-    html,
-    body {
-      height: 98%;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    /* Create two unequal columns that floats next to each other */
-    .column {
-      float: left;
-      padding: 5px;
-      /* Should be removed. Only for demonstration */
-    }
-
-    .left {
-      width: 80%;
-      height: 100%;
-      overflow: scroll;
-    }
-
-    .right {
-      width: 20%;
-      border-left: black solid 1px;
-      height: 100%;
-      overflow: scroll;
-    }
-
-    /* Clear floats after the columns */
-    .row:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-
-    @media only screen and (max-width:600px) {
-      .computer {
-        display: none;
-      }
-
-      .phone {
-        display: block;
-      }
-    }
-
-    @media only screen and (min-width:601px) {
-      .computer {
-        display: block;
-        width: 100%;
-        margin-left: 0;
-      }
-
-      .phone {
-        display: none;
-      }
+    #overviewPhone{
+      top: 0;
+      position: sticky;
+      background-color: white;
+      border-bottom: black solid 1px;
     }
   </style>
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -477,21 +416,13 @@
     Presidential
     Forecast Manipulator </h1>
 
-  <div class="row computer">
-    <div class="column left" style="">
-      <div id="overview"></div>
-      <div id="usmap"></div>
-    </div>
-    <div class="column right" style="">
-      <div id="states"></div>
-    </div>
-  </div>
+  
 
-
-  <div class="phone" id="overviewPhone"></div>
-  <div class="computer" id="usmap"></div>
-  <div class="phone" id="usmapPhone"></div>
-
+    <div class="computer"id="overview"></div>
+    <div class="phone"id="overviewPhone"></div>
+    <div class="computer"id="usmap"></div>
+    <div class="phone"id="usmapPhone"></div>
+    <div class="special"id="states"></div>
   </div>
   <hr>
   <a href="https://twitter.com/jhkersting">
@@ -500,13 +431,11 @@
     </h2>
   </a>
   <a href="forecast_methodology">
-    <h2 style="font-weight: 500;color: dodgerblue;text-decoration: underline;font-size: 1.5vw;font-family: sf-mono;">HOW
-      THE MODEL WORKS
+    <h2 style="font-weight: 500;color: dodgerblue;text-decoration: underline;font-size: 1.5vw;font-family: sf-mono;">HOW THE MODEL WORKS
     </h2>
   </a>
   <a href="https://data.jhkforecasts.com/2020-presidential.csv">
-    <h2 style="font-weight: 500;color: dodgerblue;text-decoration: underline;font-size: 1.5vw;font-family: sf-mono;">
-      DOWNLOAD DATA</h2>
+    <h2 style="font-weight: 500;color: dodgerblue;text-decoration: underline;font-size: 1.5vw;font-family: sf-mono;">DOWNLOAD DATA</h2>
   </a>
   <hr>
 
@@ -518,7 +447,7 @@
       (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
   </div>
-  <script src="test.js"></script>
+  <script src="manipulator.js"></script>
 
 
 
