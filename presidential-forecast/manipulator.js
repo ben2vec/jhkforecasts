@@ -29,15 +29,23 @@ var map = d3.select("#usmap")
     .append("svg")
     .attr("viewBox", '75 45 900 420');
 
+var mapPhone = d3.select("#usmapPhone")
+    .append("svg")
+    .attr("viewBox", '150 45 720 420');
+
 var overview = d3.select("#overview")
     .append("svg")
     .attr("viewBox", '75 -50 900 100');
+
+var overviewPhone = d3.select("#overviewPhone")
+    .append("svg")
+    .attr("viewBox", '75 -50 900 200');
 var sbs = d3.select("#states")
     .append("svg")
     .attr("viewBox", '0 0 500 680');
 
 queue()
-    .defer(d3.json, "https://projects.jhkforecasts.com/presidential-forecast/us.json")
+    .defer(d3.json, "https://projects.jhkforecasts.com/presidential-forecast/us-states.json")
     .defer(d3.csv, "https://data.jhkforecasts.com/2020-presidential-output.csv")
     .defer(d3.csv, "https://data.jhkforecasts.com/2020-pres-input.csv")
     .await(ready);
@@ -85,7 +93,7 @@ function ready(error, us, data, input) {
             d.win = dataNew.filter(d => d[label] == "gop").length * 100 / simulations
         })
         var gopEvAvg = d3.mean(dataNew, d => d.gopEV)
-        var json = topojson.feature(us, us.objects.states)
+        var json = us
         states.forEach(d => {
             var state = d.state
             d.geometry = json.features.filter(d => state == d.properties.name).length == 0 ? "" : json.features.filter(d => state == d.properties.name)[0].geometry
@@ -117,6 +125,19 @@ function ready(error, us, data, input) {
             .duration(500)
             .style("fill", d => simulations == 0 ? "lightgray" : color(d.win));
 
+        mapPhone.selectAll("map2")
+            .data(states)
+            .enter()
+            .append("path")
+            .attr("class", "changing")
+            .attr("d", path)
+            .style("stroke", "#fff")
+            .style("stroke-width", "1")
+            .style("fill", d => simulations == 0 ? "lightgray" : simulationsPrev == 0 ? "lightgray" : reset == "yes" ? color(d.win) : color(d.prev))
+            .transition()
+            .duration(500)
+            .style("fill", d => simulations == 0 ? "lightgray" : color(d.win));
+
         map.selectAll("label")
             .data(states)
             .enter()
@@ -127,6 +148,22 @@ function ready(error, us, data, input) {
             .attr("y", d => d.yv)
             .style("font-family", "sf-mono")
             .style("font-size", 9)
+            .style("fill", d => Math.abs(50 - d.win) < 15 ? "black" : "white")
+            .attr("dominant-baseline", "central")
+            .attr("text-anchor", "middle")
+            .style("font-weight", 500)
+
+
+        mapPhone.selectAll("label")
+            .data(states)
+            .enter()
+            .append("text")
+            .attr("class", "labels")
+            .text(d => d.label)
+            .attr("x", d => d.xv)
+            .attr("y", d => d.yv)
+            .style("font-family", "sf-mono")
+            .style("font-size", 15)
             .style("fill", d => Math.abs(50 - d.win) < 15 ? "black" : "white")
             .attr("dominant-baseline", "central")
             .attr("text-anchor", "middle")
@@ -145,7 +182,42 @@ function ready(error, us, data, input) {
             .attr("stroke", d => d.change == "none" ? "none" : "black")
             .attr("ry", 3)
 
+        mapPhone.selectAll("label")
+            .data(states)
+            .enter()
+            .append("rect")
+            .attr("class", "changing")
+            .attr("x", d => d.xv - 12.5)
+            .attr("y", d => d.yv - 12.5)
+            .style("width", 25)
+            .style("height", 25)
+            .style("fill", "none")
+            .attr("stroke", d => d.change == "none" ? "none" : "black")
+            .attr("ry", 3)
+
         map.selectAll("map2")
+            .data(states)
+            .enter()
+            .append("path")
+            .attr("class", "statesover changing")
+            .attr("d", path)
+            .style("stroke", "#fff")
+            .style("stroke-width", "1")
+            .style("fill", "none")
+            .on("click", function (d, i) {
+                d.change == "none" ?
+                    (states[labels.indexOf(d.label)].change = "gop") &&
+                    update(states) :
+                    d.change == "gop" ?
+                        (states[labels.indexOf(d.label)].change = "dem") &&
+                        update(states) :
+                        d.change == "dem" ?
+                            (states[labels.indexOf(d.label)].change = "none") &&
+                            update(states) : (states[labels.indexOf(d.label)].change = "none") &&
+                            update(states)
+            });
+
+        mapPhone.selectAll("map2")
             .data(states)
             .enter()
             .append("path")
@@ -180,6 +252,18 @@ function ready(error, us, data, input) {
             .attr("text-anchor", "middle")
             .style("font-weight", 500)
 
+        overviewPhone.append("text")
+            .attr("class", "changing")
+            .text("Simulations where this occurs: " + nf(simulations / 200) + "%")
+            .attr("y", 30)
+            .attr("x", 525)
+            .style("font-family", "sf-mono")
+            .style("font-size", 20)
+            .style("fill", "black")
+            .attr("dominant-baseline", "central")
+            .attr("text-anchor", "middle")
+            .style("font-weight", 500)
+
         overview.append("text")
             .attr("class", "changing")
             .text("(" + simulations + " out of " + 20000 + ")")
@@ -187,6 +271,18 @@ function ready(error, us, data, input) {
             .attr("x", 525)
             .style("font-family", "sf-mono")
             .style("font-size", 15)
+            .style("fill", "#AFAFAf")
+            .attr("dominant-baseline", "central")
+            .attr("text-anchor", "middle")
+            .style("font-weight", 500)
+
+        overviewPhone.append("text")
+            .attr("class", "changing")
+            .text("(" + simulations + " out of " + 20000 + ")")
+            .attr("y", 60)
+            .attr("x", 525)
+            .style("font-family", "sf-mono")
+            .style("font-size", 25)
             .style("fill", "#AFAFAf")
             .attr("dominant-baseline", "central")
             .attr("text-anchor", "middle")
@@ -210,6 +306,28 @@ function ready(error, us, data, input) {
             .attr("font-family", "sf-mono")
             .style("font-weight", "100")
             .attr("font-size", "25")
+            .attr("fill", colors[0])
+            .attr("text-anchor", "end")
+
+
+        overviewPhone.append("text").attr("class", "changing")
+            .text("Donald Trump")
+            .attr("x", 790)
+            .attr("y", -30)
+            .attr("font-family", "sf-mono")
+            .style("font-weight", "100")
+            .attr("font-size", "20")
+            .attr("fill", "black")
+            .attr("text-anchor", "end")
+
+
+        overviewPhone.append("text").attr("class", "changing")
+            .text(simulations == 0 ? 'ツ' : nf(states[states.length - 1].win) + "%")
+            .attr("x", 790)
+            .attr("y", 00)
+            .attr("font-family", "sf-mono")
+            .style("font-weight", "100")
+            .attr("font-size", "30")
             .attr("fill", colors[0])
             .attr("text-anchor", "end")
 
@@ -246,6 +364,39 @@ function ready(error, us, data, input) {
             .attr("text-anchor", "end")
 
 
+            overviewPhone.append("text")
+            .attr("class", "changing")
+            .text("Avg. Electoral Votes")
+            .attr("y", 125)
+            .attr("x", 525)
+            .style("font-family", "sf-mono")
+            .style("font-size", 25)
+            .style("fill", "black")
+            .attr("text-anchor", "middle")
+            .style("font-weight", 500)
+
+        overviewPhone.append("text").attr("class", "changing")
+            .text(simulations == 0 ? '' : nf(gopEvAvg))
+            .attr("x", 700)
+            .attr("y", 125)
+            .attr("font-family", "sf-mono")
+            .style("font-weight", "500")
+            .attr("font-size", "25")
+            .attr("fill", colors[0])
+            .attr("text-anchor", "start")
+
+
+        overviewPhone.append("text").attr("class", "changing")
+            .text(simulations == 0 ? '' : nf(538 - gopEvAvg))
+            .attr("x", 350)
+            .attr("y", 125)
+            .attr("font-family", "sf-mono")
+            .style("font-weight", "500")
+            .attr("font-size", "25")
+            .attr("fill", colors[1])
+            .attr("text-anchor", "end")
+
+
         overview.append("text").attr("class", "changing")
             .text(simulations == 0 ? 'ツ' : nf(100 - states[states.length - 1].win) + "%")
             .attr("x", 200)
@@ -253,6 +404,16 @@ function ready(error, us, data, input) {
             .attr("font-family", "sf-mono")
             .style("font-weight", "100")
             .attr("font-size", "25")
+            .attr("fill", colors[1])
+            .attr("text-anchor", "start")
+
+            overviewPhone.append("text").attr("class", "changing")
+            .text(simulations == 0 ? 'ツ' : nf(100 - states[states.length - 1].win) + "%")
+            .attr("x", 255)
+            .attr("y", 0)
+            .attr("font-family", "sf-mono")
+            .style("font-weight", "100")
+            .attr("font-size", "30")
             .attr("fill", colors[1])
             .attr("text-anchor", "start")
 
@@ -266,12 +427,29 @@ function ready(error, us, data, input) {
             .attr("fill", "black")
             .attr("text-anchor", "start")
 
+            overviewPhone.append("text").attr("class", "changing")
+            .text("Joseph Biden")
+            .attr("x", 255)
+            .attr("y", -30)
+            .style("font-family", "sf-mono")
+            .style("font-weight", "100")
+            .attr("font-size", "20")
+            .attr("fill", "black")
+            .attr("text-anchor", "start")
+
         overview.append("image").attr("class", "changing")
             .attr("xlink:href", d => "https://jhkforecasts.com/Trump-01.png")
             .attr("x", 875)
             .attr("y", -40)
             .attr("width", 75)
             .attr("height", 75)
+
+        overviewPhone.append("image").attr("class", "changing")
+            .attr("xlink:href", d => "https://jhkforecasts.com/Trump-01.png")
+            .attr("x", 800)
+            .attr("y", -40)
+            .attr("width", 150)
+            .attr("height", 150)
 
         overview.append("image").attr("class", "changing")
             .attr("xlink:href", d => "https://jhkforecasts.com/Biden-01.png")
@@ -280,6 +458,13 @@ function ready(error, us, data, input) {
             .attr("width", 75)
             .attr("height", 75)
 
+        overviewPhone.append("image").attr("class", "changing")
+            .attr("xlink:href", d => "https://jhkforecasts.com/Biden-01.png")
+            .attr("x", 100)
+            .attr("y", -40)
+            .attr("width", 150)
+            .attr("height", 150)
+
         overview.append("text")
             .attr("class", "changing")
             .text("Click Here to restart")
@@ -287,6 +472,33 @@ function ready(error, us, data, input) {
             .attr("x", 525)
             .style("font-family", "sf-mono")
             .style("font-size", 15)
+            .style("fill", "dodgerblue")
+            .style("text-decoration", "underline")
+            .attr("dominant-baseline", "central")
+            .attr("text-anchor", "middle")
+            .style("font-weight", 500)
+            .attr("cursor", "pointer")
+            .on("click", d => {
+                states = map_labels.map((d, i) => {
+                    return {
+                        state: d.state,
+                        change: "none",
+                        label: d.label,
+                        xv: d.xValue,
+                        yv: d.yValue,
+                        original: data.filter(d => d[map_labels[i].label] == "gop").length * 100 / 20000
+                    }
+                })
+                update(states, "yes")
+            })
+
+            overviewPhone.append("text")
+            .attr("class", "changing")
+            .text("Click Here to restart")
+            .attr("y", -10)
+            .attr("x", 525)
+            .style("font-family", "sf-mono")
+            .style("font-size", 20)
             .style("fill", "dodgerblue")
             .style("text-decoration", "underline")
             .attr("dominant-baseline", "central")
