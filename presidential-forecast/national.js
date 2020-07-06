@@ -567,7 +567,23 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       .attr("viewBox", "0 0 1400 600")
       .append('g')
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    var timeScale = 86400000
+    var test = d3.select("#time").append("svg")
+      .attr("viewBox", "0 0 1000 200")
 
+    var totalDays = (new Date(2020, 10, 3) - new Date(2020, 2, 1)) / timeScale
+
+    console.log(totalDays)
+
+    test.selectAll("tst")
+      .data(line_data)
+      .enter()
+      .append("rect")
+      .attr("x", (d, i) => 30 + (i * (940 / totalDays)))
+      .attr("y", 50)
+      .attr("width", (d, i) => (940 / totalDays))
+      .attr("height", 50)
+      .attr("fill", d => color(d.gopwin))
 
     var x = d3.scaleTime()
       .rangeRound([margin.left, width - margin.right])
@@ -752,7 +768,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
         var circles = focus.selectAll(".hoverCircle")
           .data(copy)
 
-        
+
 
         time.selectAll(".overlay")
           .on("mouseover", () => focus.style("display", null))
@@ -775,7 +791,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
             .style("font-weight", "100")
             .text(formatDate(d.date));
 
-          
+
 
           focus.select(".lineHover")
             .attr("transform", "translate(" + x(d.date) + "," + height + ")");
