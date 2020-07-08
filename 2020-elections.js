@@ -508,7 +508,7 @@ function ready(error, pres, senate, house, json) {
 
     housesvg
         .append('text')
-        .text(houseRatings[0].seats+houseRatings[1].seats+houseRatings[2].seats)
+        .text(houseRatings[0].seats + houseRatings[1].seats + houseRatings[2].seats)
         .attr('x', '100')
         .attr('y', 50)
         .attr('fill', d => colors[1])
@@ -518,9 +518,9 @@ function ready(error, pres, senate, house, json) {
         .style('font-weight', '100')
         .style('font-family', 'sf-mono')
 
-        housesvg
+    housesvg
         .append('text')
-        .text(houseRatings[4].seats+houseRatings[5].seats+houseRatings[6].seats)
+        .text(houseRatings[4].seats + houseRatings[5].seats + houseRatings[6].seats)
         .attr('x', '900')
         .attr('y', 50)
         .attr('fill', d => colors[0])
