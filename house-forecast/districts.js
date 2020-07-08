@@ -424,7 +424,7 @@ function ready(error, inputData, data) {
         console.log(cities)
         y.domain([
             0,
-            d3.max(cities, d => d3.max(d.values, c => c.pct))
+            input =="win"?100:d3.max(cities, d => d3.max(d.values, c => c.pct))
         ]).nice();
 
         time.selectAll(".y-axis").transition()
