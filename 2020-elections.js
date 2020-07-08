@@ -31,6 +31,7 @@ function ready(error, pres, senate, house, json) {
     var prestoday = pres.slice(pres.length - 57, pres.length)
     var trumpWin = +pres[pres.length - 1].win
     var senateToday = senate.slice(senate.length - 106, senate.length)
+    var houseToday = house.slice(house.length - 436, house.length)
     var array = senate.map(d => {
         return d.forecast_date
     })
@@ -462,6 +463,84 @@ function ready(error, pres, senate, house, json) {
             .attr("fill", d => color(d))
             .attr("stroke", d => color(d))
     }
+
+    var housesvg = d3.select("#house").append("svg")
+        .attr("viewBox", "0 0 1000 120")
+
+    var houseRatings = [
+        { rating: "Solid D", seats: houseToday.filter(d => d.repWin < 5 && d.repWin >= 0).length, color: color(0) },
+        { rating: "Likely D", seats: houseToday.filter(d => d.repWin < 15 && d.repWin >= 5).length, color: color(15) },
+        { rating: "Lean D", seats: houseToday.filter(d => d.repWin < 40 && d.repWin >= 15).length, color: color(35) },
+        { rating: "Tossup", seats: houseToday.filter(d => d.repWin <= 60 && d.repWin >= 40).length, color: color(50) },
+        { rating: "Lean R", seats: houseToday.filter(d => d.repWin <= 85 && d.repWin > 60).length, color: color(65) },
+        { rating: "Likely R", seats: houseToday.filter(d => d.repWin <= 95 && d.repWin > 85).length, color: color(85) },
+        { rating: "Solid R", seats: houseToday.filter(d => d.repWin <= 100 && d.repWin > 95).length, color: color(100) },
+    ]
+
+    housesvg.selectAll("rect1")
+        .data(houseRatings)
+        .enter()
+        .append("rect")
+        .attr("x", (d, i) => i == 0 ? 100 : (d3.sum(houseRatings.slice(0, i), d => d.seats) * (800 / 435) + 100))
+        .attr("y", 70)
+        .attr("width", d => d.seats * (800 / 435))
+        .attr("height", 40)
+        .attr("fill", d => d.color)
+
+    housesvg.append('line')
+        .attr('x1', 100 + 217.5 * (800 / 435))
+        .attr('y1', 65)
+        .attr('x2', 100 + 217.5 * (800 / 435))
+        .attr('y2', 115)
+        .style('stroke', 'lightgray');
+
+    housesvg
+        .append('text')
+        .text('Democrats')
+        .attr('x', '100')
+        .attr('y', 20)
+        .attr('fill', d => 'black')
+        .attr('text-anchor', 'start')
+        .attr('dominant-baseline', 'central')
+        .attr('font-size', 20)
+        .style('font-weight', '100')
+        .style('font-family', 'sf-mono')
+
+    housesvg
+        .append('text')
+        .text(houseRatings[0].seats+houseRatings[1].seats+houseRatings[2].seats)
+        .attr('x', '100')
+        .attr('y', 50)
+        .attr('fill', d => colors[1])
+        .attr('text-anchor', 'start')
+        .attr('dominant-baseline', 'central')
+        .attr('font-size', 20)
+        .style('font-weight', '100')
+        .style('font-family', 'sf-mono')
+
+        housesvg
+        .append('text')
+        .text(houseRatings[4].seats+houseRatings[5].seats+houseRatings[6].seats)
+        .attr('x', '900')
+        .attr('y', 50)
+        .attr('fill', d => colors[0])
+        .attr('text-anchor', 'end')
+        .attr('dominant-baseline', 'central')
+        .attr('font-size', 20)
+        .style('font-weight', '100')
+        .style('font-family', 'sf-mono')
+
+    housesvg
+        .append('text')
+        .text('Republicans')
+        .attr('x', '900')
+        .attr('y', 20)
+        .attr('fill', d => 'black')
+        .attr('text-anchor', 'end')
+        .attr('dominant-baseline', 'central')
+        .attr('font-size', 20)
+        .style('font-weight', '100')
+        .style('font-family', 'sf-mono')
 
 
 }
