@@ -472,7 +472,7 @@ d3.csv("https://data.jhkforecasts.com/senate-candidates.csv", candidates => {
                 .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
             var x = d3.scaleTime()
                 .rangeRound([margin.left, width - margin.right])
-                .domain([new Date(2020, 3, 1), new Date(2020, 10, 3)])
+                .domain([new Date(2020, 2, 1), new Date(2020, 10, 3)])
 
             var y = d3.scaleLinear()
                 .rangeRound([height - margin.bottom, margin.top]);
@@ -632,7 +632,7 @@ d3.csv("https://data.jhkforecasts.com/senate-candidates.csv", candidates => {
                         .attr("font-size", 25)
                         .style("fill", "white")
                         .style("stroke", "white")
-                        .style("stroke-width", 5)
+                        .style("stroke-width", 8)
                         .merge(labels2)
 
                     var labels = focus.selectAll(".lineHoverText")
@@ -694,7 +694,7 @@ d3.csv("https://data.jhkforecasts.com/senate-candidates.csv", candidates => {
                             .attr("text-anchor", (e, i) => i % 2 == 0 ? "start" : "end")
 
                         focus.selectAll(".lineHoverText")
-                            .attr("font-weight", "500")
+                            .style("font-weight", "100")
                             .attr("x", (e, i) => i % 2 == 0 ? x(d.date) + 5 : x(d.date) - 5)
                             .text((e, i) => {
                                 var name = e.split(" ")[e.split(" ").length - 1]

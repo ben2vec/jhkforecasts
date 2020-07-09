@@ -190,14 +190,14 @@ function ready(error, us, inputData, cands, data, hist) {
     })
     var maxDate = timeformat(d3.max(data, d => d.date))
     var today = data.slice(data.length - cands.length - 2, data.length)
-    var updated = today[0].tipping_point
+    var updated = today[today.length-2].tipping_point
     var updated = updated.split(".")[0].toUpperCase() + updated.split(".")[1]
     document.getElementById("updated").innerHTML = "UPDATED: " + updated
 
-    var rep_win_senate = today[0].win
-    var rep_seats = today[0].p_90
-    var dem_seats = today[1].p_90
-    var dem_win_senate = today[1].win
+    var rep_win_senate = today[today.length-2].win
+    var rep_seats = today[today.length-2].p_90
+    var dem_seats = today[today.length-1].p_90
+    var dem_win_senate = today[today.length-1].win
     var upset_odds = Math.min(rep_win_senate, dem_win_senate)
     map.append("image")
         .attr("href", "https://jhkforecasts.com/elephant-01.png")
@@ -873,126 +873,6 @@ function ready(error, us, inputData, cands, data, hist) {
 
 
 
-    var dem_seats = [{ state: "DEM", state_index: "", abbrev: "", win: 0, seats: 35 }]
-    var rep_seats = [{ state: "REP", state_index: "", abbrev: "", win: 100, seats: 30 }]
-    var seats = []
-    var elSeats = []
-    states.forEach((d, i) => {
-        var state = d.state
-        var abbrev = d.label
-        var state_index = d.state_index
-        var win = d3.sum(today.filter(d => d.state_index == state_index && d.party == "REP"), d => d.win)
-        var ps = {
-            state: state,
-            state_index: state_index,
-            abbrev: abbrev,
-            win: win,
-            seats: 1
-        }
-        elSeats.push(ps)
-    })
-    elSeats.sort((a, b) => a.win - b.win)
-    seats.push(dem_seats)
-    seats.push(elSeats)
-    seats.push(rep_seats)
-    var seats = seats.flat()
-
-
-    var arc = d3.arc()
-        .outerRadius(300)
-        .innerRadius(200)
-        ;
-
-    var pie = d3.pie()
-        .sort(null)
-        .value(function (d) {
-            return d.seats;
-        })
-        .startAngle(-2.2)
-        .endAngle(2.2);
-
-
-
-    congress.selectAll(".arc")
-        .data(pie(seats))
-        .enter().append("path")
-        .attr("d", arc)
-        .style("fill", d => color(d.data.win))
-        .attr("stroke", "white");
-
-    congress.selectAll(".arc")
-        .data(pie(seats))
-        .enter().append("text")
-        .attr("transform", function (d) {
-            var _d = arc.centroid(d);
-            _d[0] *= 1.21;
-            _d[1] *= 1.21;
-            var a = (d.startAngle + d.endAngle) * 90 / Math.PI - 90;
-            return "translate(" + _d + ")rotate(" + a + ")";
-        })
-        .style("text-anchor", "start")
-        .style("dominant-baseline", "central")
-        .text(d => d.data.abbrev)
-        .style("font-family", "sf-mono")
-        .attr("font-size", 10);
-
-    congress.append("line")
-        .attr("x1", 0)
-        .attr("x2", 0)
-        .attr("y1", -150)
-        .attr("y2", -500)
-        .attr("stroke", "black")
-
-    congress.append("text")
-        .text("50-50 SPLIT")
-        .attr("y", -120)
-        .attr("x", 0)
-        .attr("fill", "black")
-        .style("font-weight", "100")
-        .style("font-size", "18")
-        .attr("text-anchor", "middle")
-        .attr("dominant-baseline", "top")
-
-    congress.append("text")
-        .text("30 Republican Seats")
-        .attr("y", -120)
-        .attr("x", 400)
-        .attr("fill", "black")
-        .style("font-weight", "100")
-        .style("font-size", "18")
-        .attr("text-anchor", "middle")
-        .attr("dominant-baseline", "top")
-    congress.append("text")
-        .text("not up for Re-election")
-        .attr("y", -120)
-        .attr("x", 400)
-        .attr("fill", "black")
-        .style("font-weight", "100")
-        .style("font-size", "18")
-        .attr("text-anchor", "middle")
-        .attr("dominant-baseline", "top")
-        .attr("dy", "1em")
-
-    congress.append("text")
-        .text("35 Democrat Seats")
-        .attr("y", -120)
-        .attr("x", -400)
-        .attr("fill", "black")
-        .style("font-weight", "100")
-        .style("font-size", "18")
-        .attr("text-anchor", "middle")
-        .attr("dominant-baseline", "top")
-    congress.append("text")
-        .text("not up for Re-election")
-        .attr("y", -120)
-        .attr("x", -400)
-        .attr("fill", "black")
-        .style("font-weight", "100")
-        .style("font-size", "18")
-        .attr("text-anchor", "middle")
-        .attr("dominant-baseline", "top")
-        .attr("dy", "1em")
-
 
     var bars = states.map((d, i) => {
         return {
@@ -1004,8 +884,8 @@ function ready(error, us, inputData, cands, data, hist) {
     today.forEach((d, i) => {
         d.stdev = (+d.vote - +d.p_10) / 1.28
     })
-    var barToday = today.slice(2, today.length)
-
+    var barToday = today.slice(0, today.length-3)
+    console.log(barToday)
     var min_stdev = d3.min(barToday, d => d.stdev)
     var pct = [0, 25, 50, 75, 100]
     var x3 = d3.scaleLinear()
@@ -1032,7 +912,7 @@ function ready(error, us, inputData, cands, data, hist) {
         .attr("dominant-baseline", "bottom")
         .attr("text-anchor", "middle")
 
-
+    console.log(bars)
     bars.forEach((d, i) => {
         var state_index = d.state_index
         cands = d.state == "Arkansas" ? barToday.filter(d => d.state_index == state_index) : barToday.filter(d => d.state_index == state_index).filter(d => d.party == "REP" || d.party == "DEM")
@@ -1158,7 +1038,7 @@ function ready(error, us, inputData, cands, data, hist) {
 
     var x = d3.scaleTime()
         .rangeRound([margin.left, width - margin.right])
-        .domain([new Date(2020, 3, 1), new Date(2020, 10, 3)])
+        .domain([new Date(2020, 2, 1), new Date(2020, 10, 3)])
 
     var y = d3.scaleLinear()
         .rangeRound([540, 20]);
