@@ -31,6 +31,7 @@ function ready(error, pres, senate, house, json) {
     var prestoday = pres.slice(pres.length - 57, pres.length)
     var trumpWin = +pres[pres.length - 1].win
     var senateToday = senate.slice(senate.length - 106, senate.length)
+    var senateRepWin = senate[senate.length-2].win
     var houseToday = house.slice(house.length - 436, house.length)
     var array = senate.map(d => {
         return d.forecast_date
@@ -270,6 +271,55 @@ function ready(error, pres, senate, house, json) {
     })
 
 
+    senatemap
+        .append('text')
+        .text('Republicans')
+        .attr('x', '980')
+        .attr('y', 30)
+        .attr('fill', d => 'black')
+        .attr('text-anchor', 'end')
+        .attr('dominant-baseline', 'central')
+        .attr('font-size', 20)
+        .style('font-weight', '100')
+        .style('font-family', 'sf-mono')
+
+    senatemap
+        .append('text')
+        .text(nf(senateRepWin) + '%')
+        .attr('x', '980')
+        .attr('y', 60)
+        .attr('fill', colors[0])
+        .attr('text-anchor', 'end')
+        .attr('dominant-baseline', 'central')
+        .attr('font-size', 25)
+        .style('font-weight', '100')
+        .style('font-family', 'sf-mono')
+
+
+    senatemap
+        .append('text')
+        .text(nf(100 - senateRepWin) + '%')
+        .attr('x', '20')
+        .attr('y', 60)
+        .attr('fill', colors[1])
+        .attr('text-anchor', 'start')
+        .attr('dominant-baseline', 'central')
+        .attr('font-size', 25)
+        .style('font-weight', '100')
+        .style('font-family', 'sf-mono')
+
+    senatemap
+        .append('text')
+        .text('Democrats')
+        .attr('x', '20')
+        .attr('y', 30)
+        .attr('fill', d => 'black')
+        .attr('text-anchor', 'start')
+        .attr('dominant-baseline', 'central')
+        .attr('font-size', 20)
+        .style('font-weight', '100')
+        .style('font-family', 'sf-mono')
+
     senatemap.selectAll("hhh")
         .data(json.features)
         .enter()
@@ -362,7 +412,9 @@ function ready(error, pres, senate, house, json) {
             var win = d3.sum(stateData.filter(d => d.party == "REP" && d.forecast_date == date), d => d.win)
             timeData.push(win)
         })
-        svg.append('text')
+        svg.append('a')
+            .attr("href",stateData[0].state_index == "Georgia: Class III" ? "/senate-forecast/Georgia-Special" :"/senate-forecast/"+ stateData[0].state)
+            .append("text")
             .text(stateData[0].state_index == "Georgia: Class III" ? "Georgia Special" : stateData[0].state)
             .attr('x', '500')
             .attr('y', 30)
@@ -425,7 +477,7 @@ function ready(error, pres, senate, house, json) {
         var dayWidth = 900 / 216
         var x = d3.scaleTime()
             .rangeRound([50, 950])
-            .domain([new Date(2020, 3, 1), new Date(2020, 10, 3)])
+            .domain([new Date(2020, 2, 1), new Date(2020, 10, 3)])
 
         svg.append("g")
             .attr("class", "x-axis")
