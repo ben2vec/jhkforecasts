@@ -787,7 +787,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
 
     var x = d3.scaleTime()
         .rangeRound([margin.left, width - margin.right])
-        .domain([new Date(2020, 4, 8), new Date(2020, 10, 3)])
+        .domain([new Date(2020, 2, 1), new Date(2020, 10, 3)])
 
     var y = d3.scaleLinear()
         .rangeRound([height - margin.bottom, margin.top]);
