@@ -484,7 +484,7 @@ function ready(error, inputData, data) {
                 .attr("font-size", 25)
                 .style("fill", "white")
                 .style("stroke", "white")
-                .style("stroke-width", 5)
+                .style("stroke-width", 10)
                 .merge(labels2)
 
             var labels = focus.selectAll(".lineHoverText")
@@ -536,7 +536,7 @@ function ready(error, inputData, data) {
                     .attr("cx", x(d.date));
 
                 focus.selectAll(".lineHoverText2")
-                    .style("font-weight", "100")
+                    .style("font-weight", "500")
                     .attr("x", x(d.date) + 10)
                     .text((e, i) => input == "margin" ? "D +" + onevalue(-d[e]) : i == 1 ? ("DEM " + onevalue(d[e])) : i == 0 ? "REP " + onevalue(d[e]) : "Third " + onevalue(d[e]))
                     .attr("y", e => d[e] == d["rep" + input] ? y(d["rep" + input]) > y(d["dem" + input]) ? y(d["rep" + input]) + 15 : y(d["rep" + input]) - 15 : d[e] == d["dem" + input] ? y(d["dem" + input]) > y(d["rep" + input]) ? y(d["dem" + input]) + 15 : y(d["dem" + input]) - 15 : y(d[e]) - 15)
