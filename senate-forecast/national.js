@@ -164,7 +164,18 @@ function ready(error, us, inputData, cands, data, hist) {
     if (error) throw error;
 
     var json = topojson.feature(us, us.objects.states)
+    var mapG = map.append("g")
+    .attr("transform", "translate(0,30)")
 
+mapG.selectAll("path")
+    .data(json.features)
+    .enter()
+    .append("path")
+    .attr("class", "states")
+    .attr("d", path)
+    .style("stroke", "#f0f0f0")
+    .style("fill", "none")
+    .style("stroke-width", "1")
 
     var gaState = json.features.filter(d => d.properties.name == "Georgia")[0];
     var states = inputData.map(d => {
@@ -312,18 +323,7 @@ function ready(error, us, inputData, cands, data, hist) {
     var jsonElection = jsonElection.flat()
 
 
-    var mapG = map.append("g")
-        .attr("transform", "translate(0,30)")
-
-    mapG.selectAll("path")
-        .data(json.features)
-        .enter()
-        .append("path")
-        .attr("class", "states")
-        .attr("d", path)
-        .style("stroke", "#f0f0f0")
-        .style("fill", "none")
-        .style("stroke-width", "1")
+    
 
     mapG.selectAll("labels")
         .data(jsonElection)

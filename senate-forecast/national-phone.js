@@ -1,4 +1,15 @@
+d3.select("#histogramPhone").append("h1")
+    .text("The Uncertainty of the Race")
+    .style("font-size", "3.5vw")
+    .style("font-weight", 900)
+    .style("margin-left", "2%")
 
+d3.select("#histogramPhone").append("p")
+    .text("The race for the Senate majority can be uncertain at times. The distribution below shows the most likely senate compostions")
+    .style("font-size", "20px")
+    .style("font-weight", 400)
+    .style("margin-left", "5%")
+    .style("margin-right", "5%")
 var colors = ["#FF6060", "#0091FF", "#FFE130", "#C473F6", "#31DE70"]
 
 var category = ["REP", "DEM", "LIB", "IND", "GREEN"]
@@ -24,6 +35,7 @@ var color = d3.scaleLinear()
 
 
 
+
 var tformat = d3.timeFormat("%m/%d/%Y")
 var timeformat = d3.timeFormat("%m/%d/%y")
 var dateparse = d3.timeParse("%m/%d/%y")
@@ -39,7 +51,7 @@ var senateSeats = [{ "candidate": "Baldwin, Tammy (D-WI)", "state": "Wisconsin",
 
 var mapPhone = d3.select("#usmapPhone")
     .append("svg")
-    .attr("viewBox", '75 -40 900 550');
+    .attr("viewBox", '125 -40 800 550');
 
 var histogramPhone = d3.select("#histogramPhone")
     .append("svg")
@@ -58,7 +70,7 @@ function ready(error, us, inputData, cands, data, hist) {
 
     var json = topojson.feature(us, us.objects.states)
 
-    var json = topojson.feature(us, us.objects.states)
+
 
 
     var gaState = json.features.filter(d => d.properties.name == "Georgia")[0];
@@ -87,16 +99,20 @@ function ready(error, us, inputData, cands, data, hist) {
     var today = data.slice(data.length - cands.length - 2, data.length)
 
 
-    var rep_win_senate = today[today.length - 2].win
+    var repWinSenate = today[today.length - 2].win
     var rep_seats = today[today.length - 2].p_90
     var dem_seats = today[today.length - 1].p_90
     var dem_win_senate = today[today.length - 1].win
-    var upset_odds = Math.min(rep_win_senate, dem_win_senate)
+    var upset_odds = Math.min(repWinSenate, dem_win_senate)
 
+    var senateWIN = d3.select("#nationalWin")
+        .text("Senate Forecast")
+        .style("color", Math.abs(50 - repWinSenate) > 20 ? "white" : "black")
+        .style("background-color", color(repWinSenate))
 
     mapPhone.append("text")
         .text("Democrats")
-        .attr("x", 115)
+        .attr("x", 135)
         .attr("y", -20)
         .attr("dominant-baseline", "central")
         .attr("text-anchor", "start")
@@ -105,7 +121,7 @@ function ready(error, us, inputData, cands, data, hist) {
 
     mapPhone.append("text")
         .text("Republicans")
-        .attr("x", 935)
+        .attr("x", 915)
         .attr("y", -20)
         .attr("dominant-baseline", "central")
         .attr("text-anchor", "end")
@@ -114,8 +130,8 @@ function ready(error, us, inputData, cands, data, hist) {
 
 
     mapPhone.append("text")
-        .text(nf(rep_win_senate) + "%")
-        .attr("x", 935)
+        .text(nf(repWinSenate) + "%")
+        .attr("x", 915)
         .attr("y", 20)
         .attr("dominant-baseline", "central")
         .attr("text-anchor", "end")
@@ -126,7 +142,7 @@ function ready(error, us, inputData, cands, data, hist) {
 
     mapPhone.append("text")
         .text(nf(dem_win_senate) + "%")
-        .attr("x", 115)
+        .attr("x", 135)
         .attr("y", 20)
         .attr("dominant-baseline", "central")
         .attr("text-anchor", "start")
@@ -161,8 +177,20 @@ function ready(error, us, inputData, cands, data, hist) {
     var mapG = mapPhone.append("g")
         .attr("transform", "translate(0,30)")
 
+
+
     mapG.selectAll("path")
         .data(json.features)
+        .enter()
+        .append("path")
+        .attr("class", "states")
+        .attr("d", path)
+        .style("stroke", "white")
+        .style("fill", "#f0f0f0")
+        .style("stroke-width", "1")
+
+    mapG.selectAll("labels")
+        .data(jsonElection)
         .enter()
         .append("path")
         .attr("class", "states")
@@ -170,26 +198,16 @@ function ready(error, us, inputData, cands, data, hist) {
         .style("stroke", "#f0f0f0")
         .style("fill", "none")
         .style("stroke-width", "1")
-
-    mapG.selectAll("labels")
-        .data(jsonElection)
-        .enter()
-        .append("rect")
-        .attr("x", d => d.properties.label == "GA" ? path.centroid(d)[0] - 20 : d.properties.label == "WV" ? path.centroid(d)[0] - 25 : d.properties.label == "DE" ? path.centroid(d)[0] - 5 : d.properties.label == "RI" ? path.centroid(d)[0] : path.centroid(d)[0] - 15)
-        .attr("y", d => d.properties.label == "NC" ? path.centroid(d)[1] - 14 : d.properties.label == "SC" ? path.centroid(d)[1] - 10 : d.properties.label == "LA" ? path.centroid(d)[1] - 10 : d.properties.label == "DE" ? path.centroid(d)[1] : d.properties.label == "NH" ? path.centroid(d)[1] - 25 : d.properties.label == "ME" ? path.centroid(d)[1] - 25 : d.properties.label == "KY" ? path.centroid(d)[1] - 25 : d.properties.label == "RI" ? path.centroid(d)[1] + 10 : path.centroid(d)[1] - 15)
-        .attr("height", 30)
-        .attr("width", 30)
-        .attr("ry", 2)
         .style("fill", d => color(d.properties.gopWin))
 
     mapG.selectAll("labels")
         .data(jsonElection)
         .enter()
         .append("text")
-        .attr("x", d => d.properties.label == "GA" ? path.centroid(d)[0] - 5 : d.properties.label == "WV" ? path.centroid(d)[0] - 10 : d.properties.label == "DE" ? path.centroid(d)[0] + 10 : d.properties.label == "RI" ? path.centroid(d)[0] + 15 : path.centroid(d)[0])
-        .attr("y", d => d.properties.label == "NC" ? path.centroid(d)[1] + 1 : d.properties.label == "SC" ? path.centroid(d)[1] + 5 : d.properties.label == "LA" ? path.centroid(d)[1] + 5 : d.properties.label == "DE" ? path.centroid(d)[1] + 15 : d.properties.label == "NH" ? path.centroid(d)[1] - 10 : d.properties.label == "ME" ? path.centroid(d)[1] - 10 : d.properties.label == "KY" ? path.centroid(d)[1] - 10 : d.properties.label == "RI" ? path.centroid(d)[1] + 25 : path.centroid(d)[1])
+        .attr("x", d => d.properties.x)
+        .attr("y", d => d.properties.y)
         .text(d => d.properties.label)
-        .style("font-size", 20)
+        .style("font-size", 18)
         .attr("dominant-baseline", "central")
         .attr("text-anchor", "middle")
         .style("font-weight", 100)
@@ -201,13 +219,23 @@ function ready(error, us, inputData, cands, data, hist) {
         .append("a")
         .attr("xlink:href", (d, i) => d.properties.name)
         .append("rect")
-        .attr("class", "statesover")
-        .attr("x", d => d.properties.label == "GA" ? path.centroid(d)[0] - 20 : d.properties.label == "WV" ? path.centroid(d)[0] - 25 : d.properties.label == "DE" ? path.centroid(d)[0] - 5 : d.properties.label == "RI" ? path.centroid(d)[0] : path.centroid(d)[0] - 15)
-        .attr("y", d => d.properties.label == "NC" ? path.centroid(d)[1] - 14 : d.properties.label == "SC" ? path.centroid(d)[1] - 10 : d.properties.label == "LA" ? path.centroid(d)[1] - 10 : d.properties.label == "DE" ? path.centroid(d)[1] : d.properties.label == "NH" ? path.centroid(d)[1] - 25 : d.properties.label == "ME" ? path.centroid(d)[1] - 25 : d.properties.label == "KY" ? path.centroid(d)[1] - 25 : d.properties.label == "RI" ? path.centroid(d)[1] + 10 : path.centroid(d)[1] - 15)
+        .attr("x", d => d.properties.x - 15)
+        .attr("y", d => d.properties.y - 15)
         .attr("height", 30)
         .attr("width", 30)
         .attr("ry", 4)
         .style('stroke', d => d.properties.tippingPoint > 3 ? "black" : "none")
+        .style("fill", "none")
+    mapG.selectAll("labels")
+        .data(jsonElection)
+        .enter()
+        .append("path")
+        .attr("class", "states")
+        .attr("d", path)
+        .style("stroke", "none")
+        .style("fill", "none")
+        .style("stroke-width", "1")
+        .attr("class", "statesover")
         .on('mouseover', function (d) {
 
 
@@ -479,7 +507,7 @@ function ready(error, us, inputData, cands, data, hist) {
         .range([0, 750]);
 
     var tie_length = hist_scale(hist[10].prob)
-    var biden_win = +today[today.length-1].poll_avg * tie_length / 100
+    var biden_win = +today[today.length - 1].poll_avg * tie_length / 100
     var pct = [0, 5, 10, 15, 20]
 
     histogramPhone.selectAll("seats")
@@ -511,9 +539,9 @@ function ready(error, us, inputData, cands, data, hist) {
         .attr("fill", d => rep_hist(d.rep_seats))
         .attr("height", 45)
         .attr("width", 45)
-        .attr("ry",4)
+        .attr("ry", 4)
 
-        histogramPhone.selectAll("seats")
+    histogramPhone.selectAll("seats")
         .data(hist)
         .enter()
         .append("rect")
@@ -522,7 +550,7 @@ function ready(error, us, inputData, cands, data, hist) {
         .attr("fill", d => rep_hist(d.dem_seats))
         .attr("height", 45)
         .attr("width", 45)
-        .attr("ry",4)
+        .attr("ry", 4)
 
     histogramPhone.append("text")
         .text("GOP")
@@ -607,7 +635,7 @@ function ready(error, us, inputData, cands, data, hist) {
         .attr("fill", (d, i) => i > 10 ? colors[0] : colors[1])
         .attr("height", 45)
         .attr("width", d => hist_scale(d.prob))
-        .attr("ry",4)
+        .attr("ry", 4)
 
     histogramPhone.append("rect")
         .attr("y", 560)
@@ -615,7 +643,7 @@ function ready(error, us, inputData, cands, data, hist) {
         .attr("fill", colors[0])
         .attr("height", 45)
         .attr("width", tie_length - biden_win)
-        .attr("ry",4)
+        .attr("ry", 4)
 
 
 
@@ -632,6 +660,279 @@ function ready(error, us, inputData, cands, data, hist) {
         .attr("text-anchor", "middle")
         .attr("dominant-baseline", "central")
 
+    var margin = { top: 50, right: 50, bottom: 50, left: 50 }
+    var time = d3.select("#timePhone").append("svg")
+        .attr("viewBox", "0 0 1400 1000")
+        .style('margin-top', '15px')
+        .append('g')
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    var time_data = data.filter(d => d.state == key_state)
 
 
+    var time_data = time_data.map((d, i) => {
+        return {
+            date: d.date,
+            party: d.party,
+            win: d.win,
+            seats: d.p_90,
+        }
+    })
+
+    var data_length = time_data.filter(d => d.party == "REP").length
+    var max_date = d3.max(time_data, d => d.date)
+
+    var line_data = []
+    for (let j = 0; j < data_length; j++) {
+        var ld = {
+            date: time_data.filter(d => d.party == "REP")[j].date,
+            repwin: time_data.filter(d => d.party == "REP")[j].win,
+            demwin: time_data.filter(d => d.party == "DEM")[j].win,
+            repseats: time_data.filter(d => d.party == "REP")[j].seats,
+            demseats: time_data.filter(d => d.party == "DEM")[j].seats,
+        }
+        line_data.push(ld)
+    }
+    var width = 1400 - margin.left - margin.right
+    var height = 1000 - margin.top - margin.bottom
+    var axisPad = 12
+    var parseTime = d3.timeParse("%Y-%m-%d"),
+        formatDate = d3.timeFormat("%b - %d")
+        formatMonth = d3.timeFormat("%Y-%m-%d"),
+        bisectDate = d3.bisector(d => d.date).left,
+        wholevalue = d3.format(".0f"),
+        onevalue = d3.format(".1f")
+
+
+    var x = d3.scaleTime()
+        .rangeRound([margin.left, width - margin.right])
+        .domain([new Date(2020, 2, 1), new Date(2020, 10, 3)])
+
+    var y = d3.scaleLinear()
+        .rangeRound([850, 50]);
+
+
+    var z = d3.scaleOrdinal()
+        .range(colors)
+        ;
+
+    var line = d3.line()
+        .curve(d3.curveLinear)
+        .x(d => x(d.date))
+        .y(d => y(d.pct));
+
+    time.append("g")
+        .attr("class", "x-axis")
+        .attr("transform", "translate(0," + (height - margin.bottom) + ")")
+        .call(d3.axisBottom(x).tickSize(-800).ticks(5)
+            .tickFormat(d3.timeFormat("%b")))
+        .call(g => {
+            var years = x.ticks(d3.timeYear.every(1))
+            var xshift = 0
+            g.selectAll("text")
+                .style("text-anchor", "right")
+                .attr("y", 20)
+                .attr('fill', 'black')
+                .attr('font-size', 30)
+                .style('font-weight', 100)
+            g.selectAll("line")
+                .attr("opacity", .2)
+                .attr("stroke", "grey")
+
+
+            g.select(".domain")
+                .attr("opacity", 0)
+
+
+        })
+
+    time.append("line")
+        .attr("x1", x(new Date(2020, 10, 3)))
+        .attr("x2", x(new Date(2020, 10, 3)))
+        .attr("y1", 50)
+        .attr("y2", (height - margin.bottom))
+        .attr("stroke", "black")
+        .attr("stroke-width", 3)
+
+
+
+
+
+    time.append("g")
+        .attr("class", "y-axis")
+        .attr("transform", "translate(" + margin.left + ",0)");
+
+    var focus = time.append("g")
+        .attr("class", "focus")
+        .style("display", "none");
+
+    focus.append("line").attr("class", "lineHover")
+        .style("stroke", "#999")
+        .attr("stroke-width", 1.5)
+        .style("shape-rendering", "crispEdges")
+        .style("opacity", 0.5)
+        .attr("y1", -860)
+        .attr("y2", -50);
+
+    focus.append("text").attr("class", "lineHoverDate")
+        .attr("text-anchor", "middle")
+        .attr("font-size", 12);
+
+    var overlay = time.append("rect")
+        .attr("class", "overlay")
+        .attr("x", margin.left)
+        .attr("width", x(max_date) - margin.left)
+        .attr("height", height)
+
+    var keys = ["repwin", "demwin", "repseats", "demseats"]
+    update("win", 0);
+
+
+    function update(input, speed) {
+
+        var copy = keys.filter(f => f.includes(input))
+        var cities = copy.map(function (id) {
+            return {
+                party: id.substring(0, 3).toUpperCase(),
+                values: line_data.map(d => { return { date: d.date, pct: +d[id] } })
+            };
+        });
+        y.domain([
+            0,
+            100
+        ]);
+
+        time.selectAll(".y-axis").transition()
+            .duration(speed)
+            .call(d3.axisLeft(y).tickSize(-1200).ticks(5)).call(g => {
+                var years = x.ticks(d3.timeYear.every(1))
+                var xshift = 0
+                g.selectAll("text")
+                    .style("text-anchor", "right")
+                    .attr("y", 0)
+                    .attr('fill', 'black')
+                    .attr('font-size', 30)
+                    .style('font-weight', 100)
+                g.selectAll("line")
+                    .attr("opacity", .2)
+                    .attr("stroke", "grey")
+
+
+                g.select(".domain")
+                    .attr("opacity", 0)
+
+
+            })
+
+        var city = time.selectAll(".cities")
+            .data(cities);
+
+        city.exit().remove();
+
+        city.enter().insert("g", ".focus").append("path")
+            .attr("class", "line cities")
+            .style("stroke", (d, i) => cand_colors(d.party))
+            .style("stroke-width", 4)
+            .style("opacity", .7)
+            .style("stroke-linecap", "round")
+            .style("stroke-linejoin", "round")
+            .merge(city)
+            .transition().duration(speed)
+            .attr("d", d => line(d.values))
+
+
+
+
+
+        tooltip(copy);
+
+        function tooltip(copy) {
+            var rect = focus.selectAll(".lineHoverRect")
+                .data(copy)
+
+            var labels2 = focus.selectAll(".lineHoverText2")
+                .data(copy)
+
+            labels2.enter().append("text")
+                .attr("class", "lineHoverText2")
+                .attr("font-size", 45)
+                .style("fill", "white")
+                .style("stroke", "white")
+                .style("stroke-width", 20)
+                .merge(labels2)
+
+            var labels = focus.selectAll(".lineHoverText")
+                .data(copy)
+
+            labels.enter().append("text")
+                .attr("class", "lineHoverText")
+                .attr("text-anchor", "middle")
+                .attr("font-size", 45)
+                .merge(labels)
+
+
+            var circles = focus.selectAll(".hoverCircle")
+                .data(copy)
+
+
+
+            time.selectAll(".overlay")
+                .on("mouseover", () => focus.style("display", null))
+                .on("mouseout", () => focus.style("display", "none"))
+                .on("mousemove", mousemove);
+
+            function mousemove() {
+
+                var x0 = x.invert(d3.mouse(this)[0]),
+                    i = bisectDate(line_data, x0, 1),
+                    d0 = line_data[i - 1],
+                    d1 = line_data[i],
+                    d = x0 - d0.date > d1.date - x0 ? d1 : d0;
+
+                focus.select(".lineHoverDate")
+                    .attr("x", x(d.date))
+                    .attr("y", 0)
+                    .attr("text-anchor", "middle")
+                    .style("font-size", 20)
+                    .style("font-weight", "100")
+                    .text(formatDate(d.date));
+
+
+
+                focus.select(".lineHover")
+                    .attr("transform", "translate(" + x(d.date) + "," + height + ")");
+
+                focus.selectAll(".lineHoverText")
+                    .style("font-weight", "100")
+                    .attr("x", x(d.date) + 10)
+                    .text((e, i) => i == 0 ? "REP " + nf(d[e]) : "DEM " + nf(d[e]))
+                    .attr("fill", (e, i) => colors[i])
+                    .attr("y", e => d[e] == d["rep" + input] ? y(d["rep" + input]) > y(d["dem" + input]) ? y(d["rep" + input]) + 15 : y(d["rep" + input]) - 15 : d[e] == d["dem" + input] ? y(d["dem" + input]) >= y(d["rep" + input]) ? y(d["dem" + input]) + 15 : y(d["dem" + input]) - 15 : y(d[e]) - 15)
+                    .attr("text-anchor", (e, i) => i == 2 ? "end" : "start")
+                    .attr("dominant-baseline", "middle")
+
+                focus.selectAll(".lineHoverText2")
+                    .style("font-weight", "500")
+                    .attr("x", x(d.date) + 10)
+                    .text((e, i) => i == 0 ? "REP " + nf(d[e]) : "DEM " + nf(d[e]))
+                    .attr("fill", "white")
+                    .attr("stroke", "white")
+                    .attr("y", e => d[e] == d["rep" + input] ? y(d["rep" + input]) > y(d["dem" + input]) ? y(d["rep" + input]) + 15 : y(d["rep" + input]) - 15 : d[e] == d["dem" + input] ? y(d["dem" + input]) >= y(d["rep" + input]) ? y(d["dem" + input]) + 15 : y(d["dem" + input]) - 15 : y(d[e]) - 15)
+                    .attr("text-anchor", (e, i) => i == 2 ? "end" : "start")
+                    .attr("dominant-baseline", "middle")
+
+
+            }
+        }
+        var winbutton = d3.select("#winbut")
+            .on("click", function () {
+                update("win", 500)
+            })
+
+        var seatsbutton = d3.select("#seatbut")
+            .on("click", function () {
+                update("seats", 500)
+            })
+
+
+    }
 }
