@@ -10,6 +10,19 @@ d3.select("#histogramPhone").append("p")
     .style("font-weight", 400)
     .style("margin-left", "5%")
     .style("margin-right", "5%")
+
+
+d3.select("#timePhone").append("h1")
+    .text("The Zigs and Zags of the Race")
+    .style("font-size", "3.5vw")
+    .style("font-weight", 900)
+    .style("margin-left", "2%")
+
+d3.select("#timePhone").append("h1")
+    .text("The Senate race can change in an instant. Below shows the change in each party's chance of winnning a majority have changed over time.")
+    .style("font-size", "20px")
+    .style("font-weight", 400)
+    .style("margin-left", "5%")
 var colors = ["#FF6060", "#0091FF", "#FFE130", "#C473F6", "#31DE70"]
 
 var category = ["REP", "DEM", "LIB", "IND", "GREEN"]
@@ -109,7 +122,11 @@ function ready(error, us, inputData, cands, data, hist) {
         .text("Senate Forecast")
         .style("color", Math.abs(50 - repWinSenate) > 20 ? "white" : "black")
         .style("background-color", color(repWinSenate))
-
+    var senateWINPhone = d3.select("#nationalWinPhone")
+        .text("Senate Forecast")
+        .style("color", Math.abs(50 - repWinSenate) > 20 ? "white" : "black")
+        .style("background-color", color(repWinSenate))
+        .style("font-size","7vw")
     mapPhone.append("text")
         .text("Democrats")
         .attr("x", 135)
@@ -697,7 +714,7 @@ function ready(error, us, inputData, cands, data, hist) {
     var axisPad = 12
     var parseTime = d3.timeParse("%Y-%m-%d"),
         formatDate = d3.timeFormat("%b - %d")
-        formatMonth = d3.timeFormat("%Y-%m-%d"),
+    formatMonth = d3.timeFormat("%Y-%m-%d"),
         bisectDate = d3.bisector(d => d.date).left,
         wholevalue = d3.format(".0f"),
         onevalue = d3.format(".1f")
@@ -775,7 +792,7 @@ function ready(error, us, inputData, cands, data, hist) {
 
     focus.append("text").attr("class", "lineHoverDate")
         .attr("text-anchor", "middle")
-        .attr("font-size", 12);
+        .attr("font-size", 25);
 
     var overlay = time.append("rect")
         .attr("class", "overlay")
@@ -892,7 +909,7 @@ function ready(error, us, inputData, cands, data, hist) {
                     .attr("x", x(d.date))
                     .attr("y", 0)
                     .attr("text-anchor", "middle")
-                    .style("font-size", 20)
+                    .style("font-size", 30)
                     .style("font-weight", "100")
                     .text(formatDate(d.date));
 
