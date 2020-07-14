@@ -52,7 +52,7 @@ d3.select("#tippingpoint").append("h1")
 
 
 
-var tableButtons = d3.select("#time").append("table").style("border-collapse", "collapse")
+var tableButtons = d3.select("#time").append("table").style("border-collapse", "collapse").style("float", "right").style("margin-right", "50px")
 
 tableButtons.append("tr").attr("id", "buttonsTable")
 
@@ -165,17 +165,17 @@ function ready(error, us, inputData, cands, data, hist) {
 
     var json = topojson.feature(us, us.objects.states)
     var mapG = map.append("g")
-    .attr("transform", "translate(0,30)")
+        .attr("transform", "translate(0,30)")
 
-mapG.selectAll("path")
-    .data(json.features)
-    .enter()
-    .append("path")
-    .attr("class", "states")
-    .attr("d", path)
-    .style("stroke", "#f0f0f0")
-    .style("fill", "none")
-    .style("stroke-width", "1")
+    mapG.selectAll("path")
+        .data(json.features)
+        .enter()
+        .append("path")
+        .attr("class", "states")
+        .attr("d", path)
+        .style("stroke", "#f0f0f0")
+        .style("fill", "none")
+        .style("stroke-width", "1")
 
     var gaState = json.features.filter(d => d.properties.name == "Georgia")[0];
     var states = inputData.map(d => {
@@ -323,7 +323,7 @@ mapG.selectAll("path")
     var jsonElection = jsonElection.flat()
 
 
-    
+
 
     mapG.selectAll("labels")
         .data(jsonElection)
@@ -342,11 +342,11 @@ mapG.selectAll("path")
         .append("text")
         .attr("x", d => path.centroid(d)[0])
         .attr("y", d => d.properties.label == "RI" ? path.centroid(d)[1] + 10 : path.centroid(d)[1])
-        .text(d=>d.properties.label)
-        .style("font-size",10)
-        .attr("dominant-baseline","central")
-        .attr("text-anchor","middle")
-        .style("fill",d=>Math.abs(d.properties.gopWin - 50) > 20 ? "white" : "black")
+        .text(d => d.properties.label)
+        .style("font-size", 10)
+        .attr("dominant-baseline", "central")
+        .attr("text-anchor", "middle")
+        .style("fill", d => Math.abs(d.properties.gopWin - 50) > 20 ? "white" : "black")
 
     mapG.selectAll("path2")
         .data(jsonElection)
@@ -524,20 +524,20 @@ mapG.selectAll("path")
 
 
 
-    
+
     var ga_special = today.filter(d => d.state_index == "Georgia: Class III")
-    
+
     mapG.append("a")
-    .attr("xlink:href", "Georgia-Special")
-    .append("rect")
-    .attr("x", 738)
-    .attr("y", 348)
-    .attr("fill", color(d3.sum(ga_special.filter(d => d.party == "REP"), d => d.win)))
-    .attr("stroke", ga_special[0].tipping_point > 3 ? "black" : "grey")
-    .attr("width", 24)
-    .attr("height", 16)
-    .attr("ry", "2")
-   
+        .attr("xlink:href", "Georgia-Special")
+        .append("rect")
+        .attr("x", 738)
+        .attr("y", 348)
+        .attr("fill", color(d3.sum(ga_special.filter(d => d.party == "REP"), d => d.win)))
+        .attr("stroke", ga_special[0].tipping_point > 3 ? "black" : "grey")
+        .attr("width", 24)
+        .attr("height", 16)
+        .attr("ry", "2")
+
 
     mapG.append("text")
         .text("GA*")
@@ -562,7 +562,7 @@ mapG.selectAll("path")
     mapG.append("a")
         .attr("xlink:href", "Georgia-Special")
         .append("rect")
-        .attr("class","statesover")
+        .attr("class", "statesover")
         .attr("x", 738)
         .attr("y", 348)
         .attr("fill", "none")
@@ -575,7 +575,7 @@ mapG.selectAll("path")
 
             toolTip.show()
             var tipSVG = d3.select("#tipDiv")
-                
+
             var tipSVG = d3.select("#tipDiv")
                 .append("svg")
                 .attr("width", 180)
@@ -1237,7 +1237,7 @@ mapG.selectAll("path")
         var seat = d.state_index
         var state = d.state
         d.seatData = today.filter(d => d.state_index == seat)
-        d.rating = d.election == "DEM" ? -15 : d.election == "REP" ? 115 : d3.sum(d.seatData.filter(d => d.party == "REP"), d => d.win)
+        d.rating = d.election == "DEM" ? -5 : d.election == "REP" ? 105 : d3.sum(d.seatData.filter(d => d.party == "REP"), d => d.win)
         d.seatData.sort((a, b) => b.vote - a.vote)
         d.abbrev = seat == "Georgia: Class III" ? "GA*" : mapLabels.filter(d => d.state == state)[0].label
     })
@@ -1340,5 +1340,7 @@ mapG.selectAll("path")
 
                 toolTip.hide()
             });
+
+   
 
 }
