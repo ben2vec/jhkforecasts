@@ -648,8 +648,8 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       .attr("stroke-width", 1.5)
       .style("shape-rendering", "crispEdges")
       .style("opacity", 0.5)
-      .attr("y1", -height)
-      .attr("y2", 0);
+      .attr("y1", -height+10)
+      .attr("y2", -20);
 
     focus.append("text").attr("class", "lineHoverDate")
       .attr("text-anchor", "middle")

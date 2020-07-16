@@ -351,8 +351,8 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     .attr("stroke-width", 1.5)
     .style("shape-rendering", "crispEdges")
     .style("opacity", 0.5)
-    .attr("y1", -heightphone)
-    .attr("y2", -40);
+    .attr("y1", -heightphone+10)
+    .attr("y2", -20);
 
   focus.append("text").attr("class", "lineHoverDate")
     .attr("text-anchor", "end")
