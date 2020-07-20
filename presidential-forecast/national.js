@@ -1,5 +1,5 @@
 var colors = ["#FF6060", "#0091FF", "#FFE130"]
-
+var timeScale = 86400000
 var category = ["gop", "dem", "third"]
 
 var cand_colors = d3.scaleOrdinal()
@@ -548,7 +548,8 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
         gopev: time_data.filter(d => d.party == "gop")[j].electoral_vote,
         demev: time_data.filter(d => d.party == "dem")[j].electoral_vote,
         thirdev: time_data.filter(d => d.party == "third")[j].electoral_vote,
-        evar: time_data.filter(d => d.party == "gop")[j].p_10,
+        evar: time_data.filter(d => d.party == "gop")[j].p_10 * 1.3,
+        pvar: 4.5 - (j / 150),
       }
       line_data.push(ld)
     }
@@ -568,7 +569,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       .append('g')
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    
+
 
     var x = d3.scaleTime()
       .rangeRound([margin.left, width - margin.right])
@@ -648,7 +649,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       .attr("stroke-width", 1.5)
       .style("shape-rendering", "crispEdges")
       .style("opacity", 0.5)
-      .attr("y1", -height+10)
+      .attr("y1", -height + 10)
       .attr("y2", -20);
 
     focus.append("text").attr("class", "lineHoverDate")
@@ -672,7 +673,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
         return {
           id: id,
           values: line_data.map(d => { return { date: d.date, pct: +d[id] } }),
-          conf: line_data.map(d => { return { date: d.date, top: +d[id] + (input == "ev" ? +d.evar : 3), bottom: +d[id] - (input == "ev" ? +d.evar : 3) } })
+          conf: line_data.map(d => { return { date: d.date, top: input == "win" ? + d[id] : + d[id] + (input == "ev" ? +d.evar : +d.pvar), bottom: input == "win" ? + d[id] : +d[id] - (input == "ev" ? +d.evar : +d.pvar) } })
         };
       });
       console.log(cities)
@@ -708,6 +709,39 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
 
       city.exit().remove();
 
+      var cityout = time.selectAll(".citiesout")
+        .data(cities);
+
+      cityout.exit().remove();
+
+      var areas = time.selectAll(".areas")
+        .data(cities);
+
+      areas.exit().remove();
+
+
+
+      areas.enter().insert("g", ".focus").append("path")
+        .attr("class", "line areas")
+        .style("fill", (d, i) => d.id == "third" + input ? "none" : colors[i])
+        .style("stroke-width", 4)
+        .style("opacity", .2)
+        .style("stroke-linecap", "round")
+        .attr("stroke-linejoin", "round")
+        .merge(areas)
+        .transition().duration(speed)
+        .attr("d", d => area(d.conf))
+
+      cityout.enter().insert("g", ".focus").append("path")
+        .attr("class", "line citiesout")
+        .style("stroke", (d, i) => "white")
+        .style("stroke-width", 8)
+        .style("opacity", 1)
+        .style("stroke-linecap", "round")
+        .attr("stroke-linejoin", "round")
+        .merge(cityout)
+        .transition().duration(speed)
+        .attr("d", d => line(d.values))
 
       city.enter().insert("g", ".focus").append("path")
         .attr("class", "line cities")
@@ -719,7 +753,6 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
         .merge(city)
         .transition().duration(speed)
         .attr("d", d => line(d.values))
-
 
 
 
@@ -784,7 +817,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
           focus.selectAll(".lineHoverText2")
             .style("font-weight", "100")
             .attr("x", x(d.date) + 10)
-            .text((e, i) => i == 1 ? ("Biden " + onevalue(d[e]) + "%") : i == 0 ? "Trump " + onevalue(d[e]) + "%" : "Third " + onevalue(d[e]) + "%")
+            .text((e, i) => input == "ev" ? i == 1 ? ("Biden " + onevalue(d[e])) : i == 0 ? "Trump " + onevalue(d[e]) : "Third " + onevalue(d[e]) : i == 1 ? ("Biden " + onevalue(d[e]) + "%") : i == 0 ? "Trump " + onevalue(d[e]) + "%" : "Third " + onevalue(d[e]) + "%")
             .attr("y", e => d[e] == d["gop" + input] ? y(d["gop" + input]) > y(d["dem" + input]) ? y(d["gop" + input]) + 15 : y(d["gop" + input]) - 15 : d[e] == d["dem" + input] ? y(d["dem" + input]) > y(d["gop" + input]) ? y(d["dem" + input]) + 15 : y(d["dem" + input]) - 15 : y(d[e]) - 15)
             .attr("text-anchor", (e, i) => i == 2 ? "end" : "start")
             .attr("dominant-baseline", "central")
