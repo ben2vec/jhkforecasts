@@ -463,6 +463,8 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
         gopev: time_data.filter(d => d.party == "gop")[j].electoral_vote,
         demev: time_data.filter(d => d.party == "dem")[j].electoral_vote,
         thirdev: time_data.filter(d => d.party == "third")[j].electoral_vote,
+        evar: time_data.filter(d => d.party == "gop")[j].p_10 * 1.3,
+        pvar: 4.5 - (j / 150),
       }
       line_data.push(ld)
     }
@@ -498,6 +500,11 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
       .x(d => xphone(d.date))
       .y(d => yphone(d.pct));
 
+    var area = d3.area()
+      .x(d => xphone(d.date))
+      .y0(d => yphone(d.top))
+      .y1(d => yphone(d.bottom));
+
     timephone.append("g")
       .attr("class", "x-axis")
       .attr("transform", "translate(0," + (heightphone - marginphone.bottom) + ")")
@@ -510,7 +517,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
           .style("text-anchor", "right")
           .attr("y", axisPad)
           .attr('fill', 'black')
-          .attr('font-size', 20)
+          .attr('font-size', 25)
           .attr('font-weight', 800)
         g.selectAll("line")
           .attr("opacity", .2)
@@ -531,15 +538,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
       .attr("stroke", "black")
       .attr("stroke-width", 3)
 
-    timephone.append("text")
-      .text("Nov. 3rd")
-      .attr("x", xphone(new Date(2020, 10, 3)))
-      .attr("y", 10)
-      .attr("font-weight", "100")
-      .attr('font-size', 20)
-      .attr('font-weight', 800)
-      .attr("text-anchor", "end")
-
+    
 
 
     timephone.append("g")
@@ -555,7 +554,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
       .attr("stroke-width", 1.5)
       .style("shape-rendering", "crispEdges")
       .style("opacity", 0.5)
-      .attr("y1", -heightphone+20)
+      .attr("y1", -heightphone + 20)
       .attr("y2", -30);
 
     focus.append("text").attr("class", "lineHoverDate")
@@ -578,7 +577,8 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
       var cities = copy.map(function (id) {
         return {
           id: id,
-          values: line_data.map(d => { return { date: d.date, pct: +d[id] } })
+          values: line_data.map(d => { return { date: d.date, pct: +d[id] } }),
+          conf: line_data.map(d => { return { date: d.date, top: input == "win" ? + d[id] : + d[id] + (input == "ev" ? +d.evar : +d.pvar), bottom: input == "win" ? + d[id] : +d[id] - (input == "ev" ? +d.evar : +d.pvar) } })
         };
       });
       yphone.domain([
@@ -595,7 +595,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
             .style("text-anchor", "right")
             .attr("y", 0)
             .attr('fill', 'black')
-            .attr('font-size', 20)
+            .attr('font-size', 25)
             .attr('font-weight', 800)
           g.selectAll("line")
             .attr("opacity", .2)
@@ -608,15 +608,49 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
 
         })
 
-      var city = timephone.selectAll(".cities")
+      var city = timephone.selectAll(".citiesPhone")
         .data(cities);
 
       city.exit().remove();
 
+      var cityout = timephone.selectAll(".citiesoutPhone")
+        .data(cities);
+
+      cityout.exit().remove();
+
+      var areas = timephone.selectAll(".areasPhone")
+        .data(cities);
+
+      areas.exit().remove();
+
+
+
+      areas.enter().insert("g", ".focus").append("path")
+        .attr("class", "line areasPhone")
+        .style("fill", (d, i) => d.id == "third" + input ? "none" : colors[i])
+        .style("stroke-width", 4)
+        .style("opacity", .2)
+        .style("stroke-linecap", "round")
+        .attr("stroke-linejoin", "round")
+        .merge(areas)
+        .transition().duration(speed)
+        .attr("d", d => area(d.conf))
+
+      cityout.enter().insert("g", ".focus").append("path")
+        .attr("class", "line citiesoutPhone")
+        .style("stroke", (d, i) => "white")
+        .style("stroke-width", 12)
+        .style("opacity", 1)
+        .style("stroke-linecap", "round")
+        .attr("stroke-linejoin", "round")
+        .merge(cityout)
+        .transition().duration(speed)
+        .attr("d", d => line(d.values))
+
       city.enter().insert("g", ".focus").append("path")
-        .attr("class", "line cities")
+        .attr("class", "line citiesPhone")
         .style("stroke", (d, i) => colors[i])
-        .style("stroke-width", 6)
+        .style("stroke-width", 5)
         .style("opacity", .7)
         .style("stroke-linecap", "round")
         .attr("stroke-linejoin", "round")
@@ -656,7 +690,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
         var circles = focus.selectAll(".hoverCircle")
           .data(copy)
 
-        
+
 
         timephone.selectAll(".overlay")
           .on("mouseover", () => focus.style("display", null))
@@ -679,7 +713,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
             .attr("font-weight", "100")
             .text(formatDate(d.date));
 
-          
+
 
           focus.selectAll(".lineHoverText2")
             .attr("font-weight", "100")
