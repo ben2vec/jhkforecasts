@@ -80,6 +80,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
     })
     var updated = data[data.length - 1].seat
     document.getElementById("updated").innerText = "UPDATED:" + updated
+    document.getElementById("top").style.backgroundColor = color(data[data.length - 1].repWin)
     var districts = topojson.feature(congress, congress.objects.collection).features
     districts.forEach((d, i) => {
         var state = d.properties.state
