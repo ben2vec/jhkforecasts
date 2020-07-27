@@ -249,7 +249,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
         .style("font-family", "sf-mono")
         .attr("font-size", 15)
  
-        
+
     function regMap() {
 
         d3.select("#cartbutton")
@@ -448,7 +448,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
             .attr("y", d => (+d.row) * 15 + 50)
             .attr("width", 15)
             .attr("height", 15)
-            .attr("ry", 5)
+            .attr("ry", 4)
             .attr("stroke", d => d.district == "" || d.district == undefined ? "none" : "white")
             .attr("fill", d => d.label == "" ? color(d.repWin) : "none")
 
@@ -464,7 +464,8 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
             .attr("text-anchor", "middle")
             .attr("fill", "black")
             .style("font-family", "sf-mono")
-            .attr("font-size", 12)
+            .attr("font-size", 11)
+            .style("font-weight",100)
 
         map.selectAll("grid")
             .data(grid)
@@ -476,9 +477,9 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
             .attr("y", d => (+d.row) * 15 + 50)
             .attr("width", 15)
             .attr("height", 15)
-            .attr("ry", 5)
+            .attr("ry", 7)
             .attr("stroke", d => d.label == "" ? Math.abs(d.repWin - 50) < 30 ? "black" : "none" : "none")
-            .attr("stroke-width", 1)
+            .attr("stroke-width", .75)
             .on('mouseover', function (d) {
 
 
