@@ -248,7 +248,8 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
         .attr("fill", "black")
         .style("font-family", "sf-mono")
         .attr("font-size", 15)
-
+ 
+        
     function regMap() {
 
         d3.select("#cartbutton")
