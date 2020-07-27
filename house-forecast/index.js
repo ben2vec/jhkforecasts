@@ -7,10 +7,7 @@ d3.select("#histogram").append("h1")
     .style("font-size", "3vw")
     .style("font-weight", "700")
 
-d3.select("#time").append("h1")
-    .text("The Zigs and Zags of the Race")
-    .style("font-size", "3vw")
-    .style("font-weight", "700")
+
 
 d3.select("#beeSwarm").append("h1")
     .text("How Many Competitive Races are There?")
@@ -478,9 +475,9 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
             .attr("y", d => (+d.row) * 15 + 50)
             .attr("width", 15)
             .attr("height", 15)
-            .attr("ry", 7)
+            .attr("ry", 4)
             .attr("stroke", d => d.label == "" ? Math.abs(d.repWin - 50) < 30 ? "black" : "none" : "none")
-            .attr("stroke-width", .75)
+            .attr("stroke-width", 1)
             .on('mouseover', function (d) {
 
 
@@ -840,8 +837,8 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
             };
         });
         y.domain([
-            input == "margin" ? -10 : input == "Vote" ? 150 : 0,
-            input == "margin" ? 0 : input == "Vote" ? 300 : 100
+            input == "margin" ? -10 : input == "Vote" ? 180 : 0,
+            input == "margin" ? 0 : input == "Vote" ? 250 : 100
         ]).nice();
 
         time.selectAll(".y-axis").transition()
@@ -972,6 +969,23 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
         }
     }
 
+    var winbutton = d3.select("#winbu")
+    .on("click", function () {
+      update("Win", 500)
+    })
+    .style("cursor", "pointer")
+
+    var Votebutton = d3.select("#seatsbu")
+    .on("click", function () {
+      update("Vote", 500)
+    })
+    .style("cursor", "pointer")
+
+    var Votebutton = d3.select("#votebu")
+    .on("click", function () {
+      update("margin", 500)
+    })
+    .style("cursor", "pointer")
 
 
 
