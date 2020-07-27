@@ -63,18 +63,21 @@
                 #tipDiv {
                         fill: none;
                 }
-                .collapse{
+
+                .collapse {
                         border-collapse: collapse;
                 }
-                .hover:hover{
+
+                .hover:hover {
                         text-decoration: underline solid;
                         cursor: pointer;
                 }
-                tr{
-                        border-bottom: #AFAFAF solid .01vw;
+                .pointer{
+                        cursor: pointer;
                 }
-                th{
-                        border-bottom: black solid .2vw;
+               
+                table{
+                        border-collapse: collapse;
                 }
         </style>
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -297,10 +300,10 @@
         <script>
                 var key_state = "US"
         </script>
-        
-        
-        <p style=" font-family: sf-mono;font-weight: 500;text-align: center;text-decoration: underline;color:#AFAFAF;text-transform: uppercase;"
-                id="updated"></p>
+
+
+        <h3 style=" font-family: sf-mono;font-weight: 500;text-align: center;text-decoration: double underline;color:#AFAFAF;text-transform: uppercase;"
+                id="updated"></h3>
         <div class="special" id="usmap"></div>
         <div class="special" style="text-align:center">
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -313,7 +316,7 @@
         </div>
         <div class="special" id="histogram"></div>
         <div class="special" id="boxmap"></div>
-        <div class="special"id="beeSwarm"></div>
+        <div class="special" id="beeSwarm"></div>
         <div class="special" id="time"></div>
         <div class="special" style="text-align:center">
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -324,11 +327,14 @@
                         (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
         </div>
-        <div class="special" id="finaldiv">
+        <!--<div class="special" id="finaldiv">
                 <div style="top:0;position:sticky;background-color: white;"> <input id="searchBar" type="text"
                                 placeholder="TYPE DISTRICT ex. IDA00 or TX32">
                 </div>
                 <div id="dataTable"></div>
+        </div>-->
+        <div class="special">
+                <div id="table"></div>
         </div>
 
         <div class="special" style="text-align:center">
@@ -352,9 +358,7 @@
                                 Download Data</h2>
                 </a>
         </div>
-        <script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
-	<div style="text-align: center;">
-	<a  href="https://www.patreon.com/bePatron?u=36104274" data-patreon-widget-type="become-patron-button">Become a Patron!</a></div>Í
+
         <script src="index.js"></script>
         <script src="beeswarm.js"></script>
 </body>

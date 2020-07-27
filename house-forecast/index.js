@@ -36,7 +36,7 @@ var colors = [color(100), color(0)]
 var projection = d3.geoAlbersUsa()
     .scale(1000)
     .translate([mapWidth / 2, (MapHeight / 2 + 40)]);
-
+var states = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"]
 var path = d3.geoPath()
     .projection(projection);
 var nf = d3.format(".1f")
@@ -74,7 +74,10 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
     if (error) throw error;
 
     var today = data.slice(data.length - 436, data.length)
-    console.log(data[data.length - 1])
+    today.forEach((d, i) => {
+        var district = d.districtID
+        d.incumbentParty = inputData.filter(d => d.id == district)
+    })
     var updated = data[data.length - 1].seat
     document.getElementById("updated").innerText = "UPDATED:" + updated
     var districts = topojson.feature(congress, congress.objects.collection).features
@@ -165,7 +168,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
         .style("font-weight", "100")
         .style("fill", color(100))
         .attr("text-anchor", "middle")
-
+    today.pop()
     var pct = [50, 60, 70, 80, 90, 100]
 
 
@@ -393,6 +396,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
         .on("mouseout", d => {
             d3.select("#cartbutton")
                 .style("text-decoration", "none")
+                .attr("cursor", "pointer")
         })
         .on("click", d => {
             boxMap()
@@ -451,7 +455,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
             .data(grid)
             .enter()
             .append("text")
-            .attr("class","boxMap")
+            .attr("class", "boxMap")
             .text(d => d.label)
             .attr("x", d => (+d.column) * 15 + 87.5)
             .attr("y", d => (+d.row) * 15 + 57.5)
@@ -564,6 +568,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
             .on('mouseout',
                 function (d) {
 
+                    tool_tip.hide()
 
 
                 });
@@ -580,7 +585,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
 
     var histMarker = [180, 195, 210, 225]
 
-    for (let a = 1; a < 10; a++) {
+    for (let a = 1; a < 5; a++) {
 
         hist.append("text")
             .attr("class", "histDisappear")
@@ -681,7 +686,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
                 .text(nf(d.occ) + "%")
                 .attr("x", (d.rep - 165) * barWidth)
                 .attr("y", 0)
-                .style("font-weight", "500")
+                .style("font-weight", "100")
                 .style("font-size", "20")
                 .attr("text-anchor", "middle")
                 .attr("fill", "black")
@@ -691,7 +696,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
                 .text(d.rep)
                 .attr("x", (d.rep - 165) * barWidth)
                 .attr("y", d.rep > 217 ? 20 : 40)
-                .style("font-weight", "500")
+                .style("font-weight", "100")
                 .style("font-size", "20")
                 .attr("text-anchor", "middle")
                 .attr("fill", color(100))
@@ -701,7 +706,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
                 .text(d.dem)
                 .attr("x", (d.rep - 165) * barWidth)
                 .attr("y", d.dem > 217 ? 20 : 40)
-                .style("font-weight", "500")
+                .style("font-weight", "100")
                 .style("font-size", "20")
                 .attr("text-anchor", "middle")
                 .attr("fill", color(0))
@@ -734,7 +739,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
     })
     var max_date = d3.max(line_data, d => d.date)
 
-    var margin = { top: 70, right: 40, bottom: 20, left: 40 }
+    var margin = { top: 20, right: 40, bottom: 20, left: 40 }
     var width = 1400 - margin.left - margin.right
     var height = 600 - margin.top - margin.bottom
     var axisPad = 12
@@ -768,7 +773,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
     time.append("g")
         .attr("class", "x-axis")
         .attr("transform", "translate(0," + (height - margin.bottom) + ")")
-        .call(d3.axisBottom(x).tickSize(-420).ticks(5)
+        .call(d3.axisBottom(x).tickSize(-520).ticks(5)
             .tickFormat(d3.timeFormat("%b")))
         .call(g => {
             var years = x.ticks(d3.timeYear.every(1))
@@ -792,24 +797,6 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
 
         })
 
-    time.append("line")
-        .attr("x1", x(new Date(2020, 10, 3)))
-        .attr("x2", x(new Date(2020, 10, 3)))
-        .attr("y1", 70)
-        .attr("y2", (height - margin.bottom))
-        .attr("stroke", "black")
-        .attr("stroke-width", 3)
-
-    time.append("text")
-        .text("NOV. 3RD")
-        .attr("x", x(new Date(2020, 10, 3)) + 3)
-        .attr("y", 80)
-        .style("font-weight", "100")
-        .attr("font-size", 12)
-        .style("font-family", "sf-mono")
-
-
-
     time.append("g")
         .attr("class", "y-axis")
         .attr("transform", "translate(" + margin.left + ",0)");
@@ -822,9 +809,9 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
         .style("stroke", "#999")
         .attr("stroke-width", 1)
         .style("shape-rendering", "crispEdges")
-        .style("opacity", 0)
-        .attr("y1", -height)
-        .attr("y2", -40);
+        .style("opacity", 1)
+        .attr("y1", -height+20)
+        .attr("y2", -20);
 
     focus.append("text").attr("class", "lineHoverDate")
         .attr("text-anchor", "middle")
@@ -838,7 +825,6 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
     var demScale = "D+"
     var keys = ["repWin", "demWin", "margin", "repVote", "demVote"]
     update("Win", 0);
-    console.log(line_data)
 
     function update(input, speed) {
 
@@ -850,7 +836,6 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
                 values: line_data.map(d => { return { date: d.date, pct: +d[id] } })
             };
         });
-        console.log(cities)
         y.domain([
             input == "margin" ? -10 : input == "Vote" ? 150 : 0,
             input == "margin" ? 0 : input == "Vote" ? 300 : 100
@@ -905,6 +890,8 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
             var rect = focus.selectAll(".lineHoverRect")
                 .data(copy)
 
+
+
             var labels2 = focus.selectAll(".lineHoverText2")
                 .data(copy)
 
@@ -913,7 +900,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
                 .attr("font-size", 25)
                 .style("fill", "white")
                 .style("stroke", "white")
-                .style("stroke-width", 5)
+                .style("stroke-width", 10)
                 .merge(labels2)
 
             var labels = focus.selectAll(".lineHoverText")
@@ -928,15 +915,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
             var circles = focus.selectAll(".hoverCircle")
                 .data(copy)
 
-            circles.enter().append("circle")
-                .attr("class", "hoverCircle")
-                .style("stroke", d => input == "margin" ? color(100) : z(d))
-                .style("stroke-width", 3)
-                .style("fill", "white")
-                .attr("r", 3)
-                .merge(circles)
-                .transition().duration(speed)
-                .style("stroke", (d, i) => input == "margin" ? color(0) : colors[i]);
+           
 
             time.selectAll(".overlay")
                 .on("mouseover", () => focus.style("display", null))
@@ -951,9 +930,12 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
                     d1 = line_data[i],
                     d = x0 - d0.date > d1.date - x0 ? d1 : d0;
 
+                focus.select(".lineHover")
+                    .attr("transform", "translate(" + x(d.date) + "," + height + ")");
+
                 focus.select(".lineHoverDate")
                     .attr("x", x(d.date))
-                    .attr("y", 50)
+                    .attr("y", 5)
                     .attr("text-anchor", "middle")
                     .style("font-size", 20)
                     .style("font-weight", "100")
@@ -968,7 +950,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
                     .style("font-weight", "100")
                     .attr("x", x(d.date) + 10)
                     .text((e, i) => input == "margin" ? "D +" + onevalue(-d[e]) : i == 1 ? ("DEM " + onevalue(d[e])) : i == 0 ? "REP " + onevalue(d[e]) : "Third " + onevalue(d[e]))
-                    .attr("y", e => d[e] == d["rep" + input] ? y(d["rep" + input]) > y(d["dem" + input]) ? y(d["rep" + input]) + 15 : y(d["rep" + input]) - 15 : d[e] == d["dem" + input] ? y(d["dem" + input]) > y(d["rep" + input]) ? y(d["dem" + input]) + 15 : y(d["dem" + input]) - 15 : y(d[e]) - 15)
+                    .attr("y", e => d[e] == d["rep" + input] ? y(d["rep" + input]) > y(d["dem" + input]) ? y(d["rep" + input]) + 12 : y(d["rep" + input]) - 12 : d[e] == d["dem" + input] ? y(d["dem" + input]) > y(d["rep" + input]) ? y(d["dem" + input]) + 12 : y(d["dem" + input]) - 12 : y(d[e]) - 12)
                     .attr("text-anchor", (e, i) => i == 2 ? "end" : "start")
                     .attr("dominant-baseline", "middle")
                     .style("font-family", "sf-mono")
@@ -979,288 +961,267 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
                     .attr("x", x(d.date) + 10)
                     .text((e, i) => input == "margin" ? "D +" + onevalue(-d[e]) : i == 1 ? ("DEM " + onevalue(d[e])) : i == 0 ? "REP " + onevalue(d[e]) : "Third " + onevalue(d[e]))
                     .attr("fill", (e, i) => input == "margin" ? color(0) : colors[i])
-                    .attr("y", e => d[e] == d["rep" + input] ? y(d["rep" + input]) > y(d["dem" + input]) ? y(d["rep" + input]) + 15 : y(d["rep" + input]) - 15 : d[e] == d["dem" + input] ? y(d["dem" + input]) > y(d["rep" + input]) ? y(d["dem" + input]) + 15 : y(d["dem" + input]) - 15 : y(d[e]) - 15)
+                    .attr("y", e => d[e] == d["rep" + input] ? y(d["rep" + input]) > y(d["dem" + input]) ? y(d["rep" + input]) + 12 : y(d["rep" + input]) - 12 : d[e] == d["dem" + input] ? y(d["dem" + input]) > y(d["rep" + input]) ? y(d["dem" + input]) + 12 : y(d["dem" + input]) - 12 : y(d[e]) - 12)
                     .attr("text-anchor", (e, i) => i == 2 ? "end" : "start")
                     .attr("dominant-baseline", "middle")
                     .style("font-family", "sf-mono")
             }
         }
-
-        time.append("text")
-            .text("General Ballot")
-            .attr("x", 1000)
-            .attr("y", 25)
-            .style("font-weight", "100")
-            .attr("font-size", 25)
-            .attr("fill", input == "margin" ? "black" : "lightgray")
-            .on("mouseover", function (d) {
-                d3.select(this)
-                    .attr("text-decoration", "underline")
-                    .style("cursor", "pointer")
-            })
-            .on("mouseout", function (d) {
-                d3.select(this)
-                    .attr("text-decoration", "none")
-            })
-            .on("click", d => { update("margin", 500) })
-            .transition()
-            .duration(speed)
-            .attr("fill", input == "margin" ? "black" : "lightgray")
-
-        time.append("text")
-            .text("Win Majority")
-            .attr("x", 350)
-            .attr("y", 25)
-            .style("font-weight", "100")
-            .attr("font-size", 25)
-            .attr("fill", input == "Win" ? "black" : "lightgray")
-            .on("mouseover", function (d) {
-                d3.select(this)
-                    .attr("text-decoration", "underline")
-                    .style("cursor", "pointer")
-            })
-            .on("mouseout", function (d) {
-                d3.select(this)
-                    .attr("text-decoration", "none")
-            })
-            .on("click", d => { update("Win", 500) })
-            .transition()
-            .duration(speed)
-            .attr("fill", input == "Win" ? "black" : "lightgray")
-
-
-        time.append("text")
-            .text("Avg. Seats")
-            .attr("x", 700)
-            .attr("y", 25)
-            .style("font-weight", "100")
-            .attr("font-size", 25)
-            .attr("fill", input == "Vote" ? "black" : "lightgray")
-            .on("mouseover", function (d) {
-                d3.select(this)
-                    .attr("text-decoration", "underline")
-                    .style("cursor", "pointer")
-            })
-            .on("mouseout", function (d) {
-                d3.select(this)
-                    .attr("text-decoration", "none")
-            })
-            .on("click", d => { update("Vote", 500) })
-            .transition()
-            .duration(speed)
-            .attr("fill", input == "Vote" ? "black" : "lightgray")
     }
 
+
+
+
+
+
+
+    var stateRaces = []
+
+    states.forEach(d => {
+        stateRaces.push({ state: d, newRow: 0 })
+    })
     console.log(today)
-    var districtData = today.slice(0, today.length - 1)
-    tableFunction("alpha")
-    function tableFunction(sortType) {
-        d3.select("#table1").remove()
-        sortType == "none" ? districtData == districtData :
-            sortType == "marginRep" ? districtData.sort((a, b) => b.margin - a.margin) :
-                sortType == "marginDem" ? districtData.sort((a, b) => a.margin - b.margin) :
-                    sortType == "marginComp" ? districtData.sort((a, b) => Math.abs(a.margin) - Math.abs(b.margin)) :
-                        districtData.sort(function (a, b) {
-                            a = a.districtID.toLowerCase();
-                            b = b.districtID.toLowerCase();
 
-                            return a < b ? -1 : a > b ? 1 : 0;
-                        });
+    stateRaces.forEach((d, i) => {
+        var state = d.state
+    })
+    console.log(stateRaces)
+    var newTable = d3.select("#table").append("table").attr("width", "100%")
 
-        var table = d3.select("#dataTable")
-            .append("table")
-            .attr("id", "table1")
-            .attr("class", "collapse")
-            .style("width", "100%")
+    var header = newTable.append("tr")
 
-        var header = table.append("thead").append("tr")
-        var demScale = d3.scaleLinear()
-            .domain([0, 100])
-            .range(["white", color(0)])
+    var xTable = d3.scaleLinear()
+        .range([50, 950])
+        .domain([0, 100])
 
-        var repScale = d3.scaleLinear()
-            .domain([0, 100])
-            .range(["white", color(100)])
+    header.append("td")
+        .attr("width", "25%")
+        .append("h1")
+        .text("STATE")
+        .style("font-family", "sf-mono")
+        .style("font-weight", 100)
+        .style("font-size", "2vw")
 
-        header.append("th")
-            .attr("class", "hover")
-            .style("text-align", "left")
-            .style("width", "40%")
+    header.append("td")
+        .attr("width", "5%")
+
+    header.append("td")
+        .attr("width", "75%")
+        .attr("id", "topPct")
+
+
+    var topPCT = d3.select("#topPct")
+        .append("svg")
+        .attr("viewBox", "0 0 1000 100")
+
+    var pct = [0, 25, 50, 75, 100]
+
+    topPCT.append("text")
+        .text("win")
+        .attr("x", 500)
+        .attr("y", 25)
+        .attr("fill", "black")
+        .style("font-weight", "100")
+        .style("font-size", 25)
+        .attr("text-anchor", "middle")
+
+    topPCT.selectAll("asd")
+        .data(pct)
+        .enter()
+        .append("text")
+        .text(d => d + "%")
+        .attr("x", d => xTable(d))
+        .attr("y", 75)
+        .attr("fill", "black")
+        .style("font-weight", "100")
+        .style("font-size", 22)
+        .attr("text-anchor", "middle")
+
+    stateRaces.forEach((d, i) => {
+        var state = d.state
+        var races = today.filter(d => d.state == state)
+        newTable.append("tr")
+            .style("border-bottom", "black solid 1px")
+            .attr("id", d.state + "firstRow")
+            .style("border-bottom", "black solid 1px")
+
+
+        d3.select("#" + d.state + "firstRow")
+            .append("td")
+            .attr("width", "25%")
             .append("h1")
-            .text("STATE")
-            .style("font-size", "1.5vw")
-            .style("font-weight", 100)
+            .text(d.state.toUpperCase())
             .style("font-family", "sf-mono")
-            .on("click", d => {
-                tableFunction("alpha")
+            .style("font-weight", 100)
+            .style("font-size", "1.5vw")
+
+
+
+        d3.select("#" + d.state + "firstRow")
+            .append("td")
+            .attr("width", "5%")
+            .attr("id", d.state + "plusMinusSign")
+            .append("img")
+            .style("width", "50%")
+            .style("padding", "15%")
+            .attr("id", d.state + "plusSign")
+            .attr("src", "https://jhkforecasts.com/plus-sign-01.svg")
+            .attr("class", "pointer")
+            .on("click", function (id) {
+
+                appendNewRow(d.state)
+
             })
 
-        header.append("th")
-            .attr("class", "")
-            .style("text-align", "center")
-            .style("width", "5%")
+
+        d3.select("#" + d.state + "firstRow")
+            .attr("width", "75%")
+            .attr("id", d.state + "bubbles")
+
+
+        var bubs = d3.select("#" + d.state + "bubbles")
+            .append("svg")
+            .attr("viewBox", "0 0 1000 50")
+
+        bubs.selectAll("bubs")
+            .data(races)
+            .enter()
+            .append("circle")
+            .attr("cy", 25)
+            .attr("r", 6)
+            .attr("cx", d => xTable(+d.repWin))
+            .attr("fill", d => color(d.repWin))
+            .attr("opacity", .5)
+
+        bubs.selectAll("bubs")
+            .data(races)
+            .enter()
+            .append("circle")
+            .attr("cy", 25)
+            .attr("r", 6)
+            .attr("cx", d => xTable(+d.repWin))
+            .attr("fill", "none")
+            .attr("stroke", d => d.incumbentParty[0].incumbentParty == "(R)" ? colors[0] : colors[1])
+
+        newTable.append("tr")
+            .attr("id", d.state + "secondRow")
+
+    })
+
+    function appendNewRow(state) {
+        var newRow = d3.select("#" + state + "secondRow")
+
+        var newTable = newRow.append("td")
+            .attr("id", state + "secondRowTable")
+            .attr("colspan", 3)
+            .append("table")
+            .attr("width", "100%")
+
+        var races = today.filter(d => d.state == state)
+        var newTableHeader = newTable.append("tr")
+            .style("border-bottom", "1px solid lightgray")
+
+        newTableHeader.append("td")
+            .attr("width", "30%")
             .append("h1")
-            .text("FLIP?")
-            .style("font-size", "1.5vw")
-            .style("font-weight", 100)
+            .text("DISTRICT")
             .style("font-family", "sf-mono")
+            .style("font-weight", 100)
+            .style("font-size", "1.5vw")
+            .style("padding-left", "15px")
 
-        header.append("th")
-            .attr("class", "")
-            .style("text-align", "center")
-            .style("width", "5%")
+        newTableHeader.append("td")
+            .attr("width", "15%")
             .append("h1")
-            .text("(I)")
-            .style("font-size", "1.5vw")
-            .style("font-weight", 100)
+            .text("REP")
             .style("font-family", "sf-mono")
-
-
-        header.append("th")
-            .attr("class", "")
+            .style("font-weight", 100)
+            .style("font-size", "1.5vw")
             .style("text-align", "center")
-            .style("width", "10%")
+
+        newTableHeader.append("td")
+            .attr("width", "15%")
             .append("h1")
-            .text("WIN")
-            .style("font-size", "1.5vw")
-            .style("font-weight", 100)
+            .text("DEM")
             .style("font-family", "sf-mono")
-
-
-        header.append("th")
-            .attr("class", "")
-            .style("text-align", "center")
-            .style("width", "10%")
-            .append("h1")
-            .text("REP VOTE")
-            .style("font-size", "1.5vw")
             .style("font-weight", 100)
-            .style("font-family", "sf-mono")
-
-
-        header.append("th")
-            .attr("class", "")
-            .style("text-align", "center")
-            .style("width", "10%")
-            .append("h1")
-            .text("DEM VOTE")
             .style("font-size", "1.5vw")
-            .style("font-weight", 100)
-            .style("font-family", "sf-mono")
-
-        header.append("th")
-            .attr("class", "hover")
             .style("text-align", "center")
-            .style("width", "10%")
+
+        newTableHeader.append("td")
+            .attr("width", "20%")
             .append("h1")
             .text("MARGIN")
-            .style("font-size", "1.5vw")
-            .style("font-weight", 100)
             .style("font-family", "sf-mono")
-            .on("click", d => {
+            .style("font-weight", 100)
+            .style("font-size", "1.5vw")
+            .style("text-align", "center")
 
-                sortType == "marginComp" ? tableFunction("marginRep") :
-                    sortType == "marginRep" ? tableFunction("marginDem") : tableFunction("marginComp")
-            })
-
-        var tbody = table.append("tbody")
-
-        districtData.forEach((d, i) => {
-            var district = d.districtID
-            var incumbent = inputData.filter(d => d.id == district)[0].incumbentParty
-            d.margin = d.repVote - d.demVote
-            tbody.append("tr")
-                .attr("id", "district" + district)
-
-            d3.select("#" + "district" + district)
-                .append("td")
-                .attr("class", "hover")
-                .style("text-align", "left")
-                .style("width", "30%")
-                .append("a").attr("href", d => "districts?district=" + district).append("path")
-                .text(d.state.toUpperCase() + "  " + ordinal(d.seat).toUpperCase())
-                .style("font-size", "1.5vw")
-                .style("font-weight", 100)
-                .style("font-family", "sf-mono")
+        newTableHeader.append("td")
+            .attr("width", "20%")
+            .append("h1")
+            .text("WIN")
+            .style("font-family", "sf-mono")
+            .style("font-weight", 100)
+            .style("font-size", "1.5vw")
+            .style("text-align", "center")
 
 
-            d3.select("#" + "district" + district)
-                .append("td")
-                .style("text-align", "center")
-                .style("width", "5%")
+        races.forEach((d, i) => {
+
+            var districtRow = newTable.append("tr")
+                .style("border-bottom", "1px solid white")
+
+            districtRow.append("td")
+                .style("width", "40%")
+                .append("a")
+                .attr("href", "districts?district=" + d.districtID)
                 .append("h1")
-                .text(incumbent == "(R)" ? (d.repWin > 50 ? "" : "R->D") : (d.repWin < 50 ? "" : "D->R"))
-                .style("color", incumbent == "(R)" ? color(0) : color(100))
-                .style("font-size", "1.5vw")
-                .style("font-weight", 500)
+                .text(ordinal(d.seat).toUpperCase())
                 .style("font-family", "sf-mono")
-
-            d3.select("#" + "district" + district)
-                .append("td")
-                .style("text-align", "center")
-                .style("width", "5%")
-                .append("h1")
-                .text(incumbent)
-                .style("color", incumbent == "(R)" ? color(100) : color(0))
-                .style("font-size", "1.5vw")
                 .style("font-weight", 100)
-                .style("font-family", "sf-mono")
-
-
-
-            d3.select("#" + "district" + district)
-                .append("td")
-                .style("text-align", "center")
-                .style("width", "10%")
-                .style("background-color", color(d.repWin))
-                .append("h1")
-                .text(d.repWin > 50 ? nf(d.repWin) : nf(d.demWin))
                 .style("font-size", "1.5vw")
-                .style("font-weight", 100)
-                .style("font-family", "sf-mono")
+                .style("padding-left", "15px")
 
-
-            d3.select("#" + "district" + district)
-                .append("td")
-                .style("text-align", "center")
-                .style("width", "10%")
+            districtRow.append("td")
+                .style("width", "15%")
                 .append("h1")
                 .text(nf(d.repVote))
-                .style("font-size", "1.5vw")
-                .style("font-weight", 100)
                 .style("font-family", "sf-mono")
-
-
-            d3.select("#" + "district" + district)
-                .append("td")
+                .style("font-weight", 100)
+                .style("font-size", "1.5vw")
                 .style("text-align", "center")
-                .style("width", "10%")
+
+            districtRow.append("td")
+                .style("width", "15%")
                 .append("h1")
                 .text(nf(d.demVote))
-                .style("font-size", "1.5vw")
-                .style("font-weight", 100)
                 .style("font-family", "sf-mono")
-
-            d3.select("#" + "district" + district)
-                .append("td")
+                .style("font-weight", 100)
+                .style("font-size", "1.5vw")
                 .style("text-align", "center")
-                .style("width", "10%")
-                .style("background-color", color(50 + d.margin))
+
+            districtRow.append("td")
+                .style("width", "20%")
                 .append("h1")
-                .text(d.repWin > 50 ? "R+" + nf(d.margin) : "D+" + nf(-d.margin))
-                .style("font-size", "1.5vw")
-                .style("font-weight", 100)
+                .text((d.repVote > d.demVote ? "R+" : "D+") + nf(Math.abs(d.repVote - d.demVote)))
                 .style("font-family", "sf-mono")
+                .style("font-weight", 100)
+                .style("font-size", "1.5vw")
+                .style("text-align", "center")
+
+            districtRow.append("td")
+                .style("background-color", color(d.repWin))
+                .style("width", "12%")
+                .append("h1")
+                .text(nf((Math.abs(d.repWin - 50) + 50)) + "%")
+                .style("font-family", "sf-mono")
+                .style("font-weight", 100)
+                .style("font-size", "1.5vw")
+                .style("text-align", "center")
+
 
         })
+        d3.select("#" + state + "plusSign").remove()
     }
-    var searchBar = d3.select("#searchBar")
-        .on("change", d => {
-            var inputvalue = d3.select("#searchBar").property("value").toUpperCase()
-            console.log(inputvalue)
-            window.location.replace("#district" + inputvalue)
-            window.scrollBy(0, -100)
-
-        })
-
 }
