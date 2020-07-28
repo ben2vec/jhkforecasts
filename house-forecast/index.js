@@ -1014,7 +1014,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
     header.append("td")
         .attr("width", "25%")
         .append("h1")
-        .text("STATE")
+        .text("")
         .style("font-family", "sf-mono")
         .style("font-weight", 100)
         .style("font-size", "2vw")
