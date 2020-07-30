@@ -548,8 +548,8 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
         gopev: time_data.filter(d => d.party == "gop")[j].electoral_vote,
         demev: time_data.filter(d => d.party == "dem")[j].electoral_vote,
         thirdev: time_data.filter(d => d.party == "third")[j].electoral_vote,
-        evar: time_data.filter(d => d.party == "gop")[j].p_10 * 1.3,
-        pvar: 4.5 - (j / 150),
+        evar: time_data.filter(d => d.party == "gop")[j].p_10 * 1.45,
+        pvar: 5 - (j / 150),
       }
       line_data.push(ld)
     }

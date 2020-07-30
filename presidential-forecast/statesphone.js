@@ -233,6 +233,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
   var max_date = d3.max(time_data, d => d.forecast_date)
   var line_data = []
   for (let j = 0; j < data_length; j++) {
+    var stdev = +(time_data.filter(d => d.party == "gop")[j].proj_vote - time_data.filter(d => d.party == "gop")[j].p_10) * .75
 
     var ld = {
       date: time_data.filter(d => d.party == "gop")[j].forecast_date,
@@ -245,6 +246,10 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
       gopev: time_data.filter(d => d.party == "gop")[j].electoral_vote,
       demev: time_data.filter(d => d.party == "dem")[j].electoral_vote,
       thirdev: time_data.filter(d => d.party == "third")[j].electoral_vote,
+      gopvote10: +time_data.filter(d => d.party == "gop")[j].proj_vote - stdev,
+      gopvote90: +time_data.filter(d => d.party == "gop")[j].proj_vote + stdev,
+      demvote10: +time_data.filter(d => d.party == "dem")[j].proj_vote - stdev,
+      demvote90: +time_data.filter(d => d.party == "dem")[j].proj_vote + stdev
     }
     line_data.push(ld)
   }
@@ -300,6 +305,11 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     .curve(d3.curveLinear)
     .x(d => xphone(d.date))
     .y(d => yphone(d.pct));
+
+    var area = d3.area()
+    .x(d => xphone(d.date))
+    .y0(d => yphone(d.top))
+    .y1(d => yphone(d.bottom));
 
   timephone.append("g")
     .attr("class", "x-axis")
@@ -374,7 +384,8 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     var cities = copy.map(function (id) {
       return {
         id: id,
-        values: line_data.map(d => { return { date: d.date, pct: +d[id] } })
+        values: line_data.map(d => { return { date: d.date, pct: +d[id] } }),
+        conf: line_data.map(d => { return { date: d.date, bottom: input == "win" ? +d[id] : +d[id + "10"], top: input == "win" ? +d[id] : +d[id + "90"] } })
       };
     });
     yphone.domain([
@@ -404,15 +415,49 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
 
       })
 
-    var city = timephone.selectAll(".cities")
+      var city = timephone.selectAll(".citiesPhone")
       .data(cities);
 
     city.exit().remove();
 
+    var cityout = timephone.selectAll(".citiesoutPhone")
+      .data(cities);
+
+    cityout.exit().remove();
+
+    var areas = timephone.selectAll(".areasPhone")
+      .data(cities);
+
+    areas.exit().remove();
+
+    console.log(cities)
+
+    areas.enter().insert("g", ".focus").append("path")
+      .attr("class", "line areasPhone")
+      .style("fill", (d, i) => d.id == "third" + input ? "none" : colors[i])
+      .style("stroke-width", 4)
+      .style("opacity", .2)
+      .style("stroke-linecap", "round")
+      .attr("stroke-linejoin", "round")
+      .merge(areas)
+      .transition().duration(speed)
+      .attr("d", d => area(d.conf))
+
+    cityout.enter().insert("g", ".focus").append("path")
+      .attr("class", "line citiesoutPhone")
+      .style("stroke", (d, i) => "white")
+      .style("stroke-width", 12)
+      .style("opacity", 1)
+      .style("stroke-linecap", "round")
+      .attr("stroke-linejoin", "round")
+      .merge(cityout)
+      .transition().duration(speed)
+      .attr("d", d => line(d.values))
+
     city.enter().insert("g", ".focus").append("path")
-      .attr("class", "line cities")
+      .attr("class", "line citiesPhone")
       .style("stroke", (d, i) => colors[i])
-      .style("stroke-width", 6)
+      .style("stroke-width", 5)
       .style("opacity", .7)
       .style("stroke-linecap", "round")
       .attr("stroke-linejoin", "round")
