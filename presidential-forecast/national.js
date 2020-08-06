@@ -53,19 +53,20 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
   d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
     console.log(data)
     document.getElementById("topBanner").style.backgroundColor = color(data[data.length - 3].win)
-    var updated = data[data.length - 1].experts_weight
+    var updated = data[data.length - 1].tippingPoint
     data.forEach((d, i) => {
+      d.candidate = d.candidate == "Joseph R. Biden Jr." ? "Joseph Biden" : d.candidate
       d.forecast_date = dp(d.forecast_date)
       return d
     })
     data.sort((a, b) => a.forecast_date - b.forecast_date)
 
-    var newest_update = d3.max(data, d => d.forecast_date)
 
     document.getElementById("updated").innerHTML = "Updated: " + updated
 
-    var newest_data = data.slice(data.length - 171, data.length)
-    var upset_odds = newest_data[168].win > newest_data[169].win ? newest_data[169].win : newest_data[168].win
+    var newest_data = data.slice(data.length - 228, data.length)
+    console.log(newest_data)
+    var upset_odds = newest_data[225].win > newest_data[224].win ? +newest_data[224].win : +newest_data[225].win
     console.log(upset_odds)
     map.append("text")
       .text("Chance of an upset is about the odds of...")
@@ -100,14 +101,14 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       var ml = map_labels.filter(d => d.state == states[k])
       var finaldt = {
         state: states[k],
-        electoral_votes: +dt[0].electoral_vote,
-        gop_win: +dt[0].win,
-        dem_win: +dt[1].win,
-        third_win: +dt[2].win,
-        gop_vote: +dt[0].proj_vote,
-        dem_vote: +dt[1].proj_vote,
+        evs: +dt[0].ev,
+        gop_win: +dt[1].win,
+        dem_win: +dt[0].win,
+        third_win: +dt[3].win,
+        gop_vote: +dt[1].proj_vote,
+        dem_vote: +dt[0].proj_vote,
         third_vote: +dt[2].proj_vote,
-        tipping_point: +dt[0].tipping_point,
+        tippingPoint: +dt[0].tippingPoint,
         x_value: ml[0].xValue,
         y_value: ml[0].yValue,
         label: ml[0].label,
@@ -190,7 +191,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
           .attr("text-anchor", "middle")
 
         tipSVG.append("text")
-          .text(d.electoral_votes + " Electoral Votes")
+          .text(d.evs + " Electoral Votes")
           .attr("y", 40)
           .attr("x", 87.5)
           .attr("fill", "#black")
@@ -250,8 +251,8 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       var dataState = sd[i].state;
       var gopwin = sd[i].gop_win
       var demwin = sd[i].dem_win
-      var tippingpoint = sd[i].tipping_point
-      var ev = sd[i].electoral_votes
+      var tippingpoint = sd[i].tippingPoint
+      var ev = sd[i].evs
       var xv = sd[i].x_value
       var yv = sd[i].y_value
       var label = sd[i].label
@@ -545,9 +546,9 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
         gopvote: time_data.filter(d => d.party == "gop")[j].proj_vote,
         demvote: time_data.filter(d => d.party == "dem")[j].proj_vote,
         thirdvote: time_data.filter(d => d.party == "third")[j].proj_vote,
-        gopev: time_data.filter(d => d.party == "gop")[j].electoral_vote,
-        demev: time_data.filter(d => d.party == "dem")[j].electoral_vote,
-        thirdev: time_data.filter(d => d.party == "third")[j].electoral_vote,
+        gopev: time_data.filter(d => d.party == "gop")[j].ev,
+        demev: time_data.filter(d => d.party == "dem")[j].ev,
+        thirdev: time_data.filter(d => d.party == "third")[j].ev,
         evar: time_data.filter(d => d.party == "gop")[j].p_10 * 1.45,
         pvar: 5 - (j / 150),
       }
@@ -853,7 +854,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
     }
 
     var overview_data = newest_data.filter(d => d.state == "US")
-    overview_data.sort((a, b) => b.electoral_vote - a.electoral_vote)
+    overview_data.sort((a, b) => b.ev - a.ev)
 
     overview.selectAll()
       .data(overview_data)
@@ -906,7 +907,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       .enter().append("rect")
       .attr("x", 250)
       .attr("y", (d, i) => 47.5 + i * 50)
-      .attr("width", d => (d.electoral_vote / 538) * 358)
+      .attr("width", d => (d.ev / 538) * 358)
       .attr("height", 45)
       .attr("fill", d => cand_colors(d.party))
       .attr("opacity", .7)
@@ -926,7 +927,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       .data(overview_data)
       .enter()
       .append("text")
-      .text(d => numberformat(d.electoral_vote))
+      .text(d => numberformat(d.ev))
       .attr("y", (d, i) => 70 + i * 50)
       .attr("x", 255)
       .attr("fill", "black")
@@ -956,7 +957,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       var dt = newest_data.filter(d => d.state == bubble_info[k].state)
       var finaldt = {
         state: bubble_info[k].state,
-        electoral_votes: +dt[0].electoral_vote,
+        evs: +dt[0].ev,
         gop_win: +dt[0].win,
         dem_win: +dt[1].win,
         third_win: +dt[2].win,
@@ -967,7 +968,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
         y: bubble_info[k].y,
         r: bubble_info[k].radius,
         label: bubble_info[k].abbrev,
-        tp: dt[0].tipping_point
+        tp: dt[0].tippingPoint
       }
       finaldt.margin = finaldt.gop_vote - finaldt.dem_vote
       sdbars.push(finaldt)
@@ -990,18 +991,18 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
     gopbars.sort((a, b) => b.margin - a.margin)
     gopbars.forEach(function (d, i) {
       d.index = i + 1;
-      d.indexev = d.index == 1 ? 0 : gopbars[i - 1].indexev + gopbars[i - 1].electoral_votes;
+      d.indexev = d.index == 1 ? 0 : gopbars[i - 1].indexev + gopbars[i - 1].evs;
 
     })
     dembars.sort((a, b) => a.margin - b.margin)
     dembars.forEach(function (d, i) {
       d.index = i + 1;
-      d.indexev = d.index == 1 ? 0 : dembars[i - 1].indexev + dembars[i - 1].electoral_votes;
+      d.indexev = d.index == 1 ? 0 : dembars[i - 1].indexev + dembars[i - 1].evs;
 
     })
 
-    var gop_ev_bars = d3.sum(gopbars, d => d.electoral_votes)
-    var dem_ev_bars = d3.sum(dembars, d => d.electoral_votes)
+    var gop_ev_bars = d3.sum(gopbars, d => d.evs)
+    var dem_ev_bars = d3.sum(dembars, d => d.evs)
 
     var max_evs = gop_ev_bars > dem_ev_bars ? gop_ev_bars : dem_ev_bars
 
@@ -1027,7 +1028,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       .append("rect")
       .attr("x", d => xbars(d.indexev))
       .attr("y", gop_ev_bars < dem_ev_bars ? 200 : 100)
-      .attr("width", d => d.electoral_votes * (800 / max_evs))
+      .attr("width", d => d.evs * (800 / max_evs))
       .attr("height", 70)
       .attr("ry", 3)
       .attr("fill", d => color(d.gop_win))
@@ -1064,7 +1065,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
           .attr("text-anchor", "middle")
 
         tipSVG.append("text")
-          .text(d.electoral_votes + " Electoral Votes")
+          .text(d.evs + " Electoral Votes")
           .attr("y", 40)
           .attr("x", 87.5)
           .attr("fill", "#black")
@@ -1110,7 +1111,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       .append("rect")
       .attr("x", d => xbars(d.indexev))
       .attr("y", gop_ev_bars > dem_ev_bars ? 200 : 100)
-      .attr("width", d => d.electoral_votes * (800 / max_evs))
+      .attr("width", d => d.evs * (800 / max_evs))
       .attr("height", 70)
       .attr("ry", 3)
       .attr("fill", d => color(d.gop_win))
@@ -1147,7 +1148,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
           .attr("text-anchor", "middle")
 
         tipSVG.append("text")
-          .text(d.electoral_votes + " Electoral Votes")
+          .text(d.evs + " Electoral Votes")
           .attr("y", 40)
           .attr("x", 87.5)
           .attr("fill", "#black")
@@ -1243,7 +1244,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       var dt = newest_data.filter(d => d.state == bubble_info[k].state)
       var finaldt = {
         state: bubble_info[k].state,
-        electoral_votes: +dt[0].electoral_vote,
+        evs: +dt[0].ev,
         gop_win: +dt[0].win,
         dem_win: +dt[1].win,
         third_win: +dt[2].win,
@@ -1254,7 +1255,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
         y: bubble_info[k].y,
         r: bubble_info[k].radius,
         label: bubble_info[k].abbrev,
-        tp: dt[0].tipping_point
+        tp: dt[0].tippingPoint
       }
       finaldt.margin = finaldt.gop_vote - finaldt.dem_vote
       sd3.push(finaldt)
@@ -1335,7 +1336,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
           .attr("text-anchor", "middle")
 
         tipSVG.append("text")
-          .text(d.electoral_votes + " Electoral Votes")
+          .text(d.evs + " Electoral Votes")
           .attr("y", 40)
           .attr("x", 87.5)
           .attr("fill", "#black")
@@ -1494,12 +1495,12 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
         var dt = newest_data.filter(d => d.state == bubble_info[k].state)
         var finaldt = {
           state: bubble_info[k].state,
-          electoral_votes: +dt[0].electoral_vote,
+          evs: +dt[0].ev,
           std: (+dt[0].proj_vote - +dt[0].p_10) / 1.28,
           gop_vote: +dt[0].proj_vote,
           dem_vote: +dt[1].proj_vote,
           third_vote: +dt[2].proj_vote,
-          tipping_point: +dt[0].tipping_point
+          tippingPoint: +dt[0].tippingPoint
         }
         finaldt.margin = finaldt.gop_vote - finaldt.dem_vote
         fdt.push(finaldt)
@@ -1510,8 +1511,8 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       var tq = jStat.normal.inv(.01, 0, min_stdev)
       var tp = jStat.normal.pdf(tq, 0, min_stdev)
 
-      tippingPointSort == "high-to-low" ? fdt.sort((a, b) => Math.abs(a.margin) - Math.abs(b.margin)) && fdt.sort((a, b) => b.tipping_point - a.tipping_point) :
-        tippingPointSort == "low-to-high" ? fdt.sort((a, b) => Math.abs(b.margin) - Math.abs(a.margin)) && fdt.sort((a, b) => a.tipping_point - b.tipping_point) :
+      tippingPointSort == "high-to-low" ? fdt.sort((a, b) => Math.abs(a.margin) - Math.abs(b.margin)) && fdt.sort((a, b) => b.tippingPoint - a.tippingPoint) :
+        tippingPointSort == "low-to-high" ? fdt.sort((a, b) => Math.abs(b.margin) - Math.abs(a.margin)) && fdt.sort((a, b) => a.tippingPoint - b.tippingPoint) :
           marginSort == "d-to-r" ? fdt.sort((a, b) => a.margin - b.margin) :
             marginSort == "r-to-d" ? fdt.sort((a, b) => b.margin - a.margin) :
               fdt.sort((a, b) => Math.abs(a.margin) - Math.abs(b.margin))
@@ -1561,7 +1562,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
           gopvalues: gopcurve,
           demvalues: demcurve,
           margin: fdt[k].margin,
-          tipping_point: fdt[k].tipping_point
+          tippingPoint: fdt[k].tippingPoint
         }
 
         sd4.push(dt)
@@ -1655,7 +1656,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
         .data(sd4)
         .enter()
         .append("text")
-        .text(d => numberformat(d.tipping_point) + "%")
+        .text(d => numberformat(d.tippingPoint) + "%")
         .attr("x", 980)
         .attr("y", (d, i) => i * 50 + 150)
         .style("font-weight", "100")
