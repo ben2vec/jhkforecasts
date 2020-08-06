@@ -262,7 +262,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     wholevalue = d3.format(".0f"),
     onevalue = d3.format(".1f")
 
-  d3.select("#timephone").append("a").attr("href", "https://projects.jhkforecasts.com/presidential-forecast/").append("h3").text("<<Back To National Forecast<<").style("font-weight", 900).style("text-align", "center").style("text-decoration","underline")
+  d3.select("#timephone").append("a").attr("href", "https://projects.jhkforecasts.com/presidential-forecast/").append("h3").text("<<Back To National Forecast<<").style("font-weight", 900).style("text-align", "center").style("text-decoration", "underline")
   d3.select("#timephone").append("h1").text("Time Changes").style("font-weight", 900).style("margin-left", "2%")
 
   var tableButton = d3.select("#timephone").append("table").style("border-collapse", "collapse").style("margin-bottom", "10px")
@@ -306,7 +306,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     .x(d => xphone(d.date))
     .y(d => yphone(d.pct));
 
-    var area = d3.area()
+  var area = d3.area()
     .x(d => xphone(d.date))
     .y0(d => yphone(d.top))
     .y1(d => yphone(d.bottom));
@@ -361,7 +361,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     .attr("stroke-width", 1.5)
     .style("shape-rendering", "crispEdges")
     .style("opacity", 0.5)
-    .attr("y1", -heightphone+10)
+    .attr("y1", -heightphone + 10)
     .attr("y2", -20);
 
   focus.append("text").attr("class", "lineHoverDate")
@@ -415,7 +415,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
 
       })
 
-      var city = timephone.selectAll(".citiesPhone")
+    var city = timephone.selectAll(".citiesPhone")
       .data(cities);
 
     city.exit().remove();
@@ -493,7 +493,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
         .attr("font-size", 40)
         .merge(labels)
 
-      
+
 
       timephone.selectAll(".overlay")
         .on("mouseover", () =>
@@ -948,3 +948,20 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
 
 
 })
+
+
+///reset
+d3.select("body").remove()
+
+var newBody = d3.select("html")
+  .append("body")
+  
+  newBody.append("img")
+  .attr("src","top-banner.svg")
+  .style("border-bottom","solid black 1px")
+  
+  newBody.append("h1")
+  .text("MODEL BEING ADJUSTED, CHECK BACK IN A COUPLE DAYS")
+  .style("text-align","center")
+  .style("font-family","sf-mono")
+  .style("font-size","3vw")
