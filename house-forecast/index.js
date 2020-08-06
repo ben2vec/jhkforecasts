@@ -929,7 +929,7 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
                     d0 = line_data[i - 1],
                     d1 = line_data[i],
                     d = x0 - d0.date > d1.date - x0 ? d1 : d0;
-
+                    console.log(i)
                 focus.select(".lineHover")
                     .attr("transform", "translate(" + x(d.date) + "," + height + ")");
 

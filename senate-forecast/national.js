@@ -116,7 +116,7 @@ map.call(toolTip);
 boxes.call(toolTipBoxes)
 var colors = ["#FF6060", "#0091FF", "#FFE130", "#C473F6", "#31DE70"]
 
-var category = ["REP", "DEM", "LIB", "IND", "GREEN"]
+var category = ["REP", "DEM", "LIB", "IND", "GRE"]
 
 var cand_colors = d3.scaleOrdinal()
     .domain(category)

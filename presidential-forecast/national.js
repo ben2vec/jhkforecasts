@@ -1,20 +1,25 @@
-var colors = ["#FF6060", "#0091FF", "#FFE130"]
 var timeScale = 86400000
-var category = ["gop", "dem", "third"]
-
-var cand_colors = d3.scaleOrdinal()
+var colors = ["#FF6060", "#0091FF", "#FFE130", "#C473F6", "#31DE70"]
+var category = ["REP", "DEM", "LIB", "IND", "GRE"]
+var partyColors = d3.scaleOrdinal()
   .domain(category)
-  .range(["#FF6060", "#0091FF", "#FFE130"])
-
+  .range(colors)
+var candidates = [
+  { candidate: "Joseph Biden", party: "DEM", id: "Biden" },
+  { candidate: "Donald Trump", party: "REP", id: "Trump" },
+  { candidate: "Howie Hawkins", party: "GRE", id: "Hawkins" },
+  { candidate: "Jo Jorgensen", party: "LIB", id: "Jorgensen" },
+]
 var tformat = d3.timeFormat("%m/%d/%Y")
 var dp = d3.timeParse("%m/%d/%y")
+var tf = d3.timeFormat("%m/%d/%y")
 var timeparse = d3.timeParse("%m/%d/%y %H:%M")
 var numberformat = d3.format(".1f")
 var updated_format = d3.timeFormat("%b. %d %Y %I:%M %p")
 var widthmap = 1020
 var heightmap = 500;
-var bubble_info = [{ "state": "Alabama", "abbrev": "AL", "radius": 16.43, "x": 413, "y": 332 }, { "state": "Alaska", "abbrev": "AK", "radius": 9.49, "x": 41, "y": 19 }, { "state": "Arizona", "abbrev": "AZ", "radius": 18.17, "x": 172, "y": 282 }, { "state": "Arkansas", "abbrev": "AR", "radius": 13.42, "x": 325, "y": 290 }, { "state": "California", "abbrev": "CA", "radius": 40.62, "x": 103, "y": 237 }, { "state": "Colorado", "abbrev": "CO", "radius": 16.43, "x": 224, "y": 249 }, { "state": "Connecticut", "abbrev": "CT", "radius": 14.49, "x": 586, "y": 128 }, { "state": "Delaware", "abbrev": "DE", "radius": 9.49, "x": 557, "y": 183 }, { "state": "District of Columbia", "abbrev": "DC", "radius": 9.49, "x": 536, "y": 193 }, { "state": "Florida", "abbrev": "FL", "radius": 29.5, "x": 483, "y": 380 }, { "state": "Georgia", "abbrev": "GA", "radius": 21.91, "x": 443, "y": 298 }, { "state": "Hawaii", "abbrev": "HI", "radius": 10.95, "x": 88, "y": 372 }, { "state": "Idaho", "abbrev": "ID", "radius": 10.95, "x": 188, "y": 173 }, { "state": "Illinois", "abbrev": "IL", "radius": 24.49, "x": 359, "y": 207 }, { "state": "Indiana", "abbrev": "IN", "radius": 18.17, "x": 413, "y": 207 }, { "state": "Iowa", "abbrev": "IA", "radius": 13.42, "x": 306, "y": 195 }, { "state": "Kansas", "abbrev": "KS", "radius": 13.42, "x": 266, "y": 248 }, { "state": "Kentucky", "abbrev": "KY", "radius": 15.49, "x": 411, "y": 251 }, { "state": "Louisiana", "abbrev": "LA", "radius": 15.49, "x": 326, "y": 335 }, { "state": "Maine", "abbrev": "ME", "radius": 7.75, "x": 628, "y": 26 }, { "state": "Maryland", "abbrev": "MD", "radius": 17.32, "x": 505, "y": 185 }, { "state": "Massachusetts", "abbrev": "MA", "radius": 18.17, "x": 607, "y": 89 }, { "state": "Michigan", "abbrev": "MI", "radius": 21.91, "x": 418, "y": 149 }, { "state": "Minnesota", "abbrev": "MN", "radius": 17.32, "x": 304, "y": 142 }, { "state": "Mississippi", "abbrev": "MS", "radius": 13.42, "x": 373, "y": 324 }, { "state": "Missouri", "abbrev": "MO", "radius": 17.32, "x": 329, "y": 251 }, { "state": "Montana", "abbrev": "MT", "radius": 9.49, "x": 206, "y": 131 }, { "state": "Nebraska", "abbrev": "NE", "radius": 7.75, "x": 258, "y": 209 }, { "state": "Nevada", "abbrev": "NV", "radius": 13.42, "x": 167, "y": 220 }, { "state": "New Hampshire", "abbrev": "NH", "radius": 10.95, "x": 612, "y": 54 }, { "state": "New Jersey", "abbrev": "NJ", "radius": 20.49, "x": 551, "y": 147 }, { "state": "New Mexico", "abbrev": "NM", "radius": 12.25, "x": 215, "y": 303 }, { "state": "New York", "abbrev": "NY", "radius": 29.5, "x": 548, "y": 81 }, { "state": "North Carolina", "abbrev": "NC", "radius": 21.21, "x": 499, "y": 278 }, { "state": "North Dakota", "abbrev": "ND", "radius": 9.49, "x": 257, "y": 136 }, { "state": "Ohio", "abbrev": "OH", "radius": 23.24, "x": 459, "y": 191 }, { "state": "Oklahoma", "abbrev": "OK", "radius": 14.49, "x": 270, "y": 294 }, { "state": "Oregon", "abbrev": "OR", "radius": 14.49, "x": 124, "y": 176 }, { "state": "Pennsylvania", "abbrev": "PA", "radius": 24.49, "x": 498, "y": 132 }, { "state": "Rhode Island", "abbrev": "RI", "radius": 10.95, "x": 619, "y": 126 }, { "state": "South Carolina", "abbrev": "SC", "radius": 16.43, "x": 487, "y": 322 }, { "state": "South Dakota", "abbrev": "SD", "radius": 9.49, "x": 257, "y": 167 }, { "state": "Tennessee", "abbrev": "TN", "radius": 18.17, "x": 379, "y": 284 }, { "state": "Texas", "abbrev": "TX", "radius": 33.76, "x": 271, "y": 355 }, { "state": "Utah", "abbrev": "UT", "radius": 13.42, "x": 204, "y": 218 }, { "state": "Vermont", "abbrev": "VT", "radius": 9.49, "x": 585, "y": 47 }, { "state": "Virginia", "abbrev": "VA", "radius": 19.75, "x": 508, "y": 229 }, { "state": "Washington", "abbrev": "WA", "radius": 18.97, "x": 154, "y": 131 }, { "state": "West Virginia", "abbrev": "WV", "radius": 12.25, "x": 451, "y": 242 }, { "state": "Wisconsin", "abbrev": "WI", "radius": 17.32, "x": 359, "y": 146 }, { "state": "Wyoming", "abbrev": "WY", "radius": 9.49, "x": 214, "y": 177 }, { "state": "Maine-1", "abbrev": 1, "radius": 5.48, "x": 612, "y": 26 }, { "state": "Maine-2", "abbrev": 2, "radius": 5.48, "x": 644, "y": 26 }, { "state": "Nebraska-1", "abbrev": 1, "radius": 5.48, "x": 242, "y": 209 }, { "state": "Nebraska-2", "abbrev": 2, "radius": 5.48, "x": 258, "y": 193 }, { "state": "Nebraska-3", "abbrev": 3, "radius": 5.48, "x": 274, "y": 209 }]
-var states = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "District of Columbia", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming", "Maine-1", "Maine-2", "Nebraska-1", "Nebraska-2", "Nebraska-3", "US"]
+var bubble_info = [{ "state": "Alabama", "abbrev": "AL", "radius": 16.43, "x": 413, "y": 332 }, { "state": "Alaska", "abbrev": "AK", "radius": 9.49, "x": 41, "y": 19 }, { "state": "Arizona", "abbrev": "AZ", "radius": 18.17, "x": 172, "y": 282 }, { "state": "Arkansas", "abbrev": "AR", "radius": 13.42, "x": 325, "y": 290 }, { "state": "California", "abbrev": "CA", "radius": 40.62, "x": 103, "y": 237 }, { "state": "Colorado", "abbrev": "CO", "radius": 16.43, "x": 224, "y": 249 }, { "state": "Connecticut", "abbrev": "CT", "radius": 14.49, "x": 586, "y": 128 }, { "state": "Delaware", "abbrev": "DE", "radius": 9.49, "x": 557, "y": 183 }, { "state": "District of Columbia", "abbrev": "DC", "radius": 9.49, "x": 536, "y": 193 }, { "state": "Florida", "abbrev": "FL", "radius": 29.5, "x": 483, "y": 380 }, { "state": "Georgia", "abbrev": "GA", "radius": 21.91, "x": 443, "y": 298 }, { "state": "Hawaii", "abbrev": "HI", "radius": 10.95, "x": 88, "y": 372 }, { "state": "Idaho", "abbrev": "ID", "radius": 10.95, "x": 188, "y": 173 }, { "state": "Illinois", "abbrev": "IL", "radius": 24.49, "x": 359, "y": 207 }, { "state": "Indiana", "abbrev": "IN", "radius": 18.17, "x": 413, "y": 207 }, { "state": "Iowa", "abbrev": "IA", "radius": 13.42, "x": 306, "y": 195 }, { "state": "Kansas", "abbrev": "KS", "radius": 13.42, "x": 266, "y": 248 }, { "state": "Kentucky", "abbrev": "KY", "radius": 15.49, "x": 411, "y": 251 }, { "state": "Louisiana", "abbrev": "LA", "radius": 15.49, "x": 326, "y": 335 }, { "state": "Maine", "abbrev": "ME", "radius": 7.75, "x": 628, "y": 26 }, { "state": "Maryland", "abbrev": "MD", "radius": 17.32, "x": 505, "y": 185 }, { "state": "Massachusetts", "abbrev": "MA", "radius": 18.17, "x": 607, "y": 89 }, { "state": "Michigan", "abbrev": "MI", "radius": 21.91, "x": 418, "y": 149 }, { "state": "Minnesota", "abbrev": "MN", "radius": 17.32, "x": 304, "y": 142 }, { "state": "Mississippi", "abbrev": "MS", "radius": 13.42, "x": 373, "y": 324 }, { "state": "Missouri", "abbrev": "MO", "radius": 17.32, "x": 329, "y": 251 }, { "state": "Montana", "abbrev": "MT", "radius": 9.49, "x": 206, "y": 131 }, { "state": "Nebraska", "abbrev": "NE", "radius": 7.75, "x": 258, "y": 209 }, { "state": "Nevada", "abbrev": "NV", "radius": 13.42, "x": 167, "y": 220 }, { "state": "New Hampshire", "abbrev": "NH", "radius": 10.95, "x": 612, "y": 54 }, { "state": "New Jersey", "abbrev": "NJ", "radius": 20.49, "x": 551, "y": 147 }, { "state": "New Mexico", "abbrev": "NM", "radius": 12.25, "x": 215, "y": 303 }, { "state": "New York", "abbrev": "NY", "radius": 29.5, "x": 548, "y": 81 }, { "state": "North Carolina", "abbrev": "NC", "radius": 21.21, "x": 499, "y": 278 }, { "state": "North Dakota", "abbrev": "ND", "radius": 9.49, "x": 257, "y": 136 }, { "state": "Ohio", "abbrev": "OH", "radius": 23.24, "x": 459, "y": 191 }, { "state": "Oklahoma", "abbrev": "OK", "radius": 14.49, "x": 270, "y": 294 }, { "state": "Oregon", "abbrev": "OR", "radius": 14.49, "x": 124, "y": 176 }, { "state": "Pennsylvania", "abbrev": "PA", "radius": 24.49, "x": 498, "y": 132 }, { "state": "Rhode Island", "abbrev": "RI", "radius": 10.95, "x": 619, "y": 126 }, { "state": "South Carolina", "abbrev": "SC", "radius": 16.43, "x": 487, "y": 322 }, { "state": "South Dakota", "abbrev": "SD", "radius": 9.49, "x": 257, "y": 167 }, { "state": "Tennessee", "abbrev": "TN", "radius": 18.17, "x": 379, "y": 284 }, { "state": "Texas", "abbrev": "TX", "radius": 33.76, "x": 271, "y": 355 }, { "state": "Utah", "abbrev": "UT", "radius": 13.42, "x": 204, "y": 218 }, { "state": "Vermont", "abbrev": "VT", "radius": 9.49, "x": 585, "y": 47 }, { "state": "Virginia", "abbrev": "VA", "radius": 19.75, "x": 508, "y": 229 }, { "state": "Washington", "abbrev": "WA", "radius": 18.97, "x": 154, "y": 131 }, { "state": "West Virginia", "abbrev": "WV", "radius": 12.25, "x": 451, "y": 242 }, { "state": "Wisconsin", "abbrev": "WI", "radius": 17.32, "x": 359, "y": 146 }, { "state": "Wyoming", "abbrev": "WY", "radius": 9.49, "x": 214, "y": 177 }, { "state": "Maine CD-1", "abbrev": 1, "radius": 5.48, "x": 612, "y": 26 }, { "state": "Maine CD-2", "abbrev": 2, "radius": 5.48, "x": 644, "y": 26 }, { "state": "Nebraska CD-1", "abbrev": 1, "radius": 5.48, "x": 242, "y": 209 }, { "state": "Nebraska CD-2", "abbrev": 2, "radius": 5.48, "x": 258, "y": 193 }, { "state": "Nebraska CD-3", "abbrev": 3, "radius": 5.48, "x": 274, "y": 209 }]
+var states = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "District of Columbia", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming", "Maine CD-1", "Maine CD-2", "Nebraska CD-1", "Nebraska CD-2", "Nebraska CD-3", "US"]
 var map_states = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "District of Columbia", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"]
 var map_labels = [{ "state": "Alabama", "label": "AL", "xValue": 637, "yValue": 338.6934 }, { "state": "Alaska", "label": "AK", "xValue": 245, "yValue": 400 }, { "state": "Arizona", "label": "AZ", "xValue": 315, "yValue": 306.5801 }, { "state": "Arkansas", "label": "AR", "xValue": 560, "yValue": 315.6387 }, { "state": "California", "label": "CA", "xValue": 223, "yValue": 245.9219 }, { "state": "Colorado", "label": "CO", "xValue": 400, "yValue": 240.5645 }, { "state": "Connecticut", "label": "CT", "xValue": -1000, "yValue": -1000 }, { "state": "Delaware", "label": "DE", "xValue": -1000, "yValue": -1000 }, { "state": "District of Columbia", "label": "DC", "xValue": -1000, "yValue": -1000 }, { "state": "Florida", "label": "FL", "xValue": 714, "yValue": 397.8154 }, { "state": "Georgia", "label": "GA", "xValue": 680.0117, "yValue": 335.2354 }, { "state": "Hawaii", "label": "HI", "xValue": 380, "yValue": 465 }, { "state": "Idaho", "label": "ID", "xValue": 310.1851, "yValue": 155 }, { "state": "Illinois", "label": "IL", "xValue": 596.6602, "yValue": 225.2954 }, { "state": "Indiana", "label": "IN", "xValue": 633.4111, "yValue": 223.4214 }, { "state": "Iowa", "label": "IA", "xValue": 545.8457, "yValue": 198.6782 }, { "state": "Kansas", "label": "KS", "xValue": 487, "yValue": 255.1592 }, { "state": "Kentucky", "label": "KY", "xValue": 655.1484, "yValue": 264.9658 }, { "state": "Louisiana", "label": "LA", "xValue": 561.4404, "yValue": 369.8135 }, { "state": "Maine", "label": "ME", "xValue": 807.3105, "yValue": 109.855 }, { "state": "Maryland", "label": "MD", "xValue": -1000, "yValue": -1000 }, { "state": "Massachusetts", "label": "MA", "xValue": -1000, "yValue": -1000 }, { "state": "Michigan", "label": "MI", "xValue": 645.6465, "yValue": 181.3647 }, { "state": "Minnesota", "label": "MN", "xValue": 530.8594, "yValue": 141.5874 }, { "state": "Mississippi", "label": "MS", "xValue": 598.6016, "yValue": 342.1514 }, { "state": "Missouri", "label": "MO", "xValue": 557, "yValue": 255.123 }, { "state": "Montana", "label": "MT", "xValue": 370.0981, "yValue": 112.7705 }, { "state": "Nebraska", "label": "NE", "xValue": 473.8364, "yValue": 210.0527 }, { "state": "Nevada", "label": "NV", "xValue": 267.8765, "yValue": 219.0957 }, { "state": "New Hampshire", "label": "NH", "xValue": -1000, "yValue": -1000 }, { "state": "New Jersey", "label": "NJ", "xValue": 785, "yValue": 210 }, { "state": "New Mexico", "label": "NM", "xValue": 385.3774, "yValue": 314.1035 }, { "state": "New York", "label": "NY", "xValue": 753.5781, "yValue": 160.2588 }, { "state": "North Carolina", "label": "NC", "xValue": 728.6084, "yValue": 280.5029 }, { "state": "North Dakota", "label": "ND", "xValue": 467.0742, "yValue": 112.3823 }, { "state": "Ohio", "label": "OH", "xValue": 670.7197, "yValue": 215.4883 }, { "state": "Oklahoma", "label": "OK", "xValue": 500.1963, "yValue": 306.418 }, { "state": "Oregon", "label": "OR", "xValue": 240.2783, "yValue": 139.5654 }, { "state": "Pennsylvania", "label": "PA", "xValue": 730.3535, "yValue": 195.856 }, { "state": "Rhode Island", "label": "RI", "xValue": -1000, "yValue": -1000 }, { "state": "South Carolina", "label": "SC", "xValue": 712.4395, "yValue": 310.6387 }, { "state": "South Dakota", "label": "SD", "xValue": 468.0742, "yValue": 158.5166 }, { "state": "Tennessee", "label": "TN", "xValue": 640.8594, "yValue": 290.8193 }, { "state": "Texas", "label": "TX", "xValue": 480.9902, "yValue": 368.2861 }, { "state": "Utah", "label": "UT", "xValue": 330.1084, "yValue": 230.978 }, { "state": "Vermont", "label": "VT", "xValue": -1000, "yValue": -1000 }, { "state": "Virginia", "label": "VA", "xValue": 731.0264, "yValue": 252.7842 }, { "state": "Washington", "label": "WA", "xValue": 256.9365, "yValue": 88.0762 }, { "state": "West Virginia", "label": "WV", "xValue": 701, "yValue": 243 }, { "state": "Wisconsin", "label": "WI", "xValue": 585.2529, "yValue": 163.2588 }, { "state": "Wyoming", "label": "WY", "xValue": 385.9287, "yValue": 175.6255 }]
 var projection = d3.geoAlbersUsa()
@@ -38,7 +43,7 @@ d3.select("#overview").append("h1")
   .style("font-weight", 900)
 var overview = d3.select("#overview")
   .append("svg")
-  .attr("viewBox", '0 0 1000 200');
+  .attr("viewBox", '0 0 1000 250');
 
 var tool_tip = d3.tip()
   .attr("class", "d3-tip")
@@ -55,13 +60,21 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
     document.getElementById("topBanner").style.backgroundColor = color(data[data.length - 3].win)
     var updated = data[data.length - 1].tippingPoint
     data.forEach((d, i) => {
+      d.rawDate = d.forecastDate
       d.candidate = d.candidate == "Joseph R. Biden Jr." ? "Joseph Biden" : d.candidate
-      d.forecast_date = dp(d.forecast_date)
+      d.forecastDate = dp(d.forecastDate)
       return d
     })
-    data.sort((a, b) => a.forecast_date - b.forecast_date)
-
-
+    data.sort((a, b) => a.forecastDate - b.forecastDate)
+    const array = data.map(d => {
+      return d.rawDate
+    })
+    const uniqueSet = new Set(array)
+    var dates = [...uniqueSet]
+    console.log(dates)
+    var dates = dates.map(d => {
+      return dp(d)
+    })
     document.getElementById("updated").innerHTML = "Updated: " + updated
 
     var newest_data = data.slice(data.length - 228, data.length)
@@ -102,12 +115,12 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       var finaldt = {
         state: states[k],
         evs: +dt[0].ev,
-        gop_win: +dt[1].win,
-        dem_win: +dt[0].win,
+        gopWin: +dt[1].win,
+        demWin: +dt[0].win,
         third_win: +dt[3].win,
-        gop_vote: +dt[1].proj_vote,
-        dem_vote: +dt[0].proj_vote,
-        third_vote: +dt[2].proj_vote,
+        gop_vote: +dt[1].vote,
+        dem_vote: +dt[0].vote,
+        third_vote: +dt[2].vote,
         tippingPoint: +dt[0].tippingPoint,
         x_value: ml[0].xValue,
         y_value: ml[0].yValue,
@@ -120,7 +133,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
 
 
 
-    var boxstates = [sd[28], sd[44], sd[20], sd[38], sd[6], sd[7], sd[19], sd[50]]
+    var boxstates = [sd[29], sd[45], sd[21], sd[39],sd[30], sd[6], sd[7], sd[20], sd[8]]
 
 
     map.selectAll()
@@ -132,7 +145,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       .attr("width", 30)
       .attr("height", 15)
       .attr("stroke", "white")
-      .attr("fill", d => color(d.gop_win))
+      .attr("fill", d => color(d.gopWin))
 
     map.selectAll()
       .data(boxstates)
@@ -187,7 +200,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
           .attr("x", 87.5)
           .attr("fill", "#black")
           .style("font-weight", "100")
-          .style("font-size", "20")
+          .style("font-size", "16")
           .attr("text-anchor", "middle")
 
         tipSVG.append("text")
@@ -195,8 +208,8 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
           .attr("y", 40)
           .attr("x", 87.5)
           .attr("fill", "#black")
-          .style("font-weight", "100")
-          .style("font-size", "15")
+          .style("font-weight", "500")
+          .style("font-size", "14")
           .attr("text-anchor", "middle")
 
         tipSVG.append("image")
@@ -214,8 +227,8 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
           .attr("height", 82)
 
         tipSVG.append("text")
-          .text(numberformat(d.gop_win) + "%")
-          .attr("y", 150)
+          .text(d.gopWin > 99.9 ? ">99.9%" : d.gopWin < 0.1 ? "<0.1%" : numberformat(d.gopWin) + "%")
+          .attr("y", 155)
           .attr("x", 131.25)
           .attr("fill", color(100))
           .style("font-weight", "100")
@@ -223,8 +236,8 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
           .attr("text-anchor", "middle")
 
         tipSVG.append("text")
-          .text(numberformat(d.dem_win) + "%")
-          .attr("y", 150)
+          .text(d.demWin > 99.9 ? ">99.9%" : d.demWin < 0.1 ? "<0.1%" : numberformat(d.demWin) + "%")
+          .attr("y", 155)
           .attr("x", 43.75)
           .attr("fill", color(0))
           .style("font-weight", "100")
@@ -249,8 +262,8 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
     for (var i = 0; i < sd.length; i++) {
 
       var dataState = sd[i].state;
-      var gopwin = sd[i].gop_win
-      var demwin = sd[i].dem_win
+      var gopwin = sd[i].gopWin
+      var demwin = sd[i].demWin
       var tippingpoint = sd[i].tippingPoint
       var ev = sd[i].evs
       var xv = sd[i].x_value
@@ -360,8 +373,8 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
           .attr("y", 40)
           .attr("x", 87.5)
           .attr("fill", "#black")
-          .style("font-weight", "100")
-          .style("font-size", "15")
+          .style("font-weight", "500")
+          .style("font-size", "14")
           .attr("text-anchor", "middle")
 
         tipSVG.append("image")
@@ -379,8 +392,8 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
           .attr("height", 82)
 
         tipSVG.append("text")
-          .text(numberformat(d.properties.gopWin) + "%")
-          .attr("y", 150)
+          .text(d.properties.gopWin > 99.9 ? ">99.9%" : d.properties.gopWin < 0.1 ? "<0.1%" : numberformat(d.properties.gopWin) + "%")
+          .attr("y", 155)
           .attr("x", 131.25)
           .attr("fill", color(100))
           .style("font-weight", "100")
@@ -388,8 +401,8 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
           .attr("text-anchor", "middle")
 
         tipSVG.append("text")
-          .text(numberformat(d.properties.demWin) + "%")
-          .attr("y", 150)
+          .text(d.properties.demWin > 99.9 ? ">99.9%" : d.properties.demWin < 0.1 ? "<0.1%" : numberformat(d.properties.demWin) + "%")
+          .attr("y", 155)
           .attr("x", 43.75)
           .attr("fill", color(0))
           .style("font-weight", "100")
@@ -483,7 +496,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
 
 
     map.append("text")
-      .text(numberformat(newest_data[168].win) + "%")
+      .text(numberformat(newest_data[225].win) + "%")
       .attr("x", 850)
       .attr("y", 0)
       .attr("font-family", "sf-mono")
@@ -494,7 +507,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
 
 
     map.append("text")
-      .text(numberformat(newest_data[169].win) + "%")
+      .text(numberformat(newest_data[224].win) + "%")
       .attr("x", 200)
       .attr("y", 0)
       .attr("font-family", "sf-mono")
@@ -533,35 +546,16 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
     var time_data = data.filter(d => d.state == key_state)
 
     var lol
-    var data_length = time_data.filter(d => d.party == "gop").length
-    var max_date = d3.max(time_data, d => d.forecast_date)
-    var line_data = []
-    for (let j = 0; j < data_length; j++) {
-
-      var ld = {
-        date: time_data.filter(d => d.party == "gop")[j].forecast_date,
-        gopwin: time_data.filter(d => d.party == "gop")[j].win,
-        demwin: time_data.filter(d => d.party == "dem")[j].win,
-        thirdwin: time_data.filter(d => d.party == "third")[j].win,
-        gopvote: time_data.filter(d => d.party == "gop")[j].proj_vote,
-        demvote: time_data.filter(d => d.party == "dem")[j].proj_vote,
-        thirdvote: time_data.filter(d => d.party == "third")[j].proj_vote,
-        gopev: time_data.filter(d => d.party == "gop")[j].ev,
-        demev: time_data.filter(d => d.party == "dem")[j].ev,
-        thirdev: time_data.filter(d => d.party == "third")[j].ev,
-        evar: time_data.filter(d => d.party == "gop")[j].p_10 * 1.45,
-        pvar: 5 - (j / 150),
-      }
-      line_data.push(ld)
-    }
-    var margin = { top: 20, right: 40, bottom: 20, left: 20 }
+    var max_date = d3.max(time_data, d => d.forecastDate)
+    var lineData = data.filter(d => d.state == key_state)
+    var margin = { top: 20, right: 50, bottom: 20, left: 50 }
     var width = 1400 - margin.left - margin.right
     var height = 600 - margin.top - margin.bottom
     var axisPad = 12
     var parseTime = d3.timeParse("%Y-%m-%d"),
       formatDate = d3.timeFormat("%b - %d"),
       formatMonth = d3.timeFormat("%Y-%m-%d"),
-      bisectDate = d3.bisector(d => d.date).left,
+      bisectDate = d3.bisector(d => d).left,
       wholevalue = d3.format(".0f"),
       onevalue = d3.format(".1f")
 
@@ -669,15 +663,23 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
 
     function update(input, speed) {
 
-      var copy = keys.filter(f => f.includes(input))
-      var cities = copy.map(function (id) {
-        return {
-          id: id,
-          values: line_data.map(d => { return { date: d.date, pct: +d[id] } }),
-          conf: line_data.map(d => { return { date: d.date, top: input == "win" ? + d[id] : + d[id] + (input == "ev" ? +d.evar : +d.pvar), bottom: input == "win" ? + d[id] : +d[id] - (input == "ev" ? +d.evar : +d.pvar) } })
-        };
-      });
-      console.log(cities)
+      var cands = candidates
+
+      cands.forEach((d, i) => {
+        var candidate = d.candidate
+        var candsData = lineData.filter(d => d.candidate == candidate)
+        d.line = candsData.map((d => { return { date: d.forecastDate, pct: d[input] } }))
+        d.conf = candsData.map(((d, j) => {
+          return {
+            date: d.forecastDate,
+            top: input == "win" ? d[input] : input == "ev" ? +d[input] + +d.p10 * 1.3 : i < 2 ? +d[input] + (4.75 - (j / 150)) : +d[input] + (+d[input] + 3) / 2,
+            bottom: input == "win" ? d[input] : input == "ev" ? +d[input] - +d.p10 * 1.3 : i < 2 ? +d[input] - (4.75 - (j / 150)) : +d[input] - (+d[input]) / 1.5,
+          }
+        }))
+      })
+
+
+      console.log(cands)
       y.domain([
         0,
         input == "ev" ? 538 : input == "vote" ? 60 : 100
@@ -706,17 +708,17 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
         })
 
       var city = time.selectAll(".cities")
-        .data(cities);
+        .data(cands);
 
       city.exit().remove();
 
       var cityout = time.selectAll(".citiesout")
-        .data(cities);
+        .data(cands);
 
       cityout.exit().remove();
 
       var areas = time.selectAll(".areas")
-        .data(cities);
+        .data(cands);
 
       areas.exit().remove();
 
@@ -724,7 +726,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
 
       areas.enter().insert("g", ".focus").append("path")
         .attr("class", "line areas")
-        .style("fill", (d, i) => d.id == "third" + input ? "none" : colors[i])
+        .style("fill", (d, i) => partyColors(d.party))
         .style("stroke-width", 4)
         .style("opacity", .2)
         .style("stroke-linecap", "round")
@@ -742,27 +744,26 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
         .attr("stroke-linejoin", "round")
         .merge(cityout)
         .transition().duration(speed)
-        .attr("d", d => line(d.values))
+        .attr("d", d => line(d.line))
 
       city.enter().insert("g", ".focus").append("path")
         .attr("class", "line cities")
-        .style("stroke", (d, i) => colors[i])
-        .style("stroke-width", 4)
+        .style("stroke", (d, i) => partyColors(d.party))
+        .style("stroke-width", 3)
         .style("opacity", .7)
         .style("stroke-linecap", "round")
         .attr("stroke-linejoin", "round")
         .merge(city)
         .transition().duration(speed)
-        .attr("d", d => line(d.values))
+        .attr("d", d => line(d.line))
 
 
-
-
-      tooltip(copy);
+      tooltip(cands);
 
       function tooltip(copy) {
+
         var rect = focus.selectAll(".lineHoverRect")
-          .data(copy)
+          .data(cands)
 
         var labels2 = focus.selectAll(".lineHoverText2")
           .data(copy)
@@ -773,6 +774,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
           .style("fill", "white")
           .style("stroke", "white")
           .style("stroke-width", 5)
+          .style("opacity", 1)
           .merge(labels2)
 
         var labels = focus.selectAll(".lineHoverText")
@@ -787,6 +789,14 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
         var circles = focus.selectAll(".hoverCircle")
           .data(copy)
 
+        circles.enter().append("circle")
+          .attr("class", "hoverCircle")
+          .style("stroke", d => partyColors(d.party))
+          .attr("r", 4)
+          .attr("stroke-width", 2.5)
+          .attr("fill", "white")
+          .merge(circles);
+
 
 
         time.selectAll(".overlay")
@@ -795,59 +805,63 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
           .on("mousemove", mousemove);
 
         function mousemove() {
-
           var x0 = x.invert(d3.mouse(this)[0]),
-            i = bisectDate(line_data, x0, 1),
-            d0 = line_data[i - 1],
-            d1 = line_data[i],
-            d = x0 - d0.date > d1.date - x0 ? d1 : d0;
+            i = bisectDate(dates, x0, 1),
+            d0 = dates[i - 1],
+            d1 = dates[i],
+            i = x0 - d0 > d1 - x0 ? dates.indexOf(d1) : dates.indexOf(d1);
+
+          focus.selectAll(".hoverCircle")
+            .attr("cy", d => y(d.line[i].pct))
+            .attr("cx", x(dates[i]));
 
           focus.select(".lineHoverDate")
-            .attr("x", x(d.date))
+            .attr("x", x(dates[i]))
             .attr("y", 0)
             .attr("text-anchor", "middle")
             .style("font-size", 15)
             .style("font-weight", "100")
-            .text(formatDate(d.date));
-
-
+            .text(d => formatDate(dates[i]));
 
           focus.select(".lineHover")
-            .attr("transform", "translate(" + x(d.date) + "," + height + ")");
-
-          focus.selectAll(".lineHoverText2")
-            .style("font-weight", "100")
-            .attr("x", x(d.date) + 10)
-            .text((e, i) => input == "ev" ? i == 1 ? ("Biden " + onevalue(d[e])) : i == 0 ? "Trump " + onevalue(d[e]) : "Third " + onevalue(d[e]) : i == 1 ? ("Biden " + onevalue(d[e]) + "%") : i == 0 ? "Trump " + onevalue(d[e]) + "%" : "Third " + onevalue(d[e]) + "%")
-            .attr("y", e => d[e] == d["gop" + input] ? y(d["gop" + input]) > y(d["dem" + input]) ? y(d["gop" + input]) + 15 : y(d["gop" + input]) - 15 : d[e] == d["dem" + input] ? y(d["dem" + input]) > y(d["gop" + input]) ? y(d["dem" + input]) + 15 : y(d["dem" + input]) - 15 : y(d[e]) - 15)
-            .attr("text-anchor", (e, i) => i == 2 ? "end" : "start")
-            .attr("dominant-baseline", "central")
+            .attr("transform", d => "translate(" + x(dates[i]) + "," + height + ")")
+            .style("opacity", 0)
 
           focus.selectAll(".lineHoverText")
             .style("font-weight", "100")
-            .attr("x", x(d.date) + 10)
-            .text((e, i) => input == "ev" ? i == 1 ? ("Biden " + onevalue(d[e])) : i == 0 ? "Trump " + onevalue(d[e]) : "Third " + onevalue(d[e]) : i == 1 ? ("Biden " + onevalue(d[e]) + "%") : i == 0 ? "Trump " + onevalue(d[e]) + "%" : "Third " + onevalue(d[e]) + "%")
-            .attr("fill", (e, i) => colors[i])
-            .attr("y", e => d[e] == d["gop" + input] ? y(d["gop" + input]) > y(d["dem" + input]) ? y(d["gop" + input]) + 15 : y(d["gop" + input]) - 15 : d[e] == d["dem" + input] ? y(d["dem" + input]) > y(d["gop" + input]) ? y(d["dem" + input]) + 15 : y(d["dem" + input]) - 15 : y(d[e]) - 15)
-            .attr("text-anchor", (e, i) => i == 2 ? "end" : "start")
+            .attr("x", (d, j) => x(dates[i]) + (j % 2 == 0 ? -10 : 10))
+            .text((d, j) => d.id + " " + (input == "ev" ? nf(d.line[i].pct) : nf(d.line[i].pct) + "%"))
+            .attr("fill", (d, i) => partyColors(d.party))
+            .attr("y", (d, j) => y(d.line[i].pct))
+            .attr("text-anchor", (d, j) => j % 2 == 0 ? "end" : "start")
             .attr("dominant-baseline", "central")
+
+          focus.selectAll(".lineHoverText2")
+            .style("font-weight", "100")
+            .attr("x", (d, j) => x(dates[i]) + (j % 2 == 0 ? -10 : 10))
+            .text((d, j) => d.id + " " + (input == "ev" ? nf(d.line[i].pct) : nf(d.line[i].pct) + "%"))
+            .attr("fill", (d, i) => "white")
+            .attr("y", (d, j) => y(d.line[i].pct))
+            .attr("text-anchor", (d, j) => j % 2 == 0 ? "end" : "start")
+            .attr("dominant-baseline", "central")
+
         }
       }
       var winbutton = d3.select("#winbu")
         .on("click", function () {
-          update("win", 500)
+          update("win", 0)
         })
         .style("cursor", "pointer")
 
       var votebutton = d3.select("#votebu")
         .on("click", function () {
-          update("vote", 500)
+          update("vote", 0)
         })
         .style("cursor", "pointer")
 
       var evbutton = d3.select("#evbutton")
         .on("click", function () {
-          update("ev", 500)
+          update("ev", 0)
         })
         .style("cursor", "pointer")
 
@@ -855,7 +869,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
 
     var overview_data = newest_data.filter(d => d.state == "US")
     overview_data.sort((a, b) => b.ev - a.ev)
-
+    console.log(overview_data)
     overview.selectAll()
       .data(overview_data)
       .enter()
@@ -909,7 +923,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       .attr("y", (d, i) => 47.5 + i * 50)
       .attr("width", d => (d.ev / 538) * 358)
       .attr("height", 45)
-      .attr("fill", d => cand_colors(d.party))
+      .attr("fill", d => partyColors(d.party))
       .attr("opacity", .7)
 
     overview.selectAll()
@@ -917,9 +931,9 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       .enter().append("rect")
       .attr("x", 600)
       .attr("y", (d, i) => 47.5 + i * 50)
-      .attr("width", d => (d.proj_vote) * 5)
+      .attr("width", d => (d.vote) * 5)
       .attr("height", 45)
-      .attr("fill", d => cand_colors(d.party))
+      .attr("fill", d => partyColors(d.party))
       .attr("opacity", .7)
 
 
@@ -940,7 +954,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       .data(overview_data)
       .enter()
       .append("text")
-      .text(d => numberformat(d.proj_vote) + "%")
+      .text(d => numberformat(d.vote) + "%")
       .attr("y", (d, i) => 70 + i * 50)
       .attr("x", 605)
       .attr("fill", "black")
@@ -953,17 +967,18 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
 
 
     var sdbars = []
-    for (let k = 0; k < bars_info.length; k++) {
+    for (let k = 0; k < bubble_info.length; k++) {
       var dt = newest_data.filter(d => d.state == bubble_info[k].state)
+      console.log
       var finaldt = {
         state: bubble_info[k].state,
         evs: +dt[0].ev,
-        gop_win: +dt[0].win,
-        dem_win: +dt[1].win,
+        gopWin: +dt[1].win,
+        demWin: +dt[0].win,
         third_win: +dt[2].win,
-        gop_vote: +dt[0].proj_vote,
-        dem_vote: +dt[1].proj_vote,
-        third_vote: +dt[2].proj_vote,
+        gop_vote: +dt[1].vote,
+        dem_vote: +dt[0].vote,
+        third_vote: +dt[2].vote,
         x: bubble_info[k].x,
         y: bubble_info[k].y,
         r: bubble_info[k].radius,
@@ -1031,7 +1046,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       .attr("width", d => d.evs * (800 / max_evs))
       .attr("height", 70)
       .attr("ry", 3)
-      .attr("fill", d => color(d.gop_win))
+      .attr("fill", d => color(d.gopWin))
       .attr("stroke", colors[0])
       .attr("stroke-width", 1)
       .on('mouseover', function (d) {
@@ -1069,8 +1084,8 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
           .attr("y", 40)
           .attr("x", 87.5)
           .attr("fill", "#black")
-          .style("font-weight", "100")
-          .style("font-size", "15")
+          .style("font-weight", "500")
+          .style("font-size", "14")
           .attr("text-anchor", "middle")
 
 
@@ -1085,7 +1100,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
           .text(d.margin > 0 ? "Trump +" + numberformat(Math.abs(d.margin)) : "Biden +" + numberformat(Math.abs(d.margin)))
           .attr("y", 160)
           .attr("x", 87.5)
-          .attr("fill", d.margin > 0 ? cand_colors("gop") : cand_colors("dem"))
+          .attr("fill", partyColors("REP"))
           .style("font-weight", "100")
           .style("font-size", "17")
           .attr("text-anchor", "middle")
@@ -1114,7 +1129,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       .attr("width", d => d.evs * (800 / max_evs))
       .attr("height", 70)
       .attr("ry", 3)
-      .attr("fill", d => color(d.gop_win))
+      .attr("fill", d => color(d.gopWin))
       .attr("stroke", colors[1])
       .attr("stroke-width", 1)
       .on('mouseover', function (d) {
@@ -1152,8 +1167,8 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
           .attr("y", 40)
           .attr("x", 87.5)
           .attr("fill", "#black")
-          .style("font-weight", "100")
-          .style("font-size", "15")
+          .style("font-weight", "500")
+          .style("font-size", "14")
           .attr("text-anchor", "middle")
 
 
@@ -1168,7 +1183,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
           .text(d.margin > 0 ? "Trump +" + numberformat(Math.abs(d.margin)) : "Biden +" + numberformat(Math.abs(d.margin)))
           .attr("y", 160)
           .attr("x", 87.5)
-          .attr("fill", d.margin > 0 ? cand_colors("gop") : cand_colors("dem"))
+          .attr("fill", partyColors("DEM"))
           .style("font-weight", "100")
           .style("font-size", "17")
           .attr("text-anchor", "middle")
@@ -1242,15 +1257,14 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
     var sd3 = []
     for (let k = 0; k < bubble_info.length; k++) {
       var dt = newest_data.filter(d => d.state == bubble_info[k].state)
+      console.log(dt)
       var finaldt = {
         state: bubble_info[k].state,
         evs: +dt[0].ev,
-        gop_win: +dt[0].win,
-        dem_win: +dt[1].win,
-        third_win: +dt[2].win,
-        gop_vote: +dt[0].proj_vote,
-        dem_vote: +dt[1].proj_vote,
-        third_vote: +dt[2].proj_vote,
+        gopWin: +dt[1].win,
+        demWin: +dt[0].win,
+        gop_vote: +dt[1].vote,
+        dem_vote: +dt[0].vote,
         x: bubble_info[k].x,
         y: bubble_info[k].y,
         r: bubble_info[k].radius,
@@ -1276,7 +1290,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       .attr("cx", d => d.x)
       .attr("cy", d => d.y)
       .attr("r", d => d.r)
-      .attr("fill", d => color(d.gop_win))
+      .attr("fill", d => color(d.gopWin))
       .attr("stroke", d => d.tp > 3 ? "black" : "none")
       .attr("stroke-width", 1)
 
@@ -1287,7 +1301,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       .text(d => d.label)
       .attr("x", d => d.x)
       .attr("y", d => d.y)
-      .attr("fill", d => Math.abs(50 - d.gop_win) > 15 ? "white" : "black")
+      .attr("fill", d => Math.abs(50 - d.gopWin) > 15 ? "white" : "black")
       .attr("text-anchor", "middle")
       .attr("dominant-baseline", "central")
       .attr("font-size", 8)
@@ -1356,7 +1370,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
           .text(d.margin > 0 ? "Trump +" + numberformat(Math.abs(d.margin)) : "Biden +" + numberformat(Math.abs(d.margin)))
           .attr("y", 160)
           .attr("x", 87.5)
-          .attr("fill", d.margin > 0 ? cand_colors("gop") : cand_colors("dem"))
+          .attr("fill", d.margin > 0 ? partyColors("REP") : partyColors("DEM"))
           .style("font-weight", "100")
           .style("font-size", "17")
           .attr("text-anchor", "middle")
@@ -1496,17 +1510,16 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
         var finaldt = {
           state: bubble_info[k].state,
           evs: +dt[0].ev,
-          std: (+dt[0].proj_vote - +dt[0].p_10) / 1.28,
-          gop_vote: +dt[0].proj_vote,
-          dem_vote: +dt[1].proj_vote,
-          third_vote: +dt[2].proj_vote,
+          std: (+dt[0].vote - +dt[0].p10) / 1.1,
+          gop_vote: +dt[1].vote,
+          dem_vote: +dt[0].vote,
           tippingPoint: +dt[0].tippingPoint
         }
         finaldt.margin = finaldt.gop_vote - finaldt.dem_vote
         fdt.push(finaldt)
       }
-      var min_stdev = d3.min(fdt, d => d.std) * .8
-      var highest_curve = jStat.normal.pdf(0, 0, min_stdev * .8)
+      var min_stdev = d3.min(fdt, d => d.std) *.7
+      var highest_curve = jStat.normal.pdf(0, 0, min_stdev ) 
 
       var tq = jStat.normal.inv(.01, 0, min_stdev)
       var tp = jStat.normal.pdf(tq, 0, min_stdev)
