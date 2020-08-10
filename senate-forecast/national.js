@@ -363,7 +363,6 @@ function ready(error, us, inputData, cands, data, hist) {
         .style('stroke', d => d.properties.tippingPoint > 3 ? "black" : "none")
         .on('mouseover', function (d) {
 
-            toolTip.offset([-180, -90])
             toolTip.show();
             var tipSVG = d3.select("#tipDiv")
                 .append("svg")
