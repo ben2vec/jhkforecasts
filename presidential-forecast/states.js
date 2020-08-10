@@ -12,9 +12,10 @@ var partyColors = d3.scaleOrdinal()
   .range(colors)
 
 var url = window.location.href
-var url = url.split("/")[3]
-var url = url.includes(".html") ? url.split(".")[0] : url
-var url = url.includes("cd") ? url.split("-")[0] + " " + "CD" + "-" + url.split("-")[2] : url.split("-").join(" ")
+var url = url.split("/")
+var newrl = url[url.length-1]
+var newrl = newrl.includes(".html") ? newrl.split(".")[0] : newrl
+var newrl = newrl.includes("cd") ? newrl.split("-")[0] + " " + "CD" + "-" + newrl.split("-")[2] : newrl.split("-").join(" ")
 function titleCase(str) {
   var wordsArray = str.toLowerCase().split(/\s+/);
   console.log(wordsArray)
@@ -23,7 +24,7 @@ function titleCase(str) {
   });
   return upperCased.join(" ");
 }
-var keyState = titleCase(url)
+var keyState = titleCase(newrl)
 
 console.log(keyState)
 
@@ -612,6 +613,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
           .attr("y", (d, j) => y(d.line[i].pct))
           .attr("text-anchor", (d, j) => j % 2 == 0 ? "end" : "start")
           .attr("dominant-baseline", "central")
+          .attr("opacity",.95)
 
         focus.selectAll(".lineHoverText2")
           .style("font-weight", "100")
@@ -624,13 +626,13 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
 
       }
     }
-    var winbutton = d3.select("#winbu")
+    var winbutton = d3.select("#winB")
       .on("click", function () {
         update("win", 500)
       })
       .style("cursor", "pointer")
 
-    var votebutton = d3.select("#votebu")
+    var votebutton = d3.select("#voteB")
       .on("click", function () {
         update("vote", 500)
       })
