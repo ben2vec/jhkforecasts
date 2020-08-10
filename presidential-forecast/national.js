@@ -333,7 +333,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       .on('mouseover', function (d) {
 
 
-        tool_tip.show();
+        tool_tip.offset([-180,-90]).show();
         var tipSVG = d3.select("#tipDiv")
           .append("svg")
           .attr("width", 175)
