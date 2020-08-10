@@ -1,5 +1,19 @@
-var windowWidth = window.innerWidth
-console.log(windowWidth)
+var url = window.location.href
+console.log(url)
+var url = url.split("/")[3]
+var url = url.includes(".html") ? url.split(".")[0] : url
+var url = url.includes("cd") ? url.split("-")[0] + " " + "CD" + "-" + url.split("-")[2] : url.split("-").join(" ")
+function titleCase(str) {
+  var wordsArray = str.toLowerCase().split(/\s+/);
+  console.log(wordsArray)
+  var upperCased = wordsArray.map(function (d) {
+    return d.includes("cd") ? d.charAt(0).toUpperCase() + d.charAt(1).toUpperCase() + d.substr(2) : d.charAt(0).toUpperCase() + d.substr(1);
+  });
+  return upperCased.join(" ");
+}
+
+console.log(titleCase(url))
+
 var colors = ["#FF0660", "#0091FF", "#FFE130"]
 var wf = d3.format(".0f")
 
@@ -222,7 +236,6 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
   vote_dist.sort((a, b) => b.proj_vote - a.proj_vote)
 
 
-  console.log(vote_dist)
   vote.append("text")
     .text("Donald Trump")
     .attr("x", 20)
@@ -350,7 +363,6 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
   var line_data = []
   for (let j = 0; j < data_length; j++) {
     var stdev = +(time_data.filter(d => d.party == "gop")[j].proj_vote - time_data.filter(d => d.party == "gop")[j].p_10) * .75
-    console.log(stdev)
     var ld = {
       date: time_data.filter(d => d.party == "gop")[j].forecast_date,
       gopwin: time_data.filter(d => d.party == "gop")[j].win,
@@ -369,7 +381,6 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     }
     line_data.push(ld)
   }
-  console.log(line_data)
   var today = line_data[line_data.lenth - 1]
   var parseTime = d3.timeParse("%Y-%m-%d"),
     formatDate = d3.timeFormat("%b - %d"),
@@ -530,7 +541,6 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
 
     areas.exit().remove();
 
-    console.log(cities)
 
     areas.enter().insert("g", ".focus").append("path")
       .attr("class", "line areas")
@@ -684,7 +694,6 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
   var margin_data = [gop_data[0] - dem_data[0], gop_data[1] - dem_data[1], gop_data[2] - dem_data[2], gop_data[3] - dem_data[3]]
 
   var weight_sum = d3.sum(weights)
-  console.log()
 
   calc.selectAll("gop")
     .data(keys2)
@@ -998,7 +1007,6 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
         var datanew = state == "All" ? data_new.slice(0, 100) : data_new.filter(d => d.state == state)
 
         var finaldata = candidate == "All" ? datanew : datanew.filter(d => d.dem == candidate)
-        console.log(finaldata)
         var table = d3.select("#bottom")
           .append("table")
           .attr("class", "pollTable")
