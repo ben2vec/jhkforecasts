@@ -1460,7 +1460,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
         .data(sd4)
         .enter()
         .append("a")
-        .attr("xlink:href", d => d.state)
+        .attr("xlink:href", d => d.state.toLowerCase().split(" ").join("-"))
         .append("text")
         .text(id => stateLabels.filter(d => d.state == id.state).length == 0 ? "" : stateLabels.filter(d => d.state == id.state)[0].abbrev)
         .attr("x", 20)

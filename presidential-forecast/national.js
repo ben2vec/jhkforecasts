@@ -127,7 +127,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       finaldt.margin = finaldt.gop_vote - finaldt.dem_vote
       sd.push(finaldt)
     }
-    var boxstates = [sd[29], sd[45], sd[21], sd[39],sd[30], sd[6], sd[7], sd[20], sd[8]]
+    var boxstates = [sd[29], sd[45], sd[21], sd[39], sd[30], sd[6], sd[7], sd[20], sd[8]]
 
     map.selectAll()
       .data(boxstates)
@@ -158,7 +158,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       .data(boxstates)
       .enter()
       .append("a")
-      .attr("href", d => d.state)
+      .attr("href", d => d.state.toLowerCase().split(" ").join("-"))
       .append("rect")
       .attr("class", "statesover")
       .attr("x", 825)
@@ -325,7 +325,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       .data(json.features)
       .enter()
       .append("a")
-      .attr("xlink:href", d => d.properties.name)
+      .attr("xlink:href", d => d.properties.name.toLowerCase().split(" ").join("-"))
       .append("path")
       .attr("class", "statesover")
       .attr("d", path)
@@ -1028,7 +1028,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       .data(gopbars)
       .enter()
       .append("a")
-      .attr("xlink:href", d => d.state)
+      .attr("xlink:href", d => d.state.toLowerCase().split(" ").join("-"))
       .append("rect")
       .attr("x", d => xbars(d.indexev))
       .attr("y", gop_ev_bars < dem_ev_bars ? 200 : 100)
@@ -1111,7 +1111,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       .data(dembars)
       .enter()
       .append("a")
-      .attr("xlink:href", d => d.state)
+      .attr("xlink:href", d => d.state.toLowerCase().split(" ").join("-"))
       .append("rect")
       .attr("x", d => xbars(d.indexev))
       .attr("y", gop_ev_bars > dem_ev_bars ? 200 : 100)
@@ -1301,7 +1301,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
       .data(sd3)
       .enter()
       .append("a")
-      .attr("xlink:href", d => d.state)
+      .attr("xlink:href", d => d.state.toLowerCase().split(" ").join("-"))
       .append("circle")
       .attr("class", "statesover")
       .attr("cx", d => d.x)
@@ -1506,11 +1506,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
         finaldt.margin = finaldt.gop_vote - finaldt.dem_vote
         fdt.push(finaldt)
       }
-      var min_stdev = d3.min(fdt, d => d.std) *.7
-      var highest_curve = jStat.normal.pdf(0, 0, min_stdev ) 
 
-      var tq = jStat.normal.inv(.01, 0, min_stdev)
-      var tp = jStat.normal.pdf(tq, 0, min_stdev)
 
       tippingPointSort == "high-to-low" ? fdt.sort((a, b) => Math.abs(a.margin) - Math.abs(b.margin)) && fdt.sort((a, b) => b.tippingPoint - a.tippingPoint) :
         tippingPointSort == "low-to-high" ? fdt.sort((a, b) => Math.abs(b.margin) - Math.abs(a.margin)) && fdt.sort((a, b) => a.tippingPoint - b.tippingPoint) :
@@ -1526,9 +1522,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
         .attr("height", input_height)
         .attr("fill", "white")
 
-      var y3 = d3.scaleLinear()
-        .domain([0, highest_curve])
-        .range([0, 45])
+
       var sd4 = []
 
       for (let k = 0; k < bubble_info.length; k++) {
@@ -1537,13 +1531,21 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
 
         for (let l = 1; l < 100; l++) {
 
+          var min_stdev = fdt[k].std * .7
+          var highest_curve = jStat.normal.pdf(0, 0, min_stdev)
+
+          var tq = jStat.normal.inv(.01, 0, min_stdev)
+          var tp = jStat.normal.pdf(tq, 0, min_stdev)
+
           var gq = jStat.normal.inv(l / 100, fdt[k].gop_vote, fdt[k].std * .8)
           var gp = jStat.normal.pdf(gq, fdt[k].gop_vote, fdt[k].std * .8)
 
           var dq = jStat.normal.inv(l / 100, fdt[k].dem_vote, fdt[k].std * .8)
           var dp = jStat.normal.pdf(dq, fdt[k].dem_vote, fdt[k].std * .8)
 
-
+          var y3 = d3.scaleLinear()
+            .domain([0, highest_curve])
+            .range([0, 45])
           var gopvalues = {
             x: gq,
             y: -y3(gp) + k * 50 + 162,
@@ -1635,7 +1637,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
         .data(sd4)
         .enter()
         .append("a")
-        .attr("xlink:href", d => d.state)
+        .attr("xlink:href", d => d.state.toLowerCase().split(" ").join("-"))
         .append("text")
         .text(d => d.state.toUpperCase())
         .attr("x", 20)
