@@ -367,7 +367,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
 
     y.domain([
       0,
-      input == "ev" ? 500 : input == "vote" ? 60 : 100
+      input == "vote" ? d3.max(lineData, d => d.vote) : 100
     ]).nice();
 
     time.selectAll(".y-axis").transition()

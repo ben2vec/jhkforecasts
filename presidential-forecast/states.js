@@ -12,7 +12,6 @@ var partyColors = d3.scaleOrdinal()
   .range(colors)
 
 var url = window.location.href
-console.log(url)
 var url = url.split("/")[3]
 var url = url.includes(".html") ? url.split(".")[0] : url
 var url = url.includes("cd") ? url.split("-")[0] + " " + "CD" + "-" + url.split("-")[2] : url.split("-").join(" ")
@@ -20,11 +19,13 @@ function titleCase(str) {
   var wordsArray = str.toLowerCase().split(/\s+/);
   console.log(wordsArray)
   var upperCased = wordsArray.map(function (d) {
-    return d.includes("cd") ? d.charAt(0).toUpperCase() + d.charAt(1).toUpperCase() + d.substr(2) : d.charAt(0).toUpperCase() + d.substr(1);
+    return d=="of"?"of":d.includes("cd") ? d.charAt(0).toUpperCase() + d.charAt(1).toUpperCase() + d.substr(2) : d.charAt(0).toUpperCase() + d.substr(1);
   });
   return upperCased.join(" ");
 }
 var keyState = titleCase(url)
+
+console.log(keyState)
 
 
 var dateparse = d3.timeParse("%m/%d/%y")
@@ -70,7 +71,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
   })
 
   var stateData = data.filter(d => d.state == keyState)
-
+  console.log(data)
 
   var today = stateData.slice(stateData.length - 4, stateData.length)
 
@@ -458,7 +459,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
 
     y.domain([
       0,
-      input == "ev" ? 538 : input == "vote" ? 60 : 100
+      input == "vote" ? d3.max(lineData, d => d.vote) : 100
     ]).nice();
 
     time.selectAll(".y-axis").transition()

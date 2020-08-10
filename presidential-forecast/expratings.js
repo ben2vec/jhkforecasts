@@ -155,7 +155,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
             return d
         })
 
-        var newest_data = jhk.slice(jhk.length - 171, jhk.length).filter(d => d.party == "gop")
+        var newest_data = jhk.slice(jhk.length - 228, jhk.length).filter(d => d.party == "REP")
 
         var jhkforecasts = newest_data.map((d, i) => {
             return d.win
