@@ -73,7 +73,7 @@ function ready(error, us, data, input) {
             label: d.label,
             xv: d.xValue,
             yv: d.yValue,
-            original: data.filter(d => d[map_labels[i].label] == "gop").length * 100 / 20000
+            original: data.filter(d => d[map_labels[i].label] =="REP").length * 100 / 20000
         }
     })
     var simulationsPrev = 20000
@@ -96,7 +96,7 @@ function ready(error, us, data, input) {
         states.forEach(d => {
             var label = d.label
             d.prev = d.win
-            d.win = dataNew.filter(d => d[label] == "gop").length * 100 / simulations
+            d.win = dataNew.filter(d => d[label] =="REP").length * 100 / simulations
         })
         var gopEvAvg = d3.mean(dataNew, d => d.gopEV)
         var json = us
@@ -211,16 +211,17 @@ function ready(error, us, data, input) {
             .style("fill", "none")
             .on("click", function (d, i) {
                 d.change == "none" ?
-                    (states[labels.indexOf(d.label)].change = "gop") &&
+                    (states[labels.indexOf(d.label)].change ="REP") &&
                     update(states) :
-                    d.change == "gop" ?
+                    d.change =="REP" ?
                         (states[labels.indexOf(d.label)].change = "dem") &&
                         update(states) :
                         d.change == "dem" ?
                             (states[labels.indexOf(d.label)].change = "none") &&
                             update(states) : (states[labels.indexOf(d.label)].change = "none") &&
                             update(states)
-            });
+            })
+            .attr("cursor","pointer");
 
         mapPhone.selectAll("map2")
             .data(states)
@@ -232,9 +233,9 @@ function ready(error, us, data, input) {
             .style("fill", "none")
             .on("click", function (d, i) {
                 d.change == "none" ?
-                    (states[labels.indexOf(d.label)].change = "gop") &&
+                    (states[labels.indexOf(d.label)].change ="REP") &&
                     update(states) :
-                    d.change == "gop" ?
+                    d.change =="REP" ?
                         (states[labels.indexOf(d.label)].change = "dem") &&
                         update(states) :
                         d.change == "dem" ?
@@ -490,7 +491,7 @@ function ready(error, us, data, input) {
                         label: d.label,
                         xv: d.xValue,
                         yv: d.yValue,
-                        original: data.filter(d => d[map_labels[i].label] == "gop").length * 100 / 20000
+                        original: data.filter(d => d[map_labels[i].label] =="REP").length * 100 / 20000
                     }
                 })
                 update(states, "yes")
@@ -517,7 +518,7 @@ function ready(error, us, data, input) {
                         label: d.label,
                         xv: d.xValue,
                         yv: d.yValue,
-                        original: data.filter(d => d[map_labels[i].label] == "gop").length * 100 / 20000
+                        original: data.filter(d => d[map_labels[i].label] =="REP").length * 100 / 20000
                     }
                 })
                 update(states, "yes")
@@ -531,14 +532,14 @@ function ready(error, us, data, input) {
         bubblemap.selectAll("key")
             .data(pct)
             .enter()
-            .append("circle").attr("class", "mapLegend")
+            .append("circle").attr("class", "mapLegend changing")
             .attr("r", 20)
             .attr("cy", (d, i) => 300)
             .attr("cx", (d, i) => 610 + i * 20)
             .attr("fill", d => color(d))
 
         bubblemap
-            .append("rect").attr("class", "mapLegend")
+            .append("rect").attr("class", "mapLegend changing")
             .attr("stroke", "black")
             .attr("ry", 3)
             .attr("y", (d, i) => 247)
@@ -549,7 +550,7 @@ function ready(error, us, data, input) {
 
         bubblemap
             .append("text")
-            .text("Changed").attr("class", "mapLegend")
+            .text("Changed").attr("class", "mapLegend changing")
             .attr("y", 255)
             .attr("x", (d, i) => 625)
             .attr("fill", "black")
@@ -562,7 +563,7 @@ function ready(error, us, data, input) {
         bubblemap.selectAll("key")
             .data(pct)
             .enter()
-            .append("circle").attr("class", "mapLegend")
+            .append("circle").attr("class", "mapLegend changing")
             .attr("r", 20)
             .attr("cy", (d, i) => 350)
             .attr("cx", (d, i) => 610 + i * 20)
@@ -571,7 +572,7 @@ function ready(error, us, data, input) {
         bubblemap.selectAll("key")
             .data(pct)
             .enter()
-            .append("text").attr("class", "mapLegend")
+            .append("text").attr("class", "mapLegend changing")
             .text(d => d)
             .attr("y", 300)
             .attr("x", (d, i) => 592 + i * 20)
@@ -583,7 +584,7 @@ function ready(error, us, data, input) {
 
 
         bubblemap
-            .append("text").attr("class", "mapLegend")
+            .append("text").attr("class", "mapLegend changing")
             .text("Trump")
             .attr("y", 300)
             .attr("x", (d, i) => 585 + i * 20)
@@ -594,7 +595,7 @@ function ready(error, us, data, input) {
             .style("dominant-baseline", "central")
 
         bubblemap
-            .append("text").attr("class", "mapLegend")
+            .append("text").attr("class", "mapLegend changing")
             .text("Biden")
             .attr("y", 350)
             .attr("x", (d, i) => 585 + i * 20)
@@ -608,7 +609,7 @@ function ready(error, us, data, input) {
         bubblemap.selectAll("key")
             .data(pct)
             .enter()
-            .append("text").attr("class", "mapLegend")
+            .append("text").attr("class", "mapLegend changing")
             .text(d => d)
             .attr("y", 350)
             .attr("x", (d, i) => 590 + i * 20)
@@ -619,7 +620,7 @@ function ready(error, us, data, input) {
             .style("dominant-baseline", "central")
 
 
-        bubblemap.append("text").attr("class", "mapLegend")
+        bubblemap.append("text").attr("class", "mapLegend changing")
             .text("Win State")
             .attr("y", 230)
             .attr("x", 650)
@@ -642,15 +643,15 @@ function ready(error, us, data, input) {
             .attr("y", (d, i) => i * 40 + 60)
             .style("font-weight", d => d.change == "none" ? 100 : 500)
             .attr("font-size", "20")
-            .attr("fill", d => d.change == "gop" ? colors[0] : d.change == "dem" ? colors[1] : "black")
+            .attr("fill", d => d.change =="REP" ? colors[0] : d.change == "dem" ? colors[1] : "black")
             .attr("text-anchor", "middle")
             .attr("cursor", "pointer")
             .attr("dominant-baseline", "central")
             .on("click", function (d, i) {
                 d.change == "none" ?
-                    (states[Stateslabels.indexOf(d.state)].change = "gop") &&
+                    (states[Stateslabels.indexOf(d.state)].change ="REP") &&
                     (update(states)) :
-                    d.change == "gop" ?
+                    d.change =="REP" ?
                         (states[Stateslabels.indexOf(d.state)].change = "dem") &&
                         update(states) :
                         d.change == "dem" ?
@@ -668,15 +669,15 @@ function ready(error, us, data, input) {
             .attr("y", (d, i) => i * 60 + 80)
             .style("font-weight", d => d.change == "none" ? 100 : 500)
             .attr("font-size", "30")
-            .attr("fill", d => d.change == "gop" ? colors[0] : d.change == "dem" ? colors[1] : "black")
+            .attr("fill", d => d.change =="REP" ? colors[0] : d.change == "dem" ? colors[1] : "black")
             .attr("text-anchor", "start")
             .attr("cursor", "pointer")
             .attr("dominant-baseline", "central")
             .on("click", function (d, i) {
                 d.change == "none" ?
-                    (states[Stateslabels.indexOf(d.state)].change = "gop") &&
+                    (states[Stateslabels.indexOf(d.state)].change ="REP") &&
                     (update(states)) :
-                    d.change == "gop" ?
+                    d.change =="REP" ?
                         (states[Stateslabels.indexOf(d.state)].change = "dem") &&
                         update(states) :
                         d.change == "dem" ?
@@ -874,7 +875,7 @@ function ready(error, us, data, input) {
                             label: d.label,
                             xv: d.xValue,
                             yv: d.yValue,
-                            original: data.filter(d => d[map_labels[i].label] == "gop").length * 100 / 20000
+                            original: data.filter(d => d[map_labels[i].label] =="REP").length * 100 / 20000
                         }
                     })
                     update(states, "yes")
