@@ -264,7 +264,7 @@
    stroke-width: 2px;
  }
 
- @media only screen and (max-width:700px) {
+ @media only screen and (max-width:650) {
    #bigmenu {
      display: none;
    }
@@ -295,9 +295,15 @@
    .tableFont {
      font-size: 2.5vw;
    }
+   #computerBanner {
+     display: none;
+   }
+   #phoneBanner {
+     display: block;
+   }
  }
 
- @media only screen and (min-width:700px) {
+ @media only screen and (min-width:650px) {
    #bigmenu {
      display: block;
    }
@@ -330,6 +336,12 @@
    }
    .tableFont {
      font-size: 1.5vw;
+   }
+   #computerBanner {
+     display: flex;
+   }
+   #phoneBanner {
+     display: none;
    }
  }
 

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@jhkforecast">
+    <meta name="twitter:creator" content="@jhkersting">
+    <meta name="twitter:title" content="2020 Presidential Election">
+    <meta name="twitter:description" content="Who is win the 2020 Presidential Election?">
+    <meta name="twitter:image" content="https://jhkforecasts.com/senate-forecast-card-01.png">
+    <title>2020 Senate Forecast</title>
+    <script data-ad-client="ca-pub-8025120308040073" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140782021-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-140782021-2');
+    </script>
+    <link rel="icon" href="https://jhkforecasts.com/LOGO-01.png">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="//d3js.org/queue.v1.min.js"></script>
+    <script src="//d3js.org/topojson.v1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/htk2wjy.css">
+    <link rel="stylesheet" href="https://projects.jhkforecasts.com/presidential-forecast/index.css">
+    <script src="https:////cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script>
+    <style>
+        #winbutton {
+            display: block
+        }
+
+        @media only screen and (max-width:600px) {
+            .special {
+                width: 100%
+            }
+            #computerBanner{
+                display: none;
+            }
+            #phoneBanner{
+                display:block;
+            }
+        }
+
+        @media only screen and (min-width:601px) {
+            .special {
+                width: 85%;
+                margin-left: 7.5%;
+            }
+            #computerBanner{
+                display: flex;
+            }
+            #phoneBanner{
+                display: none;
+            }
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="computerBanner" style="height: 7.5vw;border-bottom: black solid 1px;align-items: center;">
+        <h1 style="float: left;margin:5px;font-family: sf-mono;border: none;border-radius: 1vw;font-size: 2vw;padding:10px;font-weight: 100;width: 100%;" >JHK FORECASTS</h1>
+        <img style="float: right;height:7vw;margin-right: 20px;" src="//jhkforecasts.com/2020-elections-01.svg">
+        <h1 style="float: right;margin:5px;font-family: sf-mono;background-color: #e6e4e4;border: none;border-radius: 1vw;font-size: 1.5vw;padding:10px;font-weight: 100;" >HOUSE</h1>
+        <h1 style="float: right;margin:5px;font-family: sf-mono;background-color: white;border: none;border-radius: 1vw;font-size: 1.5vw;padding:10px;font-weight: 100;">SENATE</h1>
+        <h1 style="float: right;margin:5px;font-family: sf-mono;background-color: #e6e4e4;border: none;border-radius: 1vw;font-size: 1.5vw;padding:10px;font-weight: 100;">PRES</h1>
+        <h1 style="float: right;margin:5px;font-family: sf-mono;background-color: #e6e4e4;border: none;border-radius: 1vw;font-size: 1.5vw;padding:10px;font-weight: 100;">DEM</h1>
+    </div>
+    <div id="phoneBanner" style="align-items: center;">
+        <h1 style="font-family: sf-mono;border: none;font-size: 4vw;padding:10px;font-weight: 100;text-align: center;line-height:1px;" >JHK FORECASTS</h1>
+        <br>
+        <table style="width: 100%;border-bottom: solid black 1px;">
+            <tr style="width: 100%;">
+                <td style="width: 25%;">
+                    <h1 style="margin:5px;font-family: sf-mono;font-size: 3vw;font-weight: 100;text-align: center;" >DEM</h1> 
+                </td>
+                <td style="width: 25%;">
+                    <h1 style="margin:5px;font-family: sf-mono;font-size: 3vw;font-weight: 100;text-align: center;" >PRES</h1> 
+                </td>
+                <td style="width: 25%;">
+                    <h1 style="margin:5px;font-family: sf-mono;font-size: 3vw;font-weight: 100;text-align: center;" >SENATE</h1> 
+                </td>
+                <td style="width: 25%;">
+                    <h1 style="margin:5px;font-family: sf-mono;font-size: 3vw;font-weight: 100;text-align: center;" >HOUSE</h1> 
+                </td>
+            </tr>
+        </table>
+    </div>
+    <h1 style="text-align: center;font-weight: 900;;font-size: 5vw;"> </h1>
+
+
+
+    </div>
+    <script src="simulator.js"></script>
+
+</body>
+
+</html>

@@ -21,7 +21,7 @@ var forecasters = [
         "type": "",
         "shorthand": "jhk",
         "link": "https://projects.jhkforecasts.com/senate-forecast/"
-        
+
     },
     {
         "forecaster": "Bitecofer",
@@ -424,8 +424,8 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", data => {
                             .style("fill", "white")
                             .attr("stroke", "black");
 
-                       
-                        
+
+
                     })
 
                     congress.selectAll("p")
@@ -495,7 +495,7 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", data => {
                         .attr("dominant-baseline", "top")
                         .attr("dy", "1em")
 
-                    
+
                     var table = d3.select("#dataTable")
                         .append("table")
                         .style("width", "100%")
@@ -511,7 +511,9 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", data => {
                         .text("State")
                         .style("font-size", "2vw")
                         .style("padding-left", "-2vw")
-                        .style("font-weight", 500)
+                        .style("font-weight", 100)
+                                .style("font-family","sf-mono")
+                                .style("text-transform","uppercase")
 
                     table.selectAll("s")
                         .data(data)
@@ -528,9 +530,9 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", data => {
                             .append("td")
                             .append("h3")
                             .text(d.state)
-                            .style("font-size", "1.7vw")
-                            .style("padding-left", "3vw")
-                            .style("font-weight", 500)
+                            .style("font-weight", 100)
+                            .style("font-family", "sf-mono")
+                            .style("text-transform", "uppercase")
 
 
                     })
@@ -545,7 +547,9 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", data => {
                             .text(forecasters[i].forecaster)
                             .style("padding", "5px")
                             .style("font-size", "1.5vw")
-                            .style("font-weight", 500)
+                            .style("font-weight", 100)
+                            .style("font-family", "sf-mono")
+                            .style("text-transform", "uppercase")
 
                         data.forEach((d, i) => {
                             var rowID = "row" + i
@@ -554,10 +558,12 @@ d3.csv("https://data.jhkforecasts.com/2020-senate-input.csv", data => {
                                 .append("td")
                                 .style("background-color", typeof d[forecastID] == "number" ? color(d[forecastID]) : rCs[ratingTypes.indexOf(d[forecastID])])
                                 .append("h3")
-                                .text(typeof d[forecastID] == "number" ? wf(Math.abs(50-d[forecastID])+50) + "%" : d[forecastID].split(" ")[0])
-                                .style("font-size", "1.7vw")
+                                .text(typeof d[forecastID] == "number" ? wf(Math.abs(50 - d[forecastID]) + 50) + "%" : d[forecastID].split(" ")[0])
+                                .style("font-size", "1.5vw")
                                 .style("text-align", "center")
-                                .style("font-weight", 500)
+                                .style("font-weight", 100)
+                                .style("font-family", "sf-mono")
+                                .style("text-transform", "uppercase")
 
                         })
 
