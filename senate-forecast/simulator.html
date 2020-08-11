@@ -41,11 +41,13 @@
             .special {
                 width: 100%
             }
-            #computerBanner{
+
+            #computerBanner {
                 display: none;
             }
-            #phoneBanner{
-                display:block;
+
+            #phoneBanner {
+                display: block;
             }
         }
 
@@ -54,16 +56,18 @@
                 width: 85%;
                 margin-left: 7.5%;
             }
-            #computerBanner{
-                display: block;
+
+            #computerBanner {
+                display: flex;
             }
-            #phoneBanner{
+
+            #phoneBanner {
                 display: none;
             }
         }
 
-        a:hover {
-            text-decoration: underline;
+        .titleLinks:hover {
+            text-decoration: none;
         }
     </style>
 </head>
@@ -71,31 +75,62 @@
 <body>
 
 
-    <div id="computerBanner" style="border-bottom: black solid 1px;">
-        <h1 style="margin:5px;font-family: sf-mono;border: none;border-radius: 1vw;font-size: 2vw;padding:10px;font-weight: 100;width: 100%;" >JHK FORECASTS</h1>
-        <br>
-        <img style="height:7vw;margin-right: 20px;" src="//jhkforecasts.com/2020-elections-01.svg">
-        <h1 style="float: left;margin:5px;font-family: sf-mono;background-color: #e6e4e4;border: none;border-radius: 1vw;font-size: 1.5vw;padding:10px;font-weight: 100;" >HOUSE</h1>
-        <h1 style="float: left;margin:5px;font-family: sf-mono;background-color: white;border: none;border-radius: 1vw;font-size: 1.5vw;padding:10px;font-weight: 100;">SENATE</h1>
-        <h1 style="float: left;margin:5px;font-family: sf-mono;background-color: #e6e4e4;border: none;border-radius: 1vw;font-size: 1.5vw;padding:10px;font-weight: 100;">PRES</h1>
-        <h1 style="float: left;margin:5px;font-family: sf-mono;background-color: #e6e4e4;border: none;border-radius: 1vw;font-size: 1.5vw;padding:10px;font-weight: 100;">DEM</h1>
+    <div id="computerBanner" style="height: 7.5vw;border-bottom: black solid 1px;align-items: center;">
+        <h1
+            style="float: left;margin:5px;font-family: sf-mono;border: none;border-radius: 1vw;font-size: 2vw;padding:10px;font-weight: 100;width: 100%;">
+            JHK FORECASTS</h1>
+        <img style="float: left;height:7vw;margin-right: 20px;" src="//jhkforecasts.com/2020-elections-01.svg">
+        <a class="titleLinks" href="https://projects.jhkforecasts.com/democratic_primary">
+            <h1
+                style="float: left;margin:5px;font-family: sf-mono;background-color: #e6e4e4;border: none;border-radius: 1vw;font-size: 1.5vw;padding:10px;font-weight: 100;">
+                DEM</h1>
+        </a>
+        <a class="titleLinks" href="https://projects.jhkforecasts.com/presidential-forecast">
+            <h1
+                style="float: left;margin:5px;font-family: sf-mono;background-color: #e6e4e4;border: none;border-radius: 1vw;font-size: 1.5vw;padding:10px;font-weight: 100;">
+                PRES</h1>
+        </a>
+        <a class="titleLinks" href="https://projects.jhkforecasts.com/senate-forecast">
+            <h1
+                style="float: left;margin:5px;font-family: sf-mono;background-color: #e6e4e4;border: none;border-radius: 1vw;font-size: 1.5vw;padding:10px;font-weight: 100;">
+                SENATE</h1>
+        </a>
+        <a class="titleLinks" href="https://projects.jhkforecasts.com/house-forecast">
+            <h1
+                style="float: left;margin:5px;font-family: sf-mono;background-color: #e6e4e4;border: none;border-radius: 1vw;font-size: 1.5vw;padding:10px;font-weight: 100;">
+                HOUSE</h1>
+        </a>
     </div>
-    <div id="phoneBanner" style="align-items: center;">
-        <h1 style="font-family: sf-mono;border: none;font-size: 4vw;padding:10px;font-weight: 100;text-align: center;line-height:1px;" >JHK FORECASTS</h1>
+    <div id="phoneBanner" style="align-items: center;;">
+        <h1
+            style="font-family: sf-mono;border: none;font-size: 5vw;padding:5px;font-weight: 100;text-align: center;line-height:1px;">
+            JHK FORECASTS</h1>
         <br>
         <table style="width: 100%;border-bottom: solid black 1px;">
             <tr style="width: 100%;">
                 <td style="width: 25%;">
-                    <h1 style="margin:5px;font-family: sf-mono;font-size: 3vw;font-weight: 100;text-align: center;" >DEM</h1> 
+                    <a class="titleLinks" href="https://projects.jhkforecasts.com/democratic_primary/">
+                        <h1 style="margin:5px;font-family: sf-mono;font-size: 4vw;font-weight: 100;text-align: center;">
+                            DEM</h1>
+                    </a>
                 </td>
                 <td style="width: 25%;">
-                    <h1 style="margin:5px;font-family: sf-mono;font-size: 3vw;font-weight: 100;text-align: center;" >PRES</h1> 
+                    <a class="titleLinks" href="https://projects.jhkforecasts.com/presidential-forecast/">
+                        <h1 style="margin:5px;font-family: sf-mono;font-size: 4vw;font-weight: 100;text-align: center;">
+                            PRES</h1>
+                    </a>
                 </td>
                 <td style="width: 25%;">
-                    <h1 style="margin:5px;font-family: sf-mono;font-size: 3vw;font-weight: 100;text-align: center;" >SENATE</h1> 
+                    <a class="titleLinks" href="https://projects.jhkforecasts.com/senate-forecast/">
+                        <h1 style="margin:5px;font-family: sf-mono;font-size: 4vw;font-weight: 100;text-align: center;">
+                            SENATE</h1>
+                    </a>
                 </td>
                 <td style="width: 25%;">
-                    <h1 style="margin:5px;font-family: sf-mono;font-size: 3vw;font-weight: 100;text-align: center;" >HOUSE</h1> 
+                    <a class="titleLinks" href="https://projects.jhkforecasts.com/house-forecast/">
+                        <h1 style="margin:5px;font-family: sf-mono;font-size: 4vw;font-weight: 100;text-align: center;">
+                            HOUSE</h1>
+                    </a>
                 </td>
             </tr>
         </table>

@@ -338,7 +338,7 @@
      font-size: 1.5vw;
    }
    #computerBanner {
-    display: block;
+    display: flex;
    }
    #phoneBanner {
      display: none;
