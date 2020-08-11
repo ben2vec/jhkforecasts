@@ -329,10 +329,10 @@ function ready(error, us, inputData, cands, data, hist) {
         .data(jsonElection)
         .enter()
         .append("rect")
-        .attr("x", d => path.centroid(d)[0] - 8)
-        .attr("y", d => d.properties.label == "RI" ? path.centroid(d)[1] + 2 : path.centroid(d)[1] - 8)
-        .attr("height", 16)
-        .attr("width", 16)
+        .attr("x", d => d.properties.label == "MI" ? path.centroid(d)[0] -2 : path.centroid(d)[0] - 10)
+        .attr("y", d => d.properties.label == "RI" ? path.centroid(d)[1] + 4 : d.properties.label == "MI" ? path.centroid(d)[1] + 10 : d.properties.label == "DE" ? path.centroid(d)[1] - 5 : path.centroid(d)[1] - 10)
+        .attr("height", 20)
+        .attr("width", 20)
         .attr("ry", 2)
         .style("fill", d => color(d.properties.gopWin))
 
@@ -340,10 +340,10 @@ function ready(error, us, inputData, cands, data, hist) {
         .data(jsonElection)
         .enter()
         .append("text")
-        .attr("x", d => path.centroid(d)[0])
-        .attr("y", d => d.properties.label == "RI" ? path.centroid(d)[1] + 10 : path.centroid(d)[1])
+        .attr("x", d => d.properties.label == "MI" ? path.centroid(d)[0] +8 :path.centroid(d)[0])
+        .attr("y", d => d.properties.label == "MI" ? path.centroid(d)[1] + 20 :d.properties.label == "RI" ? path.centroid(d)[1] + 14 : d.properties.label == "DE" ? path.centroid(d)[1] + 5 : path.centroid(d)[1])
         .text(d => d.properties.label)
-        .style("font-size", 10)
+        .style("font-size", 12)
         .attr("dominant-baseline", "central")
         .attr("text-anchor", "middle")
         .style("fill", d => Math.abs(d.properties.gopWin - 50) > 20 ? "white" : "black")
@@ -355,10 +355,10 @@ function ready(error, us, inputData, cands, data, hist) {
         .attr("xlink:href", (d, i) => d.properties.name)
         .append("rect")
         .attr("class", "statesover")
-        .attr("x", d => path.centroid(d)[0] - 8)
-        .attr("y", d => d.properties.label == "RI" ? path.centroid(d)[1] + 2 : path.centroid(d)[1] - 8)
-        .attr("height", 16)
-        .attr("width", 16)
+        .attr("x", d => d.properties.label == "MI" ? path.centroid(d)[0] -2 : path.centroid(d)[0] - 10)
+        .attr("y", d => d.properties.label == "RI" ? path.centroid(d)[1] + 4 : d.properties.label == "MI" ? path.centroid(d)[1] + 10 : d.properties.label == "DE" ? path.centroid(d)[1] - 5 : path.centroid(d)[1] - 10)
+        .attr("height", 20)
+        .attr("width", 20)
         .attr("ry", 2)
         .style('stroke', d => d.properties.tippingPoint > 3 ? "black" : "none")
         .on('mouseover', function (d) {
@@ -1340,6 +1340,6 @@ function ready(error, us, inputData, cands, data, hist) {
                 toolTip.hide()
             });
 
-   
+
 
 }
