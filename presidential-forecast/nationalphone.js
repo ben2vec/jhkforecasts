@@ -1182,7 +1182,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
       .data(sd3)
       .enter()
       .append("a")
-      .attr("xlink:href", d => d.state)
+        .attr("xlink:href", d => d.state.toLowerCase().split(" ").join("-"))
       .append("circle")
       .attr("class", "statesover")
       .attr("cx", d => d.x)
