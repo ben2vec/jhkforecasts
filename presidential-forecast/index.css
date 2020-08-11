@@ -264,7 +264,7 @@
    stroke-width: 2px;
  }
 
- @media only screen and (max-width:650) {
+ @media only screen and (max-width:650px) {
    #bigmenu {
      display: none;
    }
