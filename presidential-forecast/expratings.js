@@ -814,6 +814,7 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                             bubble_info.forEach((d, i) => {
                                 var state = d.state
                                 d.rating = stateData.filter(d => d.state == state)[0].rating
+                                d.ev = stateData.filter(d => d.state == state)[0].ev
                             })
                             console.log(bubble_info)
                             map.selectAll("circ")
@@ -843,6 +844,82 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                                 .style("font-weight", "500")
                                 .style("font-family", "sf-mono");
 
+                                map.selectAll("circ")
+                                .data(bubble_info)
+                                .enter()
+                                .append("a")
+                                .attr("href", "#state-search")
+                                .append("circle")
+                                .attr("class", "maps bubbles statesover")
+                                .attr("cx", d => d.x + 120)
+                                .attr("cy", d => d.y + 50)
+                                .attr("r", d => d.radius)
+                                .on("mouseover", function (d) {
+
+                                    tool_tip.show();
+                                    var tipSVG = d3.select("#tipDiv")
+                                        .append("svg")
+                                        .attr("width", 175)
+                                        .attr("height", 175)
+                                        ;
+                                    tipSVG.append("rect")
+                                        .attr("y", 1.5)
+                                        .attr("x", 1.5)
+                                        .attr("width", 172)
+                                        .attr("height", 172)
+                                        .attr("rx", 8)
+                                        .attr("fill", "white")
+                                        .attr("stroke", "black")
+                                        .attr("stroke-width", 2)
+                                    tipSVG.append("text")
+                                        .text(d.state)
+                                        .attr("y", 20)
+                                        .attr("x", 87.5)
+                                        .attr("fill", "#black")
+                                        .attr("font-weight", "100")
+                                        .style("font-size", "15")
+                                        .attr("text-anchor", "middle")
+                                        .style("font-family", "sf-mono")
+
+                                    tipSVG.append("text")
+                                        .text(d.ev + " ELECTORAL VOTES")
+                                        .attr("y", 40)
+                                        .attr("x", 87.5)
+                                        .attr("fill", "black")
+                                        .style("font-weight", "100")
+                                        .style("font-size", "14")
+                                        .attr("text-anchor", "middle")
+                                        .style("font-family", "sf-mono")
+
+
+                                    tipSVG.append("text")
+                                        .text(typeof d.rating == "number" ? d.rating > 50 ? "WIN:" + wholeformat(d.rating) + "%" : "WIN:" + wholeformat(100 - d.rating) + "%" : d.rating)
+                                        .attr("y", 160)
+                                        .attr("x", 87.5)
+                                        .attr("fill", "black")
+                                        .style("font-weight", "100")
+                                        .style("font-size", "15")
+                                        .attr("text-anchor", "middle")
+                                        .style("font-family", "sf-mono")
+
+                                    tipSVG.append("image")
+                                        .attr("xlink:href", typeof d.rating == "number" ? (d.rating > 50 ? "https://jhkforecasts.com/Trump-01.png" : "https://jhkforecasts.com/Biden-01.png") : d.rating_value == 50 ? "https://jhkforecasts.com/No%20one-01.png" : d.rating_value > 50 ? "https://jhkforecasts.com/Trump-01.png" : "https://jhkforecasts.com/Biden-01.png")
+                                        .attr("x", 45)
+                                        .attr("y", 50)
+                                        .attr("width", 90)
+                                        .attr("height", 90)
+                                })
+                                .on('mouseout',
+                                    function (d) {
+                                        tool_tip.hide()
+                                    })
+                                .on("click", function (d) {
+                                    stateproj(d.state);
+                                    document.getElementById("state-search").value = d.state
+                                })
+                                .attr("cursor","pointer")
+
+
                                 map.append("text")
                                 .attr("class", "maps regMap")
                                 .text("Cartogram")
@@ -857,7 +934,8 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                                 .on("click",d=>{
                                     update(input,"bubble")
                                 })
-                                ;
+                                .attr("cursor","pointer")
+                                
 
                                 map.append("text")
                                 .attr("class", "maps bubbles")
@@ -873,7 +951,12 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
                                 .on("click",d=>{
                                     update(input,"reg")
                                 })
-                                ;
+                                .attr("cursor","pointer")
+                                
+
+
+
+
 
 
                             mapType == "reg" ? d3.selectAll(".bubbles").remove() : d3.selectAll(".regMap").remove()
