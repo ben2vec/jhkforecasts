@@ -54,11 +54,12 @@ var color = d3.scaleLinear()
 
 
 d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
-
+  var data = data.filter(d => d.state == keyState)
   data.forEach((d, i) => {
     d.rawDate = d.forecastDate
     d.candidate = d.candidate == "Joseph R. Biden Jr." ? "Joseph Biden" : d.candidate
     d.forecastDate = dp(d.forecastDate)
+    d.vote = +d.vote
     return d
   })
   data.sort((a, b) => a.forecastDate - b.forecastDate)
@@ -439,7 +440,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
 
   update("win", 0);
 
-
+    
   function update(input, speed) {
 
     var cands = candidates
@@ -460,7 +461,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
 
     y.domain([
       0,
-      input == "vote" ? d3.max(lineData, d => d.vote) : 100
+      input == "vote" ? d3.max(lineData, d => d.vote) < 60 ? 60 : d3.max(lineData, d => d.vote) : 100
     ]).nice();
 
     time.selectAll(".y-axis").transition()
