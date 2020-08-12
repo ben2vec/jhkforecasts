@@ -11,77 +11,96 @@ var forecasters = [
         "link": "https://projects.jhkforecasts.com/presidential-forecast/",
         "type": "",
         "shorthand": "jhk",
-        "forecastLabel": "JHK Forecasts"
+        "forecastLabel": "JHK Forecasts",
+        tableHeader: "JHK"
+    },
+    {
+        "forecast": "FiveThirtyEight",
+        "link": "https://projects.fivethirtyeight.com/2020-election-forecast/",
+        "type": "expert",
+        "shorthand": "fte",
+        "forecastLabel": "538",
+        tableHeader: "538"
     },
     {
         "forecast": "Bitecofer/ Niskanen",
         "link": "https://www.niskanencenter.org/bitecofer-post-primary-update/",
         "type": "newcomer",
         "shorthand": "bitecofer",
-        "forecastLabel": "Bitecofer"
+        "forecastLabel": "Bitecofer",
+        tableHeader: "Bitecofer"
     },
     {
         "forecast": "Cook Political",
         "link": "https://cookpolitical.com/analysis/national/national-politics/introducing-cook-political-reports-2020-electoral-college",
         "type": "expert",
         "shorthand": "cook",
-        "forecastLabel": "Cook Political"
+        "forecastLabel": "Cook Political",
+        tableHeader: "Cook"
     },
     {
         "forecast": "Inside Elections",
         "link": "https://insideelections.com/ratings/president",
         "type": "expert",
         "shorthand": "inside",
-        "forecastLabel": "Inside Elections"
+        "forecastLabel": "Inside Elections",
+        tableHeader: "Inside"
     },
     {
         "forecast": "Politico",
         "link": "https://www.politico.com/2020-election/race-forecasts-and-predictions/president/",
         "type": "expert",
         "shorthand": "politico",
-        "forecastLabel": "Politico"
+        "forecastLabel": "Politico",
+        tableHeader: "Politico"
     },
     {
         "forecast": "Sabato's Crystal Ball",
         "link": "http://centerforpolitics.org/crystalball/2020-president/",
         "type": "expert",
         "shorthand": "sabato",
-        "forecastLabel": "Sabato"
+        "forecastLabel": "Sabato",
+        tableHeader: "Sabato"
     },
     {
         "forecast": "CNalysis",
         "link": "https://www.cnalysiscom.website/forecasts/2020-president-governor-senate-house-ratings",
         "type": "newcomer",
         "shorthand": "cnalysis",
-        "forecastLabel": "CNalysis"
+        "forecastLabel": "CNalysis",
+        tableHeader: "CNalysis"
     },
     {
         "forecast": "Lean Tossup",
         "link": "https://leantossup.ca/us-presidency/",
         "type": "newcomer",
         "shorthand": "leantoss",
-        "forecastLabel": "Lean Tossup"
+        "forecastLabel": "Lean Tossup",
+        tableHeader: "Lean Tossup"
     },
     {
         "forecast": "Plural Vote",
         "link": "http://www.pluralvote.com/article/2020-forecast/",
         "type": "newcomer",
         "shorthand": "pluralvote",
-        "forecastLabel": "Plural Vote"
+        "forecastLabel": "Plural Vote",
+        tableHeader: "Plural Vote"
     },
     {
         "forecast": "CNN",
         "link": "https://www.cnn.com/election/2020/electoral-college-interactive-maps",
         "type": "expert",
         "shorthand": "cnn",
-        "forecastLabel": "CNN"
+        "forecastLabel": "CNN",
+        tableHeader: "CNN"
     },
     {
         "forecast": "NPR",
         "link": "https://www.npr.org/2020/06/17/877951588/2020-electoral-map-ratings-biden-has-an-edge-over-trump-with-5-months-to-go",
         "type": "expert",
         "shorthand": "npr",
-        "forecastLabel": "NPR"
+        "forecastLabel": "NPR",
+        tableHeader: "NPR"
     }
 ]
 var expert = forecasters.filter(d => d.type == "expert")
@@ -89,7 +108,8 @@ expert.unshift(forecasters[0])
 var newcomer = forecasters.filter(d => d.type == "newcomer")
 newcomer.unshift(forecasters[0])
 var timeparse = d3.timeParse("%m/%d/%y")
-var map_labels = [{ "state": "Alabama", "label": "AL", "xValue": 637, "yValue": 338.6934 }, { "state": "Alaska", "label": "AK", "xValue": 245, "yValue": 400 }, { "state": "Arizona", "label": "AZ", "xValue": 315, "yValue": 306.5801 }, { "state": "Arkansas", "label": "AR", "xValue": 560, "yValue": 315.6387 }, { "state": "California", "label": "CA", "xValue": 223, "yValue": 253.9219 }, { "state": "Colorado", "label": "CO", "xValue": 400, "yValue": 245.5645 }, { "state": "Connecticut", "label": "CT", "xValue": -1000, "yValue": -1000 }, { "state": "Delaware", "label": "DE", "xValue": -1000, "yValue": -1000 }, { "state": "District of Columbia", "label": "DC", "xValue": -1000, "yValue": -1000 }, { "state": "Florida", "label": "FL", "xValue": 714, "yValue": 397.8154 }, { "state": "Georgia", "label": "GA", "xValue": 680.0117, "yValue": 335.2354 }, { "state": "Hawaii", "label": "HI", "xValue": 380, "yValue": 465 }, { "state": "Idaho", "label": "ID", "xValue": 310.1851, "yValue": 155 }, { "state": "Illinois", "label": "IL", "xValue": 596.6602, "yValue": 231.2954 }, { "state": "Indiana", "label": "IN", "xValue": 633.4111, "yValue": 228.4214 }, { "state": "Iowa", "label": "IA", "xValue": 545.8457, "yValue": 202.6782 }, { "state": "Kansas", "label": "KS", "xValue": 487, "yValue": 259.1592 }, { "state": "Kentucky", "label": "KY", "xValue": 655.1484, "yValue": 264.9658 }, { "state": "Louisiana", "label": "LA", "xValue": 561.4404, "yValue": 369.8135 }, { "state": "Maine", "label": "ME", "xValue": 807.3105, "yValue": 109.855 }, { "state": "Maryland", "label": "MD", "xValue": -1000, "yValue": -1000 }, { "state": "Massachusetts", "label": "MA", "xValue": -1000, "yValue": -1000 }, { "state": "Michigan", "label": "MI", "xValue": 645.6465, "yValue": 181.3647 }, { "state": "Minnesota", "label": "MN", "xValue": 530.8594, "yValue": 141.5874 }, { "state": "Mississippi", "label": "MS", "xValue": 598.6016, "yValue": 342.1514 }, { "state": "Missouri", "label": "MO", "xValue": 557, "yValue": 261.123 }, { "state": "Montana", "label": "MT", "xValue": 370.0981, "yValue": 112.7705 }, { "state": "Nebraska", "label": "NE", "xValue": 473.8364, "yValue": 210.0527 }, { "state": "Nevada", "label": "NV", "xValue": 267.8765, "yValue": 219.0957 }, { "state": "New Hampshire", "label": "NH", "xValue": -1000, "yValue": -1000 }, { "state": "New Jersey", "label": "NJ", "xValue": 785, "yValue": 210 }, { "state": "New Mexico", "label": "NM", "xValue": 385.3774, "yValue": 314.1035 }, { "state": "New York", "label": "NY", "xValue": 753.5781, "yValue": 163.2588 }, { "state": "North Carolina", "label": "NC", "xValue": 728.6084, "yValue": 284.5029 }, { "state": "North Dakota", "label": "ND", "xValue": 467.0742, "yValue": 117.3823 }, { "state": "Ohio", "label": "OH", "xValue": 670.7197, "yValue": 219.4883 }, { "state": "Oklahoma", "label": "OK", "xValue": 500.1963, "yValue": 306.418 }, { "state": "Oregon", "label": "OR", "xValue": 240.2783, "yValue": 139.5654 }, { "state": "Pennsylvania", "label": "PA", "xValue": 730.3535, "yValue": 200.856 }, { "state": "Rhode Island", "label": "RI", "xValue": -1000, "yValue": -1000 }, { "state": "South Carolina", "label": "SC", "xValue": 712.4395, "yValue": 315.6387 }, { "state": "South Dakota", "label": "SD", "xValue": 468.0742, "yValue": 163.5166 }, { "state": "Tennessee", "label": "TN", "xValue": 640.8594, "yValue": 294.8193 }, { "state": "Texas", "label": "TX", "xValue": 480.9902, "yValue": 374.2861 }, { "state": "Utah", "label": "UT", "xValue": 330.1084, "yValue": 234.978 }, { "state": "Vermont", "label": "VT", "xValue": -1000, "yValue": -1000 }, { "state": "Virginia", "label": "VA", "xValue": 731.0264, "yValue": 252.7842 }, { "state": "Washington", "label": "WA", "xValue": 256.9365, "yValue": 88.0762 }, { "state": "West Virginia", "label": "WV", "xValue": 701, "yValue": 243 }, { "state": "Wisconsin", "label": "WI", "xValue": 585.2529, "yValue": 163.2588 }, { "state": "Wyoming", "label": "WY", "xValue": 385.9287, "yValue": 179.6255 }]
+var map_labels = [{ "state": "Alabama", "label": "AL", "xValue": 637, "yValue": 338.6934 }, { "state": "Alaska", "label": "AK", "xValue": 245, "yValue": 400 }, { "state": "Arizona", "label": "AZ", "xValue": 315, "yValue": 306.5801 }, { "state": "Arkansas", "label": "AR", "xValue": 560, "yValue": 315.6387 }, { "state": "California", "label": "CA", "xValue": 223, "yValue": 253.9219 }, { "state": "Colorado", "label": "CO", "xValue": 400, "yValue": 245.5645 }, { "state": "Connecticut", "label": "CT", "xValue": -1000, "yValue": -1000 }, { "state": "Delaware", "label": "DE", "xValue": -1000, "yValue": -1000 }, { "state": "District of Columbia", "label": "DC", "xValue": -1000, "yValue": -1000 }, { "state": "Florida", "label": "FL", "xValue": 714, "yValue": 397.8154 }, { "state": "Georgia", "label": "GA", "xValue": 680.0117, "yValue": 335.2354 }, { "state": "Hawaii", "label": "HI", "xValue": 380, "yValue": 465 }, { "state": "Idaho", "label": "ID", "xValue": 310.1851, "yValue": 155 }, { "state": "Illinois", "label": "IL", "xValue": 596.6602, "yValue": 231.2954 }, { "state": "Indiana", "label": "IN", "xValue": 633.4111, "yValue": 228.4214 }, { "state": "Iowa", "label": "IA", "xValue": 545.8457, "yValue": 202.6782 }, { "state": "Kansas", "label": "KS", "xValue": 487, "yValue": 259.1592 }, { "state": "Kentucky", "label": "KY", "xValue": 655.1484, "yValue": 264.9658 }, { "state": "Louisiana", "label": "LA", "xValue": 561.4404, "yValue": 369.8135 }, { "state": "Maine", "label": "ME", "xValue": 807.3105, "yValue": 109.855 }, { "state": "Maryland", "label": "MD", "xValue": -1000, "yValue": -1000 }, { "state": "Massachusetts", "label": "MA", "xValue": -1000, "yValue": -1000 }, { "state": "Michigan", "label": "MI", "xValue": 645.6465, "yValue": 181.3647 }, { "state": "Minnesota", "label": "MN", "xValue": 530.8594, "yValue": 141.5874 }, { "state": "Mississippi", "label": "MS", "xValue": 598.6016, "yValue": 342.1514 }, { "state": "Missouri", "label": "MO", "xValue": 557, "yValue": 261.123 }, { "state": "Montana", "label": "MT", "xValue": 370.0981, "yValue": 112.7705 }, { "state": "Nebraska", "label": "NE", "xValue": 473.8364, "yValue": 210.0527 }, { "state": "Nevada", "label": "NV", "xValue": 267.8765, "yValue": 219.0957 }, { "state": "New Hampshire", "label": "NH", "xValue": -1000, "yValue": -1000 }, { "state": "New Jersey", "label": "NJ", "xValue": 785, "yValue": 210 }, { "state": "New Mexico", "label": "NM", "xValue": 385.3774, "yValue": 314.1035 }, { "state": "New York", "label": "NY", "xValue": 753.5781, "yValue": 163.2588 }, { "state": "North Carolina", "label": "NC", "xValue": 728.6084, "yValue": 284.5029 }, { "state": "North Dakota", "label": "ND", "xValue": 467.0742, "yValue": 117.3823 }, { "state": "Ohio", "label": "OH", "xValue": 670.7197, "yValue": 219.4883 }, { "state": "Oklahoma", "label": "OK", "xValue": 500.1963, "yValue": 306.418 }, { "state": "Oregon", "label": "OR", "xValue": 240.2783, "yValue": 139.5654 }, { "state": "Pennsylvania", "label": "PA", "xValue": 730.3535, "yValue": 200.856 }, { "state": "Rhode Island", "label": "RI", "xValue": -1000, "yValue": -1000 }, { "state": "South Carolina", "label": "SC", "xValue": 712.4395, "yValue": 315.6387 }, { "state": "South Dakota", "label": "SD", "xValue": 468.0742, "yValue": 163.5166 }, { "state": "Tennessee", "label": "TN", "xValue": 640.8594, "yValue": 294.8193 }, { "state": "Texas", "label": "TX", "xValue": 480.9902, "yValue": 374.2861 }, { "state": "Utah", "label": "UT", "xValue": 330.1084, "yValue": 234.978 }, { "state": "Vermont", "label": "VT", "xValue": -1000, "yValue": -1000 }, { "state": "Virginia", "label": "VA", "xValue": 731.0264, "yValue": 252.7842 }, { "state": "Washington", "label": "WA", "xValue": 256.9365, "yValue": 88.0762 }, { "state": "West Virginia", "label": "WV", "xValue": 701, "yValue": 243 }, { "state": "Wisconsin", "label": "WI", "xValue": 585.2529, "yValue": 163.2588 }, { "state": "Wyoming", "label": "WY", "xValue": 385.9287, "yValue": 179.6255 }, { "state": "Maine CD-1", "label": 1, "radius": 5.48, "x": -1000, "y": -1000 }, { "state": "Maine CD-2", "label": 2, "radius": 5.48, "x": -1000, "y": -1000 }, { "state": "Nebraska CD-1", "label": 1, "radius": 5.48, "x": -1000, "y": -1000 }, { "state": "Nebraska CD-2", "label": 2, "radius": 5.48, "x": -1000, "y": -1000 }, { "state": "Nebraska CD-3", "label": 3, "radius": 5.48, "x": -1000, "y": -1000 }]
+var bubble_info = [{ "state": "Alabama", "abbrev": "AL", "radius": 16.43, "x": 413, "y": 332 }, { "state": "Alaska", "abbrev": "AK", "radius": 9.49, "x": 41, "y": 19 }, { "state": "Arizona", "abbrev": "AZ", "radius": 18.17, "x": 172, "y": 282 }, { "state": "Arkansas", "abbrev": "AR", "radius": 13.42, "x": 325, "y": 290 }, { "state": "California", "abbrev": "CA", "radius": 40.62, "x": 103, "y": 237 }, { "state": "Colorado", "abbrev": "CO", "radius": 16.43, "x": 224, "y": 249 }, { "state": "Connecticut", "abbrev": "CT", "radius": 14.49, "x": 586, "y": 128 }, { "state": "Delaware", "abbrev": "DE", "radius": 9.49, "x": 557, "y": 183 }, { "state": "District of Columbia", "abbrev": "DC", "radius": 9.49, "x": 536, "y": 193 }, { "state": "Florida", "abbrev": "FL", "radius": 29.5, "x": 483, "y": 380 }, { "state": "Georgia", "abbrev": "GA", "radius": 21.91, "x": 443, "y": 298 }, { "state": "Hawaii", "abbrev": "HI", "radius": 10.95, "x": 88, "y": 372 }, { "state": "Idaho", "abbrev": "ID", "radius": 10.95, "x": 188, "y": 173 }, { "state": "Illinois", "abbrev": "IL", "radius": 24.49, "x": 359, "y": 207 }, { "state": "Indiana", "abbrev": "IN", "radius": 18.17, "x": 413, "y": 207 }, { "state": "Iowa", "abbrev": "IA", "radius": 13.42, "x": 306, "y": 195 }, { "state": "Kansas", "abbrev": "KS", "radius": 13.42, "x": 266, "y": 248 }, { "state": "Kentucky", "abbrev": "KY", "radius": 15.49, "x": 411, "y": 251 }, { "state": "Louisiana", "abbrev": "LA", "radius": 15.49, "x": 326, "y": 335 }, { "state": "Maine", "abbrev": "ME", "radius": 7.75, "x": 628, "y": 26 }, { "state": "Maryland", "abbrev": "MD", "radius": 17.32, "x": 505, "y": 185 }, { "state": "Massachusetts", "abbrev": "MA", "radius": 18.17, "x": 607, "y": 89 }, { "state": "Michigan", "abbrev": "MI", "radius": 21.91, "x": 418, "y": 149 }, { "state": "Minnesota", "abbrev": "MN", "radius": 17.32, "x": 304, "y": 142 }, { "state": "Mississippi", "abbrev": "MS", "radius": 13.42, "x": 373, "y": 324 }, { "state": "Missouri", "abbrev": "MO", "radius": 17.32, "x": 329, "y": 251 }, { "state": "Montana", "abbrev": "MT", "radius": 9.49, "x": 206, "y": 131 }, { "state": "Nebraska", "abbrev": "NE", "radius": 7.75, "x": 258, "y": 209 }, { "state": "Nevada", "abbrev": "NV", "radius": 13.42, "x": 167, "y": 220 }, { "state": "New Hampshire", "abbrev": "NH", "radius": 10.95, "x": 612, "y": 54 }, { "state": "New Jersey", "abbrev": "NJ", "radius": 20.49, "x": 551, "y": 147 }, { "state": "New Mexico", "abbrev": "NM", "radius": 12.25, "x": 215, "y": 303 }, { "state": "New York", "abbrev": "NY", "radius": 29.5, "x": 548, "y": 81 }, { "state": "North Carolina", "abbrev": "NC", "radius": 21.21, "x": 499, "y": 278 }, { "state": "North Dakota", "abbrev": "ND", "radius": 9.49, "x": 257, "y": 136 }, { "state": "Ohio", "abbrev": "OH", "radius": 23.24, "x": 459, "y": 191 }, { "state": "Oklahoma", "abbrev": "OK", "radius": 14.49, "x": 270, "y": 294 }, { "state": "Oregon", "abbrev": "OR", "radius": 14.49, "x": 124, "y": 176 }, { "state": "Pennsylvania", "abbrev": "PA", "radius": 24.49, "x": 498, "y": 132 }, { "state": "Rhode Island", "abbrev": "RI", "radius": 10.95, "x": 619, "y": 126 }, { "state": "South Carolina", "abbrev": "SC", "radius": 16.43, "x": 487, "y": 322 }, { "state": "South Dakota", "abbrev": "SD", "radius": 9.49, "x": 257, "y": 167 }, { "state": "Tennessee", "abbrev": "TN", "radius": 18.17, "x": 379, "y": 284 }, { "state": "Texas", "abbrev": "TX", "radius": 33.76, "x": 271, "y": 355 }, { "state": "Utah", "abbrev": "UT", "radius": 13.42, "x": 204, "y": 218 }, { "state": "Vermont", "abbrev": "VT", "radius": 9.49, "x": 585, "y": 47 }, { "state": "Virginia", "abbrev": "VA", "radius": 19.75, "x": 508, "y": 229 }, { "state": "Washington", "abbrev": "WA", "radius": 18.97, "x": 154, "y": 131 }, { "state": "West Virginia", "abbrev": "WV", "radius": 12.25, "x": 451, "y": 242 }, { "state": "Wisconsin", "abbrev": "WI", "radius": 17.32, "x": 359, "y": 146 }, { "state": "Wyoming", "abbrev": "WY", "radius": 9.49, "x": 214, "y": 177 }, { "state": "Maine CD-1", "abbrev": 1, "radius": 5.48, "x": 612, "y": 26 }, { "state": "Maine CD-2", "abbrev": 2, "radius": 5.48, "x": 644, "y": 26 }, { "state": "Nebraska CD-1", "abbrev": 1, "radius": 5.48, "x": 242, "y": 209 }, { "state": "Nebraska CD-2", "abbrev": 2, "radius": 5.48, "x": 258, "y": 193 }, { "state": "Nebraska CD-3", "abbrev": 3, "radius": 5.48, "x": 274, "y": 209 }]
 var timeformat = d3.timeFormat("%b. %d")
 var wholeformat = d3.format(".0f")
 var numberformat = d3.format(".1f")
@@ -148,937 +168,1012 @@ d3.csv("https://raw.githubusercontent.com/robby500/US_Model_Data/master/Pres_LT_
     leantoss.push(ltcds)
     var leantoss = leantoss.flat()
 
+    d3.csv("https://projects.fivethirtyeight.com/2020-general-data/presidential_state_toplines_2020.csv", fte => {
 
-    d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", jhk => {
-        jhk.forEach((d, i) => {
-            d.win = +d.win
-            return d
-        })
+        var fte = fte.slice(0, 56)
+        fte.filter(d => d.state == "NE-1")[0].state = "Nebraska CD-1"
+        fte.filter(d => d.state == "ME-1")[0].state = "Maine CD-1"
+        fte.filter(d => d.state == "ME-2")[0].state = "Maine CD-2"
+        fte.filter(d => d.state == "NE-2")[0].state = "Nebraska CD-3"
+        fte.filter(d => d.state == "NE-3")[0].state = "Nebraska CD-3"
 
-        var newest_data = jhk.slice(jhk.length - 228, jhk.length).filter(d => d.party == "REP")
-
-        var jhkforecasts = newest_data.map((d, i) => {
-            return d.win
-        })
-        d3.csv("https://raw.githubusercontent.com/seanelevan/Plural-Vote/master/statebystateprob.csv", (pluralvote) => {
-
-
-            var pluralvote = pluralvote.map((d, i) => {
-                return {
-                    state: d.stateNames,
-                    win: +d.statebystateprob
-                }
+        d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", jhk => {
+            jhk.forEach((d, i) => {
+                d.win = +d.win
+                return d
             })
-            pluralvote.sort(function (a, b) {
-                if (a.state < b.state) { return -1; }
-                if (a.state > b.state) { return 1; }
-                return 0;
+
+            var newest_data = jhk.slice(jhk.length - 228, jhk.length).filter(d => d.party == "REP")
+
+            var jhkforecasts = newest_data.map((d, i) => {
+                return d.win
             })
-            pluralvote.shift()
-            var pvcds = [pluralvote.splice(20, 2), pluralvote.splice(28, 3)].flat()
-            pluralvote.push(pvcds)
-            var pluralvote = pluralvote.flat()
+            d3.csv("https://raw.githubusercontent.com/seanelevan/Plural-Vote/master/statebystateprob.csv", (pluralvote) => {
 
-            d3.csv("https://data.jhkforecasts.com/2020-pres-input.csv", data => {
 
-                var forecasts_rating = data.map((d, i) => {
+                var pluralvote = pluralvote.map((d, i) => {
                     return {
-                        state: d.state,
-                        ev: +d.ev,
-                        pvi: +d.pvi,
-                        jhk: jhkforecasts[i],
-                        bitecofer: d.bitecofer,
-                        cook: d.cook,
-                        inside: d.inside,
-                        politico: d.politico,
-                        sabato: d.sabato,
-                        cnalysis: d.cnanalysis,
-                        leantoss: +leantoss[i].gop_win,
-                        pluralvote: pluralvote[i].win,
-                        cnn:d.cnn,
-                        npr:d.npr
+                        state: d.stateNames,
+                        win: +d.statebystateprob
                     }
                 })
-                var sd2 = forecasts_rating
-                var ratings_nested = []
-                var forecasts_ev = []
-                for (let j = 0; j < forecasts.length; j++) {
-                    var datas = sd2.map((d, i) => {
+                pluralvote.sort(function (a, b) {
+                    if (a.state < b.state) { return -1; }
+                    if (a.state > b.state) { return 1; }
+                    return 0;
+                })
+                pluralvote.shift()
+                var pvcds = [pluralvote.splice(20, 2), pluralvote.splice(28, 3)].flat()
+                pluralvote.push(pvcds)
+                var pluralvote = pluralvote.flat()
+
+                d3.csv("https://data.jhkforecasts.com/2020-pres-input.csv", data => {
+
+                    var forecasts_rating = data.map((d, i) => {
                         return {
                             state: d.state,
-                            expert: forecasts[j],
-                            ev: d.ev,
-                            pvi: d.pvi,
-                            rating: d[forecasts[j]],
-                            rating_value: typeof d[forecasts[j]] == "string" ? rating_value[ratings.indexOf(d[forecasts[j]])] : d[forecasts[j]],
-                            opacity: rating_opacity[ratings.indexOf(d[forecasts[j]])],
-                            full_forecast: forecasters[j].forecast,
-                            forecastLabel: forecasters[j].forecastLabel,
-                            link: forecasters[j].link
+                            ev: +d.ev,
+                            pvi: +d.pvi,
+                            jhk: jhkforecasts[i],
+                            bitecofer: d.bitecofer,
+                            cook: d.cook,
+                            inside: d.inside,
+                            politico: d.politico,
+                            sabato: d.sabato,
+                            cnalysis: d.cnanalysis,
+                            leantoss: +leantoss[i].gop_win,
+                            pluralvote: pluralvote[i].win,
+                            cnn: d.cnn,
+                            npr: d.npr,
+                            fte: fte.filter(d => d.state == data[i].state).length == 0 ? "-" : fte.filter(d => d.state == data[i].state)[0].winstate_inc * 100
                         }
                     })
-
-                    var expev = typeof datas[0].rating == "string" ? {
-                        expert: forecasts[j],
-                        values:
-                            [d3.sum(datas.filter(d => d.rating == "Solid D"), d => d.ev),
-                            d3.sum(datas.filter(d => d.rating == "Likely D"), d => d.ev),
-                            d3.sum(datas.filter(d => d.rating == "Lean D"), d => d.ev),
-                            d3.sum(datas.filter(d => d.rating == "Tilt D"), d => d.ev),
-                            d3.sum(datas.filter(d => d.rating == "Tossup"), d => d.ev),
-                            d3.sum(datas.filter(d => d.rating == "Tilt R"), d => d.ev),
-                            d3.sum(datas.filter(d => d.rating == "Lean R"), d => d.ev),
-                            d3.sum(datas.filter(d => d.rating == "Likely R"), d => d.ev),
-                            d3.sum(datas.filter(d => d.rating == "Solid R"), d => d.ev)]
-                    } : {
+                    var sd2 = forecasts_rating
+                    var ratings_nested = []
+                    var forecasts_ev = []
+                    for (let j = 0; j < forecasts.length; j++) {
+                        var datas = sd2.map((d, i) => {
+                            return {
+                                state: d.state,
+                                expert: forecasts[j],
+                                ev: d.ev,
+                                pvi: d.pvi,
+                                rating: d[forecasts[j]],
+                                rating_value: typeof d[forecasts[j]] == "string" ? rating_value[ratings.indexOf(d[forecasts[j]])] : d[forecasts[j]],
+                                opacity: rating_opacity[ratings.indexOf(d[forecasts[j]])],
+                                full_forecast: forecasters[j].forecast,
+                                forecastLabel: forecasters[j].forecastLabel,
+                                link: forecasters[j].link
+                            }
+                        })
+                        var expev = typeof datas[0].rating == "string" ? {
                             expert: forecasts[j],
                             values:
-                                [d3.sum(datas.filter(d => d.rating <= 5), d => d.ev),
-                                d3.sum(datas.filter(d => d.rating <= 15 && d.rating > 5), d => d.ev),
-                                d3.sum(datas.filter(d => d.rating <= 40 && d.rating > 15), d => d.ev),
-                                d3.sum(datas.filter(d => d.rating <= 45 && d.rating > 40), d => d.ev),
-                                d3.sum(datas.filter(d => d.rating <= 55 && d.rating > 45), d => d.ev),
-                                d3.sum(datas.filter(d => d.rating <= 60 && d.rating > 55), d => d.ev),
-                                d3.sum(datas.filter(d => d.rating <= 85 && d.rating > 60), d => d.ev),
-                                d3.sum(datas.filter(d => d.rating <= 95 && d.rating > 85), d => d.ev),
-                                d3.sum(datas.filter(d => d.rating > 95), d => d.ev)]
-                        }
-                    var aggregated = []
+                                [d3.sum(datas.filter(d => d.rating == "Solid D"), d => d.ev),
+                                d3.sum(datas.filter(d => d.rating == "Likely D"), d => d.ev),
+                                d3.sum(datas.filter(d => d.rating == "Lean D"), d => d.ev),
+                                d3.sum(datas.filter(d => d.rating == "Tilt D"), d => d.ev),
+                                d3.sum(datas.filter(d => d.rating == "Tossup"), d => d.ev),
+                                d3.sum(datas.filter(d => d.rating == "Tilt R"), d => d.ev),
+                                d3.sum(datas.filter(d => d.rating == "Lean R"), d => d.ev),
+                                d3.sum(datas.filter(d => d.rating == "Likely R"), d => d.ev),
+                                d3.sum(datas.filter(d => d.rating == "Solid R"), d => d.ev)]
+                        } : {
+                                expert: forecasts[j],
+                                values:
+                                    [d3.sum(datas.filter(d => d.rating <= 5), d => d.ev),
+                                    d3.sum(datas.filter(d => d.rating <= 15 && d.rating > 5), d => d.ev),
+                                    d3.sum(datas.filter(d => d.rating <= 40 && d.rating > 15), d => d.ev),
+                                    d3.sum(datas.filter(d => d.rating <= 45 && d.rating > 40), d => d.ev),
+                                    d3.sum(datas.filter(d => d.rating <= 55 && d.rating > 45), d => d.ev),
+                                    d3.sum(datas.filter(d => d.rating <= 60 && d.rating > 55), d => d.ev),
+                                    d3.sum(datas.filter(d => d.rating <= 85 && d.rating > 60), d => d.ev),
+                                    d3.sum(datas.filter(d => d.rating <= 95 && d.rating > 85), d => d.ev),
+                                    d3.sum(datas.filter(d => d.rating > 95), d => d.ev)]
+                            }
+                        var aggregated = []
 
 
-                    var dta = datas.slice(0, 51)
-                    dta.forEach((d, i) => {
-                        d.label = map_labels[i].label
+                        var dta = datas
+                        dta.forEach((d, i) => {
+                            d.label = map_labels[i].label
+                        })
+
+                        forecasts_ev.push(expev)
+                        ratings_nested.push(dta)
+                    }
+
+                    var bars = []
+                    forecasts_ev.forEach((d, i) => {
+                        var forecast = d
+                        var ev = forecast.values
+                        var t = []
+                        ev.forEach((d, i) => {
+                            var rating = ratings[i]
+                            var prev = ev.slice(0, i)
+                            var prevSum = d3.sum(prev)
+                            var en = d
+                            t.push({ rating: rating, evs: en, prev: prevSum })
+                        })
+                        bars.push({ forecast: forecast.expert, values: t, })
                     })
 
-                    forecasts_ev.push(expev)
-                    ratings_nested.push(dta)
-                }
-                var bars = []
-                forecasts_ev.forEach((d, i) => {
-                    var forecast = d
-                    var ev = forecast.values
-                    var t = []
-                    ev.forEach((d, i) => {
-                        var rating = ratings[i]
-                        var prev = ev.slice(0, i)
-                        var prevSum = d3.sum(prev)
-                        var en = d
-                        t.push({ rating: rating, evs: en, prev: prevSum })
-                    })
-                    bars.push({ forecast: forecast.expert, values: t, })
-                })
-                console.log(bars)
+                    var x = d3.scaleLinear()
+                        .domain([0, 538])
+                        .range([0, 750])
 
-                var x = d3.scaleLinear()
-                    .domain([0, 538])
-                    .range([0, 750])
+                    d3.select("#bars").append("h1")
+                        .text("Race to 270")
+                        .style("font-weight", 900)
+                        .style("margin-left", "2%")
 
-                d3.select("#bars").append("h1")
-                    .text("Race to 270")
-                    .style("font-weight", 900)
-                    .style("margin-left", "2%")
-
-                var svg = d3.select("#bars")
-                    .append("svg")
-                    .attr("viewBox", '-100 0 1200 ' + (forecasters.length * 100 + 100));
-
-                svg.selectAll("bars")
-                    .data(bars)
-                    .enter()
-                    .append("a")
-                    .attr("href", id => forecasters.filter(d => d.shorthand == id.forecast)[0].link)
-                    .append("text")
-                    .text(id => forecasters.filter(d => d.shorthand == id.forecast)[0].forecastLabel)
-                    .attr("x", 0)
-                    .attr("y", (d, i) => i * 100 + 100)
-                    .attr("dominant-baseline", "central")
-                    .attr("text-anchor", "start")
-                    .attr("font-size", 18)
-
-
-                svg.append("text")
-                    .text("Biden")
-                    .attr("x", 200)
-                    .attr("y", 30)
-                    .attr("dominant-baseline", "bottom")
-                    .attr("text-anchor", "start")
-                    .style("font-weight", 100)
-                    .attr('fill', "Black")
-                    .attr("font-size", 30)
-
-                svg.append("text")
-                    .text("Trump")
-                    .attr("x", 950)
-                    .attr("y", 30)
-                    .attr("dominant-baseline", "bottom")
-                    .attr("text-anchor", "end")
-                    .style("font-weight", 100)
-                    .attr('fill', "Black")
-                    .attr("font-size", 30)
-                svg.append("text")
-                    .text("270")
-                    .attr("x", 200 + x(270))
-                    .attr("y", 50)
-                    .attr("dominant-baseline", "bottom")
-                    .attr("text-anchor", "middle")
-                    .style("font-weight", 500)
-                    .attr('fill', "Black")
-                    .attr("font-size", 15)
-
-                svg.append("line")
-                    .attr("x1", 200 + x(270))
-                    .attr("x2", 200 + x(270))
-                    .attr("y1", 60)
-                    .attr("y2", forecasters.length * 100 + 100)
-                    .attr("stroke", "grey")
-                    .attr("opacity", .6)
-
-
-                bars.forEach((a, b) => {
-                    var values = a.values
-                    console.log(values)
+                    var svg = d3.select("#bars")
+                        .append("svg")
+                        .attr("viewBox", '-100 0 1200 ' + (forecasters.length * 100 + 100));
 
                     svg.selectAll("bars")
-                        .data(values)
+                        .data(bars)
                         .enter()
-                        .append("rect")
-                        .attr("x", (d, i) => 200 + x(d.prev))
-                        .attr("y", (d, i) => b * 100 + 70)
-                        .attr("width", d => x(d.evs))
-                        .attr("height", 60)
-                        .attr("fill", d => ratings_colors(d.rating))
-
-                    svg.selectAll("bars")
-                        .data(values)
-                        .enter()
+                        .append("a")
+                        .attr("href", id => forecasters.filter(d => d.shorthand == id.forecast)[0].link)
                         .append("text")
-                        .text(d => d.evs > 15 ? d.evs : "")
-                        .attr("x", (d, i) => 200 + x(d.prev) + (x(d.evs) / 2))
-                        .attr("y", (d, i) => b * 100 + 100)
+                        .text(id => forecasters.filter(d => d.shorthand == id.forecast)[0].forecastLabel)
+                        .attr("x", 0)
+                        .attr("y", (d, i) => i * 100 + 100)
                         .attr("dominant-baseline", "central")
-                        .attr("text-anchor", "middle")
-                        .style("font-weight", 100);
+                        .attr("text-anchor", "start")
+                        .attr("font-size", 18)
 
-                    svg.selectAll("bars")
-                        .data(values)
-                        .enter()
-                        .append("text")
-                        .text(d3.sum(values.splice(5, 10), d => d.evs))
-                        .attr("x", 950)
-                        .attr("y", (d, i) => b * 100 + 65)
-                        .attr("dominant-baseline", "bottom")
-                        .attr("text-anchor", "end")
-                        .style("font-weight", 100)
-                        .attr('fill', color(100))
-                        .attr("font-size", 20);
 
-                    svg.selectAll("bars")
-                        .data(values)
-                        .enter()
-                        .append("text")
-                        .text(d3.sum(values.splice(0, 4), d => d.evs))
+                    svg.append("text")
+                        .text("Biden")
                         .attr("x", 200)
-                        .attr("y", (d, i) => b * 100 + 65)
+                        .attr("y", 30)
                         .attr("dominant-baseline", "bottom")
                         .attr("text-anchor", "start")
                         .style("font-weight", 100)
-                        .attr('fill', color(00))
-                        .attr("font-size", 20)
+                        .attr('fill', "Black")
+                        .attr("font-size", 30)
+
+                    svg.append("text")
+                        .text("Trump")
+                        .attr("x", 950)
+                        .attr("y", 30)
+                        .attr("dominant-baseline", "bottom")
+                        .attr("text-anchor", "end")
+                        .style("font-weight", 100)
+                        .attr('fill', "Black")
+                        .attr("font-size", 30)
+                    svg.append("text")
+                        .text("270")
+                        .attr("x", 200 + x(270))
+                        .attr("y", 50)
+                        .attr("dominant-baseline", "bottom")
+                        .attr("text-anchor", "middle")
+                        .style("font-weight", 500)
+                        .attr('fill', "Black")
+                        .attr("font-size", 15)
+
+                    svg.append("line")
+                        .attr("x1", 200 + x(270))
+                        .attr("x2", 200 + x(270))
+                        .attr("y1", 60)
+                        .attr("y2", forecasters.length * 100 + 100)
+                        .attr("stroke", "grey")
+                        .attr("opacity", .6)
 
 
-                })
+                    bars.forEach((a, b) => {
+                        var values = a.values
+
+                        svg.selectAll("bars")
+                            .data(values)
+                            .enter()
+                            .append("rect")
+                            .attr("x", (d, i) => 200 + x(d.prev))
+                            .attr("y", (d, i) => b * 100 + 70)
+                            .attr("width", d => x(d.evs))
+                            .attr("height", 60)
+                            .attr("fill", d => ratings_colors(d.rating))
+
+                        svg.selectAll("bars")
+                            .data(values)
+                            .enter()
+                            .append("text")
+                            .text(d => d.evs > 15 ? d.evs : "")
+                            .attr("x", (d, i) => 200 + x(d.prev) + (x(d.evs) / 2))
+                            .attr("y", (d, i) => b * 100 + 100)
+                            .attr("dominant-baseline", "central")
+                            .attr("text-anchor", "middle")
+                            .style("font-weight", 100);
+
+                        svg.selectAll("bars")
+                            .data(values)
+                            .enter()
+                            .append("text")
+                            .text(d3.sum(values.splice(5, 10), d => d.evs))
+                            .attr("x", 950)
+                            .attr("y", (d, i) => b * 100 + 65)
+                            .attr("dominant-baseline", "bottom")
+                            .attr("text-anchor", "end")
+                            .style("font-weight", 100)
+                            .attr('fill', color(100))
+                            .attr("font-size", 20);
+
+                        svg.selectAll("bars")
+                            .data(values)
+                            .enter()
+                            .append("text")
+                            .text(d3.sum(values.splice(0, 4), d => d.evs))
+                            .attr("x", 200)
+                            .attr("y", (d, i) => b * 100 + 65)
+                            .attr("dominant-baseline", "bottom")
+                            .attr("text-anchor", "start")
+                            .style("font-weight", 100)
+                            .attr('fill', color(00))
+                            .attr("font-size", 20)
+
+
+                    })
 
 
 
 
-                var state_cand = ratings_nested.flat()
-                var national_cand = forecasts_ev.flat()
-                console.log(state_cand)
+                    var state_cand = ratings_nested.flat()
+                    var national_cand = forecasts_ev.flat()
+                    var width3 = 1020;
+                    var height3 = 500;
 
-                var width3 = 1020;
-                var height3 = 500;
-
-                var projection = d3.geoAlbersUsa()
-                    .translate([width3 / 2, height3 / 2])
-                    .scale([900]);
+                    var projection = d3.geoAlbersUsa()
+                        .translate([width3 / 2, height3 / 2])
+                        .scale([900]);
 
 
-                var path = d3.geoPath()
-                    .projection(projection);
+                    var path = d3.geoPath()
+                        .projection(projection);
 
-                var tool_tip = d3.tip()
-                    .attr("class", "d3-tip")
-                    .offset([-180, -90])
-                    .html("<div id='tipDiv'></div>");
+                    var tool_tip = d3.tip()
+                        .attr("class", "d3-tip")
+                        .offset([-180, -90])
+                        .html("<div id='tipDiv'></div>");
 
-                map.call(tool_tip);
+                    map.call(tool_tip);
+                    var currentMap = "reg"
+                    var currentForecast = "jhk"
+                    var state_data = state_cand
+                    update(d3.select('#selectbox').property('value'), "reg");
+                    function update(input, mapType) {
+                        currentMap = mapType
+                        currentForecast = input
+                        var stateData = state_data.filter(d => d.expert == input)
+                        var national = national_cand.filter(d => d.expert == input)
 
-                var state_data = state_cand
-                update(d3.select('#selectbox').property('value'));
-                function update(input) {
-                    var state = state_data.filter(d => d.expert == input)
-                    var national = national_cand.filter(d => d.expert == input)
-
-
-                    var boxstates = [state[29], state[45], state[21], state[39], state[6], state[7], state[20], state[8]]
-
-
-                    var evcats = national[0].values
-                    var dem_ev = evcats.slice(0, 4)
-                    var gop_ev = evcats.slice(5, 10)
-
-                    d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", function (us) {
-
-                        var json = topojson.feature(us, us.objects.states)
-                        for (var i = 0; i < state.length; i++) {
-
-                            var dataState = state[i].state;
-                            var rating = state[i].rating;
-                            var ev = state[i].ev;
-                            var opacity = state[i].opacity;
-                            var rating_value = state[i].rating_value;
-                            var xv = map_labels[i].xValue
-                            var yv = map_labels[i].yValue
-                            var label = map_labels[i].label
+                        var boxstates = [stateData[29], stateData[45], stateData[21], stateData[39], stateData[6], stateData[7], stateData[20], stateData[8]]
 
 
-                            for (var j = 0; j < json.features.length; j++) {
-                                var jsonState = json.features[j].properties.name;
+                        var evcats = national[0].values
+                        var dem_ev = evcats.slice(0, 4)
+                        var gop_ev = evcats.slice(5, 10)
 
-                                if (dataState == jsonState) {
-                                    json.features[j].properties.rating = rating
-                                    json.features[j].properties.ev = ev
-                                    json.features[j].properties.opacity = opacity
-                                    json.features[j].properties.label = label
-                                    json.features[j].properties.yv = yv
-                                    json.features[j].properties.xv = xv
-                                    json.features[j].properties.rating_value = rating_value
+                        d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", function (us) {
+
+                            var json = topojson.feature(us, us.objects.states)
+                            for (var i = 0; i < stateData.length; i++) {
+
+                                var dataState = stateData[i].state;
+                                var rating = stateData[i].rating;
+                                var ev = stateData[i].ev;
+                                var opacity = stateData[i].opacity;
+                                var rating_value = stateData[i].rating_value;
+                                var xv = map_labels[i].xValue
+                                var yv = map_labels[i].yValue
+                                var label = map_labels[i].label
 
 
-                                    break;
+                                for (var j = 0; j < json.features.length; j++) {
+                                    var jsonState = json.features[j].properties.name;
+
+                                    if (dataState == jsonState) {
+                                        json.features[j].properties.rating = rating
+                                        json.features[j].properties.ev = ev
+                                        json.features[j].properties.opacity = opacity
+                                        json.features[j].properties.label = label
+                                        json.features[j].properties.yv = yv
+                                        json.features[j].properties.xv = xv
+                                        json.features[j].properties.rating_value = rating_value
+
+
+                                        break;
+                                    }
                                 }
                             }
-                        }
-                        var mapdata = json.features
+                            var mapdata = json.features
 
-                        //map.append("rect")
-                        //.attr("x", 100)
-                        // .attr("y", 50)
-                        // .attr("width", 1000)
-                        // .attr("height", 1000)
-                        // .attr("fill", "white")
+                            //map.append("rect")
+                            //.attr("x", 100)
+                            // .attr("y", 50)
+                            // .attr("width", 1000)
+                            // .attr("height", 1000)
+                            // .attr("fill", "white")
 
-                        d3.selectAll(".maps").remove();
-
-
-                        map.selectAll(".maps").data(boxstates)
-                            .enter()
-                            .append("rect")
-                            .attr("class", "maps")
-                            .attr("x", 775)
-                            .attr("y", (d, i) => 130 + 17.5 * i)
-                            .attr("width", 30)
-                            .attr("height", 15)
-                            .attr("stroke", d => typeof d.rating == "number" ? Math.abs(d.rating - 50) < 5 ? "black" : "white" : d.rating == "Tossup" ? "black" : "white")
-                            .attr("fill", d => typeof d.rating == "number" ? color(d.rating) : ratings_colors(d.rating))
-
-                        map.selectAll("f").data(boxstates)
-                            .enter()
-                            .append("text")
-                            .attr("class", "maps")
-                            .text(d => d.label)
-                            .attr("x", 790)
-                            .attr("y", (d, i) => 137.5 + 17.5 * i)
-                            .style("font-family", "sf-mono")
-                            .attr("font-size", "10")
-                            .attr("fill", "black")
-                            .attr("text-anchor", "middle")
-                            .style("font-weight", "100")
-                            .attr("dominant-baseline", "central")
-
-                        map.selectAll("f").data(boxstates)
-                            .enter()
-                            .append("a")
-                            .attr("href", "#state-search")
-                            .append("rect")
-                            .attr("class", "statesover")
-                            .attr("x", 775)
-                            .attr("y", (d, i) => 130 + 15 * i)
-                            .attr("width", 30)
-                            .attr("height", 15)
-                            .attr("fill", "none")
-                            .on("mouseover", function (d) {
-
-                                tool_tip.show();
-                                var tipSVG = d3.select("#tipDiv")
-                                    .append("svg")
-                                    .attr("width", 175)
-                                    .attr("height", 175)
-                                    ;
-                                tipSVG.append("rect")
-                                    .attr("y", 1.5)
-                                    .attr("x", 1.5)
-                                    .attr("width", 172)
-                                    .attr("height", 172)
-                                    .attr("rx", 8)
-                                    .attr("fill", "white")
-                                    .attr("stroke", "black")
-                                    .attr("stroke-width", 2)
-                                tipSVG.append("text")
-                                    .text(d.state)
-                                    .attr("y", 20)
-                                    .attr("x", 87.5)
-                                    .attr("fill", "#black")
-                                    .attr("font-weight", "100")
-                                    .style("font-size", "15")
-                                    .attr("text-anchor", "middle")
-                                    .style("font-family", "sf-mono")
-
-                                tipSVG.append("text")
-                                    .text(d.ev + " ELECTORAL VOTES")
-                                    .attr("y", 40)
-                                    .attr("x", 87.5)
-                                    .attr("fill", "#black")
-                                    .style("font-weight", "100")
-                                    .style("font-size", "14")
-                                    .attr("text-anchor", "middle")
-                                    .style("font-family", "sf-mono")
+                            d3.selectAll(".maps").remove();
 
 
-                                tipSVG.append("text")
-                                    .text(typeof d.rating == "number" ? d.rating > 50 ? "WIN: " + wholeformat(d.rating) + "%" : "WIN:" + wholeformat(100 - d.rating) + "%" : d.rating)
-                                    .attr("y", 160)
-                                    .attr("x", 87.5)
-                                    .attr("fill", typeof d.rating == "number" ? d.rating > 50 ? color(100) : color(0) : d.rating_value == 0 ? "black" : d.rating_value > 0 ? color(100) : color(0))
-                                    .style("font-weight", "100")
-                                    .style("font-size", "15")
-                                    .attr("text-anchor", "middle")
-                                    .style("font-family", "sf-mono")
+                            map.selectAll(".maps").data(boxstates)
+                                .enter()
+                                .append("rect")
+                                .attr("class", "maps regMap")
+                                .attr("x", 775)
+                                .attr("y", (d, i) => 130 + 17.5 * i)
+                                .attr("width", 30)
+                                .attr("height", 15)
+                                .attr("stroke", d => typeof d.rating == "number" ? Math.abs(d.rating - 50) < 5 ? "black" : "white" : d.rating == "Tossup" ? "black" : "white")
+                                .attr("fill", d => typeof d.rating == "number" ? color(d.rating) : ratings_colors(d.rating))
 
-                                
-                                tipSVG.append("image")
-                                    .attr("xlink:href", typeof d.rating == "number" ? d.rating > 50 ? "https://jhkforecasts.com/Trump-01.png" : "https://jhkforecasts.com/Biden-01.png" : d.rating_value == 0 ? "https://jhkforecasts.com/No%20one-01.png" : d.rating_value > 0 ? "https://jhkforecasts.com/Trump-01.png" : "https://jhkforecasts.com/Biden-01.png")
-                                    .attr("x", 45)
-                                    .attr("y", 50)
-                                    .attr("width", 90)
-                                    .attr("height", 90)
-                            })
-                            .on('mouseout',
-                                function (d) {
-                                    tool_tip.hide()
+                            map.selectAll("f").data(boxstates)
+                                .enter()
+                                .append("text")
+                                .attr("class", "maps regMap")
+                                .text(d => d.label)
+                                .attr("x", 790)
+                                .attr("y", (d, i) => 137.5 + 17.5 * i)
+                                .style("font-family", "sf-mono")
+                                .attr("font-size", "10")
+                                .attr("fill", "black")
+                                .attr("text-anchor", "middle")
+                                .style("font-weight", "100")
+                                .attr("dominant-baseline", "central")
+
+                            map.selectAll("f").data(boxstates)
+                                .enter()
+                                .append("a")
+                                .attr("href", "#state-search")
+                                .append("rect")
+                                .attr("class", "maps statesover regMap")
+                                .attr("x", 775)
+                                .attr("y", (d, i) => 130 + 17.5 * i)
+                                .attr("width", 30)
+                                .attr("height", 15)
+                                .attr("fill", "none")
+                                .on("mouseover", function (d) {
+
+                                    tool_tip.show();
+                                    var tipSVG = d3.select("#tipDiv")
+                                        .append("svg")
+                                        .attr("width", 175)
+                                        .attr("height", 175)
+                                        ;
+                                    tipSVG.append("rect")
+                                        .attr("y", 1.5)
+                                        .attr("x", 1.5)
+                                        .attr("width", 172)
+                                        .attr("height", 172)
+                                        .attr("rx", 8)
+                                        .attr("fill", "white")
+                                        .attr("stroke", "black")
+                                        .attr("stroke-width", 2)
+                                    tipSVG.append("text")
+                                        .text(d.state)
+                                        .attr("y", 20)
+                                        .attr("x", 87.5)
+                                        .attr("fill", "#black")
+                                        .attr("font-weight", "100")
+                                        .style("font-size", "15")
+                                        .attr("text-anchor", "middle")
+                                        .style("font-family", "sf-mono")
+
+                                    tipSVG.append("text")
+                                        .text(d.ev + " ELECTORAL VOTES")
+                                        .attr("y", 40)
+                                        .attr("x", 87.5)
+                                        .attr("fill", "#black")
+                                        .style("font-weight", "100")
+                                        .style("font-size", "14")
+                                        .attr("text-anchor", "middle")
+                                        .style("font-family", "sf-mono")
+
+
+                                    tipSVG.append("text")
+                                        .text(typeof d.rating == "number" ? d.rating > 50 ? "WIN: " + wholeformat(d.rating) + "%" : "WIN:" + wholeformat(100 - d.rating) + "%" : d.rating)
+                                        .attr("y", 160)
+                                        .attr("x", 87.5)
+                                        .attr("fill", typeof d.rating == "number" ? d.rating > 50 ? color(100) : color(0) : d.rating_value == 0 ? "black" : d.rating_value > 0 ? color(100) : color(0))
+                                        .style("font-weight", "100")
+                                        .style("font-size", "15")
+                                        .attr("text-anchor", "middle")
+                                        .style("font-family", "sf-mono")
+
+
+                                    tipSVG.append("image")
+                                        .attr("xlink:href", typeof d.rating == "number" ? d.rating > 50 ? "https://jhkforecasts.com/Trump-01.png" : "https://jhkforecasts.com/Biden-01.png" : d.rating_value == 0 ? "https://jhkforecasts.com/No%20one-01.png" : d.rating_value > 0 ? "https://jhkforecasts.com/Trump-01.png" : "https://jhkforecasts.com/Biden-01.png")
+                                        .attr("x", 45)
+                                        .attr("y", 50)
+                                        .attr("width", 90)
+                                        .attr("height", 90)
                                 })
-                            .on("click", function (d) {
-                                stateproj(d.properties.name);
-                                document.getElementById("state-search").value = d.properties.name
-                            })
-
-
-
-                        map.append("image")
-                            .attr("class", "maps")
-                            .attr("xlink:href", "https://jhkforecasts.com/Biden-01.png")
-                            .attr("x", 850)
-                            .attr("y", 50)
-                            .attr("width", 70)
-                            .attr("height", 70)
-                        map.append("image")
-                            .attr("class", "maps")
-                            .attr("xlink:href", "https://jhkforecasts.com/Trump-01.png")
-                            .attr("x", 930)
-                            .attr("y", 50)
-                            .attr("width", 70)
-                            .attr("height", 70)
-
-
-                        map.append("text")
-                            .attr("class", "maps")
-                            .attr("x", 965)
-                            .text(d3.sum(gop_ev))
-                            .attr("y", 150)
-                            .style("font-family", "sf-mono")
-                            .attr("font-size", "20")
-                            .attr("fill", color(100))
-                            .attr("text-anchor", "middle")
-                            .style("font-weight", "100")
-                            .attr("dominant-baseline", "central")
-
-                        map.append("text")
-                            .attr("class", "maps")
-                            .attr("x", 885)
-                            .text(d3.sum(dem_ev))
-                            .attr("y", 150)
-                            .style("font-family", "sf-mono")
-                            .attr("font-size", "20")
-                            .attr("fill", color(0))
-                            .attr("text-anchor", "middle")
-                            .style("font-weight", "100")
-                            .attr("dominant-baseline", "central")
-
-                        map.selectAll("f").data(rating_opacity)
-                            .enter()
-                            .append("circle")
-                            .attr("class", "maps")
-                            .attr("cx", 925)
-                            .attr("cy", (d, i) => 200 + i * 30)
-                            .attr("r", 10)
-                            .attr("fill", (d, i) => colorsratings[i])
-                            .attr("stroke", (d, i) => i == 4 ? "black" : "white")
-
-                        map.selectAll("f").data(ratings)
-                            .enter()
-                            .append("text")
-                            .attr("class", "maps")
-                            .attr("x", 900)
-                            .text(d => d)
-                            .attr("y", (d, i) => 200 + i * 30)
-                            .style("font-family", "sf-mono")
-                            .attr("font-size", "15")
-                            .attr("fill", "black")
-                            .attr("text-anchor", "end")
-                            .style("font-weight", "100")
-                            .attr("dominant-baseline", "central")
-
-                        var ratingspct = [">95%", ">85%", ">60%", ">55%", "<55%", ">55%", ">60%", ">85%", ">95%"]
-
-
-                        map.selectAll("f").data(evcats)
-                            .enter()
-                            .append("text")
-                            .attr("class", "maps")
-                            .attr("x", 950)
-                            .text(d => d)
-                            .attr("y", (d, i) => 200 + i * 30)
-                            .style("font-family", "sf-mono")
-                            .attr("font-size", "15")
-                            .attr("fill", "black")
-                            .attr("text-anchor", "start")
-                            .style("font-weight", "100")
-                            .attr("dominant-baseline", "central")
-
-                        map.selectAll("f").data(ratingspct)
-                            .enter()
-                            .append("text")
-                            .attr("class", "maps")
-                            .attr("x", 1000)
-                            .text(d => typeof json.features[0].properties.rating == "number" ? d : "")
-                            .attr("y", (d, i) => 200 + i * 30)
-                            .style("font-family", "sf-mono")
-                            .attr("font-size", "15")
-                            .attr("fill", "black")
-                            .attr("text-anchor", "start")
-                            .style("font-weight", "100")
-                            .attr("dominant-baseline", "central")
-
-                        map.selectAll("f").append("text").attr("x", 1000)
-                            .text(typeof json.features[0].properties.rating == "number" ? "Win%" : "")
-                            .attr("y", (d, i) => 170)
-                            .style("font-family", "sf-mono")
-                            .attr("font-size", "15")
-                            .attr("fill", "black")
-                            .attr("text-anchor", "start")
-                            .style("font-weight", "100")
-                            .attr("dominant-baseline", "central")
-
-                        map.selectAll("f").data(mapdata)
-                            .enter()
-                            .append("path")
-                            .attr("class", "maps")
-                            .attr("d", path)
-                            .style("stroke", "white")
-                            .style("stroke-width", 1)
-                            .style("fill", d => typeof d.properties.rating == "number" ? color(d.properties.rating) : ratings_colors(d.properties.rating))
-                            .style("opacity", d => d.properties.opacity)
-                            .attr("transform", "translate(-50,0)")
-
-                        map.selectAll("f").data(mapdata)
-                            .enter()
-                            .append("text")
-                            .attr("class", "maps")
-                            .text(d => d.properties.label)
-                            .attr("x", d => d.properties.xv)
-                            .attr("y", d => d.properties.yv)
-                            .style("font-family", "sf-mono")
-                            .attr("font-size", "10")
-                            .attr("fill", "black")
-                            .attr("text-anchor", "middle")
-                            .style("font-weight", "100")
-                            .attr("transform", "translate(-50,0)")
-
-
-                        map.selectAll("f").data(mapdata)
-                            .enter()
-                            .append("a")
-                            .attr("href", "#state-search")
-                            .append("path")
-                            .attr("class", "statesover maps")
-                            .attr("d", path)
-                            .attr("stroke", d => typeof d.properties.rating == "number" ? d.properties.rating > 45 ? d.properties.rating < 55 ? "black" : "none" : "none" : d.properties.rating == "Tossup" ? "black" : "none")
-                            .attr("stroke-width", d => 1.5)
-                            .style("fill", "none")
-                            .attr("transform", "translate(-50,0)")
-                            .on("mouseover", function (d) {
-
-                                tool_tip.show();
-                                var tipSVG = d3.select("#tipDiv")
-                                    .append("svg")
-                                    .attr("width", 175)
-                                    .attr("height", 175)
-                                    ;
-                                tipSVG.append("rect")
-                                    .attr("y", 1.5)
-                                    .attr("x", 1.5)
-                                    .attr("width", 172)
-                                    .attr("height", 172)
-                                    .attr("rx", 8)
-                                    .attr("fill", "white")
-                                    .attr("stroke", "black")
-                                    .attr("stroke-width", 2)
-                                tipSVG.append("text")
-                                    .text(d.properties.name)
-                                    .attr("y", 20)
-                                    .attr("x", 87.5)
-                                    .attr("fill", "#black")
-                                    .attr("font-weight", "100")
-                                    .style("font-size", "15")
-                                    .attr("text-anchor", "middle")
-                                    .style("font-family", "sf-mono")
-
-                                tipSVG.append("text")
-                                    .text(d.properties.ev + " ELECTORAL VOTES")
-                                    .attr("y", 40)
-                                    .attr("x", 87.5)
-                                    .attr("fill", "black")
-                                    .style("font-weight", "100")
-                                    .style("font-size", "14")
-                                    .attr("text-anchor", "middle")
-                                    .style("font-family", "sf-mono")
-
-
-                                tipSVG.append("text")
-                                    .text(typeof d.properties.rating == "number" ? d.properties.rating > 50 ? "WIN:" + wholeformat(d.properties.rating) + "%" : "WIN:" + wholeformat(100 - d.properties.rating) + "%" : d.properties.rating)
-                                    .attr("y", 160)
-                                    .attr("x", 87.5)
-                                    .attr("fill", "black")
-                                    .style("font-weight", "100")
-                                    .style("font-size", "15")
-                                    .attr("text-anchor", "middle")
-                                    .style("font-family", "sf-mono")
-
-                                    console.log(d.properties.rating_value)
-                                tipSVG.append("image")
-                                    .attr("xlink:href", typeof d.properties.rating == "number" ? (d.properties.rating > 50 ? "https://jhkforecasts.com/Trump-01.png" : "https://jhkforecasts.com/Biden-01.png") : d.properties.rating_value == 50 ? "https://jhkforecasts.com/No%20one-01.png" : d.properties.rating_value > 50 ? "https://jhkforecasts.com/Trump-01.png" : "https://jhkforecasts.com/Biden-01.png")
-                                    .attr("x", 45)
-                                    .attr("y", 50)
-                                    .attr("width", 90)
-                                    .attr("height", 90)
-                            })
-                            .on('mouseout',
-                                function (d) {
-                                    tool_tip.hide()
+                                .on('mouseout',
+                                    function (d) {
+                                        tool_tip.hide()
+                                    })
+                                .on("click", function (d) {
+                                    stateproj(d.properties.name);
+                                    document.getElementById("state-search").value = d.properties.name
                                 })
-                            .on("click", function (d) {
-                                stateproj(d.properties.name);
-                                document.getElementById("state-search").value = d.properties.name
+
+
+
+                            map.append("image")
+                                .attr("class", "maps")
+                                .attr("xlink:href", "https://jhkforecasts.com/Biden-01.png")
+                                .attr("x", 850)
+                                .attr("y", 50)
+                                .attr("width", 70)
+                                .attr("height", 70)
+                            map.append("image")
+                                .attr("class", "maps")
+                                .attr("xlink:href", "https://jhkforecasts.com/Trump-01.png")
+                                .attr("x", 930)
+                                .attr("y", 50)
+                                .attr("width", 70)
+                                .attr("height", 70)
+
+
+                            map.append("text")
+                                .attr("class", "maps")
+                                .attr("x", 965)
+                                .text(d3.sum(gop_ev))
+                                .attr("y", 150)
+                                .style("font-family", "sf-mono")
+                                .attr("font-size", "20")
+                                .attr("fill", color(100))
+                                .attr("text-anchor", "middle")
+                                .style("font-weight", "100")
+                                .attr("dominant-baseline", "central")
+
+                            map.append("text")
+                                .attr("class", "maps ")
+                                .attr("x", 885)
+                                .text(d3.sum(dem_ev))
+                                .attr("y", 150)
+                                .style("font-family", "sf-mono")
+                                .attr("font-size", "20")
+                                .attr("fill", color(0))
+                                .attr("text-anchor", "middle")
+                                .style("font-weight", "100")
+                                .attr("dominant-baseline", "central")
+
+                            document.getElementById("titleBanner").style.backgroundColor = color(d3.sum(gop_ev)*100/538)
+
+                            map.selectAll("f").data(rating_opacity)
+                                .enter()
+                                .append("circle")
+                                .attr("class", "maps")
+                                .attr("cx", 925)
+                                .attr("cy", (d, i) => 200 + i * 30)
+                                .attr("r", 10)
+                                .attr("fill", (d, i) => colorsratings[i])
+                                .attr("stroke", (d, i) => i == 4 ? "black" : "white")
+
+                            map.selectAll("f").data(ratings)
+                                .enter()
+                                .append("text")
+                                .attr("class", "maps")
+                                .attr("x", 900)
+                                .text(d => d)
+                                .attr("y", (d, i) => 200 + i * 30)
+                                .style("font-family", "sf-mono")
+                                .attr("font-size", "15")
+                                .attr("fill", "black")
+                                .attr("text-anchor", "end")
+                                .style("font-weight", "100")
+                                .attr("dominant-baseline", "central")
+
+                            var ratingspct = [">95%", ">85%", ">60%", ">55%", "<55%", ">55%", ">60%", ">85%", ">95%"]
+
+
+                            map.selectAll("f").data(evcats)
+                                .enter()
+                                .append("text")
+                                .attr("class", "maps")
+                                .attr("x", 950)
+                                .text(d => d)
+                                .attr("y", (d, i) => 200 + i * 30)
+                                .style("font-family", "sf-mono")
+                                .attr("font-size", "15")
+                                .attr("fill", "black")
+                                .attr("text-anchor", "start")
+                                .style("font-weight", "100")
+                                .attr("dominant-baseline", "central")
+
+                            map.selectAll("f").data(ratingspct)
+                                .enter()
+                                .append("text")
+                                .attr("class", "maps")
+                                .attr("x", 1000)
+                                .text(d => typeof json.features[0].properties.rating == "number" ? d : "")
+                                .attr("y", (d, i) => 200 + i * 30)
+                                .style("font-family", "sf-mono")
+                                .attr("font-size", "15")
+                                .attr("fill", "black")
+                                .attr("text-anchor", "start")
+                                .style("font-weight", "100")
+                                .attr("dominant-baseline", "central")
+
+                            map.selectAll("f").append("text").attr("x", 1000).attr("class", "maps")
+                                .text(typeof json.features[0].properties.rating == "number" ? "Win%" : "")
+                                .attr("y", (d, i) => 170)
+                                .style("font-family", "sf-mono")
+                                .attr("font-size", "15")
+                                .attr("fill", "black")
+                                .attr("text-anchor", "start")
+                                .style("font-weight", "100")
+                                .attr("dominant-baseline", "central")
+
+                            map.selectAll("f").data(mapdata)
+                                .enter()
+                                .append("path")
+                                .attr("class", "maps regMap")
+                                .attr("d", path)
+                                .style("stroke", "white")
+                                .style("stroke-width", 1)
+                                .style("fill", d => typeof d.properties.rating == "number" ? color(d.properties.rating) : ratings_colors(d.properties.rating))
+                                .attr("transform", "translate(-50,0)")
+
+                            map.selectAll("f").data(mapdata)
+                                .enter()
+                                .append("text")
+                                .attr("class", "maps regMap")
+                                .text(d => d.properties.label)
+                                .attr("x", d => d.properties.xv)
+                                .attr("y", d => d.properties.yv)
+                                .style("font-family", "sf-mono")
+                                .attr("font-size", "10")
+                                .attr("fill", "black")
+                                .attr("text-anchor", "middle")
+                                .style("font-weight", "100")
+                                .attr("transform", "translate(-50,0)")
+
+
+                            map.selectAll("f").data(mapdata)
+                                .enter()
+                                .append("a")
+                                .attr("href", "#state-search")
+                                .append("path")
+                                .attr("class", "statesover maps regMap")
+                                .attr("d", path)
+                                .attr("stroke", d => typeof d.properties.rating == "number" ? d.properties.rating > 45 ? d.properties.rating < 55 ? "black" : "none" : "none" : d.properties.rating == "Tossup" ? "black" : "none")
+                                .attr("stroke-width", d => 1.5)
+                                .style("fill", "none")
+                                .attr("transform", "translate(-50,0)")
+                                .on("mouseover", function (d) {
+
+                                    tool_tip.show();
+                                    var tipSVG = d3.select("#tipDiv")
+                                        .append("svg")
+                                        .attr("width", 175)
+                                        .attr("height", 175)
+                                        ;
+                                    tipSVG.append("rect")
+                                        .attr("y", 1.5)
+                                        .attr("x", 1.5)
+                                        .attr("width", 172)
+                                        .attr("height", 172)
+                                        .attr("rx", 8)
+                                        .attr("fill", "white")
+                                        .attr("stroke", "black")
+                                        .attr("stroke-width", 2)
+                                    tipSVG.append("text")
+                                        .text(d.properties.name)
+                                        .attr("y", 20)
+                                        .attr("x", 87.5)
+                                        .attr("fill", "#black")
+                                        .attr("font-weight", "100")
+                                        .style("font-size", "15")
+                                        .attr("text-anchor", "middle")
+                                        .style("font-family", "sf-mono")
+
+                                    tipSVG.append("text")
+                                        .text(d.properties.ev + " ELECTORAL VOTES")
+                                        .attr("y", 40)
+                                        .attr("x", 87.5)
+                                        .attr("fill", "black")
+                                        .style("font-weight", "100")
+                                        .style("font-size", "14")
+                                        .attr("text-anchor", "middle")
+                                        .style("font-family", "sf-mono")
+
+
+                                    tipSVG.append("text")
+                                        .text(typeof d.properties.rating == "number" ? d.properties.rating > 50 ? "WIN:" + wholeformat(d.properties.rating) + "%" : "WIN:" + wholeformat(100 - d.properties.rating) + "%" : d.properties.rating)
+                                        .attr("y", 160)
+                                        .attr("x", 87.5)
+                                        .attr("fill", "black")
+                                        .style("font-weight", "100")
+                                        .style("font-size", "15")
+                                        .attr("text-anchor", "middle")
+                                        .style("font-family", "sf-mono")
+
+                                    tipSVG.append("image")
+                                        .attr("xlink:href", typeof d.properties.rating == "number" ? (d.properties.rating > 50 ? "https://jhkforecasts.com/Trump-01.png" : "https://jhkforecasts.com/Biden-01.png") : d.properties.rating_value == 50 ? "https://jhkforecasts.com/No%20one-01.png" : d.properties.rating_value > 50 ? "https://jhkforecasts.com/Trump-01.png" : "https://jhkforecasts.com/Biden-01.png")
+                                        .attr("x", 45)
+                                        .attr("y", 50)
+                                        .attr("width", 90)
+                                        .attr("height", 90)
+                                })
+                                .on('mouseout',
+                                    function (d) {
+                                        tool_tip.hide()
+                                    })
+                                .on("click", function (d) {
+                                    stateproj(d.properties.name);
+                                    document.getElementById("state-search").value = d.properties.name
+                                })
+
+
+                            var bubblemap = []
+                            bubble_info.forEach((d, i) => {
+                                var state = d.state
+                                d.rating = stateData.filter(d => d.state == state)[0].rating
                             })
+                            console.log(bubble_info)
+                            map.selectAll("circ")
+                                .data(bubble_info)
+                                .enter()
+                                .append("circle")
+                                .attr("class", "maps bubbles")
+                                .attr("cx", d => d.x + 120)
+                                .attr("cy", d => d.y + 50)
+                                .attr("r", d => d.radius)
+                                .style("fill", d => typeof d.rating == "number" ? color(d.rating) : ratings_colors(d.rating))
+                                .attr("stroke", d => typeof d.rating == "string" ? (d.rating == "Tossup" ? "black" : "white") : Math.abs(50 - d.rating) > 5 ? "white" : "black")
+                                .attr("stroke-width", 1)
+
+                            map.selectAll("labels")
+                                .data(bubble_info)
+                                .enter()
+                                .append("text")
+                                .attr("class", "maps bubbles")
+                                .text(d => d.abbrev)
+                                .attr("x", d => d.x + 120)
+                                .attr("y", d => d.y + 50)
+                                .attr("fill", d => typeof d.rating == "string" ? (d.rating == "Tossup" ? "black" : "white") : Math.abs(50 - d.rating) > 15 ? "white" : "black")
+                                .attr("text-anchor", "middle")
+                                .attr("dominant-baseline", "central")
+                                .attr("font-size", 9)
+                                .style("font-weight", "500")
+                                .style("font-family", "sf-mono");
+
+                                map.append("text")
+                                .attr("class", "maps regMap")
+                                .text("Cartogram")
+                                .attr("x", d => 750)
+                                .attr("y", d => 350)
+                                .attr("fill","black")
+                                .attr("text-anchor", "middle")
+                                .attr("dominant-baseline", "central")
+                                .attr("font-size", 15)
+                                .style("font-weight", "500")
+                                .style("font-family", "sf-mono")
+                                .on("click",d=>{
+                                    update(input,"bubble")
+                                })
+                                ;
+
+                                map.append("text")
+                                .attr("class", "maps bubbles")
+                                .text("Map")
+                                .attr("x", d => 750)
+                                .attr("y", d => 350)
+                                .attr("fill","black")
+                                .attr("text-anchor", "middle")
+                                .attr("dominant-baseline", "central")
+                                .attr("font-size", 15)
+                                .style("font-weight", "500")
+                                .style("font-family", "sf-mono")
+                                .on("click",d=>{
+                                    update(input,"reg")
+                                })
+                                ;
+
+
+                            mapType == "reg" ? d3.selectAll(".bubbles").remove() : d3.selectAll(".regMap").remove()
+
+                        })
+
+
+
+
+                    }
+                    var tabledata = forecasts_rating
+                    tabledata.sort((a, b) => b.pvi - a.pvi)
+                    tabledata.sort((a, b) => b.jhk - a.jhk)
+
+                    var all = [];
+                    var ex = []
+                    var New = []
+                    tabledata.forEach(function (d, i) {
+                        all.push([d.state, d.ev, d.jhk, d.fte, d.bitecofer, d.cook, d.inside, d.politico, d.sabato, d.cnalysis, d.leantoss, d.pluralvote, d.cnn, d.npr]);
+                        ex.push([d.state, d.ev, d.jhk, d.fte, d.cook, d.inside, d.politico, d.sabato, d.cnn, d.npr]);
+                        New.push([d.state, d.ev, d.jhk, d.bitecofer, d.cnalysis, d.leantoss, d.pluralvote]);
                     })
+                    var allnames = ["State", "Electoral Votes"]
+                    allnames.push(forecasters.map(d => { return d.tableHeader }))
+                    var allnames = allnames.flat()
 
-                }
-                var tabledata = forecasts_rating
-                tabledata.sort((a, b) => b.pvi - a.pvi)
-                tabledata.sort((a, b) => b.jhk - a.jhk)
+                    var allwidth = 75 / (allnames.length - 2)
 
-                var all = [];
-                var ex = []
-                var New = []
-                tabledata.forEach(function (d, i) {
-                    all.push([d.state, d.ev, d.jhk, d.bitecofer, d.cook, d.inside, d.politico, d.sabato, d.cnalysis, d.leantoss, d.pluralvote,d.cnn,d.npr]);
-                    ex.push([d.state, d.ev, d.jhk, d.cook, d.inside, d.politico, d.sabato,d.cnn,d.npr]);
-                    New.push([d.state, d.ev, d.jhk, d.bitecofer, d.cnalysis, d.leantoss, d.pluralvote]);
+                    var exnames = ["State", "Electoral Votes"]
+                    exnames.push(expert.map(d => { return d.forecast }))
+                    var exnames = exnames.flat()
+
+                    var exwidth = 75 / (exnames.length - 2)
+
+                    var newnames = ["State", "Electoral Votes"]
+                    newnames.push(newcomer.map(d => { return d.forecast }))
+                    var newnames = newnames.flat()
+
+                    var newwidth = 75 / (newnames.length - 2)
+
+                    var alltable = d3.select("#all").append("table")
+                    var allheader = alltable.append("thead").append("tr")
+
+
+                    allheader
+                        .selectAll("th")
+                        .data(allnames)
+                        .enter()
+                        .append("th")
+                        .attr("class", (d, i) => i > 1 ? "rightAlignHover" : "")
+                        .style("width", (d, i) => i == 0 ? "20%" : i == 1 ? "5%" : allwidth + "%")
+                        .append("a")
+                        .attr("href", (d, i) => i > 1 ? forecasters.map(d => { return d.link })[i - 2] : "").text(function (d) {
+                            return d
+                        })
+                        .style("font-family", "sf-mono")
+
+                    var alltBody = alltable.append("tbody");
+
+                    var allrows = alltBody.selectAll("tr")
+                        .data(all)
+                        .enter()
+                        .append("tr")
+
+                    allrows
+                        .selectAll("td")
+                        .data(function (d) {
+                            return d;
+                        })
+                        .enter()
+                        .append("td")
+                        .style("background-color", (d, i) => typeof d == "number" ? i == 1 ? "white" : color(scle(d)) : i > 2 ? colorsratings[ratings.indexOf(d)] : "none")
+                        .text((d, i) => typeof d == "number" ? i == 1 ? d : wholeformat(Math.abs(d - 50) + 50) + "%" : i > 2 ? d.split(" ")[0].toUpperCase() : d.toUpperCase())
+                        .style("font-weight", 100)
+                        .style("font-size", "1.5vw")
+                        .style("font-family", "sf-mono")
+                        .style("text-align", (d, i) => i == 0 ? "left" : "center")
+
+                    //experts table
+                    var extable = d3.select("#ex").append("table")
+                    var exheader = extable.append("thead").append("tr")
+
+
+                    exheader
+                        .selectAll("th")
+                        .data(exnames)
+                        .enter()
+                        .append("th")
+                        .style("width", (d, i) => i == 0 ? "20%" : i == 1 ? "5%" : exwidth + "%")
+                        .append("a")
+                        .attr("href", (d, i) => i > 1 ? expert.map(d => { return d.link })[i - 2] : "").text(function (d) {
+                            return d
+                        })
+                        .style("font-family", "sf-mono")
+
+                    var extBody = extable.append("tbody");
+
+                    var exrows = extBody.selectAll("tr")
+                        .data(ex)
+                        .enter()
+                        .append("tr")
+
+                    exrows
+                        .selectAll("td")
+                        .data(function (d) {
+                            return d;
+                        })
+                        .enter()
+                        .append("td")
+                        .style("background-color", (d, i) => typeof d == "number" ? i == 1 ? "white" : color(scle(d)) : i > 2 ? colorsratings[ratings.indexOf(d)] : "none")
+                        .text((d, i) => typeof d == "number" ? i == 1 ? d : wholeformat(Math.abs(d - 50) + 50) + "%" : i > 2 ? d.split(" ")[0].toUpperCase() : d.toUpperCase())
+                        .style("font-weight", 100)
+                        .style("font-size", "1.5vw")
+                        .style("font-family", "sf-mono")
+                        .style("text-align", (d, i) => i == 0 ? "left" : "center")
+
+
+                    //newcomer table
+                    var newtable = d3.select("#new").append("table")
+                    var newheader = newtable.append("thead").append("tr")
+
+
+                    newheader
+                        .selectAll("th")
+                        .data(newnames)
+                        .enter()
+                        .append("th")
+                        .style("width", (d, i) => i == 0 ? "20%" : i == 1 ? "5%" : newwidth + "%")
+                        .append("a")
+                        .attr("href", (d, i) => i > 1 ? newcomer.map(d => { return d.link })[i - 2] : "").text(function (d) {
+                            return d
+                        })
+                        .style("font-family", "sf-mono")
+
+
+                    var newtBody = newtable.append("tbody");
+
+                    var newrows = newtBody.selectAll("tr")
+                        .data(New)
+                        .enter()
+                        .append("tr")
+                    newrows
+                        .selectAll("td")
+                        .data(function (d) {
+                            return d;
+                        })
+                        .enter()
+                        .append("td")
+                        .style("background-color", (d, i) => typeof d == "number" ? i == 1 ? "white" : color(scle(d)) : i > 2 ? colorsratings[ratings.indexOf(d)] : "none")
+                        .text((d, i) => typeof d == "number" ? i == 1 ? d : wholeformat(Math.abs(d - 50) + 50) + "%" : i > 2 ? d.split(" ")[0].toUpperCase() : d.toUpperCase())
+                        .style("font-weight", 100)
+                        .style("font-size", "1.5vw")
+                        .style("font-family", "sf-mono")
+                        .style("text-align", (d, i) => i == 0 ? "left" : "center")
+
+
+                    var projection2 = d3.geoAlbers();
+
+                    var path2 = d3.geoPath()
+                        .projection(projection2);
+
+                    var svg = d3.select("#state").append("svg")
+
+                    var st = map_labels[Math.round(Math.random() * 50)].state
+
+                    document.getElementById("state-search").value = st
+
+                    stateproj(st)
+                    function stateproj(input) {
+                        var stateData = state_cand.filter(d => d.state == input)
+                        var state_proj = d3.mean(stateData, d => d.rating_value)
+                        stateData.push({ rating: state_proj, forecastLabel: "Aggregated Projection" })
+                        svg.attr("viewBox", "0 0 1000 " + (stateData.length * 40 + 90))
+                        var width = 500,
+                            height = stateData.length * 40 - 10;
+                        d3.json("us.json", us => {
+                            var state = topojson.feature(us, us.objects.states).features.filter(d => d.properties.name == input)[0]
+                            projection2
+                                .scale(1)
+                                .translate([0, 0]);
+                            var b = path2.bounds(state)
+                            var s = .95 / Math.max((b[1][0] - b[0][0]) / width, (b[1][1] - b[0][1]) / height)
+                            var t = [((width - s * (b[1][0] + b[0][0])) / 2), ((height - s * (b[1][1] + b[0][1])) / 2) + 50]
+                            projection2
+                                .scale(s)
+                                .translate(t);
+                            svg.append("rect")
+                                .attr("y", (d, i) => 0)
+                                .attr("x", 0)
+                                .attr("height", stateData.length * 40 + 150)
+                                .attr("width", 1000)
+                                .attr("fill", "white")
+
+                            svg.append("path")
+                                .datum(state)
+                                .attr("fill", color(state_proj))
+                                .attr("d", path2)
+                                .style("stroke", (d, i) => state_proj > 45 && state_proj < 55 ? "Black" : "white")
+
+
+
+                            svg.append("text")
+                                .text(input)
+                                .attr("y", 50)
+                                .attr("x", 250)
+                                .attr("fill", "black")
+                                .style("font-weight", "100")
+                                .style("font-size", 40)
+                                .attr("text-anchor", "middle")
+
+
+                            svg.selectAll("states")
+                                .data(stateData)
+                                .enter()
+                                .append("rect")
+                                .attr("y", (d, i) => 20 + i * 40)
+                                .attr("x", 850)
+                                .attr("height", 40)
+                                .attr("width", 100)
+                                .style("fill", (d, i) => typeof d.rating == "number" ? color(scle(d.rating)) : colorsratings[ratings.indexOf(d.rating)])
+
+
+                            svg.selectAll("states")
+                                .data(stateData)
+                                .enter()
+                                .append("line")
+                                .attr("y1", (d, i) => 20 + i * 40)
+                                .attr("y2", (d, i) => 20 + i * 40)
+                                .attr("x1", (d, i) => 600)
+                                .attr("x2", (d, i) => 950)
+                                .attr("stroke", (d, i) => i == stateData.length - 1 ? "black" : "#AFAFAF")
+                                .attr("stroke-width", (d, i) => i == stateData.length - 1 ? "2" : "1")
+
+
+
+                            svg.selectAll("states")
+                                .data(stateData)
+                                .enter()
+                                .append("text")
+                                .text(d => typeof d.rating == "number" ? wholeformat(Math.abs(d.rating - 50) + 50) + "%" : d.rating)
+                                .attr("y", (d, i) => 40 + i * 40)
+                                .attr("x", 900)
+                                .attr("fill", "black")
+                                .style("font-weight", "100")
+                                .style("font-size", 18)
+                                .attr("text-anchor", "middle")
+                                .attr("dominant-baseline", "central")
+
+
+                            svg.selectAll("states")
+                                .data(stateData)
+                                .enter()
+                                .append("text")
+                                .text(d => d.full_forecast)
+                                .attr("id", (d, i) => "forec" + i)
+                                .attr("y", (d, i) => 40 + i * 40)
+                                .attr("x", 600)
+                                .style("font-weight", "100")
+                                .style("font-size", 18)
+                                .attr("text-anchor", "start")
+                                .attr("dominant-baseline", "central")
+
+                            svg.selectAll("states")
+                                .data(stateData)
+                                .enter()
+                                .append("a")
+                                .attr("href", d => d.link)
+                                .append("rect")
+                                .attr("fill", "white")
+                                .attr("opacity", 0)
+                                .attr("y", (d, i) => 20 + i * 40)
+                                .attr("x", 600)
+                                .attr("height", 40)
+                                .attr("width", 250)
+
+
+
+
+                        })
+                    }
+
+                    var selectbox = d3.select("#selectbox")
+                        .on("change", function () {
+                            update(this.value, currentMap)
+                        })
+
+                    var selectbox3 = d3.select("#state-search")
+                        .on("change", function () {
+                            stateproj(this.value)
+                        })
+
+                    var selectbox2 = d3.select("#selectbox2")
+                        .on("change", function () {
+                            this.value == "all" ? d3.select("#new").style("display", "none") && d3.select("#ex").style("display", "none") && d3.select("#all").style("display", "block") :
+                                this.value == "new" ? d3.select("#new").style("display", "block") && d3.select("#ex").style("display", "none") && d3.select("#all").style("display", "none") :
+                                    d3.select("#new").style("display", "none") && d3.select("#ex").style("display", "block") && d3.select("#all").style("display", "none")
+
+                        });
+
                 })
-                var allnames = ["State", "Electoral Votes"]
-                allnames.push(forecasters.map(d => { return d.forecast }))
-                var allnames = allnames.flat()
-
-                var allwidth = 75 / (allnames.length - 2)
-
-                var exnames = ["State", "Electoral Votes"]
-                exnames.push(expert.map(d => { return d.forecast }))
-                var exnames = exnames.flat()
-
-                var exwidth = 75 / (exnames.length - 2)
-
-                var newnames = ["State", "Electoral Votes"]
-                newnames.push(newcomer.map(d => { return d.forecast }))
-                var newnames = newnames.flat()
-
-                var newwidth = 75 / (newnames.length - 2)
-
-                var alltable = d3.select("#all").append("table")
-                var allheader = alltable.append("thead").append("tr")
-
-
-                allheader
-                    .selectAll("th")
-                    .data(allnames)
-                    .enter()
-                    .append("th")
-                    .attr("class", (d, i) => i > 1 ? "rightAlignHover" : "")
-                    .style("width", (d, i) => i == 0 ? "20%" : i == 1 ? "5%" : allwidth + "%")
-                    .append("a")
-                    .attr("href", (d, i) => i > 1 ? forecasters.map(d => { return d.link })[i - 2] : "").text(function (d) {
-                        return d
-                    })
-                    .style("font-family", "sf-mono")
-
-                var alltBody = alltable.append("tbody");
-
-                var allrows = alltBody.selectAll("tr")
-                    .data(all)
-                    .enter()
-                    .append("tr")
-
-                allrows
-                    .selectAll("td")
-                    .data(function (d) {
-                        return d;
-                    })
-                    .enter()
-                    .append("td")
-                    .style("background-color", (d, i) => typeof d == "number" ? i == 1 ? "white" : color(scle(d)) : i > 2 ? colorsratings[ratings.indexOf(d)] : "none")
-                    .text((d, i) => typeof d == "number" ? i == 1 ? d : wholeformat(Math.abs(d - 50) + 50) + "%" : i > 2 ? d.split(" ")[0].toUpperCase() : d.toUpperCase())
-                    .style("font-weight", 100)
-                    .style("font-size", "1.5vw")
-                    .style("font-family", "sf-mono")
-                    .style("text-align", (d, i) => i == 0 ? "left" : "center")
-
-                //experts table
-                var extable = d3.select("#ex").append("table")
-                var exheader = extable.append("thead").append("tr")
-
-
-                exheader
-                    .selectAll("th")
-                    .data(exnames)
-                    .enter()
-                    .append("th")
-                    .style("width", (d, i) => i == 0 ? "20%" : i == 1 ? "5%" : exwidth + "%")
-                    .append("a")
-                    .attr("href", (d, i) => i > 1 ? expert.map(d => { return d.link })[i - 2] : "").text(function (d) {
-                        return d
-                    })
-                    .style("font-family", "sf-mono")
-
-                var extBody = extable.append("tbody");
-
-                var exrows = extBody.selectAll("tr")
-                    .data(ex)
-                    .enter()
-                    .append("tr")
-
-                exrows
-                    .selectAll("td")
-                    .data(function (d) {
-                        return d;
-                    })
-                    .enter()
-                    .append("td")
-                    .style("background-color", (d, i) => typeof d == "number" ? i == 1 ? "white" : color(scle(d)) : i > 2 ? colorsratings[ratings.indexOf(d)] : "none")
-                    .text((d, i) => typeof d == "number" ? i == 1 ? d : wholeformat(Math.abs(d - 50) + 50) + "%" : i > 2 ? d.split(" ")[0].toUpperCase() : d.toUpperCase())
-                    .style("font-weight", 100)
-                    .style("font-size", "1.5vw")
-                    .style("font-family", "sf-mono")
-                    .style("text-align", (d, i) => i == 0 ? "left" : "center")
-
-
-                //newcomer table
-                var newtable = d3.select("#new").append("table")
-                var newheader = newtable.append("thead").append("tr")
-
-
-                newheader
-                    .selectAll("th")
-                    .data(newnames)
-                    .enter()
-                    .append("th")
-                    .style("width", (d, i) => i == 0 ? "20%" : i == 1 ? "5%" : newwidth + "%")
-                    .append("a")
-                    .attr("href", (d, i) => i > 1 ? newcomer.map(d => { return d.link })[i - 2] : "").text(function (d) {
-                        return d
-                    })
-                    .style("font-family", "sf-mono")
-
-
-                var newtBody = newtable.append("tbody");
-
-                var newrows = newtBody.selectAll("tr")
-                    .data(New)
-                    .enter()
-                    .append("tr")
-                newrows
-                    .selectAll("td")
-                    .data(function (d) {
-                        return d;
-                    })
-                    .enter()
-                    .append("td")
-                    .style("background-color", (d, i) => typeof d == "number" ? i == 1 ? "white" : color(scle(d)) : i > 2 ? colorsratings[ratings.indexOf(d)] : "none")
-                    .text((d, i) => typeof d == "number" ? i == 1 ? d : wholeformat(Math.abs(d - 50) + 50) + "%" : i > 2 ? d.split(" ")[0].toUpperCase() : d.toUpperCase())
-                    .style("font-weight", 100)
-                    .style("font-size", "1.5vw")
-                    .style("font-family", "sf-mono")
-                    .style("text-align", (d, i) => i == 0 ? "left" : "center")
-
-
-                var projection2 = d3.geoAlbers();
-
-                var path2 = d3.geoPath()
-                    .projection(projection2);
-
-                var svg = d3.select("#state").append("svg")
-
-                var st = map_labels[Math.round(Math.random() * 50)].state
-
-                document.getElementById("state-search").value = st
-
-                stateproj(st)
-                function stateproj(input) {
-                    var stateData = state_cand.filter(d => d.state == input)
-                    var state_proj = d3.mean(stateData, d => d.rating_value)
-                    console.log(stateData)
-                    console.log(state_proj)
-                    stateData.push({ rating: state_proj, forecastLabel: "Aggregated Projection" })
-                    svg.attr("viewBox", "0 0 1000 " + (stateData.length * 40 + 90))
-                    var width = 500,
-                        height = stateData.length * 40 -10;
-                    console.log(height)
-                    d3.json("us.json", us => {
-                        var state = topojson.feature(us, us.objects.states).features.filter(d => d.properties.name == input)[0]
-                        console.log(state)
-                        projection2
-                            .scale(1)
-                            .translate([0, 0]);
-                        var b = path2.bounds(state)
-                        var s = .95 / Math.max((b[1][0] - b[0][0]) / width, (b[1][1] - b[0][1]) / height)
-                        var t = [((width - s * (b[1][0] + b[0][0])) / 2), ((height - s * (b[1][1] + b[0][1])) / 2) + 50]
-                        console.log(b)
-                        console.log(t)
-                        projection2
-                            .scale(s)
-                            .translate(t);
-                        svg.append("rect")
-                            .attr("y", (d, i) => 0)
-                            .attr("x", 0)
-                            .attr("height", stateData.length * 40 + 150)
-                            .attr("width", 1000)
-                            .attr("fill", "white")
-
-                        svg.append("path")
-                            .datum(state)
-                            .attr("fill", color(state_proj))
-                            .attr("d", path2)
-                            .style("stroke", (d, i) => state_proj > 45 && state_proj < 55 ? "Black" : "white")
-
-
-
-                        svg.append("text")
-                            .text(input)
-                            .attr("y", 50)
-                            .attr("x", 250)
-                            .attr("fill", "black")
-                            .style("font-weight", "100")
-                            .style("font-size", 40)
-                            .attr("text-anchor", "middle")
-
-
-                        svg.selectAll("states")
-                            .data(stateData)
-                            .enter()
-                            .append("rect")
-                            .attr("y", (d, i) => 20 + i * 40)
-                            .attr("x", 850)
-                            .attr("height", 40)
-                            .attr("width", 100)
-                            .style("fill", (d, i) => typeof d.rating == "number" ? color(scle(d.rating)) : colorsratings[ratings.indexOf(d.rating)])
-
-
-                        svg.selectAll("states")
-                            .data(stateData)
-                            .enter()
-                            .append("line")
-                            .attr("y1", (d, i) => 20 + i * 40)
-                            .attr("y2", (d, i) => 20 + i * 40)
-                            .attr("x1", (d, i) => 600)
-                            .attr("x2", (d, i) => 950)
-                            .attr("stroke", (d, i) => i == stateData.length - 1 ? "black" : "#AFAFAF")
-                            .attr("stroke-width", (d, i) => i == stateData.length - 1 ? "2" : "1")
-
-
-
-                        svg.selectAll("states")
-                            .data(stateData)
-                            .enter()
-                            .append("text")
-                            .text(d => typeof d.rating == "number" ? wholeformat(Math.abs(d.rating - 50) + 50) + "%" : d.rating)
-                            .attr("y", (d, i) => 40 + i * 40)
-                            .attr("x", 900)
-                            .attr("fill", "black")
-                            .style("font-weight", "100")
-                            .style("font-size", 18)
-                            .attr("text-anchor", "middle")
-                            .attr("dominant-baseline", "central")
-
-
-                        svg.selectAll("states")
-                            .data(stateData)
-                            .enter()
-                            .append("text")
-                            .text(d => d.full_forecast)
-                            .attr("id",(d,i)=>"forec"+i)
-                            .attr("y", (d, i) => 40 + i * 40)
-                            .attr("x", 600)
-                            .style("font-weight", "100")
-                            .style("font-size", 18)
-                            .attr("text-anchor", "start")
-                            .attr("dominant-baseline", "central")
-                        
-                        svg.selectAll("states")
-                            .data(stateData)
-                            .enter()
-                            .append("a")
-                            .attr("href", d => d.link)
-                            .append("rect")
-                            .attr("fill", "white")
-                            .attr("opacity",0)
-                            .attr("y", (d, i) => 20 + i * 40)
-                            .attr("x", 600)
-                            .attr("height", 40)
-                            .attr("width", 250)
-                            
-
-
-
-                    })
-                }
-
-                var selectbox = d3.select("#selectbox")
-                    .on("change", function () {
-                        update(this.value)
-                    })
-
-                var selectbox3 = d3.select("#state-search")
-                    .on("change", function () {
-                        stateproj(this.value)
-                    })
-
-                var selectbox2 = d3.select("#selectbox2")
-                    .on("change", function () {
-                        this.value == "all" ? d3.select("#new").style("display", "none") && d3.select("#ex").style("display", "none") && d3.select("#all").style("display", "block") :
-                            this.value == "new" ? d3.select("#new").style("display", "block") && d3.select("#ex").style("display", "none") && d3.select("#all").style("display", "none") :
-                                d3.select("#new").style("display", "none") && d3.select("#ex").style("display", "block") && d3.select("#all").style("display", "none")
-
-                    });
-
             })
         })
     })
