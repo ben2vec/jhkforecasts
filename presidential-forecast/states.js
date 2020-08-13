@@ -230,7 +230,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
     .attr("x1", d => x3(d))
     .attr("x2", d => x3(d))
     .attr("y1", 30)
-    .attr("y2", 270)
+    .attr("y2", 3500)
     .attr("stroke", "#AFAFAF")
     .attr("opacity", .5)
 
