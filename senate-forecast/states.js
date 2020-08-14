@@ -600,9 +600,9 @@ function ready(error, inputData, cands, data, polls) {
             })
             .style("cursor", "pointer")
 
-        var evbutton = d3.select("#evbutton")
+        var evbutton = d3.select("#winButton")
             .on("click", function () {
-                update("ev", 0)
+                update("win", 0)
             })
             .style("cursor", "pointer")
 
