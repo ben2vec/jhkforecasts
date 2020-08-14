@@ -352,7 +352,7 @@ function ready(error, us, inputData, cands, data, hist) {
         .data(jsonElection)
         .enter()
         .append("a")
-        .attr("xlink:href", (d, i) => d.properties.name)
+        .attr("xlink:href", (d, i) => d.properties.name.split(" ").join("-").toLowerCase())
         .append("rect")
         .attr("class", "statesover")
         .attr("x", d => d.properties.label == "MI" ? path.centroid(d)[0] -2 : path.centroid(d)[0] - 10)
@@ -525,7 +525,7 @@ function ready(error, us, inputData, cands, data, hist) {
     var ga_special = today.filter(d => d.state_index == "Georgia: Class III")
 
     mapG.append("a")
-        .attr("xlink:href", "Georgia-Special")
+        .attr("xlink:href", "georgia-special")
         .append("rect")
         .attr("x", 738)
         .attr("y", 348)
@@ -557,7 +557,7 @@ function ready(error, us, inputData, cands, data, hist) {
         .attr("ry", "2")
 
     mapG.append("a")
-        .attr("xlink:href", "Georgia-Special")
+        .attr("xlink:href", "georgia-special")
         .append("rect")
         .attr("class", "statesover")
         .attr("x", 738)
@@ -890,7 +890,7 @@ function ready(error, us, inputData, cands, data, hist) {
         var tipB = tip.append("g")
             .attr("transform", "translate(0," + i * 50 + ")")
         tipB.append("a")
-            .attr("href", d.state == "Georgia*" ? "Georgia-Special" : d.state)
+            .attr("href", d.state == "Georgia*" ? "georgia-special" : d.state.split(" ").join("-").toLowerCase())
             .append("text")
             .text(state)
             .attr("y", 95)
@@ -931,14 +931,14 @@ function ready(error, us, inputData, cands, data, hist) {
             var candidate = d.candidate
             var candParty = d.party
             var candColor = cand_colors(candParty)
-            var highest_curve = jStat.normal.pdf(0, 0, d.stdev * .8)
+            var highest_curve = jStat.normal.pdf(0, 0, d.stdev * .9)
             var y3 = d3.scaleLinear()
                 .domain([0, highest_curve])
                 .range([0, 40])
             var lineData = []
             for (let l = 1; l < 200; l++) {
-                var gq = jStat.normal.inv(l / 200, +d.vote, +d.stdev * .8)
-                var gp = jStat.normal.pdf(gq, +d.vote, +d.stdev * .8)
+                var gq = jStat.normal.inv(l / 200, +d.vote, +d.stdev * .9)
+                var gp = jStat.normal.pdf(gq, +d.vote, +d.stdev * .9)
                 lineData.push({ x: gq, y: -y3(gp) + 100, y2: 100 })
             }
             tipB.append("path")
