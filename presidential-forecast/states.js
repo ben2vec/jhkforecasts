@@ -452,8 +452,8 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
       d.conf = candsData.map(((d, j) => {
         return {
           date: d.forecastDate,
-          top: input == "win" ? d[input] : input == "ev" ? +d[input] + +d.p10 * 1.3 : i < 2 ? +d[input] + (4.75 - (j / 150)) : +d[input] + (+d[input] + 3) / 2,
-          bottom: input == "win" ? d[input] : input == "ev" ? +d[input] - +d.p10 * 1.3 : i < 2 ? +d[input] - (4.75 - (j / 150)) : +d[input] - (+d[input]) / 1.5,
+          top: input == "win" ? d[input] : input == "ev" ? +d[input] + +d.p10 * 1.3 : i < 2 ? d.vote+(d.p90-d.vote)*.9 : +d[input] + (+d[input] + 3) / 2,
+          bottom: input == "win" ? d[input] : input == "ev" ? +d[input] - +d.p10 * 1.3 : i < 2 ? d.vote-(d.p90-d.vote)*.9 : +d[input] - (+d[input]) / 1.5,
         }
       }))
     })
@@ -461,7 +461,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
 
     y.domain([
       0,
-      input == "vote" ? d3.max(lineData, d => d.vote) < 60 ? 60 : d3.max(lineData, d => d.vote) : 100
+      input == "vote" ? d3.max(lineData, d => d.p90) < 60 ? 60 : d3.max(lineData, d => d.p90) : 100
     ]).nice();
 
     time.selectAll(".y-axis").transition()
