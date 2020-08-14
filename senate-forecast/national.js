@@ -451,8 +451,6 @@ function ready(error, us, inputData, cands, data, hist) {
                 .attr("text-anchor", "middle")
 
 
-
-
         })
         .on('mouseout',
             function (d) {
@@ -687,9 +685,8 @@ function ready(error, us, inputData, cands, data, hist) {
         .range([0, 800]);
 
     var tie_length = hist_scale(hist[10].prob)
-    var biden_win = +today[1].poll_avg * tie_length / 100
+    var biden_win = +today[today.length-1].poll_avg * tie_length / 100
     var pct = [0, 5, 10, 15, 20]
-
     histogram.selectAll("seats")
         .data(pct)
         .enter()
