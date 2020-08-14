@@ -82,8 +82,8 @@ function ready(error, inputData, cands, data, polls) {
     var dates = dates.map(d => {
         return dp(d)
     })
-    var repCandidate = cands.filter(d => d.party == "REP")[0].candidate
-    var demCandidate = cands.filter(d => d.party == "DEM")[0].candidate
+    var repCandidate = candidates.filter(d => d.party == "REP")[0].candidate
+    var demCandidate = candidates.filter(d => d.party == "DEM")[0].candidate
 
 
     var topline = d3.select("#topline")
@@ -230,10 +230,10 @@ function ready(error, inputData, cands, data, polls) {
         .enter()
         .append("rect")
         .attr("fill", (d, i) => partyColors(d.party))
-        .attr("x", (d, i) => d.party=="REP"||d.party=='DEM' ? x3(d.vote - ((d.vote - d.p_10) * .95)) : x3(d.vote - ((d.vote - d.p_10))))
+        .attr("x", (d, i) => d.party == "REP" || d.party == 'DEM' ? x3(d.vote - ((d.vote - d.p_10) * .95)) : x3(d.vote - ((d.vote - d.p_10))))
         .attr("y", (d, i) => 30 + 80 * i)
         .attr("height", 80)
-        .attr("width", (d, i) => d.party=="REP"||d.party=='DEM' ? x3(((d.vote - d.p_10) * .95) * 2) - 400 : x3(((d.vote - d.p_10) * .75) * 3) - 400)
+        .attr("width", (d, i) => d.party == "REP" || d.party == 'DEM' ? x3(((d.vote - d.p_10) * .95) * 2) - 400 : x3(((d.vote - d.p_10) * .75) * 3) - 400)
         .attr("opacity", .4)
         .attr("ry", 10)
 
@@ -417,8 +417,8 @@ function ready(error, inputData, cands, data, polls) {
             d.conf = candsData.map(((d, j) => {
                 return {
                     date: d.forecastDate,
-                    top: input == "win" ? d[input] : input == "ev" ? +d[input] + +d.p10 * 1.3 : d.party=="REP"||d.party=='DEM' ? d.vote + (d.p_90 - d.vote) * .9 : +d[input] + (+d[input] + 3) / 2,
-                    bottom: input == "win" ? d[input] : input == "ev" ? +d[input] - +d.p10 * 1.3 : d.party=="REP"||d.party=='DEM' ? d.vote - (d.p_90 - d.vote) * .9 : +d[input] - (+d[input]) / 1.5,
+                    top: input == "win" ? d[input] : input == "ev" ? +d[input] + +d.p10 * 1.3 : d.party == "REP" || d.party == 'DEM' ? d.vote + (d.p_90 - d.vote) * .9 : +d[input] + (+d[input] + 3) / 2,
+                    bottom: input == "win" ? d[input] : input == "ev" ? +d[input] - +d.p10 * 1.3 : d.party == "REP" || d.party == 'DEM' ? d.vote - (d.p_90 - d.vote) * .9 : +d[input] - (+d[input]) / 1.5,
                 }
             }))
         })
@@ -618,12 +618,44 @@ function ready(error, inputData, cands, data, polls) {
         .key(d => d.question_id)
         .entries(polls)
 
+    var grade_scale = [
+        { Grade: "A+", Value: 1.5 },
+        { Grade: "A", Value: 1.4 },
+        { Grade: "A-", Value: 1.3 },
+        { Grade: "A/B", Value: 1.2 },
+        { Grade: "B+", Value: 1.1 },
+        { Grade: "B", Value: 1 },
+        { Grade: "B-", Value: .9 },
+        { Grade: "B/C", Value: .8 },
+        { Grade: "C+", Value: .7 },
+        { Grade: "C", Value: .65 },
+        { Grade: "C-", Value: .55 },
+        { Grade: "C/D", Value: .5 },
+        { Grade: "D+", Value: .4 },
+        { Grade: "D", Value: .3 },
+        { Grade: "D-", Value: .2 },
+        { Grade: "-", Value: .7 },
+    ]
+    var gradeLetter = grade_scale.map((d) => {
+        return d.Grade
+    })
+
+    var gradeValue = grade_scale.map((d) => {
+        return d.Value
+    })
+
+
+    var gradeColor = d3.scaleLinear()
+        .domain([0.2, .85, 1.1, 1.5])
+        .range(["#F0474E", "#FCDD26", "#37B76E", "#2079FF"])
+
     pollsIndexed.forEach((d, i) => {
         d.repCandidate = d.values.filter(d => d.candidate_party == "REP").length == 0 ? "na" : d.values.filter(d => d.candidate_party == "REP")[0].candidate_name
         d.demCandidate = d.values.filter(d => d.candidate_party == "DEM").length == 0 ? "na" : d.values.filter(d => d.candidate_party == "DEM")[0].candidate_name
         d.pollster = d.values[0].pollster
         d.sample = d.values[0].sample_size + " " + d.values[0].population
         d.grade = d.values[0].fte_grade
+        d.gradeColor = gradeColor(gradeValue[gradeLetter.indexOf(d.grade)])
         d.date = d.values[0].date
         d.values.sort((a, b) => b.pct - a.pct)
         d.leader = d.values[0].pct - d.values[1].pct == 0 ? "EVEN" : d.values[0].answer + " +" + wf(d.values[0].pct - d.values[1].pct)
@@ -633,6 +665,9 @@ function ready(error, inputData, cands, data, polls) {
     console.log(pollsIndexed)
 
     var pollsIndexed = stateIndex == "Arkansas: Class II" ? pollsIndexed : stateIndex == "Georgia: Class III" ? pollsIndexed : pollsIndexed.filter(d => d.repCandidate == repCandidate && d.demCandidate == demCandidate)
+    console.log(pollsIndexed)
+    console.log(repCandidate)
+    console.log(demCandidate)
 
     var table = d3.select("#polls")
         .append("table")
@@ -727,9 +762,10 @@ function ready(error, inputData, cands, data, polls) {
             .append("h1")
             .text(d.grade)
             .style("font-family", "sf-mono")
-            .style("font-weight", 100)
+            .style("font-weight", 500)
             .style("font-size", "1.5vw")
             .style("text-align", "center")
+            .style("color",d.gradeColor)
 
         row.append("td")
             .style("width", "30%")
@@ -740,7 +776,7 @@ function ready(error, inputData, cands, data, polls) {
             .style("font-size", "1.5vw")
             .style("text-align", "right")
             .style("color", partyColors(d.leaderParty))
-            
+
 
         d.values.forEach((j, k) => {
             svg.append('text')
