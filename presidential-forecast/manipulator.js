@@ -8,7 +8,7 @@ var nf = d3.format(".1f")
 var wf = d3.format(".0f")
 var colors = ["#FF6060", "#0091FF", "#FFE130"]
 
-var category = ["gop", "dem", "third"]
+var category = ["gop", "DEM", "third"]
 
 var cand_colors = d3.scaleOrdinal()
     .domain(category)
@@ -214,9 +214,9 @@ function ready(error, us, data, input) {
                     (states[labels.indexOf(d.label)].change ="REP") &&
                     update(states) :
                     d.change =="REP" ?
-                        (states[labels.indexOf(d.label)].change = "dem") &&
+                        (states[labels.indexOf(d.label)].change = "DEM") &&
                         update(states) :
-                        d.change == "dem" ?
+                        d.change == "DEM" ?
                             (states[labels.indexOf(d.label)].change = "none") &&
                             update(states) : (states[labels.indexOf(d.label)].change = "none") &&
                             update(states)
@@ -236,9 +236,9 @@ function ready(error, us, data, input) {
                     (states[labels.indexOf(d.label)].change ="REP") &&
                     update(states) :
                     d.change =="REP" ?
-                        (states[labels.indexOf(d.label)].change = "dem") &&
+                        (states[labels.indexOf(d.label)].change = "DEM") &&
                         update(states) :
-                        d.change == "dem" ?
+                        d.change == "DEM" ?
                             (states[labels.indexOf(d.label)].change = "none") &&
                             update(states) : (states[labels.indexOf(d.label)].change = "none") &&
                             update(states)
@@ -643,7 +643,7 @@ function ready(error, us, data, input) {
             .attr("y", (d, i) => i * 40 + 60)
             .style("font-weight", d => d.change == "none" ? 100 : 500)
             .attr("font-size", "20")
-            .attr("fill", d => d.change =="REP" ? colors[0] : d.change == "dem" ? colors[1] : "black")
+            .attr("fill", d => d.change =="REP" ? colors[0] : d.change == "DEM" ? colors[1] : "black")
             .attr("text-anchor", "middle")
             .attr("cursor", "pointer")
             .attr("dominant-baseline", "central")
@@ -652,9 +652,9 @@ function ready(error, us, data, input) {
                     (states[Stateslabels.indexOf(d.state)].change ="REP") &&
                     (update(states)) :
                     d.change =="REP" ?
-                        (states[Stateslabels.indexOf(d.state)].change = "dem") &&
+                        (states[Stateslabels.indexOf(d.state)].change = "DEM") &&
                         update(states) :
-                        d.change == "dem" ?
+                        d.change == "DEM" ?
                             (states[Stateslabels.indexOf(d.state)].change = "none") &&
                             update(states) : (states[Stateslabels.indexOf(d.state)].change = "none") &&
                             update(states)
@@ -669,7 +669,7 @@ function ready(error, us, data, input) {
             .attr("y", (d, i) => i * 60 + 80)
             .style("font-weight", d => d.change == "none" ? 100 : 500)
             .attr("font-size", "30")
-            .attr("fill", d => d.change =="REP" ? colors[0] : d.change == "dem" ? colors[1] : "black")
+            .attr("fill", d => d.change =="REP" ? colors[0] : d.change == "DEM" ? colors[1] : "black")
             .attr("text-anchor", "start")
             .attr("cursor", "pointer")
             .attr("dominant-baseline", "central")
@@ -678,9 +678,9 @@ function ready(error, us, data, input) {
                     (states[Stateslabels.indexOf(d.state)].change ="REP") &&
                     (update(states)) :
                     d.change =="REP" ?
-                        (states[Stateslabels.indexOf(d.state)].change = "dem") &&
+                        (states[Stateslabels.indexOf(d.state)].change = "DEM") &&
                         update(states) :
-                        d.change == "dem" ?
+                        d.change == "DEM" ?
                             (states[Stateslabels.indexOf(d.state)].change = "none") &&
                             update(states) : (states[Stateslabels.indexOf(d.state)].change = "none") &&
                             update(states)
