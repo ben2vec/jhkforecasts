@@ -172,7 +172,7 @@ div.tooltip {
   stroke-width: 2px;
 }
 
-@media only screen and (max-width:850px) {
+@media only screen and (max-width:650px) {
   #tipDiv {
     display: none;
   }
@@ -197,13 +197,19 @@ div.tooltip {
   .phone {
     display: inline;
   }
+  #computerBanner {
+    display: none;
+   }
+   #phoneBanner {
+     display: block;
+   }
 }
 
 #bubblemap {
   width: 100%;
 }
 
-@media only screen and (min-width:851px) {
+@media only screen and (min-width:651px) {
   #tipDiv {
     display: inline;
   }
@@ -228,6 +234,12 @@ div.tooltip {
   .phone {
     display: none;
   }
+  #computerBanner {
+    display: flex;
+   }
+   #phoneBanner {
+     display: none;
+   }
 }
 
 .pollline {
