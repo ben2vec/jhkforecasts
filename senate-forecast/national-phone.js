@@ -1121,7 +1121,7 @@ function ready(error, us, inputData, cands, data, hist) {
         .data(states)
         .enter()
         .append("a")
-        .attr("href",d=>d.state=="Georgia Special"?"Georgia-Special":d.state)
+        .attr("href",d=>d.state=="Georgia Special"?"georgia-special:d.state
         .append("text")
         .text(d => d.label)
         .attr("x", (d, i) => 20)
