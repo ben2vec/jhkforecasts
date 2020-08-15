@@ -1059,11 +1059,11 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
         var races = today.filter(d => d.state == state)
         newTable.append("tr")
             .style("border-bottom", "black solid 1px")
-            .attr("id", d.state + "firstRow")
+            .attr("id", d.state.split(" ").join("") + "firstRow")
             .style("border-bottom", "black solid 1px")
 
 
-        d3.select("#" + d.state + "firstRow")
+        d3.select("#" + d.state.split(" ").join("") + "firstRow")
             .append("td")
             .attr("width", "25%")
             .append("h1")
@@ -1074,14 +1074,14 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
 
 
 
-        d3.select("#" + d.state + "firstRow")
+        d3.select("#" + d.state.split(" ").join("") + "firstRow")
             .append("td")
             .attr("width", "5%")
-            .attr("id", d.state + "plusMinusSign")
+            .attr("id", d.state.split(" ").join("") + "plusMinusSign")
             .append("img")
             .style("width", "50%")
             .style("padding", "15%")
-            .attr("id", d.state + "plusSign")
+            .attr("id", d.state.split(" ").join("") + "plusSign")
             .attr("src", "https://jhkforecasts.com/plus-sign-01.svg")
             .attr("class", "pointer")
             .on("click", function (id) {
@@ -1091,12 +1091,12 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
             })
 
 
-        d3.select("#" + d.state + "firstRow")
+        d3.select("#" + d.state.split(" ").join("") + "firstRow")
             .attr("width", "75%")
-            .attr("id", d.state + "bubbles")
+            .attr("id", d.state.split(" ").join("") + "bubbles")
 
 
-        var bubs = d3.select("#" + d.state + "bubbles")
+        var bubs = d3.select("#" + d.state.split(" ").join("") + "bubbles")
             .append("svg")
             .attr("viewBox", "0 0 1000 50")
 
@@ -1121,15 +1121,15 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
             .attr("stroke", d => d.incumbentParty[0].incumbentParty == "(R)" ? colors[0] : colors[1])
 
         newTable.append("tr")
-            .attr("id", d.state + "secondRow")
+            .attr("id", d.state.split(" ").join("") + "secondRow")
 
     })
 
     function appendNewRow(state) {
-        var newRow = d3.select("#" + state + "secondRow")
+        var newRow = d3.select("#" + state.split(" ").join("") + "secondRow")
 
         var newTable = newRow.append("td")
-            .attr("id", state + "secondRowTable")
+            .attr("id", state.split(" ").join("") + "secondRowTable")
             .attr("colspan", 3)
             .append("table")
             .attr("width", "100%")
@@ -1239,6 +1239,6 @@ function ready(error, us, congress, inputData, grid, data, histogram) {
 
 
         })
-        d3.select("#" + state + "plusSign").remove()
+        d3.select("#" + state.split(" ").join("") + "plusSign").remove()
     }
 }
