@@ -83,7 +83,7 @@ function ready(error, inputData, cands, data, polls) {
         return dp(d)
     })
     var repCandidate = candidates.filter(d => d.party == "REP")[0].candidate
-    var demCandidate = candidates.filter(d => d.party == "DEM")[0].candidate
+    var demCandidate = candidates.filter(d => d.party == "DEM").length == 0 ? "na" : candidates.filter(d => d.party == "DEM")[0].candidate
 
 
     var topline = d3.select("#topline")
@@ -230,10 +230,10 @@ function ready(error, inputData, cands, data, polls) {
         .enter()
         .append("rect")
         .attr("fill", (d, i) => partyColors(d.party))
-        .attr("x", (d, i) => d.party == "REP" || d.party == 'DEM' ? x3(d.vote - ((d.vote - d.p_10) * .95)) : x3(d.vote - ((d.vote - d.p_10))))
+        .attr("x", (d, i) => x3(d.vote - ((d.vote - d.p_10) * .95)))
         .attr("y", (d, i) => 30 + 80 * i)
         .attr("height", 80)
-        .attr("width", (d, i) => d.party == "REP" || d.party == 'DEM' ? x3(((d.vote - d.p_10) * .95) * 2) - 400 : x3(((d.vote - d.p_10) * .75) * 3) - 400)
+        .attr("width", (d, i) => x3(((d.vote - d.p_10) * .95) * 2) - 400)
         .attr("opacity", .4)
         .attr("ry", 10)
 
@@ -412,13 +412,14 @@ function ready(error, inputData, cands, data, polls) {
 
         cands.forEach((d, i) => {
             var candidate = d.candidate
-            var candsData = lineData.filter(d => d.candidate == candidate)
+            var party = d.party
+            var candsData = candidate == "" ? lineData.filter(d => d.party == party) : lineData.filter(d => d.candidate == candidate)
             d.line = candsData.map((d => { return { date: d.forecastDate, pct: d[input] } }))
             d.conf = candsData.map(((d, j) => {
                 return {
                     date: d.forecastDate,
-                    top: input == "win" ? d[input] : input == "ev" ? +d[input] + +d.p10 * 1.3 : d.party == "REP" || d.party == 'DEM' ? d.vote + (d.p_90 - d.vote) * .9 : +d[input] + (+d[input] + 3) / 2,
-                    bottom: input == "win" ? d[input] : input == "ev" ? +d[input] - +d.p10 * 1.3 : d.party == "REP" || d.party == 'DEM' ? d.vote - (d.p_90 - d.vote) * .9 : +d[input] - (+d[input]) / 1.5,
+                    top: input == "win" ? d[input] : input == "ev" ? +d[input] + +d.p10 * 1.3 : d.vote + (d.p_90 - d.vote) * .9,
+                    bottom: input == "win" ? d[input] : input == "ev" ? +d[input] - +d.p10 * 1.3 : d.vote - (d.p_90 - d.vote) * .9,
                 }
             }))
         })
@@ -765,7 +766,7 @@ function ready(error, inputData, cands, data, polls) {
             .style("font-weight", 500)
             .style("font-size", "1.5vw")
             .style("text-align", "center")
-            .style("color",d.gradeColor)
+            .style("color", d.gradeColor)
 
         row.append("td")
             .style("width", "30%")
