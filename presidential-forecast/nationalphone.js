@@ -550,8 +550,8 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
         d.conf = candsData.map(((d, j) => {
           return {
             date: d.forecastDate,
-            top: input == "win" ? d[input] : input == "ev" ? +d[input] + +d.p10 * 1.3 : i < 2 ? +d[input] + (4.75 - (j / 150)) : +d[input] + (+d[input] + 3) / 2,
-            bottom: input == "win" ? d[input] : input == "ev" ? +d[input] - +d.p10 * 1.3 : i < 2 ? +d[input] - (4.75 - (j / 150)) : +d[input] - (+d[input]) / 1.5,
+            top: input == "win" ? d[input] : input == "ev" ? +d[input] + +d.p10 * 1.3 : i < 2 ? +d[input] + (5.25 - (j / 150)) : +d[input] + (+d[input] + 3) / 2,
+            bottom: input == "win" ? d[input] : input == "ev" ? +d[input] - +d.p10 * 1.3 : i < 2 ? +d[input] - (5.25 - (j / 150)) : +d[input] - (+d[input]) / 1.5,
           }
         }))
       })
