@@ -645,7 +645,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
         var labels2 = focus.selectAll(".lineHoverText2")
           .data(copy)
 
-          labels2.enter().append("text")
+        labels2.enter().append("text")
           .attr("class", "lineHoverText2")
           .attr("font-size", 55)
           .style("fill", "white")
@@ -1182,7 +1182,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
       .data(sd3)
       .enter()
       .append("a")
-        .attr("xlink:href", d => d.state.toLowerCase().split(" ").join("-"))
+      .attr("xlink:href", d => d.state.toLowerCase().split(" ").join("-"))
       .append("circle")
       .attr("class", "statesover")
       .attr("cx", d => d.x)
@@ -1239,7 +1239,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
           .text(d.margin > 0 ? "Trump +" + nf(Math.abs(d.margin)) : "Biden +" + nf(Math.abs(d.margin)))
           .attr("y", 160)
           .attr("x", 87.5)
-          .attr("fill", d.margin > 0 ? partyColors("gop") : partyColors("dem"))
+          .attr("fill", d.margin > 0 ? partyColors("REP") : partyColors("DEM"))
           .attr("font-weight", "100")
           .style("font-size", "17")
           .attr("text-anchor", "middle")
@@ -1355,18 +1355,21 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
         finaldt.margin = finaldt.gop_vote - finaldt.dem_vote
         fdt.push(finaldt)
       }
-      var min_stdev = d3.min(fdt, d => d.std) * 1.5
-      var highest_curve = jStat.normal.pdf(0, 0, min_stdev)
+
       fdt.sort((a, b) => b.tippingPoint - a.tippingPoint)
-      var y3 = d3.scaleLinear()
-        .domain([0, highest_curve])
-        .range([0, 70])
+
       var sd4 = []
 
       for (let k = 0; k < bubble_info.length; k++) {
         var margincurve = []
+        var min_stdev = fdt[k].std * 1.5
+        var highest_curve = jStat.normal.pdf(0, 0, min_stdev)
 
+        var y3 = d3.scaleLinear()
+          .domain([0, highest_curve])
+          .range([0, 70])
         for (let l = 1; l < 100; l++) {
+
 
           var gq = jStat.normal.inv(l / 100, fdt[k].margin, fdt[k].std * 1.5)
           var gp = jStat.normal.pdf(gq, fdt[k].margin, fdt[k].std * 1.5)
