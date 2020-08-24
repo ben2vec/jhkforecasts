@@ -603,7 +603,7 @@ function ready(error, inputData, cands, data, polls) {
 
         var evbutton = d3.select("#winButton")
             .on("click", function () {
-                update("win", 0)
+                update("win", 500)
             })
             .style("cursor", "pointer")
 
