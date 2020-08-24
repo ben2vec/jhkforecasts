@@ -463,7 +463,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
       0,
       input == "vote" ? d3.max(lineData, d => d.p90) < 60 ? 60 : d3.max(lineData, d => d.p90) : 100
     ]).nice();
-
+ 
     time.selectAll(".y-axis").transition()
       .duration(speed)
       .call(d3.axisLeft(y).tickSize(-width + margin.right + margin.left).ticks(5)).call(g => {
@@ -627,13 +627,13 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
 
       }
     }
-    var winbutton = d3.select("#winB")
+    var winbutton = d3.select("#winbu")
       .on("click", function () {
         update("win", 500)
       })
       .style("cursor", "pointer")
 
-    var votebutton = d3.select("#voteB")
+    var votebutton = d3.select("#votebu")
       .on("click", function () {
         update("vote", 500)
       })
