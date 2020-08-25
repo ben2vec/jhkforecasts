@@ -458,7 +458,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
       }))
     })
 
-
+ 
     y.domain([
       0,
       input == "vote" ? d3.max(lineData, d => d.p90) < 60 ? 60 : d3.max(lineData, d => d.p90) : 100
