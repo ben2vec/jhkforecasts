@@ -856,7 +856,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
       d.date = dp(d.values[0].end_date)
       d.values.sort((a, b) => b.pct - a.pct)
       d.leader = d.values[0].pct - d.values[1].pct == 0 ? "EVEN" : d.values[0].answer + " +" + wf(d.values[0].pct - d.values[1].pct)
-      d.leaderParty = d.values[0].candidate_party
+      d.leaderParty = d.leader=="EVEN"?"tie":d.values[0].candidate_party
     })
 
 
@@ -966,7 +966,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
         .style("font-weight", 500)
         .style("font-size", "1.5vw")
         .style("text-align", "right")
-        .style("color", partyColors(d.leaderParty))
+        .style("color",d.leaderParty=="tie"?"black": partyColors(d.leaderParty))
 
 
       d.values.forEach((j, k) => {

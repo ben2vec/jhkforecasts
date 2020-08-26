@@ -1533,7 +1533,8 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
             .attr("height", input_height)
             .attr("fill", "white")
 
-
+          console.log(jStat.normal.pdf(0, 0, 1))
+          console.log(jStat.studentt.pdf(jStat.studentt.inv(.5, 8), 8))
           var sd4 = []
 
           for (let k = 0; k < bubble_info.length; k++) {
@@ -1543,29 +1544,30 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
             for (let l = 1; l < 100; l++) {
 
               var min_stdev = fdt[k].std * .7
-              var highest_curve = jStat.normal.pdf(0, 0, min_stdev)
+              var highest_curve = jStat.studentt.pdf(jStat.studentt.inv(.5, 8), 8)+.05
 
               var tq = jStat.normal.inv(.01, 0, min_stdev)
               var tp = jStat.normal.pdf(tq, 0, min_stdev)
 
-              var gq = jStat.normal.inv(l / 100, fdt[k].gop_vote, fdt[k].std * .8)
-              var gp = jStat.normal.pdf(gq, fdt[k].gop_vote, fdt[k].std * .8)
 
-              var dq = jStat.normal.inv(l / 100, fdt[k].dem_vote, fdt[k].std * .8)
-              var dp = jStat.normal.pdf(dq, fdt[k].dem_vote, fdt[k].std * .8)
+              var gq = (jStat.studentt.inv(l / 100, 8) * fdt[k].std * .7) + fdt[k].gop_vote
+              var gp = jStat.studentt.pdf(jStat.studentt.inv(l / 100, 8), 8)
+
+              var dq = (jStat.studentt.inv(l / 100, 8) * fdt[k].std * .7) + fdt[k].dem_vote
+              var dp = jStat.studentt.pdf(jStat.studentt.inv(l / 100, 8), 8)
 
               var y3 = d3.scaleLinear()
                 .domain([0, highest_curve])
                 .range([0, 45])
               var gopvalues = {
                 x: gq,
-                y: -y3(gp) + k * 50 + 162,
+                y: -y3(gp) + k * 50 + 160,
                 y2: k * 50 + 160
               }
 
               var demvalues = {
                 x: dq,
-                y: -y3(dp) + k * 50 + 162,
+                y: -y3(dp) + k * 50 + 160,
                 y2: k * 50 + 160
               }
               gopcurve.push(gopvalues)
