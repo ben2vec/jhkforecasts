@@ -81,7 +81,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
 
         var newest_data = data.slice(data.length - 228, data.length)
         document.getElementById("presLink").style.backgroundColor = color(newest_data[225].win)
-        document.getElementById("demLink").style.backgroundColor = color(0)
+        document.getElementById("demLink").style.backgroundColor = "navy"
         document.getElementById("houseLink").style.backgroundColor = color(d3.sum(house.filter(d => d.seats > 218), d => d.occ))
         document.getElementById("senateLink").style.backgroundColor = color(senate[senate.length - 2].win)
 
@@ -443,49 +443,86 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
           .style("font-weight", "100")
           .style("font-size", "10");
 
-        var pct = [60, 70, 80, 90, 100]
+          var pct = [60, 70, 80, 90, 100]
 
-        map.selectAll("pct")
-          .data(pct)
-          .enter()
-          .append("circle")
-          .attr("r", 10)
-          .attr("cy", (d, i) => 340)
-          .attr("cx", (d, i) => 800 + i * 25)
-          .attr("fill", d => color(d))
-
-
-        map.selectAll("pct")
-          .data(pct)
-          .enter()
-          .append("circle")
-          .attr("r", 10)
-          .attr("cy", (d, i) => 370)
-          .attr("cx", (d, i) => 800 + i * 25)
-          .attr("fill", d => color(100 - d))
-
-
-        map.selectAll("pct")
-          .data(pct)
-          .enter()
-          .append("text")
-          .text(d => d)
-          .attr("y", 400)
-          .attr("x", (d, i) => 800 + i * 25)
-          .attr("fill", "black")
-          .attr("text-anchor", "middle")
-          .attr("font-size", 12)
-          .style("font-weight", "100")
-
-
-        map.append("text")
-          .text("Win State")
-          .attr("y", 310)
-          .attr("x", 850)
-          .attr("fill", "black")
-          .attr("text-anchor", "middle")
-          .attr("font-size", 15)
-          .style("font-weight", "100")
+          map.selectAll("key")
+            .data(pct)
+            .enter()
+            .append("circle")
+            .attr("r", 20)
+            .attr("cy", (d, i) => 330)
+            .attr("cx", (d, i) => 810 + i * 20)
+            .attr("fill", d => color(d))
+  
+  
+            map.selectAll("key")
+            .data(pct)
+            .enter()
+            .append("circle")
+            .attr("r", 20)
+            .attr("cy", (d, i) => 380)
+            .attr("cx", (d, i) => 810 + i * 20)
+            .attr("fill", d => color(100 - d))
+  
+            map.selectAll("key")
+            .data(pct)
+            .enter()
+            .append("text")
+            .text(d => d)
+            .attr("y", 330)
+            .attr("x", (d, i) => 795 + i * 20)
+            .attr("fill", "black")
+            .attr("text-anchor", "start")
+            .attr("font-size", 10)
+            .style("font-weight", "100")
+            .style("dominant-baseline", "central")
+  
+  
+            map
+            .append("text")
+            .text("Trump")
+            .attr("y", 330)
+            .attr("x", (d, i) => 785 + i * 20)
+            .attr("fill", "black")
+            .attr("text-anchor", "end")
+            .attr("font-size", 10)
+            .style("font-weight", "100")
+            .style("dominant-baseline", "central")
+  
+            map
+            .append("text")
+            .text("Biden")
+            .attr("y", 380)
+            .attr("x", (d, i) => 785 + i * 20)
+            .attr("fill", "black")
+            .attr("text-anchor", "end")
+            .attr("font-size", 10)
+            .style("font-weight", "100")
+            .style("dominant-baseline", "central")
+  
+  
+            map.selectAll("key")
+            .data(pct)
+            .enter()
+            .append("text")
+            .text(d => d)
+            .attr("y", 380)
+            .attr("x", (d, i) => 795 + i * 20)
+            .attr("fill", "black")
+            .attr("text-anchor", "start")
+            .attr("font-size", 10)
+            .style("font-weight", "100")
+            .style("dominant-baseline", "central")
+  
+  
+          map.append("text")
+            .text("Win State")
+            .attr("y", 300)
+            .attr("x", 850)
+            .attr("fill", "black")
+            .attr("text-anchor", "middle")
+            .attr("font-size", 15)
+            .style("font-weight", "100")
 
 
         var winner = newest_data[168].win > newest_data[169].win ? "Trump" : "Biden"
@@ -678,8 +715,8 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
             d.conf = candsData.map(((d, j) => {
               return {
                 date: d.forecastDate,
-                top: input == "win" ? d[input] : input == "ev" ? +d[input] + +d.p10 * 1.3 : i < 2 ? +d[input] + (5.25 - (j / 150)) : +d[input] + (+d[input] + 3) / 2,
-                bottom: input == "win" ? d[input] : input == "ev" ? +d[input] - +d.p10 * 1.3 : i < 2 ? +d[input] - (5.25 - (j / 150)) : +d[input] - (+d[input]) / 1.5,
+                top: input == "win" ? d[input] : input == "ev" ? +d[input] + +d.p10 * 1.5 : i < 2 ? +d[input] + (5.25 - (j / 150)) : +d[input] + (+d[input] + 3) / 2,
+                bottom: input == "win" ? d[input] : input == "ev" ? +d[input] - +d.p10 * 1.5 : i < 2 ? +d[input] - (5.25 - (j / 150)) : +d[input] - (+d[input]) / 1.5,
               }
             }))
           })
