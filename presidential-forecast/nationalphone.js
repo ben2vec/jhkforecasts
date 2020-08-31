@@ -669,8 +669,8 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
         circles.enter().append("circle")
           .attr("class", "hoverCircle")
           .style("stroke", d => partyColors(d.party))
-          .attr("r", 4)
-          .attr("stroke-width", 2.5)
+          .attr("r", 10)
+          .attr("stroke-width", 7)
           .attr("fill", "white")
           .merge(circles);
 
@@ -682,6 +682,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
           .on("mousemove", mousemove);
 
         function mousemove() {
+
           var x0 = x.invert(d3.mouse(this)[0]),
             i = bisectDate(dates, x0, 1),
             d0 = dates[i - 1],
@@ -706,8 +707,8 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
 
           focus.selectAll(".lineHoverText")
             .style("font-weight", "500")
-            .attr("x", (d, j) => x(dates[i]) + (j % 2 == 0 ? -10 : 10))
-            .text((d, j) => d.id + " " + (input == "ev" ? nf(d.line[i].pct) : nf(d.line[i].pct) + "%"))
+            .attr("x", (d, j) => x(dates[i]) + (j % 2 == 0 ? -15 : 15))
+            .text((d, j) => (input == "ev" ? nf(d.line[i].pct) : nf(d.line[i].pct) + "%"))
             .attr("fill", (d, i) => partyColors(d.party))
             .attr("y", (d, j) => y(d.line[i].pct))
             .attr("text-anchor", (d, j) => j % 2 == 0 ? "end" : "start")
@@ -715,8 +716,8 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
 
           focus.selectAll(".lineHoverText2")
             .style("font-weight", "500")
-            .attr("x", (d, j) => x(dates[i]) + (j % 2 == 0 ? -10 : 10))
-            .text((d, j) => d.id + " " + (input == "ev" ? nf(d.line[i].pct) : nf(d.line[i].pct) + "%"))
+            .attr("x", (d, j) => x(dates[i]) + (j % 2 == 0 ? -15 : 15))
+            .text((d, j) => (input == "ev" ? nf(d.line[i].pct) : nf(d.line[i].pct) + "%"))
             .attr("fill", (d, i) => "white")
             .attr("y", (d, j) => y(d.line[i].pct))
             .attr("text-anchor", (d, j) => j % 2 == 0 ? "end" : "start")
