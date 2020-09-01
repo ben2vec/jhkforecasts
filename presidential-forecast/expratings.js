@@ -76,7 +76,7 @@ var forecasters = [
         "type": "newcomer",
         "shorthand": "leantoss",
         "forecastLabel": "Lean Tossup",
-        tableHeader: "Lean Tossup"
+        tableHeader: "Lean Toss"
     },
     {
         "forecast": "Plural Vote",
@@ -84,7 +84,7 @@ var forecasters = [
         "type": "newcomer",
         "shorthand": "pluralvote",
         "forecastLabel": "Plural Vote",
-        tableHeader: "Plural Vote"
+        tableHeader: "Pl. Vote"
     },
     {
         "forecast": "CNN",
