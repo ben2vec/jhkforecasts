@@ -715,8 +715,8 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
             d.conf = candsData.map(((d, j) => {
               return {
                 date: d.forecastDate,
-                top: input == "win" ? d[input] : input == "ev" ? +d[input] + +d.p10 * 1.5 : i < 2 ? +d[input] + (5.25 - (j / 150)) : +d[input] + (+d[input] + 3) / 2,
-                bottom: input == "win" ? d[input] : input == "ev" ? +d[input] - +d.p10 * 1.5 : i < 2 ? +d[input] - (5.25 - (j / 150)) : +d[input] - (+d[input]) / 1.5,
+                top: input == "win" ? d[input] : input == "ev" ? +d[input] + +d.p10 * 1.5 : i < 2 ? +d[input] + (4.75- (j / 150)) : +d[input] + (+d[input] + 3) / 2,
+                bottom: input == "win" ? d[input] : input == "ev" ? +d[input] - +d.p10 * 1.5 : i < 2 ? +d[input] - (4.75 - (j / 150)) : +d[input] - (+d[input]) / 1.5,
               }
             }))
           })
