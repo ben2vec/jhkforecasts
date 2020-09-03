@@ -5,8 +5,8 @@ var candidates = [
   { candidate: "Jo Jorgensen", party: "LIB", id: "Jorgensen" },
 ]
 var timeScale = 86400000
-var colors = ["#FF6060", "#0091FF", "#ffc300", "#C473F6", "#31DE70"]
-var category = ["REP", "DEM", "LIB", "IND", "GRE"]
+var colors = ["#FF6060", "#0091FF", "#ffc300", "#C473F6", "#31DE70","#23395d"]
+var category = ["REP", "DEM", "LIB", "IND", "GRE","CON"]
 var partyColors = d3.scaleOrdinal()
   .domain(category)
   .range(colors)
@@ -810,7 +810,7 @@ d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", data => {
   d3.csv("https://projects.fivethirtyeight.com/polls-page/president_polls.csv", polls => {
     
     var polls = polls.filter(d => d.state == keyState)
-
+  console.log(polls)
     var pollsIndexed = d3.nest()
       .key(d => d.question_id)
       .entries(polls)
