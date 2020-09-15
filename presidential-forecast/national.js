@@ -55,8 +55,7 @@ map.call(tool_tip);
 
 d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", function (us) {
 
-  d3.csv("https://data.jhkforecasts.com/2020-house-histogram.csv", function (house) {
-    d3.csv("https://data.jhkforecasts.com/2020-senate.csv", function (senate) {
+ 
       d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
         document.getElementById("topBanner").style.backgroundColor = color(data[data.length - 3].win)
         var updated = data[data.length - 1].tippingPoint
@@ -80,15 +79,7 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
         document.getElementById("updated").innerHTML = "Updated: " + updated
 
         var newest_data = data.slice(data.length - 228, data.length)
-        document.getElementById("presLink").style.backgroundColor = color(newest_data[225].win)
-        document.getElementById("demLink").style.backgroundColor = "navy"
-        document.getElementById("houseLink").style.backgroundColor = color(d3.sum(house.filter(d => d.seats > 218), d => d.occ))
-        document.getElementById("senateLink").style.backgroundColor = color(senate[senate.length - 2].win)
-
-        document.getElementById("presLink").style.color = Math.abs(newest_data[225].win - 50) > 20 ? "white" : "black"
-        document.getElementById("demLink").style.color = "white"
-        document.getElementById("houseLink").style.color = Math.abs(d3.sum(house.filter(d => d.seats > 218), d => d.occ) - 50) > 20 ? "white" : "black"
-        document.getElementById("senateLink").style.color = Math.abs(senate[senate.length - 2].win - 50) > 20 ? "white" : "black"
+       
 
 
         var upset_odds = newest_data[225].win > newest_data[224].win ? +newest_data[224].win : +newest_data[225].win
@@ -1801,5 +1792,22 @@ d3.json("https://projects.jhkforecasts.com/presidential-forecast/us.json", funct
 
       })
     })
-  })
+
+d3.csv("https://data.jhkforecasts.com/2020-house-histogram.csv", function (house) {
+    d3.csv("https://data.jhkforecasts.com/2020-senate.csv", function (senate) {
+        d3.csv("https://data.jhkforecasts.com/2020-presidential.csv", function (data) {
+           
+
+            var newest_data = data.slice(data.length - 228, data.length)
+            document.getElementById("presLink").style.backgroundColor = color(newest_data[225].win)
+            document.getElementById("demLink").style.backgroundColor = "navy"
+            document.getElementById("houseLink").style.backgroundColor = color(d3.sum(house.filter(d => d.seats > 218), d => d.occ))
+            document.getElementById("senateLink").style.backgroundColor = color(senate[senate.length - 2].win)
+
+            document.getElementById("presLink").style.color = Math.abs(newest_data[225].win - 50) > 20 ? "white" : "black"
+            document.getElementById("demLink").style.color = "white"
+            document.getElementById("houseLink").style.color = Math.abs(d3.sum(house.filter(d => d.seats > 218), d => d.occ) - 50) > 20 ? "white" : "black"
+            document.getElementById("senateLink").style.color = Math.abs(senate[senate.length - 2].win - 50) > 20 ? "white" : "black"
+        })
+    })
 })
