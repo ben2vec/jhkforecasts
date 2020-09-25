@@ -759,7 +759,7 @@ function ready(error, us, inputData, cands, data, hist) {
 
     var x = d3.scaleTime()
         .rangeRound([margin.left, width - margin.right])
-        .domain([new Date(2020, 2, 1), new Date(2020, 10, 3)])
+        .domain([new Date(2020,7,1), new Date(2020, 10, 3)])
 
     var y = d3.scaleLinear()
         .rangeRound([850, 50]);

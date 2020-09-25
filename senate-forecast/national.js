@@ -329,7 +329,7 @@ function ready(error, us, inputData, cands, data, hist) {
         .data(jsonElection)
         .enter()
         .append("rect")
-        .attr("x", d => d.properties.label == "MI" ? path.centroid(d)[0] -2 : path.centroid(d)[0] - 10)
+        .attr("x", d => d.properties.label == "MI" ? path.centroid(d)[0] - 2 : path.centroid(d)[0] - 10)
         .attr("y", d => d.properties.label == "RI" ? path.centroid(d)[1] + 4 : d.properties.label == "MI" ? path.centroid(d)[1] + 10 : d.properties.label == "DE" ? path.centroid(d)[1] - 5 : path.centroid(d)[1] - 10)
         .attr("height", 20)
         .attr("width", 20)
@@ -340,8 +340,8 @@ function ready(error, us, inputData, cands, data, hist) {
         .data(jsonElection)
         .enter()
         .append("text")
-        .attr("x", d => d.properties.label == "MI" ? path.centroid(d)[0] +8 :path.centroid(d)[0])
-        .attr("y", d => d.properties.label == "MI" ? path.centroid(d)[1] + 20 :d.properties.label == "RI" ? path.centroid(d)[1] + 14 : d.properties.label == "DE" ? path.centroid(d)[1] + 5 : path.centroid(d)[1])
+        .attr("x", d => d.properties.label == "MI" ? path.centroid(d)[0] + 8 : path.centroid(d)[0])
+        .attr("y", d => d.properties.label == "MI" ? path.centroid(d)[1] + 20 : d.properties.label == "RI" ? path.centroid(d)[1] + 14 : d.properties.label == "DE" ? path.centroid(d)[1] + 5 : path.centroid(d)[1])
         .text(d => d.properties.label)
         .style("font-size", 12)
         .attr("dominant-baseline", "central")
@@ -355,7 +355,7 @@ function ready(error, us, inputData, cands, data, hist) {
         .attr("xlink:href", (d, i) => d.properties.name.split(" ").join("-").toLowerCase())
         .append("rect")
         .attr("class", "statesover")
-        .attr("x", d => d.properties.label == "MI" ? path.centroid(d)[0] -2 : path.centroid(d)[0] - 10)
+        .attr("x", d => d.properties.label == "MI" ? path.centroid(d)[0] - 2 : path.centroid(d)[0] - 10)
         .attr("y", d => d.properties.label == "RI" ? path.centroid(d)[1] + 4 : d.properties.label == "MI" ? path.centroid(d)[1] + 10 : d.properties.label == "DE" ? path.centroid(d)[1] - 5 : path.centroid(d)[1] - 10)
         .attr("height", 20)
         .attr("width", 20)
@@ -685,7 +685,7 @@ function ready(error, us, inputData, cands, data, hist) {
         .range([0, 800]);
 
     var tie_length = hist_scale(hist[10].prob)
-    var biden_win = +today[today.length-1].poll_avg * tie_length / 100
+    var biden_win = +today[today.length - 1].poll_avg * tie_length / 100
     var pct = [0, 5, 10, 15, 20]
     histogram.selectAll("seats")
         .data(pct)
@@ -997,7 +997,7 @@ function ready(error, us, inputData, cands, data, hist) {
 
     var x = d3.scaleTime()
         .rangeRound([margin.left, width - margin.right])
-        .domain([new Date(2020, 2, 1), new Date(2020, 10, 3)])
+        .domain([new Date(2020, 7, 1), new Date(2020, 10, 3)])
 
     var y = d3.scaleLinear()
         .rangeRound([540, 20]);
@@ -1008,7 +1008,7 @@ function ready(error, us, inputData, cands, data, hist) {
         ;
 
     var line = d3.line()
-        .curve(d3.curveLinear)
+        .curve(d3.curveCatmullRom)
         .x(d => x(d.date))
         .y(d => y(d.pct));
 
@@ -1061,7 +1061,7 @@ function ready(error, us, inputData, cands, data, hist) {
         .style("stroke", "#999")
         .attr("stroke-width", 1.5)
         .style("shape-rendering", "crispEdges")
-        .style("opacity", 0.5)
+        .style("opacity", 0)
         .attr("y1", -height)
         .attr("y2", 0);
 
@@ -1123,7 +1123,7 @@ function ready(error, us, inputData, cands, data, hist) {
         city.enter().insert("g", ".focus").append("path")
             .attr("class", "line cities")
             .style("stroke", (d, i) => cand_colors(d.party))
-            .style("stroke-width", 4)
+            .style("stroke-width", 3)
             .style("opacity", .7)
             .style("stroke-linecap", "round")
             .style("stroke-linejoin", "round")
@@ -1165,6 +1165,14 @@ function ready(error, us, inputData, cands, data, hist) {
             var circles = focus.selectAll(".hoverCircle")
                 .data(copy)
 
+            circles.enter().append("circle")
+                .attr("class", "hoverCircle")
+                .style("stroke", (d, i) => colors[i])
+                .attr("r", 4)
+                .attr("stroke-width", 2.5)
+                .attr("fill", "white")
+                .merge(circles);
+
 
 
             time.selectAll(".overlay")
@@ -1187,6 +1195,10 @@ function ready(error, us, inputData, cands, data, hist) {
                     .style("font-size", 20)
                     .style("font-weight", "100")
                     .text(formatDate(d.date));
+
+                    focus.selectAll(".hoverCircle")
+                    .attr("cy", e => y(d[e]))
+                    .attr("cx", x(d.date));
 
 
 
